@@ -11,9 +11,9 @@ const BrowserFrame = ({ content, source }) => {
                 <div className="br-100 mr1 w1 h1 bg-gold" />
                 <div className="br-100 mr1 w1 h1 bg-red" />
                 <div className="ml-auto">
-                    <buton className="pointer bg-dark-blue br2 ph2 pv1 white" onClick={flip}>
+                    <button className="pointer bg-dark-blue br2 ph2 pv1 white" onClick={flip}>
                         {isContentActive ? 'Source' : 'Demo'}
-                    </buton>
+                    </button>
                 </div>
             </div>
             <div
