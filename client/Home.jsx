@@ -15,7 +15,7 @@ const Home = () => {
 
             <div className="flex flex-wrap justify-between">
                  <div className="w-30">
-                    <Link to="/centering" className="link flex flex-column items-center justify-center bg-black-05 br2 pa3">
+                    <Link to="/sticky-footer" className="link flex flex-column items-center justify-center bg-black-05 br2 pa3">
                         <StickyFooterCover />
                         <h4 className="f4 mv0 pv3">Sticky footer</h4>
                     </Link>
