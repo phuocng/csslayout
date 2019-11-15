@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import CenterCover from './covers/CenterCover';
 import StickyFooterCover from './covers/StickyFooterCover';
+import StickyHeaderCover from './covers/StickyHeaderCover';
 import Layout from './Layout';
 import useDocumentTitle from './useDocumentTitle';
 
@@ -28,22 +29,28 @@ const Home = () => {
             <div className="mw8 center pb4">
                 <h2 className="f2 lh-copy">Layouts</h2>
 
-                <div className="flex flex-wrap justify-between">
-                    <div className="w-30">
-                        <Link to="/sticky-footer" className="link flex flex-column items-center justify-center bg-black-05 br2 pa3">
+                <div className="flex flex-wrap">
+                    <div className="pa2 w-20">
+                        <Link to="/sticky-footer" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
                             <StickyFooterCover />
-                            <h4 className="f4 mv0 pv3">Sticky footer</h4>
+                            <h4 className="f4 mv0 pt3">Sticky footer</h4>
+                        </Link>
+                    </div>
+                    <div className="pa2 w-20">
+                        <Link to="/sticky-header" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
+                            <StickyHeaderCover />
+                            <h4 className="f4 mv0 pt3">Sticky header</h4>
                         </Link>
                     </div>
                 </div>
 
                 <h2 className="f2 lh-copy">Patterns</h2>
 
-                <div className="flex flex-wrap justify-between">
-                    <div className="w-30">
-                        <Link to="/centering" className="link flex flex-column items-center justify-center bg-black-05 br2 pa3">
+                <div className="flex flex-wrap">
+                    <div className="pa2 w-20">
+                        <Link to="/centering" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
                             <CenterCover />
-                            <h4 className="f4 mv0 pv3">Centering</h4>
+                            <h4 className="f4 mv0 pt3">Centering</h4>
                         </Link>
                     </div>
                 </div>

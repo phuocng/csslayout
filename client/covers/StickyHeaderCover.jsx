@@ -3,11 +3,11 @@ import React from 'react';
 import Frame from '../placeholders/Frame';
 import Line from '../placeholders/Line';
 
-const StickyFooterCover = () => {
+const StickyHeaderCover = () => {
     return (
         <Frame size="medium">
             <div className="h-100 flex flex-column">
-                <div className="flex-shrink-0 b--black-30 br bw2">
+                <div className="flex-shrink-0">
                     <div className="w-100 flex items-center pa2">
                         <div className="w1"><Line /></div>
                         <div className="w1 ml-auto"><Line /></div>
@@ -22,17 +22,9 @@ const StickyFooterCover = () => {
                         <div className="w2"><Line /></div>
                     </div>
                 </div>
-                <div className="flex-shrink-0">
-                    <Line size="medium" />
-                    <div className="w-100 flex items-center pa2">
-                        <div className="w1"><Line /></div>
-                        <div className="w1 ml1"><Line /></div>
-                        <div className="w1 ml1"><Line /></div>
-                    </div>
-                </div>
             </div>
         </Frame>
     );
 };
 
-export default StickyFooterCover;
+export default StickyHeaderCover;
