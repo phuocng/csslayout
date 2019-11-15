@@ -3,8 +3,11 @@ import React from 'react';
 import DetailsLayout from '../DetailsLayout';
 import BrowserFrame from '../placeholders/BrowserFrame';
 import SampleCode from '../SampleCode';
+import useDocumentTitle from '../useDocumentTitle';
 
 const Centering = () => {
+    useDocumentTitle('CSS Layout ∙ Centering');
+
     return (
         <DetailsLayout name="Centering">
             <BrowserFrame
