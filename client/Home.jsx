@@ -18,7 +18,7 @@ const Home = () => {
                             return (
                                 c === ' '
                                 ? <div key={index} className="mh4" />
-                                : <div key={index} className="flex items-center justify-center bg-blue white a mh1 w3 h3 f1 fw6">{c}</div>
+                                : <div key={index} className="flex items-center justify-center bg-blue white mh1 w3 h3 f1 fw6">{c}</div>
                             );
                         })
                     }

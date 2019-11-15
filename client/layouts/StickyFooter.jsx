@@ -11,7 +11,7 @@ const StickyFooter = () => {
     return (
         <DetailsLayout name="Sticky footer">
             <div className="lh-copy mb3">
-                The footer is always sticky at the bottom if the main content is short.
+                The footer always sticks to the bottom if the main content is short.
             </div>
             <BrowserFrame
                 content={
