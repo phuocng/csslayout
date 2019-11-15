@@ -2,6 +2,7 @@ import React from 'react';
 
 import DetailsLayout from '../DetailsLayout';
 import BrowserFrame from '../placeholders/BrowserFrame';
+import SampleCode from '../SampleCode';
 
 const Centering = () => {
     return (
@@ -13,7 +14,19 @@ const Centering = () => {
                     </div>
                 }
                 source={
-                    <div>source</div>
+<SampleCode
+lang="html"
+code={`
+<div style="
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+">
+    CENTER
+</div>
+`}
+/>
                 }
             />
         </DetailsLayout>
