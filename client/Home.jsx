@@ -11,9 +11,9 @@ const Home = () => {
 
             <div className="flex flex-wrap justify-between">
                 <div className="w-30">
-                    <Link to="/center" className="link flex flex-column items-center justify-center bg-black-05 br2 pa3">
+                    <Link to="/centering" className="link flex flex-column items-center justify-center bg-black-05 br2 pa3">
                         <CenterCover />
-                        <h4 className="f4 mv0 pv3">Center</h4>
+                        <h4 className="f4 mv0 pv3">Centering</h4>
                     </Link>
                 </div>
             </div>
