@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 
 import CenterCover from './covers/CenterCover';
 import Layout from './Layout';
+import useDocumentTitle from './useDocumentTitle';
 
 const Home = () => {
+    useDocumentTitle('CSS Layout');
+
     return (
         <Layout>
             <h2 className="f2 lh-copy">Pattern</h2>
