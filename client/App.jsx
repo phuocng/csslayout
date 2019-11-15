@@ -1,8 +1,15 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Home from './Home';
 
 const App = () => {
     return (
-        <div>Test</div>
+        <Router>
+            <Switch>
+                <Route exact={true} path='/'><Home /></Route>
+            </Switch>
+        </Router>
     );
 };
 
