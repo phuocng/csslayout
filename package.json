@@ -1,15 +1,24 @@
 {
     "name": "csslayout",
     "scripts": {
-        "dev": "parcel client/index.html --out-dir dist/client",
-        "build": "parcel build client/index.html --out-dir dist/client"
+        "dev": "parcel client/index.html --out-dir dist",
+        "build": "parcel build client/index.html --out-dir dist",
+        "postbuild": "react-snap"
     },
     "dependencies": {
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
-        "react-router-dom": "^5.1.2"
+        "react-router-dom": "^5.1.2",
+        "react-snap": "^1.23.0"
     },
     "devDependencies": {
         "parcel-bundler": "^1.12.4"
+    },
+    "reactSnap": {
+        "source": "dist",
+        "minifyHtml": {
+            "collapseWhitespace": false,
+            "removeComments": false
+        }
     }
 }
