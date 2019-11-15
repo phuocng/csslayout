@@ -9,7 +9,8 @@ const StickyHeader = () => {
     useDocumentTitle('CSS Layout ∙ Sticky header');
 
     return (
-        <DetailsLayout name="Sticky header">
+        <DetailsLayout>
+            <h1 className="f1 tc">Sticky header</h1>
             <BrowserFrame
                 content={
                     <div>

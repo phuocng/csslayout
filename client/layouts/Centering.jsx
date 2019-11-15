@@ -9,7 +9,8 @@ const Centering = () => {
     useDocumentTitle('CSS Layout ∙ Centering');
 
     return (
-        <DetailsLayout name="Centering">
+        <DetailsLayout>
+            <h1 className="f1 tc">Centering</h1>
             <BrowserFrame
                 content={
                     <div className="h-100 flex flex-column items-center justify-center">

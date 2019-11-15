@@ -9,7 +9,8 @@ const StickyFooter = () => {
     useDocumentTitle('CSS Layout ∙ Sticky footer');
 
     return (
-        <DetailsLayout name="Sticky footer">
+        <DetailsLayout>
+            <h1 className="f1 tc">Sticky footer</h1>
             <div className="lh-copy mb3">
                 The footer always sticks to the bottom if the main content is short.
             </div>
