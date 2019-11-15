@@ -6,7 +6,7 @@ const SampleCode = ({ code, lang }) => {
     return code === ''
             ? <></>
             : (
-                <pre className="lh-copy mh0 mv3" dangerouslySetInnerHTML={{ __html: highlight(code, lang) }} />
+                <pre className="h-100 lh-copy ma0" dangerouslySetInnerHTML={{ __html: highlight(code, lang) }} />
             );
 };
 
