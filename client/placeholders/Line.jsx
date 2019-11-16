@@ -1,12 +1,10 @@
 import React from 'react';
 
-const Line = ({ size }) => {
-    const h = (size === 'medium' ? '2px' : '1px');
-
+const Line = () => {
     return (
         <div
             className="w-100 bg-black-30"
-            style={{ height: h }}
+            style={{ height: '1px' }}
         />
     );
 };

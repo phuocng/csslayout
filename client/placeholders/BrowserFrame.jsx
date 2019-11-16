@@ -6,7 +6,7 @@ const BrowserFrame = ({ content, source }) => {
 
     return (
         <div className="br2 ba b--black-20">
-            <div className="flex pa3 bb b--black-20 items-center bg-black-05">
+            <div className="flex ph3 pv2 bb b--black-20 items-center bg-black-05">
                 <div className="br-100 mr1 w1 h1 bg-red" />
                 <div className="br-100 mr1 w1 h1 bg-gold" />
                 <div className="br-100 mr1 w1 h1 bg-red" />

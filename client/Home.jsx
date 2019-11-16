@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import CenterCover from './covers/CenterCover';
+import SidebarCover from './covers/SidebarCover';
 import StickyFooterCover from './covers/StickyFooterCover';
 import StickyHeaderCover from './covers/StickyHeaderCover';
 import Layout from './Layout';
@@ -30,6 +31,12 @@ const Home = () => {
                 <h2 className="f2 lh-copy">Layouts</h2>
 
                 <div className="flex flex-wrap">
+                    <div className="pa2 w-20">
+                        <Link to="/sidebar" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
+                            <SidebarCover />
+                            <h4 className="f4 mv0 pt3">Sidebar</h4>
+                        </Link>
+                    </div>
                     <div className="pa2 w-20">
                         <Link to="/sticky-footer" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
                             <StickyFooterCover />
