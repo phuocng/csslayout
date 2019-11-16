@@ -6,6 +6,7 @@ import CenterCover from './covers/CenterCover';
 import SidebarCover from './covers/SidebarCover';
 import StickyFooterCover from './covers/StickyFooterCover';
 import StickyHeaderCover from './covers/StickyHeaderCover';
+import StepperInputCover from './covers/StepperInputCover';
 import Layout from './Layout';
 import useDocumentTitle from './useDocumentTitle';
 
@@ -65,6 +66,12 @@ const Home = () => {
                         <Link to="/centering" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
                             <CenterCover />
                             <h4 className="f4 mv0 pt3">Centering</h4>
+                        </Link>
+                    </div>
+                    <div className="pa2 w-20">
+                        <Link to="/stepper-input" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
+                            <StepperInputCover />
+                            <h4 className="f4 mv0 pt3">Stepper input</h4>
                         </Link>
                     </div>
                 </div>
