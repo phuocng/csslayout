@@ -5,7 +5,7 @@ import Line from '../placeholders/Line';
 
 const StickyHeaderCover = () => {
     return (
-        <Frame size="medium">
+        <Frame>
             <div className="h-100 flex flex-column">
                 <div className="flex-shrink-0">
                     <div className="w-100 flex items-center pa2">
@@ -13,7 +13,7 @@ const StickyHeaderCover = () => {
                         <div className="w1 ml-auto"><Line /></div>
                         <div className="w1 ml1"><Line /></div>
                     </div>
-                    <Line size="medium" />
+                    <Line />
                 </div>
                 <div className="flex-grow-1 b--black-30 br bw2">
                     <div className="pa2">

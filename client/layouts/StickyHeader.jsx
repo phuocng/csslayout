@@ -13,6 +13,7 @@ const StickyHeader = () => {
     return (
         <DetailsLayout>
             <h1 className="f1 tc">Sticky header</h1>
+            <div className="lh-copy mb3">Try to scroll the main content to see the header sticks to the top of page.</div>
             <BrowserFrame
                 content={
                     <div>

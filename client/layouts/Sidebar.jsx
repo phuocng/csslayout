@@ -12,6 +12,7 @@ const Sidebar = () => {
     return (
         <DetailsLayout>
             <h1 className="f1 tc">Sidebar</h1>
+            <div className="lh-copy mb3">Try to scroll the main content!</div>
             <BrowserFrame
                 content={
                     <div className="h-100 flex">
