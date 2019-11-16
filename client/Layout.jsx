@@ -11,22 +11,20 @@ const Layout = ({ children }) => {
                 {children}
             </div>
             <div className="w-100 bt b--black-30">
-                <div className="mw8 center pv4 flex justify-between">
+                <div className="mw8 center pv5 flex justify-between">
                     <div>
                         <div className="f4 fw6 mb2">Other cool things</div>
-                        <ul className="flex items-center list ma0 pa0 lh-copy fw5">
+                        <ul className="list ma0 pa0 lh-copy fw5">
                             <li className="pr2">
                                 <a href="https://formvalidation.io" className="link" target="_blank" title="FormValidation ~ best validation library for JavaScript">
                                     FormValidation
                                 </a>
                             </li>
-                            <li className="pr2">∙</li>
                             <li className="pr2">
                                 <a className="link" href="https://blur.page" title="BlurPage ~ a browser extension to hide sensitive element on page" target="_blank">
                                     BlurPage
                                 </a>
                             </li>
-                            <li className="pr2">∙</li>
                             <li className="pr2">
                                 <a className="link" href="https://react-pdf-viewer.dev" title="React PDF Viewer ~ a PDF viewer made for React" target="_blank">
                                     React PDF Viewer
