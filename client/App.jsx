@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import Badge from './layouts/Badge';
 import Centering from './layouts/Centering';
+import InputAddon from './layouts/InputAddon';
 import Sidebar from './layouts/Sidebar';
 import StepperInput from './layouts/StepperInput';
 import StickyFooter from './layouts/StickyFooter';
@@ -16,6 +17,7 @@ const App = () => {
                 <Route exact={true} path='/'><Home /></Route>
                 <Route exact={true} path='/badge'><Badge /></Route>
                 <Route exact={true} path='/centering'><Centering /></Route>
+                <Route exact={true} path='/input-add-on'><InputAddon /></Route>
                 <Route exact={true} path='/sidebar'><Sidebar /></Route>
                 <Route exact={true} path='/stepper-input'><StepperInput /></Route>
                 <Route exact={true} path='/sticky-footer'><StickyFooter /></Route>

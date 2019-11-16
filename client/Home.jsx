@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import BadgeCover from './covers/BadgeCover';
 import CenterCover from './covers/CenterCover';
+import InputAddonCover from './covers/InputAddonCover';
 import SidebarCover from './covers/SidebarCover';
 import StickyFooterCover from './covers/StickyFooterCover';
 import StickyHeaderCover from './covers/StickyHeaderCover';
@@ -66,6 +67,12 @@ const Home = () => {
                         <Link to="/centering" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
                             <CenterCover />
                             <h4 className="f4 mv0 pt3">Centering</h4>
+                        </Link>
+                    </div>
+                    <div className="pa2 w-20">
+                        <Link to="/input-add-on" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
+                            <InputAddonCover />
+                            <h4 className="f4 mv0 pt3">Input addon</h4>
                         </Link>
                     </div>
                     <div className="pa2 w-20">
