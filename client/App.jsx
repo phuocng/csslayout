@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import Badge from './layouts/Badge';
 import Centering from './layouts/Centering';
+import HolyGrail from './layouts/HolyGrail';
 import InputAddon from './layouts/InputAddon';
 import MediaObject from './layouts/MediaObject';
 import Sidebar from './layouts/Sidebar';
@@ -18,6 +19,7 @@ const App = () => {
                 <Route exact={true} path='/'><Home /></Route>
                 <Route exact={true} path='/badge'><Badge /></Route>
                 <Route exact={true} path='/centering'><Centering /></Route>
+                <Route exact={true} path='/holy-grail'><HolyGrail /></Route>
                 <Route exact={true} path='/input-add-on'><InputAddon /></Route>
                 <Route exact={true} path='/media-object'><MediaObject /></Route>
                 <Route exact={true} path='/sidebar'><Sidebar /></Route>

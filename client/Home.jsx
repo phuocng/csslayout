@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import BadgeCover from './covers/BadgeCover';
 import CenterCover from './covers/CenterCover';
+import HolyGrailCover from './covers/HolyGrailCover';
 import InputAddonCover from './covers/InputAddonCover';
 import MediaObjectCover from './covers/MediaObjectCover';
 import SidebarCover from './covers/SidebarCover';
@@ -35,6 +36,12 @@ const Home = () => {
                 <h2 className="f2 lh-copy">Layouts</h2>
 
                 <div className="flex flex-wrap">
+                    <div className="pa2 w-20">
+                        <Link to="/holy-grail" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
+                            <HolyGrailCover />
+                            <h4 className="f4 mv0 pt3">Holy grail</h4>
+                        </Link>
+                    </div>
                     <div className="pa2 w-20">
                         <Link to="/sidebar" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
                             <SidebarCover />
