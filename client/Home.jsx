@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import BadgeCover from './covers/BadgeCover';
 import CenterCover from './covers/CenterCover';
 import SidebarCover from './covers/SidebarCover';
 import StickyFooterCover from './covers/StickyFooterCover';
@@ -54,6 +55,12 @@ const Home = () => {
                 <h2 className="f2 lh-copy">Patterns</h2>
 
                 <div className="flex flex-wrap">
+                    <div className="pa2 w-20">
+                        <Link to="/badge" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
+                            <BadgeCover />
+                            <h4 className="f4 mv0 pt3">Badge</h4>
+                        </Link>
+                    </div>
                     <div className="pa2 w-20">
                         <Link to="/centering" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
                             <CenterCover />
