@@ -1,7 +1,9 @@
 import React from 'react';
 
 import DetailsLayout from '../DetailsLayout';
+import Block from '../placeholders/Block';
 import BrowserFrame from '../placeholders/BrowserFrame';
+import Rectangle from '../placeholders/Rectangle';
 import SampleCode from '../SampleCode';
 import useDocumentTitle from '../useDocumentTitle';
 
@@ -14,14 +16,13 @@ const StickyHeader = () => {
             <BrowserFrame
                 content={
                     <div>
-                        <div className="top-0 bg-white bb b--black-30 bw1 pa3" style={{ position: 'sticky' }}>
-                            Header
+                        <div className="top-0 bg-white bb b--black-30 pa3" style={{ position: 'sticky' }}>
+                            <div className="w-50"><Rectangle /></div>
                         </div>
                         <div className="pa3">
-                            <div className="lh-copy mb3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi morbi tempus iaculis urna id volutpat lacus. Urna id volutpat lacus laoreet non curabitur gravida. Eu mi bibendum neque egestas congue quisque egestas. Turpis egestas pretium aenean pharetra magna ac placerat. Proin sagittis nisl rhoncus mattis rhoncus urna. Est velit egestas dui id. Auctor neque vitae tempus quam pellentesque. Convallis a cras semper auctor neque. Consequat nisl vel pretium lectus quam id leo. Netus et malesuada fames ac. Dictum at tempor commodo ullamcorper a. Tellus in metus vulputate eu scelerisque. Morbi tristique senectus et netus et. Suscipit tellus mauris a diam maecenas sed enim. Eu facilisis sed odio morbi. Fermentum iaculis eu non diam phasellus.</div>
-                            <div className="lh-copy mb3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi morbi tempus iaculis urna id volutpat lacus. Urna id volutpat lacus laoreet non curabitur gravida. Eu mi bibendum neque egestas congue quisque egestas. Turpis egestas pretium aenean pharetra magna ac placerat. Proin sagittis nisl rhoncus mattis rhoncus urna. Est velit egestas dui id. Auctor neque vitae tempus quam pellentesque. Convallis a cras semper auctor neque. Consequat nisl vel pretium lectus quam id leo. Netus et malesuada fames ac. Dictum at tempor commodo ullamcorper a. Tellus in metus vulputate eu scelerisque. Morbi tristique senectus et netus et. Suscipit tellus mauris a diam maecenas sed enim. Eu facilisis sed odio morbi. Fermentum iaculis eu non diam phasellus.</div>
-                            <div className="lh-copy mb3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi morbi tempus iaculis urna id volutpat lacus. Urna id volutpat lacus laoreet non curabitur gravida. Eu mi bibendum neque egestas congue quisque egestas. Turpis egestas pretium aenean pharetra magna ac placerat. Proin sagittis nisl rhoncus mattis rhoncus urna. Est velit egestas dui id. Auctor neque vitae tempus quam pellentesque. Convallis a cras semper auctor neque. Consequat nisl vel pretium lectus quam id leo. Netus et malesuada fames ac. Dictum at tempor commodo ullamcorper a. Tellus in metus vulputate eu scelerisque. Morbi tristique senectus et netus et. Suscipit tellus mauris a diam maecenas sed enim. Eu facilisis sed odio morbi. Fermentum iaculis eu non diam phasellus.</div>
-                            <div className="lh-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi morbi tempus iaculis urna id volutpat lacus. Urna id volutpat lacus laoreet non curabitur gravida. Eu mi bibendum neque egestas congue quisque egestas. Turpis egestas pretium aenean pharetra magna ac placerat. Proin sagittis nisl rhoncus mattis rhoncus urna. Est velit egestas dui id. Auctor neque vitae tempus quam pellentesque. Convallis a cras semper auctor neque. Consequat nisl vel pretium lectus quam id leo. Netus et malesuada fames ac. Dictum at tempor commodo ullamcorper a. Tellus in metus vulputate eu scelerisque. Morbi tristique senectus et netus et. Suscipit tellus mauris a diam maecenas sed enim. Eu facilisis sed odio morbi. Fermentum iaculis eu non diam phasellus.</div>
+                            <div className="mb4"><Block numberOfBlocks={20} /></div>
+                            <div className="mb4"><Block numberOfBlocks={40} /></div>
+                            <div><Block numberOfBlocks={30} /></div>
                         </div>
                     </div>
                 }
