@@ -8,6 +8,7 @@ import FixedAtCornerCover from './layouts/fixed-at-corner/Cover';
 import HolyGrailCover from './layouts/holy-grail/Cover';
 import InputAddonCover from './layouts/input-add-on/Cover';
 import MediaObjectCover from './layouts/media-object/Cover';
+import MenuCover from './layouts/menu/Cover';
 import PreviousNextButtonCover from './layouts/previous-next-buttons/Cover';
 import SameHeightColumnsCover from './layouts/same-height-columns/Cover';
 import SidebarCover from './layouts/sidebar/Cover';
@@ -110,6 +111,12 @@ const Home = () => {
                         <Link to="/media-object" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <MediaObjectCover />
                             <h4 className="f4 mv0 pt3">Media object</h4>
+                        </Link>
+                    </div>
+                    <div className="pa1 w-20">
+                        <Link to="/menu" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                            <MenuCover />
+                            <h4 className="f4 mv0 pt3">Menu</h4>
                         </Link>
                     </div>
                     <div className="pa1 w-20">
