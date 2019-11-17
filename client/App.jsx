@@ -19,6 +19,7 @@ import PreviousNextButtons from './layouts/previous-next-buttons/Details';
 import ProgressBar from './layouts/progress-bar/Details';
 import SameHeightColumns from './layouts/same-height-columns/Details';
 import Sidebar from './layouts/sidebar/Details';
+import Slider from './layouts/slider/Details';
 import SplitScreen from './layouts/split-screen/Details';
 import StepperInput from './layouts/stepper-input/Details';
 import StickyFooter from './layouts/sticky-footer/Details';
@@ -47,6 +48,7 @@ const App = () => {
                 <Route exact={true} path='/progress-bar'><ProgressBar /></Route>
                 <Route exact={true} path='/same-height-columns'><SameHeightColumns /></Route>
                 <Route exact={true} path='/sidebar'><Sidebar /></Route>
+                <Route exact={true} path='/slider'><Slider /></Route>
                 <Route exact={true} path='/split-screen'><SplitScreen /></Route>
                 <Route exact={true} path='/stepper-input'><StepperInput /></Route>
                 <Route exact={true} path='/sticky-footer'><StickyFooter /></Route>
