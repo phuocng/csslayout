@@ -1,13 +1,13 @@
 import React from 'react';
 
-import DetailsLayout from '../DetailsLayout';
-import Block from '../placeholders/Block';
-import BrowserFrame from '../placeholders/BrowserFrame';
-import Rectangle from '../placeholders/Rectangle';
-import SampleCode from '../SampleCode';
-import useDocumentTitle from '../useDocumentTitle';
+import DetailsLayout from '../../DetailsLayout';
+import Block from '../../placeholders/Block';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import Rectangle from '../../placeholders/Rectangle';
+import SampleCode from '../../SampleCode';
+import useDocumentTitle from '../../useDocumentTitle';
 
-const StickyFooter = () => {
+const Details = () => {
     useDocumentTitle('CSS Layout ∙ Sticky footer');
 
     return (
@@ -57,4 +57,4 @@ code={`
     );
 };
 
-export default StickyFooter;
+export default Details;

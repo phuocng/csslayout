@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Frame from '../placeholders/Frame';
+import Frame from '../../placeholders/Frame';
 
-const BadgeCover = () => {
+const Cover = () => {
     return (
         <Frame>
             <div className="h-100 flex flex-column items-center justify-center">
@@ -14,4 +14,4 @@ const BadgeCover = () => {
     );
 };
 
-export default BadgeCover;
+export default Cover;

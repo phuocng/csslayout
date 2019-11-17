@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Dot from '../placeholders/Dot';
-import Frame from '../placeholders/Frame';
-import Line from '../placeholders/Line';
+import Dot from '../../placeholders/Dot';
+import Frame from '../../placeholders/Frame';
+import Line from '../../placeholders/Line';
 
-const CenterCover = () => {
+const Cover = () => {
     return (
         <Frame>
             <div className="h-100 flex flex-column items-center justify-center">
@@ -20,4 +20,4 @@ const CenterCover = () => {
     );
 };
 
-export default CenterCover;
+export default Cover;

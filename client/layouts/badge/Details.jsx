@@ -1,11 +1,11 @@
 import React from 'react';
 
-import DetailsLayout from '../DetailsLayout';
-import BrowserFrame from '../placeholders/BrowserFrame';
-import SampleCode from '../SampleCode';
-import useDocumentTitle from '../useDocumentTitle';
+import DetailsLayout from '../../DetailsLayout';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import SampleCode from '../../SampleCode';
+import useDocumentTitle from '../../useDocumentTitle';
 
-const Badge = () => {
+const Details = () => {
     useDocumentTitle('CSS Layout ∙ Badge');
 
     return (
@@ -48,4 +48,4 @@ code={`
     );
 };
 
-export default Badge;
+export default Details;

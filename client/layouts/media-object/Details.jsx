@@ -1,14 +1,14 @@
 import React from 'react';
 
-import DetailsLayout from '../DetailsLayout';
-import Block from '../placeholders/Block';
-import BrowserFrame from '../placeholders/BrowserFrame';
-import Rectangle from '../placeholders/Rectangle';
-import Square from '../placeholders/Square';
-import SampleCode from '../SampleCode';
-import useDocumentTitle from '../useDocumentTitle';
+import DetailsLayout from '../../DetailsLayout';
+import Block from '../../placeholders/Block';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import Rectangle from '../../placeholders/Rectangle';
+import Square from '../../placeholders/Square';
+import SampleCode from '../../SampleCode';
+import useDocumentTitle from '../../useDocumentTitle';
 
-const MediaObject = () => {
+const Details = () => {
     useDocumentTitle('CSS Layout ∙ Media object');
 
     return (
@@ -64,4 +64,4 @@ code={`
     );
 };
 
-export default MediaObject;
+export default Details;

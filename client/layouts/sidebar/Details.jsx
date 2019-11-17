@@ -1,12 +1,12 @@
 import React from 'react';
 
-import DetailsLayout from '../DetailsLayout';
-import BrowserFrame from '../placeholders/BrowserFrame';
-import Block from '../placeholders/Block';
-import SampleCode from '../SampleCode';
-import useDocumentTitle from '../useDocumentTitle';
+import DetailsLayout from '../../DetailsLayout';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import Block from '../../placeholders/Block';
+import SampleCode from '../../SampleCode';
+import useDocumentTitle from '../../useDocumentTitle';
 
-const Sidebar = () => {
+const Details = () => {
     useDocumentTitle('CSS Layout ∙ Sidebar');
 
     return (
@@ -55,4 +55,4 @@ code={`
     );
 };
 
-export default Sidebar;
+export default Details;

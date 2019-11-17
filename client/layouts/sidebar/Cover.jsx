@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Frame from '../placeholders/Frame';
-import Line from '../placeholders/Line';
+import Frame from '../../placeholders/Frame';
+import Line from '../../placeholders/Line';
 
-const SidebarCover = () => {
+const Cover = () => {
     return (
         <Frame>
             <div className="h-100 flex">
@@ -22,4 +22,4 @@ const SidebarCover = () => {
     );
 };
 
-export default SidebarCover;
+export default Cover;

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Frame from '../placeholders/Frame';
-import Line from '../placeholders/Line';
+import Frame from '../../placeholders/Frame';
+import Line from '../../placeholders/Line';
 
-const InputAddonCover = () => {
+const Cover = () => {
     return (
         <Frame>
             <div className="h-100 flex items-center justify-center pa2">
@@ -20,4 +20,4 @@ const InputAddonCover = () => {
     );
 };
 
-export default InputAddonCover;
+export default Cover;

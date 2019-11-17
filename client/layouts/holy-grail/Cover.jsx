@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Frame from '../placeholders/Frame';
-import Line from '../placeholders/Line';
+import Frame from '../../placeholders/Frame';
+import Line from '../../placeholders/Line';
 
-const HolyGrailCover = () => {
+const Cover = () => {
     return (
         <Frame>
             <div className="h-100 flex flex-column">
@@ -45,4 +45,4 @@ const HolyGrailCover = () => {
     );
 };
 
-export default HolyGrailCover;
+export default Cover;

@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import BadgeCover from './covers/BadgeCover';
-import CenterCover from './covers/CenterCover';
-import HolyGrailCover from './covers/HolyGrailCover';
-import InputAddonCover from './covers/InputAddonCover';
-import MediaObjectCover from './covers/MediaObjectCover';
-import SidebarCover from './covers/SidebarCover';
-import StickyFooterCover from './covers/StickyFooterCover';
-import StickyHeaderCover from './covers/StickyHeaderCover';
-import StepperInputCover from './covers/StepperInputCover';
+import BadgeCover from './layouts/badge/Cover';
+import ButtonWithIconCover from './layouts/button-with-icon/Cover';
+import CenterCover from './layouts/centering/Cover';
+import HolyGrailCover from './layouts/holy-grail/Cover';
+import InputAddonCover from './layouts/input-add-on/Cover';
+import MediaObjectCover from './layouts/media-object/Cover';
+import SidebarCover from './layouts/sidebar/Cover';
+import StepperInputCover from './layouts/stepper-input/Cover';
+import StickyFooterCover from './layouts/sticky-footer/Cover';
+import StickyHeaderCover from './layouts/sticky-header/Cover';
 import Layout from './Layout';
 import useDocumentTitle from './useDocumentTitle';
 
@@ -35,62 +36,68 @@ const Home = () => {
             <div className="mw8 center pb4">
                 <h2 className="f2 lh-copy">Layouts</h2>
 
-                <div className="flex flex-wrap">
-                    <div className="pa2 w-20">
-                        <Link to="/holy-grail" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
+                <div className="flex flex-wrap items-start">
+                    <div className="pa1 w-20">
+                        <Link to="/holy-grail" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <HolyGrailCover />
                             <h4 className="f4 mv0 pt3">Holy grail</h4>
                         </Link>
                     </div>
-                    <div className="pa2 w-20">
-                        <Link to="/sidebar" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
+                    <div className="pa1 w-20">
+                        <Link to="/sidebar" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <SidebarCover />
                             <h4 className="f4 mv0 pt3">Sidebar</h4>
                         </Link>
                     </div>
-                    <div className="pa2 w-20">
-                        <Link to="/sticky-footer" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
+                    <div className="pa1 w-20">
+                        <Link to="/sticky-footer" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <StickyFooterCover />
                             <h4 className="f4 mv0 pt3">Sticky footer</h4>
                         </Link>
                     </div>
-                    <div className="pa2 w-20">
-                        <Link to="/sticky-header" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
-                            <StickyHeaderCover />
-                            <h4 className="f4 mv0 pt3">Sticky header</h4>
-                        </Link>
+                    <div className="pa1 w-20">
+                    <Link to="/sticky-header" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                        <StickyHeaderCover />
+                        <h4 className="f4 mv0 pt3">Sticky header</h4>
+                    </Link>
                     </div>
                 </div>
 
                 <h2 className="f2 lh-copy">Patterns</h2>
 
-                <div className="flex flex-wrap">
-                    <div className="pa2 w-20">
-                        <Link to="/badge" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
+                <div className="flex flex-wrap items-start">
+                    <div className="pa1 w-20">
+                        <Link to="/badge" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <BadgeCover />
                             <h4 className="f4 mv0 pt3">Badge</h4>
                         </Link>
                     </div>
-                    <div className="pa2 w-20">
-                        <Link to="/centering" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
+                    <div className="pa1 w-20">
+                        <Link to="/button-with-icon" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                            <ButtonWithIconCover />
+                            <h4 className="f4 mv0 pt3">Button with icon</h4>
+                        </Link>
+                    </div>
+                    <div className="pa1 w-20">
+                        <Link to="/centering" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <CenterCover />
                             <h4 className="f4 mv0 pt3">Centering</h4>
                         </Link>
                     </div>
-                    <div className="pa2 w-20">
-                        <Link to="/input-add-on" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
+                    <div className="pa1 w-20">
+                        <Link to="/input-add-on" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <InputAddonCover />
                             <h4 className="f4 mv0 pt3">Input addon</h4>
                         </Link>
                     </div>
-                    <div className="pa2 w-20">
-                        <Link to="/media-object" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
+                    <div className="pa1 w-20">
+                        <Link to="/media-object" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <MediaObjectCover />
                             <h4 className="f4 mv0 pt3">Media object</h4>
                         </Link>
                     </div>
-                    <div className="pa2 w-20">
-                        <Link to="/stepper-input" className="link flex flex-column items-center justify-center bg-black-05 br2 ph3 pv4">
+                    <div className="pa1 w-20">
+                        <Link to="/stepper-input" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <StepperInputCover />
                             <h4 className="f4 mv0 pt3">Stepper input</h4>
                         </Link>

@@ -1,13 +1,13 @@
 import React from 'react';
 
-import DetailsLayout from '../DetailsLayout';
-import BrowserFrame from '../placeholders/BrowserFrame';
-import Dot from '../placeholders/Dot';
-import Rectangle from '../placeholders/Rectangle';
-import SampleCode from '../SampleCode';
-import useDocumentTitle from '../useDocumentTitle';
+import DetailsLayout from '../../DetailsLayout';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import Dot from '../../placeholders/Dot';
+import Rectangle from '../../placeholders/Rectangle';
+import SampleCode from '../../SampleCode';
+import useDocumentTitle from '../../useDocumentTitle';
 
-const Centering = () => {
+const Details = () => {
     useDocumentTitle('CSS Layout ∙ Centering');
 
     return (
@@ -41,4 +41,4 @@ code={`
     );
 };
 
-export default Centering;
+export default Details;

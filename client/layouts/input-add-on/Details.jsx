@@ -1,12 +1,12 @@
 import React from 'react';
 
-import DetailsLayout from '../DetailsLayout';
-import BrowserFrame from '../placeholders/BrowserFrame';
-import Rectangle from '../placeholders/Rectangle';
-import SampleCode from '../SampleCode';
-import useDocumentTitle from '../useDocumentTitle';
+import DetailsLayout from '../../DetailsLayout';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import Rectangle from '../../placeholders/Rectangle';
+import SampleCode from '../../SampleCode';
+import useDocumentTitle from '../../useDocumentTitle';
 
-const InputAddon = () => {
+const Details = () => {
     useDocumentTitle('CSS Layout ∙ Input add-on');
 
     return (
@@ -133,4 +133,4 @@ code={`
     );
 };
 
-export default InputAddon;
+export default Details;
