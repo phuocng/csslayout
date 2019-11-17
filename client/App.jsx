@@ -8,6 +8,7 @@ import Centering from './layouts/centering/Details';
 import HolyGrail from './layouts/holy-grail/Details';
 import InputAddon from './layouts/input-add-on/Details';
 import MediaObject from './layouts/media-object/Details';
+import SameHeightColumns from './layouts/same-height-columns/Details';
 import Sidebar from './layouts/sidebar/Details';
 import StepperInput from './layouts/stepper-input/Details';
 import StickyFooter from './layouts/sticky-footer/Details';
@@ -24,6 +25,7 @@ const App = () => {
                 <Route exact={true} path='/holy-grail'><HolyGrail /></Route>
                 <Route exact={true} path='/input-add-on'><InputAddon /></Route>
                 <Route exact={true} path='/media-object'><MediaObject /></Route>
+                <Route exact={true} path='/same-height-columns'><SameHeightColumns /></Route>
                 <Route exact={true} path='/sidebar'><Sidebar /></Route>
                 <Route exact={true} path='/stepper-input'><StepperInput /></Route>
                 <Route exact={true} path='/sticky-footer'><StickyFooter /></Route>

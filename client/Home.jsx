@@ -7,6 +7,7 @@ import CenterCover from './layouts/centering/Cover';
 import HolyGrailCover from './layouts/holy-grail/Cover';
 import InputAddonCover from './layouts/input-add-on/Cover';
 import MediaObjectCover from './layouts/media-object/Cover';
+import SameHeightColumnsCover from './layouts/same-height-columns/Cover';
 import SidebarCover from './layouts/sidebar/Cover';
 import StepperInputCover from './layouts/stepper-input/Cover';
 import StickyFooterCover from './layouts/sticky-footer/Cover';
@@ -94,6 +95,12 @@ const Home = () => {
                         <Link to="/media-object" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <MediaObjectCover />
                             <h4 className="f4 mv0 pt3">Media object</h4>
+                        </Link>
+                    </div>
+                    <div className="pa1 w-20">
+                        <Link to="/same-height-columns" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                            <SameHeightColumnsCover />
+                            <h4 className="f4 mv0 pt3">Same height columns</h4>
                         </Link>
                     </div>
                     <div className="pa1 w-20">
