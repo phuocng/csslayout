@@ -11,6 +11,7 @@ import HolyGrail from './layouts/holy-grail/Details';
 import InputAddon from './layouts/input-add-on/Details';
 import MediaObject from './layouts/media-object/Details';
 import Menu from './layouts/menu/Details';
+import Modal from './layouts/modal/Details';
 import Notification from './layouts/notification/Details';
 import Pagination from './layouts/pagination/Details';
 import PreviousNextButtons from './layouts/previous-next-buttons/Details';
@@ -36,6 +37,7 @@ const App = () => {
                 <Route exact={true} path='/input-add-on'><InputAddon /></Route>
                 <Route exact={true} path='/media-object'><MediaObject /></Route>
                 <Route exact={true} path='/menu'><Menu /></Route>
+                <Route exact={true} path='/modal'><Modal /></Route>
                 <Route exact={true} path='/notification'><Notification /></Route>
                 <Route exact={true} path='/pagination'><Pagination /></Route>
                 <Route exact={true} path='/previous-next-buttons'><PreviousNextButtons /></Route>
