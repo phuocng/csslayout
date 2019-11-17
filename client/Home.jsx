@@ -11,6 +11,7 @@ import InputAddonCover from './layouts/input-add-on/Cover';
 import MediaObjectCover from './layouts/media-object/Cover';
 import MenuCover from './layouts/menu/Cover';
 import NotificationCover from './layouts/notification/Cover';
+import PaginationCover from './layouts/pagination/Cover';
 import PreviousNextButtonCover from './layouts/previous-next-buttons/Cover';
 import ProgressBarCover from './layouts/progress-bar/Cover';
 import SameHeightColumnsCover from './layouts/same-height-columns/Cover';
@@ -132,6 +133,12 @@ const Home = () => {
                         <Link to="/notification" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <NotificationCover />
                             <h4 className="f4 mv0 pt3">Notification</h4>
+                        </Link>
+                    </div>
+                    <div className="pa1 w-20">
+                        <Link to="/pagination" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                            <PaginationCover />
+                            <h4 className="f4 mv0 pt3">Pagination</h4>
                         </Link>
                     </div>
                     <div className="pa1 w-20">
