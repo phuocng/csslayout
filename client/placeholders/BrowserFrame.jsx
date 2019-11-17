@@ -25,13 +25,19 @@ const BrowserFrame = ({ content, source }) => {
                     transform: isContentActive ? '' : 'rotateY(180deg)',
                 }}
             >
-                <div className="overflow-scroll absolute top-0 left-0 h-100 w-100" style={{ backfaceVisibility: 'hidden' }}>
+                <div
+                    className="overflow-scroll absolute top-0 left-0 h-100 w-100"
+                    style={{
+                        backfaceVisibility: 'hidden',
+                        '-webkit-backface-visibility': 'hidden',
+                    }}>
                     {content}
                 </div>
                 <div
                     className="absolute top-0 left-0 h-100 w-100"
                     style={{
                         backfaceVisibility: 'hidden',
+                        '-webkit-backface-visibility': 'hidden',
                         transform: 'rotateY(180deg)',
                     }}
                 >
