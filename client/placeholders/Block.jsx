@@ -11,7 +11,7 @@ const Block = ({ numberOfBlocks }) => {
                     const s = random(1, 5);
                     return (
                         <div key={i} className={`mr2 mb2 w-${s * 10}`}>
-                            <Rectangle height={8} />
+                            <div className="w-100 bg-black-30 br-pill" style={{ height: '8px' }} />
                         </div>
                     );
                 })
