@@ -9,6 +9,7 @@ import FixedAtCorner from './layouts/fixed-at-corner/Details';
 import HolyGrail from './layouts/holy-grail/Details';
 import InputAddon from './layouts/input-add-on/Details';
 import MediaObject from './layouts/media-object/Details';
+import Menu from './layouts/menu/Details';
 import PreviousNextButtons from './layouts/previous-next-buttons/Details';
 import SameHeightColumns from './layouts/same-height-columns/Details';
 import Sidebar from './layouts/sidebar/Details';
@@ -29,6 +30,7 @@ const App = () => {
                 <Route exact={true} path='/holy-grail'><HolyGrail /></Route>
                 <Route exact={true} path='/input-add-on'><InputAddon /></Route>
                 <Route exact={true} path='/media-object'><MediaObject /></Route>
+                <Route exact={true} path='/menu'><Menu /></Route>
                 <Route exact={true} path='/previous-next-buttons'><PreviousNextButtons /></Route>
                 <Route exact={true} path='/same-height-columns'><SameHeightColumns /></Route>
                 <Route exact={true} path='/sidebar'><Sidebar /></Route>
