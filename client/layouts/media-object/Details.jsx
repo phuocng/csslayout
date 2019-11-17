@@ -6,7 +6,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 import Square from '../../placeholders/Square';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../useDocumentTitle';
+import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
     useDocumentTitle('CSS Layout ∙ Media object');
