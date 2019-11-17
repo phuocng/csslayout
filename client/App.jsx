@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Home from './Home';
 import Badge from './layouts/Badge';
+import ButtonWithIcon from './layouts/ButtonWithIcon';
 import Centering from './layouts/Centering';
 import HolyGrail from './layouts/HolyGrail';
 import InputAddon from './layouts/InputAddon';
@@ -18,6 +19,7 @@ const App = () => {
             <Switch>
                 <Route exact={true} path='/'><Home /></Route>
                 <Route exact={true} path='/badge'><Badge /></Route>
+                <Route exact={true} path='/button-with-icon'><ButtonWithIcon /></Route>
                 <Route exact={true} path='/centering'><Centering /></Route>
                 <Route exact={true} path='/holy-grail'><HolyGrail /></Route>
                 <Route exact={true} path='/input-add-on'><InputAddon /></Route>
