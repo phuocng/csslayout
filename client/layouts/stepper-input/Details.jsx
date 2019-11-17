@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import DetailsLayout from '../../DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../useDocumentTitle';
+import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
     useDocumentTitle('CSS Layout ∙ Stepper input');

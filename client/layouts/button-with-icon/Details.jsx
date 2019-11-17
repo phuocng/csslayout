@@ -5,7 +5,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../useDocumentTitle';
+import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
     useDocumentTitle('CSS Layout ∙ Button with icon');

@@ -18,7 +18,7 @@ import StepperInputCover from './layouts/stepper-input/Cover';
 import StickyFooterCover from './layouts/sticky-footer/Cover';
 import StickyHeaderCover from './layouts/sticky-header/Cover';
 import Layout from './Layout';
-import useDocumentTitle from './useDocumentTitle';
+import useDocumentTitle from './hooks/useDocumentTitle';
 
 const Home = () => {
     useDocumentTitle('CSS Layout');

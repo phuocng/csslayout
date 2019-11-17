@@ -4,7 +4,7 @@ import DetailsLayout from '../../DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../useDocumentTitle';
+import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
     useDocumentTitle('CSS Layout ∙ Previous and next buttons');

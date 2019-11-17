@@ -4,7 +4,7 @@ import DetailsLayout from '../../DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Triangle from '../../placeholders/Triangle';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../useDocumentTitle';
+import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
     useDocumentTitle('CSS Layout ∙ Fixed at corner');
