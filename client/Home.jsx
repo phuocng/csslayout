@@ -10,6 +10,7 @@ import HolyGrailCover from './layouts/holy-grail/Cover';
 import InputAddonCover from './layouts/input-add-on/Cover';
 import MediaObjectCover from './layouts/media-object/Cover';
 import MenuCover from './layouts/menu/Cover';
+import ModalCover from './layouts/modal/Cover';
 import NotificationCover from './layouts/notification/Cover';
 import PaginationCover from './layouts/pagination/Cover';
 import PreviousNextButtonCover from './layouts/previous-next-buttons/Cover';
@@ -127,6 +128,12 @@ const Home = () => {
                         <Link to="/menu" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <MenuCover />
                             <h4 className="f4 mv0 pt3">Menu</h4>
+                        </Link>
+                    </div>
+                    <div className="pa1 w-20">
+                        <Link to="/modal" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                            <ModalCover />
+                            <h4 className="f4 mv0 pt3">Modal</h4>
                         </Link>
                     </div>
                     <div className="pa1 w-20">
