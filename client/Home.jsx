@@ -10,6 +10,7 @@ import InputAddonCover from './layouts/input-add-on/Cover';
 import MediaObjectCover from './layouts/media-object/Cover';
 import SameHeightColumnsCover from './layouts/same-height-columns/Cover';
 import SidebarCover from './layouts/sidebar/Cover';
+import SplitScreenCover from './layouts/split-screen/Cover';
 import StepperInputCover from './layouts/stepper-input/Cover';
 import StickyFooterCover from './layouts/sticky-footer/Cover';
 import StickyHeaderCover from './layouts/sticky-header/Cover';
@@ -49,6 +50,12 @@ const Home = () => {
                         <Link to="/sidebar" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <SidebarCover />
                             <h4 className="f4 mv0 pt3">Sidebar</h4>
+                        </Link>
+                    </div>
+                    <div className="pa1 w-20">
+                        <Link to="/split-screen" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                            <SplitScreenCover />
+                            <h4 className="f4 mv0 pt3">Split screen</h4>
                         </Link>
                     </div>
                     <div className="pa1 w-20">
