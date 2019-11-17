@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch as RouteSwitch } from 'react-router-dom';
 
 import Home from './Home';
 import Badge from './layouts/badge/Details';
@@ -23,11 +23,12 @@ import SplitScreen from './layouts/split-screen/Details';
 import StepperInput from './layouts/stepper-input/Details';
 import StickyFooter from './layouts/sticky-footer/Details';
 import StickyHeader from './layouts/sticky-header/Details';
+import Switch from './layouts/switch/Details';
 
 const App = () => {
     return (
         <Router>
-            <Switch>
+            <RouteSwitch>
                 <Route exact={true} path='/'><Home /></Route>
                 <Route exact={true} path='/badge'><Badge /></Route>
                 <Route exact={true} path='/breadcrumb'><Breadcrumb /></Route>
@@ -50,7 +51,8 @@ const App = () => {
                 <Route exact={true} path='/stepper-input'><StepperInput /></Route>
                 <Route exact={true} path='/sticky-footer'><StickyFooter /></Route>
                 <Route exact={true} path='/sticky-header'><StickyHeader /></Route>
-            </Switch>
+                <Route exact={true} path='/switch'><Switch /></Route>
+            </RouteSwitch>
         </Router>
     );
 };

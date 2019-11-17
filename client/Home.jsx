@@ -22,6 +22,7 @@ import SplitScreenCover from './layouts/split-screen/Cover';
 import StepperInputCover from './layouts/stepper-input/Cover';
 import StickyFooterCover from './layouts/sticky-footer/Cover';
 import StickyHeaderCover from './layouts/sticky-header/Cover';
+import SwitchCover from './layouts/switch/Cover';
 import Layout from './Layout';
 import useDocumentTitle from './hooks/useDocumentTitle';
 
@@ -177,6 +178,12 @@ const Home = () => {
                         <Link to="/stepper-input" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <StepperInputCover />
                             <h4 className="f5 mv0 pt3">Stepper input</h4>
+                        </Link>
+                    </div>
+                    <div className="pa1 w-20">
+                        <Link to="/switch" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                            <SwitchCover />
+                            <h4 className="f5 mv0 pt3">Switch</h4>
                         </Link>
                     </div>
                 </div>
