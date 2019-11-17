@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import Badge from './layouts/badge/Details';
 import ButtonWithIcon from './layouts/button-with-icon/Details';
+import Card from './layouts/card/Details';
 import Centering from './layouts/centering/Details';
 import FixedAtCorner from './layouts/fixed-at-corner/Details';
 import HolyGrail from './layouts/holy-grail/Details';
@@ -26,6 +27,7 @@ const App = () => {
                 <Route exact={true} path='/'><Home /></Route>
                 <Route exact={true} path='/badge'><Badge /></Route>
                 <Route exact={true} path='/button-with-icon'><ButtonWithIcon /></Route>
+                <Route exact={true} path='/card'><Card /></Route>
                 <Route exact={true} path='/centering'><Centering /></Route>
                 <Route exact={true} path='/fixed-at-corner'><FixedAtCorner /></Route>
                 <Route exact={true} path='/holy-grail'><HolyGrail /></Route>
