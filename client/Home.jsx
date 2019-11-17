@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import BadgeCover from './layouts/badge/Cover';
 import ButtonWithIconCover from './layouts/button-with-icon/Cover';
 import CenterCover from './layouts/centering/Cover';
+import FixedAtCornerCover from './layouts/fixed-at-corner/Cover';
 import HolyGrailCover from './layouts/holy-grail/Cover';
 import InputAddonCover from './layouts/input-add-on/Cover';
 import MediaObjectCover from './layouts/media-object/Cover';
@@ -83,6 +84,12 @@ const Home = () => {
                         <Link to="/centering" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <CenterCover />
                             <h4 className="f4 mv0 pt3">Centering</h4>
+                        </Link>
+                    </div>
+                    <div className="pa1 w-20">
+                        <Link to="/fixed-at-corner" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                            <FixedAtCornerCover />
+                            <h4 className="f4 mv0 pt3">Fixed at corner</h4>
                         </Link>
                     </div>
                     <div className="pa1 w-20">
