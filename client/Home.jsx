@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import BadgeCover from './layouts/badge/Cover';
 import ButtonWithIconCover from './layouts/button-with-icon/Cover';
+import CardCover from './layouts/card/Cover';
 import CenterCover from './layouts/centering/Cover';
 import FixedAtCornerCover from './layouts/fixed-at-corner/Cover';
 import HolyGrailCover from './layouts/holy-grail/Cover';
@@ -88,6 +89,12 @@ const Home = () => {
                         <Link to="/button-with-icon" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <ButtonWithIconCover />
                             <h4 className="f4 mv0 pt3">Button with icon</h4>
+                        </Link>
+                    </div>
+                    <div className="pa1 w-20">
+                        <Link to="/card" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                            <CardCover />
+                            <h4 className="f4 mv0 pt3">Card</h4>
                         </Link>
                     </div>
                     <div className="pa1 w-20">
