@@ -10,6 +10,7 @@ import InputAddonCover from './layouts/input-add-on/Cover';
 import MediaObjectCover from './layouts/media-object/Cover';
 import MenuCover from './layouts/menu/Cover';
 import PreviousNextButtonCover from './layouts/previous-next-buttons/Cover';
+import ProgressBarCover from './layouts/progress-bar/Cover';
 import SameHeightColumnsCover from './layouts/same-height-columns/Cover';
 import SidebarCover from './layouts/sidebar/Cover';
 import SplitScreenCover from './layouts/split-screen/Cover';
@@ -123,6 +124,12 @@ const Home = () => {
                         <Link to="/previous-next-buttons" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <PreviousNextButtonCover />
                             <h4 className="f4 mv0 pt3">Previous next buttons</h4>
+                        </Link>
+                    </div>
+                    <div className="pa1 w-20">
+                        <Link to="/progress-bar" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                            <ProgressBarCover />
+                            <h4 className="f4 mv0 pt3">Progress bar</h4>
                         </Link>
                     </div>
                     <div className="pa1 w-20">
