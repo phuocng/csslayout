@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import BadgeCover from './covers/BadgeCover';
-import ButtonWithIconCover from './covers/ButtonWithIconCover';
-import CenterCover from './covers/CenterCover';
-import HolyGrailCover from './covers/HolyGrailCover';
-import InputAddonCover from './covers/InputAddonCover';
-import MediaObjectCover from './covers/MediaObjectCover';
-import SidebarCover from './covers/SidebarCover';
-import StickyFooterCover from './covers/StickyFooterCover';
-import StickyHeaderCover from './covers/StickyHeaderCover';
-import StepperInputCover from './covers/StepperInputCover';
+import BadgeCover from './layouts/badge/Cover';
+import ButtonWithIconCover from './layouts/button-with-icon/Cover';
+import CenterCover from './layouts/centering/Cover';
+import HolyGrailCover from './layouts/holy-grail/Cover';
+import InputAddonCover from './layouts/input-add-on/Cover';
+import MediaObjectCover from './layouts/media-object/Cover';
+import SidebarCover from './layouts/sidebar/Cover';
+import StepperInputCover from './layouts/stepper-input/Cover';
+import StickyFooterCover from './layouts/sticky-footer/Cover';
+import StickyHeaderCover from './layouts/sticky-header/Cover';
 import Layout from './Layout';
 import useDocumentTitle from './useDocumentTitle';
 

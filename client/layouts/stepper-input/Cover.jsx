@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Frame from '../placeholders/Frame';
+import Frame from '../../placeholders/Frame';
 
-const StepperInputCover = () => {
+const Cover = () => {
     return (
         <Frame>
             <div className="h-100 flex items-center justify-center pa2">
@@ -16,4 +16,4 @@ const StepperInputCover = () => {
     );
 };
 
-export default StepperInputCover;
+export default Cover;

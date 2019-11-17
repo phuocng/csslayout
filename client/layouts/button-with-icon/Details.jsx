@@ -1,13 +1,13 @@
 import React from 'react';
 
-import DetailsLayout from '../DetailsLayout';
-import Dot from '../placeholders/Dot';
-import BrowserFrame from '../placeholders/BrowserFrame';
-import Rectangle from '../placeholders/Rectangle';
-import SampleCode from '../SampleCode';
-import useDocumentTitle from '../useDocumentTitle';
+import DetailsLayout from '../../DetailsLayout';
+import Dot from '../../placeholders/Dot';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import Rectangle from '../../placeholders/Rectangle';
+import SampleCode from '../../SampleCode';
+import useDocumentTitle from '../../useDocumentTitle';
 
-const ButtonWithIcon = () => {
+const Details = () => {
     useDocumentTitle('CSS Layout ∙ Button with icon');
 
     return (
@@ -17,10 +17,10 @@ const ButtonWithIcon = () => {
                 content={
                     <div className="h-100 flex flex-column items-center justify-center">
                         <div className="w5">
-                            <div className="w-100 h3 flex flex-row items-center ba b--black-30 br2 ph2">
+                            <button className="w-100 h3 flex flex-row items-center ba b--black-30 br2 ph2">
                                 <div className="mr2"><Dot size={32} /></div>
                                 <Rectangle />
-                            </div>
+                            </button>
                         </div>
                     </div>
                 }
@@ -28,22 +28,18 @@ const ButtonWithIcon = () => {
 <SampleCode
 lang="html"
 code={`
-<div style="
+<button style="
     /* Content is centered */
     align-items: center;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-
-    /* Colors */
-    background-color: rgba(0, 0, 0, .3);
-    color: #FFF;
-
-    /* Rounded border */
-    border-radius: 9999px;
-    height: 32px;
-    width: 32px;
 ">
-    1
+    <!-- Icon -->
+    ...
+
+    <!-- Label -->
+    ...
 </div>
 `}
 />
@@ -53,4 +49,4 @@ code={`
     );
 };
 
-export default ButtonWithIcon;
+export default Details;

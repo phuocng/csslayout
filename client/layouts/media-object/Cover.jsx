@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Frame from '../placeholders/Frame';
-import Line from '../placeholders/Line';
-import Square from '../placeholders/Square';
+import Frame from '../../placeholders/Frame';
+import Line from '../../placeholders/Line';
+import Square from '../../placeholders/Square';
 
-const MediaObjectCover = () => {
+const Cover = () => {
     return (
         <Frame>
             <div className="flex h-100 items-start pa2 w-100">
@@ -29,4 +29,4 @@ const MediaObjectCover = () => {
     );
 };
 
-export default MediaObjectCover;
+export default Cover;

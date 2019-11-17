@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import DetailsLayout from '../DetailsLayout';
-import BrowserFrame from '../placeholders/BrowserFrame';
-import SampleCode from '../SampleCode';
-import useDocumentTitle from '../useDocumentTitle';
+import DetailsLayout from '../../DetailsLayout';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import SampleCode from '../../SampleCode';
+import useDocumentTitle from '../../useDocumentTitle';
 
-const StepperInput = () => {
+const Details = () => {
     useDocumentTitle('CSS Layout ∙ Stepper input');
     const [value, setValue] = useState(0);
     const decrease = () => setValue(value - 1);
@@ -84,4 +84,4 @@ code={`
     );
 };
 
-export default StepperInput;
+export default Details;

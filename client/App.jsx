@@ -2,16 +2,16 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Home from './Home';
-import Badge from './layouts/Badge';
-import ButtonWithIcon from './layouts/ButtonWithIcon';
-import Centering from './layouts/Centering';
-import HolyGrail from './layouts/HolyGrail';
-import InputAddon from './layouts/InputAddon';
-import MediaObject from './layouts/MediaObject';
-import Sidebar from './layouts/Sidebar';
-import StepperInput from './layouts/StepperInput';
-import StickyFooter from './layouts/StickyFooter';
-import StickyHeader from './layouts/StickyHeader';
+import Badge from './layouts/badge/Details';
+import ButtonWithIcon from './layouts/button-with-icon/Details';
+import Centering from './layouts/centering/Details';
+import HolyGrail from './layouts/holy-grail/Details';
+import InputAddon from './layouts/input-add-on/Details';
+import MediaObject from './layouts/media-object/Details';
+import Sidebar from './layouts/sidebar/Details';
+import StepperInput from './layouts/stepper-input/Details';
+import StickyFooter from './layouts/sticky-footer/Details';
+import StickyHeader from './layouts/sticky-header/Details';
 
 const App = () => {
     return (

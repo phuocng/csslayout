@@ -1,13 +1,13 @@
 import React from 'react';
 
-import DetailsLayout from '../DetailsLayout';
-import Block from '../placeholders/Block';
-import BrowserFrame from '../placeholders/BrowserFrame';
-import Rectangle from '../placeholders/Rectangle';
-import SampleCode from '../SampleCode';
-import useDocumentTitle from '../useDocumentTitle';
+import DetailsLayout from '../../DetailsLayout';
+import Block from '../../placeholders/Block';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import Rectangle from '../../placeholders/Rectangle';
+import SampleCode from '../../SampleCode';
+import useDocumentTitle from '../../useDocumentTitle';
 
-const StickyHeader = () => {
+const Details = () => {
     useDocumentTitle('CSS Layout ∙ Sticky header');
 
     return (
@@ -50,4 +50,4 @@ code={`
     );
 };
 
-export default StickyHeader;
+export default Details;

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Dot from '../placeholders/Dot';
-import Frame from '../placeholders/Frame';
-import Rectangle from '../placeholders/Rectangle';
+import Dot from '../../placeholders/Dot';
+import Frame from '../../placeholders/Frame';
+import Rectangle from '../../placeholders/Rectangle';
 
-const ButtonWithIconCover = () => {
+const Cover = () => {
     return (
         <Frame>
             <div className="h-100 flex flex-column items-center justify-center pa2">
@@ -17,4 +17,4 @@ const ButtonWithIconCover = () => {
     );
 };
 
-export default ButtonWithIconCover;
+export default Cover;
