@@ -3,7 +3,7 @@ import React from 'react';
 import DetailsLayout from '../../DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Block from '../../placeholders/Block';
-import Dot from '../../placeholders/Dot';
+import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 import SampleCode from '../../SampleCode';
 import useDocumentTitle from '../../useDocumentTitle';
@@ -18,7 +18,7 @@ const Details = () => {
                 content={
                     <div className="h-100 flex">
                         <div className="b--black-30 br flex flex-column justify-center items-center" style={{ flex: 1 }}>
-                            <div className="mb3"><Dot size={128} /></div>
+                            <div className="mb3"><Circle size={128} /></div>
                             <div className="w-60"><Rectangle /></div>
                         </div>
                         <div className="flex flex-column justify-center" style={{ flex: 1 }}>

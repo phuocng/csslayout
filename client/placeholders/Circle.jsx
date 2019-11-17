@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Dot = ({ size = 16 }) => {
+const Circle = ({ size = 16 }) => {
     return (
         <div
             className="bg-black-30 br-pill"
@@ -12,4 +12,4 @@ const Dot = ({ size = 16 }) => {
     );
 };
 
-export default Dot;
+export default Circle;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Dot from '../../placeholders/Dot';
+import Circle from '../../placeholders/Circle';
 import Frame from '../../placeholders/Frame';
 import Line from '../../placeholders/Line';
 
@@ -9,7 +9,7 @@ const Cover = () => {
         <Frame>
             <div className="h-100 flex">
                 <div className="b--black-30 br flex flex-column justify-center items-center" style={{ flex: 1 }}>
-                    <div className="mb1"><Dot /></div>
+                    <div className="mb1"><Circle /></div>
                 </div>
                 <div className="flex flex-column justify-center" style={{ flex: 1 }}>
                     <div className="pa2">
