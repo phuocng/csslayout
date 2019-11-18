@@ -15,6 +15,7 @@ import ModalCover from './layouts/modal/Cover';
 import NotificationCover from './layouts/notification/Cover';
 import PaginationCover from './layouts/pagination/Cover';
 import PreviousNextButtonCover from './layouts/previous-next-buttons/Cover';
+import PricingTableCover from './layouts/pricing-table/Cover';
 import ProgressBarCover from './layouts/progress-bar/Cover';
 import SameHeightColumnsCover from './layouts/same-height-columns/Cover';
 import SidebarCover from './layouts/sidebar/Cover';
@@ -161,6 +162,12 @@ const Home = () => {
                         <Link to="/previous-next-buttons" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                             <PreviousNextButtonCover />
                             <h4 className="f5 mv0 pt3">Previous next buttons</h4>
+                        </Link>
+                    </div>
+                    <div className="pa1 w-20">
+                        <Link to="/pricing-table" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                            <PricingTableCover />
+                            <h4 className="f5 mv0 pt3">Pricing table</h4>
                         </Link>
                     </div>
                     <div className="pa1 w-20">

@@ -16,6 +16,7 @@ import Modal from './layouts/modal/Details';
 import Notification from './layouts/notification/Details';
 import Pagination from './layouts/pagination/Details';
 import PreviousNextButtons from './layouts/previous-next-buttons/Details';
+import PricingTable from './layouts/pricing-table/Details';
 import ProgressBar from './layouts/progress-bar/Details';
 import SameHeightColumns from './layouts/same-height-columns/Details';
 import Sidebar from './layouts/sidebar/Details';
@@ -45,6 +46,7 @@ const App = () => {
                 <Route exact={true} path='/notification'><Notification /></Route>
                 <Route exact={true} path='/pagination'><Pagination /></Route>
                 <Route exact={true} path='/previous-next-buttons'><PreviousNextButtons /></Route>
+                <Route exact={true} path='/pricing-table'><PricingTable /></Route>
                 <Route exact={true} path='/progress-bar'><ProgressBar /></Route>
                 <Route exact={true} path='/same-height-columns'><SameHeightColumns /></Route>
                 <Route exact={true} path='/sidebar'><Sidebar /></Route>
