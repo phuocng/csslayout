@@ -8,9 +8,8 @@ const Layout = ({ children }) => {
     }, []);
 
     return (
-        <div className="mw8 mv4 center">
+        <div className="mw8 mb5 center">
             {children}
-
             <Footer />
         </div>
     );

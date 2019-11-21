@@ -33,13 +33,13 @@ const Home = () => {
 
     return (
         <Layout>
-            <div className="pt5 pb4">
-                <h1 className="f1 fw6 flex items-center justify-center">
-                    CSS Layout
-                </h1>
-                <h2 className="fw1 tc lh-copy">a collection of popular layouts and patterns made with CSS</h2>
-            </div>
-            <div className="mw8 center bl br b--black-20">
+            <div className="mt5 bl br bt b--black-20 br4 br--top">
+                <div className="relative">
+                    <h1 className="absolute bg-white f2 fw6 left-2 lh-copy ma0 ph2 top-0" style={{ left: '50%', transform: 'translate(-50%, -50%)' }}>CSS Layout</h1>
+
+                    <h2 className="fw1 tc lh-copy ma0 pa4">a collection of popular layouts and patterns made with CSS</h2>
+                </div>
+
                 <div className="bt b--black-20 relative">
                     <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0" style={{ transform: 'translate(0, -50%)' }}>Layouts</h3>
 

@@ -6,14 +6,10 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 import Square from '../../placeholders/Square';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Media object');
-
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Media object</h1>
+        <DetailsLayout title="Media object">
             <BrowserFrame
                 content={
                     <div className="h-100 flex items-start pa3">

@@ -5,7 +5,8 @@ const BrowserFrame = ({ content, source }) => {
     const flip = () => setContentActive(isActive => !isActive);
 
     return (
-        <div className="br2 ba b--black-20" style={{ boxShadow: '0 24px 48px -8px rgba(0, 0, 0, .5)' }}>
+        
+        <div className="br2 ba b--black-20" style={{ boxShadow: '0 16px 40px -8px rgba(0, 0, 0, .5)' }}>
             <div className="flex ph3 pv2 bb b--black-20 items-center bg-black-05">
                 <div className="br-100 mr1 w1 h1 bg-red" />
                 <div className="br-100 mr1 w1 h1 bg-gold" />

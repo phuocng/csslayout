@@ -5,14 +5,10 @@ import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Sticky header');
-
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Sticky header</h1>
+        <DetailsLayout title="Sticky header">
             <div className="lh-copy mb3">Try to scroll the main content to see the header sticks to the top of page.</div>
             <BrowserFrame
                 content={

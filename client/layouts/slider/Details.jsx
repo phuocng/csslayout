@@ -5,14 +5,10 @@ import Circle from '../../placeholders/Circle';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Slider');
-
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Slider</h1>
+        <DetailsLayout title="Slider">
             <BrowserFrame
                 content={
                     <div className="h-100 flex flex-column items-center justify-center">

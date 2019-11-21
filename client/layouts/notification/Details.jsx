@@ -5,14 +5,10 @@ import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Notification');
-
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Notification</h1>
+        <DetailsLayout title="Notification">
             <BrowserFrame
                 content={
                     <div className="h-100 flex flex-column items-center justify-center">

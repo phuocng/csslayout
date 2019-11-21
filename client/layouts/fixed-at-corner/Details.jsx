@@ -4,14 +4,10 @@ import DetailsLayout from '../../DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Triangle from '../../placeholders/Triangle';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Fixed at corner');
-
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Fixed at corner</h1>
+        <DetailsLayout title="Fixed at corner">
             <BrowserFrame
                 content={
                     <div className="relative h-100">

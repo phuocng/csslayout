@@ -5,14 +5,10 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Pagination');
-
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Pagination</h1>
+        <DetailsLayout title="Pagination">
             <BrowserFrame
                 content={
                     <div className="h-100 flex flex-column items-center justify-center pa3">

@@ -3,16 +3,13 @@ import React, { useState } from 'react';
 import DetailsLayout from '../../DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Switch');
     const [checked, setChecked] = useState(false);
     const toggle = () => setChecked(c => !c);
 
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Switch</h1>
+        <DetailsLayout title="Switch">
             <div className="lh-copy mb3">The checkbox is placed inside a label. So when clicking on the label, the checkbox will be checked even though it's hidden.</div>
             <BrowserFrame
                 content={

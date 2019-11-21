@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className="mw8 center bl br bb b--black-20 flex justify-between">
+        <div className="bl br bb b--black-20 flex justify-between br4 br--bottom">
             <div className="bt br b--black-20 relative" style={{ flex: 1 }}>
                 <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0" style={{ transform: 'translate(0, -50%)' }}>PRODUCTS</h3>
 
