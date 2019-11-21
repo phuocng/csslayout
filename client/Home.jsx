@@ -6,6 +6,7 @@ import BreadcrumbCover from './layouts/breadcrumb/Cover';
 import ButtonWithIconCover from './layouts/button-with-icon/Cover';
 import CardCover from './layouts/card/Cover';
 import CenterCover from './layouts/centering/Cover';
+import FeatureListCover from './layouts/feature-list/Cover';
 import FixedAtCornerCover from './layouts/fixed-at-corner/Cover';
 import HolyGrailCover from './layouts/holy-grail/Cover';
 import InputAddonCover from './layouts/input-add-on/Cover';
@@ -36,7 +37,7 @@ const Home = () => {
         <Layout>
             <div className="mt5 bl br bt b--black-20 br4 br--top">
                 <div className="relative">
-                    <h1 className="absolute bg-white f2 fw6 left-2 lh-copy ma0 ph2 top-0" style={{ left: '50%', transform: 'translate(-50%, -50%)' }}>CSS Layout</h1>
+                    <h1 className="absolute bg-white f2 fw6 left-2 lh-copy ma0 ph2 top-0 br-pill ph3 white bg-dark-blue" style={{ left: '50%', transform: 'translate(-50%, -50%)' }}>CSS Layout</h1>
 
                     <h2 className="fw3 f3 tc lh-copy ma0 pa4">a collection of popular layouts and patterns made with CSS</h2>
 
@@ -135,6 +136,12 @@ const Home = () => {
                             <Link to="/centering" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                                 <CenterCover />
                                 <h4 className="f5 mv0 pt3">Centering</h4>
+                            </Link>
+                        </div>
+                        <div className="pa1 w-20">
+                            <Link to="/feature-list" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                                <FeatureListCover />
+                                <h4 className="f5 mv0 pt3">Feature list</h4>
                             </Link>
                         </div>
                         <div className="pa1 w-20">
