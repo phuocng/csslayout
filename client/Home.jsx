@@ -37,7 +37,32 @@ const Home = () => {
                 <div className="relative">
                     <h1 className="absolute bg-white f2 fw6 left-2 lh-copy ma0 ph2 top-0" style={{ left: '50%', transform: 'translate(-50%, -50%)' }}>CSS Layout</h1>
 
-                    <h2 className="fw1 tc lh-copy ma0 pa4">a collection of popular layouts and patterns made with CSS</h2>
+                    <h2 className="fw3 f3 tc lh-copy ma0 pa4">a collection of popular layouts and patterns made with CSS</h2>
+
+                    <div className="w-30 center mb4">
+                        <ul className="ma0 pa0 list f4 lh-copy">
+                            <li className="flex items-center justify-between">
+                                <div>Zero dependencies</div>
+                                <div>🎉</div>
+                            </li>
+                            <li className="flex items-center justify-between">
+                                <div>No frameworks</div>
+                                <div>🎉</div>
+                            </li>
+                            <li className="flex items-center justify-between">
+                                <div>No CSS hacks</div>
+                                <div>🎉</div>
+                            </li>
+                            <li className="flex items-center justify-between">
+                                <div>Good practices</div>
+                                <div className="br-pill ph2 white bg-dark-blue f6">soon</div>
+                            </li>
+                            <li className="flex items-center justify-between">
+                                <div>Accessibility</div>
+                                <div className="br-pill ph2 white bg-dark-blue f6">soon</div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div className="bt b--black-20 relative">
