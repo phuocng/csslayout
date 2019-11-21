@@ -4,14 +4,10 @@ import DetailsLayout from '../../DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Block from '../../placeholders/Block';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Sidebar');
-
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Sidebar</h1>
+        <DetailsLayout title="Sidebar">
             <div className="lh-copy mb3">Try to scroll the main content!</div>
             <BrowserFrame
                 content={

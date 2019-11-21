@@ -4,14 +4,10 @@ import DetailsLayout from '../../DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Input add-on');
-
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Input add-on</h1>
+        <DetailsLayout title="Input add-on">
             <BrowserFrame
                 content={
                     <div className="h-100 flex flex-column items-center justify-center">

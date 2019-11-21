@@ -6,14 +6,10 @@ import Block from '../../placeholders/Block';
 import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Split screen');
-
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Split screen</h1>
+        <DetailsLayout title="Split screen">
             <BrowserFrame
                 content={
                     <div className="h-100 flex">

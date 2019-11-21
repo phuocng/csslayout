@@ -4,18 +4,15 @@ import { Link } from 'react-router-dom';
 import DetailsLayout from '../../DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Stepper input');
     const [value, setValue] = useState(0);
     const decrease = () => setValue(value - 1);
     const increase = () => setValue(value + 1);
     const change = (e) => setValue(parseInt(e.target.value, 10));
 
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Stepper input</h1>
+        <DetailsLayout title="Stepper input">
             <div className="lh-copy mb3">
                 The content of minus and plus buttons are centered by using the technique in the <Link to="/centering" className="link">Centering</Link> page.
             </div>

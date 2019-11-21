@@ -5,14 +5,10 @@ import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Same height columns');
-
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Same height columns</h1>
+        <DetailsLayout title="Same height columns">
             <BrowserFrame
                 content={
                     <div className="h-100 flex flex-column items-center justify-center pa3">

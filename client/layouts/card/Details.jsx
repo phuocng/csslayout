@@ -5,14 +5,10 @@ import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Card');
-
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Card</h1>
+        <DetailsLayout title="Card">
             <BrowserFrame
                 content={
                     <div className="h-100 flex flex-column items-center justify-center pa3">

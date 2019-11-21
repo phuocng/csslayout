@@ -3,19 +3,16 @@ import React, { useState } from 'react';
 import DetailsLayout from '../../DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 import useInterval from '../../hooks/useInterval';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Progress bar');
     const [progress, setProgress] = useState(0);
     useInterval(() => {
         setProgress(v => v === 100 ? 0 : v + 1);
     }, 1 * 100);
 
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Progress bar</h1>
+        <DetailsLayout title="Progress bar">
             <BrowserFrame
                 content={
                     <div className="h-100 flex flex-column items-center justify-center">

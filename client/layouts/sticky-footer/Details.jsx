@@ -5,14 +5,10 @@ import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 import SampleCode from '../../SampleCode';
-import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 const Details = () => {
-    useDocumentTitle('CSS Layout ∙ Sticky footer');
-
     return (
-        <DetailsLayout>
-            <h1 className="f1 tc">Sticky footer</h1>
+        <DetailsLayout title="Sticky footer">
             <div className="lh-copy mb3">
                 The footer always sticks to the bottom if the main content is short.
             </div>
