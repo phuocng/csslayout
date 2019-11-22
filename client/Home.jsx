@@ -27,6 +27,7 @@ import StepperInputCover from './layouts/stepper-input/Cover';
 import StickyFooterCover from './layouts/sticky-footer/Cover';
 import StickyHeaderCover from './layouts/sticky-header/Cover';
 import SwitchCover from './layouts/switch/Cover';
+import TabCover from './layouts/tab/Cover';
 import Layout from './Layout';
 import useDocumentTitle from './hooks/useDocumentTitle';
 
@@ -232,6 +233,12 @@ const Home = () => {
                             <Link to="/switch" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                                 <SwitchCover />
                                 <h4 className="f5 mv0 pt3">Switch</h4>
+                            </Link>
+                        </div>
+                        <div className="pa1 w-20">
+                            <Link to="/tab" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                                <TabCover />
+                                <h4 className="f5 mv0 pt3">Tab</h4>
                             </Link>
                         </div>
                     </div>

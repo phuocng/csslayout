@@ -28,6 +28,7 @@ import StepperInput from './layouts/stepper-input/Details';
 import StickyFooter from './layouts/sticky-footer/Details';
 import StickyHeader from './layouts/sticky-header/Details';
 import Switch from './layouts/switch/Details';
+import Tab from './layouts/tab/Details';
 
 const App = () => {
     return (
@@ -60,6 +61,7 @@ const App = () => {
                 <Route exact={true} path='/sticky-footer'><StickyFooter /></Route>
                 <Route exact={true} path='/sticky-header'><StickyHeader /></Route>
                 <Route exact={true} path='/switch'><Switch /></Route>
+                <Route exact={true} path='/tab'><Tab /></Route>
             </RouteSwitch>
         </Router>
     );
