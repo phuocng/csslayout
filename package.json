@@ -3,7 +3,9 @@
     "scripts": {
         "dev": "parcel client/index.html --out-dir dist",
         "build": "parcel build client/index.html --out-dir dist",
-        "postbuild": "react-snap"
+        "sitemap": "cp robots.txt dist && node bin/sitemap && cp sitemap.xml dist",
+        "prebuild": "rm -rf dist/*",
+        "postbuild": "npm run sitemap && react-snap"
     },
     "dependencies": {
         "highlight.js": "^9.16.2",
