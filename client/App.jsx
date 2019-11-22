@@ -9,6 +9,7 @@ import Breadcrumb from './layouts/breadcrumb/Details';
 import ButtonWithIcon from './layouts/button-with-icon/Details';
 import Card from './layouts/card/Details';
 import Centering from './layouts/centering/Details';
+import DotNavigation from './layouts/dot-navigation/Details';
 import FeatureList from './layouts/feature-list/Details';
 import FixedAtCorner from './layouts/fixed-at-corner/Details';
 import HolyGrail from './layouts/holy-grail/Details';
@@ -45,6 +46,7 @@ const App = () => {
                 <Route exact={true} path='/button-with-icon'><ButtonWithIcon /></Route>
                 <Route exact={true} path='/card'><Card /></Route>
                 <Route exact={true} path='/centering'><Centering /></Route>
+                <Route exact={true} path='/dot-navigation'><DotNavigation /></Route>
                 <Route exact={true} path='/feature-list'><FeatureList /></Route>
                 <Route exact={true} path='/fixed-at-corner'><FixedAtCorner /></Route>
                 <Route exact={true} path='/holy-grail'><HolyGrail /></Route>

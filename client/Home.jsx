@@ -6,6 +6,7 @@ import BreadcrumbCover from './layouts/breadcrumb/Cover';
 import ButtonWithIconCover from './layouts/button-with-icon/Cover';
 import CardCover from './layouts/card/Cover';
 import CenterCover from './layouts/centering/Cover';
+import DotNavigationCover from './layouts/dot-navigation/Cover';
 import FeatureListCover from './layouts/feature-list/Cover';
 import FixedAtCornerCover from './layouts/fixed-at-corner/Cover';
 import HolyGrailCover from './layouts/holy-grail/Cover';
@@ -140,6 +141,12 @@ const Home = () => {
                             <Link to="/centering" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                                 <CenterCover />
                                 <h4 className="f5 mv0 pt3">Centering</h4>
+                            </Link>
+                        </div>
+                        <div className="pa1 w-20">
+                            <Link to="/dot-navigation" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                                <DotNavigationCover />
+                                <h4 className="f5 mv0 pt3">Dot navigation</h4>
                             </Link>
                         </div>
                         <div className="pa1 w-20">
