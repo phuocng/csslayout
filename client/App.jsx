@@ -23,6 +23,7 @@ import PreviousNextButtons from './layouts/previous-next-buttons/Details';
 import PricingTable from './layouts/pricing-table/Details';
 import ProgressBar from './layouts/progress-bar/Details';
 import SameHeightColumns from './layouts/same-height-columns/Details';
+import SearchBox from './layouts/search-box/Details';
 import Separator from './layouts/separator/Details';
 import Sidebar from './layouts/sidebar/Details';
 import SimpleGrid from './layouts/simple-grid/Details';
@@ -60,6 +61,7 @@ const App = () => {
                 <Route exact={true} path='/pricing-table'><PricingTable /></Route>
                 <Route exact={true} path='/progress-bar'><ProgressBar /></Route>
                 <Route exact={true} path='/same-height-columns'><SameHeightColumns /></Route>
+                <Route exact={true} path='/search-box'><SearchBox /></Route>
                 <Route exact={true} path='/separator'><Separator /></Route>
                 <Route exact={true} path='/sidebar'><Sidebar /></Route>
                 <Route exact={true} path='/simple-grid'><SimpleGrid /></Route>

@@ -20,6 +20,7 @@ import PreviousNextButtonCover from './layouts/previous-next-buttons/Cover';
 import PricingTableCover from './layouts/pricing-table/Cover';
 import ProgressBarCover from './layouts/progress-bar/Cover';
 import SameHeightColumnsCover from './layouts/same-height-columns/Cover';
+import SearchBoxCover from './layouts/search-box/Cover';
 import SeparatorCover from './layouts/separator/Cover';
 import SidebarCover from './layouts/sidebar/Cover';
 import SimpleGridCover from './layouts/simple-grid/Cover';
@@ -219,6 +220,12 @@ const Home = () => {
                             <Link to="/same-height-columns" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                                 <SameHeightColumnsCover />
                                 <h4 className="f5 mv0 pt3">Same height columns</h4>
+                            </Link>
+                        </div>
+                        <div className="pa1 w-20">
+                            <Link to="/search-box" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                                <SearchBoxCover />
+                                <h4 className="f5 mv0 pt3">Search box</h4>
                             </Link>
                         </div>
                         <div className="pa1 w-20">
