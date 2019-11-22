@@ -22,6 +22,7 @@ import ProgressBar from './layouts/progress-bar/Details';
 import SameHeightColumns from './layouts/same-height-columns/Details';
 import Separator from './layouts/separator/Details';
 import Sidebar from './layouts/sidebar/Details';
+import SimpleGrid from './layouts/simple-grid/Details';
 import Slider from './layouts/slider/Details';
 import SplitScreen from './layouts/split-screen/Details';
 import StepperInput from './layouts/stepper-input/Details';
@@ -55,6 +56,7 @@ const App = () => {
                 <Route exact={true} path='/same-height-columns'><SameHeightColumns /></Route>
                 <Route exact={true} path='/separator'><Separator /></Route>
                 <Route exact={true} path='/sidebar'><Sidebar /></Route>
+                <Route exact={true} path='/simple-grid'><SimpleGrid /></Route>
                 <Route exact={true} path='/slider'><Slider /></Route>
                 <Route exact={true} path='/split-screen'><SplitScreen /></Route>
                 <Route exact={true} path='/stepper-input'><StepperInput /></Route>

@@ -21,6 +21,7 @@ import ProgressBarCover from './layouts/progress-bar/Cover';
 import SameHeightColumnsCover from './layouts/same-height-columns/Cover';
 import SeparatorCover from './layouts/separator/Cover';
 import SidebarCover from './layouts/sidebar/Cover';
+import SimpleGridCover from './layouts/simple-grid/Cover';
 import SliderCover from './layouts/slider/Cover';
 import SplitScreenCover from './layouts/split-screen/Cover';
 import StepperInputCover from './layouts/stepper-input/Cover';
@@ -215,6 +216,12 @@ const Home = () => {
                             <Link to="/separator" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                                 <SeparatorCover />
                                 <h4 className="f5 mv0 pt3">Separator</h4>
+                            </Link>
+                        </div>
+                        <div className="pa1 w-20">
+                            <Link to="/simple-grid" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                                <SimpleGridCover />
+                                <h4 className="f5 mv0 pt3">Simple grid</h4>
                             </Link>
                         </div>
                         <div className="pa1 w-20">
