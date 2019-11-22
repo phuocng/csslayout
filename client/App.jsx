@@ -22,12 +22,16 @@ import ProgressBar from './layouts/progress-bar/Details';
 import SameHeightColumns from './layouts/same-height-columns/Details';
 import Separator from './layouts/separator/Details';
 import Sidebar from './layouts/sidebar/Details';
+import SimpleGrid from './layouts/simple-grid/Details';
 import Slider from './layouts/slider/Details';
+import SplitNavigation from './layouts/split-navigation/Details';
 import SplitScreen from './layouts/split-screen/Details';
 import StepperInput from './layouts/stepper-input/Details';
 import StickyFooter from './layouts/sticky-footer/Details';
 import StickyHeader from './layouts/sticky-header/Details';
 import Switch from './layouts/switch/Details';
+import Tab from './layouts/tab/Details';
+import Wizard from './layouts/wizard/Details';
 
 const App = () => {
     return (
@@ -54,12 +58,16 @@ const App = () => {
                 <Route exact={true} path='/same-height-columns'><SameHeightColumns /></Route>
                 <Route exact={true} path='/separator'><Separator /></Route>
                 <Route exact={true} path='/sidebar'><Sidebar /></Route>
+                <Route exact={true} path='/simple-grid'><SimpleGrid /></Route>
                 <Route exact={true} path='/slider'><Slider /></Route>
+                <Route exact={true} path='/split-navigation'><SplitNavigation /></Route>
                 <Route exact={true} path='/split-screen'><SplitScreen /></Route>
                 <Route exact={true} path='/stepper-input'><StepperInput /></Route>
                 <Route exact={true} path='/sticky-footer'><StickyFooter /></Route>
                 <Route exact={true} path='/sticky-header'><StickyHeader /></Route>
                 <Route exact={true} path='/switch'><Switch /></Route>
+                <Route exact={true} path='/tab'><Tab /></Route>
+                <Route exact={true} path='/wizard'><Wizard /></Route>
             </RouteSwitch>
         </Router>
     );

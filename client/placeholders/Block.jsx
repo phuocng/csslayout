@@ -1,11 +1,10 @@
 import React from 'react';
 
 import random from '../helpers/random';
-import Rectangle from './Rectangle';
 
-const Block = ({ numberOfBlocks }) => {
+const Block = ({ justify = 'start', numberOfBlocks }) => {
     return (
-        <div className="flex flex-wrap w-100">
+        <div className={`flex flex-wrap w-100 justify-${justify}`}>
             {
                 Array(numberOfBlocks).fill(0).map((_, i) => {
                     const s = random(1, 5);

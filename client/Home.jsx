@@ -21,12 +21,16 @@ import ProgressBarCover from './layouts/progress-bar/Cover';
 import SameHeightColumnsCover from './layouts/same-height-columns/Cover';
 import SeparatorCover from './layouts/separator/Cover';
 import SidebarCover from './layouts/sidebar/Cover';
+import SimpleGridCover from './layouts/simple-grid/Cover';
 import SliderCover from './layouts/slider/Cover';
+import SplitNavigationCover from './layouts/split-navigation/Cover';
 import SplitScreenCover from './layouts/split-screen/Cover';
 import StepperInputCover from './layouts/stepper-input/Cover';
 import StickyFooterCover from './layouts/sticky-footer/Cover';
 import StickyHeaderCover from './layouts/sticky-header/Cover';
 import SwitchCover from './layouts/switch/Cover';
+import TabCover from './layouts/tab/Cover';
+import WizardCover from './layouts/wizard/Cover';
 import Layout from './Layout';
 import useDocumentTitle from './hooks/useDocumentTitle';
 
@@ -217,9 +221,21 @@ const Home = () => {
                             </Link>
                         </div>
                         <div className="pa1 w-20">
+                            <Link to="/simple-grid" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                                <SimpleGridCover />
+                                <h4 className="f5 mv0 pt3">Simple grid</h4>
+                            </Link>
+                        </div>
+                        <div className="pa1 w-20">
                             <Link to="/slider" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                                 <SliderCover />
                                 <h4 className="f5 mv0 pt3">Slider</h4>
+                            </Link>
+                        </div>
+                        <div className="pa1 w-20">
+                            <Link to="/split-navigation" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                                <SplitNavigationCover />
+                                <h4 className="f5 mv0 pt3">Split navigation</h4>
                             </Link>
                         </div>
                         <div className="pa1 w-20">
@@ -232,6 +248,18 @@ const Home = () => {
                             <Link to="/switch" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                                 <SwitchCover />
                                 <h4 className="f5 mv0 pt3">Switch</h4>
+                            </Link>
+                        </div>
+                        <div className="pa1 w-20">
+                            <Link to="/tab" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                                <TabCover />
+                                <h4 className="f5 mv0 pt3">Tab</h4>
+                            </Link>
+                        </div>
+                        <div className="pa1 w-20">
+                            <Link to="/wizard" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                                <WizardCover />
+                                <h4 className="f5 mv0 pt3">Wizard</h4>
                             </Link>
                         </div>
                     </div>
