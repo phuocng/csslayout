@@ -23,6 +23,7 @@ import SeparatorCover from './layouts/separator/Cover';
 import SidebarCover from './layouts/sidebar/Cover';
 import SimpleGridCover from './layouts/simple-grid/Cover';
 import SliderCover from './layouts/slider/Cover';
+import SplitNavigationCover from './layouts/split-navigation/Cover';
 import SplitScreenCover from './layouts/split-screen/Cover';
 import StepperInputCover from './layouts/stepper-input/Cover';
 import StickyFooterCover from './layouts/sticky-footer/Cover';
@@ -228,6 +229,12 @@ const Home = () => {
                             <Link to="/slider" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
                                 <SliderCover />
                                 <h4 className="f5 mv0 pt3">Slider</h4>
+                            </Link>
+                        </div>
+                        <div className="pa1 w-20">
+                            <Link to="/split-navigation" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
+                                <SplitNavigationCover />
+                                <h4 className="f5 mv0 pt3">Split navigation</h4>
                             </Link>
                         </div>
                         <div className="pa1 w-20">
