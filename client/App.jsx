@@ -1,12 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch as RouteSwitch } from 'react-router-dom';
 
+import './index.css';
+
 import Home from './Home';
 import Badge from './layouts/badge/Details';
 import Breadcrumb from './layouts/breadcrumb/Details';
 import ButtonWithIcon from './layouts/button-with-icon/Details';
 import Card from './layouts/card/Details';
 import Centering from './layouts/centering/Details';
+import DotNavigation from './layouts/dot-navigation/Details';
 import FeatureList from './layouts/feature-list/Details';
 import FixedAtCorner from './layouts/fixed-at-corner/Details';
 import HolyGrail from './layouts/holy-grail/Details';
@@ -20,6 +23,7 @@ import PreviousNextButtons from './layouts/previous-next-buttons/Details';
 import PricingTable from './layouts/pricing-table/Details';
 import ProgressBar from './layouts/progress-bar/Details';
 import SameHeightColumns from './layouts/same-height-columns/Details';
+import SearchBox from './layouts/search-box/Details';
 import Separator from './layouts/separator/Details';
 import Sidebar from './layouts/sidebar/Details';
 import SimpleGrid from './layouts/simple-grid/Details';
@@ -43,6 +47,7 @@ const App = () => {
                 <Route exact={true} path='/button-with-icon'><ButtonWithIcon /></Route>
                 <Route exact={true} path='/card'><Card /></Route>
                 <Route exact={true} path='/centering'><Centering /></Route>
+                <Route exact={true} path='/dot-navigation'><DotNavigation /></Route>
                 <Route exact={true} path='/feature-list'><FeatureList /></Route>
                 <Route exact={true} path='/fixed-at-corner'><FixedAtCorner /></Route>
                 <Route exact={true} path='/holy-grail'><HolyGrail /></Route>
@@ -56,6 +61,7 @@ const App = () => {
                 <Route exact={true} path='/pricing-table'><PricingTable /></Route>
                 <Route exact={true} path='/progress-bar'><ProgressBar /></Route>
                 <Route exact={true} path='/same-height-columns'><SameHeightColumns /></Route>
+                <Route exact={true} path='/search-box'><SearchBox /></Route>
                 <Route exact={true} path='/separator'><Separator /></Route>
                 <Route exact={true} path='/sidebar'><Sidebar /></Route>
                 <Route exact={true} path='/simple-grid'><SimpleGrid /></Route>
