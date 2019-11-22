@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch as RouteSwitch } from 'react-router-dom';
 
+import './index.css';
+
 import Home from './Home';
 import Badge from './layouts/badge/Details';
 import Breadcrumb from './layouts/breadcrumb/Details';
