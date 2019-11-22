@@ -31,6 +31,7 @@ import StickyFooter from './layouts/sticky-footer/Details';
 import StickyHeader from './layouts/sticky-header/Details';
 import Switch from './layouts/switch/Details';
 import Tab from './layouts/tab/Details';
+import Wizard from './layouts/wizard/Details';
 
 const App = () => {
     return (
@@ -66,6 +67,7 @@ const App = () => {
                 <Route exact={true} path='/sticky-header'><StickyHeader /></Route>
                 <Route exact={true} path='/switch'><Switch /></Route>
                 <Route exact={true} path='/tab'><Tab /></Route>
+                <Route exact={true} path='/wizard'><Wizard /></Route>
             </RouteSwitch>
         </Router>
     );
