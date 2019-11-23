@@ -32,20 +32,21 @@ $ git clone https://github.com/phuoc-ng/csslayout
 - Install the dependencies:
 
 ~~~
+$ cd csslayout
 $ npm install
 ~~~
 
 - Run it on the local:
 
 ~~~
-$ npm run dev
+$ npm run dev-server
 ~~~
 
-Visit http://localhost:1234 to see it in action.
+Visit http://localhost:8080 to see it in action.
 
 ## Contributing
 
-PRs are welcome. If you thing there are any missing useful layouts or patterns, please create an issue or submit a PR.
+PRs are welcomed. If you thing there are any missing useful layouts or patterns, please create an issue or submit a PR.
 
 ## About
 
