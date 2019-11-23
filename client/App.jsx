@@ -4,76 +4,45 @@ import { BrowserRouter as Router, Route, Switch as RouteSwitch } from 'react-rou
 import './index.css';
 
 import Home from './Home';
-import Badge from './layouts/badge/Details';
-import Breadcrumb from './layouts/breadcrumb/Details';
-import ButtonWithIcon from './layouts/button-with-icon/Details';
-import Card from './layouts/card/Details';
-import Centering from './layouts/centering/Details';
-import DotNavigation from './layouts/dot-navigation/Details';
-import FeatureList from './layouts/feature-list/Details';
-import FixedAtCorner from './layouts/fixed-at-corner/Details';
-import HolyGrail from './layouts/holy-grail/Details';
-import InputAddon from './layouts/input-add-on/Details';
-import MediaObject from './layouts/media-object/Details';
-import Menu from './layouts/menu/Details';
-import Modal from './layouts/modal/Details';
-import Notification from './layouts/notification/Details';
-import Pagination from './layouts/pagination/Details';
-import PreviousNextButtons from './layouts/previous-next-buttons/Details';
-import PricingTable from './layouts/pricing-table/Details';
-import ProgressBar from './layouts/progress-bar/Details';
-import SameHeightColumns from './layouts/same-height-columns/Details';
-import SearchBox from './layouts/search-box/Details';
-import Separator from './layouts/separator/Details';
-import Sidebar from './layouts/sidebar/Details';
-import SimpleGrid from './layouts/simple-grid/Details';
-import Slider from './layouts/slider/Details';
-import SplitNavigation from './layouts/split-navigation/Details';
-import SplitScreen from './layouts/split-screen/Details';
-import StepperInput from './layouts/stepper-input/Details';
-import StickyFooter from './layouts/sticky-footer/Details';
-import StickyHeader from './layouts/sticky-header/Details';
-import Switch from './layouts/switch/Details';
-import Tab from './layouts/tab/Details';
-import Wizard from './layouts/wizard/Details';
+import DetailsLoader from './DetailsLoader';
 
 const App = () => {
     return (
         <Router>
             <RouteSwitch>
                 <Route exact={true} path='/'><Home /></Route>
-                <Route exact={true} path='/badge'><Badge /></Route>
-                <Route exact={true} path='/breadcrumb'><Breadcrumb /></Route>
-                <Route exact={true} path='/button-with-icon'><ButtonWithIcon /></Route>
-                <Route exact={true} path='/card'><Card /></Route>
-                <Route exact={true} path='/centering'><Centering /></Route>
-                <Route exact={true} path='/dot-navigation'><DotNavigation /></Route>
-                <Route exact={true} path='/feature-list'><FeatureList /></Route>
-                <Route exact={true} path='/fixed-at-corner'><FixedAtCorner /></Route>
-                <Route exact={true} path='/holy-grail'><HolyGrail /></Route>
-                <Route exact={true} path='/input-add-on'><InputAddon /></Route>
-                <Route exact={true} path='/media-object'><MediaObject /></Route>
-                <Route exact={true} path='/menu'><Menu /></Route>
-                <Route exact={true} path='/modal'><Modal /></Route>
-                <Route exact={true} path='/notification'><Notification /></Route>
-                <Route exact={true} path='/pagination'><Pagination /></Route>
-                <Route exact={true} path='/previous-next-buttons'><PreviousNextButtons /></Route>
-                <Route exact={true} path='/pricing-table'><PricingTable /></Route>
-                <Route exact={true} path='/progress-bar'><ProgressBar /></Route>
-                <Route exact={true} path='/same-height-columns'><SameHeightColumns /></Route>
-                <Route exact={true} path='/search-box'><SearchBox /></Route>
-                <Route exact={true} path='/separator'><Separator /></Route>
-                <Route exact={true} path='/sidebar'><Sidebar /></Route>
-                <Route exact={true} path='/simple-grid'><SimpleGrid /></Route>
-                <Route exact={true} path='/slider'><Slider /></Route>
-                <Route exact={true} path='/split-navigation'><SplitNavigation /></Route>
-                <Route exact={true} path='/split-screen'><SplitScreen /></Route>
-                <Route exact={true} path='/stepper-input'><StepperInput /></Route>
-                <Route exact={true} path='/sticky-footer'><StickyFooter /></Route>
-                <Route exact={true} path='/sticky-header'><StickyHeader /></Route>
-                <Route exact={true} path='/switch'><Switch /></Route>
-                <Route exact={true} path='/tab'><Tab /></Route>
-                <Route exact={true} path='/wizard'><Wizard /></Route>
+                <Route exact={true} path='/badge'><DetailsLoader pattern="Badge" /></Route>
+                <Route exact={true} path='/breadcrumb'><DetailsLoader pattern="Breadcrumb" /></Route>
+                <Route exact={true} path='/button-with-icon'><DetailsLoader pattern="Button with icon" /></Route>
+                <Route exact={true} path='/card'><DetailsLoader pattern="Card" /></Route>
+                <Route exact={true} path='/centering'><DetailsLoader pattern="Centering" /></Route>
+                <Route exact={true} path='/dot-navigation'><DetailsLoader pattern="Dot navigation" /></Route>
+                <Route exact={true} path='/feature-list'><DetailsLoader pattern="Feature list" /></Route>
+                <Route exact={true} path='/fixed-at-corner'><DetailsLoader pattern="Fixed at corner" /></Route>
+                <Route exact={true} path='/holy-grail'><DetailsLoader pattern="Holy grail" /></Route>
+                <Route exact={true} path='/input-add-on'><DetailsLoader pattern="Input add-on" /></Route>
+                <Route exact={true} path='/media-object'><DetailsLoader pattern="Media object" /></Route>
+                <Route exact={true} path='/menu'><DetailsLoader pattern="Menu" /></Route>
+                <Route exact={true} path='/modal'><DetailsLoader pattern="Modal" /></Route>
+                <Route exact={true} path='/notification'><DetailsLoader pattern="Notification" /></Route>
+                <Route exact={true} path='/pagination'><DetailsLoader pattern="Pagination" /></Route>
+                <Route exact={true} path='/previous-next-buttons'><DetailsLoader pattern="Previous next buttons" /></Route>
+                <Route exact={true} path='/pricing-table'><DetailsLoader pattern="Pricing table" /></Route>
+                <Route exact={true} path='/progress-bar'><DetailsLoader pattern="Progress bar" /></Route>
+                <Route exact={true} path='/same-height-columns'><DetailsLoader pattern="Same height columns" /></Route>
+                <Route exact={true} path='/search-box'><DetailsLoader pattern="Search box" /></Route>
+                <Route exact={true} path='/separator'><DetailsLoader pattern="Separator" /></Route>
+                <Route exact={true} path='/sidebar'><DetailsLoader pattern="Sidebar" /></Route>
+                <Route exact={true} path='/simple-grid'><DetailsLoader pattern="Simple grid" /></Route>
+                <Route exact={true} path='/slider'><DetailsLoader pattern="Slider" /></Route>
+                <Route exact={true} path='/split-navigation'><DetailsLoader pattern="Split navigation" /></Route>
+                <Route exact={true} path='/split-screen'><DetailsLoader pattern="Split screen" /></Route>
+                <Route exact={true} path='/stepper-input'><DetailsLoader pattern="Stepper input" /></Route>
+                <Route exact={true} path='/sticky-footer'><DetailsLoader pattern="Sticky footer" /></Route>
+                <Route exact={true} path='/sticky-header'><DetailsLoader pattern="Sticky header" /></Route>
+                <Route exact={true} path='/switch'><DetailsLoader pattern="Switch" /></Route>
+                <Route exact={true} path='/tab'><DetailsLoader pattern="Tab" /></Route>
+                <Route exact={true} path='/wizard'><DetailsLoader pattern="Wizard" /></Route>
             </RouteSwitch>
         </Router>
     );
