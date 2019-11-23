@@ -1,11 +1,14 @@
 {
     "name": "csslayout",
     "scripts": {
-        "dev": "webpack --mode=development",
-        "dev-server": "webpack-dev-server",
+        "copy": "cp client/index.html public",
+        "dev": "npm run copy && webpack --mode=development",
+        "dev-server": "npm run copy && webpack-dev-server",
+        "prebuild": "rm -rf public/* && npm run copy",
         "build": "webpack --mode=production",
         "sitemap": "cp robots.txt public && node bin/sitemap && cp sitemap.xml public",
-        "postbuild": "npm run sitemap && react-snap"
+        "export": "react-snap",
+        "postbuild": "npm run sitemap && npm run export"
     },
     "dependencies": {
         "@loadable/component": "^5.10.3",
@@ -27,7 +30,7 @@
         "webpack-dev-server": "^3.9.0"
     },
     "reactSnap": {
-        "source": "dist",
+        "source": "public",
         "minifyHtml": {
             "collapseWhitespace": false,
             "removeComments": false

@@ -1,5 +1,2 @@
-.cache
-dist
+public
 node_modules
-public/bundle.js
-public/bundle.js.map
