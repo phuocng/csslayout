@@ -1,14 +1,12 @@
 {
     "name": "csslayout",
     "scripts": {
-        "copy": "cp client/index.html dist && cp robots.txt dist && cp sitemap.xml dist",
+        "copy": "rm -rf build && mkdir build && cp client/index.html build && cp robots.txt build && cp sitemap.xml build",
         "dev": "npm run copy && webpack --mode development",
         "dev-server": "npm run copy && webpack-dev-server",
-        "prebuild": "rm -rf dist/* && npm run copy",
-        "build": "webpack --mode production",
+        "build": "npm run copy && webpack --mode production && npm run export",
         "export": "react-snap",
-        "postbuild": "npm run export",
-        "deploy": "netlify deploy --dir=dist --prod"
+        "deploy": "npm run build && netlify deploy --dir=build --prod"
     },
     "dependencies": {
         "@loadable/component": "^5.10.3",
@@ -30,7 +28,7 @@
         "webpack-dev-server": "^3.9.0"
     },
     "reactSnap": {
-        "source": "dist",
+        "source": "build",
         "minifyHtml": {
             "collapseWhitespace": false,
             "removeComments": false
