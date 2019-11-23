@@ -74,6 +74,7 @@ const Home = () => {
                         <CoverCard pattern="Previous next buttons" />
                         <CoverCard pattern="Pricing table" />
                         <CoverCard pattern="Progress bar" />
+                        <CoverCard pattern="Questions and answers" />
                         <CoverCard pattern="Same height columns" />
                         <CoverCard pattern="Search box" />
                         <CoverCard pattern="Separator" />
