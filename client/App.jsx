@@ -42,6 +42,7 @@ const App = () => {
                 <Route exact={true} path='/sticky-header'><DetailsLoader pattern="Sticky header" /></Route>
                 <Route exact={true} path='/switch'><DetailsLoader pattern="Switch" /></Route>
                 <Route exact={true} path='/tab'><DetailsLoader pattern="Tab" /></Route>
+                <Route exact={true} path='/toggle-password-visibility'><DetailsLoader pattern="Toggle password visibility" /></Route>
                 <Route exact={true} path='/wizard'><DetailsLoader pattern="Wizard" /></Route>
             </RouteSwitch>
         </Router>

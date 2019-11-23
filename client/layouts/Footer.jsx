@@ -53,7 +53,7 @@ const Footer = () => {
                         </li>
                         <li className="mb1">
                             <a href="mailto: me@phuoc.ng" className="link flex items-center">
-                            <span className="bg-black-40 br-pill flex items-center justify-center mr2" style={{ height: '24px', width: '24px' }}>
+                                <span className="bg-black-40 br-pill flex items-center justify-center mr2" style={{ height: '24px', width: '24px' }}>
                                     <svg
                                         viewBox="0 0 24 24"
                                         className="w-60 h-60"

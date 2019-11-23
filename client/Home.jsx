@@ -83,6 +83,7 @@ const Home = () => {
                         <CoverCard pattern="Stepper input" />
                         <CoverCard pattern="Switch" />
                         <CoverCard pattern="Tab" />
+                        <CoverCard pattern="Toggle password visibility" />
                         <CoverCard pattern="Wizard" />
                     </div>
                 </div>
