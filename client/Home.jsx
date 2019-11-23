@@ -30,6 +30,10 @@ const Home = () => {
                                 <div>🎉</div>
                             </li>
                             <li className="flex items-center justify-between">
+                                <div>Real use cases</div>
+                                <div>🎉</div>
+                            </li>
+                            <li className="flex items-center justify-between">
                                 <div>Good practices</div>
                                 <div className="br-pill ph2 white bg-dark-blue f6">soon</div>
                             </li>

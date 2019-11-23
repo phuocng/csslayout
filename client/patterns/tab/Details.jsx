@@ -26,29 +26,30 @@ const Details = () => {
 
     return (
         <DetailsLayout title="Tab">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center">
-                        <div className="flex items-center justify-center">
-                            <Tab tabIndex={0}>
-                                <div className="w3">
-                                    <Rectangle height={8} />
-                                </div>
-                            </Tab>
-                            <Tab tabIndex={1}>
-                                <div className="w2">
-                                    <Rectangle height={8} />
-                                </div>
-                            </Tab>
-                            <Tab tabIndex={2}>
-                                <div className="w4">
-                                    <Rectangle height={8} />
-                                </div>
-                            </Tab>
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center">
+                            <div className="flex items-center justify-center">
+                                <Tab tabIndex={0}>
+                                    <div className="w3">
+                                        <Rectangle height={8} />
+                                    </div>
+                                </Tab>
+                                <Tab tabIndex={1}>
+                                    <div className="w2">
+                                        <Rectangle height={8} />
+                                    </div>
+                                </Tab>
+                                <Tab tabIndex={2}>
+                                    <div className="w4">
+                                        <Rectangle height={8} />
+                                    </div>
+                                </Tab>
+                            </div>
                         </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -82,8 +83,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

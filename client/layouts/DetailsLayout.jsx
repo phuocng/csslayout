@@ -15,9 +15,7 @@ const DetailsLayout = ({ title, children }) => {
             <div className="bt br bl b--black-20 relative br4 br--top">
                 <h1 className="absolute bg-white f2 fw6 left-2 lh-copy ma0 ph2 top-0" style={{ left: '50%', transform: 'translate(-50%, -50%)' }}>{title}</h1>
 
-                <div className="pa5">
-                    {children}
-                </div>
+                {children}
             </div>
         </Layout>
     );

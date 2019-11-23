@@ -10,38 +10,39 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Pricing table">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex items-center justify-center pa3">
-                        <div className="w-60 flex items-center justify-center">
-                            <div className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2" style={{ flex: 1 }}>
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex items-center justify-center pa3">
+                            <div className="w-60 flex items-center justify-center">
+                                <div className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2" style={{ flex: 1 }}>
+                                    <div className="mb3 w-60"><Rectangle /></div>
+                                    <div className="mb3"><Circle size={64} /></div>
+                                    <div className="mb3 w-100">
+                                        <Block numberOfBlocks={10} />
+                                    </div>
+                                    <div className="w-40"><Rectangle height={32} /></div>
+                                </div>
+                                <div className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2" style={{ flex: 1 }}>
+                                    <div className="mb3 w-60"><Rectangle /></div>
+                                    <div className="mb3"><Circle size={64} /></div>
+                                    <div className="mb3 w-100">
+                                        <Block numberOfBlocks={20} />
+                                    </div>
+                                    <div className="w-40"><Rectangle height={32} /></div>
+                                </div>
+                                <div className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2" style={{ flex: 1 }}>
                                 <div className="mb3 w-60"><Rectangle /></div>
-                                <div className="mb3"><Circle size={64} /></div>
-                                <div className="mb3 w-100">
-                                    <Block numberOfBlocks={10} />
+                                    <div className="mb3"><Circle size={64} /></div>
+                                    <div className="mb3 w-100">
+                                        <Block numberOfBlocks={10} />
+                                    </div>
+                                    <div className="w-40"><Rectangle height={32} /></div>
                                 </div>
-                                <div className="w-40"><Rectangle height={32} /></div>
-                            </div>
-                            <div className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2" style={{ flex: 1 }}>
-                                <div className="mb3 w-60"><Rectangle /></div>
-                                <div className="mb3"><Circle size={64} /></div>
-                                <div className="mb3 w-100">
-                                    <Block numberOfBlocks={20} />
-                                </div>
-                                <div className="w-40"><Rectangle height={32} /></div>
-                            </div>
-                            <div className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2" style={{ flex: 1 }}>
-                            <div className="mb3 w-60"><Rectangle /></div>
-                                <div className="mb3"><Circle size={64} /></div>
-                                <div className="mb3 w-100">
-                                    <Block numberOfBlocks={10} />
-                                </div>
-                                <div className="w-40"><Rectangle height={32} /></div>
                             </div>
                         </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -87,8 +88,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

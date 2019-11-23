@@ -9,29 +9,30 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Holy grail">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column">
-                        <div className="flex-shrink-0 bb b--black-30 pa3">
-                            <div className="w-50"><Rectangle /></div>
-                        </div>
-                        <div className="flex-grow-1 flex flex-row">
-                            <div className="b--black-30 br pa3 w-25">
-                                <Block numberOfBlocks={10} />
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column">
+                            <div className="flex-shrink-0 bb b--black-30 pa3">
+                                <div className="w-50"><Rectangle /></div>
                             </div>
-                            <div className="pa3 flex-auto">
-                                <Block numberOfBlocks={20} />
+                            <div className="flex-grow-1 flex flex-row">
+                                <div className="b--black-30 br pa3 w-25">
+                                    <Block numberOfBlocks={10} />
+                                </div>
+                                <div className="pa3 flex-auto">
+                                    <Block numberOfBlocks={20} />
+                                </div>
+                                <div className="b--black-30 bl pa3 w-20">
+                                    <Block numberOfBlocks={5} />
+                                </div>
                             </div>
-                            <div className="b--black-30 bl pa3 w-20">
-                                <Block numberOfBlocks={5} />
+                            <div className="flex-shrink-0 bt b--black-30 pa3">
+                                <div className="w-40"><Rectangle /></div>
                             </div>
                         </div>
-                        <div className="flex-shrink-0 bt b--black-30 pa3">
-                            <div className="w-40"><Rectangle /></div>
-                        </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -74,8 +75,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

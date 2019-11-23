@@ -8,24 +8,25 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Fixed at corner">
-            <BrowserFrame
-                content={
-                    <div className="relative h-100">
-                        <div className="absolute top-0 left-0">
-                            <Triangle size={64} corner="tl" />
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="relative h-100">
+                            <div className="absolute top-0 left-0">
+                                <Triangle size={64} corner="tl" />
+                            </div>
+                            <div className="absolute top-0 right-0">
+                                <Triangle size={64} corner="tr" />
+                            </div>
+                            <div className="absolute bottom-0 right-0">
+                                <Triangle size={64} corner="br" />
+                            </div>
+                            <div className="absolute bottom-0 left-0">
+                                <Triangle size={64} corner="bl" />
+                            </div>
                         </div>
-                        <div className="absolute top-0 right-0">
-                            <Triangle size={64} corner="tr" />
-                        </div>
-                        <div className="absolute bottom-0 right-0">
-                            <Triangle size={64} corner="br" />
-                        </div>
-                        <div className="absolute bottom-0 left-0">
-                            <Triangle size={64} corner="bl" />
-                        </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -70,8 +71,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

@@ -9,21 +9,22 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Card">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center pa3">
-                        <div className="b--black-30 ba br2 flex flex-column w5">
-                            <Rectangle height={150} />
-                            <div className="pa3" style={{ flex: 1 }}>
-                                <div className="mb3"><Block numberOfBlocks={15} /></div>
-                                <div className="w4">
-                                    <Rectangle height={32} />
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center pa3">
+                            <div className="b--black-30 ba br2 flex flex-column w5">
+                                <Rectangle height={150} />
+                                <div className="pa3" style={{ flex: 1 }}>
+                                    <div className="mb3"><Block numberOfBlocks={15} /></div>
+                                    <div className="w4">
+                                        <Rectangle height={32} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -50,8 +51,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

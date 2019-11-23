@@ -10,38 +10,39 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Wizard">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center">
-                        <div className="flex w-80">
-                            <div style={{ flex: 1 }}>
-                                <div className="mb3 flex items-center justify-center">
-                                    <div style={{ flex: 1 }} />
-                                    <div className="flex items-center justify-center mh1"><Circle size={32} /></div>
-                                    <div style={{ flex: 1 }}><Line /></div>
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center">
+                            <div className="flex w-80">
+                                <div style={{ flex: 1 }}>
+                                    <div className="mb3 flex items-center justify-center">
+                                        <div style={{ flex: 1 }} />
+                                        <div className="flex items-center justify-center mh1"><Circle size={32} /></div>
+                                        <div style={{ flex: 1 }}><Line /></div>
+                                    </div>
+                                    <div className="ph3 flex justify-center"><Block justify='center' numberOfBlocks={5} /></div>
                                 </div>
-                                <div className="ph3 flex justify-center"><Block justify='center' numberOfBlocks={5} /></div>
-                            </div>
-                            <div style={{ flex: 1 }}>
-                                <div className="mb3 flex items-center justify-center">
-                                    <div style={{ flex: 1 }}><Line /></div>
-                                    <div className="flex items-center justify-center mh1"><Circle size={32} /></div>
-                                    <div style={{ flex: 1 }}><Line /></div>
+                                <div style={{ flex: 1 }}>
+                                    <div className="mb3 flex items-center justify-center">
+                                        <div style={{ flex: 1 }}><Line /></div>
+                                        <div className="flex items-center justify-center mh1"><Circle size={32} /></div>
+                                        <div style={{ flex: 1 }}><Line /></div>
+                                    </div>
+                                    <div className="ph3 flex justify-center"><Block justify='center' numberOfBlocks={5} /></div>
                                 </div>
-                                <div className="ph3 flex justify-center"><Block justify='center' numberOfBlocks={5} /></div>
-                            </div>
-                            <div style={{ flex: 1 }}>
-                                <div className="mb3 flex items-center justify-center">
-                                    <div style={{ flex: 1 }}><Line /></div>
-                                    <div className="flex items-center justify-center mh1"><Circle size={32} /></div>
-                                    <div style={{ flex: 1 }} />
+                                <div style={{ flex: 1 }}>
+                                    <div className="mb3 flex items-center justify-center">
+                                        <div style={{ flex: 1 }}><Line /></div>
+                                        <div className="flex items-center justify-center mh1"><Circle size={32} /></div>
+                                        <div style={{ flex: 1 }} />
+                                    </div>
+                                    <div className="ph3 flex justify-center"><Block justify='center' numberOfBlocks={5} /></div>
                                 </div>
-                                <div className="ph3 flex justify-center"><Block justify='center' numberOfBlocks={5} /></div>
                             </div>
                         </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -110,8 +111,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

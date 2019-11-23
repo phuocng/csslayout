@@ -10,22 +10,23 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Media object">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex items-start pa3">
-                        <div className="w4 h4 mr3">
-                            <Square />
-                        </div>
-                        <div className="flex-auto">
-                            <div className="w-80 mb4">
-                                <Rectangle />
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex items-start pa3">
+                            <div className="w4 h4 mr3">
+                                <Square />
                             </div>
-                            <div className="mb4"><Block numberOfBlocks={20} /></div>
-                            <div className="mb4"><Block numberOfBlocks={15} /></div>
+                            <div className="flex-auto">
+                                <div className="w-80 mb4">
+                                    <Rectangle />
+                                </div>
+                                <div className="mb4"><Block numberOfBlocks={20} /></div>
+                                <div className="mb4"><Block numberOfBlocks={15} /></div>
+                            </div>
                         </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -54,8 +55,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

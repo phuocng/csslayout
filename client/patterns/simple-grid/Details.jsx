@@ -8,82 +8,83 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Simple grid">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center">
-                        <div className="w-60">
-                            <div className="flex" style={{ margin: '0 -8px 8px -8px' }}>
-                                <div className="ph2" style={{ flex: '1' }}>
-                                    <Rectangle height={32} />
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center">
+                            <div className="w-60">
+                                <div className="flex" style={{ margin: '0 -8px 8px -8px' }}>
+                                    <div className="ph2" style={{ flex: '1' }}>
+                                        <Rectangle height={32} />
+                                    </div>
+                                    <div className="ph2" style={{ flex: '1' }}>
+                                        <Rectangle height={32} />
+                                    </div>
                                 </div>
-                                <div className="ph2" style={{ flex: '1' }}>
-                                    <Rectangle height={32} />
-                                </div>
-                            </div>
 
-                            <div className="flex" style={{ margin: '0 -8px 32px -8px' }}>
-                                <div className="ph2" style={{ flex: '0 0 50%' }}>
-                                    <Rectangle height={32} />
+                                <div className="flex" style={{ margin: '0 -8px 32px -8px' }}>
+                                    <div className="ph2" style={{ flex: '0 0 50%' }}>
+                                        <Rectangle height={32} />
+                                    </div>
+                                    <div className="ph2" style={{ flex: '1' }}>
+                                        <Rectangle height={32} />
+                                    </div>
+                                    <div className="ph2" style={{ flex: '1' }}>
+                                        <Rectangle height={32} />
+                                    </div>
                                 </div>
-                                <div className="ph2" style={{ flex: '1' }}>
-                                    <Rectangle height={32} />
-                                </div>
-                                <div className="ph2" style={{ flex: '1' }}>
-                                    <Rectangle height={32} />
-                                </div>
-                            </div>
 
-                            <div className="flex" style={{ margin: '0 -8px 8px -8px' }}>
-                                <div className="ph2" style={{ flex: '1' }}>
-                                    <Rectangle height={32} />
+                                <div className="flex" style={{ margin: '0 -8px 8px -8px' }}>
+                                    <div className="ph2" style={{ flex: '1' }}>
+                                        <Rectangle height={32} />
+                                    </div>
+                                    <div className="ph2" style={{ flex: '1' }}>
+                                        <Rectangle height={32} />
+                                    </div>
+                                    <div className="ph2" style={{ flex: '1' }}>
+                                        <Rectangle height={32} />
+                                    </div>
                                 </div>
-                                <div className="ph2" style={{ flex: '1' }}>
-                                    <Rectangle height={32} />
-                                </div>
-                                <div className="ph2" style={{ flex: '1' }}>
-                                    <Rectangle height={32} />
-                                </div>
-                            </div>
 
-                            <div className="flex" style={{ margin: '0 -8px 32px -8px' }}>
-                                <div className="ph2" style={{ flex: '0 0 33.3333%' }}>
-                                    <Rectangle height={32} />
+                                <div className="flex" style={{ margin: '0 -8px 32px -8px' }}>
+                                    <div className="ph2" style={{ flex: '0 0 33.3333%' }}>
+                                        <Rectangle height={32} />
+                                    </div>
+                                    <div className="ph2" style={{ flex: '1' }}>
+                                        <Rectangle height={32} />
+                                    </div>
                                 </div>
-                                <div className="ph2" style={{ flex: '1' }}>
-                                    <Rectangle height={32} />
-                                </div>
-                            </div>
 
-                            <div className="flex" style={{ margin: '0 -8px 8px -8px' }}>
-                                <div className="ph2" style={{ flex: '1' }}>
-                                    <Rectangle height={32} />
+                                <div className="flex" style={{ margin: '0 -8px 8px -8px' }}>
+                                    <div className="ph2" style={{ flex: '1' }}>
+                                        <Rectangle height={32} />
+                                    </div>
+                                    <div className="ph2" style={{ flex: '1' }}>
+                                        <Rectangle height={32} />
+                                    </div>
+                                    <div className="ph2" style={{ flex: '1' }}>
+                                        <Rectangle height={32} />
+                                    </div>
+                                    <div className="ph2" style={{ flex: '1' }}>
+                                        <Rectangle height={32} />
+                                    </div>
                                 </div>
-                                <div className="ph2" style={{ flex: '1' }}>
-                                    <Rectangle height={32} />
-                                </div>
-                                <div className="ph2" style={{ flex: '1' }}>
-                                    <Rectangle height={32} />
-                                </div>
-                                <div className="ph2" style={{ flex: '1' }}>
-                                    <Rectangle height={32} />
-                                </div>
-                            </div>
 
-                            <div className="flex" style={{ margin: '0 -8px 0 -8px' }}>
-                                <div className="ph2" style={{ flex: '0 0 25%' }}>
-                                    <Rectangle height={32} />
-                                </div>
-                                <div className="ph2" style={{ flex: '1' }}>
-                                    <Rectangle height={32} />
-                                </div>
-                                <div className="ph2" style={{ flex: '0 0 33.3333%' }}>
-                                    <Rectangle height={32} />
+                                <div className="flex" style={{ margin: '0 -8px 0 -8px' }}>
+                                    <div className="ph2" style={{ flex: '0 0 25%' }}>
+                                        <Rectangle height={32} />
+                                    </div>
+                                    <div className="ph2" style={{ flex: '1' }}>
+                                        <Rectangle height={32} />
+                                    </div>
+                                    <div className="ph2" style={{ flex: '0 0 33.3333%' }}>
+                                        <Rectangle height={32} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -112,8 +113,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

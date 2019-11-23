@@ -9,18 +9,19 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Button with icon">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center">
-                        <div className="w5">
-                            <button className="w-100 h3 flex flex-row items-center ba b--black-30 br2 ph2">
-                                <div className="mr2"><Circle size={32} /></div>
-                                <Rectangle />
-                            </button>
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center">
+                            <div className="w5">
+                                <button className="w-100 h3 flex flex-row items-center ba b--black-30 br2 ph2">
+                                    <div className="mr2"><Circle size={32} /></div>
+                                    <Rectangle />
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -39,8 +40,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };
