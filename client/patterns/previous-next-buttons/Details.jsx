@@ -8,24 +8,25 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Previous and next buttons">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center">
-                        <div className="w-50">
-                            <div className="flex items-center justify-between pa2 w-100 h2">
-                                <a className="b--black-30 ba br2 flex flex-row pa2 items-center w-30">
-                                    <div className="mr2">&lt;</div>
-                                    <Rectangle />
-                                </a>
-                                <a className="b--black-30 ba br2 flex flex-row pa2 items-center w-30">
-                                    <Rectangle />
-                                    <div className="ml2">&gt;</div>
-                                </a>
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center">
+                            <div className="w-50">
+                                <div className="flex items-center justify-between pa2 w-100 h2">
+                                    <a className="b--black-30 ba br2 flex flex-row pa2 items-center w-30">
+                                        <div className="mr2">&lt;</div>
+                                        <Rectangle />
+                                    </a>
+                                    <a className="b--black-30 ba br2 flex flex-row pa2 items-center w-30">
+                                        <Rectangle />
+                                        <div className="ml2">&gt;</div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -42,8 +43,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

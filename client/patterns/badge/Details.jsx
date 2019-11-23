@@ -7,15 +7,16 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Badge">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center">
-                        <div className="flex flex-column items-center justify-center white bg-black-30 br-pill w2 h2 f4">
-                            1
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center">
+                            <div className="flex flex-column items-center justify-center white bg-black-30 br-pill w2 h2 f4">
+                                1
+                            </div>
                         </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -38,8 +39,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

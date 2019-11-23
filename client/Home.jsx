@@ -30,6 +30,10 @@ const Home = () => {
                                 <div>🎉</div>
                             </li>
                             <li className="flex items-center justify-between">
+                                <div>Real use cases</div>
+                                <div>🎉</div>
+                            </li>
+                            <li className="flex items-center justify-between">
                                 <div>Good practices</div>
                                 <div className="br-pill ph2 white bg-dark-blue f6">soon</div>
                             </li>
@@ -62,6 +66,7 @@ const Home = () => {
                         <CoverCard pattern="Button with icon" />
                         <CoverCard pattern="Card" />
                         <CoverCard pattern="Centering" />
+                        <CoverCard pattern="Docked at corner" />
                         <CoverCard pattern="Dot navigation" />
                         <CoverCard pattern="Feature list" />
                         <CoverCard pattern="Fixed at corner" />

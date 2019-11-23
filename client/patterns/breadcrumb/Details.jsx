@@ -8,21 +8,22 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Breadcrumb">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center">
-                        <div className="flex items-center">
-                            <div className="w4"><Rectangle height={16} /></div>
-                            <div className="mh1 f2 black-30">/</div>
-                            <div className="w2"><Rectangle height={16} /></div>
-                            <div className="mh1 f2 black-30">/</div>
-                            <div className="w3"><Rectangle height={16} /></div>
-                            <div className="mh1 f2 black-30">/</div>
-                            <div className="w2"><Rectangle height={16} /></div>
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center">
+                            <div className="flex items-center">
+                                <div className="w4"><Rectangle height={16} /></div>
+                                <div className="mh1 f2 black-30">/</div>
+                                <div className="w2"><Rectangle height={16} /></div>
+                                <div className="mh1 f2 black-30">/</div>
+                                <div className="w3"><Rectangle height={16} /></div>
+                                <div className="mh1 f2 black-30">/</div>
+                                <div className="w2"><Rectangle height={16} /></div>
+                            </div>
                         </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -42,8 +43,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

@@ -9,32 +9,33 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Pagination">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center pa3">
-                        <div className="b--black-30 ba br2 flex">
-                            <div className="b--black-30 br flex items-center justify-center pa2 w4">
-                                <Rectangle />
-                            </div>
-                            <div className="b--black-30 br flex items-center justify-center pa2">
-                                <Circle size={16} />
-                            </div>
-                            <div className="b--black-30 br flex items-center justify-center pa2">
-                                <Circle size={16} />
-                            </div>
-                            <div className="b--black-30 br flex items-center justify-center pa2">
-                                <Circle size={16} />
-                            </div>
-                            <div className="b--black-30 br flex items-center justify-center pa2">
-                                <Circle size={16} />
-                            </div>
-                            <div className="flex items-center justify-center pa2 w3">
-                                <Rectangle />
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center pa3">
+                            <div className="b--black-30 ba br2 flex">
+                                <div className="b--black-30 br flex items-center justify-center pa2 w4">
+                                    <Rectangle />
+                                </div>
+                                <div className="b--black-30 br flex items-center justify-center pa2">
+                                    <Circle size={16} />
+                                </div>
+                                <div className="b--black-30 br flex items-center justify-center pa2">
+                                    <Circle size={16} />
+                                </div>
+                                <div className="b--black-30 br flex items-center justify-center pa2">
+                                    <Circle size={16} />
+                                </div>
+                                <div className="b--black-30 br flex items-center justify-center pa2">
+                                    <Circle size={16} />
+                                </div>
+                                <div className="flex items-center justify-center pa2 w3">
+                                    <Rectangle />
+                                </div>
                             </div>
                         </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -73,8 +74,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

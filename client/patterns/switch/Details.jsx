@@ -10,17 +10,18 @@ const Details = () => {
 
     return (
         <DetailsLayout title="Switch">
-            <div className="lh-copy mb3">The checkbox is placed inside a label. So when clicking on the label, the checkbox will be checked even though it's hidden.</div>
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center">
-                        <label className={`ba br-pill h2 w3 flex ${checked ? 'justify-end b--blue bg-blue' : 'b--black-30 bg-black-10'}`}>
-                            <input type="checkbox" className="dn" checked={checked} onClick={toggle} />
-                            <div className={`bg-white br-pill w2 ${checked ? '' : 'ba b--black-30'}`} />
-                        </label>
-                    </div>
-                }
-                source={
+            <div className="ph4 pv5">
+                <div className="lh-copy mb3">The checkbox is placed inside a label. So when clicking on the label, the checkbox will be checked even though it's hidden.</div>
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center">
+                            <label className={`ba br-pill h2 w3 flex ${checked ? 'justify-end b--blue bg-blue' : 'b--black-30 bg-black-10'}`}>
+                                <input type="checkbox" className="dn" checked={checked} onClick={toggle} />
+                                <div className={`bg-white br-pill w2 ${checked ? '' : 'ba b--black-30'}`} />
+                            </label>
+                        </div>
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -63,8 +64,9 @@ code={`
 </label>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

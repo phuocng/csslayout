@@ -10,28 +10,29 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Modal">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center">
-                        <div className="b--black-30 ba br2 w-50">
-                            <div className="flex items-center justify-between bb b--black-30 pa3">
-                                <div className="w-60"><Rectangle /></div>
-                                <div className="black-70">
-                                    <Circle />
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center">
+                            <div className="b--black-30 ba br2 w-50">
+                                <div className="flex items-center justify-between bb b--black-30 pa3">
+                                    <div className="w-60"><Rectangle /></div>
+                                    <div className="black-70">
+                                        <Circle />
+                                    </div>
+                                </div>
+                                <div className="pa3">
+                                    <div className="mb3"><Block numberOfBlocks={10} /></div>
+                                    <Block numberOfBlocks={5} />
+                                </div>
+                                <div className="flex justify-end bt b--black-30 pa3">
+                                    <div className="w-30 mr2"><Rectangle height={32} /></div>
+                                    <div className="w-30"><Rectangle height={32} /></div>
                                 </div>
                             </div>
-                            <div className="pa3">
-                                <div className="mb3"><Block numberOfBlocks={10} /></div>
-                                <Block numberOfBlocks={5} />
-                            </div>
-                            <div className="flex justify-end bt b--black-30 pa3">
-                                <div className="w-30 mr2"><Rectangle height={32} /></div>
-                                <div className="w-30"><Rectangle height={32} /></div>
-                            </div>
                         </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -69,8 +70,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

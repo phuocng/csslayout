@@ -9,17 +9,18 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Slider">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center">
-                        <div className="flex items-center h1 w5">
-                            <div className="w-20"><Rectangle height={2} /></div>
-                            <Circle size={32} />
-                            <div style={{ flex: 1 }}><Rectangle height={2} /></div>
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center">
+                            <div className="flex items-center h1 w5">
+                                <div className="w-20"><Rectangle height={2} /></div>
+                                <Circle size={32} />
+                                <div style={{ flex: 1 }}><Rectangle height={2} /></div>
+                            </div>
                         </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -66,8 +67,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

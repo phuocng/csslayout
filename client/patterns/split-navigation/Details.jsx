@@ -8,18 +8,19 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Split navigation">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center">
-                        <ul className="list ma0 b--black-30 ba br3 flex items-center pa3 w-60">
-                            <li className="w-20 mr1"><Rectangle /></li>
-                            <li className="w-10 mr1"><Rectangle /></li>
-                            <li className="w-20 mr1"><Rectangle /></li>
-                            <li className="w-10 ml-auto"><Rectangle /></li>
-                        </ul>
-                    </div>
-                }
-                source={
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center">
+                            <ul className="list ma0 b--black-30 ba br3 flex items-center pa3 w-60">
+                                <li className="w-20 mr1"><Rectangle /></li>
+                                <li className="w-10 mr1"><Rectangle /></li>
+                                <li className="w-20 mr1"><Rectangle /></li>
+                                <li className="w-10 ml-auto"><Rectangle /></li>
+                            </ul>
+                        </div>
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -47,8 +48,9 @@ code={`
 </ul>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

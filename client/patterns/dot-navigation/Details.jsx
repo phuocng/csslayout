@@ -24,18 +24,19 @@ const Details = () => {
 
     return (
         <DetailsLayout title="Dot navigation">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center">
-                        <ul className="list ma0 pa0 flex items-center justify-center">
-                            <Dot index={0} />
-                            <Dot index={1} />
-                            <Dot index={2} />
-                            <Dot index={3} />
-                        </ul>
-                    </div>
-                }
-                source={
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center">
+                            <ul className="list ma0 pa0 flex items-center justify-center">
+                                <Dot index={0} />
+                                <Dot index={1} />
+                                <Dot index={2} />
+                                <Dot index={3} />
+                            </ul>
+                        </div>
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -69,8 +70,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

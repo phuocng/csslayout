@@ -29,38 +29,39 @@ const Details = () => {
 
     return (
         <DetailsLayout title="Questions and answers">
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column items-center justify-center">
-                        <div className="w-60">
-                            <div className="mb3 bt bb b--black-30">
-                                <Item
-                                    index={0}
-                                    title={<div className="w-40"><Rectangle /></div>}
-                                >
-                                    <div className="mb3"><Block numberOfBlocks={10} /></div>
-                                </Item>
-                            </div>
-                            <div className="mb3 bb b--black-30">
-                                <Item
-                                    index={1}
-                                    title={<div className="w-80"><Rectangle /></div>}
-                                >
-                                    <div className="mb3"><Block numberOfBlocks={15} /></div>
-                                </Item>
-                            </div>
-                            <div className="bb b--black-30">
-                                <Item
-                                    index={2}
-                                    title={<div className="w-60"><Rectangle /></div>}
-                                >
-                                    <div className="mb3"><Block numberOfBlocks={10} /></div>
-                                </Item>
+            <div className="ph4 pv5">
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column items-center justify-center">
+                            <div className="w-60">
+                                <div className="mb3 bt bb b--black-30">
+                                    <Item
+                                        index={0}
+                                        title={<div className="w-40"><Rectangle /></div>}
+                                    >
+                                        <div className="mb3"><Block numberOfBlocks={10} /></div>
+                                    </Item>
+                                </div>
+                                <div className="mb3 bb b--black-30">
+                                    <Item
+                                        index={1}
+                                        title={<div className="w-80"><Rectangle /></div>}
+                                    >
+                                        <div className="mb3"><Block numberOfBlocks={15} /></div>
+                                    </Item>
+                                </div>
+                                <div className="bb b--black-30">
+                                    <Item
+                                        index={2}
+                                        title={<div className="w-60"><Rectangle /></div>}
+                                    >
+                                        <div className="mb3"><Block numberOfBlocks={10} /></div>
+                                    </Item>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -85,8 +86,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };

@@ -16,6 +16,7 @@ const App = () => {
                 <Route exact={true} path='/button-with-icon'><DetailsLoader pattern="Button with icon" /></Route>
                 <Route exact={true} path='/card'><DetailsLoader pattern="Card" /></Route>
                 <Route exact={true} path='/centering'><DetailsLoader pattern="Centering" /></Route>
+                <Route exact={true} path='/docked-at-corner'><DetailsLoader pattern="Docked at corner" /></Route>
                 <Route exact={true} path='/dot-navigation'><DetailsLoader pattern="Dot navigation" /></Route>
                 <Route exact={true} path='/feature-list'><DetailsLoader pattern="Feature list" /></Route>
                 <Route exact={true} path='/fixed-at-corner'><DetailsLoader pattern="Fixed at corner" /></Route>

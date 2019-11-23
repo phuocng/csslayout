@@ -9,24 +9,25 @@ import SampleCode from '../../SampleCode';
 const Details = () => {
     return (
         <DetailsLayout title="Sticky footer">
-            <div className="lh-copy mb3">
-                The footer always sticks to the bottom if the main content is short.
-            </div>
-            <BrowserFrame
-                content={
-                    <div className="h-100 flex flex-column">
-                        <div className="flex-shrink-0 bb b--black-30 pa3">
-                            <div className="w-50"><Rectangle /></div>
+            <div className="ph4 pv5">
+                <div className="lh-copy mb3">
+                    The footer always sticks to the bottom if the main content is short.
+                </div>
+                <BrowserFrame
+                    content={
+                        <div className="h-100 flex flex-column">
+                            <div className="flex-shrink-0 bb b--black-30 pa3">
+                                <div className="w-50"><Rectangle /></div>
+                            </div>
+                            <div className="flex-grow-1 pa3">
+                                <Block numberOfBlocks={20} />
+                            </div>
+                            <div className="flex-shrink-0 bt b--black-30 pa3">
+                            <div className="w-40"><Rectangle /></div>
+                            </div>
                         </div>
-                        <div className="flex-grow-1 pa3">
-                            <Block numberOfBlocks={20} />
-                        </div>
-                        <div className="flex-shrink-0 bt b--black-30 pa3">
-                        <div className="w-40"><Rectangle /></div>
-                        </div>
-                    </div>
-                }
-                source={
+                    }
+                    source={
 <SampleCode
 lang="html"
 code={`
@@ -47,8 +48,9 @@ code={`
 </div>
 `}
 />
-                }
-            />
+                    }
+                />
+            </div>
         </DetailsLayout>
     );
 };
