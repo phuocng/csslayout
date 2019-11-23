@@ -2,7 +2,7 @@ import React from 'react';
 
 import CoverCard from './CoverCard';
 import useDocumentTitle from './hooks/useDocumentTitle';
-import Layout from './Layout';
+import Layout from './layouts/Layout';
 
 const Home = () => {
     useDocumentTitle('CSS Layout');

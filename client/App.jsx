@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch as RouteSwitch } from 'react-rou
 import './index.css';
 
 import Home from './Home';
-import DetailsLoader from './DetailsLoader';
+import DetailsLoader from './loaders/DetailsLoader';
 
 const App = () => {
     return (

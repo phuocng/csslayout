@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import CoverLoader from './CoverLoader';
+import CoverLoader from './loaders/CoverLoader';
 import slug from './helpers/slug';
 
 const CoverCard = ({ pattern }) => {
