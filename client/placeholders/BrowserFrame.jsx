@@ -27,7 +27,7 @@ const BrowserFrame = ({ content, source }) => {
                 }}
             >
                 <div
-                    className="overflow-scroll absolute top-0 left-0 h-100 w-100"
+                    className={`overflow-scroll absolute top-0 left-0 h-100 w-100 ${isContentActive ? 'o-1' : 'o-0'}`}
                     style={{
                         backfaceVisibility: 'hidden',
                         WebkitBackfaceVisibility: 'hidden',
@@ -35,7 +35,7 @@ const BrowserFrame = ({ content, source }) => {
                     {content}
                 </div>
                 <div
-                    className="absolute top-0 left-0 h-100 w-100"
+                    className={`absolute top-0 left-0 h-100 w-100 ${isContentActive ? 'o-0' : 'o-1'}`}
                     style={{
                         backfaceVisibility: 'hidden',
                         transform: 'rotateY(180deg)',
