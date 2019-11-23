@@ -62,6 +62,7 @@ const Home = () => {
                         <CoverCard pattern="Button with icon" />
                         <CoverCard pattern="Card" />
                         <CoverCard pattern="Centering" />
+                        <CoverCard pattern="Docked at corner" />
                         <CoverCard pattern="Dot navigation" />
                         <CoverCard pattern="Feature list" />
                         <CoverCard pattern="Fixed at corner" />
