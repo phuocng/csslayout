@@ -4,6 +4,16 @@ const Triangle = ({ size = 16, corner = 'tl' }) => {
     let bw = '';
     let bc = '';
     switch (corner) {
+        case 't':
+            bw = `0 ${size}px ${size}px ${size}px`;
+            bc = 'transparent transparent rgba(0, 0, 0, .3) transparent';
+            break;
+
+        case 'b':
+            bw = `${size}px ${size}px 0 ${size}px`;
+            bc = 'rgba(0, 0, 0, .3) transparent transparent transparent';
+            break;
+
         case 'tr':
             bw = `0 ${size}px ${size}px 0`;
             bc = 'transparent rgba(0, 0, 0, .3) transparent transparent';
