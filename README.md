@@ -32,6 +32,7 @@ $ git clone https://github.com/phuoc-ng/csslayout
 - Install the dependencies:
 
 ~~~
+$ cd csslayout
 $ npm install
 ~~~
 
@@ -45,7 +46,7 @@ Visit http://localhost:1234 to see it in action.
 
 ## Contributing
 
-PRs are welcome. If you thing there are any missing useful layouts or patterns, please create an issue or submit a PR.
+PRs are welcomed. If you thing there are any missing useful layouts or patterns, please create an issue or submit a PR.
 
 ## About
 
