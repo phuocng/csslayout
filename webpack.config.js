@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     entry: './client/index.jsx',
     output: {
-        path: path.join(__dirname, 'public'),
+        path: path.join(__dirname, 'dist'),
         filename: 'bundle.js',
     },
     module: {
@@ -24,6 +24,6 @@ module.exports = {
     },
     devtool: 'cheap-module-eavl-source-map',
     devServer: {
-        contentBase: path.join(__dirname, 'public')
+        contentBase: path.join(__dirname, 'dist')
     },
 };

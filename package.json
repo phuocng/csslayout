@@ -1,10 +1,10 @@
 {
     "name": "csslayout",
     "scripts": {
-        "copy": "cp client/index.html public && cp robots.txt public && cp sitemap.xml public",
+        "copy": "cp client/index.html dist && cp robots.txt dist && cp sitemap.xml dist",
         "dev": "npm run copy && webpack --mode development",
         "dev-server": "npm run copy && webpack-dev-server",
-        "prebuild": "rm -rf public/* && npm run copy",
+        "prebuild": "rm -rf dist/* && npm run copy",
         "build": "webpack --mode production",
         "export": "react-snap",
         "postbuild": "npm run export"
@@ -29,7 +29,7 @@
         "webpack-dev-server": "^3.9.0"
     },
     "reactSnap": {
-        "source": "public",
+        "source": "dist",
         "minifyHtml": {
             "collapseWhitespace": false,
             "removeComments": false
