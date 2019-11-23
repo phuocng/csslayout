@@ -7,7 +7,8 @@
         "prebuild": "rm -rf dist/* && npm run copy",
         "build": "webpack --mode production",
         "export": "react-snap",
-        "postbuild": "npm run export"
+        "postbuild": "npm run export",
+        "deploy": "netlify deploy --dir=dist --prod"
     },
     "dependencies": {
         "@loadable/component": "^5.10.3",
