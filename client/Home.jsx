@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//import CoverLoader from './CoverLoader';
 import BadgeCover from './layouts/badge/Cover';
 import BreadcrumbCover from './layouts/breadcrumb/Cover';
 import ButtonWithIconCover from './layouts/button-with-icon/Cover';
@@ -116,7 +117,7 @@ const Home = () => {
                     <div className="flex flex-wrap items-start pa4">
                         <div className="pa1 w-20">
                             <Link to="/badge" className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3">
-                                <BadgeCover />
+                                <BadgeCover pattern="Badge" />
                                 <h4 className="f5 mv0 pt3">Badge</h4>
                             </Link>
                         </div>
