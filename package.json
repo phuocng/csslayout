@@ -2,10 +2,10 @@
     "name": "csslayout",
     "scripts": {
         "copy": "cp client/index.html public && cp robots.txt public && cp sitemap.xml public",
-        "dev": "npm run copy && webpack --mode=development",
+        "dev": "npm run copy && webpack --mode development",
         "dev-server": "npm run copy && webpack-dev-server",
         "prebuild": "rm -rf public/* && npm run copy",
-        "build": "webpack --mode=production",
+        "build": "webpack --mode production",
         "export": "react-snap",
         "postbuild": "npm run export"
     },
