@@ -1,14 +1,13 @@
 {
     "name": "csslayout",
     "scripts": {
-        "copy": "cp client/index.html public",
+        "copy": "cp client/index.html public && cp robots.txt public && cp sitemap.xml public",
         "dev": "npm run copy && webpack --mode=development",
         "dev-server": "npm run copy && webpack-dev-server",
         "prebuild": "rm -rf public/* && npm run copy",
         "build": "webpack --mode=production",
-        "sitemap": "cp robots.txt public && node bin/sitemap && cp sitemap.xml public",
         "export": "react-snap",
-        "postbuild": "npm run sitemap && npm run export"
+        "postbuild": "npm run export"
     },
     "dependencies": {
         "@loadable/component": "^5.10.3",
