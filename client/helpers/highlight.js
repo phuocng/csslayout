@@ -1,4 +1,7 @@
-import hljs from 'highlight.js';
+import hljs from 'highlight.js/lib/highlight';
+import html from 'highlight.js/lib/languages/xml';
+
+hljs.registerLanguage('html', html);
 
 const highlight = (input, language) => {
     const lang = language || 'html';
