@@ -9,7 +9,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Split navigation">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <ul className="list ma0 b--black-30 ba br3 flex items-center pa3 w-60">
                                 <li className="w-20 mr1"><Rectangle /></li>
@@ -18,7 +18,7 @@ const Details: React.FC<{}> = () => {
                                 <li className="w-10 ml-auto"><Rectangle /></li>
                             </ul>
                         </div>
-                    }
+                    )}
                     source={`
 <ul style="
     /* Content is centered horizontally */

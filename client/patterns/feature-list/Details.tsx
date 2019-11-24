@@ -11,7 +11,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Feature list">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="flex h-100 items-center justify-center">
                             <div className="w-60">
                                 <div className="flex flex-row mb4">
@@ -30,7 +30,7 @@ const Details: React.FC<{}> = () => {
                                 </div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <!-- Feature item -->
 <div style="

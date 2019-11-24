@@ -11,8 +11,7 @@ const Cover: React.FC<{}> = () => {
                     <div className="pa1" style={{ flex: 1 }}>
                         <Rectangle />
                     </div>
-                    <div className="pa1 br-pill bg-black-10 h-100" style={{ flex: 1 }}>
-                    </div>
+                    <div className="pa1 br-pill bg-black-10 h-100" style={{ flex: 1 }} />
                 </div>
             </div>
         </Frame>

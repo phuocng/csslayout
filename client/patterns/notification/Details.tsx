@@ -10,16 +10,19 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Notification">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="b--black-30 ba br2 flex justify-between w-60">
                                 <div className="pa3 w-80"><Block numberOfBlocks={5} /></div>
-                                <button className="black-30 bn f2 flex h2 items-center justify-center w2" style={{ marginRight: '1px' }}>
+                                <button
+                                    className="black-30 bn f2 flex h2 items-center justify-center w2"
+                                    style={{ marginRight: '1px' }}
+                                >
                                     <Circle />
                                 </button>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     display: flex;

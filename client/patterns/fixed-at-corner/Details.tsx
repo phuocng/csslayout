@@ -9,7 +9,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Fixed at corner">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="relative h-100">
                             <div className="absolute top-0 left-0">
                                 <Triangle size={64} corner="tl" />
@@ -24,7 +24,7 @@ const Details: React.FC<{}> = () => {
                                 <Triangle size={64} corner="bl" />
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     position: relative;

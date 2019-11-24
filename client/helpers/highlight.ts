@@ -1,5 +1,5 @@
-import hljs from 'highlight.js/lib/highlight';
-import html from 'highlight.js/lib/languages/xml';
+import hljs from 'highlight.js/lib/highlight'; // tslint:disable-line
+import html from 'highlight.js/lib/languages/xml'; // tslint:disable-line
 
 hljs.registerLanguage('html', html);
 

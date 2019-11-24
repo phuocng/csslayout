@@ -9,7 +9,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Separator">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="flex items-center w-60 relative">
                                 <div className="absolute bg-white ph2" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
@@ -18,7 +18,7 @@ const Details: React.FC<{}> = () => {
                                 <div className="bb b--black-30 w-100" style={{ height: '1px' }} />
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     /* Content is centered horizontally */
@@ -32,7 +32,7 @@ const Details: React.FC<{}> = () => {
     <div style="
         /* We won't see the separator line */
         background: #FFF;
-        
+
         /* Displayed at the center of container */
         left: 50%;
         position: absolute;

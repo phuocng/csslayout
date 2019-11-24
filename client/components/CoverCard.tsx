@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import CoverLoader from '../loaders/CoverLoader';
 import slug from '../helpers/slug';
+import CoverLoader from '../loaders/CoverLoader';
 
 interface CoverCardProps {
     pattern: string;

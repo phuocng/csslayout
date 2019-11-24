@@ -9,7 +9,10 @@ const Cover: React.FC<{}> = () => {
     return (
         <Frame>
             <div className="h-100 flex items-center justify-center ph2">
-                <div className="ba br2 b--black-30 flex flex-column items-center justify-center pa1 mr1" style={{ flex: 1 }}>
+                <div
+                    className="ba br2 b--black-30 flex flex-column items-center justify-center pa1 mr1"
+                    style={{ flex: 1 }}
+                >
                     <div className="mb1"><Circle /></div>
                     <div className="mb1 w-100">
                         <div className="w-100 mb1"><Line /></div>
@@ -18,7 +21,10 @@ const Cover: React.FC<{}> = () => {
                     </div>
                     <Rectangle />
                 </div>
-                <div className="ba br2 b--black-30 flex flex-column items-center justify-center pa1 mr1" style={{ flex: 1 }}>
+                <div
+                    className="ba br2 b--black-30 flex flex-column items-center justify-center pa1 mr1"
+                    style={{ flex: 1 }}
+                >
                     <div className="mb1"><Circle /></div>
                     <div className="mb1 w-100">
                         <div className="w-100 mb1"><Line /></div>
@@ -29,7 +35,10 @@ const Cover: React.FC<{}> = () => {
                     </div>
                     <Rectangle />
                 </div>
-                <div className="ba br2 b--black-30 flex flex-column items-center justify-center pa1" style={{ flex: 1 }}>
+                <div
+                    className="ba br2 b--black-30 flex flex-column items-center justify-center pa1"
+                    style={{ flex: 1 }}
+                >
                     <div className="mb1"><Circle /></div>
                     <div className="mb1 w-100">
                         <div className="w-100 mb1"><Line /></div>

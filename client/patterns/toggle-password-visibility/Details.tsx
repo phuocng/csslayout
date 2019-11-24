@@ -5,13 +5,13 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     const [visible, setVisible] = useState(false);
-    const toggle = () => setVisible(v => !v);
+    const toggle = () => setVisible((v) => !v);
 
     return (
         <DetailsLayout title="Toggle password visibility">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="w5">
                                 <div className="b--black-30 ba br1 flex">
@@ -20,8 +20,8 @@ const Details: React.FC<{}> = () => {
                                         <svg
                                             viewBox="0 0 24 24"
                                             style={{
-                                                height: '24px',
                                                 fill: "none",
+                                                height: '24px',
                                                 stroke: "rgba(0, 0, 0, 0.4)",
                                                 strokeLinecap: "round",
                                                 strokeLinejoin: "round",
@@ -41,7 +41,7 @@ const Details: React.FC<{}> = () => {
                                 </div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     display: flex;

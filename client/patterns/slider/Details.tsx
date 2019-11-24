@@ -1,8 +1,8 @@
 import React from 'react';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
-import Circle from '../../placeholders/Circle';
 import BrowserFrame from '../../placeholders/BrowserFrame';
+import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
@@ -10,7 +10,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Slider">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="flex items-center h1 w5">
                                 <div className="w-20"><Rectangle height={2} /></div>
@@ -18,7 +18,7 @@ const Details: React.FC<{}> = () => {
                                 <div style={{ flex: 1 }}><Rectangle height={2} /></div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     /* Content is centered horizontally */
@@ -37,7 +37,7 @@ const Details: React.FC<{}> = () => {
         /* Colors */
         background-color: rgba(0, 0, 0, .3);
     " />
-    
+
     <!-- Circle -->
     <div style="
         /* Size */

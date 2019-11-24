@@ -4,9 +4,8 @@ interface CoverLoaderProps {
     pattern: string;
 }
 
-//import slug from './helpers/slug';
 const slug = (item: string) => item.toLowerCase().split(' ').join('-');
 
-const CoverLoader: LoadableComponent<CoverLoaderProps> = loadable(props => import(`../patterns/${slug(props.pattern)}/Cover`));
+const CoverLoader: LoadableComponent<CoverLoaderProps> = loadable((props: CoverLoaderProps) => import(`../patterns/${slug(props.pattern)}/Cover`));
 
 export default CoverLoader;

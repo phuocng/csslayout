@@ -10,7 +10,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Same height columns">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center pa3">
                             <div className="flex h-100 w-100">
                                 <div className="b--black-20 ba br2 mh2 flex flex-column" style={{ flex: 1 }}>
@@ -44,7 +44,7 @@ const Details: React.FC<{}> = () => {
                                 </div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="display: flex;">
     <!-- Column -->

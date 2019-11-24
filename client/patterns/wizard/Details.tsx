@@ -11,7 +11,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Wizard">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="flex w-80">
                                 <div style={{ flex: 1 }}>
@@ -20,7 +20,9 @@ const Details: React.FC<{}> = () => {
                                         <div className="flex items-center justify-center mh1"><Circle size={32} /></div>
                                         <div style={{ flex: 1 }}><Line /></div>
                                     </div>
-                                    <div className="ph3 flex justify-center"><Block justify='center' numberOfBlocks={5} /></div>
+                                    <div className="ph3 flex justify-center">
+                                        <Block justify='center' numberOfBlocks={5} />
+                                    </div>
                                 </div>
                                 <div style={{ flex: 1 }}>
                                     <div className="mb3 flex items-center justify-center">
@@ -28,7 +30,9 @@ const Details: React.FC<{}> = () => {
                                         <div className="flex items-center justify-center mh1"><Circle size={32} /></div>
                                         <div style={{ flex: 1 }}><Line /></div>
                                     </div>
-                                    <div className="ph3 flex justify-center"><Block justify='center' numberOfBlocks={5} /></div>
+                                    <div className="ph3 flex justify-center">
+                                        <Block justify='center' numberOfBlocks={5} />
+                                    </div>
                                 </div>
                                 <div style={{ flex: 1 }}>
                                     <div className="mb3 flex items-center justify-center">
@@ -36,11 +40,13 @@ const Details: React.FC<{}> = () => {
                                         <div className="flex items-center justify-center mh1"><Circle size={32} /></div>
                                         <div style={{ flex: 1 }} />
                                     </div>
-                                    <div className="ph3 flex justify-center"><Block justify='center' numberOfBlocks={5} /></div>
+                                    <div className="ph3 flex justify-center">
+                                        <Block justify='center' numberOfBlocks={5} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     display: flex;
@@ -62,7 +68,7 @@ const Details: React.FC<{}> = () => {
                 height: 1px;
 
                 background-color: rgba(0, 0, 0, .3);
-                /* 
+                /*
                 For the first step, you might need to set it to transparent background:
                 background-color: transparent;
                 */
@@ -94,7 +100,7 @@ const Details: React.FC<{}> = () => {
                 height: 1px;
 
                 background-color: rgba(0, 0, 0, .3);
-                /* 
+                /*
                 For the last step, you might need to set it to transparent background:
                 background-color: transparent;
                 */

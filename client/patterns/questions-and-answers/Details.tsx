@@ -35,7 +35,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Questions and answers">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="w-60">
                                 <div className="mb3 bt bb b--black-30">
@@ -64,7 +64,7 @@ const Details: React.FC<{}> = () => {
                                 </div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <!-- Each question and answer item -->
 <div style="

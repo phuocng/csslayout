@@ -1,9 +1,9 @@
 import React from 'react';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
-import Circle from '../../placeholders/Circle';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
+import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
@@ -11,36 +11,39 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Pricing table">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex items-center justify-center pa3">
                             <div className="w-60 flex items-center justify-center">
-                                <div className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2" style={{ flex: 1 }}>
+                                <div
+                                    className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2"
+                                    style={{ flex: 1 }}
+                                >
                                     <div className="mb3 w-60"><Rectangle /></div>
                                     <div className="mb3"><Circle size={64} /></div>
-                                    <div className="mb3 w-100">
-                                        <Block numberOfBlocks={10} />
-                                    </div>
+                                    <div className="mb3 w-100"><Block numberOfBlocks={10} /></div>
                                     <div className="w-40"><Rectangle height={32} /></div>
                                 </div>
-                                <div className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2" style={{ flex: 1 }}>
+                                <div
+                                    className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2"
+                                    style={{ flex: 1 }}
+                                >
                                     <div className="mb3 w-60"><Rectangle /></div>
                                     <div className="mb3"><Circle size={64} /></div>
-                                    <div className="mb3 w-100">
-                                        <Block numberOfBlocks={20} />
-                                    </div>
+                                    <div className="mb3 w-100"><Block numberOfBlocks={20} /></div>
                                     <div className="w-40"><Rectangle height={32} /></div>
                                 </div>
-                                <div className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2" style={{ flex: 1 }}>
-                                <div className="mb3 w-60"><Rectangle /></div>
-                                    <div className="mb3"><Circle size={64} /></div>
-                                    <div className="mb3 w-100">
-                                        <Block numberOfBlocks={10} />
-                                    </div>
-                                    <div className="w-40"><Rectangle height={32} /></div>
+                                <div
+                                    className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2"
+                                    style={{ flex: 1 }}
+                                >
+                                    <div className="mb3 w-60"><Rectangle /></div>
+                                        <div className="mb3"><Circle size={64} /></div>
+                                        <div className="mb3 w-100"><Block numberOfBlocks={10} /></div>
+                                        <div className="w-40"><Rectangle height={32} /></div>
                                 </div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     /* Content is centered horizontally */

@@ -31,7 +31,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Tab">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="flex items-center justify-center">
                                 <Tab tabIndex={0}>
@@ -51,7 +51,7 @@ const Details: React.FC<{}> = () => {
                                 </Tab>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     /* Content is centered */

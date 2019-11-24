@@ -1,8 +1,8 @@
 import React from 'react';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
 import Block from '../../placeholders/Block';
+import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
@@ -10,7 +10,7 @@ const Details: React.FC<{}> = () => {
             <div className="ph4 pv5">
                 <div className="lh-copy mb3">Try to scroll the main content!</div>
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex">
                             <div className="b--black-30 br flex flex-column justify-end pa3 w-30">
                                 <div className="mb3"><Block numberOfBlocks={5} /></div>
@@ -24,7 +24,7 @@ const Details: React.FC<{}> = () => {
                                 <div className="w-80"><Block numberOfBlocks={10} /></div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="display: flex;">
     <!-- Sidebar -->

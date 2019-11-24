@@ -1,3 +1,4 @@
 .netlify
 dist
 node_modules
+tslint.log

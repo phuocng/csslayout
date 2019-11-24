@@ -11,7 +11,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Media object">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex items-start pa3">
                             <div className="w4 h4 mr3">
                                 <Square />
@@ -24,7 +24,7 @@ const Details: React.FC<{}> = () => {
                                 <div className="mb4"><Block numberOfBlocks={15} /></div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     /* Align sub-items to top */

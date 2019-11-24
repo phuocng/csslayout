@@ -15,11 +15,11 @@ const Cover: React.FC<{}> = () => {
                     <div className="w-100 mb1"><Line /></div>
                     <div className="w-100 mb1"><Line /></div>
                     <div className="w-80 mb3"><Line /></div>
-                    
+
                     <div className="w-100 mb1"><Line /></div>
                     <div className="w-100 mb1"><Line /></div>
                     <div className="w-80 mb3"><Line /></div>
-                    
+
                     <div className="w-100 mb1"><Line /></div>
                     <div className="w-100 mb1"><Line /></div>
                     <div className="w-80 mb1"><Line /></div>

@@ -1,5 +1,5 @@
-import React from 'react';
 import loadable, { LoadableComponent } from '@loadable/component';
+import React from 'react';
 
 import './spinner.css';
 
@@ -16,7 +16,7 @@ const slug = (item: string) => item.toLowerCase().split(' ').join('-');
 //  {
 //      "plugins": ["@loadable/babel-plugin"],
 //  }
-const loadDetails = /* #__LOADABLE__ */ (props: DetailsLoaderProps) => import(`../patterns/${slug(props.pattern)}/Details`)
+const loadDetails = /* #__LOADABLE__ */ (props: DetailsLoaderProps) => import(`../patterns/${slug(props.pattern)}/Details`);
 
 const DetailsLoader: LoadableComponent<DetailsLoaderProps> = loadable(loadDetails, {
     fallback: (
@@ -34,7 +34,7 @@ const DetailsLoader: LoadableComponent<DetailsLoaderProps> = loadable(loadDetail
                 />
             </svg>
         </div>
-    )
+    ),
 });
 
 export default DetailsLoader;

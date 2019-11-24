@@ -8,7 +8,12 @@ const Cover: React.FC<{}> = () => {
         <Frame>
             <div className="h-100 flex flex-column items-center justify-center">
                 <div className="flex items-center justify-center">
-                    <div className="ph2 pv1 ba b--black-30 br2 br--top" style={{ borderBottomColor: 'transparent' }}><Circle size={8} /></div>
+                    <div
+                        className="ph2 pv1 ba b--black-30 br2 br--top"
+                        style={{ borderBottomColor: 'transparent' }}
+                    >
+                        <Circle size={8} />
+                    </div>
                     <div className="ph2 pv1 bb b--black-30"><Circle size={8} /></div>
                     <div className="ph2 pv1 bb b--black-30"><Circle size={8} /></div>
                 </div>

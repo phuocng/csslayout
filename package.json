@@ -7,7 +7,8 @@
         "build": "npm run copy && webpack --mode production && npm run export",
         "export": "react-snap",
         "deploy": "npm run build && netlify deploy --dir=dist --prod",
-        "analyse": "NODE_ENV=analyse webpack --config webpack.config.js -p"
+        "analyse": "NODE_ENV=analyse webpack --config webpack.config.js -p",
+        "lint": "tslint -c tslint.json -o tslint.log 'client/**/*.{ts,tsx}'"
     },
     "dependencies": {
         "@loadable/component": "^5.10.3",
@@ -32,6 +33,8 @@
         "source-map-loader": "^0.2.4",
         "style-loader": "^1.0.0",
         "ts-loader": "^6.2.1",
+        "tslint": "^5.20.1",
+        "tslint-react": "^4.1.0",
         "typescript": "^3.7.2",
         "webpack": "^4.41.2",
         "webpack-bundle-analyzer": "^3.6.0",

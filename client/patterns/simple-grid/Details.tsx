@@ -9,7 +9,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Simple grid">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="w-60">
                                 <div className="flex" style={{ margin: '0 -8px 8px -8px' }}>
@@ -82,7 +82,7 @@ const Details: React.FC<{}> = () => {
                                 </div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <!-- Row -->
 <div style="

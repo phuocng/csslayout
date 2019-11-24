@@ -1,8 +1,7 @@
 import React from 'react';
 
-import Frame from '../../placeholders/Frame';
 import Circle from '../../placeholders/Circle';
-import Rectangle from '../../placeholders/Rectangle';
+import Frame from '../../placeholders/Frame';
 
 const Cover: React.FC<{}> = () => {
     return (

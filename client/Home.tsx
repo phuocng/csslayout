@@ -12,9 +12,16 @@ const Home = () => {
         <Layout>
             <div className="mt5 bl br bt b--black-20 br4 br--top">
                 <div className="relative">
-                    <h1 className="absolute bg-white f2 fw6 left-2 lh-copy ma0 ph2 top-0 br-pill ph3 white bg-dark-blue" style={{ left: '50%', transform: 'translate(-50%, -50%)' }}>CSS Layout</h1>
+                    <h1
+                        className="absolute bg-white f2 fw6 left-2 lh-copy ma0 ph2 top-0 br-pill ph3 white bg-dark-blue"
+                        style={{ left: '50%', transform: 'translate(-50%, -50%)' }}
+                    >
+                        CSS Layout
+                    </h1>
 
-                    <h2 className="fw3 f3 tc lh-copy ma0 pa4">a collection of popular layouts and patterns made with CSS</h2>
+                    <h2 className="fw3 f3 tc lh-copy ma0 pa4">
+                        a collection of popular layouts and patterns made with CSS
+                    </h2>
 
                     <div className="w-30 center mb4">
                         <ul className="ma0 pa0 list f4 lh-copy">

@@ -9,7 +9,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Previous and next buttons">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="w-50">
                                 <div className="flex items-center justify-between pa2 w-100 h2">
@@ -24,7 +24,7 @@ const Details: React.FC<{}> = () => {
                                 </div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     align-items: center;

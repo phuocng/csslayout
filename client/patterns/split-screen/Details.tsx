@@ -1,8 +1,8 @@
 import React from 'react';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
 import Block from '../../placeholders/Block';
+import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
@@ -11,9 +11,12 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Split screen">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex">
-                            <div className="b--black-30 br flex flex-column justify-center items-center" style={{ flex: 1 }}>
+                            <div
+                                className="b--black-30 br flex flex-column justify-center items-center"
+                                style={{ flex: 1 }}
+                            >
                                 <div className="mb3"><Circle size={128} /></div>
                                 <div className="w-60"><Rectangle /></div>
                             </div>
@@ -25,7 +28,7 @@ const Details: React.FC<{}> = () => {
                                 </div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="display: flex;">
     <!-- Left content -->

@@ -10,7 +10,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Button with icon">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="w5">
                                 <button className="w-100 h3 flex flex-row items-center ba b--black-30 br2 ph2">
@@ -19,7 +19,7 @@ const Details: React.FC<{}> = () => {
                                 </button>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <button style="
     /* Content is centered */

@@ -10,7 +10,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Docked at corner">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="w4 pa3 relative ba b--black-30 br2">
                                 <Rectangle />
@@ -20,7 +20,7 @@ const Details: React.FC<{}> = () => {
                                 />
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     position: relative;

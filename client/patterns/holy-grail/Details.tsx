@@ -10,7 +10,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Holy grail">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column">
                             <div className="flex-shrink-0 bb b--black-30 pa3">
                                 <div className="w-50"><Rectangle /></div>
@@ -30,7 +30,7 @@ const Details: React.FC<{}> = () => {
                                 <div className="w-40"><Rectangle /></div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     display: flex;
@@ -42,7 +42,7 @@ const Details: React.FC<{}> = () => {
     <main style="
         /* Take the remaining height */
         flex-grow: 1;
-        
+
         /* Layout the left sidebar, main content and right sidebar */
         display: flex;
         flex-direction: row;

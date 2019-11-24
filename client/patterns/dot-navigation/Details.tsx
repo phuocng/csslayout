@@ -29,7 +29,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Dot navigation">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <ul className="list ma0 pa0 flex items-center justify-center">
                                 <Dot index={0} />
@@ -38,7 +38,7 @@ const Details: React.FC<{}> = () => {
                                 <Dot index={3} />
                             </ul>
                         </div>
-                    }
+                    )}
                     source={`
 <ul style="
     /* Content is centered */

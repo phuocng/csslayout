@@ -11,7 +11,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Modal">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="b--black-30 ba br2 w-50">
                                 <div className="flex items-center justify-between bb b--black-30 pa3">
@@ -30,7 +30,7 @@ const Details: React.FC<{}> = () => {
                                 </div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     /* Border */

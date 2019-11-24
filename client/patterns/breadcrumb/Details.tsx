@@ -9,7 +9,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Breadcrumb">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="flex items-center">
                                 <div className="w4"><Rectangle height={16} /></div>
@@ -21,7 +21,7 @@ const Details: React.FC<{}> = () => {
                                 <div className="w2"><Rectangle height={16} /></div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     /* Content is centered vertically */

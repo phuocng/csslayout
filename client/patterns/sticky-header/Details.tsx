@@ -9,9 +9,11 @@ const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Sticky header">
             <div className="ph4 pv5">
-                <div className="lh-copy mb3">Try to scroll the main content to see the header sticks to the top of page.</div>
+                <div className="lh-copy mb3">
+                    Try to scroll the main content to see the header sticks to the top of page.
+                </div>
                 <BrowserFrame
-                    content={
+                    content={(
                         <div>
                             <div className="top-0 bg-white bb b--black-30 pa3" style={{ position: 'sticky' }}>
                                 <div className="w-50"><Rectangle /></div>
@@ -22,7 +24,7 @@ const Details: React.FC<{}> = () => {
                                 <div><Block numberOfBlocks={30} /></div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div>
     <header style="

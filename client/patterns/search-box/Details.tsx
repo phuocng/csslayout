@@ -9,25 +9,35 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Search box">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="w5">
                                 <div className="mb3 b--black-30 ba br1 flex">
-                                    <input type="text" placeholder="Search" className="pa1 b--transparent" style={{ flex: 1 }} />
+                                    <input
+                                        type="text"
+                                        placeholder="Search"
+                                        className="pa1 b--transparent"
+                                        style={{ flex: 1 }}
+                                    />
                                     <div className="pa2">
                                         <Circle />
                                     </div>
                                 </div>
 
                                 <div className="b--black-30 ba br1 flex flex-row-reverse">
-                                    <input type="text" placeholder="Search" className="pa1 b--transparent" style={{ flex: 1 }} />
+                                    <input
+                                        type="text"
+                                        placeholder="Search"
+                                        className="pa1 b--transparent"
+                                        style={{ flex: 1 }}
+                                    />
                                     <div className="pa2">
                                         <Circle />
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     display: flex;

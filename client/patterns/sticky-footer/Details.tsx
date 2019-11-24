@@ -13,7 +13,7 @@ const Details: React.FC<{}> = () => {
                     The footer always sticks to the bottom if the main content is short.
                 </div>
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column">
                             <div className="flex-shrink-0 bb b--black-30 pa3">
                                 <div className="w-50"><Rectangle /></div>
@@ -25,7 +25,7 @@ const Details: React.FC<{}> = () => {
                             <div className="w-40"><Rectangle /></div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     display: flex;

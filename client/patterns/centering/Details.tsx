@@ -10,14 +10,14 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Centering">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <Circle size={64} />
                             <div className="w-40 mt3"><Rectangle /></div>
                             <div className="w-30 mt2"><Rectangle /></div>
                             <div className="w-20 mt2"><Rectangle /></div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     align-items: center;

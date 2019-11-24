@@ -17,17 +17,27 @@ const Details: React.FC<{}> = () => {
                     The content of minus and plus buttons are centered by using the technique in the <Link to="/centering" className="link">Centering</Link> page.
                 </div>
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="b--black-30 ba br2 flex h2 w4">
-                                <button className="bg-black-05 bn flex items-center justify-center pointer w2" onClick={decrease}>-</button>
+                                <button
+                                    className="bg-black-05 bn flex items-center justify-center pointer w2"
+                                    onClick={decrease}
+                                >
+                                    -
+                                </button>
                                 <div className="b--black-30 ba bb-0 bt-0 h-100" style={{ flex: 1 }}>
                                     <input type="text" className="bn h-100 pa2 w-100" value={value} onChange={change} />
                                 </div>
-                                <button className="bg-black-05 bn flex items-center justify-center pointer w2" onClick={increase}>+</button>
+                                <button
+                                    className="bg-black-05 bn flex items-center justify-center pointer w2"
+                                    onClick={increase}
+                                >
+                                    +
+                                </button>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     display: flex;
@@ -41,11 +51,11 @@ const Details: React.FC<{}> = () => {
 ">
     <!-- Minus button -->
     <button style="
-        /* Content is centered */            
+        /* Content is centered */
         align-items: center;
         display: flex;
         justify-content: center;
-        
+
         /* Size */
         width: 32px;
     ">-</button>
@@ -61,7 +71,7 @@ const Details: React.FC<{}> = () => {
 
     <!-- Plus button -->
     <button style="
-        /* Content is centered */                    
+        /* Content is centered */
         align-items: center;
         display: flex;
         justify-content: center;

@@ -9,7 +9,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Input add-on">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="w5">
                                 <div className="b--black-30 ba br2 flex h2 w-100 mb3">
@@ -35,7 +35,7 @@ const Details: React.FC<{}> = () => {
                                 </div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <!-- Add-on prepended -->
 <div style="
@@ -46,7 +46,7 @@ const Details: React.FC<{}> = () => {
 ">
     <!-- Add-on -->
     <div style="
-        /* Content is centered */            
+        /* Content is centered */
         align-items: center;
         display: flex;
         justify-content: center;
@@ -76,7 +76,7 @@ const Details: React.FC<{}> = () => {
 
     <!-- Add-on -->
     <div style="
-        /* Content is centered */            
+        /* Content is centered */
         align-items: center;
         display: flex;
         justify-content: center;
@@ -94,7 +94,7 @@ const Details: React.FC<{}> = () => {
 ">
     <!-- Add-on -->
     <div style="
-        /* Content is centered */            
+        /* Content is centered */
         align-items: center;
         display: flex;
         justify-content: center;
@@ -110,7 +110,7 @@ const Details: React.FC<{}> = () => {
 
     <!-- Add-on -->
     <div style="
-        /* Content is centered */            
+        /* Content is centered */
         align-items: center;
         display: flex;
         justify-content: center;

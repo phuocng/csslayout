@@ -1,28 +1,31 @@
 import React, { useState } from 'react';
 
+import useInterval from '../../hooks/useInterval';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import useInterval from '../../hooks/useInterval';
 
 const Details: React.FC<{}> = () => {
     const [progress, setProgress] = useState(0);
     useInterval(() => {
-        setProgress(v => v === 100 ? 0 : v + 1);
+        setProgress((v) => v === 100 ? 0 : v + 1);
     }, 1 * 100);
 
     return (
         <DetailsLayout title="Progress bar">
             <div className="ph4 pv5">
                 <BrowserFrame
-                    content={
+                    content={(
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="h1 w-50 br-pill bg-black-10">
-                                <div className="br-pill h-100 bg-blue flex items-center justify-center pa1 white f7" style={{ width: `${progress}%` }}>
+                                <div
+                                    className="br-pill h-100 bg-blue flex items-center justify-center pa1 white f7"
+                                    style={{ width: `${progress}%` }}
+                                >
                                     {progress}%
                                 </div>
                             </div>
                         </div>
-                    }
+                    )}
                     source={`
 <div style="
     /* Colors */
