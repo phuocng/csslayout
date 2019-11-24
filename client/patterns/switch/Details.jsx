@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
+import RelatedPatterns from '../../layouts/RelatedPatterns';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import SampleCode from '../../SampleCode';
 
@@ -67,6 +68,7 @@ code={`
                     }
                 />
             </div>
+            <RelatedPatterns patterns={['Radio switch']} />
         </DetailsLayout>
     );
 };
