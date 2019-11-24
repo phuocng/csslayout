@@ -27,18 +27,15 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-            },
-            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.ts(x?)$/,
                 exclude: /node_modules/,
-                use: 'ts-loader',
+                // The order of loaders are very important
+                // It will make the @loadable/component work
+                use: ['babel-loader', 'ts-loader'],
             },
             {
                 enforce: "pre",
