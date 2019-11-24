@@ -6,7 +6,8 @@
         "dev-server": "npm run copy && webpack-dev-server",
         "build": "npm run copy && webpack --mode production && npm run export",
         "export": "react-snap",
-        "deploy": "npm run build && netlify deploy --dir=build --prod"
+        "deploy": "npm run build && netlify deploy --dir=build --prod",
+        "analyse": "webpack --config webpack.config.js -p"
     },
     "dependencies": {
         "@loadable/component": "^5.10.3",
@@ -24,6 +25,7 @@
         "css-loader": "^3.2.0",
         "style-loader": "^1.0.0",
         "webpack": "^4.41.2",
+        "webpack-bundle-analyzer": "^3.6.0",
         "webpack-cli": "^3.3.10",
         "webpack-dev-server": "^3.9.0"
     },

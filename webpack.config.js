@@ -1,4 +1,5 @@
 const path = require('path');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     entry: './client/index.jsx',
@@ -32,4 +33,7 @@ module.exports = {
         contentBase: path.join(__dirname, 'build'),
         historyApiFallback: true,
     },
+    plugins: [
+        new BundleAnalyzerPlugin(),
+    ],
 };
