@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CoverCard from './CoverCard';
+import CoverCard from './components/CoverCard';
 import useDocumentTitle from './hooks/useDocumentTitle';
 import Layout from './layouts/Layout';
 

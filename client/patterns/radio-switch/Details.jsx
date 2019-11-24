@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
+import RelatedPatterns from '../../components/RelatedPatterns';
 import DetailsLayout from '../../layouts/DetailsLayout';
-import RelatedPatterns from '../../layouts/RelatedPatterns';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import SampleCode from '../../SampleCode';
 

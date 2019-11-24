@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import CoverCard from '../CoverCard';
+import CoverCard from './CoverCard';
 
 const RelatedPatterns = ({ patterns }) => {
     return (
