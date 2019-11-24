@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import Rectangle from '../../placeholders/Rectangle';
 import SampleCode from '../../SampleCode';
 
 const Details = () => {
@@ -17,11 +16,11 @@ const Details = () => {
                         <div className="h-100 flex flex-column items-center justify-center">
                             <div className="inline-flex br-pill bg-black-10 pa1">
                                 <label className={`pointer pv3 ph2 br-pill ${isFirstChecked ? 'bg-blue white' : ''}`}>
-                                    <input type="radio" className="dn" checked={isFirstChecked} onClick={toggle} />
+                                    <input type="radio" className="dn" checked={isFirstChecked} onChange={toggle} />
                                     <div className={`w3 br1 ${isFirstChecked ? 'bg-white' : 'bg-black-20'}`} style={{ height: '8px' }}  />
                                 </label>
                                 <label className={`pointer pv3 ph2 br-pill ${isFirstChecked ? '' : 'bg-blue white'}`}>
-                                    <input type="radio" className="dn" checked={!isFirstChecked} onClick={toggle} />
+                                    <input type="radio" className="dn" checked={!isFirstChecked} onChange={toggle} />
                                     <div className={`w3 br1 ${isFirstChecked ? 'bg-black-20' : 'bg-white'}`} style={{ height: '8px' }}  />
                                 </label>
                             </div>
