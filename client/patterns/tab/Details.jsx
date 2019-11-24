@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -49,10 +48,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div style="
     /* Content is centered */
     align-items: center;
@@ -82,8 +78,6 @@ code={`
     </div>
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>

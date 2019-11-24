@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     const [visible, setVisible] = useState(false);
@@ -43,10 +42,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div style="
     display: flex;
 
@@ -69,8 +65,6 @@ code={`
     </button>
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>

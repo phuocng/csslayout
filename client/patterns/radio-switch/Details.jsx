@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import RelatedPatterns from '../../components/RelatedPatterns';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     const [isFirstChecked, setFirstChecked] = useState(false);
@@ -27,10 +26,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <!-- Container -->
 <div style="
     background-color: rgba(0, 0, 0, .1);
@@ -58,8 +54,6 @@ code={`
     ...
 </div>
 `}
-/>
-                    }
                 />
             </div>
             <div className="bt b--black-20 relative">

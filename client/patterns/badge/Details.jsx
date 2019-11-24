@@ -2,7 +2,6 @@ import React from 'react';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     return (
@@ -16,10 +15,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div style="
     /* Content is centered */
     align-items: center;
@@ -35,11 +31,9 @@ code={`
     height: 32px;
     width: 32px;
 ">
-    1
+    ...
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>

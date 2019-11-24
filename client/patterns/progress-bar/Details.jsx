@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import SampleCode from '../../SampleCode';
 import useInterval from '../../hooks/useInterval';
 
 const Details = () => {
@@ -24,10 +23,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div style="
     /* Colors */
     background-color: rgba(0, 0, 0, .1);
@@ -56,8 +52,6 @@ code={`
     </div>
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>

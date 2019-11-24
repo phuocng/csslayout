@@ -3,7 +3,6 @@ import React from 'react';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Block from '../../placeholders/Block';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     return (
@@ -26,10 +25,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div style="display: flex;">
     <!-- Sidebar -->
     <aside style="width: 30%;">
@@ -45,8 +41,6 @@ code={`
     </main>
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>

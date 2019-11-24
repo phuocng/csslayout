@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     const [value, setValue] = useState(0);
@@ -29,10 +28,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div style="
     display: flex;
 
@@ -75,8 +71,6 @@ code={`
     ">+</button>
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>

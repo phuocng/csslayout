@@ -4,7 +4,6 @@ import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     return (
@@ -21,10 +20,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div style="
     display: flex;
     justify-content: space-between;
@@ -36,8 +32,6 @@ code={`
     ...
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>
