@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, ReactNode } from 'react';
 
 import SampleCode from '../components/SampleCode';
 
-const BrowserFrame = ({ content, source }) => {
+interface BrowserFrameProps {
+    content: ReactNode;
+    source: string;
+}
+
+const BrowserFrame: React.FC<BrowserFrameProps> = ({ content, source }) => {
     const [isContentActive, setContentActive] = useState(true);
     const flip = () => setContentActive(isActive => !isActive);
 

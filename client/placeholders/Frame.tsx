@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Frame = ({ children }) => {
+const Frame: React.FC<{}> = ({ children }) => {
     return (
         <div
             className="ba b--black-30 br2"

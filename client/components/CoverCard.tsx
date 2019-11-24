@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 import CoverLoader from '../loaders/CoverLoader';
 import slug from '../helpers/slug';
 
-const CoverCard = ({ pattern }) => {
+interface CoverCardProps {
+    pattern: string;
+}
+
+const CoverCard: React.FC<CoverCardProps> = ({ pattern }) => {
     return (
         <div className="pa1 w-20">
             <Link

@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Circle = ({ size = 16 }) => {
+interface CircleProps {
+    size?: number;
+}
+
+const Circle: React.FC<CircleProps> = ({ size = 16 }) => {
     return (
         <div
             className="bg-black-30 br-pill"

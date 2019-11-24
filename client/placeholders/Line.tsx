@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Line = () => {
+const Line: React.FC<{}> = () => {
     return (
         <div
             className="w-100 bg-black-30"

@@ -2,7 +2,13 @@ import React from 'react';
 
 import random from '../helpers/random';
 
-const Block = ({ justify = 'start', numberOfBlocks = 1, blockHeight = 4 }) => {
+interface BlockProps {
+    blockHeight?: number;
+    justify?: string;
+    numberOfBlocks?: number;
+}
+
+const Block: React.FC<BlockProps> = ({ justify = 'start', numberOfBlocks = 1, blockHeight = 4 }) => {
     return (
         <div className={`flex flex-wrap w-100 justify-${justify}`}>
             {

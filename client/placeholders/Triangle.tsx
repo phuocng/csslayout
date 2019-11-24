@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Triangle = ({ size = 16, corner = 'tl' }) => {
+interface TriangleProps {
+    corner?: string;
+    size?: number;
+}
+
+const Triangle: React.FC<TriangleProps> = ({ size = 16, corner = 'tl' }) => {
     let bw = '';
     let bc = '';
     switch (corner) {
