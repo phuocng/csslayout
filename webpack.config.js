@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === "analyse") {
 }
 
 module.exports = {
-    entry: './client/index.jsx',
+    entry: './client/index.tsx',
     output: {
         path: path.join(__dirname, 'dist'),
         filename: '[name].[contenthash].js',
@@ -35,10 +35,20 @@ module.exports = {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
+            {
+                test: /\.ts(x?)$/,
+                exclude: /node_modules/,
+                use: 'ts-loader',
+            },
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                loader: 'source-map-loader',
+            },
         ],
     },
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
     devtool: 'cheap-module-eavl-source-map',
     devServer: {
