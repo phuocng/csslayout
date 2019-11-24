@@ -3,7 +3,6 @@ import React from 'react';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     return (
@@ -23,10 +22,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div style="
     /* Content is centered vertically */
     align-items: center;
@@ -42,8 +38,6 @@ code={`
     ...
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>

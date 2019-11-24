@@ -1,6 +1,6 @@
 import React from 'react';
 
-import highlight from './helpers/highlight';
+import highlight from '../helpers/highlight';
 
 const SampleCode = ({ code, lang }) => {
     return code === ''

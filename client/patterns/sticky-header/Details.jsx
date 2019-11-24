@@ -4,7 +4,6 @@ import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     return (
@@ -24,10 +23,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div>
     <header style="
         position: sticky;
@@ -40,8 +36,6 @@ code={`
     </main>
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>

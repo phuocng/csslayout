@@ -5,7 +5,16 @@ import './spinner.css';
 
 const slug = item => item.toLowerCase().split(' ').join('-');
 
-const DetailsLoader = loadable(props => import(`../patterns/${slug(props.pattern)}/Details`), {
+// In order to create a link to another page that is dynamically loaded (via <Link to="...">),
+// the page chunks have to be loadable by @loadable.
+// We have to add a magic comment /* #__LOADABLE__ */ here
+// and the following plugin to Babel's settings (.babelrc):
+//  {
+//      "plugins": ["@loadable/babel-plugin"],
+//  }
+const loadDetails = /* #__LOADABLE__ */ (props) => import(`../patterns/${slug(props.pattern)}/Details`)
+
+const DetailsLoader = loadable(loadDetails, {
     fallback: (
         <div className="w100 h-100 flex items-center justify-center">
             <svg className="spinner" width="64px" height="64px" viewBox="0 0 32 32">

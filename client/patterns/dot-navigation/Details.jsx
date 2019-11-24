@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     const [activeItem, setActiveItem] = useState(0);
@@ -36,10 +35,7 @@ const Details = () => {
                             </ul>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <ul style="
     /* Content is centered */
     align-items: center;
@@ -69,8 +65,6 @@ code={`
     " />
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>

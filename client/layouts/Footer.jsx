@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Heading from '../components/Heading';
+
 const Footer = () => {
     return (
         <div className="bl br bb b--black-20 flex justify-between br4 br--bottom">
-            <div className="bt br b--black-20 relative" style={{ flex: 1 }}>
-                <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0 ttu" style={{ transform: 'translate(0, -50%)' }}>Products</h3>
+            <div className="br b--black-20" style={{ flex: 1 }}>
+                <Heading title="Products" />
 
                 <ul className="list ma0 pa0 lh-copy fw5 pa4">
                     <li>
@@ -25,8 +27,8 @@ const Footer = () => {
                 </ul>
             </div>
 
-            <div className="bt b--black-20 relative" style={{ flex: 1 }}>
-                <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0 ttu" style={{ transform: 'translate(0, -50%)' }}>About</h3>
+            <div style={{ flex: 1 }}>
+                <Heading title="About" />
 
                 <div className="pa4">
                     <div className="pb2 lh-copy">© 2019 Nguyen Huu Phuoc and contributors</div>

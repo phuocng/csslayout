@@ -1,6 +1,7 @@
 import React from 'react';
 
-import CoverCard from './CoverCard';
+import CoverCard from './components/CoverCard';
+import Heading from './components/Heading';
 import useDocumentTitle from './hooks/useDocumentTitle';
 import Layout from './layouts/Layout';
 
@@ -45,8 +46,8 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="bt b--black-20 relative">
-                    <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0 ttu" style={{ transform: 'translate(0, -50%)' }}>Layouts</h3>
+                <section>
+                    <Heading title="Layouts" />
 
                     <div className="flex flex-wrap items-start pa4">
                         <CoverCard pattern="Holy grail" />
@@ -55,10 +56,10 @@ const Home = () => {
                         <CoverCard pattern="Sticky footer" />
                         <CoverCard pattern="Sticky header" />
                     </div>
-                </div>
+                </section>
 
-                <div className="bt b--black-20 relative">
-                    <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0 ttu" style={{ transform: 'translate(0, -50%)' }}>Patterns</h3>
+                <section>
+                    <Heading title="Patterns" />
 
                     <div className="flex flex-wrap items-start pa4">
                         <CoverCard pattern="Badge" />
@@ -93,7 +94,7 @@ const Home = () => {
                         <CoverCard pattern="Toggle password visibility" />
                         <CoverCard pattern="Wizard" />
                     </div>
-                </div>
+                </section>
             </div>
         </Layout>
     );

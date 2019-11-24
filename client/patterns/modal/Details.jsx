@@ -5,7 +5,6 @@ import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     return (
@@ -32,10 +31,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div style="
     /* Border */
     border: 1px solid rgba(0, 0, 0.3);
@@ -69,8 +65,6 @@ code={`
     </div>
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>

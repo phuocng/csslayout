@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
+import RelatedPatterns from '../../components/RelatedPatterns';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     const [checked, setChecked] = useState(false);
@@ -21,10 +21,7 @@ const Details = () => {
                             </label>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <label style="
     display: flex;
 
@@ -63,10 +60,9 @@ code={`
     " />
 </label>
 `}
-/>
-                    }
                 />
             </div>
+            <RelatedPatterns patterns={['Radio switch']} />
         </DetailsLayout>
     );
 };

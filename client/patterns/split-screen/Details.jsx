@@ -5,7 +5,6 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Block from '../../placeholders/Block';
 import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     return (
@@ -27,10 +26,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div style="display: flex;">
     <!-- Left content -->
     <div style="flex: 1;">
@@ -43,8 +39,6 @@ code={`
     </div>
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>

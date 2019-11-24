@@ -5,7 +5,6 @@ import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 import Triangle from '../../placeholders/Triangle';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     const [activeItem, setActiveItem] = useState(-1);
@@ -61,10 +60,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <!-- Each question and answer item -->
 <div style="
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -85,8 +81,6 @@ code={`
     <!-- Answer -->
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>

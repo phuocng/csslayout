@@ -4,7 +4,6 @@ import DetailsLayout from '../../layouts/DetailsLayout';
 import Circle from '../../placeholders/Circle';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     return (
@@ -20,10 +19,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div style="
     /* Content is centered horizontally */
     align-items: center;
@@ -66,8 +62,6 @@ code={`
     " />
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>

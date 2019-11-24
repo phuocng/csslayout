@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import SampleCode from '../components/SampleCode';
+
 const BrowserFrame = ({ content, source }) => {
     const [isContentActive, setContentActive] = useState(true);
     const flip = () => setContentActive(isActive => !isActive);
@@ -42,7 +44,7 @@ const BrowserFrame = ({ content, source }) => {
                         WebkitBackfaceVisibility: 'hidden',
                     }}
                 >
-                    {source}
+                    <SampleCode lang="html" code={source} />
                 </div>
             </div>
         </div>

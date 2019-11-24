@@ -5,7 +5,6 @@ import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 import Square from '../../placeholders/Square';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     return (
@@ -26,10 +25,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div style="
     /* Align sub-items to top */
     align-items: start;
@@ -54,8 +50,6 @@ code={`
     </div>
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>

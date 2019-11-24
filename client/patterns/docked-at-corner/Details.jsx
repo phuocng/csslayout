@@ -1,9 +1,9 @@
 import React from 'react';
 
+import Heading from '../../components/Heading';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     return (
@@ -21,10 +21,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div style="
     position: relative;
 ">
@@ -46,12 +43,10 @@ code={`
     ...
 </div>
 `}
-/>
-                    }
                 />
             </div>
-            <div className="bt b--black-20 relative">
-                <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0" style={{ transform: 'translate(0px, -50%)' }}>Use cases</h3>
+            <section>
+                <Heading title="Use cases" />
 
                 <div className="pa4">
                     <div className="mb4 w4 pa2 relative ba b--black-30 br2">
@@ -73,7 +68,7 @@ code={`
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </DetailsLayout>
     );
 };

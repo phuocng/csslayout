@@ -3,7 +3,6 @@ import React from 'react';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Triangle from '../../placeholders/Triangle';
-import SampleCode from '../../SampleCode';
 
 const Details = () => {
     return (
@@ -26,10 +25,7 @@ const Details = () => {
                             </div>
                         </div>
                     }
-                    source={
-<SampleCode
-lang="html"
-code={`
+                    source={`
 <div style="
     position: relative;
 ">
@@ -70,8 +66,6 @@ code={`
     </div>
 </div>
 `}
-/>
-                    }
                 />
             </div>
         </DetailsLayout>
