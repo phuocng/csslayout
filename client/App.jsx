@@ -31,6 +31,7 @@ const App = () => {
                 <Route exact={true} path='/pricing-table'><DetailsLoader pattern="Pricing table" /></Route>
                 <Route exact={true} path='/progress-bar'><DetailsLoader pattern="Progress bar" /></Route>
                 <Route exact={true} path='/questions-and-answers'><DetailsLoader pattern="Questions and answers" /></Route>
+                <Route exact={true} path='/radio-switch'><DetailsLoader pattern="Radio switch" /></Route>
                 <Route exact={true} path='/same-height-columns'><DetailsLoader pattern="Same height columns" /></Route>
                 <Route exact={true} path='/search-box'><DetailsLoader pattern="Search box" /></Route>
                 <Route exact={true} path='/separator'><DetailsLoader pattern="Separator" /></Route>

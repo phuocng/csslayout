@@ -80,6 +80,7 @@ const Home = () => {
                         <CoverCard pattern="Pricing table" />
                         <CoverCard pattern="Progress bar" />
                         <CoverCard pattern="Questions and answers" />
+                        <CoverCard pattern="Radio switch" />
                         <CoverCard pattern="Same height columns" />
                         <CoverCard pattern="Search box" />
                         <CoverCard pattern="Separator" />
