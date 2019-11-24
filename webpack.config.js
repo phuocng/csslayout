@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === "analyse") {
 }
 
 module.exports = {
-    entry: './client/index.jsx',
+    entry: './client/index.tsx',
     output: {
         path: path.join(__dirname, 'dist'),
         filename: '[name].[contenthash].js',
@@ -27,18 +27,25 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-            },
-            {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.ts(x?)$/,
+                exclude: /node_modules/,
+                // The order of loaders are very important
+                // It will make the @loadable/component work
+                use: ['babel-loader', 'ts-loader'],
+            },
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                loader: 'source-map-loader',
             },
         ],
     },
     resolve: {
-        extensions: ['.js', '.jsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
     devtool: 'cheap-module-eavl-source-map',
     devServer: {
