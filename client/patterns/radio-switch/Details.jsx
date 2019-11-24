@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import Heading from '../../components/Heading';
 import RelatedPatterns from '../../components/RelatedPatterns';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -56,8 +57,8 @@ const Details = () => {
 `}
                 />
             </div>
-            <div className="bt b--black-20 relative">
-                <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0 ttu" style={{ transform: 'translate(0px, -50%)' }}>Use cases</h3>
+            <section>
+                <Heading title="Use cases" />
 
                 <div className="pa4">
                     <div className="inline-flex br-pill bg-black-10 pa1">
@@ -71,7 +72,7 @@ const Details = () => {
                         </label>
                     </div>
                 </div>
-            </div>
+            </section>
             <RelatedPatterns patterns={['Switch']} />
         </DetailsLayout>
     );
