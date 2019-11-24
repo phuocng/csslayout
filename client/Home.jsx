@@ -46,7 +46,7 @@ const Home = () => {
                 </div>
 
                 <div className="bt b--black-20 relative">
-                    <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0" style={{ transform: 'translate(0, -50%)' }}>Layouts</h3>
+                    <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0 ttu" style={{ transform: 'translate(0, -50%)' }}>Layouts</h3>
 
                     <div className="flex flex-wrap items-start pa4">
                         <CoverCard pattern="Holy grail" />
@@ -58,7 +58,7 @@ const Home = () => {
                 </div>
 
                 <div className="bt b--black-20 relative">
-                    <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0" style={{ transform: 'translate(0, -50%)' }}>Patterns</h3>
+                    <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0 ttu" style={{ transform: 'translate(0, -50%)' }}>Patterns</h3>
 
                     <div className="flex flex-wrap items-start pa4">
                         <CoverCard pattern="Badge" />

@@ -63,7 +63,7 @@ code={`
                 />
             </div>
             <div className="bt b--black-20 relative">
-                <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0" style={{ transform: 'translate(0px, -50%)' }}>Use cases</h3>
+                <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0 ttu" style={{ transform: 'translate(0px, -50%)' }}>Use cases</h3>
 
                 <div className="pa4">
                     <div className="inline-flex br-pill bg-black-10 pa1">
