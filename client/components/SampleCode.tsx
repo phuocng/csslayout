@@ -2,7 +2,12 @@ import React from 'react';
 
 import highlight from '../helpers/highlight';
 
-const SampleCode = ({ code, lang }) => {
+interface SampleCodeProps {
+    code: string;
+    lang: string;
+}
+
+const SampleCode: React.FC<SampleCodeProps> = ({ code, lang }) => {
     return code === ''
             ? <></>
             : (

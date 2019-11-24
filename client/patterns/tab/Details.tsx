@@ -4,10 +4,14 @@ import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
-const Details = () => {
+interface TabProps {
+    tabIndex: number;
+}
+
+const Details: React.FC<{}> = () => {
     const [activeTab, setActiveTab] = useState(0);
 
-    const Tab = ({ tabIndex, children }) => {
+    const Tab: React.FC<TabProps> = ({ tabIndex, children }) => {
         const isActive = tabIndex === activeTab;
         const click = () => setActiveTab(tabIndex);
         return (

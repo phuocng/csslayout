@@ -4,7 +4,7 @@ import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Block from '../../placeholders/Block';
 
-const Details = () => {
+const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Sidebar">
             <div className="ph4 pv5">

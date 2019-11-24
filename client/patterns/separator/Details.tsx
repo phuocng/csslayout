@@ -4,7 +4,7 @@ import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
-const Details = () => {
+const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Separator">
             <div className="ph4 pv5">

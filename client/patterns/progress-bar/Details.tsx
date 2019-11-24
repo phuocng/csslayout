@@ -4,7 +4,7 @@ import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import useInterval from '../../hooks/useInterval';
 
-const Details = () => {
+const Details: React.FC<{}> = () => {
     const [progress, setProgress] = useState(0);
     useInterval(() => {
         setProgress(v => v === 100 ? 0 : v + 1);

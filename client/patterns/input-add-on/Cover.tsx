@@ -3,7 +3,7 @@ import React from 'react';
 import Frame from '../../placeholders/Frame';
 import Line from '../../placeholders/Line';
 
-const Cover = () => {
+const Cover: React.FC<{}> = () => {
     return (
         <Frame>
             <div className="h-100 flex items-center justify-center pa2">

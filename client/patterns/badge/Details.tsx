@@ -3,7 +3,7 @@ import React from 'react';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
-const Details = () => {
+const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Badge">
             <div className="ph4 pv5">

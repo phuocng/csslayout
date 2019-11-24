@@ -2,7 +2,7 @@ import React from 'react';
 
 import Frame from '../../placeholders/Frame';
 
-const Cover = () => {
+const Cover: React.FC<{}> = () => {
     return (
         <Frame>
             <div className="h-100 flex flex-column items-center justify-center pa2">

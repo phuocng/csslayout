@@ -1,2 +1,3 @@
-const slug = item => item.toLowerCase().split(' ').join('-');
+const slug = (item: string) => item.toLowerCase().split(' ').join('-');
+
 export default slug;

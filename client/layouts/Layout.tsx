@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import Footer from './Footer';
 
-const Layout = ({ children }) => {
+const Layout: React.FC<{}> = ({ children }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);

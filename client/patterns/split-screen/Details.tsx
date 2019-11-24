@@ -6,7 +6,7 @@ import Block from '../../placeholders/Block';
 import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
-const Details = () => {
+const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Split screen">
             <div className="ph4 pv5">

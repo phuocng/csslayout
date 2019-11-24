@@ -4,7 +4,7 @@ import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Triangle from '../../placeholders/Triangle';
 
-const Details = () => {
+const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Fixed at corner">
             <div className="ph4 pv5">

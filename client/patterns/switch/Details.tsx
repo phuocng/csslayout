@@ -4,7 +4,7 @@ import RelatedPatterns from '../../components/RelatedPatterns';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
-const Details = () => {
+const Details: React.FC<{}> = () => {
     const [checked, setChecked] = useState(false);
     const toggle = () => setChecked(c => !c);
 

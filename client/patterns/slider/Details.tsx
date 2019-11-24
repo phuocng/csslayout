@@ -5,7 +5,7 @@ import Circle from '../../placeholders/Circle';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
-const Details = () => {
+const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Slider">
             <div className="ph4 pv5">

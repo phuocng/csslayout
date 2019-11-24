@@ -3,7 +3,11 @@ import React, { useEffect } from 'react';
 import CoverCard from './CoverCard';
 import Heading from './Heading';
 
-const RelatedPatterns = ({ patterns }) => {
+interface RelatedPatternsProps {
+    patterns: string[];
+}
+
+const RelatedPatterns: React.FC<RelatedPatternsProps> = ({ patterns }) => {
     return (
         <section>
             <Heading title="Related patterns" />

@@ -3,7 +3,7 @@ import React from 'react';
 import Frame from '../../placeholders/Frame';
 import Triangle from '../../placeholders/Triangle';
 
-const Cover = () => {
+const Cover: React.FC<{}> = () => {
     return (
         <Frame>
             <div className="relative">

@@ -1,9 +1,13 @@
 import React from 'react';
-import loadable from '@loadable/component';
+import loadable, { LoadableComponent } from '@loadable/component';
 
 import './spinner.css';
 
-const slug = item => item.toLowerCase().split(' ').join('-');
+interface DetailsLoaderProps {
+    pattern: string;
+}
+
+const slug = (item: string) => item.toLowerCase().split(' ').join('-');
 
 // In order to create a link to another page that is dynamically loaded (via <Link to="...">),
 // the page chunks have to be loadable by @loadable.
@@ -12,9 +16,9 @@ const slug = item => item.toLowerCase().split(' ').join('-');
 //  {
 //      "plugins": ["@loadable/babel-plugin"],
 //  }
-const loadDetails = /* #__LOADABLE__ */ (props) => import(`../patterns/${slug(props.pattern)}/Details`)
+const loadDetails = /* #__LOADABLE__ */ (props: DetailsLoaderProps) => import(`../patterns/${slug(props.pattern)}/Details`)
 
-const DetailsLoader = loadable(loadDetails, {
+const DetailsLoader: LoadableComponent<DetailsLoaderProps> = loadable(loadDetails, {
     fallback: (
         <div className="w100 h-100 flex items-center justify-center">
             <svg className="spinner" width="64px" height="64px" viewBox="0 0 32 32">

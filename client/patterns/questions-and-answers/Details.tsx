@@ -6,10 +6,15 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 import Triangle from '../../placeholders/Triangle';
 
-const Details = () => {
+interface ItemProps {
+    index: number;
+    title: React.ReactNode;
+}
+
+const Details: React.FC<{}> = () => {
     const [activeItem, setActiveItem] = useState(-1);
 
-    const Item = ({ index, title, children }) => {
+    const Item: React.FC<ItemProps> = ({ index, title, children }) => {
         const isOpened = (index === activeItem);
         const click = () => setActiveItem(isOpened ? -1 : index);
         return (

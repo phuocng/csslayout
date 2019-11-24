@@ -2,7 +2,7 @@ import React from 'react';
 
 import Heading from '../components/Heading';
 
-const Footer = () => {
+const Footer: React.FC<{}> = () => {
     return (
         <div className="bl br bb b--black-20 flex justify-between br4 br--bottom">
             <div className="br b--black-20" style={{ flex: 1 }}>

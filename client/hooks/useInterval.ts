@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useInterval = (callback, delay) => {
+const useInterval = (callback: () => void, delay?: number) => {
     useEffect(
         () => {
             const handler = () => callback();

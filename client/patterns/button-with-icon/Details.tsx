@@ -5,7 +5,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
-const Details = () => {
+const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Button with icon">
             <div className="ph4 pv5">

@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
-const Details = () => {
+const Details: React.FC<{}> = () => {
     const [value, setValue] = useState(0);
     const decrease = () => setValue(value - 1);
     const increase = () => setValue(value + 1);
-    const change = (e) => setValue(parseInt(e.target.value, 10));
+    const change = (e: React.ChangeEvent<HTMLInputElement>) => setValue(parseInt(e.target.value, 10));
 
     return (
         <DetailsLayout title="Stepper input">

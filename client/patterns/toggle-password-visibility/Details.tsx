@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
-const Details = () => {
+const Details: React.FC<{}> = () => {
     const [visible, setVisible] = useState(false);
     const toggle = () => setVisible(v => !v);
 

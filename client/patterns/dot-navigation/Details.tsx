@@ -3,10 +3,14 @@ import React, { useState } from 'react';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
-const Details = () => {
+interface DotProps {
+    index: number;
+}
+
+const Details: React.FC<{}> = () => {
     const [activeItem, setActiveItem] = useState(0);
 
-    const Dot = ({ index }) => {
+    const Dot: React.FC<DotProps> = ({ index }) => {
         const isActive = index === activeItem;
         const click = () => setActiveItem(index);
         return (

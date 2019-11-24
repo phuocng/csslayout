@@ -5,7 +5,7 @@ import RelatedPatterns from '../../components/RelatedPatterns';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
-const Details = () => {
+const Details: React.FC<{}> = () => {
     const [isFirstChecked, setFirstChecked] = useState(false);
     const toggle = () => setFirstChecked(c => !c);
 

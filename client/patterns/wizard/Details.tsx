@@ -6,7 +6,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 import Line from '../../placeholders/Line';
 
-const Details = () => {
+const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Wizard">
             <div className="ph4 pv5">

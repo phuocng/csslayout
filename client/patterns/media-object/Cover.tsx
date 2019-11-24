@@ -4,7 +4,7 @@ import Frame from '../../placeholders/Frame';
 import Line from '../../placeholders/Line';
 import Square from '../../placeholders/Square';
 
-const Cover = () => {
+const Cover: React.FC<{}> = () => {
     return (
         <Frame>
             <div className="flex h-100 items-start pa2 w-100">

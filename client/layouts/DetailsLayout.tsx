@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 import Layout from './Layout';
 
-const DetailsLayout = ({ title, children }) => {
+interface DetailsLayoutProps {
+    title: string;
+}
+
+const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
     useDocumentTitle(`CSS Layout ∙ ${title}`);
 
     return (

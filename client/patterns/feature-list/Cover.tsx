@@ -5,7 +5,7 @@ import Frame from '../../placeholders/Frame';
 import Line from '../../placeholders/Line';
 import Rectangle from '../../placeholders/Rectangle';
 
-const Cover = () => {
+const Cover: React.FC<{}> = () => {
     return (
         <Frame>
             <div className="flex flex-column justify-center h-100 pa2 w-100">
