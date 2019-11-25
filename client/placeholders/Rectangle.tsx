@@ -7,8 +7,12 @@ interface RectangleProps {
 const Rectangle: React.FC<RectangleProps> = ({ height = 8 }) => {
     return (
         <div
-            className="w-100 bg-black-30 br1"
-            style={{ height: `${height}px` }}
+            style={{
+                backgroundColor: 'rgba(0, 0, 0, .3)',
+                borderRadius: '2px',
+                height: `${height}px`,
+                width: '100%',
+            }}
         />
     );
 };
