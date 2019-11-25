@@ -1,7 +1,7 @@
 {
     "name": "csslayout",
     "scripts": {
-        "copy": "rm -rf dist && mkdir dist && cp robots.txt dist && cp sitemap.xml dist",
+        "copy": "rm -rf dist && mkdir dist && cp -rf public/* dist",
         "dev": "npm run copy && webpack --mode development",
         "dev-server": "npm run copy && webpack-dev-server",
         "build": "npm run copy && webpack --mode production && npm run export",
