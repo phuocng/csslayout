@@ -1,11 +1,16 @@
 const path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const plugins = [
     new HtmlWebPackPlugin({
         template: './client/index.html',
         filename: './index.html',
+    }),
+    new MiniCssExtractPlugin({
+        filename: '[name].[contenthash].css',
+        ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
 ];
   
@@ -14,7 +19,14 @@ if (process.env.NODE_ENV === "analyse") {
 }
 
 module.exports = {
-    entry: './client/index.tsx',
+    entry: {
+        'vendor-styles': [
+            './vendors/tachyons@4.10.0/tachyons.min.css',
+            './vendors/highlight.js@9.12.0/dracula.min.css',
+        ],
+        // The CSS for client should come after `vendor-styles`
+        client: './client/index.tsx',
+    },
     output: {
         path: path.join(__dirname, 'dist'),
         filename: '[name].[contenthash].js',
@@ -28,7 +40,15 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            hmr: process.env.NODE_ENV === 'development',
+                        },
+                    },
+                    'css-loader',
+                ],
             },
             {
                 test: /\.ts(x?)$/,
