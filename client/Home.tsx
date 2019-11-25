@@ -87,6 +87,7 @@ const Home = () => {
                         <CoverCard pattern={Pattern.Pagination} />
                         <CoverCard pattern={Pattern.PreviousNextButtons} />
                         <CoverCard pattern={Pattern.PricingTable} />
+                        <CoverCard pattern={Pattern.PropertyList} />
                         <CoverCard pattern={Pattern.ProgressBar} />
                         <CoverCard pattern={Pattern.QuestionsAndAnswers} />
                         <CoverCard pattern={Pattern.RadioSwitch} />

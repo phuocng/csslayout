@@ -17,6 +17,7 @@ enum Pattern {
     Pagination = 'Pagination',
     PreviousNextButtons = 'Previous next buttons',
     PricingTable = 'Pricing table',
+    PropertyList = 'Property list',
     ProgressBar = 'Progress bar',
     QuestionsAndAnswers = 'Questions and answers',
     RadioSwitch = 'Radio switch',

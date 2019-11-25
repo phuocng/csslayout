@@ -7,8 +7,9 @@ interface CircleProps {
 const Circle: React.FC<CircleProps> = ({ size = 16 }) => {
     return (
         <div
-            className="bg-black-30 br-pill"
             style={{
+                backgroundColor: 'rgba(0, 0, 0, .3)',
+                borderRadius: '9999px',
                 height: `${size}px`,
                 width: `${size}px`,
             }}
