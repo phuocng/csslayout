@@ -2,6 +2,7 @@ import React from 'react';
 
 import CoverCard from './components/CoverCard';
 import Heading from './components/Heading';
+import Pattern from './constants/Pattern';
 import useDocumentTitle from './hooks/useDocumentTitle';
 import Layout from './layouts/Layout';
 
@@ -57,11 +58,11 @@ const Home = () => {
                     <Heading title="Layouts" />
 
                     <div className="flex flex-wrap items-start pa4">
-                        <CoverCard pattern="Holy grail" />
-                        <CoverCard pattern="Sidebar" />
-                        <CoverCard pattern="Split screen" />
-                        <CoverCard pattern="Sticky footer" />
-                        <CoverCard pattern="Sticky header" />
+                        <CoverCard pattern={Pattern.HolyGrail} />
+                        <CoverCard pattern={Pattern.Sidebar} />
+                        <CoverCard pattern={Pattern.SplitScreen} />
+                        <CoverCard pattern={Pattern.StickyFooter} />
+                        <CoverCard pattern={Pattern.StickyHeader} />
                     </div>
                 </section>
 
@@ -69,37 +70,37 @@ const Home = () => {
                     <Heading title="Patterns" />
 
                     <div className="flex flex-wrap items-start pa4">
-                        <CoverCard pattern="Badge" />
-                        <CoverCard pattern="Breadcrumb" />
-                        <CoverCard pattern="Button with icon" />
-                        <CoverCard pattern="Card" />
-                        <CoverCard pattern="Centering" />
-                        <CoverCard pattern="Docked at corner" />
-                        <CoverCard pattern="Dot navigation" />
-                        <CoverCard pattern="Feature list" />
-                        <CoverCard pattern="Fixed at corner" />
-                        <CoverCard pattern="Input add-on" />
-                        <CoverCard pattern="Media object" />
-                        <CoverCard pattern="Menu" />
-                        <CoverCard pattern="Modal" />
-                        <CoverCard pattern="Notification" />
-                        <CoverCard pattern="Pagination" />
-                        <CoverCard pattern="Previous next buttons" />
-                        <CoverCard pattern="Pricing table" />
-                        <CoverCard pattern="Progress bar" />
-                        <CoverCard pattern="Questions and answers" />
-                        <CoverCard pattern="Radio switch" />
-                        <CoverCard pattern="Same height columns" />
-                        <CoverCard pattern="Search box" />
-                        <CoverCard pattern="Separator" />
-                        <CoverCard pattern="Simple grid" />
-                        <CoverCard pattern="Slider" />
-                        <CoverCard pattern="Split navigation" />
-                        <CoverCard pattern="Stepper input" />
-                        <CoverCard pattern="Switch" />
-                        <CoverCard pattern="Tab" />
-                        <CoverCard pattern="Toggle password visibility" />
-                        <CoverCard pattern="Wizard" />
+                        <CoverCard pattern={Pattern.Badge} />
+                        <CoverCard pattern={Pattern.Breadcrumb} />
+                        <CoverCard pattern={Pattern.ButtonWithIcon} />
+                        <CoverCard pattern={Pattern.Card} />
+                        <CoverCard pattern={Pattern.Centering} />
+                        <CoverCard pattern={Pattern.DockedAtCorner} />
+                        <CoverCard pattern={Pattern.DotNavigation} />
+                        <CoverCard pattern={Pattern.FeatureList} />
+                        <CoverCard pattern={Pattern.FixedAtCorner} />
+                        <CoverCard pattern={Pattern.InputAddOn} />
+                        <CoverCard pattern={Pattern.MediaObject} />
+                        <CoverCard pattern={Pattern.Menu} />
+                        <CoverCard pattern={Pattern.Modal} />
+                        <CoverCard pattern={Pattern.Notification} />
+                        <CoverCard pattern={Pattern.Pagination} />
+                        <CoverCard pattern={Pattern.PreviousNextButtons} />
+                        <CoverCard pattern={Pattern.PricingTable} />
+                        <CoverCard pattern={Pattern.ProgressBar} />
+                        <CoverCard pattern={Pattern.QuestionsAndAnswers} />
+                        <CoverCard pattern={Pattern.RadioSwitch} />
+                        <CoverCard pattern={Pattern.SameHeightColumns} />
+                        <CoverCard pattern={Pattern.SearchBox} />
+                        <CoverCard pattern={Pattern.Separator} />
+                        <CoverCard pattern={Pattern.SimpleGrid} />
+                        <CoverCard pattern={Pattern.Slider} />
+                        <CoverCard pattern={Pattern.SplitNavigation} />
+                        <CoverCard pattern={Pattern.StepperInput} />
+                        <CoverCard pattern={Pattern.Switch} />
+                        <CoverCard pattern={Pattern.Tab} />
+                        <CoverCard pattern={Pattern.TogglePasswordVisibility} />
+                        <CoverCard pattern={Pattern.Wizard} />
                     </div>
                 </section>
             </div>

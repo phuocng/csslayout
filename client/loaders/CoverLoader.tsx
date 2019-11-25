@@ -1,7 +1,9 @@
 import loadable, { LoadableComponent } from '@loadable/component';
 
+import Pattern from '../constants/Pattern';
+
 interface CoverLoaderProps {
-    pattern: string;
+    pattern: Pattern;
 }
 
 const slug = (item: string) => item.toLowerCase().split(' ').join('-');

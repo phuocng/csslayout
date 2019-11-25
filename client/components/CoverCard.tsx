@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Pattern from '../constants/Pattern';
 import slug from '../helpers/slug';
 import CoverLoader from '../loaders/CoverLoader';
 
 interface CoverCardProps {
-    pattern: string;
+    pattern: Pattern;
 }
 
 const CoverCard: React.FC<CoverCardProps> = ({ pattern }) => {

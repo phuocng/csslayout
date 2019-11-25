@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 
+import Pattern from '../constants/Pattern';
 import CoverCard from './CoverCard';
 import Heading from './Heading';
 
 interface RelatedPatternsProps {
-    patterns: string[];
+    patterns: Pattern[];
 }
 
 const RelatedPatterns: React.FC<RelatedPatternsProps> = ({ patterns }) => {
