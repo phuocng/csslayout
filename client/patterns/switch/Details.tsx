@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
+import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
@@ -65,7 +66,7 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
-            <RelatedPatterns patterns={['Radio switch']} />
+            <RelatedPatterns patterns={[Pattern.RadioSwitch]} />
         </DetailsLayout>
     );
 };
