@@ -31,6 +31,7 @@ const App = () => {
                     <DetailsLoader pattern="Previous next buttons" />
                 </Route>
                 <Route exact={true} path='/pricing-table'><DetailsLoader pattern="Pricing table" /></Route>
+                <Route exact={true} path='/property-list'><DetailsLoader pattern="Property list" /></Route>
                 <Route exact={true} path='/progress-bar'><DetailsLoader pattern="Progress bar" /></Route>
                 <Route exact={true} path='/questions-and-answers'>
                     <DetailsLoader pattern="Questions and answers" />
