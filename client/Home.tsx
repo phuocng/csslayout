@@ -96,6 +96,7 @@ const Home = () => {
                         <CoverCard pattern={Pattern.Separator} />
                         <CoverCard pattern={Pattern.SimpleGrid} />
                         <CoverCard pattern={Pattern.Slider} />
+                        <CoverCard pattern={Pattern.SpinButton} />
                         <CoverCard pattern={Pattern.SplitNavigation} />
                         <CoverCard pattern={Pattern.StepperInput} />
                         <CoverCard pattern={Pattern.Switch} />
