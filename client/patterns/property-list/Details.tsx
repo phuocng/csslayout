@@ -53,6 +53,7 @@ const Details: React.FC<{}> = () => {
                         </div>
                     )}
                     source={`
+<!-- A property item -->
 <dl style="
     /* Content is center horizontally */
     align-items: center;

@@ -1,10 +1,11 @@
 import loadable, { LoadableComponent } from '@loadable/component';
 import React from 'react';
 
+import Pattern from '../constants/Pattern';
 import './spinner.css';
 
 interface DetailsLoaderProps {
-    pattern: string;
+    pattern: Pattern;
 }
 
 const slug = (item: string) => item.toLowerCase().split(' ').join('-');
