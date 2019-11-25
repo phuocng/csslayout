@@ -27,6 +27,7 @@ enum Pattern {
     Sidebar = 'Sidebar',
     SimpleGrid = 'Simple grid',
     Slider = 'Slider',
+    SpinButton = 'Spin button',
     SplitNavigation = 'Split navigation',
     SplitScreen = 'Split screen',
     StepperInput = 'Stepper input',

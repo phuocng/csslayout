@@ -48,6 +48,7 @@ const App = () => {
                 <Route exact={true} path='/sidebar'><DetailsLoader pattern={Pattern.Sidebar} /></Route>
                 <Route exact={true} path='/simple-grid'><DetailsLoader pattern={Pattern.SimpleGrid} /></Route>
                 <Route exact={true} path='/slider'><DetailsLoader pattern={Pattern.Slider} /></Route>
+                <Route exact={true} path='/spin-button'><DetailsLoader pattern={Pattern.SpinButton} /></Route>
                 <Route exact={true} path='/split-navigation'><DetailsLoader pattern={Pattern.SplitNavigation} /></Route>
                 <Route exact={true} path='/split-screen'><DetailsLoader pattern={Pattern.SplitScreen} /></Route>
                 <Route exact={true} path='/stepper-input'><DetailsLoader pattern={Pattern.StepperInput} /></Route>

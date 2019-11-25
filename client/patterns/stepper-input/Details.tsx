@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import RelatedPatterns from '../../components/RelatedPatterns';
+import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
@@ -83,6 +85,7 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
+            <RelatedPatterns patterns={[Pattern.SpinButton]} />
         </DetailsLayout>
     );
 };
