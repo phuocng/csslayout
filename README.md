@@ -23,6 +23,19 @@ They are powered by modern CSS features such as flexbox and grid.
 They are great starting points and could be picked and customized easily for each specific need.
 By composing them, you can have any possible layout that exists in the real life.
 
+The entire website is powered by
+
+~~~ javascript
+this
+    .madeWith([react,typescript])
+    .then(r => lazyLoad(@loadable/component))
+    .then(r => optimizeAndBundle(webpack))
+    .then(r => exportHtml(react-snap))
+    .then(r => deploy(Netlify))
+    .assert([scalableCode, superFastWebsite, seoFriendly])
+    .done(/* Give me 1 star */) 🎉
+~~~
+
 ## Running it on local
 
 - Clone the project:

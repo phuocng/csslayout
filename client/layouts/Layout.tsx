@@ -22,8 +22,8 @@ const Layout: React.FC<{}> = ({ children }) => {
             >
                 <li>this</li>
                 <li style={{ marginLeft: '16px' }}>
-                    .madeWith(
-                        [<a href="https://reactjs.org" style={{ textDecoration: 'none' }}>react</a>,
+                    .madeWith([
+                        <a href="https://reactjs.org" style={{ textDecoration: 'none' }}>react</a>,
                         <a href="https://www.typescriptlang.org" style={{ textDecoration: 'none' }}>typescript</a>
                     ])
                 </li>
