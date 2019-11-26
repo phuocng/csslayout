@@ -28,6 +28,13 @@ const Layout: React.FC<{}> = ({ children }) => {
                     ])
                 </li>
                 <li style={{ marginLeft: '16px' }}>
+                    .then(r => lint(
+                        <a href="https://github.com/palantir/tslint" style={{ textDecoration: 'none' }}>
+                            tslint
+                        </a>
+                    ))
+                </li>
+                <li style={{ marginLeft: '16px' }}>
                     .then(r => lazyLoad(
                         <a href="https://github.com/smooth-code/loadable-components" style={{ textDecoration: 'none' }}>
                             @loadable/component
@@ -53,7 +60,7 @@ const Layout: React.FC<{}> = ({ children }) => {
                 </li>
                 <li style={{ marginLeft: '16px' }}>.assert([scalableCode, superFastWebsite, seoFriendly])</li>
                 <li style={{ marginLeft: '16px' }}>
-                    .done(
+                    .finally(
                         <a href="https://github.com/phuoc-ng/csslayout" style={{ textDecoration: 'none' }}>
                             /&#42; Give me 1 star &#42;/
                         </a>

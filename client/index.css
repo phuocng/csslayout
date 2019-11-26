@@ -1,7 +1,9 @@
 body {
     -webkit-font-smoothing: antialiased;
 }
-code {
+.hljs, code {
     font-family: 'Source Code Pro', monospace;
+}
+code {
     font-size: 14px;
 }

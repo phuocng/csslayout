@@ -28,12 +28,13 @@ The entire website is powered by
 ~~~ javascript
 this
     .madeWith([react,typescript])
+    .then(r => lint(tslint))
     .then(r => lazyLoad(@loadable/component))
     .then(r => optimizeAndBundle(webpack))
     .then(r => exportHtml(react-snap))
     .then(r => deploy(Netlify))
     .assert([scalableCode, superFastWebsite, seoFriendly])
-    .done(/* Give me 1 star */) 🎉
+    .finally(/* Give me 1 star */) 🎉
 ~~~
 
 ## Running it on local
