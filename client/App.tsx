@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch as RouteSwitch } from 'react-rou
 import './index.css';
 
 import Pattern from './constants/Pattern';
+import Explore from './Explore';
 import Home from './Home';
 import DetailsLoader from './loaders/DetailsLoader';
 
@@ -12,6 +13,7 @@ const App = () => {
         <Router>
             <RouteSwitch>
                 <Route exact={true} path='/'><Home /></Route>
+                <Route exact={true} path='/explore'><Explore /></Route>
                 <Route exact={true} path='/badge'><DetailsLoader pattern={Pattern.Badge} /></Route>
                 <Route exact={true} path='/breadcrumb'><DetailsLoader pattern={Pattern.Breadcrumb} /></Route>
                 <Route exact={true} path='/button-with-icon'><DetailsLoader pattern={Pattern.ButtonWithIcon} /></Route>

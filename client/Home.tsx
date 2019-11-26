@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import CoverCard from './components/CoverCard';
-import Heading from './components/Heading';
 import Pattern from './constants/Pattern';
 import useDocumentTitle from './hooks/useDocumentTitle';
 import Layout from './layouts/Layout';
@@ -20,7 +20,16 @@ const Home = () => {
                         CSS Layout
                     </h1>
 
-                    <h2 className="fw3 f3 tc lh-copy ma0 pa4">
+                    <h2
+                        style={{
+                            fontSize: '24px',
+                            fontWeight: 300,
+                            lineHeight: 1.5,
+                            margin: 0,
+                            padding: '64px 0px 32px 0',
+                            textAlign: 'center',
+                        }}
+                    >
                         a collection of popular layouts and patterns made with CSS
                     </h2>
 
@@ -54,22 +63,57 @@ const Home = () => {
                     </div>
                 </div>
 
-                <section>
-                    <Heading title="Layouts" />
-
-                    <div className="flex flex-wrap items-start pa4">
+                <section style={{ position: 'relative' }}>
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            left: 0,
+                            position: 'absolute',
+                            top: 0,
+                            width: '100%',
+                            zIndex: 9999,
+                        }}
+                    >
+                        <div
+                            style={{
+                                fontSize: '64px',
+                                fontWeight: 600,
+                                marginBottom: '16px',
+                            }}
+                        >
+                            50+ patterns
+                        </div>
+                        <Link
+                            to="/explore"
+                            style={{
+                                backgroundColor: '#00449e',
+                                borderRadius: '4px',
+                                color: '#FFF',
+                                fontSize: '24px',
+                                padding: '12px 16px',
+                                textDecoration: 'none',
+                            }}
+                        >
+                                Explore the collection
+                        </Link>
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            opacity: '0.4',
+                            padding: '32px 16px',
+                        }}
+                    >
                         <CoverCard pattern={Pattern.HolyGrail} />
                         <CoverCard pattern={Pattern.Sidebar} />
                         <CoverCard pattern={Pattern.SplitScreen} />
                         <CoverCard pattern={Pattern.StickyFooter} />
                         <CoverCard pattern={Pattern.StickyHeader} />
-                    </div>
-                </section>
-
-                <section>
-                    <Heading title="Patterns" />
-
-                    <div className="flex flex-wrap items-start pa4">
                         <CoverCard pattern={Pattern.Badge} />
                         <CoverCard pattern={Pattern.Breadcrumb} />
                         <CoverCard pattern={Pattern.ButtonWithIcon} />
@@ -90,20 +134,6 @@ const Home = () => {
                         <CoverCard pattern={Pattern.PropertyList} />
                         <CoverCard pattern={Pattern.ProgressBar} />
                         <CoverCard pattern={Pattern.QuestionsAndAnswers} />
-                        <CoverCard pattern={Pattern.RadioSwitch} />
-                        <CoverCard pattern={Pattern.Rating} />
-                        <CoverCard pattern={Pattern.SameHeightColumns} />
-                        <CoverCard pattern={Pattern.SearchBox} />
-                        <CoverCard pattern={Pattern.Separator} />
-                        <CoverCard pattern={Pattern.SimpleGrid} />
-                        <CoverCard pattern={Pattern.Slider} />
-                        <CoverCard pattern={Pattern.SpinButton} />
-                        <CoverCard pattern={Pattern.SplitNavigation} />
-                        <CoverCard pattern={Pattern.StepperInput} />
-                        <CoverCard pattern={Pattern.Switch} />
-                        <CoverCard pattern={Pattern.Tab} />
-                        <CoverCard pattern={Pattern.TogglePasswordVisibility} />
-                        <CoverCard pattern={Pattern.Wizard} />
                     </div>
                 </section>
             </div>
