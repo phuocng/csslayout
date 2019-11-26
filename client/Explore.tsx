@@ -23,7 +23,7 @@ const Home = () => {
                         textDecoration: 'none',
                     }}
                 >
-                    CSS Layout
+                    .home
                 </Link>
             </div>
             <div
@@ -59,7 +59,7 @@ const Home = () => {
                         fontWeight: 300,
                         lineHeight: 1.5,
                         margin: 0,
-                        padding: '32px 0 0 0',
+                        padding: '32px 0',
                         textAlign: 'center',
                     }}
                 >

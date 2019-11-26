@@ -26,11 +26,11 @@ const CoverCard: React.FC<CoverCardProps> = ({ pattern }) => {
                 <CoverLoader pattern={pattern} />
                 <h4
                     style={{
-                        color: 'rgba(0, 0, 0, 0.3)',
                         fontSize: '16px',
                         fontWeight: 500,
                         margin: 0,
                         paddingTop: '12px',
+                        textAlign: 'center',
                     }}
                 >
                     {pattern}

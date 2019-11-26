@@ -13,12 +13,64 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
 
     return (
         <Layout>
-            <div className="mv4">
-                <Link to="/" className="bg-dark-blue black br-pill link pa1 ph3 pv2 white">CSS Layout</Link>
+            <div
+                style={{
+                    alignItems: 'center',
+                    backgroundColor: '#00449E',
+                    borderRadius: '9999px',
+                    color: '#FFF',
+                    display: 'inline-flex',
+                    margin: '32px 0',
+                }}
+            >
+                <Link
+                    to="/"
+                    style={{
+                        color: '#FFF',
+                        padding: '8px 16px',
+                        textDecoration: 'none',
+                    }}
+                >
+                    .home
+                </Link>
+                <div>~</div>
+                <Link
+                    to="/explore"
+                    style={{
+                        color: '#FFF',
+                        padding: '8px 16px',
+                        textDecoration: 'none',
+                    }}
+                >
+                    .explore
+                </Link>
             </div>
-            <div className="bt br bl b--black-20 relative br4 br--top">
-                <h1 className="absolute bg-white f2 fw6 left-2 lh-copy ma0 ph2 top-0" style={{ left: '50%', transform: 'translate(-50%, -50%)' }}>{title}</h1>
-
+            <div
+                style={{
+                    border: '1px solid rgba(0, 0, 0, 0.2)',
+                    borderBottomColor: 'transparent',
+                    borderTopLeftRadius: '16px',
+                    borderTopRightRadius: '16px',
+                    marginTop: '32px',
+                    position: 'relative',
+                }}
+            >
+                <h1
+                    style={{
+                        backgroundColor: '#FFF',
+                        fontSize: '36px',
+                        fontWeight: 600,
+                        left: '50%',
+                        lineHeight: 1.5,
+                        margin: 0,
+                        padding: '0 16px',
+                        position: 'absolute',
+                        top: 0,
+                        transform: 'translate(-50%, -50%)',
+                    }}
+                >
+                    {title}
+                </h1>
                 {children}
             </div>
         </Layout>
