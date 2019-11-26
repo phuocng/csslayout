@@ -48,6 +48,12 @@ const Footer: React.FC<{}> = () => {
                     </li>
                     <ul style={{ listStyleType: 'none', margin: 0, padding: '0 32px' }}>
                         <li>
+                            css-layout,
+                            <span style={{ color: 'rgba(0, 0, 0, 0.3)', marginLeft: '16px' }}>
+                                /&#42; You are here &#42;/
+                            </span>
+                        </li>
+                        <li>
                             <a
                                 href="https://formvalidation.io"
                                 style={{ textDecoration: 'none' }}

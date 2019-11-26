@@ -60,7 +60,6 @@ const Home = () => {
                         style={{
                             alignItems: 'center',
                             display: 'flex',
-                            fontFamily: '\'Source Code Pro\'',
                             fontSize: '16px',
                             justifyContent: 'center',
                             lineHeight: 1.5,
