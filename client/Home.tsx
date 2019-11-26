@@ -123,7 +123,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <section style={{ height: '800px', overflow: 'hidden', paddingBottom: '32px', position: 'relative' }}>
+                <section style={{ height: '900px', overflow: 'hidden', paddingBottom: '32px', position: 'relative' }}>
                     <div
                         style={{
                             alignItems: 'center',
