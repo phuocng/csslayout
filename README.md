@@ -44,7 +44,7 @@ $ npm install
 $ npm run dev-server
 ~~~
 
-Visit http://localhost:8080 to see it in action.
+Visit http://localhost:1234 to see it in action.
 
 ## Contributing
 
