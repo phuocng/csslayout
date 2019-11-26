@@ -12,18 +12,64 @@ const Home = () => {
 
     return (
         <Layout>
-            <div className="mv4">
-                <Link to="/" className="bg-dark-blue black br-pill link pa1 ph3 pv2 white">CSS Layout</Link>
+            <div style={{ margin: '32px 0' }}>
+                <Link
+                    to="/"
+                    style={{
+                        backgroundColor: '#00449E',
+                        borderRadius: '9999px',
+                        color: '#FFF',
+                        padding: '8px 16px',
+                        textDecoration: 'none',
+                    }}
+                >
+                    CSS Layout
+                </Link>
             </div>
-            <div className="bt br bl b--black-20 relative br4 br--top">
-                <h1 className="absolute bg-white f2 fw6 left-2 lh-copy ma0 ph2 top-0" style={{ left: '50%', transform: 'translate(-50%, -50%)' }}>Explore</h1>
+            <div
+                style={{
+                    border: '1px solid rgba(0, 0, 0, 0.2)',
+                    borderBottomColor: 'transparent',
+                    borderTopLeftRadius: '16px',
+                    borderTopRightRadius: '16px',
+                    marginTop: '32px',
+                    position: 'relative',
+                }}
+            >
+                <h1
+                    style={{
+                        backgroundColor: '#FFF',
+                        fontSize: '36px',
+                        fontWeight: 600,
+                        left: '50%',
+                        lineHeight: 1.5,
+                        margin: 0,
+                        padding: '0 16px',
+                        position: 'absolute',
+                        top: 0,
+                        transform: 'translate(-50%, -50%)',
+                    }}
+                >
+                    Explore
+                </h1>
 
-                <h2 className="fw3 f3 tc lh-copy ma0 pa4">Here is the collection of patterns</h2>
+                <h2
+                    style={{
+                        fontSize: '24px',
+                        fontWeight: 300,
+                        lineHeight: 1.5,
+                        margin: 0,
+                        padding: '32px 0 0 0',
+                        textAlign: 'center',
+                    }}
+                >
+                    Here is the collection of patterns
+                </h2>
 
                 <section>
                     <Heading title="Layouts" />
 
-                    <div className="flex flex-wrap items-start pa4">
+                    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
                         <CoverCard pattern={Pattern.HolyGrail} />
                         <CoverCard pattern={Pattern.Sidebar} />
                         <CoverCard pattern={Pattern.SplitScreen} />
@@ -35,7 +81,7 @@ const Home = () => {
                 <section>
                     <Heading title="Patterns" />
 
-                    <div className="flex flex-wrap items-start pa4">
+                    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
                         <CoverCard pattern={Pattern.Badge} />
                         <CoverCard pattern={Pattern.Breadcrumb} />
                         <CoverCard pattern={Pattern.ButtonWithIcon} />

@@ -11,11 +11,31 @@ const Home = () => {
 
     return (
         <Layout>
-            <div className="mt5 bl br bt b--black-20 br4 br--top">
-                <div className="relative">
+            <div
+                style={{
+                    border: '1px solid rgba(0, 0, 0, 0.2)',
+                    borderBottomColor: 'transparent',
+                    borderTopLeftRadius: '16px',
+                    borderTopRightRadius: '16px',
+                    marginTop: '64px',
+                }}
+            >
+                <div style={{ position: 'relative' }}>
                     <h1
-                        className="absolute bg-white f2 fw6 left-2 lh-copy ma0 ph2 top-0 br-pill ph3 white bg-dark-blue"
-                        style={{ left: '50%', transform: 'translate(-50%, -50%)' }}
+                        style={{
+                            backgroundColor: '#00449E',
+                            borderRadius: '9999px',
+                            color: '#FFF',
+                            fontSize: '36px',
+                            fontWeight: 600,
+                            left: '50%',
+                            lineHeight: 1.5,
+                            margin: 0,
+                            padding: '0 16px',
+                            position: 'absolute',
+                            top: 0,
+                            transform: 'translate(-50%, -50%)',
+                        }}
                     >
                         CSS Layout
                     </h1>
@@ -33,32 +53,66 @@ const Home = () => {
                         a collection of popular layouts and patterns made with CSS
                     </h2>
 
-                    <div className="w-30 center mb4">
-                        <ul className="ma0 pa0 list f4 lh-copy">
-                            <li className="flex items-center justify-between">
-                                <div>Zero dependencies</div>
-                                <div>🎉</div>
-                            </li>
-                            <li className="flex items-center justify-between">
-                                <div>No frameworks</div>
-                                <div>🎉</div>
-                            </li>
-                            <li className="flex items-center justify-between">
-                                <div>No CSS hacks</div>
-                                <div>🎉</div>
-                            </li>
-                            <li className="flex items-center justify-between">
-                                <div>Real use cases</div>
-                                <div>🎉</div>
-                            </li>
-                            <li className="flex items-center justify-between">
-                                <div>Good practices</div>
-                                <div className="br-pill ph2 white bg-dark-blue f6">soon</div>
-                            </li>
-                            <li className="flex items-center justify-between">
-                                <div>Accessibility</div>
-                                <div className="br-pill ph2 white bg-dark-blue f6">soon</div>
-                            </li>
+                    <div
+                        className="hljs"
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            fontFamily: '\'Source Code Pro\'',
+                            fontSize: '16px',
+                            justifyContent: 'center',
+                            lineHeight: 1.5,
+                        }}
+                    >
+                        <ul style={{ listStyleType: 'none', margin: 0, padding: 0, width: '300px' }}>
+                            <li><span className="hljs-selector-class">.awesome</span> &#123;</li>
+                            <ul style={{ listStyleType: 'none', margin: 0, padding: '0 32px' }}>
+                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
+                                    <div className="hljs-attribute">zero-dependencies:</div>
+                                    <div>🎉</div>
+                                </li>
+                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
+                                    <div className="hljs-attribute">no-frameworks:</div>
+                                    <div>🎉</div>
+                                </li>
+                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
+                                    <div className="hljs-attribute">no-css-hacks:</div>
+                                    <div>🎉</div>
+                                </li>
+                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
+                                    <div className="hljs-attribute">real-use-cases:</div>
+                                    <div>🎉</div>
+                                </li>
+                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
+                                    <div className="hljs-attribute">good-practices:</div>
+                                    <div
+                                        style={{
+                                            backgroundColor: '#00449E',
+                                            borderRadius: '9999px',
+                                            color: '#FFF',
+                                            fontSize: '14px',
+                                            padding: '0 8px',
+                                        }}
+                                    >
+                                        soon
+                                    </div>
+                                </li>
+                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
+                                    <div className="hljs-attribute">accessibility:</div>
+                                    <div
+                                        style={{
+                                            backgroundColor: '#00449E',
+                                            borderRadius: '9999px',
+                                            color: '#FFF',
+                                            fontSize: '14px',
+                                            padding: '0 8px',
+                                        }}
+                                    >
+                                        soon
+                                    </div>
+                                </li>
+                            </ul>
+                            <li>&#125;</li>
                         </ul>
                     </div>
                 </div>
