@@ -14,10 +14,27 @@ const CoverCard: React.FC<CoverCardProps> = ({ pattern }) => {
         <div className="pa1 w-20">
             <Link
                 to={`/${slug(pattern)}`}
-                className="link flex flex-column items-center justify-center tc hover-bg-black-10 br2 pa3"
+                style={{
+                    alignItems: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    padding: '16px',
+                    textDecoration: 'none',
+                }}
             >
                 <CoverLoader pattern={pattern} />
-                <h4 className="f5 mv0 pt3 fw6">{pattern}</h4>
+                <h4
+                    style={{
+                        color: 'rgba(0, 0, 0, 0.3)',
+                        fontSize: '16px',
+                        fontWeight: 500,
+                        margin: 0,
+                        paddingTop: '12px',
+                    }}
+                >
+                    {pattern}
+                </h4>
             </Link>
         </div>
     );

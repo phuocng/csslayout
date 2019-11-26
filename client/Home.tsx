@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import './home.css';
+
 import CoverCard from './components/CoverCard';
 import Pattern from './constants/Pattern';
 import useDocumentTitle from './hooks/useDocumentTitle';
@@ -117,7 +119,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <section style={{ position: 'relative' }}>
+                <section style={{ height: '800px', overflow: 'hidden', paddingBottom: '32px', position: 'relative' }}>
                     <div
                         style={{
                             alignItems: 'center',
@@ -156,6 +158,7 @@ const Home = () => {
                         </Link>
                     </div>
                     <div
+                        className="home-cards"
                         style={{
                             display: 'flex',
                             flexWrap: 'wrap',
@@ -188,6 +191,20 @@ const Home = () => {
                         <CoverCard pattern={Pattern.PropertyList} />
                         <CoverCard pattern={Pattern.ProgressBar} />
                         <CoverCard pattern={Pattern.QuestionsAndAnswers} />
+                        <CoverCard pattern={Pattern.RadioSwitch} />
+                        <CoverCard pattern={Pattern.Rating} />
+                        <CoverCard pattern={Pattern.SameHeightColumns} />
+                        <CoverCard pattern={Pattern.SearchBox} />
+                        <CoverCard pattern={Pattern.Separator} />
+                        <CoverCard pattern={Pattern.SimpleGrid} />
+                        <CoverCard pattern={Pattern.Slider} />
+                        <CoverCard pattern={Pattern.SpinButton} />
+                        <CoverCard pattern={Pattern.SplitNavigation} />
+                        <CoverCard pattern={Pattern.StepperInput} />
+                        <CoverCard pattern={Pattern.Switch} />
+                        <CoverCard pattern={Pattern.Tab} />
+                        <CoverCard pattern={Pattern.TogglePasswordVisibility} />
+                        <CoverCard pattern={Pattern.Wizard} />
                     </div>
                 </section>
             </div>
