@@ -71,21 +71,21 @@ const Home = () => {
                             <ul style={{ listStyleType: 'none', margin: 0, padding: '0 32px' }}>
                                 <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
                                     <div className="hljs-attribute">zero-dependencies:</div>
-                                    <div>🎉</div>
+                                    <div>🎉;</div>
                                 </li>
                                 <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
                                     <div className="hljs-attribute">no-frameworks:</div>
-                                    <div>🎉</div>
+                                    <div>🎉;</div>
                                 </li>
                                 <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
                                     <div className="hljs-attribute">no-css-hacks:</div>
-                                    <div>🎉</div>
+                                    <div>🎉;</div>
                                 </li>
                                 <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
                                     <div className="hljs-attribute">real-use-cases:</div>
-                                    <div>🎉</div>
+                                    <div>🎉;</div>
                                 </li>
-                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
+                                <li style={{ alignItems: 'center', display: 'flex' }}>
                                     <div className="hljs-attribute">good-practices:</div>
                                     <div
                                         style={{
@@ -93,13 +93,15 @@ const Home = () => {
                                             borderRadius: '9999px',
                                             color: '#FFF',
                                             fontSize: '14px',
+                                            marginLeft: 'auto',
                                             padding: '0 8px',
                                         }}
                                     >
                                         soon
                                     </div>
+                                    ;
                                 </li>
-                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
+                                <li style={{ alignItems: 'center', display: 'flex' }}>
                                     <div className="hljs-attribute">accessibility:</div>
                                     <div
                                         style={{
@@ -107,11 +109,13 @@ const Home = () => {
                                             borderRadius: '9999px',
                                             color: '#FFF',
                                             fontSize: '14px',
+                                            marginLeft: 'auto',
                                             padding: '0 8px',
                                         }}
                                     >
                                         soon
                                     </div>
+                                    ;
                                 </li>
                             </ul>
                             <li>&#125;</li>
