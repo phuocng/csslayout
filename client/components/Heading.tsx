@@ -6,8 +6,24 @@ interface HeadingProps {
 
 const Heading: React.FC<HeadingProps> = ({ title }) => {
     return (
-        <div className="bt b--black-20 relative">
-            <h3 className="absolute bg-white f4 left-2 lh-copy ma0 ph2 top-0 ttu" style={{ transform: 'translate(0, -50%)' }}>{title}</h3>
+        <div style={{ borderTop: '1px solid rgba(0, 0, 0, .2)', position: 'relative' }}>
+            <h3
+                style={{
+                    backgroundColor: '#FFF',
+                    fontSize: '20px',
+                    fontWeight: 700,
+                    left: '32px',
+                    lineHeight: 1.5,
+                    margin: 0,
+                    padding: '0 8px',
+                    position: 'absolute',
+                    textTransform: 'uppercase',
+                    top: 0,
+                    transform: 'translate(0, -50%)',
+                }}
+            >
+                {title}
+            </h3>
         </div>
     );
 };
