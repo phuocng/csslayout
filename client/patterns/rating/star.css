@@ -1,0 +1,26 @@
+.rating {
+    align-items: center;
+    display: flex;
+    font-size: 32px;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.rating .star:hover, .rating .star:hover ~ .star {
+    color: transparent;
+}
+
+.rating .star:hover:before, .rating .star:hover ~ .star:before {
+    color: #00449e;
+    content: '\2605';
+    left: 0;
+    position: absolute;
+}
+
+.star {
+    background-color: transparent;
+    border: transparent;
+    margin: 0 2px;
+    padding: 0;
+    position: relative;
+}
