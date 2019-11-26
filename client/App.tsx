@@ -37,9 +37,8 @@ const App = () => {
                 <Route exact={true} path='/questions-and-answers'>
                     <DetailsLoader pattern={Pattern.QuestionsAndAnswers} />
                 </Route>
-                <Route exact={true} path='/radio-switch'>
-                    <DetailsLoader pattern={Pattern.RadioSwitch} />
-                </Route>
+                <Route exact={true} path='/radio-switch'><DetailsLoader pattern={Pattern.RadioSwitch} /></Route>
+                <Route exact={true} path='/rating'><DetailsLoader pattern={Pattern.Rating} /></Route>
                 <Route exact={true} path='/same-height-columns'>
                     <DetailsLoader pattern={Pattern.SameHeightColumns} />
                 </Route>

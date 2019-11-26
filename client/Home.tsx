@@ -91,6 +91,7 @@ const Home = () => {
                         <CoverCard pattern={Pattern.ProgressBar} />
                         <CoverCard pattern={Pattern.QuestionsAndAnswers} />
                         <CoverCard pattern={Pattern.RadioSwitch} />
+                        <CoverCard pattern={Pattern.Rating} />
                         <CoverCard pattern={Pattern.SameHeightColumns} />
                         <CoverCard pattern={Pattern.SearchBox} />
                         <CoverCard pattern={Pattern.Separator} />

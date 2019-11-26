@@ -21,6 +21,7 @@ enum Pattern {
     ProgressBar = 'Progress bar',
     QuestionsAndAnswers = 'Questions and answers',
     RadioSwitch = 'Radio switch',
+    Rating = 'Rating',
     SameHeightColumns = 'Same height columns',
     SearchBox = 'Search box',
     Separator = 'Separator',
