@@ -58,13 +58,17 @@ const Layout: React.FC<{}> = ({ children }) => {
                         <a href="https://www.netlify.com" style={{ textDecoration: 'none' }}>Netlify</a>
                     ))
                 </li>
-                <li style={{ marginLeft: '16px' }}>.assert([scalableCode, superFastWebsite, seoFriendly])</li>
+                <li style={{ marginLeft: '16px' }}>.then(r => &#123;</li>
+                <li style={{ marginLeft: '32px' }}>expect(r).is(scalableCode);</li>
+                <li style={{ marginLeft: '32px' }}>expect(r).is(superFastWebsite);</li>
+                <li style={{ marginLeft: '32px' }}>expect(r).is(seoFriendly);</li>
+                <li style={{ marginLeft: '16px' }}>&#125;)</li>
                 <li style={{ marginLeft: '16px' }}>
-                    .finally(
+                    .finally(() => &#123;
                         <a href="https://github.com/phuoc-ng/csslayout" style={{ textDecoration: 'none' }}>
                             /&#42; Give me 1 star &#42;/
                         </a>
-                    ) 🎉
+                    &#125;) 🎉
                 </li>
             </ul>
         </div>

@@ -88,6 +88,7 @@ const Home = () => {
                         <CoverCard pattern={Pattern.Card} />
                         <CoverCard pattern={Pattern.Centering} />
                         <CoverCard pattern={Pattern.DockedAtCorner} />
+                        <CoverCard pattern={Pattern.DotLeader} />
                         <CoverCard pattern={Pattern.DotNavigation} />
                         <CoverCard pattern={Pattern.FeatureList} />
                         <CoverCard pattern={Pattern.FixedAtCorner} />

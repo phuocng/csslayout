@@ -15,8 +15,7 @@
         "highlight.js": "^9.16.2",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
-        "react-router-dom": "^5.1.2",
-        "react-snap": "^1.23.0"
+        "react-router-dom": "^5.1.2"
     },
     "devDependencies": {
         "@babel/core": "^7.7.4",
@@ -31,6 +30,7 @@
         "css-loader": "^3.2.0",
         "html-webpack-plugin": "^3.2.0",
         "mini-css-extract-plugin": "^0.8.0",
+        "react-snap": "^1.23.0",
         "source-map-loader": "^0.2.4",
         "style-loader": "^1.0.0",
         "ts-loader": "^6.2.1",

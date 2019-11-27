@@ -5,6 +5,7 @@ enum Pattern {
     Card = 'Card',
     Centering = 'Centering',
     DockedAtCorner = 'Docked at corner',
+    DotLeader = 'Dot leader',
     DotNavigation = 'Dot navigation',
     FeatureList = 'Feature list',
     FixedAtCorner = 'Fixed at corner',
