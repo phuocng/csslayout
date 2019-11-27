@@ -7,6 +7,7 @@ enum Pattern {
     DockedAtCorner = 'Docked at corner',
     DotLeader = 'Dot leader',
     DotNavigation = 'Dot navigation',
+    DropArea = 'Drop area',
     FeatureList = 'Feature list',
     FixedAtCorner = 'Fixed at corner',
     HolyGrail = 'Holy grail',
