@@ -8,37 +8,73 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Same height columns">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center pa3">
-                            <div className="flex h-100 w-100">
-                                <div className="b--black-20 ba br2 mh2 flex flex-column" style={{ flex: 1 }}>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div style={{ display: 'flex', height: '100%', width: '100%' }}>
+                                <div
+                                    style={{
+                                        border: '1px solid rgba(0, 0, 0, 0.2)',
+                                        borderRadius: '4px',
+                                        display: 'flex',
+                                        flex: 1,
+                                        flexDirection: 'column',
+                                        margin: '0 8px',
+                                    }}
+                                >
                                     <Rectangle height={200} />
-                                    <div className="pa3" style={{ flex: 1 }}>
+                                    <div style={{ flex: 1, padding: '16px' }}>
                                         <Block numberOfBlocks={10} />
                                     </div>
-                                    <div className="pa3 w4">
+                                    <div style={{ padding: '16px', width: '128px' }}>
                                         <Rectangle height={32} />
                                     </div>
                                 </div>
-                                <div className="b--black-20 ba br2 mh2 flex flex-column" style={{ flex: 1 }}>
+                                <div
+                                    style={{
+                                        border: '1px solid rgba(0, 0, 0, 0.2)',
+                                        borderRadius: '4px',
+                                        display: 'flex',
+                                        flex: 1,
+                                        flexDirection: 'column',
+                                        margin: '0 8px',
+                                    }}
+                                >
                                     <Rectangle height={200} />
-                                    <div className="pa3" style={{ flex: 1 }}>
-                                        <div className="mb3"><Block numberOfBlocks={15} /></div>
+                                    <div style={{ flex: 1, padding: '16px' }}>
+                                        <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={15} /></div>
                                         <Block numberOfBlocks={5} />
                                     </div>
-                                    <div className="pa3 w4">
+                                    <div style={{ padding: '16px', width: '128px' }}>
                                         <Rectangle height={32} />
                                     </div>
                                 </div>
-                                <div className="b--black-20 ba br2 mh2 flex flex-column" style={{ flex: 1 }}>
+                                <div
+                                    style={{
+                                        border: '1px solid rgba(0, 0, 0, 0.2)',
+                                        borderRadius: '4px',
+                                        display: 'flex',
+                                        flex: 1,
+                                        flexDirection: 'column',
+                                        margin: '0 8px',
+                                    }}
+                                >
                                     <Rectangle height={200} />
-                                    <div className="pa3" style={{ flex: 1 }}>
-                                        <div className="mb3"><Block numberOfBlocks={5} /></div>
+                                    <div style={{ flex: 1, padding: '16px' }}>
+                                        <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={5} /></div>
                                         <Block numberOfBlocks={10} />
                                     </div>
-                                    <div className="pa3 w4">
+                                    <div style={{ padding: '16px', width: '128px' }}>
                                         <Rectangle height={32} />
                                     </div>
                                 </div>

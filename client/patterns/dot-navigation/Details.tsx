@@ -15,9 +15,13 @@ const Details: React.FC<{}> = () => {
         const click = () => setActiveItem(index);
         return (
             <li
-                className={`pointer mh1 br-pill ${isActive ? 'bg-black-30' : 'ba b--black-30'}`}
                 style={{
+                    backgroundColor: isActive ? 'rgba(0, 0, 0, 0.3)' : '',
+                    border: isActive ? 'none' : '1px solid rgba(0, 0, 0, 0.3)',
+                    borderRadius: '9999px',
+                    cursor: 'pointer',
                     height: '12px',
+                    margin: '0 4px',
                     width: '12px',
                 }}
                 onClick={click}
@@ -27,11 +31,29 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Dot navigation">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <ul className="list ma0 pa0 flex items-center justify-center">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <ul
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    listStyleType: 'none',
+                                    margin: 0,
+                                    padding: 0,
+                                }}
+                            >
                                 <Dot index={0} />
                                 <Dot index={1} />
                                 <Dot index={2} />

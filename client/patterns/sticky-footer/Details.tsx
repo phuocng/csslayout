@@ -8,21 +8,39 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Sticky footer">
-            <div className="ph4 pv5">
-                <div className="lh-copy mb3">
+            <div style={{ padding: '64px 32px' }}>
+                <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     The footer always sticks to the bottom if the main content is short.
                 </div>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column">
-                            <div className="flex-shrink-0 bb b--black-30 pa3">
-                                <div className="w-50"><Rectangle /></div>
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    flexShrink: 0,
+                                    padding: '16px',
+                                }}
+                            >
+                                <div style={{ width: '50%' }}><Rectangle /></div>
                             </div>
-                            <div className="flex-grow-1 pa3">
+                            <div style={{ flexGrow: 1, padding: '16px' }}>
                                 <Block numberOfBlocks={20} />
                             </div>
-                            <div className="flex-shrink-0 bt b--black-30 pa3">
-                            <div className="w-40"><Rectangle /></div>
+                            <div
+                                style={{
+                                    borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+                                    flexShrink: 0,
+                                    padding: '16px',
+                                }}
+                            >
+                                <div style={{ width: '40%' }}><Rectangle /></div>
                             </div>
                         </div>
                     )}

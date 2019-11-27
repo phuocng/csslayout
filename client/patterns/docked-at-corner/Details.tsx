@@ -8,15 +8,40 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Docked at corner">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="w4 pa3 relative ba b--black-30 br2">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '8px',
+                                    padding: '16px',
+                                    position: 'relative',
+                                    width: '128px',
+                                }}
+                            >
                                 <Rectangle />
                                 <div
-                                    className="absolute top-0 right-0 br-pill bg-dark-blue h2 w2"
-                                    style={{ transform: 'translate(50%, -50%)' }}
+                                    style={{
+                                        backgroundColor: '#00449E',
+                                        borderRadius: '9999px',
+                                        height: '32px',
+                                        position: 'absolute',
+                                        right: 0,
+                                        top: 0,
+                                        transform: 'translate(50%, -50%)',
+                                        width: '32px',
+                                    }}
                                 />
                             </div>
                         </div>
@@ -48,21 +73,65 @@ const Details: React.FC<{}> = () => {
             <section>
                 <Heading title="Use cases" />
 
-                <div className="pa4">
-                    <div className="mb4 w4 pa2 relative ba b--black-30 br2">
+                <div style={{ padding: '32px' }}>
+                    <div
+                        style={{
+                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderRadius: '4px',
+                            marginBottom: '32px',
+                            padding: '8px',
+                            position: 'relative',
+                            width: '128px',
+                        }}
+                    >
                         Inbox
                         <div
-                            className="absolute top-0 right-0 br-pill bg-blue white pa1 flex items-center justify-center"
-                            style={{ height: '24px', transform: 'translate(50%, -50%)', width: '24px' }}
+                            style={{
+                                alignItems: 'center',
+                                backgroundColor: '#357EDD',
+                                borderRadius: '9999px',
+                                color: '#FFF',
+                                display: 'flex',
+                                height: '24px',
+                                justifyContent: 'center',
+                                padding: '4px',
+                                position: 'absolute',
+                                right: 0,
+                                top: 0,
+                                transform: 'translate(50%, -50%)',
+                                width: '24px',
+                            }}
                         >
                             5
                         </div>
                     </div>
-                    <div className="w-40 h4 pa3 relative ba b--black-30 br2">
+                    <div
+                        style={{
+                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderRadius: '4px',
+                            height: '128px',
+                            padding: '16px',
+                            position: 'relative',
+                            width: '40%',
+                        }}
+                    >
                         Modal
                         <div
-                            className="absolute top-0 right-0 br-pill bg-red white pa1 flex items-center justify-center"
-                            style={{ height: '24px', transform: 'translate(50%, -50%)', width: '24px' }}
+                            style={{
+                                alignItems: 'center',
+                                backgroundColor: '#FF4136',
+                                borderRadius: '9999px',
+                                color: '#FFF',
+                                display: 'flex',
+                                height: '24px',
+                                justifyContent: 'center',
+                                padding: '4px',
+                                position: 'absolute',
+                                right: 0,
+                                top: 0,
+                                transform: 'translate(50%, -50%)',
+                                width: '24px',
+                            }}
                         >
                             &times;
                         </div>

@@ -7,22 +7,30 @@ import Square from '../../placeholders/Square';
 const Cover: React.FC<{}> = () => {
     return (
         <Frame>
-            <div className="flex h-100 items-start pa2 w-100">
-                <div className="h2 w2 mr2">
+            <div
+                style={{
+                    alignItems: 'flex-start',
+                    display: 'flex',
+                    height: '100%',
+                    padding: '8px',
+                    width: '100%',
+                }}
+            >
+                <div style={{ height: '32px', marginRight: '8px', width: '32px' }}>
                     <Square />
                 </div>
-                <div className="flex-auto">
-                    <div className="w-100 mb1"><Line /></div>
-                    <div className="w-100 mb1"><Line /></div>
-                    <div className="w-80 mb3"><Line /></div>
+                <div style={{ flex: 1 }}>
+                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                    <div style={{ marginBottom: '16px', width: '80%' }}><Line /></div>
 
-                    <div className="w-100 mb1"><Line /></div>
-                    <div className="w-100 mb1"><Line /></div>
-                    <div className="w-80 mb3"><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                    <div style={{ marginBottom: '16px', width: '80%' }}><Line /></div>
 
-                    <div className="w-100 mb1"><Line /></div>
-                    <div className="w-100 mb1"><Line /></div>
-                    <div className="w-80 mb1"><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '80%' }}><Line /></div>
                 </div>
             </div>
         </Frame>

@@ -7,9 +7,27 @@ import Rectangle from '../../placeholders/Rectangle';
 const Cover: React.FC<{}> = () => {
     return (
         <Frame>
-            <div className="h-100 flex flex-column items-center justify-center pa2">
-                <div className="w-100 flex flex-row items-center ba b--black-30 br2 pa1">
-                    <div className="mr1"><Circle /></div>
+            <div
+                style={{
+                    alignItems: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100%',
+                    justifyContent: 'center',
+                    padding: '8px',
+                }}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                        borderRadius: '4px',
+                        display: 'flex',
+                        padding: '8px',
+                        width: '100%',
+                    }}
+                >
+                    <div style={{ marginRight: '4px' }}><Circle /></div>
                     <Rectangle />
                 </div>
             </div>

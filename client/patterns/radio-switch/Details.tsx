@@ -12,23 +12,73 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Radio switch">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="inline-flex br-pill bg-black-10 pa1">
-                                <label className={`pointer pv3 ph2 br-pill ${isFirstChecked ? 'bg-blue white' : ''}`}>
-                                    <input type="radio" className="dn" checked={isFirstChecked} onChange={toggle} />
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                                    borderRadius: '9999px',
+                                    display: 'inline-flex',
+                                    padding: '4px',
+                                }}
+                            >
+                                <label
+                                    style={{
+                                        backgroundColor: isFirstChecked ? '#357EDD' : '',
+                                        borderRadius: '9999px',
+                                        color: isFirstChecked ? '#FFF' : '',
+                                        cursor: 'pointer',
+                                        padding: '16px 8px',
+                                    }}
+                                >
+                                    <input
+                                        type="radio"
+                                        style={{ display: 'none' }}
+                                        checked={isFirstChecked}
+                                        onChange={toggle}
+                                    />
                                     <div
-                                        className={`w3 br1 ${isFirstChecked ? 'bg-white' : 'bg-black-20'}`}
-                                        style={{ height: '8px' }}
+                                        style={{
+                                            backgroundColor: isFirstChecked ? '#FFF' : 'rgba(0, 0, 0, 0.2)',
+                                            borderRadius: '4px',
+                                            height: '8px',
+                                            width: '64px',
+                                        }}
                                     />
                                 </label>
-                                <label className={`pointer pv3 ph2 br-pill ${isFirstChecked ? '' : 'bg-blue white'}`}>
-                                    <input type="radio" className="dn" checked={!isFirstChecked} onChange={toggle} />
+                                <label
+                                    style={{
+                                        backgroundColor: isFirstChecked ? '' : '#357EDD',
+                                        borderRadius: '9999px',
+                                        color: isFirstChecked ? '' : '#FFF',
+                                        cursor: 'pointer',
+                                        padding: '16px 8px',
+                                    }}
+                                >
+                                    <input
+                                        type="radio"
+                                        style={{ display: 'none' }}
+                                        checked={!isFirstChecked}
+                                        onChange={toggle}
+                                    />
                                     <div
-                                        className={`w3 br1 ${isFirstChecked ? 'bg-black-20' : 'bg-white'}`}
-                                        style={{ height: '8px' }}
+                                        style={{
+                                            backgroundColor: isFirstChecked ? 'rgba(0, 0, 0, 0.2)' : '#FFF',
+                                            borderRadius: '4px',
+                                            height: '8px',
+                                            width: '64px',
+                                        }}
                                     />
                                 </label>
                             </div>
@@ -67,14 +117,37 @@ const Details: React.FC<{}> = () => {
             <section>
                 <Heading title="Use cases" />
 
-                <div className="pa4">
-                    <div className="inline-flex br-pill bg-black-10 pa1">
-                        <label className="pointer pv1 ph2 br-pill flex bg-blue white">
-                            <input type="radio" className="dn" />
+                <div style={{ padding: '32px' }}>
+                    <div
+                        style={{
+                            backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                            borderRadius: '9999px',
+                            display: 'inline-flex',
+                            padding: '4px',
+                        }}
+                    >
+                        <label
+                            style={{
+                                backgroundColor: '#357EDD',
+                                borderRadius: '9999px',
+                                color: '#FFF',
+                                cursor: 'pointer',
+                                display: 'flex',
+                                padding: '4px 8px',
+                            }}
+                        >
+                            <input type="radio" style={{ display: 'none' }} />
                             Monthly
                         </label>
-                        <label className="pointer pv1 ph2 br-pill flex">
-                            <input type="radio" className="dn" />
+                        <label
+                            style={{
+                                borderRadius: '9999px',
+                                cursor: 'pointer',
+                                display: 'flex',
+                                padding: '4px 8px',
+                            }}
+                        >
+                            <input type="radio" style={{ display: 'none' }} />
                             Yearly
                         </label>
                     </div>

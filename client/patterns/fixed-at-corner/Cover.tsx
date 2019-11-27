@@ -6,8 +6,8 @@ import Triangle from '../../placeholders/Triangle';
 const Cover: React.FC<{}> = () => {
     return (
         <Frame>
-            <div className="relative">
-                <div className="absolute top-0 left-0">
+            <div style={{ position: 'relative' }}>
+                <div style={{ left: 0, position: 'absolute', top: 0 }}>
                     <Triangle size={32} />
                 </div>
             </div>

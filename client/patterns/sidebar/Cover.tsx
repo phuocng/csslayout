@@ -6,16 +6,34 @@ import Line from '../../placeholders/Line';
 const Cover: React.FC<{}> = () => {
     return (
         <Frame>
-            <div className="h-100 flex">
-                <div className="b--black-30 br flex flex-column justify-end pa1 w-30">
-                    <div className="mb1"><Line /></div>
-                    <div className="w-80"><Line /></div>
+            <div style={{ display: 'flex', height: '100%' }}>
+                <div
+                    style={{
+                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'flex-end',
+                        padding: '4px',
+                        width: '30%',
+                    }}
+                >
+                    <div style={{ marginBottom: '4px' }}><Line /></div>
+                    <div style={{ width: '80%' }}><Line /></div>
                 </div>
-                <div className="flex-grow-1 pa2 b--black-30 br bw2">
-                    <div className="mb2"><Line /></div>
-                    <div className="mb2"><Line /></div>
-                    <div className="mb2"><Line /></div>
-                    <div className="w-80"><Line /></div>
+                <div
+                    style={{
+                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                        borderWidth: '4px',
+                        display: 'flex',
+                        flex: 1,
+                        flexDirection: 'column',
+                        padding: '8px',
+                    }}
+                >
+                    <div style={{ marginBottom: '8px' }}><Line /></div>
+                    <div style={{ marginBottom: '8px' }}><Line /></div>
+                    <div style={{ marginBottom: '8px' }}><Line /></div>
+                    <div style={{ width: '80%' }}><Line /></div>
                 </div>
             </div>
         </Frame>

@@ -12,41 +12,100 @@ const BrowserFrame: React.FC<BrowserFrameProps> = ({ content, source }) => {
     const flip = () => setContentActive((isActive) => !isActive);
 
     return (
-        <div className="br2 ba b--black-20" style={{ boxShadow: '0 16px 40px -8px rgba(0, 0, 0, .5)' }}>
-            <div className="flex ph3 pv2 bb b--black-20 items-center bg-black-05">
-                <div className="br-100 mr1 w1 h1 bg-red" />
-                <div className="br-100 mr1 w1 h1 bg-gold" />
-                <div className="br-100 mr1 w1 h1 bg-red" />
-                <div className="ml-auto">
-                    <button className="bn pointer bg-dark-blue br2 ph2 pv1 white" onClick={flip}>
+        <div
+            style={{
+                border: '1px solid rgba(0, 0, 0, 0.2)',
+                borderRadius: '4px',
+                boxShadow: '0 16px 40px -8px rgba(0, 0, 0, .5)',
+            }}
+        >
+            <div
+                style={{
+                    alignItems: 'center',
+                    backgroundColor: 'rgba( 0, 0, 0, 0.05)',
+                    borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
+                    display: 'flex',
+                    padding: '8px 16px',
+                }}
+            >
+                <div
+                    style={{
+                        backgroundColor: '#FF4136',
+                        borderRadius: '100%',
+                        height: '16px',
+                        marginRight: '4px',
+                        width: '16px',
+                    }}
+                />
+                <div
+                    style={{
+                        backgroundColor: '#FFB700',
+                        borderRadius: '100%',
+                        height: '16px',
+                        marginRight: '4px',
+                        width: '16px',
+                    }}
+                />
+                <div
+                    style={{
+                        backgroundColor: '#FF4136',
+                        borderRadius: '100%',
+                        height: '16px',
+                        marginRight: '4px',
+                        width: '16px',
+                    }}
+                />
+                <div style={{ marginLeft: 'auto' }}>
+                    <button
+                        style={{
+                            backgroundColor: '#00449E',
+                            borderColor: 'transparent',
+                            borderRadius: '4px',
+                            color: '#FFF',
+                            cursor: 'pointer',
+                            padding: '4px 8px',
+                        }}
+                        onClick={flip}
+                    >
                         {isContentActive ? 'Source' : 'Demo'}
                     </button>
                 </div>
             </div>
             <div
-                className="relative"
                 style={{
                     height: '512px',
+                    position: 'relative',
                     transform: isContentActive ? '' : 'rotateY(180deg)',
                     transformStyle: 'preserve-3d',
                     transition: 'transform 1s',
                 }}
             >
                 <div
-                    className={`overflow-scroll absolute top-0 left-0 h-100 w-100 ${isContentActive ? 'o-1' : 'o-0'}`}
                     style={{
                         WebkitBackfaceVisibility: 'hidden',
                         backfaceVisibility: 'hidden',
+                        height: '100%',
+                        left: 0,
+                        opacity: isContentActive ? 1 : 0,
+                        overflow: 'scroll',
+                        position: 'absolute',
+                        top: 0,
+                        width: '100%',
                     }}
                 >
                     {content}
                 </div>
                 <div
-                    className={`absolute top-0 left-0 h-100 w-100 ${isContentActive ? 'o-0' : 'o-1'}`}
                     style={{
                         WebkitBackfaceVisibility: 'hidden',
                         backfaceVisibility: 'hidden',
+                        height: '100%',
+                        left: 0,
+                        opacity: isContentActive ? 0 : 1,
+                        position: 'absolute',
+                        top: 0,
                         transform: 'rotateY(180deg)',
+                        width: '100%',
                     }}
                 >
                     <SampleCode lang="html" code={source} />

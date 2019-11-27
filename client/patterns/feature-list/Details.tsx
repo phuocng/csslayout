@@ -9,22 +9,29 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Feature list">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="flex h-100 items-center justify-center">
-                            <div className="w-60">
-                                <div className="flex flex-row mb4">
-                                    <div className="mh3"><Circle size={128} /></div>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                height: '100%',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            <div style={{ width: '60%' }}>
+                                <div style={{ display: 'flex', marginBottom: '32px' }}>
+                                    <div style={{ margin: '0 16px' }}><Circle size={128} /></div>
                                     <div style={{ flex: 1 }}>
-                                        <div className="mb4"><Rectangle height={8} /></div>
+                                        <div style={{ marginBottom: '32px' }}><Rectangle height={8} /></div>
                                         <Block numberOfBlocks={10} />
                                     </div>
                                 </div>
-                                <div className="flex flex-row flex-row-reverse mb4">
-                                    <div className="mh3"><Circle size={128} /></div>
+                                <div style={{ display: 'flex', flexDirection: 'row-reverse', marginBottom: '32px' }}>
+                                    <div style={{ margin: '0 16px' }}><Circle size={128} /></div>
                                     <div style={{ flex: 1 }}>
-                                        <div className="mb4"><Rectangle height={8} /></div>
+                                        <div style={{ marginBottom: '32px' }}><Rectangle height={8} /></div>
                                         <Block numberOfBlocks={15} />
                                     </div>
                                 </div>

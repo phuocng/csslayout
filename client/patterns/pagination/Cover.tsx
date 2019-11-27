@@ -6,16 +6,54 @@ import Frame from '../../placeholders/Frame';
 const Cover: React.FC<{}> = () => {
     return (
         <Frame>
-            <div className="h-100 flex flex-column items-center justify-center pa2">
-                <div className="b--black-30 ba br-pill flex">
-                    <div className="b--black-30 br flex items-center justify-center pa2">
-                        <Circle size={4} />
+            <div
+                style={{
+                    alignItems: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100%',
+                    justifyContent: 'center',
+                    padding: '8px',
+                }}
+            >
+                <div
+                    style={{
+                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                        borderRadius: '9999px',
+                        display: 'flex',
+                    }}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <Circle size={8} />
                     </div>
-                    <div className="b--black-30 br flex items-center justify-center pa2">
-                        <Circle size={4} />
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <Circle size={8} />
                     </div>
-                    <div className="flex items-center justify-center pa2">
-                        <Circle size={4} />
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <Circle size={8} />
                     </div>
                 </div>
             </div>

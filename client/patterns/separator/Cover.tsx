@@ -7,10 +7,26 @@ import Rectangle from '../../placeholders/Rectangle';
 const Cover: React.FC<{}> = () => {
     return (
         <Frame>
-            <div className="h-100 flex flex-column items-center justify-center">
-                <div className="flex items-center h1 w-80">
+            <div
+                style={{
+                    alignItems: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100%',
+                    justifyContent: 'center',
+                    padding: '8px',
+                }}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        height: '16px',
+                        width: '80%',
+                    }}
+                >
                     <div style={{ flex: 1 }}><Line /></div>
-                    <div className="w-25 mh1"><Rectangle /></div>
+                    <div style={{ margin: '0 4px', width: '25%' }}><Rectangle /></div>
                     <div style={{ flex: 1 }}><Line /></div>
                 </div>
             </div>

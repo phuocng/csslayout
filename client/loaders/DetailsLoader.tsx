@@ -1,8 +1,9 @@
 import loadable, { LoadableComponent } from '@loadable/component';
 import React from 'react';
 
-import Pattern from '../constants/Pattern';
 import './spinner.css';
+
+import Pattern from '../constants/Pattern';
 
 interface DetailsLoaderProps {
     pattern: Pattern;
@@ -21,7 +22,15 @@ const loadDetails = /* #__LOADABLE__ */ (props: DetailsLoaderProps) => import(`.
 
 const DetailsLoader: LoadableComponent<DetailsLoaderProps> = loadable(loadDetails, {
     fallback: (
-        <div className="w100 h-100 flex items-center justify-center">
+        <div
+            style={{
+                alignItems: 'center',
+                display: 'flex',
+                height: '100%',
+                justifyContent: 'center',
+                width: '100%',
+            }}
+        >
             <svg className="spinner" width="64px" height="64px" viewBox="0 0 32 32">
                 <circle
                     cx="16"

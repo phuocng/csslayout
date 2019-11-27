@@ -7,9 +7,25 @@ import Line from '../../placeholders/Line';
 const Cover: React.FC<{}> = () => {
     return (
         <Frame>
-            <div className="h-100 flex flex-column items-center justify-center">
-                <div className="flex items-center h1 w-80">
-                    <div className="w-20"><Line /></div>
+            <div
+                style={{
+                    alignItems: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100%',
+                    justifyContent: 'center',
+                    padding: '8px',
+                }}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        height: '16px',
+                        width: '80%',
+                    }}
+                >
+                    <div style={{ width: '20%' }}><Line /></div>
                     <Circle />
                     <div style={{ flex: 1 }}><Line /></div>
                 </div>

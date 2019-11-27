@@ -8,7 +8,7 @@ const Layout: React.FC<{}> = ({ children }) => {
     }, []);
 
     return (
-        <div className="mw8 mb5 center">
+        <div style={{ margin: '0 auto 64px auto', maxWidth: '1024px' }}>
             {children}
             <Footer />
             <ul

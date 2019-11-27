@@ -8,15 +8,41 @@ import Circle from '../../placeholders/Circle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Notification">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="b--black-30 ba br2 flex justify-between w-60">
-                                <div className="pa3 w-80"><Block numberOfBlocks={5} /></div>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '4px',
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
+                                    width: '60%',
+                                }}
+                            >
+                                <div style={{ padding: '16px', width: '80%' }}><Block numberOfBlocks={5} /></div>
                                 <button
-                                    className="black-30 bn f2 flex h2 items-center justify-center w2"
-                                    style={{ marginRight: '1px' }}
+                                    style={{
+                                        alignItems: 'center',
+                                        borderColor: 'transparent',
+                                        color: 'rgba(0, 0, 0, .3)',
+                                        display: 'flex',
+                                        fontSize: '36px',
+                                        height: '32px',
+                                        justifyContent: 'center',
+                                        marginRight: '1px',
+                                        width: '32px',
+                                    }}
                                 >
                                     <Circle />
                                 </button>

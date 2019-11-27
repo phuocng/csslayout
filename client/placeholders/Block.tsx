@@ -10,13 +10,34 @@ interface BlockProps {
 
 const Block: React.FC<BlockProps> = ({ justify = 'start', numberOfBlocks = 1, blockHeight = 4 }) => {
     return (
-        <div className={`flex flex-wrap w-100 justify-${justify}`}>
+        <div
+            style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: justify,
+                width: '100%',
+            }}
+        >
             {
                 Array(numberOfBlocks).fill(0).map((_, i) => {
                     const s = random(1, 5);
                     return (
-                        <div key={i} className={`mr2 mb2 w-${s * 10}`}>
-                            <div className="w-100 bg-black-30 br-pill" style={{ height: `${blockHeight}px` }} />
+                        <div
+                            key={i}
+                            style={{
+                                marginBottom: '8px',
+                                marginRight: '8px',
+                                width: `${s * 10}%`,
+                            }}
+                        >
+                            <div
+                                style={{
+                                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '9999px',
+                                    height: `${blockHeight}px`,
+                                    width: '100%',
+                                }}
+                            />
                         </div>
                     );
                 })

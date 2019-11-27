@@ -9,37 +9,85 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Pricing table">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex items-center justify-center pa3">
-                            <div className="w-60 flex items-center justify-center">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '16px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    width: '60%',
+                                }}
+                            >
                                 <div
-                                    className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2"
-                                    style={{ flex: 1 }}
+                                    style={{
+                                        alignItems: 'center',
+                                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '4px',
+                                        display: 'flex',
+                                        flex: 1,
+                                        flexDirection: 'column',
+                                        justifyContent: 'center',
+                                        margin: '0 8px',
+                                        padding: '16px',
+                                    }}
                                 >
-                                    <div className="mb3 w-60"><Rectangle /></div>
-                                    <div className="mb3"><Circle size={64} /></div>
-                                    <div className="mb3 w-100"><Block numberOfBlocks={10} /></div>
-                                    <div className="w-40"><Rectangle height={32} /></div>
+                                    <div style={{ marginBottom: '16px', width: '60%' }}><Rectangle /></div>
+                                    <div style={{ marginBottom: '16px' }}><Circle size={64} /></div>
+                                    <div style={{ marginBottom: '16px', width: '100%' }}>
+                                        <Block numberOfBlocks={10} />
+                                    </div>
+                                    <div style={{ width: '40%' }}><Rectangle height={32} /></div>
                                 </div>
                                 <div
-                                    className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2"
-                                    style={{ flex: 1 }}
+                                    style={{
+                                        alignItems: 'center',
+                                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '4px',
+                                        display: 'flex',
+                                        flex: 1,
+                                        flexDirection: 'column',
+                                        justifyContent: 'center',
+                                        margin: '0 8px',
+                                        padding: '16px',
+                                    }}
                                 >
-                                    <div className="mb3 w-60"><Rectangle /></div>
-                                    <div className="mb3"><Circle size={64} /></div>
-                                    <div className="mb3 w-100"><Block numberOfBlocks={20} /></div>
-                                    <div className="w-40"><Rectangle height={32} /></div>
+                                    <div style={{ marginBottom: '16px', width: '60%' }}><Rectangle /></div>
+                                    <div style={{ marginBottom: '16px' }}><Circle size={64} /></div>
+                                    <div style={{ marginBottom: '16px', width: '100%' }}>
+                                        <Block numberOfBlocks={20} />
+                                    </div>
+                                    <div style={{ width: '40%' }}><Rectangle height={32} /></div>
                                 </div>
                                 <div
-                                    className="ba br2 b--black-30 flex flex-column items-center justify-center pa3 mh2"
-                                    style={{ flex: 1 }}
+                                    style={{
+                                        alignItems: 'center',
+                                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '4px',
+                                        display: 'flex',
+                                        flex: 1,
+                                        flexDirection: 'column',
+                                        justifyContent: 'center',
+                                        margin: '0 8px',
+                                        padding: '16px',
+                                    }}
                                 >
-                                    <div className="mb3 w-60"><Rectangle /></div>
-                                        <div className="mb3"><Circle size={64} /></div>
-                                        <div className="mb3 w-100"><Block numberOfBlocks={10} /></div>
-                                        <div className="w-40"><Rectangle height={32} /></div>
+                                    <div style={{ marginBottom: '16px', width: '60%' }}><Rectangle /></div>
+                                    <div style={{ marginBottom: '16px' }}><Circle size={64} /></div>
+                                    <div style={{ marginBottom: '16px', width: '100%' }}>
+                                        <Block numberOfBlocks={10} />
+                                    </div>
+                                    <div style={{ width: '40%' }}><Rectangle height={32} /></div>
                                 </div>
                             </div>
                         </div>

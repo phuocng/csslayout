@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "analyse") {
 module.exports = {
     entry: {
         'vendor-styles': [
-            './vendors/tachyons@4.10.0/tachyons.min.css',
+            './vendors/normalize.css@8.0.1/normalize.css',
             './vendors/highlight.js@9.12.0/dracula.min.css',
         ],
         // The CSS for client should come after `vendor-styles`

@@ -7,29 +7,127 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Input add-on">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="w5">
-                                <div className="b--black-30 ba br2 flex h2 w-100 mb3">
-                                    <div className="bg-black-05 flex items-center justify-center pa2 br b--black-30 w-30">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div style={{ width: '256px' }}>
+                                <div
+                                    style={{
+                                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '4px',
+                                        display: 'flex',
+                                        height: '32px',
+                                        marginBottom: '16px',
+                                        width: '100%',
+                                    }}
+                                >
+                                    <div
+                                        style={{
+                                            alignItems: 'center',
+                                            backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                                            borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            padding: '8px',
+                                            width: '30%',
+                                        }}
+                                    >
                                         <Rectangle />
                                     </div>
-                                    <input type="text" className="bn pa2 flex-auto" style={{ marginRight: '1px' }} />
+                                    <input
+                                        type="text"
+                                        style={{
+                                            borderColor: 'transparent',
+                                            flex: 1,
+                                            marginRight: '1px',
+                                            padding: '4px',
+                                        }}
+                                    />
                                 </div>
-                                <div className="b--black-30 ba br2 flex h2 w-100 mb3">
-                                    <input type="text" className="bn pa2 flex-auto" style={{ marginLeft: '1px' }} />
-                                    <div className="bg-black-05 flex items-center justify-center pa2 bl b--black-30 w-40">
+                                <div
+                                    style={{
+                                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '4px',
+                                        display: 'flex',
+                                        height: '32px',
+                                        marginBottom: '16px',
+                                        width: '100%',
+                                    }}
+                                >
+                                    <input
+                                        type="text"
+                                        style={{
+                                            borderColor: 'transparent',
+                                            flex: 1,
+                                            marginLeft: '1px',
+                                            padding: '8px',
+                                        }}
+                                    />
+                                    <div
+                                        style={{
+                                            alignItems: 'center',
+                                            backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                                            borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            padding: '8px',
+                                            width: '40%',
+                                        }}
+                                    >
                                         <Rectangle />
                                     </div>
                                 </div>
-                                <div className="b--black-30 ba br2 flex h2 w-100">
-                                    <div className="bg-black-05 flex items-center justify-center pa2 br b--black-30 w-20">
+                                <div
+                                    style={{
+                                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '4px',
+                                        display: 'flex',
+                                        height: '32px',
+                                        width: '100%',
+                                    }}
+                                >
+                                    <div
+                                        style={{
+                                            alignItems: 'center',
+                                            backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                                            borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            padding: '8px',
+                                            width: '20%',
+                                        }}
+                                    >
                                         <Rectangle />
                                     </div>
-                                    <input type="text" className="bn pa2 flex-auto" />
-                                    <div className="bg-black-05 flex items-center justify-center pa2 bl b--black-30 w-30">
+                                    <input
+                                        type="text"
+                                        style={{
+                                            borderColor: 'transparent',
+                                            flex: 1,
+                                            padding: '8px',
+                                        }}
+                                    />
+                                    <div
+                                        style={{
+                                            alignItems: 'center',
+                                            backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                                            borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            padding: '8px',
+                                            width: '30%',
+                                        }}
+                                    >
                                         <Rectangle />
                                     </div>
                                 </div>

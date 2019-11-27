@@ -8,15 +8,32 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Card">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center pa3">
-                            <div className="b--black-30 ba br2 flex flex-column w5">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '16px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '8px',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    width: '256px',
+                                }}
+                            >
                                 <Rectangle height={150} />
-                                <div className="pa3" style={{ flex: 1 }}>
-                                    <div className="mb3"><Block numberOfBlocks={15} /></div>
-                                    <div className="w4">
+                                <div style={{ flex: 1, padding: '16px' }}>
+                                    <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={15} /></div>
+                                    <div style={{ width: '128px' }}>
                                         <Rectangle height={32} />
                                     </div>
                                 </div>

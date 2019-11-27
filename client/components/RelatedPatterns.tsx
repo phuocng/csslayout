@@ -13,7 +13,7 @@ const RelatedPatterns: React.FC<RelatedPatternsProps> = ({ patterns }) => {
         <section>
             <Heading title="Related patterns" />
 
-            <div className="flex flex-wrap items-start pa4">
+            <div style={{ alignItems: 'start', display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
                 {
                     patterns.map((pattern) => <CoverCard key={pattern} pattern={pattern} />)
                 }

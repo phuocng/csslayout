@@ -8,19 +8,27 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Sticky header">
-            <div className="ph4 pv5">
-                <div className="lh-copy mb3">
+            <div style={{ padding: '64px 32px' }}>
+                <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Try to scroll the main content to see the header sticks to the top of page.
                 </div>
                 <BrowserFrame
                     content={(
                         <div>
-                            <div className="top-0 bg-white bb b--black-30 pa3" style={{ position: 'sticky' }}>
-                                <div className="w-50"><Rectangle /></div>
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    borderBottom: '1ox solid rgba(0, 0, 0, 0.3)',
+                                    padding: '16px',
+                                    position: 'sticky',
+                                    top: 0,
+                                }}
+                            >
+                                <div style={{ width: '50%' }}><Rectangle /></div>
                             </div>
-                            <div className="pa3">
-                                <div className="mb4"><Block numberOfBlocks={20} /></div>
-                                <div className="mb4"><Block numberOfBlocks={40} /></div>
+                            <div style={{ padding: '16px' }}>
+                                <div style={{ marginBottom: '32px' }}><Block numberOfBlocks={20} /></div>
+                                <div style={{ marginBottom: '32px' }}><Block numberOfBlocks={40} /></div>
                                 <div><Block numberOfBlocks={30} /></div>
                             </div>
                         </div>

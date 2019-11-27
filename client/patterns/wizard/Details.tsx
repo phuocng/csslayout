@@ -9,38 +9,95 @@ import Line from '../../placeholders/Line';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Wizard">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="flex w-80">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div style={{ display: 'flex', width: '80%' }}>
                                 <div style={{ flex: 1 }}>
-                                    <div className="mb3 flex items-center justify-center">
+                                    <div
+                                        style={{
+                                            alignItems: 'center',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            marginBottom: '16px',
+                                        }}
+                                    >
                                         <div style={{ flex: 1 }} />
-                                        <div className="flex items-center justify-center mh1"><Circle size={32} /></div>
+                                        <div
+                                            style={{
+                                                alignItems: 'center',
+                                                display: 'flex',
+                                                justifyContent: 'center',
+                                                margin: '0 4px',
+                                            }}
+                                        >
+                                            <Circle size={32} />
+                                        </div>
                                         <div style={{ flex: 1 }}><Line /></div>
                                     </div>
-                                    <div className="ph3 flex justify-center">
+                                    <div style={{ display: 'flex', justifyContent: 'center', padding: '0 16px' }}>
                                         <Block justify='center' numberOfBlocks={5} />
                                     </div>
                                 </div>
                                 <div style={{ flex: 1 }}>
-                                    <div className="mb3 flex items-center justify-center">
+                                    <div
+                                        style={{
+                                            alignItems: 'center',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            marginBottom: '16px',
+                                        }}
+                                    >
                                         <div style={{ flex: 1 }}><Line /></div>
-                                        <div className="flex items-center justify-center mh1"><Circle size={32} /></div>
+                                        <div
+                                            style={{
+                                                alignItems: 'center',
+                                                display: 'flex',
+                                                justifyContent: 'center',
+                                                margin: '0 4px',
+                                            }}
+                                        >
+                                            <Circle size={32} />
+                                        </div>
                                         <div style={{ flex: 1 }}><Line /></div>
                                     </div>
-                                    <div className="ph3 flex justify-center">
+                                    <div style={{ display: 'flex', justifyContent: 'center', padding: '0 16px' }}>
                                         <Block justify='center' numberOfBlocks={5} />
                                     </div>
                                 </div>
                                 <div style={{ flex: 1 }}>
-                                    <div className="mb3 flex items-center justify-center">
+                                    <div
+                                        style={{
+                                            alignItems: 'center',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            marginBottom: '16px',
+                                        }}
+                                    >
                                         <div style={{ flex: 1 }}><Line /></div>
-                                        <div className="flex items-center justify-center mh1"><Circle size={32} /></div>
+                                        <div
+                                            style={{
+                                                alignItems: 'center',
+                                                display: 'flex',
+                                                justifyContent: 'center',
+                                                margin: '0 4px',
+                                            }}
+                                        >
+                                            <Circle size={32} />
+                                        </div>
                                         <div style={{ flex: 1 }} />
                                     </div>
-                                    <div className="ph3 flex justify-center">
+                                    <div style={{ display: 'flex', justifyContent: 'center', padding: '0 16px' }}>
                                         <Block justify='center' numberOfBlocks={5} />
                                     </div>
                                 </div>

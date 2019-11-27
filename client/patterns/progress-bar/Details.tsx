@@ -12,14 +12,40 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Progress bar">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="h1 w-50 br-pill bg-black-10">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                                    borderRadius: '9999px',
+                                    height: '16px',
+                                    width: '50%',
+                                }}
+                            >
                                 <div
-                                    className="br-pill h-100 bg-blue flex items-center justify-center pa1 white f7"
-                                    style={{ width: `${progress}%` }}
+                                    style={{
+                                        alignItems: 'center',
+                                        backgroundColor: '#357EDD',
+                                        borderRadius: '9999px',
+                                        color: '#FFF',
+                                        display: 'flex',
+                                        fontSize: '12px',
+                                        height: '100%',
+                                        justifyContent: 'center',
+                                        padding: '4px',
+                                        width: `${progress}%`,
+                                    }}
                                 >
                                     {progress}%
                                 </div>

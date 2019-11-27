@@ -5,12 +5,53 @@ import Frame from '../../placeholders/Frame';
 const Cover: React.FC<{}> = () => {
     return (
         <Frame>
-            <div className="h-100 flex flex-column items-center justify-center">
-                <div className="flex items-center">
-                    <div className="mh1 br-pill ba b--black-30" style={{ height: '8px', width: '8px' }} />
-                    <div className="mh1 br-pill bg-black-30" style={{ height: '8px', width: '8px' }} />
-                    <div className="mh1 br-pill ba b--black-30" style={{ height: '8px', width: '8px' }} />
-                    <div className="mh1 br-pill ba b--black-30" style={{ height: '8px', width: '8px' }} />
+            <div
+                style={{
+                    alignItems: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100%',
+                    justifyContent: 'center',
+                    padding: '8px',
+                }}
+            >
+                <div style={{ alignItems: 'center', display: 'flex' }}>
+                    <div
+                        style={{
+                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderRadius: '9999px',
+                            height: '8px',
+                            margin: '0 4px',
+                            width: '8px',
+                        }}
+                    />
+                    <div
+                        style={{
+                            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                            borderRadius: '9999px',
+                            height: '8px',
+                            margin: '0 4px',
+                            width: '8px',
+                        }}
+                    />
+                    <div
+                        style={{
+                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderRadius: '9999px',
+                            height: '8px',
+                            margin: '0 4px',
+                            width: '8px',
+                        }}
+                    />
+                    <div
+                        style={{
+                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderRadius: '9999px',
+                            height: '8px',
+                            margin: '0 4px',
+                            width: '8px',
+                        }}
+                    />
                 </div>
             </div>
         </Frame>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
@@ -14,25 +13,72 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Stepper input">
-            <div className="ph4 pv5">
-                <div className="lh-copy mb3">
-                    The content of minus and plus buttons are centered by using the technique in the <Link to="/centering" className="link">Centering</Link> page.
-                </div>
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="b--black-30 ba br2 flex h2 w4">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '8px',
+                                    display: 'flex',
+                                    height: '32px',
+                                    width: '128px',
+                                }}
+                            >
                                 <button
-                                    className="bg-black-05 bn flex items-center justify-center pointer w2"
+                                    style={{
+                                        alignItems: 'center',
+                                        backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                                        borderColor: 'transparent',
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        width: '32px',
+                                    }}
                                     onClick={decrease}
                                 >
                                     -
                                 </button>
-                                <div className="b--black-30 ba bb-0 bt-0 h-100" style={{ flex: 1 }}>
-                                    <input type="text" className="bn h-100 pa2 w-100" value={value} onChange={change} />
+                                <div
+                                    style={{
+                                        borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                        flex: 1,
+                                        height: '100%',
+                                    }}
+                                >
+                                    <input
+                                        type="text"
+                                        style={{
+                                            borderColor: 'transparent',
+                                            height: '100%',
+                                            padding: '8px',
+                                            width: '100%',
+                                        }}
+                                        value={value}
+                                        onChange={change}
+                                    />
                                 </div>
                                 <button
-                                    className="bg-black-05 bn flex items-center justify-center pointer w2"
+                                    style={{
+                                        alignItems: 'center',
+                                        backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                                        borderColor: 'transparent',
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        width: '32px',
+                                    }}
                                     onClick={increase}
                                 >
                                     +
