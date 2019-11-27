@@ -14,3 +14,12 @@ input[type="email"], input[type="number"], input[type="password"], input[type="t
 code {
     font-size: 14px;
 }
+.drop-cap:first-letter {
+    border: 2px solid;
+    float: left;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 8px 0 0;
+    padding: 0 8px;    
+}
