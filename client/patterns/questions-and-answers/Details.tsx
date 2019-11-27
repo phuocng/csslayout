@@ -20,7 +20,13 @@ const Details: React.FC<{}> = () => {
         return (
             <div>
                 <div
-                    className="flex items-center justify-between pointer mv3"
+                    style={{
+                        alignItems: 'center',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        padding: '16px 0',
+                    }}
                     onClick={click}
                 >
                     {title}
@@ -33,33 +39,51 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Questions and answers">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="w-60">
-                                <div className="mb3 bt bb b--black-30">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div style={{ width: '60%' }}>
+                                <div
+                                    style={{
+                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+                                    }}
+                                >
                                     <Item
                                         index={0}
-                                        title={<div className="w-40"><Rectangle /></div>}
+                                        title={<div style={{ width: '40%' }}><Rectangle /></div>}
                                     >
-                                        <div className="mb3"><Block numberOfBlocks={10} /></div>
+                                        <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={10} /></div>
                                     </Item>
                                 </div>
-                                <div className="mb3 bb b--black-30">
+                                <div
+                                    style={{
+                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    }}
+                                >
                                     <Item
                                         index={1}
-                                        title={<div className="w-80"><Rectangle /></div>}
+                                        title={<div style={{ width: '80%' }}><Rectangle /></div>}
                                     >
-                                        <div className="mb3"><Block numberOfBlocks={15} /></div>
+                                        <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={15} /></div>
                                     </Item>
                                 </div>
-                                <div className="bb b--black-30">
+                                <div style={{ borderBottom: '1px solid rgba(0, 0, 0, 0.3)' }}>
                                     <Item
                                         index={2}
-                                        title={<div className="w-60"><Rectangle /></div>}
+                                        title={<div style={{ width: '60%' }}><Rectangle /></div>}
                                     >
-                                        <div className="mb3"><Block numberOfBlocks={10} /></div>
+                                        <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={10} /></div>
                                     </Item>
                                 </div>
                             </div>

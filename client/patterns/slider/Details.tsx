@@ -8,12 +8,28 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Slider">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="flex items-center h1 w5">
-                                <div className="w-20"><Rectangle height={2} /></div>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    height: '16px',
+                                    width: '256px',
+                                }}
+                            >
+                                <div style={{ width: '20%' }}><Rectangle height={2} /></div>
                                 <Circle size={32} />
                                 <div style={{ flex: 1 }}><Rectangle height={2} /></div>
                             </div>

@@ -6,16 +6,57 @@ import Line from '../../placeholders/Line';
 const Cover: React.FC<{}> = () => {
     return (
         <Frame>
-            <div className="h-100 flex flex-column items-center justify-center pa3">
-                <div className="b--black-30 ba br2 flex flex-column h-100 w-100">
-                    <div className="b--black-30 bb flex items-center ph2" style={{ flex: 1 }}>
+            <div
+                style={{
+                    alignItems: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100%',
+                    justifyContent: 'center',
+                    padding: '8px',
+                }}
+            >
+                <div
+                    style={{
+                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                        borderRadius: '4px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        width: '100%',
+                    }}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                            display: 'flex',
+                            flex: 1,
+                            padding: '0 8px',
+                        }}
+                    >
                         <Line />
                     </div>
-                    <div className="b--black-30 bb flex items-center ph2" style={{ flex: 1 }}>
-                        <div className="w-80"><Line /></div>
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                            display: 'flex',
+                            flex: 1,
+                            padding: '0 8px',
+                        }}
+                    >
+                        <div style={{ width: '80%' }}><Line /></div>
                     </div>
-                    <div className="flex items-center ph2" style={{ flex: 1 }}>
-                        <div className="w-60"><Line /></div>
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flex: 1,
+                            padding: '0 8px',
+                        }}
+                    >
+                        <div style={{ width: '60%' }}><Line /></div>
                     </div>
                 </div>
             </div>

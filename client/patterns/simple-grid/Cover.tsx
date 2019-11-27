@@ -6,21 +6,30 @@ import Rectangle from '../../placeholders/Rectangle';
 const Cover: React.FC<{}> = () => {
     return (
         <Frame>
-            <div className="h-100 flex flex-column items-center justify-center">
-                <div className="w-80">
-                    <div className="flex items-center mb1">
-                        <div className="ph1" style={{ flex: '0 0 50%' }}><Rectangle /></div>
-                        <div className="ph1" style={{ flex: '1' }}><Rectangle /></div>
+            <div
+                style={{
+                    alignItems: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100%',
+                    justifyContent: 'center',
+                    padding: '8px',
+                }}
+            >
+                <div style={{ width: '80%' }}>
+                    <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
+                        <div style={{ flex: '0 0 50%', padding: '0 4px' }}><Rectangle /></div>
+                        <div style={{ flex: '1', padding: '0 4px' }}><Rectangle /></div>
                     </div>
-                    <div className="flex items-center mb1">
-                        <div className="ph1" style={{ flex: '0 0 33%' }}><Rectangle /></div>
-                        <div className="ph1" style={{ flex: '0 0 33%' }}><Rectangle /></div>
-                        <div className="ph1" style={{ flex: '0 0 33%' }}><Rectangle /></div>
+                    <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
+                        <div style={{ flex: '0 0 33%', padding: '0 4px' }}><Rectangle /></div>
+                        <div style={{ flex: '0 0 33%', padding: '0 4px' }}><Rectangle /></div>
+                        <div style={{ flex: '0 0 33%', padding: '0 4px' }}><Rectangle /></div>
                     </div>
-                    <div className="flex items-center">
-                        <div className="ph1" style={{ flex: '0 0 25%' }}><Rectangle /></div>
-                        <div className="ph1" style={{ flex: '1' }}><Rectangle /></div>
-                        <div className="ph1" style={{ flex: '0 0 25%' }}><Rectangle /></div>
+                    <div style={{ alignItems: 'center', display: 'flex' }}>
+                        <div style={{ flex: '0 0 25%', padding: '0 4px' }}><Rectangle /></div>
+                        <div style={{ flex: '1', padding: '0 4px' }}><Rectangle /></div>
+                        <div style={{ flex: '0 0 25%', padding: '0 4px' }}><Rectangle /></div>
                     </div>
                 </div>
             </div>

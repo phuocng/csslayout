@@ -8,14 +8,23 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Centering">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
                             <Circle size={64} />
-                            <div className="w-40 mt3"><Rectangle /></div>
-                            <div className="w-30 mt2"><Rectangle /></div>
-                            <div className="w-20 mt2"><Rectangle /></div>
+                            <div style={{ marginTop: '16px', width: '40%' }}><Rectangle /></div>
+                            <div style={{ marginTop: '8px', width: '30%' }}><Rectangle /></div>
+                            <div style={{ marginTop: '8px', width: '20%' }}><Rectangle /></div>
                         </div>
                     )}
                     source={`

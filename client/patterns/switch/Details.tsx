@@ -11,17 +11,48 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Switch">
-            <div className="ph4 pv5">
-                <div className="lh-copy mb3">
+            <div style={{ padding: '64px 32px' }}>
+                <div style={{ lineHeight: 1.5, marginBottom: '16px'}}>
                     The checkbox is placed inside a label. So when clicking on the label,
                     the checkbox will be checked even though it's hidden.
                 </div>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <label className={`ba br-pill h2 w3 flex ${checked ? 'justify-end b--blue bg-blue' : 'b--black-30 bg-black-10'}`}>
-                                <input type="checkbox" className="dn" checked={checked} onChange={toggle} />
-                                <div className={`bg-white br-pill w2 ${checked ? '' : 'ba b--black-30'}`} />
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <label
+                                style={{
+                                    backgroundColor: checked ? '#357EDD' : 'rgba(0, 0, 0, 0.1)',
+                                    border: `1px solid ${checked ? '#357EDD' : 'rgba(0, 0, 0, 0.3)'}`,
+                                    borderRadius: '9999px',
+                                    display: 'flex',
+                                    height: '32px',
+                                    justifyContent: checked ? 'flex-end' : '',
+                                    width: '64px',
+                                }}
+                            >
+                                <input
+                                    type="checkbox"
+                                    style={{ display: 'none' }}
+                                    checked={checked}
+                                    onChange={toggle}
+                                />
+                                <div
+                                    style={{
+                                        backgroundColor: '#FFF',
+                                        border: checked ? '' : '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '9999px',
+                                        width: '32px',
+                                    }}
+                                />
                             </label>
                         </div>
                     )}

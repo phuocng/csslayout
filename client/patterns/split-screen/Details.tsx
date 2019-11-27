@@ -9,21 +9,34 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Split screen">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex">
+                        <div style={{ display: 'flex', height: '100%' }}>
                             <div
-                                className="b--black-30 br flex flex-column justify-center items-center"
-                                style={{ flex: 1 }}
+                                style={{
+                                    alignItems: 'center',
+                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    display: 'flex',
+                                    flex: 1,
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
+                                }}
                             >
-                                <div className="mb3"><Circle size={128} /></div>
-                                <div className="w-60"><Rectangle /></div>
+                                <div style={{ marginBottom: '16px' }}><Circle size={128} /></div>
+                                <div style={{ width: '60%' }}><Rectangle /></div>
                             </div>
-                            <div className="flex flex-column justify-center" style={{ flex: 1 }}>
-                                <div className="pa4">
-                                    <div className="mb4"><Rectangle /></div>
-                                    <div className="mb4"><Block numberOfBlocks={15} /></div>
+                            <div
+                                style={{
+                                    display: 'flex',
+                                    flex: 1,
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                <div style={{ padding: '32px' }}>
+                                    <div style={{ marginBottom: '32px' }}><Rectangle /></div>
+                                    <div style={{ marginBottom: '32px' }}><Block numberOfBlocks={15} /></div>
                                     <Block numberOfBlocks={10} />
                                 </div>
                             </div>

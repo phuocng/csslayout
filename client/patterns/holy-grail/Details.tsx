@@ -8,26 +8,56 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Holy grail">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column">
-                            <div className="flex-shrink-0 bb b--black-30 pa3">
-                                <div className="w-50"><Rectangle /></div>
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    flexShrink: 0,
+                                    padding: '16px',
+                                }}
+                            >
+                                <div style={{ width: '50%' }}><Rectangle /></div>
                             </div>
-                            <div className="flex-grow-1 flex flex-row">
-                                <div className="b--black-30 br pa3 w-25">
+                            <div style={{ display: 'flex', flexGrow: 1 }}>
+                                <div
+                                    style={{
+                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                        padding: '16px',
+                                        width: '25%',
+                                    }}
+                                >
                                     <Block numberOfBlocks={10} />
                                 </div>
-                                <div className="pa3 flex-auto">
+                                <div style={{ flex: 1, padding: '16px' }}>
                                     <Block numberOfBlocks={20} />
                                 </div>
-                                <div className="b--black-30 bl pa3 w-20">
+                                <div
+                                    style={{
+                                        borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                        padding: '16px',
+                                        width: '20%',
+                                    }}
+                                >
                                     <Block numberOfBlocks={5} />
                                 </div>
                             </div>
-                            <div className="flex-shrink-0 bt b--black-30 pa3">
-                                <div className="w-40"><Rectangle /></div>
+                            <div
+                                style={{
+                                    borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+                                    flexShrink: 0,
+                                    padding: '16px',
+                                }}
+                            >
+                                <div style={{ width: '40%' }}><Rectangle /></div>
                             </div>
                         </div>
                     )}

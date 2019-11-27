@@ -3,8 +3,11 @@ import React from 'react';
 const Line: React.FC<{}> = () => {
     return (
         <div
-            className="w-100 bg-black-30"
-            style={{ height: '1px' }}
+            style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                height: '1px',
+                width: '100%',
+            }}
         />
     );
 };

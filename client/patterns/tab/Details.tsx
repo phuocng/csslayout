@@ -16,9 +16,13 @@ const Details: React.FC<{}> = () => {
         const click = () => setActiveTab(tabIndex);
         return (
             <div
-                className={`pointer pa3 b--black-30 ${isActive ? 'ba br2 br--top' : 'bb'}`}
                 style={{
-                    borderBottomColor: isActive ? 'transparent' : '',
+                    [isActive ? 'border' : 'borderBottom']: '1px solid rgba(0, 0, 0, 0.3)',
+                    borderBottomColor: isActive ? 'transparent' : 'rgba(0, 0, 0, 0.3)',
+                    borderTopLeftRadius: '4px',
+                    borderTopRightRadius: '4px',
+                    cursor: 'pointer',
+                    padding: '16px',
                 }}
                 onClick={click}
             >
@@ -29,23 +33,38 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Tab">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="flex items-center justify-center">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                }}
+                            >
                                 <Tab tabIndex={0}>
-                                    <div className="w3">
+                                    <div style={{ width: '64px' }}>
                                         <Rectangle height={8} />
                                     </div>
                                 </Tab>
                                 <Tab tabIndex={1}>
-                                    <div className="w2">
+                                    <div style={{ width: '32px' }}>
                                         <Rectangle height={8} />
                                     </div>
                                 </Tab>
                                 <Tab tabIndex={2}>
-                                    <div className="w4">
+                                    <div style={{ width: '128px' }}>
                                         <Rectangle height={8} />
                                     </div>
                                 </Tab>

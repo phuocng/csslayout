@@ -7,19 +7,55 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Previous and next buttons">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="w-50">
-                                <div className="flex items-center justify-between pa2 w-100 h2">
-                                    <a className="b--black-30 ba br2 flex flex-row pa2 items-center w-30">
-                                        <div className="mr2">&lt;</div>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div style={{ width: '50%' }}>
+                                <div
+                                    style={{
+                                        alignItems: 'center',
+                                        display: 'flex',
+                                        height: '32px',
+                                        justifyContent: 'space-between',
+                                        padding: '8px',
+                                        width: '100%',
+                                    }}
+                                >
+                                    <a
+                                        style={{
+                                            alignItems: 'center',
+                                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                                            borderRadius: '4px',
+                                            display: 'flex',
+                                            padding: '8px',
+                                            width: '30%',
+                                        }}
+                                    >
+                                        <div style={{ marginRight: '8px' }}>&lt;</div>
                                         <Rectangle />
                                     </a>
-                                    <a className="b--black-30 ba br2 flex flex-row pa2 items-center w-30">
+                                    <a
+                                        style={{
+                                            alignItems: 'center',
+                                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                                            borderRadius: '4px',
+                                            display: 'flex',
+                                            padding: '8px',
+                                            width: '30%',
+                                        }}
+                                    >
                                         <Rectangle />
-                                        <div className="ml2">&gt;</div>
+                                        <div style={{ marginLeft: '8px' }}>&gt;</div>
                                     </a>
                                 </div>
                             </div>

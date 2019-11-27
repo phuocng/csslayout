@@ -36,7 +36,7 @@ const App = () => {
                 </Route>
                 <Route exact={true} path='/pricing-table'><DetailsLoader pattern={Pattern.PricingTable} /></Route>
                 <Route exact={true} path='/property-list'><DetailsLoader pattern={Pattern.PropertyList} /></Route>
-                <Route exact={true} path='/progress-bar'><DetailsLoader pattern={Pattern.PropertyList} /></Route>
+                <Route exact={true} path='/progress-bar'><DetailsLoader pattern={Pattern.ProgressBar} /></Route>
                 <Route exact={true} path='/questions-and-answers'>
                     <DetailsLoader pattern={Pattern.QuestionsAndAnswers} />
                 </Route>

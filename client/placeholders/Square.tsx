@@ -6,7 +6,14 @@ interface SquareProps {
 
 const Square: React.FC<SquareProps> = ({ size = 8 }) => {
     return (
-        <div className="w-100 h-100 bg-black-30 br2" />
+        <div
+            style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                borderRadius: '4px',
+                height: '100%',
+                width: '100%',
+            }}
+        />
     );
 };
 

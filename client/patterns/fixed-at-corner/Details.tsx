@@ -7,20 +7,20 @@ import Triangle from '../../placeholders/Triangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Fixed at corner">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="relative h-100">
-                            <div className="absolute top-0 left-0">
+                        <div style={{ height: '100%', position: 'relative' }}>
+                            <div style={{ left: 0, position: 'absolute', top: 0 }}>
                                 <Triangle size={64} corner="tl" />
                             </div>
-                            <div className="absolute top-0 right-0">
+                            <div style={{ position: 'absolute', right: 0, top: 0 }}>
                                 <Triangle size={64} corner="tr" />
                             </div>
-                            <div className="absolute bottom-0 right-0">
+                            <div style={{ bottom: 0, position: 'absolute', right: 0 }}>
                                 <Triangle size={64} corner="br" />
                             </div>
-                            <div className="absolute bottom-0 left-0">
+                            <div style={{ bottom: 0, left: 0, position: 'absolute' }}>
                                 <Triangle size={64} corner="bl" />
                             </div>
                         </div>

@@ -19,7 +19,7 @@ const Cover: React.FC<{}> = () => {
                 <div
                     style={{
                         border: '1px solid rgba(0, 0, 0, 0.3)',
-                        borderRadius: '2px',
+                        borderRadius: '4px',
                         display: 'flex',
                         justifyContent: 'flex-end',
                         width: '80%',

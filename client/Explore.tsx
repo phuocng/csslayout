@@ -69,7 +69,7 @@ const Home = () => {
                 <section>
                     <Heading title="Layouts" />
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
                         <CoverCard pattern={Pattern.HolyGrail} />
                         <CoverCard pattern={Pattern.Sidebar} />
                         <CoverCard pattern={Pattern.SplitScreen} />
@@ -81,7 +81,7 @@ const Home = () => {
                 <section>
                     <Heading title="Patterns" />
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
                         <CoverCard pattern={Pattern.Badge} />
                         <CoverCard pattern={Pattern.Breadcrumb} />
                         <CoverCard pattern={Pattern.ButtonWithIcon} />

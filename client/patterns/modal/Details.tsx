@@ -9,24 +9,54 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Modal">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="b--black-30 ba br2 w-50">
-                                <div className="flex items-center justify-between bb b--black-30 pa3">
-                                    <div className="w-60"><Rectangle /></div>
-                                    <div className="black-70">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '4px',
+                                    width: '50%',
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        alignItems: 'center',
+                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                        padding: '16px',
+                                    }}
+                                >
+                                    <div style={{ width: '60%' }}><Rectangle /></div>
+                                    <div style={{ color: 'rgba(0, 0, 0, 0.7)' }}>
                                         <Circle />
                                     </div>
                                 </div>
-                                <div className="pa3">
-                                    <div className="mb3"><Block numberOfBlocks={10} /></div>
+                                <div style={{ padding: '16px' }}>
+                                    <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={10} /></div>
                                     <Block numberOfBlocks={5} />
                                 </div>
-                                <div className="flex justify-end bt b--black-30 pa3">
-                                    <div className="w-30 mr2"><Rectangle height={32} /></div>
-                                    <div className="w-30"><Rectangle height={32} /></div>
+                                <div
+                                    style={{
+                                        borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+                                        display: 'flex',
+                                        justifyContent: 'flex-end',
+                                        padding: '16px',
+                                    }}
+                                >
+                                    <div style={{ marginRight: '8px', width: '30%' }}><Rectangle height={32} /></div>
+                                    <div style={{ width: '30%' }}><Rectangle height={32} /></div>
                                 </div>
                             </div>
                         </div>

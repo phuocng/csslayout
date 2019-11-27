@@ -3,8 +3,11 @@ import React from 'react';
 const VerticalLine: React.FC<{}> = () => {
     return (
         <div
-            className="h-100 bg-black-30"
-            style={{ width: '1px' }}
+            style={{
+                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                height: '100%',
+                width: '1px',
+            }}
         />
     );
 };

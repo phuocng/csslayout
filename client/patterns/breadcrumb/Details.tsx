@@ -7,18 +7,27 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Breadcrumb">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="flex items-center">
-                                <div className="w4"><Rectangle height={16} /></div>
-                                <div className="mh1 f2 black-30">/</div>
-                                <div className="w2"><Rectangle height={16} /></div>
-                                <div className="mh1 f2 black-30">/</div>
-                                <div className="w3"><Rectangle height={16} /></div>
-                                <div className="mh1 f2 black-30">/</div>
-                                <div className="w2"><Rectangle height={16} /></div>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div style={{ alignItems: 'center', display: 'flex' }}>
+                                <div style={{ width: '128px' }}><Rectangle height={16} /></div>
+                                <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
+                                <div style={{ width: '32px' }}><Rectangle height={16} /></div>
+                                <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
+                                <div style={{ width: '64px' }}><Rectangle height={16} /></div>
+                                <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
+                                <div style={{ width: '32px' }}><Rectangle height={16} /></div>
                             </div>
                         </div>
                     )}

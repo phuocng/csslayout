@@ -8,13 +8,32 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Button with icon">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="w5">
-                                <button className="w-100 h3 flex flex-row items-center ba b--black-30 br2 ph2">
-                                    <div className="mr2"><Circle size={32} /></div>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div style={{ width: '256px' }}>
+                                <button
+                                    style={{
+                                        alignItems: 'center',
+                                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '8px',
+                                        display: 'flex',
+                                        height: '64px',
+                                        padding: '8px',
+                                        width: '100%',
+                                    }}
+                                >
+                                    <div style={{ marginRight: '8px' }}><Circle size={32} /></div>
                                     <Rectangle />
                                 </button>
                             </div>

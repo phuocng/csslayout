@@ -7,26 +7,26 @@ import Square from '../../placeholders/Square';
 const Cover: React.FC<{}> = () => {
     return (
         <Frame>
-            <div className="flex h-100 pa2">
-                <div className="mh1" style={{ flex: 1 }}>
-                    <div className="w2 h2 mb1">
+            <div style={{ display: 'flex', height: '100%', padding: '8px' }}>
+                <div style={{ flex: 1, margin: '0 4px' }}>
+                    <div style={{ height: '32px', marginBottom: '4px', width: '32px' }}>
                         <Square />
                     </div>
-                    <div className="w-100 mb1"><Line /></div>
-                    <div className="w-100 mb1"><Line /></div>
-                    <div className="w-80 mb1"><Line /></div>
-                    <div className="w-60"><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '80%' }}><Line /></div>
+                    <div style={{ width: '60%' }}><Line /></div>
                 </div>
-                <div className="mh1" style={{ flex: 1 }}>
-                    <div className="w2 h2 mb1">
+                <div style={{ flex: 1, margin: '0 4px' }}>
+                    <div style={{ height: '32px', marginBottom: '4px', width: '32px' }}>
                         <Square />
                     </div>
-                    <div className="w-100 mb1"><Line /></div>
-                    <div className="w-80 mb1"><Line /></div>
-                    <div className="w-60 mb2"><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '80%' }}><Line /></div>
+                    <div style={{ marginBottom: '8px', width: '60%' }}><Line /></div>
 
-                    <div className="w-100 mb1"><Line /></div>
-                    <div className="w-60"><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                    <div style={{ width: '60%' }}><Line /></div>
                 </div>
             </div>
         </Frame>

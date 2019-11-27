@@ -11,32 +11,31 @@ interface CoverCardProps {
 
 const CoverCard: React.FC<CoverCardProps> = ({ pattern }) => {
     return (
-        <div className="pa1 w-20">
-            <Link
-                to={`/${slug(pattern)}`}
+        <Link
+            to={`/${slug(pattern)}`}
+            style={{
+                alignItems: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'flex-start',
+                padding: '16px',
+                textDecoration: 'none',
+                width: '150px',
+            }}
+        >
+            <CoverLoader pattern={pattern} />
+            <h4
                 style={{
-                    alignItems: 'center',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    padding: '16px',
-                    textDecoration: 'none',
+                    fontSize: '16px',
+                    fontWeight: 500,
+                    margin: 0,
+                    paddingTop: '12px',
+                    textAlign: 'center',
                 }}
             >
-                <CoverLoader pattern={pattern} />
-                <h4
-                    style={{
-                        fontSize: '16px',
-                        fontWeight: 500,
-                        margin: 0,
-                        paddingTop: '12px',
-                        textAlign: 'center',
-                    }}
-                >
-                    {pattern}
-                </h4>
-            </Link>
-        </div>
+                {pattern}
+            </h4>
+        </Link>
     );
 };
 

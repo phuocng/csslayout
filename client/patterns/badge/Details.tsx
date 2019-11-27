@@ -6,11 +6,33 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Badge">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="flex flex-column items-center justify-center white bg-black-30 br-pill w2 h2 f4">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '9999px',
+                                    color: '#FFF',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    fontSize: '20px',
+                                    height: '32px',
+                                    justifyContent: 'center',
+                                    width: '32px',
+                                }}
+                            >
                                 1
                             </div>
                         </div>

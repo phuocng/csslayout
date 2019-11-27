@@ -11,7 +11,10 @@ const SampleCode: React.FC<SampleCodeProps> = ({ code, lang }) => {
     return code === ''
             ? <></>
             : (
-                <pre className="h-100 lh-copy ma0" dangerouslySetInnerHTML={{ __html: highlight(code, lang) }} />
+                <pre
+                    style={{ height: '100%', lineHeight: 1.5, margin: 0 }}
+                    dangerouslySetInnerHTML={{ __html: highlight(code, lang) }}
+                />
             );
 };
 

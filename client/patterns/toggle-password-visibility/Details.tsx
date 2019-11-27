@@ -9,14 +9,41 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Toggle password visibility">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="w5">
-                                <div className="b--black-30 ba br1 flex">
-                                    <input type={visible ? 'text' : 'password'} autoComplete="off" className="pa1 b--transparent" style={{ flex: 1 }} />
-                                    <button className="b--transparent pa2" onClick={toggle}>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div style={{ width: '256px' }}>
+                                <div
+                                    style={{
+                                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '4px',
+                                        display: 'flex',
+                                    }}
+                                >
+                                    <input
+                                        type={visible ? 'text' : 'password'}
+                                        autoComplete="off"
+                                        style={{
+                                            borderColor: 'transparent',
+                                            flex: 1,
+                                            marginLeft: '1px',
+                                            padding: '4px',
+                                        }}
+                                    />
+                                    <button
+                                        style={{ borderColor: 'transparent', marginRight: '1px', padding: '8px' }}
+                                        onClick={toggle}
+                                    >
                                         <svg
                                             viewBox="0 0 24 24"
                                             style={{

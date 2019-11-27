@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './menu.css';
+
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';
@@ -10,40 +12,116 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Menu">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="b--black-30 ba br2 flex flex-column w-40">
-                                <div className="flex items-center h2 ph2 hover-bg-black-10">
-                                    <div className="w-40"><Rectangle /></div>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '4px',
+                                    width: '40%',
+                                }}
+                            >
+                                <div
+                                    className="menu-item"
+                                    style={{
+                                        alignItems: 'center',
+                                        display: 'flex',
+                                        height: '32px',
+                                        padding: '0 8px',
+                                    }}
+                                >
+                                    <div style={{ width: '40%' }}><Rectangle /></div>
                                 </div>
-                                <div className="flex items-center h2 ph2 hover-bg-black-10">
+                                <div
+                                    className="menu-item"
+                                    style={{
+                                        alignItems: 'center',
+                                        display: 'flex',
+                                        height: '32px',
+                                        padding: '0 8px',
+                                    }}
+                                >
                                     <Circle />
-                                    <div className="w-50 ml1"><Rectangle /></div>
+                                    <div style={{ marginLeft: '4px', width: '50%' }}><Rectangle /></div>
                                 </div>
-                                <div className="flex items-center justify-between h2 ph2 hover-bg-black-10">
-                                    <div className="w-30"><Rectangle /></div>
+                                <div
+                                    className="menu-item"
+                                    style={{
+                                        alignItems: 'center',
+                                        display: 'flex',
+                                        height: '32px',
+                                        justifyContent: 'space-between',
+                                        padding: '0 8px',
+                                    }}
+                                >
+                                    <div style={{ width: '30%' }}><Rectangle /></div>
                                     <div>Ctrl + X</div>
                                 </div>
-                                <div className="flex items-center justify-between h2 ph2 hover-bg-black-10">
-                                    <div className="w-70"><Rectangle /></div>
+                                <div
+                                    className="menu-item"
+                                    style={{
+                                        alignItems: 'center',
+                                        display: 'flex',
+                                        height: '32px',
+                                        justifyContent: 'space-between',
+                                        padding: '0 8px',
+                                    }}
+                                >
+                                    <div style={{ width: '70%' }}><Rectangle /></div>
                                     <div>Ctrl + C</div>
                                 </div>
-                                <div className="flex items-center justify-between h2 ph2 hover-bg-black-10">
-                                    <div className="w-20"><Rectangle /></div>
+                                <div
+                                    className="menu-item"
+                                    style={{
+                                        alignItems: 'center',
+                                        display: 'flex',
+                                        height: '32px',
+                                        justifyContent: 'space-between',
+                                        padding: '0 8px',
+                                    }}
+                                >
+                                    <div style={{ width: '20%' }}><Rectangle /></div>
                                     <Circle />
                                 </div>
-                                <div className="flex items-center justify-between h2 ph2 hover-bg-black-10">
-                                    <div className="flex items-center w-80">
+                                <div
+                                    className="menu-item"
+                                    style={{
+                                        alignItems: 'center',
+                                        display: 'flex',
+                                        height: '32px',
+                                        justifyContent: 'space-between',
+                                        padding: '0 8px',
+                                    }}
+                                >
+                                    <div style={{ alignItems: 'center', display: 'flex', width: '80%' }}>
                                         <Circle />
-                                        <div className="w-50 ml1"><Rectangle /></div>
+                                        <div style={{ marginLeft: '4px', width: '50%' }}><Rectangle /></div>
                                     </div>
                                     <Circle />
                                 </div>
-                                <div className="b--black-30 bb" style={{ height: '1px' }} />
-                                <div className="flex items-center justify-between h2 ph2 hover-bg-black-10">
-                                    <div className="w-40"><Rectangle /></div>
+                                <div style={{ borderBottom: '1px solid rgba(0, 0, 0, 0.3)', height: '1px' }} />
+                                <div
+                                    className="menu-item"
+                                    style={{
+                                        alignItems: 'center',
+                                        display: 'flex',
+                                        height: '32px',
+                                        justifyContent: 'space-between',
+                                        padding: '0 8px',
+                                    }}
+                                >
+                                    <div style={{ width: '40%' }}><Rectangle /></div>
                                     <div>Ctrl + V</div>
                                 </div>
                             </div>

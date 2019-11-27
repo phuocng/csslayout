@@ -5,9 +5,33 @@ import Frame from '../../placeholders/Frame';
 const Cover: React.FC<{}> = () => {
     return (
         <Frame>
-            <div className="h-100 flex flex-column items-center justify-center pa2">
-                <div className="h1 w-100 br-pill bg-black-10 pa1">
-                    <div className="w-40 br-pill h-100 bg-black-30" />
+            <div
+                style={{
+                    alignItems: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100%',
+                    justifyContent: 'center',
+                    padding: '8px',
+                }}
+            >
+                <div
+                    style={{
+                        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                        borderRadius: '9999px',
+                        height: '16px',
+                        padding: '4px',
+                        width: '100%',
+                    }}
+                >
+                    <div
+                        style={{
+                            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                            borderRadius: '9999px',
+                            height: '100%',
+                            width: '40%',
+                        }}
+                    />
                 </div>
             </div>
         </Frame>

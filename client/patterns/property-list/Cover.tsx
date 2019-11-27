@@ -7,18 +7,51 @@ import Rectangle from '../../placeholders/Rectangle';
 const Cover: React.FC<{}> = () => {
     return (
         <Frame>
-            <div className="h-100 flex flex-column items-center justify-center pa3">
-                <div className="w-100">
-                    <div className="bb b--black-30 pv1 flex items-center justify-between">
-                        <div className="w-60"><Rectangle height={8} /></div>
+            <div
+                style={{
+                    alignItems: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '100%',
+                    justifyContent: 'center',
+                    padding: '8px',
+                }}
+            >
+                <div style={{ width: '100%' }}>
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            padding: '4px 0',
+                        }}
+                    >
+                        <div style={{ width: '60%' }}><Rectangle height={8} /></div>
                         <Circle size={12} />
                     </div>
-                    <div className="bb b--black-30 pv1 flex items-center justify-between">
-                        <div className="w-20"><Rectangle height={8} /></div>
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            padding: '4px 0',
+                        }}
+                    >
+                        <div style={{ width: '20%' }}><Rectangle height={8} /></div>
                         <Circle size={12} />
                     </div>
-                    <div className="bb b--black-30 pv1 flex items-center justify-between">
-                        <div className="w-40"><Rectangle height={8} /></div>
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            padding: '4px 0',
+                        }}
+                    >
+                        <div style={{ width: '40%' }}><Rectangle height={8} /></div>
                         <Circle size={12} />
                     </div>
                 </div>

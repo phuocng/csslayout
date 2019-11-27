@@ -165,6 +165,7 @@ const Home = () => {
                         style={{
                             display: 'flex',
                             flexWrap: 'wrap',
+                            justifyContent: 'center',
                             opacity: '0.4',
                             padding: '32px 16px',
                         }}

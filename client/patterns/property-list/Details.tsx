@@ -28,10 +28,19 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Property list">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
                             <div style={{ width: '40%' }}>
                                 <Item>
                                     <dt style={{ width: '80%' }}><Rectangle /></dt>

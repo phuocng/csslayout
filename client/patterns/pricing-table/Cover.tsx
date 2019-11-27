@@ -8,41 +8,75 @@ import Rectangle from '../../placeholders/Rectangle';
 const Cover: React.FC<{}> = () => {
     return (
         <Frame>
-            <div className="h-100 flex items-center justify-center ph2">
+            <div
+                style={{
+                    alignItems: 'center',
+                    display: 'flex',
+                    height: '100%',
+                    justifyContent: 'center',
+                    padding: '8px',
+                }}
+            >
                 <div
-                    className="ba br2 b--black-30 flex flex-column items-center justify-center pa1 mr1"
-                    style={{ flex: 1 }}
+                    style={{
+                        alignItems: 'center',
+                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                        borderRadius: '4px',
+                        display: 'flex',
+                        flex: 1,
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        marginRight: '4px',
+                        padding: '4px',
+                    }}
                 >
-                    <div className="mb1"><Circle /></div>
-                    <div className="mb1 w-100">
-                        <div className="w-100 mb1"><Line /></div>
-                        <div className="w-100 mb1"><Line /></div>
-                        <div className="w-80"><Line /></div>
+                    <div style={{ marginBottom: '4px' }}><Circle /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}>
+                        <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                        <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                        <div style={{ width: '80%' }}><Line /></div>
                     </div>
                     <Rectangle />
                 </div>
                 <div
-                    className="ba br2 b--black-30 flex flex-column items-center justify-center pa1 mr1"
-                    style={{ flex: 1 }}
+                    style={{
+                        alignItems: 'center',
+                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                        borderRadius: '4px',
+                        display: 'flex',
+                        flex: 1,
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        marginRight: '4px',
+                        padding: '4px',
+                    }}
                 >
-                    <div className="mb1"><Circle /></div>
-                    <div className="mb1 w-100">
-                        <div className="w-100 mb1"><Line /></div>
-                        <div className="w-60 mb1"><Line /></div>
-                        <div className="w-80 mb1"><Line /></div>
-                        <div className="w-100 mb1"><Line /></div>
-                        <div className="w-80"><Line /></div>
+                    <div style={{ marginBottom: '4px' }}><Circle /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}>
+                        <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                        <div style={{ marginBottom: '4px', width: '60%' }}><Line /></div>
+                        <div style={{ marginBottom: '4px', width: '80%' }}><Line /></div>
+                        <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                        <div style={{ width: '80%' }}><Line /></div>
                     </div>
                     <Rectangle />
                 </div>
                 <div
-                    className="ba br2 b--black-30 flex flex-column items-center justify-center pa1"
-                    style={{ flex: 1 }}
+                    style={{
+                        alignItems: 'center',
+                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                        borderRadius: '4px',
+                        display: 'flex',
+                        flex: 1,
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        padding: '4px',
+                    }}
                 >
-                    <div className="mb1"><Circle /></div>
-                    <div className="mb1 w-100">
-                        <div className="w-100 mb1"><Line /></div>
-                        <div className="w-80"><Line /></div>
+                    <div style={{ marginBottom: '4px' }}><Circle /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}>
+                        <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
+                        <div style={{ width: '80%' }}><Line /></div>
                     </div>
                     <Rectangle />
                 </div>

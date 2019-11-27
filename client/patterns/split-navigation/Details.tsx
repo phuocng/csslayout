@@ -9,15 +9,35 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Split navigation">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <ul className="list ma0 b--black-30 ba br3 flex items-center pa3 w-60">
-                                <li className="w-20 mr1"><Rectangle /></li>
-                                <li className="w-10 mr1"><Rectangle /></li>
-                                <li className="w-20 mr1"><Rectangle /></li>
-                                <li className="w-10 ml-auto"><Rectangle /></li>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <ul
+                                style={{
+                                    alignItems: 'center',
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '8px',
+                                    display: 'flex',
+                                    listStyleType: 'none',
+                                    margin: 0,
+                                    padding: '16px',
+                                    width: '60%',
+                                }}
+                            >
+                                <li style={{ marginRight: '4px', width: '20%' }}><Rectangle /></li>
+                                <li style={{ marginRight: '4px', width: '10%' }}><Rectangle /></li>
+                                <li style={{ marginRight: '4px', width: '20%' }}><Rectangle /></li>
+                                <li style={{ marginLeft: 'auto', width: '10%' }}><Rectangle /></li>
                             </ul>
                         </div>
                     )}

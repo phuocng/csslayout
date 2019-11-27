@@ -7,31 +7,60 @@ import Circle from '../../placeholders/Circle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Search box">
-            <div className="ph4 pv5">
+            <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
-                        <div className="h-100 flex flex-column items-center justify-center">
-                            <div className="w5">
-                                <div className="mb3 b--black-30 ba br1 flex">
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div style={{ width: '256px' }}>
+                                <div
+                                    style={{
+                                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '2px',
+                                        display: 'flex',
+                                        marginBottom: '16px',
+                                    }}
+                                >
                                     <input
                                         type="text"
                                         placeholder="Search"
-                                        className="pa1 b--transparent"
-                                        style={{ flex: 1 }}
+                                        style={{
+                                            borderColor: 'transparent',
+                                            flex: 1,
+                                            padding: '4px',
+                                        }}
                                     />
-                                    <div className="pa2">
+                                    <div style={{ padding: '8px' }}>
                                         <Circle />
                                     </div>
                                 </div>
 
-                                <div className="b--black-30 ba br1 flex flex-row-reverse">
+                                <div
+                                    style={{
+                                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '2px',
+                                        display: 'flex',
+                                        flexDirection: 'row-reverse',
+                                    }}
+                                >
                                     <input
                                         type="text"
                                         placeholder="Search"
-                                        className="pa1 b--transparent"
-                                        style={{ flex: 1 }}
+                                        style={{
+                                            borderColor: 'transparent',
+                                            flex: 1,
+                                            padding: '4px',
+                                        }}
                                     />
-                                    <div className="pa2">
+                                    <div style={{ padding: '8px' }}>
                                         <Circle />
                                     </div>
                                 </div>
