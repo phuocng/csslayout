@@ -55,6 +55,28 @@ const Home = () => {
                         a collection of popular layouts and patterns made with CSS
                     </h2>
 
+                    <div style={{ display: 'flex', lineHeight: 1.5 }}>
+                        <div style={{ flex: 1, padding: '24px'}} className="drop-cap">
+                            <div style={{ marginBottom: '16px' }}>
+                                Components, patterns and layouts are things you have to deal with everyday.
+                            </div>
+                            <div>There are a lot of CSS frameworks that provide rich set of layouts and patterns,
+                            but I usually don't want to include all of them in my project.</div>
+                        </div>
+                        <div style={{ flex: 1, padding: '24px'}} className="drop-cap">
+                            <div style={{ marginBottom: '16px' }}>
+                                So that I collect most popular layouts and patterns that can be built with pure CSS.
+                            </div>
+                            <div>They are powered by modern CSS features such as flexbox and CSS grid.</div>
+                        </div>
+                        <div style={{ flex: 1, padding: '24px'}} className="drop-cap">
+                            <div style={{ marginBottom: '16px' }}>
+                                Starting with the most basic part, you can customize easily for each specific need.
+                            </div>
+                            <div>By composing them, you can have any possible layout that exists in the real life.</div>
+                        </div>
+                    </div>
+
                     <div
                         className="hljs"
                         style={{
@@ -183,6 +205,7 @@ const Home = () => {
                         <CoverCard pattern={Pattern.DockedAtCorner} />
                         <CoverCard pattern={Pattern.DotLeader} />
                         <CoverCard pattern={Pattern.DotNavigation} />
+                        <CoverCard pattern={Pattern.DropArea} />
                         <CoverCard pattern={Pattern.FeatureList} />
                         <CoverCard pattern={Pattern.FixedAtCorner} />
                         <CoverCard pattern={Pattern.InputAddOn} />

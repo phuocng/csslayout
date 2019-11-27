@@ -20,7 +20,7 @@ I usually don't want to include all of them in my project.
 So I collect most popular layouts and components that can be built with pure CSS.
 They are powered by modern CSS features such as flexbox and grid.
 
-They are great starting points and could be picked and customized easily for each specific need.
+They are great starting points to be picked and customized easily for each specific need.
 By composing them, you can have any possible layout that exists in the real life.
 
 The entire website is powered by
@@ -33,8 +33,12 @@ this
     .then(r => optimizeAndBundle(webpack))
     .then(r => exportHtml(react-snap))
     .then(r => deploy(Netlify))
-    .assert([scalableCode, superFastWebsite, seoFriendly])
-    .finally(/* Give me 1 star */) 🎉
+    .then(r => {
+        expect(r).is(scalableCode);
+        expect(r).is(superFastWebsite);
+        expect(r).is(seoFriendly);
+    })
+    .finally(() => {/* Give me 1 star */}) 🎉
 ~~~
 
 ## Running it on local

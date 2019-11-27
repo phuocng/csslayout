@@ -58,13 +58,16 @@ const Home = () => {
                         fontSize: '24px',
                         fontWeight: 300,
                         lineHeight: 1.5,
-                        margin: 0,
-                        padding: '32px 0',
+                        margin: '32px 0 16px 0',
+                        padding: '0',
                         textAlign: 'center',
                     }}
                 >
                     Here is the collection of patterns
                 </h2>
+                <div style={{ marginBottom: '32px', textAlign: 'center' }}>
+                    All covers you see in this page are made with CSS only. Inspect them! 🎉
+                </div>
 
                 <section>
                     <Heading title="Layouts" />
@@ -90,6 +93,7 @@ const Home = () => {
                         <CoverCard pattern={Pattern.DockedAtCorner} />
                         <CoverCard pattern={Pattern.DotLeader} />
                         <CoverCard pattern={Pattern.DotNavigation} />
+                        <CoverCard pattern={Pattern.DropArea} />
                         <CoverCard pattern={Pattern.FeatureList} />
                         <CoverCard pattern={Pattern.FixedAtCorner} />
                         <CoverCard pattern={Pattern.InputAddOn} />
