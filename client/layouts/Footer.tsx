@@ -1,14 +1,12 @@
 import React from 'react';
 
-import Heading from '../components/Heading';
-
 const Footer: React.FC<{}> = () => {
     return (
         <div
             style={{
                 border: '1px solid rgba(0, 0, 0, 0.2)',
-                borderBottomLeftRadius: '16px',
-                borderBottomRightRadius: '16px',
+                borderBottomLeftRadius: '8px',
+                borderBottomRightRadius: '8px',
                 display: 'flex',
             }}
         >

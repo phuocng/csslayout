@@ -102,7 +102,7 @@ const Details: React.FC<{}> = () => {
                     </Item>
                 </div>
             </section>
-            <RelatedPatterns patterns={[Pattern.Menu]} />
+            <RelatedPatterns patterns={[Pattern.DotLeader, Pattern.Menu, Pattern.SplitNavigation]} />
         </DetailsLayout>
     );
 };

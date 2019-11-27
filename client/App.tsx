@@ -20,6 +20,7 @@ const App = () => {
                 <Route exact={true} path='/card'><DetailsLoader pattern={Pattern.Card} /></Route>
                 <Route exact={true} path='/centering'><DetailsLoader pattern={Pattern.Centering} /></Route>
                 <Route exact={true} path='/docked-at-corner'><DetailsLoader pattern={Pattern.DockedAtCorner} /></Route>
+                <Route exact={true} path='/dot-leader'><DetailsLoader pattern={Pattern.DotLeader} /></Route>
                 <Route exact={true} path='/dot-navigation'><DetailsLoader pattern={Pattern.DotNavigation} /></Route>
                 <Route exact={true} path='/feature-list'><DetailsLoader pattern={Pattern.FeatureList} /></Route>
                 <Route exact={true} path='/fixed-at-corner'><DetailsLoader pattern={Pattern.FixedAtCorner} /></Route>

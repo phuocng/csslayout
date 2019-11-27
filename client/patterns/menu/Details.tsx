@@ -110,7 +110,7 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
-            <RelatedPatterns patterns={[Pattern.PropertyList]} />
+            <RelatedPatterns patterns={[Pattern.DotLeader, Pattern.PropertyList, Pattern.SplitNavigation]} />
         </DetailsLayout>
     );
 };

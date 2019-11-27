@@ -17,8 +17,8 @@ const Home = () => {
                 style={{
                     border: '1px solid rgba(0, 0, 0, 0.2)',
                     borderBottomColor: 'transparent',
-                    borderTopLeftRadius: '16px',
-                    borderTopRightRadius: '16px',
+                    borderTopLeftRadius: '8px',
+                    borderTopRightRadius: '8px',
                     marginTop: '64px',
                 }}
             >
@@ -180,6 +180,7 @@ const Home = () => {
                         <CoverCard pattern={Pattern.Card} />
                         <CoverCard pattern={Pattern.Centering} />
                         <CoverCard pattern={Pattern.DockedAtCorner} />
+                        <CoverCard pattern={Pattern.DotLeader} />
                         <CoverCard pattern={Pattern.DotNavigation} />
                         <CoverCard pattern={Pattern.FeatureList} />
                         <CoverCard pattern={Pattern.FixedAtCorner} />
