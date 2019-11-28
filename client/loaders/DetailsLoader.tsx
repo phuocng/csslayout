@@ -3,10 +3,8 @@ import React from 'react';
 
 import './spinner.css';
 
-import Pattern from '../constants/Pattern';
-
 interface DetailsLoaderProps {
-    pattern: Pattern;
+    pattern: string;
 }
 
 const slug = (item: string) => item.toLowerCase().split(' ').join('-');

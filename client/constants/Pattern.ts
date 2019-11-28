@@ -12,7 +12,7 @@ enum Pattern {
     FixedAtCorner = 'Fixed at corner',
     FloatingLabel = 'Floating label',
     HolyGrail = 'Holy grail',
-    InputAddOn = 'Input add-on',
+    InputAddOn = 'Input addon',
     MediaObject = 'Media object',
     Menu = 'Menu',
     Modal = 'Modal',
