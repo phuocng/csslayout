@@ -35,7 +35,7 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
                 </Link>
                 <div>~</div>
                 <Link
-                    to="/explore"
+                    to="/patterns"
                     style={{
                         color: '#FFF',
                         padding: '8px 16px',

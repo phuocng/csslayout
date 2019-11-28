@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import CoverCard from './components/CoverCard';
-import Heading from './components/Heading';
-import Pattern from './constants/Pattern';
-import useDocumentTitle from './hooks/useDocumentTitle';
-import Layout from './layouts/Layout';
+import CoverCard from '../components/CoverCard';
+import Heading from '../components/Heading';
+import Pattern from '../constants/Pattern';
+import useDocumentTitle from '../hooks/useDocumentTitle';
+import Layout from '../layouts/Layout';
 
-const Home = () => {
+const ExplorePage = () => {
     useDocumentTitle('CSS Layout ∙ Explore');
 
     return (
@@ -96,6 +96,7 @@ const Home = () => {
                         <CoverCard pattern={Pattern.DropArea} />
                         <CoverCard pattern={Pattern.FeatureList} />
                         <CoverCard pattern={Pattern.FixedAtCorner} />
+                        <CoverCard pattern={Pattern.FloatingLabel} />
                         <CoverCard pattern={Pattern.InputAddOn} />
                         <CoverCard pattern={Pattern.MediaObject} />
                         <CoverCard pattern={Pattern.Menu} />
@@ -128,4 +129,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default ExplorePage;

@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 import './home.css';
 
-import CoverCard from './components/CoverCard';
-import Pattern from './constants/Pattern';
-import useDocumentTitle from './hooks/useDocumentTitle';
-import Layout from './layouts/Layout';
+import CoverCard from '../components/CoverCard';
+import Pattern from '../constants/Pattern';
+import useDocumentTitle from '../hooks/useDocumentTitle';
+import Layout from '../layouts/Layout';
 
-const Home = () => {
+const HomePage = () => {
     useDocumentTitle('CSS Layout');
 
     return (
@@ -169,7 +169,7 @@ const Home = () => {
                             50+ patterns
                         </div>
                         <Link
-                            to="/explore"
+                            to="/patterns"
                             style={{
                                 backgroundColor: '#00449e',
                                 borderRadius: '4px',
@@ -208,6 +208,7 @@ const Home = () => {
                         <CoverCard pattern={Pattern.DropArea} />
                         <CoverCard pattern={Pattern.FeatureList} />
                         <CoverCard pattern={Pattern.FixedAtCorner} />
+                        <CoverCard pattern={Pattern.FloatingLabel} />
                         <CoverCard pattern={Pattern.InputAddOn} />
                         <CoverCard pattern={Pattern.MediaObject} />
                         <CoverCard pattern={Pattern.Menu} />
@@ -240,4 +241,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default HomePage;
