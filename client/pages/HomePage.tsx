@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 import './home.css';
 
-import CoverCard from './components/CoverCard';
-import Pattern from './constants/Pattern';
-import useDocumentTitle from './hooks/useDocumentTitle';
-import Layout from './layouts/Layout';
+import CoverCard from '../components/CoverCard';
+import Pattern from '../constants/Pattern';
+import useDocumentTitle from '../hooks/useDocumentTitle';
+import Layout from '../layouts/Layout';
 
-const Home = () => {
+const HomePage = () => {
     useDocumentTitle('CSS Layout');
 
     return (
@@ -241,4 +241,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default HomePage;

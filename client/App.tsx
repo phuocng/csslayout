@@ -3,17 +3,16 @@ import { BrowserRouter as Router, Route, Switch as RouteSwitch } from 'react-rou
 
 import './index.css';
 
-import Explore from './Explore';
-import Home from './Home';
-import PatternPage from './PatternPage';
+import ExplorePage from './pages/ExplorePage';
+import HomePage from './pages/HomePage';
+import PatternPage from './pages/PatternPage';
 
 const App = () => {
     return (
         <Router>
             <RouteSwitch>
-                <Route exact={true} path='/'><Home /></Route>
-                <Route exact={true} path='/patterns'><Explore /></Route>
-
+                <Route exact={true} path='/'><HomePage /></Route>
+                <Route exact={true} path='/patterns'><ExplorePage /></Route>
                 <Route
                     path='/patterns/:pattern'
                     render={(props) => <PatternPage pattern={props.match.params.pattern as string} />} // tslint:disable-line

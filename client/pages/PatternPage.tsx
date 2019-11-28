@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Pattern from './constants/Pattern';
-import DetailsLoader from './loaders/DetailsLoader';
+import Pattern from '../constants/Pattern';
+import DetailsLoader from '../loaders/DetailsLoader';
 
 interface PatternPageProps {
     pattern: string;
