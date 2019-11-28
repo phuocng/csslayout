@@ -10,6 +10,7 @@ enum Pattern {
     DropArea = 'Drop area',
     FeatureList = 'Feature list',
     FixedAtCorner = 'Fixed at corner',
+    FloatingLabel = 'Floating label',
     HolyGrail = 'Holy grail',
     InputAddOn = 'Input add-on',
     MediaObject = 'Media object',

@@ -15,15 +15,33 @@ const App = () => {
                 <Route exact={true} path='/'><Home /></Route>
                 <Route exact={true} path='/patterns'><Explore /></Route>
 
-                <Route exact={true} path='/patterns/badge'><DetailsLoader pattern={Pattern.Badge} /></Route>
-                <Route exact={true} path='/patterns/breadcrumb'><DetailsLoader pattern={Pattern.Breadcrumb} /></Route>
-                <Route exact={true} path='/patterns/button-with-icon'><DetailsLoader pattern={Pattern.ButtonWithIcon} /></Route>
-                <Route exact={true} path='/patterns/card'><DetailsLoader pattern={Pattern.Card} /></Route>
-                <Route exact={true} path='/patterns/centering'><DetailsLoader pattern={Pattern.Centering} /></Route>
-                <Route exact={true} path='/patterns/docked-at-corner'><DetailsLoader pattern={Pattern.DockedAtCorner} /></Route>
-                <Route exact={true} path='/patterns/dot-leader'><DetailsLoader pattern={Pattern.DotLeader} /></Route>
-                <Route exact={true} path='/patterns/dot-navigation'><DetailsLoader pattern={Pattern.DotNavigation} /></Route>
-                <Route exact={true} path='/patterns/drop-area'><DetailsLoader pattern={Pattern.DropArea} /></Route>
+                <Route exact={true} path='/patterns/badge'>
+                    <DetailsLoader pattern={Pattern.Badge} />
+                </Route>
+                <Route exact={true} path='/patterns/breadcrumb'>
+                    <DetailsLoader pattern={Pattern.Breadcrumb} />
+                </Route>
+                <Route exact={true} path='/patterns/button-with-icon'>
+                    <DetailsLoader pattern={Pattern.ButtonWithIcon} />
+                </Route>
+                <Route exact={true} path='/patterns/card'>
+                    <DetailsLoader pattern={Pattern.Card} />
+                </Route>
+                <Route exact={true} path='/patterns/centering'>
+                    <DetailsLoader pattern={Pattern.Centering} />
+                </Route>
+                <Route exact={true} path='/patterns/docked-at-corner'>
+                    <DetailsLoader pattern={Pattern.DockedAtCorner} />
+                </Route>
+                <Route exact={true} path='/patterns/dot-leader'>
+                    <DetailsLoader pattern={Pattern.DotLeader} />
+                </Route>
+                <Route exact={true} path='/patterns/dot-navigation'>
+                    <DetailsLoader pattern={Pattern.DotNavigation} />
+                </Route>
+                <Route exact={true} path='/patterns/drop-area'>
+                    <DetailsLoader pattern={Pattern.DropArea} />
+                </Route>
                 <Route exact={true} path='/patterns/feature-list'><DetailsLoader pattern={Pattern.FeatureList} /></Route>
                 <Route exact={true} path='/patterns/fixed-at-corner'><DetailsLoader pattern={Pattern.FixedAtCorner} /></Route>
                 <Route exact={true} path='/patterns/floating-label'><DetailsLoader pattern={Pattern.FloatingLabel} /></Route>
