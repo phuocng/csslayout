@@ -12,7 +12,7 @@ interface CoverCardProps {
 const CoverCard: React.FC<CoverCardProps> = ({ pattern }) => {
     return (
         <Link
-            to={`/${slug(pattern)}`}
+            to={`/patterns/${slug(pattern)}`}
             style={{
                 alignItems: 'center',
                 display: 'flex',
