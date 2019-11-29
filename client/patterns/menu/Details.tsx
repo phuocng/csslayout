@@ -33,7 +33,7 @@ const Details: React.FC<{}> = () => {
                                 }}
                             >
                                 <div
-                                    className="menu-item"
+                                    className="p-menu-item"
                                     style={{
                                         alignItems: 'center',
                                         display: 'flex',
@@ -44,7 +44,7 @@ const Details: React.FC<{}> = () => {
                                     <div style={{ width: '40%' }}><Rectangle /></div>
                                 </div>
                                 <div
-                                    className="menu-item"
+                                    className="p-menu-item"
                                     style={{
                                         alignItems: 'center',
                                         display: 'flex',
@@ -56,7 +56,7 @@ const Details: React.FC<{}> = () => {
                                     <div style={{ marginLeft: '4px', width: '50%' }}><Rectangle /></div>
                                 </div>
                                 <div
-                                    className="menu-item"
+                                    className="p-menu-item"
                                     style={{
                                         alignItems: 'center',
                                         display: 'flex',
@@ -69,7 +69,7 @@ const Details: React.FC<{}> = () => {
                                     <div>Ctrl + X</div>
                                 </div>
                                 <div
-                                    className="menu-item"
+                                    className="p-menu-item"
                                     style={{
                                         alignItems: 'center',
                                         display: 'flex',
@@ -82,7 +82,7 @@ const Details: React.FC<{}> = () => {
                                     <div>Ctrl + C</div>
                                 </div>
                                 <div
-                                    className="menu-item"
+                                    className="p-menu-item"
                                     style={{
                                         alignItems: 'center',
                                         display: 'flex',
@@ -95,7 +95,7 @@ const Details: React.FC<{}> = () => {
                                     <Circle />
                                 </div>
                                 <div
-                                    className="menu-item"
+                                    className="p-menu-item"
                                     style={{
                                         alignItems: 'center',
                                         display: 'flex',
@@ -112,7 +112,7 @@ const Details: React.FC<{}> = () => {
                                 </div>
                                 <div style={{ borderBottom: '1px solid rgba(0, 0, 0, 0.3)', height: '1px' }} />
                                 <div
-                                    className="menu-item"
+                                    className="p-menu-item"
                                     style={{
                                         alignItems: 'center',
                                         display: 'flex',

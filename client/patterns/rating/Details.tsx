@@ -18,7 +18,7 @@ const Details: React.FC<{}> = () => {
                                 justifyContent: 'center',
                             }}
                         >
-                            <div className="rating">
+                            <div className="p-rating">
                                 <Star isActive={false} />
                                 <Star isActive={false} />
                                 <Star isActive={false} />
@@ -29,7 +29,7 @@ const Details: React.FC<{}> = () => {
                     )}
                     source={`
 <style>
-.rating {
+.p-rating {
     /* Content is centered */
     align-items: center;
     display: flex;
@@ -40,7 +40,8 @@ const Details: React.FC<{}> = () => {
     font-size: 32px;
 }
 
-.rating .star:hover, .rating .star:hover ~ .star {
+.p-rating .p-rating-star:hover,
+.p-rating .p-rating-star:hover ~ .p-rating-star {
     color: transparent;
 }
 
@@ -48,15 +49,15 @@ const Details: React.FC<{}> = () => {
 Make all previous stars selected when hover on a star
 Note that we use \`flex-direction: row-reverse\` on the container
 */
-.rating .star:hover:before,
-.rating .star:hover ~ .star:before {
+.p-rating .p-rating-star:hover:before,
+.p-rating .p-rating-star:hover ~ .p-rating-star:before {
     color: #00449e;
     content: '\\2605';
     left: 0;
     position: absolute;
 }
 
-.star {
+.p-rating-star {
     /* Reset styles for button */
     background-color: transparent;
     border: transparent;
@@ -68,12 +69,12 @@ Note that we use \`flex-direction: row-reverse\` on the container
 }
 </style>
 
-<div class="rating">
-    <button class="star">☆</button>
-    <button class="star">☆</button>
-    <button class="star">☆</button>
-    <button class="star">☆</button>
-    <button class="star">★</button>
+<div class="p-rating">
+    <button class="p-rating-star">☆</button>
+    <button class="p-rating-star">☆</button>
+    <button class="p-rating-star">☆</button>
+    <button class="p-rating-star">☆</button>
+    <button class="p-rating-star">★</button>
 </div>
 `}
                 />

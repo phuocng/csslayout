@@ -30,7 +30,7 @@ const Details: React.FC<{}> = () => {
                             }}
                         >
                             <div
-                                className="dropdown"
+                                className="p-dropdown"
                                 style={{
                                     position: 'relative',
                                 }}
@@ -49,7 +49,7 @@ const Details: React.FC<{}> = () => {
                                 </button>
 
                                 <div
-                                    className="dropdown-content"
+                                    className="p-dropdown-content"
                                     style={{
                                         backgroundColor: '#FFF',
                                         height: '200px',
