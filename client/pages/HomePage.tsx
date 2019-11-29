@@ -17,8 +17,6 @@ const HomePage = () => {
                 style={{
                     border: '1px solid rgba(0, 0, 0, 0.2)',
                     borderBottomColor: 'transparent',
-                    borderTopLeftRadius: '8px',
-                    borderTopRightRadius: '8px',
                     marginTop: '64px',
                 }}
             >

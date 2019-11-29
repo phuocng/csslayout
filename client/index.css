@@ -10,8 +10,6 @@ input[type="email"], input[type="number"], input[type="password"], input[type="t
 }
 .hljs, code {
     font-family: 'Source Code Pro', monospace;
-}
-code {
     font-size: 14px;
 }
 .drop-cap:first-letter {

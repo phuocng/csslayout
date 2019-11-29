@@ -22,7 +22,7 @@ module.exports = {
     entry: {
         'vendor-styles': [
             './vendors/normalize.css@8.0.1/normalize.css',
-            './vendors/highlight.js@9.12.0/dracula.min.css',
+            './vendors/highlight.js@9.12.0/theme.min.css',
         ],
         // The CSS for client should come after `vendor-styles`
         client: './client/index.tsx',

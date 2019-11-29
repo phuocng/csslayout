@@ -49,9 +49,6 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
                 style={{
                     border: '1px solid rgba(0, 0, 0, 0.2)',
                     borderBottomColor: 'transparent',
-                    borderTopLeftRadius: '16px',
-                    borderTopRightRadius: '16px',
-                    marginTop: '32px',
                     position: 'relative',
                 }}
             >
