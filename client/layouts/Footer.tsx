@@ -5,8 +5,8 @@ const Footer: React.FC<{}> = () => {
         <div
             style={{
                 border: '1px solid rgba(0, 0, 0, 0.2)',
-                borderBottomLeftRadius: '8px',
-                borderBottomRightRadius: '8px',
+                // borderBottomLeftRadius: '8px',
+                // borderBottomRightRadius: '8px',
                 display: 'flex',
             }}
         >
@@ -32,7 +32,6 @@ const Footer: React.FC<{}> = () => {
                 >
                     <li style={{ alignItems: 'center', display: 'flex' }}>
                         <h3
-                            className="hljs-selector-class"
                             style={{
                                 fontSize: '20px',
                                 fontWeight: 700,
@@ -107,7 +106,6 @@ const Footer: React.FC<{}> = () => {
                 >
                     <li style={{ alignItems: 'center', display: 'flex' }}>
                         <h3
-                            className="hljs-selector-class"
                             style={{
                                 fontSize: '20px',
                                 fontWeight: 700,

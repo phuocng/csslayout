@@ -1,4 +1,4 @@
-.rating {
+.p-rating {
     align-items: center;
     display: flex;
     font-size: 32px;
@@ -6,18 +6,20 @@
     flex-direction: row-reverse;
 }
 
-.rating .star:hover, .rating .star:hover ~ .star {
+.p-rating .p-rating-star:hover,
+.p-rating .p-rating-star:hover ~ .p-rating-star {
     color: transparent;
 }
 
-.rating .star:hover:before, .rating .star:hover ~ .star:before {
+.p-rating .p-rating-star:hover:before,
+.p-rating .p-rating-star:hover ~ .p-rating-star:before {
     color: #00449e;
     content: '\2605';
     left: 0;
     position: absolute;
 }
 
-.star {
+.p-rating-star {
     background-color: transparent;
     border: transparent;
     margin: 0 2px;

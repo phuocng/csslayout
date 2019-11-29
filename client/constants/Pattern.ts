@@ -1,4 +1,5 @@
 enum Pattern {
+    AvatarList = 'Avatar list',
     Badge = 'Badge',
     Breadcrumb = 'Breadcrumb',
     ButtonWithIcon = 'Button with icon',
@@ -8,6 +9,8 @@ enum Pattern {
     DotLeader = 'Dot leader',
     DotNavigation = 'Dot navigation',
     DropArea = 'Drop area',
+    DropCap = 'Drop cap',
+    Dropdown = 'Dropdown',
     FeatureList = 'Feature list',
     FixedAtCorner = 'Fixed at corner',
     FloatingLabel = 'Floating label',
@@ -18,6 +21,7 @@ enum Pattern {
     Modal = 'Modal',
     Notification = 'Notification',
     Pagination = 'Pagination',
+    PresenceIndicator = 'Presence indicator',
     PreviousNextButtons = 'Previous next buttons',
     PricingTable = 'Pricing table',
     PropertyList = 'Property list',
@@ -40,6 +44,7 @@ enum Pattern {
     Switch = 'Switch',
     Tab = 'Tab',
     TogglePasswordVisibility = 'Toggle password visibility',
+    UploadButton = 'Upload button',
     Wizard = 'Wizard',
 }
 

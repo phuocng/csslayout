@@ -25,7 +25,7 @@ const Details: React.FC<{}> = () => {
                             }}
                         >
                             <div
-                                className="floating-container"
+                                className="p-floating-container"
                                 style={{
                                     border: '1px solid rgba(0, 0, 0, 0.3)',
                                     borderRadius: '4px',
@@ -59,11 +59,11 @@ const Details: React.FC<{}> = () => {
                     )}
                     source={`
 <style>
-.floating-container {
+.p-floating-container {
     position: relative;
 }
 
-.floating-container label {
+.p-floating-container label {
     /* Position the label */
     left: 8px;
     position: absolute;
@@ -75,14 +75,14 @@ const Details: React.FC<{}> = () => {
 }
 
 /* Show the label at desired position when the placeholder of input isn't shown */
-.floating-container input:not(:placeholder-shown) + label {
+.p-floating-container input:not(:placeholder-shown) + label {
     background: #FFF;
     transform: translate(0, -50%);
     opacity: 1;
 }
 </style>
 
-<div class="floating-container">
+<div class="p-floating-container">
     <!-- The input -->
     <input placeholder="Placeholder" />
 

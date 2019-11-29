@@ -30,8 +30,6 @@ const ExplorePage = () => {
                 style={{
                     border: '1px solid rgba(0, 0, 0, 0.2)',
                     borderBottomColor: 'transparent',
-                    borderTopLeftRadius: '16px',
-                    borderTopRightRadius: '16px',
                     marginTop: '32px',
                     position: 'relative',
                 }}
@@ -85,6 +83,7 @@ const ExplorePage = () => {
                     <Heading title="Patterns" />
 
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
+                        <CoverCard pattern={Pattern.AvatarList} />
                         <CoverCard pattern={Pattern.Badge} />
                         <CoverCard pattern={Pattern.Breadcrumb} />
                         <CoverCard pattern={Pattern.ButtonWithIcon} />
@@ -94,6 +93,8 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.DotLeader} />
                         <CoverCard pattern={Pattern.DotNavigation} />
                         <CoverCard pattern={Pattern.DropArea} />
+                        <CoverCard pattern={Pattern.DropCap} />
+                        <CoverCard pattern={Pattern.Dropdown} />
                         <CoverCard pattern={Pattern.FeatureList} />
                         <CoverCard pattern={Pattern.FixedAtCorner} />
                         <CoverCard pattern={Pattern.FloatingLabel} />
@@ -103,6 +104,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.Modal} />
                         <CoverCard pattern={Pattern.Notification} />
                         <CoverCard pattern={Pattern.Pagination} />
+                        <CoverCard pattern={Pattern.PresenceIndicator} />
                         <CoverCard pattern={Pattern.PreviousNextButtons} />
                         <CoverCard pattern={Pattern.PricingTable} />
                         <CoverCard pattern={Pattern.PropertyList} />
@@ -121,6 +123,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.Switch} />
                         <CoverCard pattern={Pattern.Tab} />
                         <CoverCard pattern={Pattern.TogglePasswordVisibility} />
+                        <CoverCard pattern={Pattern.UploadButton} />
                         <CoverCard pattern={Pattern.Wizard} />
                     </div>
                 </section>

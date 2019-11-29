@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Heading from '../../components/Heading';
+import RelatedPatterns from '../../components/RelatedPatterns';
+import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
@@ -138,6 +140,7 @@ const Details: React.FC<{}> = () => {
                     </div>
                 </div>
             </section>
+            <RelatedPatterns patterns={[Pattern.PresenceIndicator]} />
         </DetailsLayout>
     );
 };

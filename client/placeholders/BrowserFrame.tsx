@@ -102,13 +102,14 @@ const BrowserFrame: React.FC<BrowserFrameProps> = ({ content, source }) => {
                         height: '100%',
                         left: 0,
                         opacity: isContentActive ? 0 : 1,
+                        overflow: 'scroll',
                         position: 'absolute',
                         top: 0,
                         transform: 'rotateY(180deg)',
                         width: '100%',
                     }}
                 >
-                    <SampleCode lang="html" code={source} />
+                    <SampleCode fullHeight={true} lang="html" code={source} />
                 </div>
             </div>
         </div>
