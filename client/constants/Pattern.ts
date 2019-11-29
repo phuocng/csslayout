@@ -8,6 +8,7 @@ enum Pattern {
     DotLeader = 'Dot leader',
     DotNavigation = 'Dot navigation',
     DropArea = 'Drop area',
+    Dropdown = 'Dropdown',
     FeatureList = 'Feature list',
     FixedAtCorner = 'Fixed at corner',
     FloatingLabel = 'Floating label',

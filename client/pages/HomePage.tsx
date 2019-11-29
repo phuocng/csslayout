@@ -204,6 +204,7 @@ const HomePage = () => {
                         <CoverCard pattern={Pattern.DotLeader} />
                         <CoverCard pattern={Pattern.DotNavigation} />
                         <CoverCard pattern={Pattern.DropArea} />
+                        <CoverCard pattern={Pattern.Dropdown} />
                         <CoverCard pattern={Pattern.FeatureList} />
                         <CoverCard pattern={Pattern.FixedAtCorner} />
                         <CoverCard pattern={Pattern.FloatingLabel} />
