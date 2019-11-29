@@ -23,8 +23,8 @@ const Cover: React.FC<{}> = () => {
                             alignItems: 'center',
                             border: '2px dashed rgba(0, 0, 0, 0.3)',
                             display: 'flex',
-                            marginRight: '8px',
                             justifyContent: 'center',
+                            marginRight: '8px',
                             width: '32px',
                         }}
                     >

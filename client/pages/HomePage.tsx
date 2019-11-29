@@ -216,6 +216,7 @@ const HomePage = () => {
                         <CoverCard pattern={Pattern.Modal} />
                         <CoverCard pattern={Pattern.Notification} />
                         <CoverCard pattern={Pattern.Pagination} />
+                        <CoverCard pattern={Pattern.PresenceIndicator} />
                         <CoverCard pattern={Pattern.PreviousNextButtons} />
                         <CoverCard pattern={Pattern.PricingTable} />
                         <CoverCard pattern={Pattern.PropertyList} />

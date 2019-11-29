@@ -21,6 +21,7 @@ enum Pattern {
     Modal = 'Modal',
     Notification = 'Notification',
     Pagination = 'Pagination',
+    PresenceIndicator = 'Presence indicator',
     PreviousNextButtons = 'Previous next buttons',
     PricingTable = 'Pricing table',
     PropertyList = 'Property list',
