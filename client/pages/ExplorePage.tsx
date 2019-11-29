@@ -83,6 +83,7 @@ const ExplorePage = () => {
                     <Heading title="Patterns" />
 
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
+                        <CoverCard pattern={Pattern.AvatarList} />
                         <CoverCard pattern={Pattern.Badge} />
                         <CoverCard pattern={Pattern.Breadcrumb} />
                         <CoverCard pattern={Pattern.ButtonWithIcon} />
