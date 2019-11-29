@@ -235,6 +235,7 @@ const HomePage = () => {
                         <CoverCard pattern={Pattern.Switch} />
                         <CoverCard pattern={Pattern.Tab} />
                         <CoverCard pattern={Pattern.TogglePasswordVisibility} />
+                        <CoverCard pattern={Pattern.UploadButton} />
                         <CoverCard pattern={Pattern.Wizard} />
                     </div>
                 </section>

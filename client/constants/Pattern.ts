@@ -44,6 +44,7 @@ enum Pattern {
     Switch = 'Switch',
     Tab = 'Tab',
     TogglePasswordVisibility = 'Toggle password visibility',
+    UploadButton = 'Upload button',
     Wizard = 'Wizard',
 }
 
