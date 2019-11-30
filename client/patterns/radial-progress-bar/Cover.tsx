@@ -28,7 +28,7 @@ const Cover: React.FC<{}> = () => {
                             width: '64px',
                         }}
                     >
-                        45%
+                        33%
                     </div>
                     <div
                         style={{

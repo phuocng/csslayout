@@ -15,6 +15,7 @@ enum Pattern {
     FeatureList = 'Feature list',
     FixedAtCorner = 'Fixed at corner',
     FloatingLabel = 'Floating label',
+    FullScreenMenu = 'Full screen menu',
     HolyGrail = 'Holy grail',
     InputAddOn = 'Input addon',
     MediaObject = 'Media object',
