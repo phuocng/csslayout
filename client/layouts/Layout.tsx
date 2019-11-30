@@ -12,10 +12,32 @@ const Layout: React.FC<{}> = ({ children }) => {
         <div style={{ margin: '0 auto 64px auto', maxWidth: '1024px' }}>
             {children}
             <Footer />
-            <div>
-                <SampleCode
-                    lang='javascript'
-                    code={`
+            <div
+                style={{
+                    backgroundColor: '#282828',
+                    display: 'flex',
+                }}
+            >
+                <div
+                    style={{
+                        alignItems: 'flex-end',
+                        color: '#FFF',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        fontWeight: 700,
+                        justifyContent: 'center',
+                        padding: '32px',
+                        textTransform: 'uppercase',
+                    }}
+                >
+                    <div style={{ fontSize: '48px' }}>How</div>
+                    <div style={{ fontSize: '70px' }}>it's</div>
+                    <div style={{ fontSize: '42px' }}>made</div>
+                </div>
+                <div style={{ flex: 1, padding: '32px' }}>
+                    <SampleCode
+                        lang='javascript'
+                        code={`
 this
     .madeWith([react,typescript])
     .then((r) => lint(r))                           /* tslint */
@@ -29,29 +51,30 @@ this
         expect(r).is(seoFriendly);
     })
 `}
-                />
-            </div>
-            <div
-                className="hljs"
-                style={{
-                    lineHeight: 1.5,
-                    listStyleType: 'none',
-                    marginTop: '-16px',
-                    paddingLeft: '40px',
-                }}
-            >
-                .finally(
-                <span className="hljs-function"><span className="hljs-params">()</span> => </span>
-                &#123;
-                <span className="hljs-comment">
-                    <a
-                        href="https://github.com/phuoc-ng/csslayout"
-                        style={{ color: 'currentColor', textDecoration: 'none' }}
+                    />
+                    <div
+                        className="hljs"
+                        style={{
+                            lineHeight: 1.5,
+                            listStyleType: 'none',
+                            marginTop: '-16px',
+                            paddingLeft: '40px',
+                        }}
                     >
-                        &#47;* Give me 1 Github star here */
-                    </a>
-                </span>
-                }) 🎉
+                        .finally(
+                        <span className="hljs-function"><span className="hljs-params">()</span> => </span>
+                        &#123;
+                        <span className="hljs-comment">
+                            <a
+                                href="https://github.com/phuoc-ng/csslayout"
+                                style={{ color: 'currentColor', textDecoration: 'none' }}
+                            >
+                                &#47;* Give me 1 Github star here */
+                            </a>
+                        </span>
+                        }) 🎉
+                    </div>
+                </div>
             </div>
         </div>
     );
