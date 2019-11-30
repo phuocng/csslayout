@@ -29,6 +29,7 @@ enum Pattern {
     PropertyList = 'Property list',
     ProgressBar = 'Progress bar',
     QuestionsAndAnswers = 'Questions and answers',
+    RadialProgressBar = 'Radial progress bar',
     RadioSwitch = 'Radio switch',
     Rating = 'Rating',
     SameHeightColumns = 'Same height columns',
