@@ -28,9 +28,30 @@ this
         expect(r).is(superFastWebsite);
         expect(r).is(seoFriendly);
     })
-    .finally(() => {/* Give me 1 star */}) 🎉       /* https://github.com/phuoc-ng/csslayout */
 `}
                 />
+            </div>
+            <div
+                className="hljs"
+                style={{
+                    lineHeight: 1.5,
+                    listStyleType: 'none',
+                    marginTop: '-16px',
+                    paddingLeft: '40px',
+                }}
+            >
+                .finally(
+                <span className="hljs-function"><span className="hljs-params">()</span> => </span>
+                &#123;
+                <span className="hljs-comment">
+                    <a
+                        href="https://github.com/phuoc-ng/csslayout"
+                        style={{ color: 'currentColor', textDecoration: 'none' }}
+                    >
+                        &#47;* Give me 1 Github star here */
+                    </a>
+                </span>
+                }) 🎉
             </div>
         </div>
     );
