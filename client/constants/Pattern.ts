@@ -21,6 +21,7 @@ enum Pattern {
     Menu = 'Menu',
     Modal = 'Modal',
     Notification = 'Notification',
+    OverlayPlayButton = 'Overlay play button',
     Pagination = 'Pagination',
     PresenceIndicator = 'Presence indicator',
     PreviousNextButtons = 'Previous next buttons',
