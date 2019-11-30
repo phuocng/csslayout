@@ -5,6 +5,7 @@ enum Pattern {
     ButtonWithIcon = 'Button with icon',
     Card = 'Card',
     Centering = 'Centering',
+    CircularNavigation = 'Circular navigation',
     DockedAtCorner = 'Docked at corner',
     DotLeader = 'Dot leader',
     DotNavigation = 'Dot navigation',
