@@ -154,7 +154,7 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
-            <RelatedPatterns patterns={[Pattern.CustomCheckboxButton]} />
+            <RelatedPatterns patterns={[Pattern.CustomCheckboxButton, Pattern.RadioButtonGroup]} />
         </DetailsLayout>
     );
 };

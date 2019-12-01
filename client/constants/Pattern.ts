@@ -35,6 +35,7 @@ enum Pattern {
     ProgressBar = 'Progress bar',
     QuestionsAndAnswers = 'Questions and answers',
     RadialProgressBar = 'Radial progress bar',
+    RadioButtonGroup = 'Radio button group',
     RadioSwitch = 'Radio switch',
     Rating = 'Rating',
     Ribbon = 'Ribbon',
