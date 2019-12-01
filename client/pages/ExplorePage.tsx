@@ -92,6 +92,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.CircularNavigation} />
                         <CoverCard pattern={Pattern.CookieBanner} />
                         <CoverCard pattern={Pattern.CornerRibbon} />
+                        <CoverCard pattern={Pattern.CustomCheckboxButton} />
                         <CoverCard pattern={Pattern.CustomRadioButton} />
                         <CoverCard pattern={Pattern.DockedAtCorner} />
                         <CoverCard pattern={Pattern.DotLeader} />

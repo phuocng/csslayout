@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Circle from '../../placeholders/Circle';
 import Frame from '../../placeholders/Frame';
 import Rectangle from '../../placeholders/Rectangle';
+import Square from '../../placeholders/Square';
 
 const Cover: React.FC<{}> = () => {
     return (
@@ -29,14 +29,16 @@ const Cover: React.FC<{}> = () => {
                         style={{
                             alignItems: 'center',
                             border: '1px solid rgba(0, 0, 0, 0.3)',
-                            borderRadius: '9999px',
+                            borderRadius: '4px',
                             display: 'flex',
+                            height: '24px',
                             justifyContent: 'center',
                             marginRight: '8px',
                             padding: '4px',
+                            width: '24px',
                         }}
                     >
-                        <Circle backgroundColor='#00449E' />
+                        <Square backgroundColor='transparent' />
                     </div>
                     <div style={{ flex: 1 }}>
                         <Rectangle />
@@ -54,14 +56,16 @@ const Cover: React.FC<{}> = () => {
                         style={{
                             alignItems: 'center',
                             border: '1px solid rgba(0, 0, 0, 0.3)',
-                            borderRadius: '9999px',
+                            borderRadius: '4px',
                             display: 'flex',
+                            height: '24px',
                             justifyContent: 'center',
                             marginRight: '8px',
                             padding: '4px',
+                            width: '24px',
                         }}
                     >
-                        <Circle backgroundColor='transparent' />
+                        <Square backgroundColor='#00449E' />
                     </div>
                     <div style={{ flex: 1 }}>
                         <Rectangle />
