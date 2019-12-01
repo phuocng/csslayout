@@ -8,6 +8,7 @@ enum Pattern {
     CircularNavigation = 'Circular navigation',
     CookieBanner = 'Cookie banner',
     CornerRibbon = 'Corner ribbon',
+    CustomCheckboxButton = 'Custom checkbox button',
     CustomRadioButton = 'Custom radio button',
     DockedAtCorner = 'Docked at corner',
     DotLeader = 'Dot leader',

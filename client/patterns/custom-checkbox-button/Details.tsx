@@ -6,15 +6,15 @@ import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
-interface RadioProps {
+interface CheckboxProps {
+    isChecked: boolean;
     value: string;
 }
 
 const Details: React.FC<{}> = () => {
-    const [selectedValue, setSelectedValue] = useState('1');
-
-    const Radio: React.FC<RadioProps> = ({ value, children }) => {
-        const click = () => setSelectedValue(value);
+    const Checkbox: React.FC<CheckboxProps> = ({ isChecked, value, children }) => {
+        const [checked, setChecked] = useState(isChecked);
+        const click = () => setChecked((c) => !c);
 
         return (
             <label
@@ -25,26 +25,25 @@ const Details: React.FC<{}> = () => {
                 }}
             >
                 <input
-                    type="radio"
+                    type="checkbox"
                     name="option"
                     value={value}
+                    checked={checked}
                     style={{ display: 'none' }}
                     onChange={click}
                 />
                 <div
                     style={{
                         border: '1px solid rgba(0, 0, 0, 0.3)',
-                        borderRadius: '9999px',
+                        borderRadius: '4px',
                         marginRight: '8px',
                         padding: '4px',
                     }}
                 >
                     <div
                         style={{
-                            backgroundColor: value === selectedValue
-                                ? '#00449E'
-                                : 'transparent',
-                            borderRadius: '9999px',
+                            backgroundColor: checked ? '#00449E' : 'transparent',
+                            borderRadius: '4px',
                             height: '16px',
                             width: '16px',
                         }}
@@ -56,7 +55,7 @@ const Details: React.FC<{}> = () => {
     };
 
     return (
-        <DetailsLayout title="Custom radio button">
+        <DetailsLayout title="Custom checkbox button">
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
@@ -77,9 +76,9 @@ const Details: React.FC<{}> = () => {
                                         marginBottom: '16px',
                                     }}
                                 >
-                                    <Radio value='1'>
+                                    <Checkbox value='1' isChecked={false}>
                                         <div style={{ width: '100px' }}><Rectangle /></div>
-                                    </Radio>
+                                    </Checkbox>
                                 </div>
                                 <div
                                     style={{
@@ -88,9 +87,9 @@ const Details: React.FC<{}> = () => {
                                         marginBottom: '16px',
                                     }}
                                 >
-                                    <Radio value='2'>
+                                    <Checkbox value='2' isChecked={true}>
                                         <div style={{ width: '200px' }}><Rectangle /></div>
-                                    </Radio>
+                                    </Checkbox>
                                 </div>
                                 <div
                                     style={{
@@ -98,9 +97,9 @@ const Details: React.FC<{}> = () => {
                                         display: 'inline-flex',
                                     }}
                                 >
-                                    <Radio value='3'>
+                                    <Checkbox value='3' isChecked={false}>
                                         <div style={{ width: '150px' }}><Rectangle /></div>
-                                    </Radio>
+                                    </Checkbox>
                                 </div>
                             </div>
                         </div>
@@ -114,36 +113,34 @@ const Details: React.FC<{}> = () => {
     /* Cursor */
     cursor: pointer;
 ">
-    <!-- The real radio -->
+    <!-- The real checkbox -->
     <input
-        type="radio"
+        type="checkbox"
         style="
             /* Hide it */
             display: none;
         "
     />
 
-    <!-- The fake circle -->
+    <!-- The fake square -->
     <div style="
-        /* Rounded border */
         border: 1px solid rgba(0, 0, 0, 0.3);
-        border-radius: 9999px;
+        border-radius: 4px;
 
         /* Spacing */
         margin-right: 8px;
         padding: 4px;
     ">
-        <!-- The inner circle -->
+        <!-- The inner square -->
         <div style="
-            /* Rounded border */
-            border-radius: 9999px;
+            border-radius: 4px;
             height: 16px;
             width: 16px;
 
-            /* For selected radio */
+            /* For selected checkbox */
             background-color: #00449E;
 
-            /* For not selected radio */
+            /* For not selected checkbox */
             background-color: transparent;
         " />
     </div>
@@ -154,7 +151,7 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
-            <RelatedPatterns patterns={[Pattern.CustomCheckboxButton]} />
+            <RelatedPatterns patterns={[Pattern.CustomRadioButton]} />
         </DetailsLayout>
     );
 };
