@@ -118,6 +118,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.ProgressBar} />
                         <CoverCard pattern={Pattern.QuestionsAndAnswers} />
                         <CoverCard pattern={Pattern.RadialProgressBar} />
+                        <CoverCard pattern={Pattern.RadioButtonGroup} />
                         <CoverCard pattern={Pattern.RadioSwitch} />
                         <CoverCard pattern={Pattern.Rating} />
                         <CoverCard pattern={Pattern.Ribbon} />
