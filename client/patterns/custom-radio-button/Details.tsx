@@ -40,7 +40,7 @@ const Details: React.FC<{}> = () => {
                     <div
                         style={{
                             backgroundColor: value === selectedValue
-                                ? 'rgba(0, 0, 0, 0.3)'
+                                ? '#00449E'
                                 : 'transparent',
                             borderRadius: '9999px',
                             height: '16px',

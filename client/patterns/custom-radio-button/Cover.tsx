@@ -36,7 +36,7 @@ const Cover: React.FC<{}> = () => {
                             padding: '4px',
                         }}
                     >
-                        <Circle />
+                        <Circle backgroundColor='#00449E' />
                     </div>
                     <div style={{ flex: 1 }}>
                         <Rectangle />
