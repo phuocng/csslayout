@@ -1,5 +1,5 @@
 .home-cards {
-    animation: slide 60s linear infinite;
+    animation: slide 40s linear infinite;
 }
 
 @keyframes slide{
@@ -7,6 +7,6 @@
         transform: translate3d(0, 0, 0);
     }
     100% {
-        transform: translate3d(0, -600px, 0);
+        transform: translate3d(0, -500px, 0);
     }
 }

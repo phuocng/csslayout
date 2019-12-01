@@ -7,6 +7,7 @@ import CoverCard from '../components/CoverCard';
 import Pattern from '../constants/Pattern';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 import Layout from '../layouts/Layout';
+import MadeOf from './MadeOf';
 
 const HomePage = () => {
     useDocumentTitle('CSS Layout');
@@ -16,7 +17,7 @@ const HomePage = () => {
             <div
                 style={{
                     border: '1px solid rgba(0, 0, 0, 0.2)',
-                    borderBottomColor: 'transparent',
+                    borderBottom: 'none',
                     marginTop: '64px',
                 }}
             >
@@ -142,7 +143,7 @@ const HomePage = () => {
                     </div>
                 </div>
 
-                <section style={{ height: '900px', overflow: 'hidden', paddingBottom: '32px', position: 'relative' }}>
+                <section style={{ height: '1000px', overflow: 'hidden', position: 'relative' }}>
                     <div
                         style={{
                             alignItems: 'center',
@@ -240,6 +241,8 @@ const HomePage = () => {
                         <CoverCard pattern={Pattern.Wizard} />
                     </div>
                 </section>
+
+                <MadeOf />
             </div>
         </Layout>
     );

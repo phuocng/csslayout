@@ -1,24 +1,23 @@
 import React from 'react';
 
+import SubscribeForm from './SubscribeForm';
+
 const Footer: React.FC<{}> = () => {
     return (
         <div
             style={{
                 border: '1px solid rgba(0, 0, 0, 0.2)',
-                // borderBottomLeftRadius: '8px',
-                // borderBottomRightRadius: '8px',
                 display: 'flex',
             }}
         >
             <div
                 style={{
-                    alignItems: 'center',
                     borderRight: '1px solid rgba(0, 0, 0, 0.2)',
                     display: 'flex',
                     flex: 1,
                     fontSize: '16px',
                     lineHeight: 1.5,
-                    padding: '32px',
+                    padding: '24px',
                 }}
             >
                 <ul
@@ -43,7 +42,7 @@ const Footer: React.FC<{}> = () => {
                         </h3>
                         &#123;
                     </li>
-                    <ul style={{ listStyleType: 'none', margin: 0, padding: '0 32px' }}>
+                    <ul style={{ listStyleType: 'none', margin: 0, padding: '0 24px' }}>
                         <li>
                             css-layout,
                             <span style={{ color: 'rgba(0, 0, 0, 0.3)', marginLeft: '16px' }}>
@@ -86,12 +85,10 @@ const Footer: React.FC<{}> = () => {
             </div>
             <div
                 style={{
-                    alignItems: 'center',
-                    display: 'flex',
                     flex: 1,
                     fontSize: '16px',
                     lineHeight: 1.5,
-                    padding: '32px',
+                    padding: '24px',
                 }}
             >
                 <ul
@@ -99,7 +96,7 @@ const Footer: React.FC<{}> = () => {
                         fontWeight: 500,
                         lineHeight: 1.5,
                         listStyleType: 'none',
-                        margin: 0,
+                        margin: '0 0 16px 0',
                         padding: 0,
                         width: '100%',
                     }}
@@ -117,7 +114,7 @@ const Footer: React.FC<{}> = () => {
                         </h3>
                         &#123;
                     </li>
-                    <ul style={{ listStyleType: 'none', margin: 0, padding: '0 32px' }}>
+                    <ul style={{ listStyleType: 'none', margin: 0, padding: '0 24px' }}>
                         <li style={{ alignItems: 'center', display: 'flex' }}>
                             <div>twitter:</div>
                             <a
@@ -154,6 +151,12 @@ const Footer: React.FC<{}> = () => {
                     </ul>
                     <li>&#125;</li>
                 </ul>
+                <div>
+                    <div style={{ lineHeight: 1.5, marginBottom: '12px' }}>
+                        Subscribe to the newsletter for the latest layouts or patterns. No spam. Ever!
+                    </div>
+                    <SubscribeForm />
+                </div>
             </div>
         </div>
     );
