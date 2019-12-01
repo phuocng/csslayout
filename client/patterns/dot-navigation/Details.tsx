@@ -63,7 +63,7 @@ const Details: React.FC<{}> = () => {
                     )}
                     source={`
 <ul style="
-    /* Content is centered */
+    /* Center the content */
     align-items: center;
     display: flex;
     justify-content: center;

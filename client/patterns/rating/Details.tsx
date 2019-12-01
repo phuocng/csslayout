@@ -30,7 +30,7 @@ const Details: React.FC<{}> = () => {
                     source={`
 <style>
 .p-rating {
-    /* Content is centered */
+    /* Center the content */
     align-items: center;
     display: flex;
     justify-content: center;

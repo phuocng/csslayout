@@ -108,7 +108,7 @@ const Details: React.FC<{}> = () => {
 ">
     <!-- Pagination item -->
     <div style="
-        /* Content is centered */
+        /* Center the content */
         align-items: center;
         display: flex;
         justify-content: center;
@@ -121,7 +121,7 @@ const Details: React.FC<{}> = () => {
 
     <!-- Don't set the right border for the last item -->
     <div style="
-        /* Content is centered */
+        /* Center the content */
         align-items: center;
         display: flex;
         justify-content: center;

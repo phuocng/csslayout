@@ -40,7 +40,7 @@ const Details: React.FC<{}> = () => {
                     )}
                     source={`
 <div style="
-    /* Content is centered */
+    /* Center the content */
     align-items: center;
     display: flex;
     justify-content: center;

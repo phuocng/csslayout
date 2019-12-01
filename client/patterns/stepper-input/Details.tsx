@@ -99,7 +99,7 @@ const Details: React.FC<{}> = () => {
 ">
     <!-- Minus button -->
     <button style="
-        /* Content is centered */
+        /* Center the content */
         align-items: center;
         display: flex;
         justify-content: center;
@@ -119,7 +119,7 @@ const Details: React.FC<{}> = () => {
 
     <!-- Plus button -->
     <button style="
-        /* Content is centered */
+        /* Center the content */
         align-items: center;
         display: flex;
         justify-content: center;

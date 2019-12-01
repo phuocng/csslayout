@@ -89,7 +89,7 @@ const Details: React.FC<{}> = () => {
 ">
     <!-- Show number of percentages -->
     <div style="
-        /* Content is centered */
+        /* Center the content */
         align-items: center;
         display: flex;
         justify-content: center;

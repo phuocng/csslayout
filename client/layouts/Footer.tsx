@@ -27,6 +27,7 @@ const Footer: React.FC<{}> = () => {
                         listStyleType: 'none',
                         margin: 0,
                         padding: 0,
+                        width: '100%',
                     }}
                 >
                     <li style={{ alignItems: 'center', display: 'flex' }}>
@@ -42,14 +43,14 @@ const Footer: React.FC<{}> = () => {
                         </h3>
                         &#123;
                     </li>
-                    <ul style={{ listStyleType: 'none', margin: 0, padding: '0 24px' }}>
-                        <li>
-                            css-layout,
-                            <span style={{ color: 'rgba(0, 0, 0, 0.3)', marginLeft: '16px' }}>
+                    <ul style={{ listStyleType: 'none', margin: 0, paddingLeft: '24px' }}>
+                        <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
+                            <div>css-layout,</div>
+                            <div style={{ color: 'rgba(0, 0, 0, 0.3)' }}>
                                 /&#42; You are here &#42;/
-                            </span>
+                            </div>
                         </li>
-                        <li>
+                        <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
                             <a
                                 href="https://formvalidation.io"
                                 style={{ textDecoration: 'none' }}
@@ -58,8 +59,11 @@ const Footer: React.FC<{}> = () => {
                             >
                                 form-validation,
                             </a>
+                            <div style={{ color: 'rgba(0, 0, 0, 0.3)' }}>
+                                /&#42; A JS validation library &#42;/
+                            </div>
                         </li>
-                        <li>
+                        <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
                             <a
                                 href="https://blur.page"
                                 style={{ textDecoration: 'none' }}
@@ -68,8 +72,11 @@ const Footer: React.FC<{}> = () => {
                             >
                                 blur-page,
                             </a>
+                            <div style={{ color: 'rgba(0, 0, 0, 0.3)' }}>
+                                /&#42; Chrome and Firefox extensions &#42;/
+                            </div>
                         </li>
-                        <li>
+                        <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
                             <a
                                 href="https://react-pdf-viewer.dev"
                                 style={{ textDecoration: 'none' }}
@@ -78,6 +85,9 @@ const Footer: React.FC<{}> = () => {
                             >
                                 react-pdf-viewer,
                             </a>
+                            <div style={{ color: 'rgba(0, 0, 0, 0.3)' }}>
+                                /&#42; A React component &#42;/
+                            </div>
                         </li>
                     </ul>
                     <li>&#125;</li>
@@ -114,7 +124,7 @@ const Footer: React.FC<{}> = () => {
                         </h3>
                         &#123;
                     </li>
-                    <ul style={{ listStyleType: 'none', margin: 0, padding: '0 24px' }}>
+                    <ul style={{ listStyleType: 'none', margin: 0, paddingLeft: '24px' }}>
                         <li style={{ alignItems: 'center', display: 'flex' }}>
                             <div>twitter:</div>
                             <a

@@ -114,7 +114,7 @@ const Details: React.FC<{}> = () => {
         flex: 1;
     ">
         <div style="
-            /* Content is centered */
+            /* Center the content */
             align-items: center;
             display: flex;
             justify-content: center;
@@ -133,7 +133,7 @@ const Details: React.FC<{}> = () => {
 
             <!-- The step number -->
             <div style="
-                /* Content is centered */
+                /* Center the content */
                 align-items: center;
                 display: flex;
                 justify-content: center;

@@ -59,7 +59,7 @@ const Details: React.FC<{}> = () => {
         top: 0;
         transform: translate(50%, -50%);
 
-        /* Content is centered */
+        /* Center the content */
         align-items: center;
         display: flex;
         justify-content: center;

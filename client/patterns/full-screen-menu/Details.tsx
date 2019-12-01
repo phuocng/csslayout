@@ -91,7 +91,7 @@ const Details: React.FC<{}> = () => {
     top: 0;
     width: 100%;
 
-    /* Content is centered */
+    /* Center the content */
     align-items: center;
     display: flex;
     justify-content: center;

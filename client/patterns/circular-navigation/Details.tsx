@@ -104,7 +104,7 @@ const Details: React.FC<{}> = () => {
             */
             transform: rotate(-0deg);
 
-            /* Content is centered */
+            /* Center the content */
             align-items: center;
             display: flex;
             justify-content: center;
