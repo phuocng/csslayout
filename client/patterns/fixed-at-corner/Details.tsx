@@ -70,7 +70,7 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
-            <RelatedPatterns patterns={[Pattern.CookieBanner]} />
+            <RelatedPatterns patterns={[Pattern.CookieBanner, Pattern.CornerRibbon]} />
         </DetailsLayout>
     );
 };

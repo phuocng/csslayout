@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
@@ -10,6 +11,11 @@ const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Pricing table">
             <div style={{ padding: '64px 32px' }}>
+                <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
+                    You can
+                    add <Link to='/patterns/corner-ribbon' style={{ textDecoration: 'none' }}>a ribbon</Link> to
+                    indicate the most popular option.
+                </div>
                 <BrowserFrame
                     content={(
                         <div

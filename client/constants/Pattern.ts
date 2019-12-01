@@ -7,6 +7,7 @@ enum Pattern {
     Centering = 'Centering',
     CircularNavigation = 'Circular navigation',
     CookieBanner = 'Cookie banner',
+    CornerRibbon = 'Corner ribbon',
     DockedAtCorner = 'Docked at corner',
     DotLeader = 'Dot leader',
     DotNavigation = 'Dot navigation',
