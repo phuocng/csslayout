@@ -91,6 +91,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.Centering} />
                         <CoverCard pattern={Pattern.CircularNavigation} />
                         <CoverCard pattern={Pattern.CookieBanner} />
+                        <CoverCard pattern={Pattern.CornerRibbon} />
                         <CoverCard pattern={Pattern.DockedAtCorner} />
                         <CoverCard pattern={Pattern.DotLeader} />
                         <CoverCard pattern={Pattern.DotNavigation} />
@@ -117,6 +118,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.RadialProgressBar} />
                         <CoverCard pattern={Pattern.RadioSwitch} />
                         <CoverCard pattern={Pattern.Rating} />
+                        <CoverCard pattern={Pattern.Ribbon} />
                         <CoverCard pattern={Pattern.SameHeightColumns} />
                         <CoverCard pattern={Pattern.SearchBox} />
                         <CoverCard pattern={Pattern.Separator} />
