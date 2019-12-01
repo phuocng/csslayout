@@ -144,7 +144,7 @@ const Details: React.FC<{}> = () => {
 ">
     <!-- Add-on -->
     <div style="
-        /* Content is centered */
+        /* Center the content */
         align-items: center;
         display: flex;
         justify-content: center;
@@ -174,7 +174,7 @@ const Details: React.FC<{}> = () => {
 
     <!-- Add-on -->
     <div style="
-        /* Content is centered */
+        /* Center the content */
         align-items: center;
         display: flex;
         justify-content: center;
@@ -192,7 +192,7 @@ const Details: React.FC<{}> = () => {
 ">
     <!-- Add-on -->
     <div style="
-        /* Content is centered */
+        /* Center the content */
         align-items: center;
         display: flex;
         justify-content: center;
@@ -208,7 +208,7 @@ const Details: React.FC<{}> = () => {
 
     <!-- Add-on -->
     <div style="
-        /* Content is centered */
+        /* Center the content */
         align-items: center;
         display: flex;
         justify-content: center;

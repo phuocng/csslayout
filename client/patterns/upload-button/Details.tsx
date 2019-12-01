@@ -78,7 +78,7 @@ const Details: React.FC<{}> = () => {
     /* Used to position the input */
     position: relative;
 
-    /* Content is centered */
+    /* Center the content */
     align-items: center;
     display: flex;
 

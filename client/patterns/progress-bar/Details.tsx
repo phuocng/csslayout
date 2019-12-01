@@ -61,7 +61,7 @@ const Details: React.FC<{}> = () => {
     border-radius: 9999px;
 ">
     <div style="
-        /* Content is centered */
+        /* Center the content */
         align-items: center;
         display: flex;
         justify-content: center;

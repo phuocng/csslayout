@@ -58,7 +58,7 @@ const Details: React.FC<{}> = () => {
             /* Add a white curve between avatars */
             box-shadow: 0 0 0 4px #FFF;
 
-            /* Content is centered */
+            /* Center the content */
             align-items: center;
             display: flex;
             justify-content: center;

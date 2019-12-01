@@ -41,7 +41,7 @@ const Details: React.FC<{}> = () => {
                     )}
                     source={`
 <button style="
-    /* Content is centered */
+    /* Center the content */
     align-items: center;
     display: flex;
     flex-direction: row;

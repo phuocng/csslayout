@@ -76,7 +76,7 @@ const Details: React.FC<{}> = () => {
         height: 100%;
         width: 100%;
 
-        /* Content is centered */
+        /* Center the content */
         align-items: center;
         display: flex;
         justify-content: center;

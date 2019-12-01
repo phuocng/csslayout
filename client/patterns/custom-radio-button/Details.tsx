@@ -1,0 +1,159 @@
+import React, { useState } from 'react';
+
+import DetailsLayout from '../../layouts/DetailsLayout';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import Rectangle from '../../placeholders/Rectangle';
+
+interface RadioProps {
+    value: string;
+}
+
+const Details: React.FC<{}> = () => {
+    const [selectedValue, setSelectedValue] = useState('1');
+
+    const Radio: React.FC<RadioProps> = ({ value, children }) => {
+        const click = () => setSelectedValue(value);
+
+        return (
+            <label
+                style={{
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                }}
+            >
+                <input
+                    type="radio"
+                    name="option"
+                    value={value}
+                    style={{ display: 'none' }}
+                    onChange={click}
+                />
+                <div
+                    style={{
+                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                        borderRadius: '9999px',
+                        marginRight: '8px',
+                        padding: '4px',
+                    }}
+                >
+                    <div
+                        style={{
+                            backgroundColor: value === selectedValue
+                                ? 'rgba(0, 0, 0, 0.3)'
+                                : 'transparent',
+                            borderRadius: '9999px',
+                            height: '16px',
+                            width: '16px',
+                        }}
+                    />
+                </div>
+                {children}
+            </label>
+        );
+    };
+
+    return (
+        <DetailsLayout title="Custom radio button">
+            <div style={{ padding: '64px 32px' }}>
+                <BrowserFrame
+                    content={(
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                height: '100%',
+                                justifyContent: 'center',
+                                padding: '8px',
+                            }}
+                        >
+                            <div style={{ width: '200px' }}>
+                                <div
+                                    style={{
+                                        alignItems: 'center',
+                                        display: 'inline-flex',
+                                        marginBottom: '16px',
+                                    }}
+                                >
+                                    <Radio value='1'>
+                                        <div style={{ width: '100px' }}><Rectangle /></div>
+                                    </Radio>
+                                </div>
+                                <div
+                                    style={{
+                                        alignItems: 'center',
+                                        display: 'inline-flex',
+                                        marginBottom: '16px',
+                                    }}
+                                >
+                                    <Radio value='2'>
+                                        <div style={{ width: '200px' }}><Rectangle /></div>
+                                    </Radio>
+                                </div>
+                                <div
+                                    style={{
+                                        alignItems: 'center',
+                                        display: 'inline-flex',
+                                    }}
+                                >
+                                    <Radio value='3'>
+                                        <div style={{ width: '150px' }}><Rectangle /></div>
+                                    </Radio>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                    source={`
+<label style="
+    /* Center the content horizontally */
+    align-items: center;
+    display: inline-flex;
+
+    /* Cursor */
+    cursor: pointer;
+">
+    <!-- The real radio -->
+    <input
+        type="radio"
+        style="
+            /* Hide it */
+            display: none;
+        "
+    />
+
+    <!-- The fake circle -->
+    <div style="
+        /* Rounded border */
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 9999px;
+
+        /* Spacing */
+        margin-right: 8px;
+        padding: 4px;
+    ">
+        <!-- The inner circle -->
+        <div style="
+            /* Rounded border */
+            border-radius: 9999px;
+            height: 16px;
+            width: 16px;
+
+            /* For selected radio */
+            background-color: rgba(0, 0, 0, 0.3);
+
+            /* For not selected radio */
+            background-color: transparent;
+        " />
+    </div>
+
+    <!-- The text -->
+    ...
+</div>
+`}
+                />
+            </div>
+        </DetailsLayout>
+    );
+};
+
+export default Details;
