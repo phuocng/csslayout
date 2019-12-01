@@ -107,10 +107,8 @@ const Details: React.FC<{}> = () => {
 
                 <div style={{ padding: '32px' }}>
                     <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
-                        You can add a ribbon to
-                        a <Link to='/patterns/pricing-table' style={{ textDecoration: 'none' }}>
-                        pricing table
-                        </Link> to indicate the most popular option.
+                        You can add a ribbon to a <Link to='/patterns/pricing-table'> pricing table</Link> to
+                        indicate the most popular option.
                     </div>
 
                     <div
@@ -181,7 +179,7 @@ const Details: React.FC<{}> = () => {
                 </div>
             </section>
 
-            <RelatedPatterns patterns={[Pattern.FixedAtCorner]} />
+            <RelatedPatterns patterns={[Pattern.FixedAtCorner, Pattern.Ribbon]} />
         </DetailsLayout>
     );
 };

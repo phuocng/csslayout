@@ -35,6 +35,7 @@ enum Pattern {
     RadialProgressBar = 'Radial progress bar',
     RadioSwitch = 'Radio switch',
     Rating = 'Rating',
+    Ribbon = 'Ribbon',
     SameHeightColumns = 'Same height columns',
     SearchBox = 'Search box',
     Separator = 'Separator',

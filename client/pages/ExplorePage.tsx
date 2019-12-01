@@ -118,6 +118,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.RadialProgressBar} />
                         <CoverCard pattern={Pattern.RadioSwitch} />
                         <CoverCard pattern={Pattern.Rating} />
+                        <CoverCard pattern={Pattern.Ribbon} />
                         <CoverCard pattern={Pattern.SameHeightColumns} />
                         <CoverCard pattern={Pattern.SearchBox} />
                         <CoverCard pattern={Pattern.Separator} />

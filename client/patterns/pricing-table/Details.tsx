@@ -12,8 +12,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Pricing table">
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
-                    You can
-                    add <Link to='/patterns/corner-ribbon' style={{ textDecoration: 'none' }}>a ribbon</Link> to
+                    You can <Link to='/patterns/ribbon'>add</Link> <Link to='/patterns/corner-ribbon'>a ribbon</Link> to
                     indicate the most popular option.
                 </div>
                 <BrowserFrame

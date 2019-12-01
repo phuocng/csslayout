@@ -16,7 +16,7 @@ const MadeOf: React.FC<{}> = () => {
                     fontSize: '48px',
                     fontWeight: 600,
                     textAlign: 'center',
-                    textTransform: 'uppercase',
+                    textTransform: 'lowercase',
                 }}
             >
                 How it's made
