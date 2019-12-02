@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import useDocumentTitle from '../hooks/useDocumentTitle';
-import Layout from './Layout';
+import Footer from './Footer';
+import ProductHuntBadge from './ProductHuntBadge';
 
 interface DetailsLayoutProps {
     title: string;
@@ -12,7 +13,10 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
     useDocumentTitle(`CSS Layout ∙ ${title}`);
 
     return (
-        <Layout>
+        <div style={{ margin: '0 auto 64px auto', maxWidth: '1024px', position: 'relative' }}>
+            <div style={{ position: 'absolute', right: 0, top: '24px' }}>
+                <ProductHuntBadge />
+            </div>
             <div
                 style={{
                     alignItems: 'center',
@@ -70,7 +74,8 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
                 </h1>
                 {children}
             </div>
-        </Layout>
+            <Footer />
+        </div>
     );
 };
 
