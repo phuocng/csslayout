@@ -41,7 +41,7 @@ const Details: React.FC<{}> = () => {
     <a>...</a>
 
     <!-- Separator -->
-    <div style="margin: 0 8px;">/</span>
+    <div style="margin: 0 8px;">/</div>
 
     <!-- Repeated items and separators -->
     ...
