@@ -21,7 +21,7 @@ enum Pattern {
     FloatingLabel = 'Floating label',
     FullScreenMenu = 'Full screen menu',
     HolyGrail = 'Holy grail',
-    InputAddOn = 'Input addon',
+    InputAddon = 'Input addon',
     MediaObject = 'Media object',
     Menu = 'Menu',
     Modal = 'Modal',
