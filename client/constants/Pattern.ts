@@ -28,6 +28,7 @@ enum Pattern {
     Notification = 'Notification',
     OverlayPlayButton = 'Overlay play button',
     Pagination = 'Pagination',
+    PopoverArrow = 'Popover arrow',
     PresenceIndicator = 'Presence indicator',
     PreviousNextButtons = 'Previous next buttons',
     PricingTable = 'Pricing table',
