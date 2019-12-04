@@ -72,7 +72,10 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
-            <RelatedPatterns patterns={[Pattern.AvatarList, Pattern.DockedAtCorner, Pattern.InitialAvatar]} />
+
+            <RelatedPatterns
+                patterns={[Pattern.Avatar, Pattern.AvatarList, Pattern.DockedAtCorner, Pattern.InitialAvatar]}
+            />
         </DetailsLayout>
     );
 };

@@ -80,7 +80,9 @@ const Details: React.FC<{}> = () => {
                 />
             </div>
 
-            <RelatedPatterns patterns={[Pattern.Centering, Pattern.InitialAvatar, Pattern.PresenceIndicator]} />
+            <RelatedPatterns
+                patterns={[Pattern.Avatar, Pattern.Centering, Pattern.InitialAvatar, Pattern.PresenceIndicator]}
+            />
         </DetailsLayout>
     );
 };
