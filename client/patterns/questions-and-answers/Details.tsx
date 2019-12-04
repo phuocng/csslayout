@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import RelatedPatterns from '../../components/RelatedPatterns';
+import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -18,7 +20,7 @@ const Details: React.FC<{}> = () => {
         const isOpened = (index === activeItem);
         const click = () => setActiveItem(isOpened ? -1 : index);
         return (
-            <div>
+            <>
                 <div
                     style={{
                         alignItems: 'center',
@@ -32,8 +34,15 @@ const Details: React.FC<{}> = () => {
                     {title}
                     <Triangle size={8} corner={isOpened ? 't' : 'b'} />
                 </div>
-                {isOpened && children}
-            </div>
+                <div
+                    style={{
+                        display: isOpened ? 'block' : 'none',
+                        marginBottom: '16px',
+                    }}
+                >
+                    {children}
+                </div>
+            </>
         );
     };
 
@@ -55,6 +64,15 @@ const Details: React.FC<{}> = () => {
                             <div style={{ width: '60%' }}>
                                 <div
                                     style={{
+                                        margin: '0 auto',
+                                        paddingBottom: '24px',
+                                        width: '200px',
+                                    }}
+                                >
+                                    <Rectangle />
+                                </div>
+                                <div
+                                    style={{
                                         borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
                                         borderTop: '1px solid rgba(0, 0, 0, 0.3)',
                                     }}
@@ -63,7 +81,7 @@ const Details: React.FC<{}> = () => {
                                         index={0}
                                         title={<div style={{ width: '40%' }}><Rectangle /></div>}
                                     >
-                                        <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={10} /></div>
+                                        <Block numberOfBlocks={10} />
                                     </Item>
                                 </div>
                                 <div
@@ -75,7 +93,7 @@ const Details: React.FC<{}> = () => {
                                         index={1}
                                         title={<div style={{ width: '80%' }}><Rectangle /></div>}
                                     >
-                                        <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={15} /></div>
+                                        <Block numberOfBlocks={15} />
                                     </Item>
                                 </div>
                                 <div style={{ borderBottom: '1px solid rgba(0, 0, 0, 0.3)' }}>
@@ -83,7 +101,7 @@ const Details: React.FC<{}> = () => {
                                         index={2}
                                         title={<div style={{ width: '60%' }}><Rectangle /></div>}
                                     >
-                                        <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={10} /></div>
+                                        <Block numberOfBlocks={10} />
                                     </Item>
                                 </div>
                             </div>
@@ -112,6 +130,8 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
+
+            <RelatedPatterns patterns={[Pattern.Accordion]} />
         </DetailsLayout>
     );
 };
