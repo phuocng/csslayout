@@ -109,6 +109,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.FixedAtCorner} />
                         <CoverCard pattern={Pattern.FloatingLabel} />
                         <CoverCard pattern={Pattern.FullScreenMenu} />
+                        <CoverCard pattern={Pattern.InitialAvatar} />
                         <CoverCard pattern={Pattern.InputAddon} />
                         <CoverCard pattern={Pattern.MediaObject} />
                         <CoverCard pattern={Pattern.Menu} />
