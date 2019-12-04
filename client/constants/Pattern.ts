@@ -1,4 +1,5 @@
 enum Pattern {
+    Avatar = 'Avatar',
     AvatarList = 'Avatar list',
     Badge = 'Badge',
     Breadcrumb = 'Breadcrumb',
