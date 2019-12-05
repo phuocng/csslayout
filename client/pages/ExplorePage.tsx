@@ -73,11 +73,12 @@ const ExplorePage = () => {
                 </div>
 
                 <section>
-                    <Heading title="Layouts" />
+                    <Heading title="Layout" />
 
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
                         <CoverCard pattern={Pattern.HolyGrail} />
                         <CoverCard pattern={Pattern.Sidebar} />
+                        <CoverCard pattern={Pattern.SimpleGrid} />
                         <CoverCard pattern={Pattern.SplitScreen} />
                         <CoverCard pattern={Pattern.StickyFooter} />
                         <CoverCard pattern={Pattern.StickyHeader} />
@@ -85,65 +86,85 @@ const ExplorePage = () => {
                 </section>
 
                 <section>
-                    <Heading title="Patterns" />
+                    <Heading title="Navigation" />
+
+                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
+                        <CoverCard pattern={Pattern.Breadcrumb} />
+                        <CoverCard pattern={Pattern.CircularNavigation} />
+                        <CoverCard pattern={Pattern.DotNavigation} />
+                        <CoverCard pattern={Pattern.Dropdown} />
+                        <CoverCard pattern={Pattern.FullScreenMenu} />
+                        <CoverCard pattern={Pattern.Menu} />
+                        <CoverCard pattern={Pattern.Pagination} />
+                        <CoverCard pattern={Pattern.PreviousNextButtons} />
+                        <CoverCard pattern={Pattern.SplitNavigation} />
+                        <CoverCard pattern={Pattern.Tab} />
+                        <CoverCard pattern={Pattern.Wizard} />
+                    </div>
+                </section>
+
+                <section>
+                    <Heading title="Input" />
+
+                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
+                        <CoverCard pattern={Pattern.ButtonWithIcon} />
+                        <CoverCard pattern={Pattern.CustomCheckboxButton} />
+                        <CoverCard pattern={Pattern.CustomRadioButton} />
+                        <CoverCard pattern={Pattern.FloatingLabel} />
+                        <CoverCard pattern={Pattern.InputAddon} />
+                        <CoverCard pattern={Pattern.RadioButtonGroup} />
+                        <CoverCard pattern={Pattern.RadioSwitch} />
+                        <CoverCard pattern={Pattern.Rating} />
+                        <CoverCard pattern={Pattern.SearchBox} />
+                        <CoverCard pattern={Pattern.Slider} />
+                        <CoverCard pattern={Pattern.SpinButton} />
+                        <CoverCard pattern={Pattern.StepperInput} />
+                        <CoverCard pattern={Pattern.Switch} />
+                        <CoverCard pattern={Pattern.TogglePasswordVisibility} />
+                        <CoverCard pattern={Pattern.UploadButton} />
+                    </div>
+                </section>
+
+                <section>
+                    <Heading title="Display" />
 
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
                         <CoverCard pattern={Pattern.Accordion} />
                         <CoverCard pattern={Pattern.Avatar} />
                         <CoverCard pattern={Pattern.AvatarList} />
                         <CoverCard pattern={Pattern.Badge} />
-                        <CoverCard pattern={Pattern.Breadcrumb} />
-                        <CoverCard pattern={Pattern.ButtonWithIcon} />
                         <CoverCard pattern={Pattern.Card} />
                         <CoverCard pattern={Pattern.Centering} />
-                        <CoverCard pattern={Pattern.CircularNavigation} />
                         <CoverCard pattern={Pattern.CookieBanner} />
                         <CoverCard pattern={Pattern.CornerRibbon} />
-                        <CoverCard pattern={Pattern.CustomCheckboxButton} />
-                        <CoverCard pattern={Pattern.CustomRadioButton} />
                         <CoverCard pattern={Pattern.DockedAtCorner} />
                         <CoverCard pattern={Pattern.DotLeader} />
-                        <CoverCard pattern={Pattern.DotNavigation} />
                         <CoverCard pattern={Pattern.DropArea} />
                         <CoverCard pattern={Pattern.DropCap} />
-                        <CoverCard pattern={Pattern.Dropdown} />
                         <CoverCard pattern={Pattern.FeatureList} />
                         <CoverCard pattern={Pattern.FixedAtCorner} />
-                        <CoverCard pattern={Pattern.FloatingLabel} />
-                        <CoverCard pattern={Pattern.FullScreenMenu} />
                         <CoverCard pattern={Pattern.InitialAvatar} />
-                        <CoverCard pattern={Pattern.InputAddon} />
                         <CoverCard pattern={Pattern.MediaObject} />
-                        <CoverCard pattern={Pattern.Menu} />
-                        <CoverCard pattern={Pattern.Modal} />
-                        <CoverCard pattern={Pattern.Notification} />
                         <CoverCard pattern={Pattern.OverlayPlayButton} />
-                        <CoverCard pattern={Pattern.Pagination} />
-                        <CoverCard pattern={Pattern.PopoverArrow} />
-                        <CoverCard pattern={Pattern.PresenceIndicator} />
-                        <CoverCard pattern={Pattern.PreviousNextButtons} />
                         <CoverCard pattern={Pattern.PricingTable} />
                         <CoverCard pattern={Pattern.PropertyList} />
-                        <CoverCard pattern={Pattern.ProgressBar} />
                         <CoverCard pattern={Pattern.QuestionsAndAnswers} />
-                        <CoverCard pattern={Pattern.RadialProgressBar} />
-                        <CoverCard pattern={Pattern.RadioButtonGroup} />
-                        <CoverCard pattern={Pattern.RadioSwitch} />
-                        <CoverCard pattern={Pattern.Rating} />
                         <CoverCard pattern={Pattern.Ribbon} />
                         <CoverCard pattern={Pattern.SameHeightColumns} />
-                        <CoverCard pattern={Pattern.SearchBox} />
                         <CoverCard pattern={Pattern.Separator} />
-                        <CoverCard pattern={Pattern.SimpleGrid} />
-                        <CoverCard pattern={Pattern.Slider} />
-                        <CoverCard pattern={Pattern.SpinButton} />
-                        <CoverCard pattern={Pattern.SplitNavigation} />
-                        <CoverCard pattern={Pattern.StepperInput} />
-                        <CoverCard pattern={Pattern.Switch} />
-                        <CoverCard pattern={Pattern.Tab} />
-                        <CoverCard pattern={Pattern.TogglePasswordVisibility} />
-                        <CoverCard pattern={Pattern.UploadButton} />
-                        <CoverCard pattern={Pattern.Wizard} />
+                    </div>
+                </section>
+
+                <section>
+                    <Heading title="Feedback" />
+
+                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
+                        <CoverCard pattern={Pattern.Modal} />
+                        <CoverCard pattern={Pattern.Notification} />
+                        <CoverCard pattern={Pattern.PopoverArrow} />
+                        <CoverCard pattern={Pattern.ProgressBar} />
+                        <CoverCard pattern={Pattern.RadialProgressBar} />
+                        <CoverCard pattern={Pattern.PresenceIndicator} />
                     </div>
                 </section>
             </div>
