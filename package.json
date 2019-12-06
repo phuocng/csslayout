@@ -1,7 +1,7 @@
 {
     "name": "csslayout",
     "scripts": {
-        "copy": "rm -rf dist && mkdir dist && cp -rf public/* dist",
+        "copy": "rimraf -rf dist && mkdir dist && cpx public/**/* dist",
         "dev": "npm run copy && webpack --mode development",
         "dev-server": "npm run copy && webpack-dev-server",
         "build": "npm run copy && webpack --mode production && npm run export",
@@ -27,10 +27,12 @@
         "@types/react-dom": "^16.9.4",
         "@types/react-router-dom": "^5.1.2",
         "babel-loader": "^8.0.6",
+        "cpx2": "^2.0.0",
         "css-loader": "^3.2.0",
         "html-webpack-plugin": "^3.2.0",
         "mini-css-extract-plugin": "^0.8.0",
         "react-snap": "^1.23.0",
+        "rimraf": "^3.0.0",
         "source-map-loader": "^0.2.4",
         "style-loader": "^1.0.0",
         "ts-loader": "^6.2.1",
