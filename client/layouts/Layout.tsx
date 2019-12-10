@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
 import Footer from './Footer';
+import Github from './Github';
 
 const Layout: React.FC<{}> = ({ children }) => {
     useEffect(() => {
@@ -8,10 +9,13 @@ const Layout: React.FC<{}> = ({ children }) => {
     }, []);
 
     return (
-        <div style={{ margin: '0 auto 64px auto', maxWidth: '1024px' }}>
-            {children}
-            <Footer />
-        </div>
+        <>
+            <Github />
+            <div style={{ margin: '0 auto 64px auto', maxWidth: '1024px', position: 'relative' }}>
+                {children}
+                <Footer />
+            </div>
+        </>
     );
 };
 

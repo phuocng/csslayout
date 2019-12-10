@@ -18,7 +18,7 @@ const ExplorePage = () => {
                     to="/"
                     style={{
                         backgroundColor: '#00449E',
-                        borderRadius: '9999px',
+                        borderRadius: '4px',
                         color: '#FFF',
                         padding: '8px 16px',
                         textDecoration: 'none',
@@ -164,6 +164,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.PopoverArrow} />
                         <CoverCard pattern={Pattern.ProgressBar} />
                         <CoverCard pattern={Pattern.RadialProgressBar} />
+                        <CoverCard pattern={Pattern.ResizableElement} />
                         <CoverCard pattern={Pattern.PresenceIndicator} />
                     </div>
                 </section>
