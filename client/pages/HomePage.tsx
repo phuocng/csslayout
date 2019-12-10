@@ -26,7 +26,7 @@ const HomePage = () => {
                     <h1
                         style={{
                             backgroundColor: '#00449E',
-                            borderRadius: '9999px',
+                            borderRadius: '4px',
                             color: '#FFF',
                             fontSize: '36px',
                             fontWeight: 600,

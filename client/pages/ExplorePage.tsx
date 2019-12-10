@@ -18,7 +18,7 @@ const ExplorePage = () => {
                     to="/"
                     style={{
                         backgroundColor: '#00449E',
-                        borderRadius: '9999px',
+                        borderRadius: '4px',
                         color: '#FFF',
                         padding: '8px 16px',
                         textDecoration: 'none',

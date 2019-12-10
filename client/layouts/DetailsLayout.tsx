@@ -21,7 +21,7 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
                 style={{
                     alignItems: 'center',
                     backgroundColor: '#00449E',
-                    borderRadius: '9999px',
+                    borderRadius: '4px',
                     color: '#FFF',
                     display: 'inline-flex',
                     margin: '32px 0',
