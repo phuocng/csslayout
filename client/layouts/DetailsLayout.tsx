@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import useDocumentTitle from '../hooks/useDocumentTitle';
-import Footer from './Footer';
+import Layout from './Layout';
 import ProductHuntBadge from './ProductHuntBadge';
 
 interface DetailsLayoutProps {
@@ -13,7 +13,7 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
     useDocumentTitle(`CSS Layout ∙ ${title}`);
 
     return (
-        <div style={{ margin: '0 auto 64px auto', maxWidth: '1024px', position: 'relative' }}>
+        <Layout>
             <div style={{ position: 'absolute', right: 0, top: '24px' }}>
                 <ProductHuntBadge />
             </div>
@@ -74,8 +74,7 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
                 </h1>
                 {children}
             </div>
-            <Footer />
-        </div>
+        </Layout>
     );
 };
 
