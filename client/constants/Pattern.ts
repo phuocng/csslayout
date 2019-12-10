@@ -42,6 +42,7 @@ enum Pattern {
     RadioButtonGroup = 'Radio button group',
     RadioSwitch = 'Radio switch',
     Rating = 'Rating',
+    ResizableElement = 'Resizable element',
     Ribbon = 'Ribbon',
     SameHeightColumns = 'Same height columns',
     SearchBox = 'Search box',
