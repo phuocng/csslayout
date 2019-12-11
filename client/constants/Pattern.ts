@@ -8,6 +8,7 @@ enum Pattern {
     Card = 'Card',
     Centering = 'Centering',
     CircularNavigation = 'Circular navigation',
+    CloseButton = 'Close button',
     CookieBanner = 'Cookie banner',
     CornerRibbon = 'Corner ribbon',
     CustomCheckboxButton = 'Custom checkbox button',
