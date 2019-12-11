@@ -62,7 +62,7 @@ const ExplorePage = () => {
                         textAlign: 'center',
                     }}
                 >
-                    Here is the collection of patterns
+                    Here is the collection of 63 patterns
                 </h2>
                 <div style={{ marginBottom: '32px', textAlign: 'center' }}>
                     All covers you see in this page are made with CSS only. Inspect them! 🎉
@@ -108,7 +108,6 @@ const ExplorePage = () => {
 
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
                         <CoverCard pattern={Pattern.ButtonWithIcon} />
-                        <CoverCard pattern={Pattern.CloseButton} />
                         <CoverCard pattern={Pattern.CustomCheckboxButton} />
                         <CoverCard pattern={Pattern.CustomRadioButton} />
                         <CoverCard pattern={Pattern.FloatingLabel} />
@@ -136,6 +135,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.Badge} />
                         <CoverCard pattern={Pattern.Card} />
                         <CoverCard pattern={Pattern.Centering} />
+                        <CoverCard pattern={Pattern.CloseButton} />
                         <CoverCard pattern={Pattern.CookieBanner} />
                         <CoverCard pattern={Pattern.CornerRibbon} />
                         <CoverCard pattern={Pattern.DockedAtCorner} />
