@@ -62,7 +62,7 @@ const ExplorePage = () => {
                         textAlign: 'center',
                     }}
                 >
-                    Here is the collection of 63 patterns
+                    Here is the collection of 64 patterns
                 </h2>
                 <div style={{ marginBottom: '32px', textAlign: 'center' }}>
                     All covers you see in this page are made with CSS only. Inspect them! 🎉
@@ -77,6 +77,7 @@ const ExplorePage = () => {
 
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
                         <CoverCard pattern={Pattern.HolyGrail} />
+                        <CoverCard pattern={Pattern.SameHeightColumns} />
                         <CoverCard pattern={Pattern.Sidebar} />
                         <CoverCard pattern={Pattern.SimpleGrid} />
                         <CoverCard pattern={Pattern.SplitScreen} />
@@ -142,6 +143,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.DotLeader} />
                         <CoverCard pattern={Pattern.DropArea} />
                         <CoverCard pattern={Pattern.DropCap} />
+                        <CoverCard pattern={Pattern.FeatureComparison} />
                         <CoverCard pattern={Pattern.FeatureList} />
                         <CoverCard pattern={Pattern.FixedAtCorner} />
                         <CoverCard pattern={Pattern.InitialAvatar} />
@@ -151,7 +153,6 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.PropertyList} />
                         <CoverCard pattern={Pattern.QuestionsAndAnswers} />
                         <CoverCard pattern={Pattern.Ribbon} />
-                        <CoverCard pattern={Pattern.SameHeightColumns} />
                         <CoverCard pattern={Pattern.Separator} />
                     </div>
                 </section>
