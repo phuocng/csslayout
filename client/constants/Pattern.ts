@@ -19,6 +19,7 @@ enum Pattern {
     DropArea = 'Drop area',
     DropCap = 'Drop cap',
     Dropdown = 'Dropdown',
+    FeatureComparison = 'Feature comparison',
     FeatureList = 'Feature list',
     FixedAtCorner = 'Fixed at corner',
     FloatingLabel = 'Floating label',
