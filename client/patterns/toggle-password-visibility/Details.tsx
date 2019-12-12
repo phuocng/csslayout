@@ -47,11 +47,11 @@ const Details: React.FC<{}> = () => {
                                         <svg
                                             viewBox="0 0 24 24"
                                             style={{
-                                                fill: "none",
+                                                fill: 'none',
                                                 height: '24px',
                                                 stroke: "rgba(0, 0, 0, 0.4)",
-                                                strokeLinecap: "round",
-                                                strokeLinejoin: "round",
+                                                strokeLinecap: 'round',
+                                                strokeLinejoin: 'round',
                                                 strokeWidth: 1,
                                                 width: '24px',
                                             }}
