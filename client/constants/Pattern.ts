@@ -62,6 +62,7 @@ enum Pattern {
     Tab = 'Tab',
     TogglePasswordVisibility = 'Toggle password visibility',
     UploadButton = 'Upload button',
+    ValidationIcon = 'Validation icon',
     Wizard = 'Wizard',
 }
 

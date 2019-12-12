@@ -170,7 +170,7 @@ const HomePage = () => {
                                 marginBottom: '16px',
                             }}
                         >
-                            64 patterns
+                            65 patterns
                         </div>
                         <Link
                             to="/patterns"
