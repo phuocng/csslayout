@@ -28,7 +28,7 @@ const Details: React.FC<{}> = () => {
                             <div
                                 style={{
                                     flex: 1,
-                                    overflow: 'scroll',
+                                    overflow: 'auto',
                                     padding: '16px',
                                 }}
                             >
@@ -53,7 +53,7 @@ const Details: React.FC<{}> = () => {
         flex: 1;
 
         /* Make it scrollable */
-        overflow: scroll;
+        overflow: auto;
     ">
         ...
     </main>
