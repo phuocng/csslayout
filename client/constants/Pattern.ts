@@ -60,6 +60,7 @@ enum Pattern {
     StickyHeader = 'Sticky header',
     Switch = 'Switch',
     Tab = 'Tab',
+    Timeline = 'Timeline',
     TogglePasswordVisibility = 'Toggle password visibility',
     UploadButton = 'Upload button',
     ValidationIcon = 'Validation icon',
