@@ -62,7 +62,7 @@ const ExplorePage = () => {
                         textAlign: 'center',
                     }}
                 >
-                    Here is the collection of 65 patterns
+                    Here is the collection of 66 patterns
                 </h2>
                 <div style={{ marginBottom: '32px', textAlign: 'center' }}>
                     All covers you see in this page are made with CSS only. Inspect them! 🎉
@@ -154,6 +154,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.QuestionsAndAnswers} />
                         <CoverCard pattern={Pattern.Ribbon} />
                         <CoverCard pattern={Pattern.Separator} />
+                        <CoverCard pattern={Pattern.Timeline} />
                     </div>
                 </section>
 
