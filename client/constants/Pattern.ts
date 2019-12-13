@@ -16,6 +16,7 @@ enum Pattern {
     DockedAtCorner = 'Docked at corner',
     DotLeader = 'Dot leader',
     DotNavigation = 'Dot navigation',
+    Drawer = 'Drawer',
     DropArea = 'Drop area',
     DropCap = 'Drop cap',
     Dropdown = 'Dropdown',

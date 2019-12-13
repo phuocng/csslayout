@@ -12,6 +12,7 @@ import MadeOf from './MadeOf';
 
 const HomePage = () => {
     useDocumentTitle('CSS Layout');
+    const numPatterns = Object.keys(Pattern).length;
 
     return (
         <Layout>
@@ -170,7 +171,7 @@ const HomePage = () => {
                                 marginBottom: '16px',
                             }}
                         >
-                            66 patterns
+                            {numPatterns} patterns
                         </div>
                         <Link
                             to="/patterns"
