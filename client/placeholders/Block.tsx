@@ -3,12 +3,18 @@ import React from 'react';
 import random from '../helpers/random';
 
 interface BlockProps {
+    backgroundColor?: string;
     blockHeight?: number;
     justify?: string;
     numberOfBlocks?: number;
 }
 
-const Block: React.FC<BlockProps> = ({ justify = 'start', numberOfBlocks = 1, blockHeight = 4 }) => {
+const Block: React.FC<BlockProps> = ({
+    backgroundColor = 'rgba(0, 0, 0, 0.3)',
+    blockHeight = 4,
+    justify = 'start',
+    numberOfBlocks = 1,
+}) => {
     return (
         <div
             style={{
@@ -32,7 +38,7 @@ const Block: React.FC<BlockProps> = ({ justify = 'start', numberOfBlocks = 1, bl
                         >
                             <div
                                 style={{
-                                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                                    backgroundColor,
                                     borderRadius: '9999px',
                                     height: `${blockHeight}px`,
                                     width: '100%',

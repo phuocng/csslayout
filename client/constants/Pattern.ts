@@ -66,6 +66,7 @@ enum Pattern {
     TogglePasswordVisibility = 'Toggle password visibility',
     UploadButton = 'Upload button',
     ValidationIcon = 'Validation icon',
+    VideoBackground = 'Video background',
     Wizard = 'Wizard',
 }
 
