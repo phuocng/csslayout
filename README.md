@@ -11,7 +11,7 @@ A collection of popular layouts and patterns made with CSS:
 * Good practices (coming soon)
 * Accessibility (coming soon)
 
-![CSS Layout](/public/images/screenshot.png)
+![CSS Layout](/public/assets/screenshot.png)
 
 ## Why
 
