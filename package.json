@@ -1,7 +1,7 @@
 {
     "name": "csslayout",
     "scripts": {
-        "copy": "rimraf dist && mkdir dist && cpx public/**/* dist",
+        "copy": "rimraf dist && mkdir dist && cpx 'public/**/*' dist",
         "dev": "npm run copy && webpack --mode development",
         "dev-server": "npm run copy && webpack-dev-server",
         "build": "npm run copy && webpack --mode production && npm run export",
