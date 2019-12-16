@@ -92,7 +92,7 @@ const Details: React.FC<{}> = () => {
             <section>
                 <Heading title="Use cases" />
 
-                <div style={{ padding: '64px', width: '500px' }}>
+                <div style={{ padding: '32px', width: '500px' }}>
                     <Item>
                         <dt>Name</dt>
                         <dd>WebAssembly in Action</dd>

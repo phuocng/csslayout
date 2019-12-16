@@ -1,10 +1,5 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url><loc>https://csslayout.io/patterns</loc></url>
-    <url><loc>https://csslayout.io/patterns/holy-grail</loc></url>
-    <url><loc>https://csslayout.io/patterns/sidebar</loc></url>
-    <url><loc>https://csslayout.io/patterns/split-screen</loc></url>
-    <url><loc>https://csslayout.io/patterns/sticky-footer</loc></url>
-    <url><loc>https://csslayout.io/patterns/sticky-header</loc></url>
     <url><loc>https://csslayout.io/patterns/accordion</loc></url>
     <url><loc>https://csslayout.io/patterns/avatar</loc></url>
     <url><loc>https://csslayout.io/patterns/avatar-list</loc></url>
@@ -31,8 +26,10 @@
     <url><loc>https://csslayout.io/patterns/fixed-at-corner</loc></url>
     <url><loc>https://csslayout.io/patterns/floating-label</loc></url>
     <url><loc>https://csslayout.io/patterns/full-screen-menu</loc></url>
+    <url><loc>https://csslayout.io/patterns/holy-grail</loc></url>
     <url><loc>https://csslayout.io/patterns/initial-avatar</loc></url>
     <url><loc>https://csslayout.io/patterns/input-addon</loc></url>
+    <url><loc>https://csslayout.io/patterns/keyboard-shortcut</loc></url>
     <url><loc>https://csslayout.io/patterns/media-object</loc></url>
     <url><loc>https://csslayout.io/patterns/menu</loc></url>
     <url><loc>https://csslayout.io/patterns/modal</loc></url>
@@ -55,11 +52,15 @@
     <url><loc>https://csslayout.io/patterns/same-height-columns</loc></url>
     <url><loc>https://csslayout.io/patterns/search-box</loc></url>
     <url><loc>https://csslayout.io/patterns/separator</loc></url>
+    <url><loc>https://csslayout.io/patterns/sidebar</loc></url>
     <url><loc>https://csslayout.io/patterns/simple-grid</loc></url>
     <url><loc>https://csslayout.io/patterns/slider</loc></url>
     <url><loc>https://csslayout.io/patterns/spin-button</loc></url>
     <url><loc>https://csslayout.io/patterns/split-navigation</loc></url>
+    <url><loc>https://csslayout.io/patterns/split-screen</loc></url>
     <url><loc>https://csslayout.io/patterns/stepper-input</loc></url>
+    <url><loc>https://csslayout.io/patterns/sticky-footer</loc></url>
+    <url><loc>https://csslayout.io/patterns/sticky-header</loc></url>
     <url><loc>https://csslayout.io/patterns/switch</loc></url>
     <url><loc>https://csslayout.io/patterns/tab</loc></url>
     <url><loc>https://csslayout.io/patterns/timeline</loc></url>
