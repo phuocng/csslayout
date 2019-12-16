@@ -158,6 +158,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.Ribbon} />
                         <CoverCard pattern={Pattern.Separator} />
                         <CoverCard pattern={Pattern.Timeline} />
+                        <CoverCard pattern={Pattern.VideoBackground} />
                     </div>
                 </section>
 

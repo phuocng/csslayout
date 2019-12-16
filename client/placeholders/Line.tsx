@@ -1,10 +1,16 @@
 import React from 'react';
 
-const Line: React.FC<{}> = () => {
+interface LineProps {
+    backgroundColor?: string;
+}
+
+const Line: React.FC<LineProps> = ({
+    backgroundColor = 'rgba(0, 0, 0, 0.3)',
+}) => {
     return (
         <div
             style={{
-                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                backgroundColor,
                 height: '1px',
                 width: '100%',
             }}
