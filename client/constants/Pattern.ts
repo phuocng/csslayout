@@ -64,6 +64,7 @@ enum Pattern {
     Tab = 'Tab',
     Timeline = 'Timeline',
     TogglePasswordVisibility = 'Toggle password visibility',
+    Tooltip = 'Tooltip',
     UploadButton = 'Upload button',
     ValidationIcon = 'Validation icon',
     VideoBackground = 'Video background',
