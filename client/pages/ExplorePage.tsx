@@ -173,6 +173,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.RadialProgressBar} />
                         <CoverCard pattern={Pattern.ResizableElement} />
                         <CoverCard pattern={Pattern.PresenceIndicator} />
+                        <CoverCard pattern={Pattern.Tooltip} />
                         <CoverCard pattern={Pattern.ValidationIcon} />
                     </div>
                 </section>
