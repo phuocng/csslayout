@@ -84,6 +84,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.SplitScreen} />
                         <CoverCard pattern={Pattern.StickyFooter} />
                         <CoverCard pattern={Pattern.StickyHeader} />
+                        <CoverCard pattern={Pattern.StickySections} />
                     </div>
                 </section>
 

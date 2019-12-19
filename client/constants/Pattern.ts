@@ -60,6 +60,7 @@ enum Pattern {
     StepperInput = 'Stepper input',
     StickyFooter = 'Sticky footer',
     StickyHeader = 'Sticky header',
+    StickySections = 'Sticky sections',
     Switch = 'Switch',
     Tab = 'Tab',
     Timeline = 'Timeline',
