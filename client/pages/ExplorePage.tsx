@@ -112,6 +112,7 @@ const ExplorePage = () => {
 
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
                         <CoverCard pattern={Pattern.ButtonWithIcon} />
+                        <CoverCard pattern={Pattern.Chip} />
                         <CoverCard pattern={Pattern.CustomCheckboxButton} />
                         <CoverCard pattern={Pattern.CustomRadioButton} />
                         <CoverCard pattern={Pattern.FloatingLabel} />
@@ -139,7 +140,6 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.Badge} />
                         <CoverCard pattern={Pattern.Card} />
                         <CoverCard pattern={Pattern.Centering} />
-                        <CoverCard pattern={Pattern.Chip} />
                         <CoverCard pattern={Pattern.CloseButton} />
                         <CoverCard pattern={Pattern.CookieBanner} />
                         <CoverCard pattern={Pattern.CornerRibbon} />
