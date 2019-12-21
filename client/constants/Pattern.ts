@@ -7,6 +7,7 @@ enum Pattern {
     ButtonWithIcon = 'Button with icon',
     Card = 'Card',
     Centering = 'Centering',
+    Chip = 'Chip',
     CircularNavigation = 'Circular navigation',
     CloseButton = 'Close button',
     CookieBanner = 'Cookie banner',

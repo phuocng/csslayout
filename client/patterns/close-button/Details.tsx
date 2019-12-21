@@ -106,7 +106,7 @@ const Details: React.FC<{}> = () => {
                 />
             </div>
 
-            <RelatedPatterns patterns={[Pattern.Modal, Pattern.Notification]} />
+            <RelatedPatterns patterns={[Pattern.Chip, Pattern.Modal, Pattern.Notification]} />
         </DetailsLayout>
     );
 };
