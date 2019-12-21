@@ -4,7 +4,7 @@ import SampleCode from '../components/SampleCode';
 
 interface BrowserFrameProps {
     content: React.ReactNode;
-    source: string;
+    source?: string;
 }
 
 const BrowserFrame: React.FC<BrowserFrameProps> = ({ content, source }) => {
@@ -55,21 +55,23 @@ const BrowserFrame: React.FC<BrowserFrameProps> = ({ content, source }) => {
                         width: '16px',
                     }}
                 />
-                <div style={{ marginLeft: 'auto' }}>
-                    <button
-                        style={{
-                            backgroundColor: '#00449E',
-                            borderColor: 'transparent',
-                            borderRadius: '4px',
-                            color: '#FFF',
-                            cursor: 'pointer',
-                            padding: '4px 8px',
-                        }}
-                        onClick={flip}
-                    >
-                        {isContentActive ? 'Source' : 'Demo'}
-                    </button>
-                </div>
+                {source && (
+                    <div style={{ marginLeft: 'auto' }}>
+                        <button
+                            style={{
+                                backgroundColor: '#00449E',
+                                borderColor: 'transparent',
+                                borderRadius: '4px',
+                                color: '#FFF',
+                                cursor: 'pointer',
+                                padding: '4px 8px',
+                            }}
+                            onClick={flip}
+                        >
+                            {isContentActive ? 'Source' : 'Demo'}
+                        </button>
+                    </div>
+                )}
             </div>
             <div
                 style={{
@@ -95,22 +97,24 @@ const BrowserFrame: React.FC<BrowserFrameProps> = ({ content, source }) => {
                 >
                     {content}
                 </div>
-                <div
-                    style={{
-                        WebkitBackfaceVisibility: 'hidden',
-                        backfaceVisibility: 'hidden',
-                        height: '100%',
-                        left: 0,
-                        opacity: isContentActive ? 0 : 1,
-                        overflow: 'scroll',
-                        position: 'absolute',
-                        top: 0,
-                        transform: 'rotateY(180deg)',
-                        width: '100%',
-                    }}
-                >
-                    <SampleCode fullHeight={true} lang="html" code={source} />
-                </div>
+                {source && (
+                    <div
+                        style={{
+                            WebkitBackfaceVisibility: 'hidden',
+                            backfaceVisibility: 'hidden',
+                            height: '100%',
+                            left: 0,
+                            opacity: isContentActive ? 0 : 1,
+                            overflow: 'scroll',
+                            position: 'absolute',
+                            top: 0,
+                            transform: 'rotateY(180deg)',
+                            width: '100%',
+                        }}
+                    >
+                        <SampleCode fullHeight={true} lang="html" code={source} />
+                    </div>
+                )}
             </div>
         </div>
     );

@@ -150,6 +150,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.FeatureComparison} />
                         <CoverCard pattern={Pattern.FeatureList} />
                         <CoverCard pattern={Pattern.FixedAtCorner} />
+                        <CoverCard pattern={Pattern.FixedAtSide} />
                         <CoverCard pattern={Pattern.KeyboardShortcut} />
                         <CoverCard pattern={Pattern.InitialAvatar} />
                         <CoverCard pattern={Pattern.MediaObject} />

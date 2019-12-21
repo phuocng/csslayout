@@ -24,6 +24,7 @@ enum Pattern {
     FeatureComparison = 'Feature comparison',
     FeatureList = 'Feature list',
     FixedAtCorner = 'Fixed at corner',
+    FixedAtSide = 'Fixed at side',
     FloatingLabel = 'Floating label',
     FullScreenMenu = 'Full screen menu',
     HolyGrail = 'Holy grail',
