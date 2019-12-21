@@ -151,6 +151,17 @@ const Footer: React.FC<{}> = () => {
                                 <div>;</div>
                             </li>
                             <li style={{ alignItems: 'center', display: 'flex' }}>
+                                <div>dev.to:</div>
+                                <a
+                                    href="https://dev.to/phuocng"
+                                    style={{ marginLeft: 'auto', textDecoration: 'none' }}
+                                    target="_blank"
+                                >
+                                    @phuocng
+                                </a>
+                                <div>;</div>
+                            </li>
+                            <li style={{ alignItems: 'center', display: 'flex' }}>
                                 <div>email:</div>
                                 <a
                                     href="mailto: me@phuoc.ng"
