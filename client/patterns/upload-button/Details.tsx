@@ -1,13 +1,17 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Upload button">
+            <Helmet>
+                <meta name="description" content="Create an upload button with CSS flexbox" />
+                <meta name="keywords" content="css file input, css flexbox, css upload button" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     You can click the button to choose a file.

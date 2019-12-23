@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -9,6 +10,10 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Toggle password visibility">
+            <Helmet>
+                <meta name="description" content="Create a toggle password visibility with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, toggle password visibility" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import './dropdown.css';
 
@@ -13,6 +14,10 @@ import Triangle from '../../placeholders/Triangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Dropdown">
+            <Helmet>
+                <meta name="description" content="Create a dropdown with CSS" />
+                <meta name="keywords" content="css dropdown, css menu" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Move the mouse over the button to see the dropdown.

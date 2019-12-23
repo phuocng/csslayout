@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import './floating-label.css';
 
@@ -8,6 +9,10 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Floating label">
+            <Helmet>
+                <meta name="description" content="Create a floating label with CSS" />
+                <meta name="keywords" content="css floating label, placeholder shown" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Type something in the input to see how the label is shown up.

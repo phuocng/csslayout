@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import Heading from '../../components/Heading';
@@ -10,6 +11,10 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Corner ribbon">
+            <Helmet>
+                <meta name="description" content="Create a corner ribbon with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, css ribbon" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -10,6 +11,10 @@ import InputChip from './InputChip';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Chip">
+            <Helmet>
+                <meta name="description" content="Create a chip component with CSS flexbox" />
+                <meta name="keywords" content="css chip, css flexbox, css tag" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     You can use a <Link to='/patterns/close-button'>close button</Link> to remove a chip.

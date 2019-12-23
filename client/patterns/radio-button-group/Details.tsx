@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 import './radioButtonGroup.css';
 
@@ -42,6 +43,10 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Radio button group">
+            <Helmet>
+                <meta name="description" content="Create a radio button group with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, css radio button" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

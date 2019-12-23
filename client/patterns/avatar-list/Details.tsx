@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
@@ -28,6 +29,10 @@ const Avatar: React.FC<{}> = ({ children }) => {
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Avatar list">
+            <Helmet>
+                <meta name="description" content="Create an avatar list with CSS flexbox" />
+                <meta name="keywords" content="css avatar, css flexbox" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
