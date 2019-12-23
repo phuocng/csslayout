@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
@@ -9,6 +10,10 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Video background">
+            <Helmet>
+                <meta name="description" content="Add video background with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, object fit cover" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     In this pattern, the video is displayed in the background.

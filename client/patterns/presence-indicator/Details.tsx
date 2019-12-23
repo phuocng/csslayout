@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
@@ -9,6 +10,10 @@ import Circle from '../../placeholders/Circle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Presence indicator">
+            <Helmet>
+                <meta name="description" content="Create a presence indicator with CSS" />
+                <meta name="keywords" content="css indicator" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

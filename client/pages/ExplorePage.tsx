@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import CoverCard from '../components/CoverCard';
@@ -14,6 +15,10 @@ const ExplorePage = () => {
 
     return (
         <Layout>
+            <Helmet>
+                <meta name="description" content="CSS layouts and patterns" />
+                <meta name="keywords" content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" />
+            </Helmet>
             <div style={{ margin: '32px 0' }}>
                 <Link
                     to="/"

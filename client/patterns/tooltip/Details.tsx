@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import './tooltip.css';
 
@@ -12,6 +13,10 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Tooltip">
+            <Helmet>
+                <meta name="description" content="Create a tooltip with CSS" />
+                <meta name="keywords" content="css tooltip" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Move the mouser over the main element to see the tooltip.

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Heading from '../../components/Heading';
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -9,6 +10,10 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Fixed at side">
+            <Helmet>
+                <meta name="description" content="Fix an element at the middle of side with CSS" />
+                <meta name="keywords" content="css fixed" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

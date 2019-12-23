@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -12,6 +13,10 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Pricing table">
+            <Helmet>
+                <meta name="description" content="Create a pricing table with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, css pricing table" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     You can <Link to='/patterns/ribbon'>add</Link> <Link to='/patterns/corner-ribbon'>a ribbon</Link> to

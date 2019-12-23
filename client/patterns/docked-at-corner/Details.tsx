@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Heading from '../../components/Heading';
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -10,6 +11,10 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Docked at corner">
+            <Helmet>
+                <meta name="description" content="Dock an element at corner with CSS" />
+                <meta name="keywords" content="css docked, css flexbox" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

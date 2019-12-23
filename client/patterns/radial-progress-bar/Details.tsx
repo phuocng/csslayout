@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -67,6 +68,10 @@ const RadialProgress: React.FC<RadialProgressProps> = ({ percentages }) => {
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Radial progress bar">
+            <Helmet>
+                <meta name="description" content="Create a radial progress bar with CSS flexbox" />
+                <meta name="keywords" content="css clip rect, css flexbox, css progress bar" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

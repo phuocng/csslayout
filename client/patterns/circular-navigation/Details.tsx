@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -43,6 +44,10 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Circular navigation">
+            <Helmet>
+                <meta name="description" content="Create a circular navigation with CSS flexbox" />
+                <meta name="keywords" content="css circular navigation, css flexbox" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

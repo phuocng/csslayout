@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import './home.css';
@@ -16,6 +17,10 @@ const HomePage = () => {
 
     return (
         <Layout>
+            <Helmet>
+                <meta name="description" content="CSS layouts and patterns" />
+                <meta name="keywords" content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" />
+            </Helmet>
             <div
                 style={{
                     border: '1px solid rgba(0, 0, 0, 0.2)',

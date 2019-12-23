@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -31,6 +32,10 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Dot navigation">
+            <Helmet>
+                <meta name="description" content="Create dot navigation with CSS flexbox" />
+                <meta name="keywords" content="css dot navigation, css flexbox" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

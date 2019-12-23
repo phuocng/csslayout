@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
@@ -52,6 +53,10 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Accordion">
+            <Helmet>
+                <meta name="description" content="Create an accordion with CSS flexbox" />
+                <meta name="keywords" content="css accordion, css flexbox" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

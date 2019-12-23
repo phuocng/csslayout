@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
@@ -9,6 +10,10 @@ import Triangle from '../../placeholders/Triangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Fixed at corner">
+            <Helmet>
+                <meta name="description" content="Fix an element at corner with CSS" />
+                <meta name="keywords" content="css fixed" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

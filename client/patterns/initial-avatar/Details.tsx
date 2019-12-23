@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -9,6 +10,10 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Initial avatar">
+            <Helmet>
+                <meta name="description" content="Create an initial avatar with CSS" />
+                <meta name="keywords" content="css avatar" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     To center the content, you also can use other technique demonstrated in

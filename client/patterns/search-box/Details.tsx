@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -7,6 +8,10 @@ import Circle from '../../placeholders/Circle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Search box">
+            <Helmet>
+                <meta name="description" content="Create a search box with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, css search box" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

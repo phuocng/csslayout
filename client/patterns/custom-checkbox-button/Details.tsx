@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
@@ -56,6 +57,10 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Custom checkbox button">
+            <Helmet>
+                <meta name="description" content="Create a custom checkbox button with CSS flexbox" />
+                <meta name="keywords" content="css checkbox, css flexbox" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

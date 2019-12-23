@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
@@ -8,6 +9,10 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Sticky footer">
+            <Helmet>
+                <meta name="description" content="Create a sticky footer with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, css layout, css sticky, css sticky footer" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     The footer always sticks to the bottom if the main content is short.

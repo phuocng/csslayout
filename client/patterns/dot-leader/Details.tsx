@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Heading from '../../components/Heading';
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -11,6 +12,10 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Dot leader">
+            <Helmet>
+                <meta name="description" content="Create dot leaders with CSS flexbox" />
+                <meta name="keywords" content="css dot leader, css flexbox" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

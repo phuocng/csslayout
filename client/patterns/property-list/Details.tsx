@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Heading from '../../components/Heading';
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -28,6 +29,10 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Property list">
+            <Helmet>
+                <meta name="description" content="Create a property list with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, property list" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

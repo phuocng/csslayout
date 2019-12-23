@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import './menu.css';
 
@@ -12,6 +13,10 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Menu">
+            <Helmet>
+                <meta name="description" content="Create a menu with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, css menu" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

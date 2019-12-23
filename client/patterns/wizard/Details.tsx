@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
@@ -9,6 +10,10 @@ import Line from '../../placeholders/Line';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Wizard">
+            <Helmet>
+                <meta name="description" content="Create a wizard with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, css stepper, css wizard" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

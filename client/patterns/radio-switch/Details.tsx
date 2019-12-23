@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 import Heading from '../../components/Heading';
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -12,6 +13,10 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Radio switch">
+            <Helmet>
+                <meta name="description" content="Create a radio switch with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, css radio switch, css switch" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

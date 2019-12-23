@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
@@ -10,6 +11,10 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Modal">
+            <Helmet>
+                <meta name="description" content="Create a modal with CSS flexbox" />
+                <meta name="keywords" content="css dialog, css flexbox, css modal" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     You can use the <Link to='/patterns/close-button'>close button</Link> to
