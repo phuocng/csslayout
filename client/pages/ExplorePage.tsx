@@ -82,6 +82,7 @@ const ExplorePage = () => {
                     <Heading title="Layout" />
 
                     <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                        <CoverCard pattern={Pattern.CardLayout} />
                         <CoverCard pattern={Pattern.HolyGrail} />
                         <CoverCard pattern={Pattern.SameHeightColumns} />
                         <CoverCard pattern={Pattern.Sidebar} />
