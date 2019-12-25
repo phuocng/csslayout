@@ -81,7 +81,8 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Layout" />
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                        <CoverCard pattern={Pattern.CardLayout} />
                         <CoverCard pattern={Pattern.HolyGrail} />
                         <CoverCard pattern={Pattern.SameHeightColumns} />
                         <CoverCard pattern={Pattern.Sidebar} />
@@ -96,7 +97,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Navigation" />
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
                         <CoverCard pattern={Pattern.Breadcrumb} />
                         <CoverCard pattern={Pattern.CircularNavigation} />
                         <CoverCard pattern={Pattern.DotNavigation} />
@@ -115,7 +116,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Input" />
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
                         <CoverCard pattern={Pattern.ButtonWithIcon} />
                         <CoverCard pattern={Pattern.Chip} />
                         <CoverCard pattern={Pattern.CustomCheckboxButton} />
@@ -138,7 +139,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Display" />
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
                         <CoverCard pattern={Pattern.Accordion} />
                         <CoverCard pattern={Pattern.Avatar} />
                         <CoverCard pattern={Pattern.AvatarList} />
@@ -174,7 +175,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Feedback" />
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '32px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
                         <CoverCard pattern={Pattern.Modal} />
                         <CoverCard pattern={Pattern.Notification} />
                         <CoverCard pattern={Pattern.PopoverArrow} />

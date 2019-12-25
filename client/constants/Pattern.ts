@@ -6,6 +6,7 @@ enum Pattern {
     Breadcrumb = 'Breadcrumb',
     ButtonWithIcon = 'Button with icon',
     Card = 'Card',
+    CardLayout = 'Card layout',
     Centering = 'Centering',
     Chip = 'Chip',
     CircularNavigation = 'Circular navigation',

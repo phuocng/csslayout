@@ -4,16 +4,15 @@ import { Helmet } from 'react-helmet';
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';
-import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Card">
+        <DetailsLayout title="Card layout">
             <Helmet>
-                <meta name="description" content="Create a card with CSS flexbox" />
-                <meta name="keywords" content="css card, css flexbox" />
+                <meta name="description" content="Create a card layout with CSS flexbox" />
+                <meta name="keywords" content="css card layout, css flexbox, css layout" />
             </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
@@ -25,55 +24,58 @@ const Details: React.FC<{}> = () => {
                                 flexDirection: 'column',
                                 height: '100%',
                                 justifyContent: 'center',
-                                padding: '16px',
+                                padding: '8px',
                             }}
                         >
                             <div
                                 style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '8px',
                                     display: 'flex',
-                                    flexDirection: 'column',
-                                    width: '256px',
+                                    flexWrap: 'wrap',
+                                    margin: '0 -8px',
+                                    width: '60%',
                                 }}
                             >
-                                <Rectangle height={150} />
-                                <div style={{ flex: 1, padding: '16px' }}>
-                                    <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={15} /></div>
-                                    <div style={{ width: '128px' }}>
-                                        <Rectangle height={32} />
-                                    </div>
-                                </div>
+                                {
+                                    Array(10).fill(0).map((_, index) => {
+                                        return (
+                                            <div key={index} style={{ flexBasis: '25%', marginBottom: '24px', padding: '0 8px' }}>
+                                                <Rectangle height={80} />
+                                            </div>
+                                        );
+                                    })
+                                }
                             </div>
                         </div>
                     )}
                     source={`
 <div style="
     display: flex;
-    flex-direction: column;
+
+    /* Put a card in the next row when previous cards take all width */
+    flex-wrap: wrap;
+
+    margin-left: -8px;
+    margin-right: -8px;
 ">
-    <!-- Cover -->
+    <!-- A card with given width -->
     <div style="
-        height: 150px;
-        width: 100%;
+        /* There will be 4 cards per row */
+        flex-basis: 25%;
+
+        padding-left: 8px;
+        padding-right: 8px;
     ">
         ...
     </div>
 
-    <!-- Content -->
-    <div style="
-        /* Take available height */
-        flex: 1;
-    ">
-        ...
-    </div>
+    <!-- Repeat other cards -->
     ...
 </div>
 `}
                 />
             </div>
 
-            <RelatedPatterns patterns={[Pattern.CardLayout]} />
+            <RelatedPatterns patterns={[Pattern.Card, Pattern.SimpleGrid]} />
         </DetailsLayout>
     );
 };
