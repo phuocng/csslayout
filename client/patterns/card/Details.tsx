@@ -73,7 +73,7 @@ const Details: React.FC<{}> = () => {
                 />
             </div>
 
-            <RelatedPatterns patterns={[Pattern.CardLayout]} />
+            <RelatedPatterns patterns={[Pattern.CardLayout, Pattern.StackedCards]} />
         </DetailsLayout>
     );
 };
