@@ -20,7 +20,7 @@ const CoverCard: React.FC<CoverCardProps> = ({ pattern }) => {
                 justifyContent: 'flex-start',
                 padding: '16px',
                 textDecoration: 'none',
-                width: '150px',
+                width: '16.666666666666668%',
             }}
         >
             <CoverLoader pattern={pattern} />
