@@ -14,6 +14,7 @@ enum Pattern {
     CornerRibbon = 'Corner ribbon',
     CustomCheckboxButton = 'Custom checkbox button',
     CustomRadioButton = 'Custom radio button',
+    DiagonalSection = 'Diagonal section',
     DockedAtCorner = 'Docked at corner',
     DotLeader = 'Dot leader',
     DotNavigation = 'Dot navigation',
