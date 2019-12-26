@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import RelatedPatterns from '../../components/RelatedPatterns';
+import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -11,7 +13,7 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout title="Sticky header">
             <Helmet>
                 <meta name="description" content="Create a sticky header with CSS" />
-                <meta name="keywords" content="css layout, css sticky, css sticky header" />
+                <meta name="keywords" content="css layout, css position sticky, css sticky header" />
             </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
@@ -53,6 +55,8 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
+
+            <RelatedPatterns patterns={[Pattern.StickyTableHeaders]} />
         </DetailsLayout>
     );
 };
