@@ -10,7 +10,11 @@ const Details: React.FC<{}> = () => {
     const [value, setValue] = useState(0);
     const decrease = () => setValue(value - 1);
     const increase = () => setValue(value + 1);
-    const change = (e: React.ChangeEvent<HTMLInputElement>) => setValue(parseInt(e.target.value, 10));
+    const change = (e: React.ChangeEvent<HTMLInputElement>) => {        
+        const value = parseInt(e.target.value, 10);
+        const newValue = isNaN(value) ? 0 : value;
+        setValue(newValue);
+    };
 
     return (
         <DetailsLayout title="Stepper input">
