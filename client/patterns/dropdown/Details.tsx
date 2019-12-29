@@ -88,7 +88,7 @@ const Details: React.FC<{}> = () => {
                                     width: '256px',
                                 }}
                             >
-                            <Block numberOfBlocks={20} justify='center' />
+                                <Block numberOfBlocks={20} justify='center' />
                             </div>
                         </div>
                     )}
@@ -139,7 +139,7 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
-            <RelatedPatterns patterns={[Pattern.Menu]} />
+            <RelatedPatterns patterns={[Pattern.MegaMenu, Pattern.Menu]} />
         </DetailsLayout>
     );
 };

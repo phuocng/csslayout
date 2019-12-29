@@ -104,6 +104,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.Drawer} />
                         <CoverCard pattern={Pattern.Dropdown} />
                         <CoverCard pattern={Pattern.FullScreenMenu} />
+                        <CoverCard pattern={Pattern.MegaMenu} />
                         <CoverCard pattern={Pattern.Menu} />
                         <CoverCard pattern={Pattern.Pagination} />
                         <CoverCard pattern={Pattern.PreviousNextButtons} />

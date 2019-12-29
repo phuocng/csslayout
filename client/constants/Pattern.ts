@@ -34,6 +34,7 @@ enum Pattern {
     InitialAvatar = 'Initial avatar',
     InputAddon = 'Input addon',
     MediaObject = 'Media object',
+    MegaMenu = 'Mega menu',
     Menu = 'Menu',
     Modal = 'Modal',
     Notification = 'Notification',
