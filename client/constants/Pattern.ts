@@ -66,6 +66,7 @@ enum Pattern {
     StickyFooter = 'Sticky footer',
     StickyHeader = 'Sticky header',
     StickySections = 'Sticky sections',
+    StickyTableColumn = 'Sticky table column',
     StickyTableHeaders = 'Sticky table headers',
     Switch = 'Switch',
     Tab = 'Tab',

@@ -43,6 +43,7 @@ const Details: React.FC<{}> = () => {
                     source={`
 <div>
     <header style="
+        /* Stick to the top */
         position: sticky;
         top: 0;
     ">
@@ -56,7 +57,11 @@ const Details: React.FC<{}> = () => {
                 />
             </div>
 
-            <RelatedPatterns patterns={[Pattern.StickyTableHeaders]} />
+            <RelatedPatterns
+                patterns={[
+                    Pattern.StickySections, Pattern.StickyTableColumn, Pattern.StickyTableHeaders,
+                ]}
+            />
         </DetailsLayout>
     );
 };

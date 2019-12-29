@@ -1,3 +1,4 @@
+// tslint:disable:prefer-object-spread
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
@@ -9,15 +10,16 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    const numberOfColumns = 10;
     return (
-        <DetailsLayout title="Sticky table headers">
+        <DetailsLayout title="Sticky table column">
             <Helmet>
-                <meta name="description" content="Create sticky table headers with CSS" />
-                <meta name="keywords" content="css position sticky, css sticky table headers" />
+                <meta name="description" content="Create sticky table column with CSS" />
+                <meta name="keywords" content="css position sticky, css sticky table column" />
             </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
-                    Try to scroll the main content of table to see the header sticks to the top.
+                    Try to scroll the main content of table horizontally to see the first column sticks to the left.
                 </div>
                 <BrowserFrame
                     content={(
@@ -48,19 +50,27 @@ const Details: React.FC<{}> = () => {
                                     <thead>
                                         <tr>
                                             {
-                                                Array(3).fill(0).map((_, index) => {
+                                                Array(numberOfColumns).fill(0).map((_, index) => {
                                                     return (
                                                         <th
                                                             key={index}
-                                                            style={{
-                                                                backgroundColor: '#ddd',
-                                                                padding: '16px',
-                                                                position: 'sticky',
-                                                                top: 0,
-                                                                zIndex: 9999,
-                                                            }}
+                                                            style={
+                                                                Object.assign({}, {
+                                                                    padding: '16px',
+                                                                }, index === 0 ? {
+                                                                    backgroundColor: '#ddd',
+                                                                    left: 0,
+                                                                    position: 'sticky',
+                                                                } : {},
+                                                            )}
                                                         >
-                                                            <Rectangle />
+                                                            <div style={{ width: '200px' }}>
+                                                                {
+                                                                    index === 0
+                                                                        ? <Rectangle />
+                                                                        : <Block numberOfBlocks={3} />
+                                                                }
+                                                            </div>
                                                         </th>
                                                     );
                                                 })
@@ -73,10 +83,25 @@ const Details: React.FC<{}> = () => {
                                                 return (
                                                     <tr key={row} style={{ borderTop: '1px solid rgba(0, 0, 0, 0.3)' }}>
                                                         {
-                                                            Array(3).fill(0).map((__, col) => {
+                                                            Array(numberOfColumns).fill(0).map((__, col) => {
                                                                 return (
-                                                                    <td key={col} style={{ padding: '16px' }}>
-                                                                        <Block numberOfBlocks={3} />
+                                                                    <td
+                                                                        key={col}
+                                                                        style={
+                                                                            Object.assign({}, {
+                                                                                padding: '16px',
+                                                                            }, col === 0 ? {
+                                                                                backgroundColor: '#ddd',
+                                                                                left: 0,
+                                                                                position: 'sticky',
+                                                                            } : {},
+                                                                        )}
+                                                                    >
+                                                                        {
+                                                                            col === 0
+                                                                                ? <Rectangle />
+                                                                                : <Block numberOfBlocks={3} />
+                                                                        }
                                                                     </td>
                                                                 );
                                                             })
@@ -98,9 +123,9 @@ const Details: React.FC<{}> = () => {
                 /* Background color */
                 background-color: #ddd;
 
-                /* Stick to the top */
+                /* Stick to the left */
+                left: 0;
                 position: sticky;
-                top: 0;
 
                 /* Displayed on top of other rows when scrolling */
                 z-index: 9999;
@@ -118,11 +143,7 @@ const Details: React.FC<{}> = () => {
                 />
             </div>
 
-            <RelatedPatterns
-                patterns={[
-                    Pattern.StickyHeader, Pattern.StickySections, Pattern.StickyTableColumn,
-                ]}
-            />
+            <RelatedPatterns patterns={[Pattern.StickyHeader, Pattern.StickySections, Pattern.StickyTableHeaders]} />
         </DetailsLayout>
     );
 };

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import RelatedPatterns from '../../components/RelatedPatterns';
+import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
@@ -62,7 +64,7 @@ const Details: React.FC<{}> = () => {
         height: 100%;
         width: 100%;
 
-        /* Stick at the top */
+        /* Stick to the top */
         position: sticky;
         top: 0;
     ">
@@ -75,6 +77,8 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
+
+            <RelatedPatterns patterns={[Pattern.StickyHeader, Pattern.StickyTableColumn, Pattern.StickyTableHeaders]} />
         </DetailsLayout>
     );
 };
