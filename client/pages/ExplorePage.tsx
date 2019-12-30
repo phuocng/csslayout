@@ -174,6 +174,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.Ribbon} />
                         <CoverCard pattern={Pattern.Separator} />
                         <CoverCard pattern={Pattern.StackedCards} />
+                        <CoverCard pattern={Pattern.Statistic} />
                         <CoverCard pattern={Pattern.StickyTableColumn} />
                         <CoverCard pattern={Pattern.StickyTableHeaders} />
                         <CoverCard pattern={Pattern.Teardrop} />

@@ -68,6 +68,7 @@ enum Pattern {
     SplitNavigation = 'Split navigation',
     SplitScreen = 'Split screen',
     StackedCards = 'Stacked cards',
+    Statistic = 'Statistic',
     StepperInput = 'Stepper input',
     StickyFooter = 'Sticky footer',
     StickyHeader = 'Sticky header',
