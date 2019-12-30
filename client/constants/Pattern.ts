@@ -1,3 +1,8 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 enum Pattern {
     Accordion = 'Accordion',
     Avatar = 'Avatar',
@@ -63,6 +68,7 @@ enum Pattern {
     SplitNavigation = 'Split navigation',
     SplitScreen = 'Split screen',
     StackedCards = 'Stacked cards',
+    Statistic = 'Statistic',
     StepperInput = 'Stepper input',
     StickyFooter = 'Sticky footer',
     StickyHeader = 'Sticky header',

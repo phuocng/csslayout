@@ -1,3 +1,8 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
@@ -169,6 +174,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.Ribbon} />
                         <CoverCard pattern={Pattern.Separator} />
                         <CoverCard pattern={Pattern.StackedCards} />
+                        <CoverCard pattern={Pattern.Statistic} />
                         <CoverCard pattern={Pattern.StickyTableColumn} />
                         <CoverCard pattern={Pattern.StickyTableHeaders} />
                         <CoverCard pattern={Pattern.Teardrop} />

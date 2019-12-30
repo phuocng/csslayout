@@ -5,7 +5,6 @@
 
 import React from 'react';
 
-import Circle from '../../placeholders/Circle';
 import Frame from '../../placeholders/Frame';
 
 const Cover: React.FC<{}> = () => {
@@ -24,15 +23,17 @@ const Cover: React.FC<{}> = () => {
                 <div
                     style={{
                         alignItems: 'center',
-                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                        borderRadius: '4px',
-                        display: 'flex',
-                        justifyContent: 'flex-end',
-                        padding: '4px',
-                        width: '100%',
+                        display: 'inline-flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
                     }}
                 >
-                    <Circle />
+                    <div style={{ color: 'rgba(0, 0, 0, 0.7)', fontSize: '2.5rem', fontWeight: 500 }}>
+                        1k+
+                    </div>
+                    <div style={{ color: 'rgba(0, 0, 0, 0.4)', fontSize: '.75rem', textTransform: 'uppercase' }}>
+                        stars
+                    </div>
                 </div>
             </div>
         </Frame>

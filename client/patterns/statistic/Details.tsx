@@ -6,19 +6,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
+import random from '../../helpers/random';
 import DetailsLayout from '../../layouts/DetailsLayout';
-import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Card">
+        <DetailsLayout title="Statistic">
             <Helmet>
-                <meta name="description" content="Create a card with CSS flexbox" />
-                <meta name="keywords" content="css card, css flexbox" />
+                <meta name="description" content="Create a statistic component with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, css statistic" />
             </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
@@ -30,55 +27,56 @@ const Details: React.FC<{}> = () => {
                                 flexDirection: 'column',
                                 height: '100%',
                                 justifyContent: 'center',
-                                padding: '16px',
+                                padding: '8px',
                             }}
                         >
                             <div
                                 style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '8px',
-                                    display: 'flex',
+                                    alignItems: 'center',
+                                    display: 'inline-flex',
                                     flexDirection: 'column',
-                                    width: '256px',
                                 }}
                             >
-                                <Rectangle height={150} />
-                                <div style={{ flex: 1, padding: '16px' }}>
-                                    <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={15} /></div>
-                                    <div style={{ width: '128px' }}>
-                                        <Rectangle height={32} />
-                                    </div>
+                                <div style={{ fontSize: '4rem', fontWeight: 500 }}>
+                                    {random(1000, 9999).toLocaleString()}
+                                </div>
+                                <div style={{ fontSize: '1rem', fontWeight: 700, textTransform: 'uppercase' }}>
+                                    stars
                                 </div>
                             </div>
                         </div>
                     )}
                     source={`
 <div style="
-    display: flex;
+    /* Center the content */
+    align-items: center;
+    display: inline-flex;
     flex-direction: column;
 ">
-    <!-- Cover -->
+    <!-- Value -->
     <div style="
-        height: 150px;
-        width: 100%;
+        /* Big font size */
+        font-size: 4rem;
+        font-weight: 500;
     ">
         ...
     </div>
 
-    <!-- Content -->
+    <!-- Label -->
     <div style="
-        /* Take available height */
-        flex: 1;
+        /* Smaller font size */
+        font-size: 1rem;
+        font-weight: 700;
+
+        /* Uppercase the label */
+        text-transform: uppercase;
     ">
         ...
     </div>
-    ...
 </div>
 `}
                 />
             </div>
-
-            <RelatedPatterns patterns={[Pattern.CardLayout, Pattern.StackedCards]} />
         </DetailsLayout>
     );
 };
