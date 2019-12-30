@@ -70,6 +70,14 @@ Visit http://localhost:1234 to see it in action.
 
 PRs are welcomed. If you thing there are any missing useful layouts or patterns, please create an issue or submit a PR.
 
+It's important to note that you should run the following command to lint the code:
+
+~~~
+$ npm run lint
+~~~
+
+If there is any issue, it will be logged in the `tslint.log` file.
+
 ## About
 
 This project is developed by [Nguyen Huu Phuoc](https://twitter.com/nghuuphuoc).
