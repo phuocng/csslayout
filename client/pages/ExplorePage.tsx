@@ -171,6 +171,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.StackedCards} />
                         <CoverCard pattern={Pattern.StickyTableColumn} />
                         <CoverCard pattern={Pattern.StickyTableHeaders} />
+                        <CoverCard pattern={Pattern.Teardrop} />
                         <CoverCard pattern={Pattern.Timeline} />
                         <CoverCard pattern={Pattern.VideoBackground} />
                     </div>

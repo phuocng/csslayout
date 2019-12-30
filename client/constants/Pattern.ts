@@ -71,6 +71,7 @@ enum Pattern {
     StickyTableHeaders = 'Sticky table headers',
     Switch = 'Switch',
     Tab = 'Tab',
+    Teardrop = 'Teardrop',
     Timeline = 'Timeline',
     TogglePasswordVisibility = 'Toggle password visibility',
     Tooltip = 'Tooltip',
