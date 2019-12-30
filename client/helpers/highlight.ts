@@ -1,3 +1,8 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import hljs from 'highlight.js/lib/highlight'; // tslint:disable-line
 import javascript from 'highlight.js/lib/languages/javascript'; // tslint:disable-line
 import html from 'highlight.js/lib/languages/xml'; // tslint:disable-line
