@@ -62,7 +62,7 @@ const Details: React.FC<{}> = () => {
 
         /* Colors */
         background-color: rgba(0, 0, 0, .3);
-    " />
+    "></div>
 
     <!-- Circle -->
     <div style="
@@ -75,7 +75,7 @@ const Details: React.FC<{}> = () => {
 
         /* Colors */
         background-color: rgba(0, 0, 0, .3);
-    " />
+    "></div>
 
     <!-- Right side -->
     <div style="
@@ -85,7 +85,7 @@ const Details: React.FC<{}> = () => {
 
         /* Colors */
         background-color: rgba(0, 0, 0, .3);
-    " />
+    "></div>
 </div>
 `}
                 />
