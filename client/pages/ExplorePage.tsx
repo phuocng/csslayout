@@ -160,6 +160,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.DotLeader} />
                         <CoverCard pattern={Pattern.DropArea} />
                         <CoverCard pattern={Pattern.DropCap} />
+                        <CoverCard pattern={Pattern.FadingLongSection} />
                         <CoverCard pattern={Pattern.FeatureComparison} />
                         <CoverCard pattern={Pattern.FeatureList} />
                         <CoverCard pattern={Pattern.FixedAtCorner} />

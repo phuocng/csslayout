@@ -28,6 +28,7 @@ enum Pattern {
     DropArea = 'Drop area',
     DropCap = 'Drop cap',
     Dropdown = 'Dropdown',
+    FadingLongSection = 'Fading long section',
     FeatureComparison = 'Feature comparison',
     FeatureList = 'Feature list',
     FixedAtCorner = 'Fixed at corner',
