@@ -145,7 +145,7 @@ const Details: React.FC<{}> = () => {
                 />
             </div>
 
-            <RelatedPatterns patterns={[Pattern.Dropdown, Pattern.Menu]} />
+            <RelatedPatterns patterns={[Pattern.Dropdown, Pattern.Menu, Pattern.NestedDropdowns]} />
         </DetailsLayout>
     );
 };

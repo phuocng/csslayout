@@ -199,7 +199,13 @@ const Details: React.FC<{}> = () => {
                 />
             </div>
             <RelatedPatterns
-                patterns={[Pattern.DotLeader, Pattern.MegaMenu, Pattern.PropertyList, Pattern.SplitNavigation]}
+                patterns={[
+                    Pattern.DotLeader,
+                    Pattern.MegaMenu,
+                    Pattern.NestedDropdowns,
+                    Pattern.PropertyList,
+                    Pattern.SplitNavigation,
+                ]}
             />
         </DetailsLayout>
     );
