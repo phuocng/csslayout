@@ -111,6 +111,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.FullScreenMenu} />
                         <CoverCard pattern={Pattern.MegaMenu} />
                         <CoverCard pattern={Pattern.Menu} />
+                        <CoverCard pattern={Pattern.NestedDropdowns} />
                         <CoverCard pattern={Pattern.Pagination} />
                         <CoverCard pattern={Pattern.PreviousNextButtons} />
                         <CoverCard pattern={Pattern.SplitNavigation} />

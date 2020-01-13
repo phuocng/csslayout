@@ -43,6 +43,7 @@ enum Pattern {
     MegaMenu = 'Mega menu',
     Menu = 'Menu',
     Modal = 'Modal',
+    NestedDropdowns = 'Nested dropdowns',
     Notification = 'Notification',
     OverlayPlayButton = 'Overlay play button',
     Pagination = 'Pagination',
