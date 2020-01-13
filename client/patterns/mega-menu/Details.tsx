@@ -6,7 +6,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import './megaMenu.css';
+import './mega-menu.css';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
@@ -126,7 +126,7 @@ const Details: React.FC<{}> = () => {
 }
 </style>
 
-<div className="p-mega-menu-container">
+<div class="p-mega-menu-container">
     <!-- Item -->
     ...
 

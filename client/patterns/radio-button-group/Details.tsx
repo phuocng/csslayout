@@ -6,7 +6,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 
-import './radioButtonGroup.css';
+import './radio-button-group.css';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
