@@ -118,7 +118,7 @@ const Details: React.FC<{}> = () => {
 }
 </style>
 
-<ul className="p-nested-dropdowns">
+<ul class="p-nested-dropdowns">
     <li>Home</li>
     <li>
         <div>Patterns</div>
