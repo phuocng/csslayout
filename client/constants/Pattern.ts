@@ -70,6 +70,7 @@ enum Pattern {
     SplitNavigation = 'Split navigation',
     SplitScreen = 'Split screen',
     StackedCards = 'Stacked cards',
+    StampBorder = 'Stamp border',
     Statistic = 'Statistic',
     StatusLight = 'Status light',
     StepperInput = 'Stepper input',
