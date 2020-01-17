@@ -18,6 +18,7 @@ enum Pattern {
     CloseButton = 'Close button',
     CookieBanner = 'Cookie banner',
     CornerRibbon = 'Corner ribbon',
+    CurvedBackground = 'Curved background',
     CustomCheckboxButton = 'Custom checkbox button',
     CustomRadioButton = 'Custom radio button',
     DiagonalSection = 'Diagonal section',
