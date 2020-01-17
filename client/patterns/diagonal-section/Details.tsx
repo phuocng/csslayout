@@ -6,6 +6,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import RelatedPatterns from '../../components/RelatedPatterns';
+import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -90,6 +92,8 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
+
+            <RelatedPatterns patterns={[Pattern.CurvedBackground]} />
         </DetailsLayout>
     );
 };
