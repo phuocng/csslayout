@@ -167,8 +167,9 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.FeatureList} />
                         <CoverCard pattern={Pattern.FixedAtCorner} />
                         <CoverCard pattern={Pattern.FixedAtSide} />
-                        <CoverCard pattern={Pattern.KeyboardShortcut} />
                         <CoverCard pattern={Pattern.InitialAvatar} />
+                        <CoverCard pattern={Pattern.KeyboardShortcut} />
+                        <CoverCard pattern={Pattern.LinedPaper} />
                         <CoverCard pattern={Pattern.MediaObject} />
                         <CoverCard pattern={Pattern.OverlayPlayButton} />
                         <CoverCard pattern={Pattern.PricingTable} />
