@@ -186,6 +186,7 @@ const ExplorePage = () => {
                         <CoverCard pattern={Pattern.Teardrop} />
                         <CoverCard pattern={Pattern.Timeline} />
                         <CoverCard pattern={Pattern.VideoBackground} />
+                        <CoverCard pattern={Pattern.Watermark} />
                     </div>
                 </section>
 
