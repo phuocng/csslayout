@@ -143,7 +143,7 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
-            <RelatedPatterns patterns={[Pattern.OverlayPlayButton]} />
+            <RelatedPatterns patterns={[Pattern.FullBackground, Pattern.OverlayPlayButton]} />
         </DetailsLayout>
     );
 };
