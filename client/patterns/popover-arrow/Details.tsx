@@ -434,7 +434,7 @@ const Details: React.FC<{}> = () => {
                 />
             </div>
 
-            <RelatedPatterns patterns={[Pattern.Tooltip]} />
+            <RelatedPatterns patterns={[Pattern.ArrowButtons, Pattern.Tooltip]} />
         </DetailsLayout>
     );
 };

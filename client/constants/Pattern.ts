@@ -5,6 +5,7 @@
 
 enum Pattern {
     Accordion = 'Accordion',
+    ArrowButtons = 'Arrow buttons',
     Avatar = 'Avatar',
     AvatarList = 'Avatar list',
     Badge = 'Badge',
