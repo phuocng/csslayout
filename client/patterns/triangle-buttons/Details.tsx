@@ -13,10 +13,10 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Arrow buttons">
+        <DetailsLayout title="Triangle buttons">
             <Helmet>
-                <meta name="description" content="Create arrow buttons with CSS" />
-                <meta name="keywords" content="css arrow buttons" />
+                <meta name="description" content="Create triangle buttons with CSS" />
+                <meta name="keywords" content="css triangle buttons" />
             </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
@@ -57,12 +57,11 @@ const Details: React.FC<{}> = () => {
                                     >
                                         <div
                                             style={{
-                                                backgroundColor: 'transparent',
-                                                borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
-                                                borderTop: '1px solid rgba(0, 0, 0, 0.3)',
-                                                height: '12px',
-                                                transform: 'translateY(25%) rotate(45deg)',
-                                                width: '12px',
+                                                borderColor: 'transparent transparent rgba(0, 0, 0, 0.3) transparent',
+                                                borderStyle: 'solid',
+                                                borderWidth: '0px 8px 8px 8px',
+                                                height: 0,
+                                                width: 0,
                                             }}
                                         />
                                         <div style={{ marginLeft: '8px' }}>Up</div>
@@ -89,12 +88,11 @@ const Details: React.FC<{}> = () => {
                                         <div style={{ marginRight: '8px' }}>Right</div>
                                         <div
                                             style={{
-                                                backgroundColor: 'transparent',
-                                                borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                                borderTop: '1px solid rgba(0, 0, 0, 0.3)',
-                                                height: '12px',
-                                                transform: 'translateX(-25%) rotate(45deg)',
-                                                width: '12px',
+                                                borderColor: 'transparent transparent transparent rgba(0, 0, 0, 0.3)',
+                                                borderStyle: 'solid',
+                                                borderWidth: '8px 0px 8px 8px',
+                                                height: 0,
+                                                width: 0,
                                             }}
                                         />
                                     </button>
@@ -119,12 +117,11 @@ const Details: React.FC<{}> = () => {
                                     >
                                         <div
                                             style={{
-                                                backgroundColor: 'transparent',
-                                                borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                                borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                                height: '12px',
-                                                transform: 'translateY(-25%) rotate(45deg)',
-                                                width: '12px',
+                                                borderColor: 'rgba(0, 0, 0, 0.3) transparent transparent transparent',
+                                                borderStyle: 'solid',
+                                                borderWidth: '8px 8px 0px 8px',
+                                                height: 0,
+                                                width: 0,
                                             }}
                                         />
                                         <div style={{ marginLeft: '8px' }}>Down</div>
@@ -150,12 +147,11 @@ const Details: React.FC<{}> = () => {
                                     >
                                         <div
                                             style={{
-                                                backgroundColor: 'transparent',
-                                                borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                                borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
-                                                height: '12px',
-                                                transform: 'translateX(25%) rotate(45deg)',
-                                                width: '12px',
+                                                borderColor: 'transparent rgba(0, 0, 0, 0.3) transparent transparent',
+                                                borderStyle: 'solid',
+                                                borderWidth: '8px 8px 8px 0px',
+                                                height: 0,
+                                                width: 0,
                                             }}
                                         />
                                         <div style={{ marginLeft: '8px' }}>Left</div>
@@ -165,7 +161,7 @@ const Details: React.FC<{}> = () => {
                         </div>
                     )}
                     source={`
-<!-- Up arrow button -->
+<!-- Up triangle button -->
 <button style="
     /* Center the content */
     align-items: center;
@@ -175,26 +171,22 @@ const Details: React.FC<{}> = () => {
     /* Spacing */
     padding: 8px;
 ">
-    <!-- Arrow -->
+    <!-- Triangle -->
     <div style="
-        /* Transparent background */
-        background-color: transparent;
-
-        /* Edges */
-        border-left: 1px solid rgba(0, 0, 0, 0.3);
-        border-top: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translateY(25%) rotate(45deg);
+        border-color: transparent transparent rgba(0, 0, 0, 0.3);
+        border-style: solid;
+        border-width: 0px 8px 8px;
 
         /* Size */
-        height: 12px;
-        width: 12px;
+        height: 0px;
+        width: 0px;
     "></div>
 
     <!-- Content -->
     ...
 </button>
 
-<!-- Right arrow button -->
+<!-- Right triangle button -->
 <button style="
     /* Center the content */
     align-items: center;
@@ -207,23 +199,19 @@ const Details: React.FC<{}> = () => {
     <!-- Content -->
     ...
 
-    <!-- Arrow -->
+    <!-- Triangle -->
     <div style="
-        /* Transparent background */
-        background-color: transparent;
-
-        /* Edges */
-        border-right: 1px solid rgba(0, 0, 0, 0.3);
-        border-top: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translateX(-25%) rotate(45deg);
+        border-color: transparent transparent transparent rgba(0, 0, 0, 0.3);
+        border-style: solid;
+        border-width: 8px 0px 8px 8px;
 
         /* Size */
-        height: 12px;
-        width: 12px;
+        height: 0px;
+        width: 0px;
     "></div>
 </button>
 
-<!-- Down arrow button -->
+<!-- Down triangle button -->
 <button style="
     /* Center the content */
     align-items: center;
@@ -233,26 +221,22 @@ const Details: React.FC<{}> = () => {
     /* Spacing */
     padding: 8px;
 ">
-    <!-- Arrow -->
+    <!-- Triangle -->
     <div style="
-        /* Transparent background */
-        background-color: transparent;
-
-        /* Edges */
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        border-right: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translateY(-25%) rotate(45deg);
+        border-color: rgba(0, 0, 0, 0.3) transparent transparent;
+        border-style: solid;
+        border-width: 8px 8px 0px;
 
         /* Size */
-        height: 12px;
-        width: 12px;
+        height: 0px;
+        width: 0px;
     "></div>
 
     <!-- Content -->
     ...
 </button>
 
-<!-- Left arrow button -->
+<!-- Left triangle button -->
 <button style="
     /* Center the content */
     align-items: center;
@@ -262,19 +246,15 @@ const Details: React.FC<{}> = () => {
     /* Spacing */
     padding: 8px;
 ">
-    <!-- Arrow -->
+    <!-- Triangle -->
     <div style="
-        /* Transparent background */
-        background-color: transparent;
-
-        /* Edges */
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        border-left: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translateX(25%) rotate(45deg);
+        border-color: transparent rgba(0, 0, 0, 0.3) transparent transparent;
+        border-style: solid;
+        border-width: 8px 8px 8px 0px;
 
         /* Size */
-        height: 12px;
-        width: 12px;
+        height: 0px;
+        width: 0px;
     "></div>
 
     <!-- Content -->
@@ -284,7 +264,7 @@ const Details: React.FC<{}> = () => {
                 />
             </div>
 
-            <RelatedPatterns patterns={[Pattern.CloseButton, Pattern.PopoverArrow, Pattern.TriangleButtons]} />
+            <RelatedPatterns patterns={[Pattern.ArrowButtons]} />
         </DetailsLayout>
     );
 };
