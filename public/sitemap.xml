@@ -1,6 +1,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url><loc>https://csslayout.io/patterns</loc></url>
     <url><loc>https://csslayout.io/patterns/accordion</loc></url>
+    <url><loc>https://csslayout.io/patterns/arrow-buttons</loc></url>
     <url><loc>https://csslayout.io/patterns/avatar</loc></url>
     <url><loc>https://csslayout.io/patterns/avatar-list</loc></url>
     <url><loc>https://csslayout.io/patterns/badge</loc></url>
