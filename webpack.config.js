@@ -27,7 +27,6 @@ if (process.env.NODE_ENV === "analyse") {
 module.exports = {
     entry: {
         'vendor-styles': [
-            './vendors/normalize.css@8.0.1/normalize.css',
             './vendors/highlight.js@9.12.0/theme.min.css',
             './vendors/tailwind@1.1.4/tailwind.css',
         ],
