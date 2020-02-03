@@ -16,7 +16,7 @@ const Layout: React.FC<{}> = ({ children }) => {
     return (
         <>
             <Github />
-            <div style={{ margin: '0 auto 64px auto', maxWidth: '1024px', position: 'relative' }}>
+            <div style={{ margin: '0 auto', position: 'relative' }}>
                 {children}
                 <Footer />
             </div>
