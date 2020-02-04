@@ -16,7 +16,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create stamp border with CSS" />
                 <meta name="keywords" content="css radial gradient, css stamp border" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <BrowserFrame
                     content={(
                         <div

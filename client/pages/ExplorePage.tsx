@@ -24,69 +24,44 @@ const ExplorePage = () => {
                 <meta name="description" content="CSS layouts and patterns" />
                 <meta name="keywords" content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" />
             </Helmet>
-            <div style={{ margin: '32px 0' }}>
+            <div className='sm:text-2xl p-4 xl:pl-0'>
                 <Link
                     to="/"
                     style={{
-                        backgroundColor: '#00449E',
-                        borderRadius: '4px',
-                        color: '#FFF',
-                        padding: '8px 16px',
                         textDecoration: 'none',
                     }}
                 >
-                    .home
+                    Home
                 </Link>
+                <span className='mx-2'>/</span>
+                <span>Explore</span>
             </div>
-            <div
-                style={{
-                    border: '1px solid rgba(0, 0, 0, 0.2)',
-                    borderBottomColor: 'transparent',
-                    marginTop: '32px',
-                    position: 'relative',
-                }}
-            >
-                <h1
-                    style={{
-                        backgroundColor: '#FFF',
-                        fontSize: '36px',
-                        fontWeight: 600,
-                        left: '50%',
-                        lineHeight: 1.5,
-                        margin: 0,
-                        padding: '0 16px',
-                        position: 'absolute',
-                        top: 0,
-                        transform: 'translate(-50%, -50%)',
-                    }}
-                >
-                    Explore
-                </h1>
+            <div>
+                <div className='xl:border-l xl:border-t xl:border-r xl:border-gray-400 p-4'>
+                    <h2
+                        className='text-2xl mb-6'
+                        style={{
+                            fontWeight: 300,
+                            lineHeight: 1.5,
+                            padding: '0',
+                            textAlign: 'center',
+                        }}
+                    >
+                        Here is the collection of {numPatterns} patterns
+                    </h2>
+                    <div className='mb-5' style={{ textAlign: 'center' }}>
+                        All covers you see in this page are made with CSS only. Inspect them! 🎉
+                    </div>
 
-                <h2
-                    style={{
-                        fontSize: '24px',
-                        fontWeight: 300,
-                        lineHeight: 1.5,
-                        margin: '32px 0 16px 0',
-                        padding: '0',
-                        textAlign: 'center',
-                    }}
-                >
-                    Here is the collection of {numPatterns} patterns
-                </h2>
-                <div style={{ marginBottom: '32px', textAlign: 'center' }}>
-                    All covers you see in this page are made with CSS only. Inspect them! 🎉
-                </div>
-
-                <div style={{ margin: '24px 0', textAlign: 'center' }}>
-                    <ProductHuntBadge />
+                    <div className='flex justify-center pb-5'>
+                        <ProductHuntBadge />
+                    </div>
                 </div>
 
                 <section>
                     <Heading title="Layout" />
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                    <div className='xl:border-l xl:border-r xl:border-gray-400' style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
                         <CoverCard pattern={Pattern.CardLayout} />
                         <CoverCard pattern={Pattern.HolyGrail} />
                         <CoverCard pattern={Pattern.SameHeightColumns} />
@@ -102,7 +77,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Navigation" />
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                    <div className='xl:border-l xl:border-r xl:border-gray-400' style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
                         <CoverCard pattern={Pattern.Breadcrumb} />
                         <CoverCard pattern={Pattern.CircularNavigation} />
                         <CoverCard pattern={Pattern.DotNavigation} />
@@ -123,7 +98,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Input" />
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                    <div className='xl:border-l xl:border-r xl:border-gray-400' style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
                         <CoverCard pattern={Pattern.ButtonWithIcon} />
                         <CoverCard pattern={Pattern.Chip} />
                         <CoverCard pattern={Pattern.CustomCheckboxButton} />
@@ -146,7 +121,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Display" />
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                    <div className='xl:border-l xl:border-r xl:border-gray-400' style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
                         <CoverCard pattern={Pattern.Accordion} />
                         <CoverCard pattern={Pattern.ArrowButtons} />
                         <CoverCard pattern={Pattern.Avatar} />
@@ -196,7 +171,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Feedback" />
 
-                    <div style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                    <div className='xl:border-l xl:border-r xl:border-gray-400' style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
                         <CoverCard pattern={Pattern.Modal} />
                         <CoverCard pattern={Pattern.Notification} />
                         <CoverCard pattern={Pattern.PopoverArrow} />

@@ -7,8 +7,9 @@ import React from 'react';
 
 const Github: React.FC<{}> = () => {
     return (
-        <a href="https://github.com/phuoc-ng/csslayout" target="_blank">
+        <a href="https://github.com/phuoc-ng/csslayout" rel="noopener noreferrer" target="_blank">
             <svg
+                className="z-10"
                 width="80"
                 height="80"
                 viewBox="0 0 250 250"

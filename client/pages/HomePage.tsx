@@ -27,20 +27,18 @@ const HomePage = () => {
                 <meta name="keywords" content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" />
             </Helmet>
             <div
+                className='xl:border-t xl:border-l xl:border-r xl:border-gray-400'
                 style={{
-                    border: '1px solid rgba(0, 0, 0, 0.2)',
-                    borderBottom: 'none',
                     marginTop: '64px',
                 }}
             >
                 <div style={{ position: 'relative' }}>
                     <h1
+                        className='text-3xl md:text-4xl lg:text-5xl'
                         style={{
                             backgroundColor: '#00449E',
                             borderRadius: '4px',
                             color: '#FFF',
-                            fontSize: '36px',
-                            fontWeight: 600,
                             left: '50%',
                             lineHeight: 1.5,
                             margin: 0,
@@ -66,21 +64,21 @@ const HomePage = () => {
                         a collection of popular layouts and patterns made with CSS
                     </h2>
 
-                    <div style={{ display: 'flex', lineHeight: 1.5 }}>
-                        <div style={{ flex: 1, padding: '24px'}} className="drop-cap">
+                    <div className='md:flex' style={{ lineHeight: 1.5 }}>
+                        <div style={{ flex: 1 }} className="drop-cap p-5">
                             <div style={{ marginBottom: '16px' }}>
                                 Components, patterns and layouts are things you have to deal with everyday.
                             </div>
                             <div>There are a lot of CSS frameworks that provide rich set of layouts and patterns,
                             but I usually don't want to include all of them in my project.</div>
                         </div>
-                        <div style={{ flex: 1, padding: '24px'}} className="drop-cap">
+                        <div style={{ flex: 1 }} className="drop-cap p-5">
                             <div style={{ marginBottom: '16px' }}>
                                 So that I collect most popular layouts and patterns that can be built with pure CSS.
                             </div>
                             <div>They are powered by modern CSS features such as flexbox and CSS grid.</div>
                         </div>
-                        <div style={{ flex: 1, padding: '24px'}} className="drop-cap">
+                        <div style={{ flex: 1 }} className="drop-cap p-5">
                             <div style={{ marginBottom: '16px' }}>
                                 Starting with the most basic part, you can customize easily for each specific need.
                             </div>
@@ -88,7 +86,7 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    <div style={{ margin: '24px 0', textAlign: 'center' }}>
+                    <div className='flex justify-center' style={{ margin: '24px 0' }}>
                         <ProductHuntBadge />
                     </div>
 
@@ -175,8 +173,8 @@ const HomePage = () => {
                         }}
                     >
                         <div
+                            className='text-5xl lg:text-6xl'
                             style={{
-                                fontSize: '64px',
                                 fontWeight: 600,
                                 marginBottom: '16px',
                             }}
@@ -185,11 +183,11 @@ const HomePage = () => {
                         </div>
                         <Link
                             to="/patterns"
+                            className='text-2xl'
                             style={{
                                 backgroundColor: '#00449e',
                                 borderRadius: '4px',
                                 color: '#FFF',
-                                fontSize: '24px',
                                 padding: '12px 16px',
                                 textDecoration: 'none',
                             }}

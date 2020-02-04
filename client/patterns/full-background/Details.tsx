@@ -19,7 +19,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a full background element with CSS" />
                 <meta name="keywords" content="css background size cover, css full background" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <BrowserFrame
                     content={(
                         <div

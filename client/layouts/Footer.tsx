@@ -11,9 +11,8 @@ const Footer: React.FC<{}> = () => {
     return (
         <>
             <div
+                className='xl:border-l xl:border-r xl:border-gray-400'
                 style={{
-                    borderLeft: '1px solid rgba(0, 0, 0, 0.2)',
-                    borderRight: '1px solid rgba(0, 0, 0, 0.2)',
                     padding: '32px',
                     textAlign: 'center',
                 }}
@@ -24,14 +23,11 @@ const Footer: React.FC<{}> = () => {
                 <SubscribeForm />
             </div>
             <div
-                style={{
-                    border: '1px solid rgba(0, 0, 0, 0.2)',
-                    display: 'flex',
-                }}
+                className='sm:flex md:border-b md:border-gray-400 xl:border-l xl:border-r xl:border-b xl:border-gray-400 xl:mb-16'
             >
                 <div
+                    className='border-t border-gray-400 sm:border-r'
                     style={{
-                        borderRight: '1px solid rgba(0, 0, 0, 0.2)',
                         display: 'flex',
                         flex: 1,
                         fontSize: '16px',
@@ -58,61 +54,61 @@ const Footer: React.FC<{}> = () => {
                                     padding: '0 8px 0 0',
                                 }}
                             >
-                                .my-products
+                                .products
                             </h3>
                             &#123;
                         </li>
                         <ul style={{ listStyleType: 'none', margin: 0, paddingLeft: '24px' }}>
-                            <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
-                                <div>css-layout,</div>
-                                <div style={{ color: 'rgba(0, 0, 0, 0.3)' }}>
-                                    /&#42; You are here &#42;/
-                                </div>
-                            </li>
-                            <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
+                            <li>
                                 <a
-                                    href="https://formvalidation.io"
+                                    href="https://csslayout.io"
+                                    rel="noopener noreferrer"
                                     style={{ textDecoration: 'none' }}
                                     target="_blank"
-                                    title="FormValidation ~ best validation library for JavaScript"
+                                    title="CSS Layout - a collection of popular layouts and patterns made with CSS"
+                                >
+                                    css-layout,
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://formvalidation.io"
+                                    rel="noopener noreferrer"
+                                    style={{ textDecoration: 'none' }}
+                                    target="_blank"
+                                    title="FormValidation - the best validation library for JavaScript"
                                 >
                                     form-validation,
                                 </a>
-                                <div style={{ color: 'rgba(0, 0, 0, 0.3)' }}>
-                                    /&#42; A JS validation library &#42;/
-                                </div>
                             </li>
-                            <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
+                            <li>
                                 <a
                                     href="https://blur.page"
+                                    rel="noopener noreferrer"
                                     style={{ textDecoration: 'none' }}
                                     target="_blank"
-                                    title="BlurPage ~ a browser extension to hide sensitive element on page"
+                                    title="BlurPage - a browser extension to hide sensitive element on page"
                                 >
                                     blur-page,
                                 </a>
-                                <div style={{ color: 'rgba(0, 0, 0, 0.3)' }}>
-                                    /&#42; Chrome and Firefox extensions &#42;/
-                                </div>
                             </li>
-                            <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
+                            <li>
                                 <a
                                     href="https://react-pdf-viewer.dev"
+                                    rel="noopener noreferrer"
                                     style={{ textDecoration: 'none' }}
                                     target="_blank"
-                                    title="React PDF Viewer ~ a PDF viewer made for React"
+                                    title="React PDF Viewer - a PDF viewer made for React"
                                 >
                                     react-pdf-viewer,
                                 </a>
-                                <div style={{ color: 'rgba(0, 0, 0, 0.3)' }}>
-                                    /&#42; A React component &#42;/
-                                </div>
                             </li>
                         </ul>
                         <li>&#125;</li>
                     </ul>
                 </div>
                 <div
+                    className='border-t border-gray-400'
                     style={{
                         flex: 1,
                         fontSize: '16px',
@@ -148,6 +144,7 @@ const Footer: React.FC<{}> = () => {
                                 <div>twitter:</div>
                                 <a
                                     href="https://twitter.com/nghuuphuoc"
+                                    rel="noopener noreferrer"
                                     style={{ marginLeft: 'auto', textDecoration: 'none' }}
                                     target="_blank"
                                 >
@@ -159,6 +156,7 @@ const Footer: React.FC<{}> = () => {
                                 <div>dev.to:</div>
                                 <a
                                     href="https://dev.to/phuocng"
+                                    rel="noopener noreferrer"
                                     style={{ marginLeft: 'auto', textDecoration: 'none' }}
                                     target="_blank"
                                 >
@@ -170,6 +168,7 @@ const Footer: React.FC<{}> = () => {
                                 <div>email:</div>
                                 <a
                                     href="mailto: me@phuoc.ng"
+                                    rel="noopener noreferrer"
                                     style={{ marginLeft: 'auto', textDecoration: 'none' }}
                                     target="_blank"
                                 >
@@ -181,10 +180,11 @@ const Footer: React.FC<{}> = () => {
                                 <div>github:</div>
                                 <a
                                     href="https://github.com/phuoc-ng/csslayout"
+                                    rel="noopener noreferrer"
                                     style={{ marginLeft: 'auto', textDecoration: 'none' }}
                                     target="_blank"
                                 >
-                                    github.com/phuoc-ng/csslayout
+                                    phuoc-ng/csslayout
                                 </a>
                                 <div>;</div>
                             </li>

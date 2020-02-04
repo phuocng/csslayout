@@ -20,7 +20,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create nested dropdown menu with CSS" />
                 <meta name="keywords" content="css dropdown menu, css multi-level dropdown menu, css nested dropdown menu" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Hover on the Patterns &rarr; Navigation to see the sub dropdowns.
                 </div>

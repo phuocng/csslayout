@@ -20,7 +20,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a chip component with CSS flexbox" />
                 <meta name="keywords" content="css chip, css flexbox, css tag" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     You can use a <Link to='/patterns/close-button'>close button</Link> to remove a chip.
                 </div>

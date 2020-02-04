@@ -27,7 +27,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a stepper input with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css stepper input" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <BrowserFrame
                     content={(
                         <div

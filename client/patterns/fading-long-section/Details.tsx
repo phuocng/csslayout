@@ -17,7 +17,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Fading long section to indicate there is more content" />
                 <meta name="keywords" content="css fading overflow, css linear gradient" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Fading a long section to indicate there is more content.
                 </div>

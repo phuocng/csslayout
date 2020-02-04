@@ -22,7 +22,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a tooltip with CSS" />
                 <meta name="keywords" content="css tooltip" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Move the mouser over the main element to see the tooltip.
                 </div>

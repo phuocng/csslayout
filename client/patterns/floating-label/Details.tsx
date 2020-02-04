@@ -18,7 +18,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a floating label with CSS" />
                 <meta name="keywords" content="css floating label, placeholder shown" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Type something in the input to see how the label is shown up.
                 </div>

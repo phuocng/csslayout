@@ -18,7 +18,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create stacked cards with CSS" />
                 <meta name="keywords" content="css card, css stacked cards, css transform rotate" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <BrowserFrame
                     content={(
                         <div

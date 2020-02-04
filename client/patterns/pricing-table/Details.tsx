@@ -22,7 +22,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a pricing table with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css pricing table" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     You can <Link to='/patterns/ribbon'>add</Link> <Link to='/patterns/corner-ribbon'>a ribbon</Link> to
                     indicate the most popular option.

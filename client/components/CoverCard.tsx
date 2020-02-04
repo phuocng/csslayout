@@ -18,6 +18,7 @@ const CoverCard: React.FC<CoverCardProps> = ({ pattern }) => {
     return (
         <Link
             to={`/patterns/${slug(pattern)}`}
+            className='w-1/2 sm:w-1/4 md:w-1/5 lg:w-1/6'
             style={{
                 alignItems: 'center',
                 display: 'flex',
@@ -25,14 +26,12 @@ const CoverCard: React.FC<CoverCardProps> = ({ pattern }) => {
                 justifyContent: 'flex-start',
                 padding: '16px',
                 textDecoration: 'none',
-                width: '16.666666666666668%',
             }}
         >
             <CoverLoader pattern={pattern} />
             <h4
+                className='font-normal'
                 style={{
-                    fontSize: '16px',
-                    fontWeight: 500,
                     margin: 0,
                     paddingTop: '12px',
                     textAlign: 'center',

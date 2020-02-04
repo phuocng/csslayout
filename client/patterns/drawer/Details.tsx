@@ -17,7 +17,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a drawer navigation with CSS" />
                 <meta name="keywords" content="css drawer, css off-canvas" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     This pattern is also known as off-canvas.
                 </div>

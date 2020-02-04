@@ -23,7 +23,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a mega menu with CSS" />
                 <meta name="keywords" content="css mega menu" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Move the mouse over the seccond navigation item to see the mega menu.
                 </div>

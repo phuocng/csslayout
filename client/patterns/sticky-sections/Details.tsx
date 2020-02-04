@@ -18,7 +18,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create sticky sections with CSS" />
                 <meta name="keywords" content="css layout, css sticky, css sticky sections" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Try to scroll the main content to see each section sticks to the top of page.
                 </div>

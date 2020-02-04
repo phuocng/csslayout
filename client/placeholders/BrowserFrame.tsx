@@ -18,10 +18,10 @@ const BrowserFrame: React.FC<BrowserFrameProps> = ({ content, source }) => {
 
     return (
         <div
+            className='shadow-2xl'
             style={{
                 border: '1px solid rgba(0, 0, 0, 0.2)',
                 borderRadius: '4px',
-                boxShadow: '0 16px 40px -8px rgba(0, 0, 0, .5)',
             }}
         >
             <div

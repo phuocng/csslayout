@@ -19,7 +19,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create an initial avatar with CSS" />
                 <meta name="keywords" content="css avatar" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     To center the content, you also can use other technique demonstrated in
                     the <Link to='/patterns/centering'>Centering</Link> pattern.
