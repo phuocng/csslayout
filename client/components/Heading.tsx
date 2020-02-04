@@ -11,11 +11,11 @@ interface HeadingProps {
 
 const Heading: React.FC<HeadingProps> = ({ title }) => {
     return (
-        <div style={{ borderTop: '1px solid rgba(0, 0, 0, .2)', position: 'relative' }}>
+        <div className='border-t border-gray-400' style={{ position: 'relative' }}>
             <h3
+                className='text-2xl'
                 style={{
                     backgroundColor: '#FFF',
-                    fontSize: '20px',
                     fontWeight: 700,
                     left: '32px',
                     lineHeight: 1.5,
