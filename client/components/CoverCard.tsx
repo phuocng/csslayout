@@ -18,7 +18,7 @@ const CoverCard: React.FC<CoverCardProps> = ({ pattern }) => {
     return (
         <Link
             to={`/patterns/${slug(pattern)}`}
-            className='w-1/2 md:w-1/5 lg:w-1/6'
+            className='w-1/2 sm:w-1/4 md:w-1/5 lg:w-1/6'
             style={{
                 alignItems: 'center',
                 display: 'flex',

@@ -19,7 +19,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a notification with CSS flexbox" />
                 <meta name="keywords" content="css alert, css flexbox, css notification" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     You can use the <Link to='/patterns/close-button'>close button</Link> to
                     represent the button for closing the notification.

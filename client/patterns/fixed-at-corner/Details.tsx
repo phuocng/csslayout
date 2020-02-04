@@ -19,7 +19,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Fix an element at corner with CSS" />
                 <meta name="keywords" content="css fixed" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <BrowserFrame
                     content={(
                         <div style={{ height: '100%', position: 'relative' }}>

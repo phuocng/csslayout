@@ -20,7 +20,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a sticky header with CSS" />
                 <meta name="keywords" content="css layout, css position sticky, css sticky header" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Try to scroll the main content to see the header sticks to the top of page.
                 </div>

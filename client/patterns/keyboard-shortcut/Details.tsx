@@ -50,7 +50,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a keyboard shortcut with CSS" />
                 <meta name="keywords" content="kbd tag, keyboard shortcut" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     We use the native <code>kbd</code> tag to display the keyboard shortcut.
                 </div>

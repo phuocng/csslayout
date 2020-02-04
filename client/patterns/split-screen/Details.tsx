@@ -19,7 +19,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a split screen with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css layout, css split screen" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <BrowserFrame
                     content={(
                         <div style={{ display: 'flex', height: '100%' }}>

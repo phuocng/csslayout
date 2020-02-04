@@ -38,7 +38,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create an avatar list with CSS flexbox" />
                 <meta name="keywords" content="css avatar, css flexbox" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <BrowserFrame
                     content={(
                         <div

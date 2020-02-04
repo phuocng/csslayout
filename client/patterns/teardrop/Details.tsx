@@ -20,7 +20,7 @@ const Details: React.FC<{}> = () => {
                     content="css border radius, css teardrop, css water drop shape, css water droplet"
                 />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <BrowserFrame
                     content={(
                         <div

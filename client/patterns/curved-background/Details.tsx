@@ -18,7 +18,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create an element with curved background" />
                 <meta name="keywords" content="css border radius, css curved background" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <BrowserFrame
                     content={(
                         <div

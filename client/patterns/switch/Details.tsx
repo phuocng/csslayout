@@ -21,7 +21,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a switch with CSS flexbox" />
                 <meta name="keywords" content="css custom checkbox, css flexbox, css switch, css switcher" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px'}}>
                     The checkbox is placed inside a label. So when clicking on the label,
                     the checkbox will be checked even though it's hidden.

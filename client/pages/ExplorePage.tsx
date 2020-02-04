@@ -24,7 +24,7 @@ const ExplorePage = () => {
                 <meta name="description" content="CSS layouts and patterns" />
                 <meta name="keywords" content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" />
             </Helmet>
-            <div className='text-2xl p-4 xl:pl-0'>
+            <div className='sm:text-2xl p-4 xl:pl-0'>
                 <Link
                     to="/"
                     style={{

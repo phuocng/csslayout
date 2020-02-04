@@ -16,7 +16,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create resizable indicators with CSS" />
                 <meta name="keywords" content="css resizable, css resize cursor" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     You can move the mouse over each squares located at the corners and the middle of sides to see
                     the cursors which indicate the associated side can be resized.

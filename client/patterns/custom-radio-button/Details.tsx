@@ -67,7 +67,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a custom radio button with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css radio" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <BrowserFrame
                     content={(
                         <div

@@ -17,7 +17,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a full screen menu with CSS flexbox" />
                 <meta name="keywords" content="css fixed, css flexbox, css menu" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <BrowserFrame
                     content={(
                         <div

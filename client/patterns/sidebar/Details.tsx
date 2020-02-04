@@ -17,7 +17,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a sidebar with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css layout, css sidebar" />
             </Helmet>
-            <div style={{ padding: '64px 32px' }}>
+            <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>Try to scroll the main content!</div>
                 <BrowserFrame
                     content={(

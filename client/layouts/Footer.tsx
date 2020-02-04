@@ -23,10 +23,10 @@ const Footer: React.FC<{}> = () => {
                 <SubscribeForm />
             </div>
             <div
-                className='md:flex xl:border-l xl:border-r xl:border-b xl:border-gray-400 xl:mb-16'
+                className='sm:flex md:border-b md:border-gray-400 xl:border-l xl:border-r xl:border-b xl:border-gray-400 xl:mb-16'
             >
                 <div
-                    className='border-t border-gray-400 md:border-r'
+                    className='border-t border-gray-400 sm:border-r'
                     style={{
                         display: 'flex',
                         flex: 1,
@@ -184,7 +184,7 @@ const Footer: React.FC<{}> = () => {
                                     style={{ marginLeft: 'auto', textDecoration: 'none' }}
                                     target="_blank"
                                 >
-                                    github.com/phuoc-ng/csslayout
+                                    phuoc-ng/csslayout
                                 </a>
                                 <div>;</div>
                             </li>
