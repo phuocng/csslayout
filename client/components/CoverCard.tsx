@@ -30,9 +30,8 @@ const CoverCard: React.FC<CoverCardProps> = ({ pattern }) => {
         >
             <CoverLoader pattern={pattern} />
             <h4
+                className='font-normal'
                 style={{
-                    fontSize: '16px',
-                    fontWeight: 500,
                     margin: 0,
                     paddingTop: '12px',
                     textAlign: 'center',
