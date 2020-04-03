@@ -14,8 +14,8 @@ const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Watermark">
             <Helmet>
-                <meta name="description" content="Create a watermask with CSS" />
-                <meta name="keywords" content="css watermask" />
+                <meta name="description" content="Create a watermark with CSS" />
+                <meta name="keywords" content="css watermark" />
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame

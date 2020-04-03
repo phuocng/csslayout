@@ -74,7 +74,7 @@ Note that we use \`flex-direction: row-reverse\` on the container
     margin: 0 2px;
     padding: 0;
 
-    /* Used to postion the hover state */
+    /* Used to position the hover state */
     position: relative;
 }
 </style>

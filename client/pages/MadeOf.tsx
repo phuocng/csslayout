@@ -42,7 +42,7 @@ this
         expect(r).is(superFastWebsite);
         expect(r).is(seoFriendly);
     })
-    .finall(() => {
+    .finally(() => {
         /* Give me 1 Github star 🎉 */
     });
 `}
