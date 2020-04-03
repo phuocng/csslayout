@@ -62,7 +62,7 @@ const Details: React.FC<{}> = () => {
     <!-- Other element such as avatar -->
     ...
 
-    <!-- The presense indicator -->
+    <!-- The presence indicator -->
     <div style="
         /* Shown at the bottom right corner */
         bottom: 0,
