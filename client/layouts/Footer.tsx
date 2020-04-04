@@ -24,7 +24,9 @@ const Footer: React.FC<{}> = () => {
                                 title="BlurPage - a browser extension to hide sensitive element on page"
                             >
                                 <div className='font-semibold'>Blur Page</div>
-                                <span className='text-gray-600'>a browser extension to hide sensitive element on page</span>
+                                <span className='text-gray-600'>
+                                    a browser extension to hide sensitive element on page
+                                </span>
                             </a>
                         </li>
                         <li className='w-1/2 sm:w-1/3 px-1 mb-6'>
@@ -36,7 +38,9 @@ const Footer: React.FC<{}> = () => {
                                 title="CSS Layout - a collection of popular layouts and patterns made with CSS"
                             >
                                 <div className='font-semibold'>CSS Layout</div>
-                                <span className='text-gray-600'>a collection of popular layouts and patterns made with CSS</span>
+                                <span className='text-gray-600'>
+                                    a collection of popular layouts and patterns made with CSS
+                                </span>
                             </a>
                         </li>
                         <li className='w-1/2 sm:w-1/3 px-1 mb-6'>
@@ -72,7 +76,9 @@ const Footer: React.FC<{}> = () => {
                                 title="HTML DOM - Common tasks of managing HTML DOM with native API"
                             >
                                 <div className='font-semibold'>HTML DOM</div>
-                                <span className='text-gray-600'>common tasks of managing HTML DOM with vanilla JavaScript</span>
+                                <span className='text-gray-600'>
+                                    common tasks of managing HTML DOM with vanilla JavaScript
+                                </span>
                             </a>
                         </li>
                         <li className='w-1/2 sm:w-1/3 px-1 mb-6'>

@@ -47,20 +47,20 @@ this
 
 - Clone the project:
 
-~~~
+~~~ console
 $ git clone https://github.com/phuoc-ng/csslayout
 ~~~
 
 - Install the dependencies:
 
-~~~
+~~~ console
 $ cd csslayout
 $ npm install
 ~~~
 
 - Run it on the local:
 
-~~~
+~~~ console
 $ npm run dev-server
 ~~~
 
@@ -72,7 +72,7 @@ PRs are welcomed. If you thing there are any missing useful layouts or patterns,
 
 It's important to note that you should run the following command to lint the code:
 
-~~~
+~~~ console
 $ npm run lint
 ~~~
 
@@ -80,8 +80,22 @@ If there is any issue, it will be logged in the `tslint.log` file.
 
 ## About
 
-This project is developed by [Nguyen Huu Phuoc](https://twitter.com/nghuuphuoc).
-You might be interesting in my projects:
-* [FormValidation](https://formvalidation.io)
-* [BlurPage](https://blur.page)
-* [React PDF Viewer](https://react-pdf-viewer.dev)
+This project is developed by _Nguyen Huu Phuoc_. I love building products and sharing knowledge.
+
+Be my friend on
+* [Twitter](https://twitter.com/nghuuphuoc)
+* [dev.to](https://dev.to/phuocng)
+* [Github](https://github.com/phuoc-ng)
+
+## Products
+
+You might be interesting in my products:
+
+| Product                                           | Description                                                       |
+|---------------------------------------------------|-------------------------------------------------------------------|
+| [Blur Page](https://blur.page)                    | A browser extension to hide sensitive information on a web page   |
+| [CSS Layout](https://csslayout.io)                | A collection of popular layouts and patterns made with CSS        |
+| [Fake Numbers](https://fakenumbers.io)            | Generate fake and valid numbers                                   |
+| [Form Validation](https://formvalidation.io)      | The best validation library for JavaScript                        |
+| [HTML DOM](https://htmldom.dev)                   | How to manage HTML DOM with vanilla JavaScript                    |
+| [React PDF Viewer](https://react-pdf-viewer.dev)  | A React component to view a PDF document                          |
