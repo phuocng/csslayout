@@ -39,7 +39,7 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
                 <span className='mx-2'>/</span>
                 <h1>{title}</h1>
             </div>
-            <div className='xl:border-l xl:border-t xl:border-r xl:border-gray-400'>
+            <div className='xl:border xl:border-gray-400'>
                 {children}
             </div>
         </Layout>

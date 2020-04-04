@@ -16,10 +16,10 @@ const Layout: React.FC<{}> = ({ children }) => {
     return (
         <>
             <Github />
-            <div style={{ margin: '0 auto', position: 'relative' }}>
+            <div className="ml-auto mr-auto max-w-4xl mb-12">
                 {children}
-                <Footer />
             </div>
+            <Footer />
         </>
     );
 };

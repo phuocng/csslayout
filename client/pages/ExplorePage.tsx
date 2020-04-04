@@ -166,7 +166,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Feedback" />
 
-                    <div className='xl:border-l xl:border-r xl:border-gray-400' style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                    <div className='xl:border-b xl:border-l xl:border-r xl:border-gray-400' style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
                         <CoverCard pattern={Pattern.Modal} />
                         <CoverCard pattern={Pattern.Notification} />
                         <CoverCard pattern={Pattern.PopoverArrow} />
