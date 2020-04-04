@@ -18,7 +18,7 @@ const Footer: React.FC<{}> = () => {
                 }}
             >
                 <div style={{ lineHeight: 1.5, marginBottom: '12px' }}>
-                    Subscribe to the newsletter for the latest layouts or patterns. No spam. Ever!
+                    Hit the Subscribe button for the latest news on my tools. No spam. Ever!
                 </div>
                 <SubscribeForm />
             </div>
