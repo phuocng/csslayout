@@ -12,7 +12,6 @@ import Heading from '../components/Heading';
 import Pattern from '../constants/Pattern';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 import Layout from '../layouts/Layout';
-import ProductHuntBadge from '../layouts/ProductHuntBadge';
 
 const ExplorePage = () => {
     useDocumentTitle('CSS Layout ∙ Explore');
@@ -51,10 +50,6 @@ const ExplorePage = () => {
                     </h2>
                     <div className='mb-5' style={{ textAlign: 'center' }}>
                         All covers you see in this page are made with CSS only. Inspect them! 🎉
-                    </div>
-
-                    <div className='flex justify-center pb-5'>
-                        <ProductHuntBadge />
                     </div>
                 </div>
 
