@@ -13,7 +13,6 @@ import CoverCard from '../components/CoverCard';
 import Pattern from '../constants/Pattern';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 import Layout from '../layouts/Layout';
-import ProductHuntBadge from '../layouts/ProductHuntBadge';
 import MadeOf from './MadeOf';
 
 const HomePage = () => {
@@ -84,10 +83,6 @@ const HomePage = () => {
                             </div>
                             <div>By composing them, you can have any possible layout that exists in the real life.</div>
                         </div>
-                    </div>
-
-                    <div className='flex justify-center' style={{ margin: '24px 0' }}>
-                        <ProductHuntBadge />
                     </div>
 
                     <div

@@ -12,7 +12,6 @@ import Heading from '../components/Heading';
 import Pattern from '../constants/Pattern';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 import Layout from '../layouts/Layout';
-import ProductHuntBadge from '../layouts/ProductHuntBadge';
 
 const ExplorePage = () => {
     useDocumentTitle('CSS Layout ∙ Explore');
@@ -52,16 +51,12 @@ const ExplorePage = () => {
                     <div className='mb-5' style={{ textAlign: 'center' }}>
                         All covers you see in this page are made with CSS only. Inspect them! 🎉
                     </div>
-
-                    <div className='flex justify-center pb-5'>
-                        <ProductHuntBadge />
-                    </div>
                 </div>
 
                 <section>
                     <Heading title="Layout" />
 
-                    <div className='xl:border-l xl:border-r xl:border-gray-400' style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                    <div className='xl:border-l xl:border-r xl:border-gray-400 flex flex-wrap p-8'>
                         <CoverCard pattern={Pattern.CardLayout} />
                         <CoverCard pattern={Pattern.HolyGrail} />
                         <CoverCard pattern={Pattern.SameHeightColumns} />
@@ -77,7 +72,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Navigation" />
 
-                    <div className='xl:border-l xl:border-r xl:border-gray-400' style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                    <div className='xl:border-l xl:border-r xl:border-gray-400 flex flex-wrap p-8'>
                         <CoverCard pattern={Pattern.Breadcrumb} />
                         <CoverCard pattern={Pattern.CircularNavigation} />
                         <CoverCard pattern={Pattern.DotNavigation} />
@@ -98,7 +93,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Input" />
 
-                    <div className='xl:border-l xl:border-r xl:border-gray-400' style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                    <div className='xl:border-l xl:border-r xl:border-gray-400 flex flex-wrap p-8'>
                         <CoverCard pattern={Pattern.ButtonWithIcon} />
                         <CoverCard pattern={Pattern.Chip} />
                         <CoverCard pattern={Pattern.CustomCheckboxButton} />
@@ -121,7 +116,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Display" />
 
-                    <div className='xl:border-l xl:border-r xl:border-gray-400' style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                    <div className='xl:border-l xl:border-r xl:border-gray-400 flex flex-wrap p-8'>
                         <CoverCard pattern={Pattern.Accordion} />
                         <CoverCard pattern={Pattern.ArrowButtons} />
                         <CoverCard pattern={Pattern.Avatar} />
@@ -171,7 +166,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Feedback" />
 
-                    <div className='xl:border-l xl:border-r xl:border-gray-400' style={{ display: 'flex', flexWrap: 'wrap', padding: '32px' }}>
+                    <div className='xl:border-b xl:border-l xl:border-r xl:border-gray-400 flex flex-wrap p-8'>
                         <CoverCard pattern={Pattern.Modal} />
                         <CoverCard pattern={Pattern.Notification} />
                         <CoverCard pattern={Pattern.PopoverArrow} />
