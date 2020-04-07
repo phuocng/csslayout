@@ -7,6 +7,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
+import Ad from '../components/Ad';
 import CoverCard from '../components/CoverCard';
 import Heading from '../components/Heading';
 import Pattern from '../constants/Pattern';
@@ -51,6 +52,8 @@ const ExplorePage = () => {
                     <div className='mb-5' style={{ textAlign: 'center' }}>
                         All covers you see in this page are made with CSS only. Inspect them! 🎉
                     </div>
+
+                    <Ad />
                 </div>
 
                 <section>
