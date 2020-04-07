@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 
 import './home.css';
 
+import Ad from '../components/Ad';
 import CoverCard from '../components/CoverCard';
 import Pattern from '../constants/Pattern';
 import useDocumentTitle from '../hooks/useDocumentTitle';
@@ -84,6 +85,8 @@ const HomePage = () => {
                             <div>By composing them, you can have any possible layout that exists in the real life.</div>
                         </div>
                     </div>
+
+                    <Ad />
 
                     <div
                         className="hljs"

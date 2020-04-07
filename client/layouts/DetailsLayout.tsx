@@ -6,6 +6,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Ad from '../components/Ad';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 import Layout from './Layout';
 
@@ -41,6 +42,7 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
             </div>
             <div className='xl:border xl:border-gray-400'>
                 {children}
+                <Ad />
             </div>
         </Layout>
     );
