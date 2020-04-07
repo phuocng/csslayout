@@ -12,6 +12,10 @@ const Ad: React.FC<{}> = () => {
     const source = 'https://cdn.carbonads.com/carbon.js?serve=CE7I6KQL&placement=csslayoutio';
 
     useEffect(() => {
+        // Ignore if the code is reached in snapping mode
+        if (navigator.userAgent === 'ReactSnap') {
+            return;
+        }
         const container = containerRef.current;
         if (!container) {
             return;
