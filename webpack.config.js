@@ -75,6 +75,10 @@ module.exports = {
                 use: ['babel-loader', 'ts-loader'],
             },
             {
+                test: /\.html$/i,
+                use: 'raw-loader',
+            },
+            {
                 enforce: "pre",
                 test: /\.js$/,
                 loader: 'source-map-loader',
