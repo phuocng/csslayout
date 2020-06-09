@@ -26,6 +26,7 @@ const Details: React.FC<{}> = () => {
 
         return (
             <label
+                htmlFor="radio-button-group"
                 style={{
                     alignItems: 'center',
                     backgroundColor: value === selectedValue ? '#00449E' : 'transparent',
@@ -35,6 +36,7 @@ const Details: React.FC<{}> = () => {
                 }}
             >
                 <input
+                    id="radio-button-group"
                     type="radio"
                     name="option"
                     value={value}

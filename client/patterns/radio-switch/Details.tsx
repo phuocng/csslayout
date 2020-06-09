@@ -44,6 +44,7 @@ const Details: React.FC<{}> = () => {
                                 }}
                             >
                                 <label
+                                    htmlFor="radio-switch-first"
                                     style={{
                                         backgroundColor: isFirstChecked ? '#357EDD' : '',
                                         borderRadius: '9999px',
@@ -53,6 +54,7 @@ const Details: React.FC<{}> = () => {
                                     }}
                                 >
                                     <input
+                                        id="radio-switch-first"
                                         type="radio"
                                         style={{ display: 'none' }}
                                         checked={isFirstChecked}
@@ -68,6 +70,7 @@ const Details: React.FC<{}> = () => {
                                     />
                                 </label>
                                 <label
+                                    htmlFor="radio-switch-second"
                                     style={{
                                         backgroundColor: isFirstChecked ? '' : '#357EDD',
                                         borderRadius: '9999px',
@@ -77,6 +80,7 @@ const Details: React.FC<{}> = () => {
                                     }}
                                 >
                                     <input
+                                        id="radio-switch-second"
                                         type="radio"
                                         style={{ display: 'none' }}
                                         checked={!isFirstChecked}
