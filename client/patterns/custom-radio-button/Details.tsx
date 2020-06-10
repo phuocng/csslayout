@@ -24,6 +24,7 @@ const Details: React.FC<{}> = () => {
 
         return (
             <label
+                htmlFor="custom-radio-button"
                 style={{
                     alignItems: 'center',
                     cursor: 'pointer',
@@ -31,6 +32,7 @@ const Details: React.FC<{}> = () => {
                 }}
             >
                 <input
+                    id="custom-radio-button"
                     type="radio"
                     name="option"
                     value={value}

@@ -39,6 +39,7 @@ const Details: React.FC<{}> = () => {
                             }}
                         >
                             <label
+                                htmlFor="checkbox-switch"
                                 style={{
                                     backgroundColor: checked ? '#357EDD' : 'rgba(0, 0, 0, 0.1)',
                                     border: `1px solid ${checked ? '#357EDD' : 'rgba(0, 0, 0, 0.3)'}`,
@@ -50,6 +51,7 @@ const Details: React.FC<{}> = () => {
                                 }}
                             >
                                 <input
+                                    id="checkbox-switch"
                                     type="checkbox"
                                     style={{ display: 'none' }}
                                     checked={checked}

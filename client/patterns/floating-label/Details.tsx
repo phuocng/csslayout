@@ -45,6 +45,7 @@ const Details: React.FC<{}> = () => {
                                 }}
                             >
                                 <input
+                                    id="floating-label-input"
                                     placeholder="Placeholder"
                                     type="text"
                                     style={{
@@ -54,6 +55,7 @@ const Details: React.FC<{}> = () => {
                                     }}
                                 />
                                 <label
+                                    htmlFor="floating-label-input"
                                     style={{
                                         left: '8px',
                                         padding: '0 8px',
