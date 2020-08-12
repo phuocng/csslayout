@@ -61,7 +61,7 @@ const Details: React.FC<{}> = () => {
     width: 100%;
 
     /* Background */
-    background: url("/assets/full-background.jpeg") center center / cover no-repeat;
+    background: url('/assets/full-background.jpeg') center center / cover no-repeat;
 ">
     ...
 </div>
