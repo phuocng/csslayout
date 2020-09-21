@@ -17,37 +17,55 @@ const Footer: React.FC<{}> = () => {
                     <ul className='flex flex-wrap -ml-1 -mr-1'>
                         <li className='w-1/2 sm:w-1/3 px-1 mb-6'>
                             <a
+                                href="https://1loc.dev"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                title="1 LOC - favorite JavaScript utilities in single line of code"
+                            >
+                                <div className='font-semibold flex items-center'>
+                                    1 LOC 
+                                    <span className='bg-green-600 font-normal ml-1 p-1 rounded text-sm text-white'>new</span>
+                                </div>
+                                <span className='text-gray-600'>favorite JavaScript utilities in single line of code</span>
+                            </a>
+                        </li>
+                        <li className='w-1/2 sm:w-1/3 px-1 mb-6'>
+                            <a
                                 href="https://blur.page"
                                 rel="noopener noreferrer"
-                                style={{ textDecoration: 'none' }}
                                 target="_blank"
                                 title="BlurPage - a browser extension to hide sensitive element on page"
                             >
                                 <div className='font-semibold'>Blur Page</div>
-                                <span className='text-gray-600'>
-                                    a browser extension to hide sensitive element on page
-                                </span>
+                                <span className='text-gray-600'>a browser extension to hide sensitive element on page</span>
+                            </a>
+                        </li>
+                        <li className='w-1/2 sm:w-1/3 px-1 mb-6'>
+                            <a
+                                href="https://checkbrowsers.support"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                title="Check Browsers Support - a browser extension to check browser compatibility without leaving your tab"
+                            >
+                                <div className='font-semibold'>Check Browsers Support</div>
+                                <span className='text-gray-600'>a browser extension to check browser compatibility without leaving your tab</span>
                             </a>
                         </li>
                         <li className='w-1/2 sm:w-1/3 px-1 mb-6'>
                             <a
                                 href="https://csslayout.io"
                                 rel="noopener noreferrer"
-                                style={{ textDecoration: 'none' }}
                                 target="_blank"
                                 title="CSS Layout - a collection of popular layouts and patterns made with CSS"
                             >
                                 <div className='font-semibold'>CSS Layout</div>
-                                <span className='text-gray-600'>
-                                    a collection of popular layouts and patterns made with CSS
-                                </span>
+                                <span className='text-gray-600'>a collection of popular layouts and patterns made with CSS</span>
                             </a>
                         </li>
                         <li className='w-1/2 sm:w-1/3 px-1 mb-6'>
                             <a
                                 href="https://fakenumbers.io"
                                 rel="noopener noreferrer"
-                                style={{ textDecoration: 'none' }}
                                 target="_blank"
                                 title="Fake Numbers - a JavaScript library to fake a number"
                             >
@@ -59,7 +77,6 @@ const Footer: React.FC<{}> = () => {
                             <a
                                 href="https://formvalidation.io"
                                 rel="noopener noreferrer"
-                                style={{ textDecoration: 'none' }}
                                 target="_blank"
                                 title="FormValidation - the best validation library for JavaScript"
                             >
@@ -71,26 +88,33 @@ const Footer: React.FC<{}> = () => {
                             <a
                                 href="https://htmldom.dev"
                                 rel="noopener noreferrer"
-                                style={{ textDecoration: 'none' }}
                                 target="_blank"
                                 title="HTML DOM - Common tasks of managing HTML DOM with native API"
                             >
                                 <div className='font-semibold'>HTML DOM</div>
-                                <span className='text-gray-600'>
-                                    common tasks of managing HTML DOM with vanilla JavaScript
-                                </span>
+                                <span className='text-gray-600'>common tasks of managing HTML DOM with vanilla JavaScript</span>
                             </a>
                         </li>
                         <li className='w-1/2 sm:w-1/3 px-1 mb-6'>
                             <a
                                 href="https://react-pdf-viewer.dev"
                                 rel="noopener noreferrer"
-                                style={{ textDecoration: 'none' }}
                                 target="_blank"
                                 title="React PDF Viewer - a PDF viewer made for React"
                             >
                                 <div className='font-semibold'>React PDF Viewer</div>
                                 <span className='text-gray-600'>a PDF viewer made for React</span>
+                            </a>
+                        </li>
+                        <li className='w-1/2 sm:w-1/3 px-1 mb-6'>
+                            <a
+                                href="https://thisthat.dev"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                title="this VS that - the differences between ___ and ___ in the front-end development"
+                            >
+                                <div className='font-semibold'>this VS that</div>
+                                <span className='text-gray-600'>the differences between ___ and ___ in the front-end development</span>
                             </a>
                         </li>
                     </ul>
