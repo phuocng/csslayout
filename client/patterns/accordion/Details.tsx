@@ -154,26 +154,6 @@ const Details: React.FC<{}> = () => {
     <!-- Repeat other item -->
     ...
 </div>
-
-
-<div style="
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-">
-    <!-- Heading -->
-    <div style="
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    ">
-        <!-- Question -->
-        ...
-
-        <!-- The toggle icon sticks to the right -->
-        ...
-    </div>
-
-    <!-- Answer -->
-</div>
 `}
                 />
             </div>
