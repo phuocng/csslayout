@@ -12,7 +12,7 @@
     },
     "dependencies": {
         "@loadable/component": "^5.12.0",
-        "highlight.js": "^10.1.2",
+        "highlight.js": "^10.4.1",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
         "react-helmet": "^5.2.1",
