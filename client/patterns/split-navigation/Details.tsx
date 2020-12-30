@@ -58,7 +58,7 @@ const Details: React.FC<{}> = () => {
     display: flex;
 
     /* Reset styles */
-    list-stype-type: none;
+    list-style-type: none;
     margin: 0;
 ">
     <!-- Navigation item -->
