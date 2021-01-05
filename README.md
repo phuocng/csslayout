@@ -9,7 +9,7 @@ A collection of popular layouts and patterns made with CSS:
 * Good practices (coming soon)
 * Accessibility (coming soon)
 
-![CSS Layout](/public/assets/screenshot.png)
+[![CSS Layout](/public/assets/screenshot.png)](https://csslayout.io/)
 
 ## Why
 
