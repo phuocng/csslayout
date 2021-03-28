@@ -24,6 +24,7 @@ if (process.env.NODE_ENV === "analyse") {
 }
 
 module.exports = {
+    mode: process.env.NODE_ENV,
     entry: {
         'vendor-styles': [
             './vendors/highlight.js@9.12.0/theme.min.css',
@@ -51,18 +52,17 @@ module.exports = {
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: process.env.NODE_ENV === 'development',
-                        },
                     },
                     'css-loader',
                     {
                         loader: 'postcss-loader',
                         options: {
-                            ident: 'postcss',
-                            plugins: [
-                                require('tailwindcss'),
-                            ],
+                            postcssOptions: {
+                                ident: 'postcss',
+                                plugins: [
+                                    require('tailwindcss'),
+                                ],
+                            }
                         },
                     },
                 ],
@@ -84,41 +84,11 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
-    devtool: 'cheap-module-eavl-source-map',
+    devtool: process.env.NODE_ENV === 'production' ? false : 'source-map',
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         historyApiFallback: true,
         port: 1234,
     },
     plugins,
-    // See https://webpack.js.org/guides/caching/
-    optimization: {
-        runtimeChunk: 'single',
-        moduleIds: 'hashed',
-        splitChunks: {
-            chunks: 'all',
-            maxInitialRequests: Infinity,
-            minSize: 0,
-            cacheGroups: {
-                vendor: {
-                    // sync + async chunks
-                    chunks: 'all',
-                    name: 'vendors',
-                    // import file path containing node_modules
-                    test: /[\\/]node_modules[\\/]/,
-                    priority: 20,
-                },
-                /*
-                common: {
-                    name: 'common',
-                    minChunks: 2,
-                    chunks: 'all',
-                    priority: 10,
-                    reuseExistingChunk: true,
-                    enforce: true,
-                },
-                */
-            },
-        },
-    }, 
 };
