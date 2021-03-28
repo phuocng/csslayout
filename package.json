@@ -12,7 +12,6 @@
     },
     "dependencies": {
         "@loadable/component": "^5.14.1",
-        "highlight.js": "^10.7.1",
         "prismjs": "^1.23.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",

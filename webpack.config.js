@@ -27,7 +27,6 @@ module.exports = {
     mode: process.env.NODE_ENV,
     entry: {
         'vendor-styles': [
-            './vendors/highlight.js@9.12.0/theme.min.css',
             './vendors/tailwind@1.1.4/tailwind.css',
         ],
         // The CSS for client should come after `vendor-styles`
