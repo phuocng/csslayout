@@ -14,7 +14,6 @@ import CoverCard from '../components/CoverCard';
 import Pattern from '../constants/Pattern';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 import Layout from '../layouts/Layout';
-import MadeOf from './MadeOf';
 
 const HomePage = () => {
     useDocumentTitle('CSS Layout');
@@ -253,8 +252,6 @@ const HomePage = () => {
                         <CoverCard pattern={Pattern.Wizard} />
                     </div>
                 </section>
-
-                <MadeOf />
             </div>
         </Layout>
     );
