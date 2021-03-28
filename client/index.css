@@ -3,6 +3,9 @@
  * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
+:root {
+    --text-color: #1e1d6e;
+} 
 body {
     font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
@@ -13,6 +16,17 @@ body {
 a {
     text-decoration: none;
 }
+
+/* Layout */
+.container {
+    margin: 0 auto;
+    max-width: 64rem;
+    padding: 0 1rem;
+}
+.main {
+    margin: 4rem 0;
+}
+
 .hljs, code {
     font-family: 'Source Code Pro', monospace;
     font-size: 14px;
