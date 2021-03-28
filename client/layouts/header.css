@@ -1,0 +1,16 @@
+.header {
+    background-color: var(--background-color);
+}
+.header__nav {
+    align-items: center;
+    display: flex;
+    font-size: 1.2rem;
+}
+.header__nav a:first-child {
+    margin-left: 0;
+    margin-right: auto;
+}
+.header__nav a {
+    color: var(--text-color);
+    margin-left: 1rem;
+}
