@@ -1,5 +1,12 @@
 {
-    "plugins": ["@loadable/babel-plugin"],
+    "plugins": [
+        "@loadable/babel-plugin",
+        ["prismjs", {
+            "languages": ["css", "html", "javascript", "jsx", "tsx"],
+            "theme": "twilight",
+            "css": true
+        }]
+    ],
     "presets": [
         "@babel/preset-env",
         "@babel/preset-react"
