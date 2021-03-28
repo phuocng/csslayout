@@ -59,14 +59,17 @@ const Details: React.FC<{}> = () => {
                                                     return (
                                                         <th
                                                             key={index}
-                                                            style={
-                                                                Object.assign({}, {
-                                                                    padding: '16px',
-                                                                }, index === 0 ? {
+                                                            style={(
+                                                                index === 0
+                                                                ? {
                                                                     backgroundColor: '#ddd',
                                                                     left: 0,
+                                                                    padding: '16px',
                                                                     position: 'sticky',
-                                                                } : {},
+                                                                }
+                                                                : {
+                                                                    padding: '16px',
+                                                                }
                                                             )}
                                                         >
                                                             <div style={{ width: '200px' }}>
@@ -92,14 +95,15 @@ const Details: React.FC<{}> = () => {
                                                                 return (
                                                                     <td
                                                                         key={col}
-                                                                        style={
-                                                                            Object.assign({}, {
-                                                                                padding: '16px',
-                                                                            }, col === 0 ? {
+                                                                        style={(
+                                                                            col === 0 ? {
                                                                                 backgroundColor: '#ddd',
                                                                                 left: 0,
+                                                                                padding: '16px',
                                                                                 position: 'sticky',
-                                                                            } : {},
+                                                                            } : {
+                                                                                padding: '16px',
+                                                                            }
                                                                         )}
                                                                     >
                                                                         {
