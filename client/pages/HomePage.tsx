@@ -3,7 +3,7 @@
  * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
@@ -25,6 +25,13 @@ const HomePage = () => {
                 <meta name="description" content="CSS layouts and patterns" />
                 <meta name="keywords" content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" />
             </Helmet>
+            <div className="home__hero">
+                <div className="container">
+                    <div className="home__logo"><img src="/assets/logo.png" alt="CSS Layout" /></div>
+                    <h1 className="home__heading">Popular Layouts & patterns made with CSS</h1>
+                </div>
+            </div>
+
             <div
                 className='xl:border-t xl:border-l xl:border-r xl:border-gray-400'
                 style={{
@@ -32,37 +39,6 @@ const HomePage = () => {
                 }}
             >
                 <div style={{ position: 'relative' }}>
-                    <h1
-                        className='text-3xl md:text-4xl lg:text-5xl'
-                        style={{
-                            backgroundColor: '#00449E',
-                            borderRadius: '4px',
-                            color: '#FFF',
-                            left: '50%',
-                            lineHeight: 1.5,
-                            margin: 0,
-                            padding: '0 16px',
-                            position: 'absolute',
-                            top: 0,
-                            transform: 'translate(-50%, -50%)',
-                        }}
-                    >
-                        CSS Layout
-                    </h1>
-
-                    <h2
-                        style={{
-                            fontSize: '24px',
-                            fontWeight: 300,
-                            lineHeight: 1.5,
-                            margin: 0,
-                            padding: '64px 0px 32px 0',
-                            textAlign: 'center',
-                        }}
-                    >
-                        a collection of popular layouts and patterns made with CSS
-                    </h2>
-
                     <div className='md:flex' style={{ lineHeight: 1.5 }}>
                         <div style={{ flex: 1 }} className="drop-cap p-5">
                             <div style={{ marginBottom: '16px' }}>
