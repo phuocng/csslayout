@@ -3,7 +3,7 @@
     "scripts": {
         "copy": "rimraf dist && mkdir dist && cpx 'public/**/*' dist",
         "dev": "npm run copy && webpack --mode=development",
-        "dev-server": "npm run copy && webpack serve",
+        "dev-server": "npm run copy && NODE_ENV=development webpack serve",
         "build": "npm run copy && webpack --mode=production && npm run export",
         "export": "react-snap",
         "deploy": "npm run build && netlify deploy --dir=dist --prod",
