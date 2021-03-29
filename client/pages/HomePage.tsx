@@ -32,152 +32,34 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div
-                className='xl:border-t xl:border-l xl:border-r xl:border-gray-400'
-                style={{
-                    marginTop: '64px',
-                }}
-            >
-                <div style={{ position: 'relative' }}>
-                    <div className='md:flex' style={{ lineHeight: 1.5 }}>
-                        <div style={{ flex: 1 }} className="drop-cap p-5">
-                            <div style={{ marginBottom: '16px' }}>
-                                Components, patterns and layouts are things you have to deal with everyday.
-                            </div>
-                            <div>There are a lot of CSS frameworks that provide rich set of layouts and patterns,
-                            but I usually don't want to include all of them in my project.</div>
-                        </div>
-                        <div style={{ flex: 1 }} className="drop-cap p-5">
-                            <div style={{ marginBottom: '16px' }}>
-                                So that I collect most popular layouts and patterns that can be built with pure CSS.
-                            </div>
-                            <div>They are powered by modern CSS features such as flexbox and CSS grid.</div>
-                        </div>
-                        <div style={{ flex: 1 }} className="drop-cap p-5">
-                            <div style={{ marginBottom: '16px' }}>
-                                Starting with the most basic part, you can customize easily for each specific need.
-                            </div>
-                            <div>By composing them, you can have any possible layout that exists in the real life.</div>
-                        </div>
+            <div className="container">
+                <div className="home__features">
+                    <div className="home__features-feature">
+                        <div className="home__features-title">Zero Dependencies</div>
                     </div>
-
-                    <Ad />
-
-                    <div
-                        className="hljs"
-                        style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            fontSize: '16px',
-                            justifyContent: 'center',
-                            lineHeight: 1.5,
-                        }}
-                    >
-                        <ul style={{ listStyleType: 'none', margin: 0, padding: 0, width: '300px' }}>
-                            <li><span className="hljs-selector-class">.awesome</span> &#123;</li>
-                            <ul style={{ listStyleType: 'none', margin: 0, padding: '0 32px' }}>
-                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
-                                    <div className="hljs-attribute">zero-dependencies:</div>
-                                    <div>🎉;</div>
-                                </li>
-                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
-                                    <div className="hljs-attribute">no-frameworks:</div>
-                                    <div>🎉;</div>
-                                </li>
-                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
-                                    <div className="hljs-attribute">no-css-hacks:</div>
-                                    <div>🎉;</div>
-                                </li>
-                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
-                                    <div className="hljs-attribute">real-use-cases:</div>
-                                    <div>🎉;</div>
-                                </li>
-                                <li style={{ alignItems: 'center', display: 'flex' }}>
-                                    <div className="hljs-attribute">good-practices:</div>
-                                    <div
-                                        style={{
-                                            backgroundColor: '#00449E',
-                                            borderRadius: '9999px',
-                                            color: '#FFF',
-                                            fontSize: '14px',
-                                            marginLeft: 'auto',
-                                            padding: '0 8px',
-                                        }}
-                                    >
-                                        soon
-                                    </div>
-                                    ;
-                                </li>
-                                <li style={{ alignItems: 'center', display: 'flex' }}>
-                                    <div className="hljs-attribute">accessibility:</div>
-                                    <div
-                                        style={{
-                                            backgroundColor: '#00449E',
-                                            borderRadius: '9999px',
-                                            color: '#FFF',
-                                            fontSize: '14px',
-                                            marginLeft: 'auto',
-                                            padding: '0 8px',
-                                        }}
-                                    >
-                                        soon
-                                    </div>
-                                    ;
-                                </li>
-                            </ul>
-                            <li>&#125;</li>
-                        </ul>
+                    <div className="home__features-feature">
+                        <div className="home__features-title">No Frameworks</div>
+                    </div>
+                    <div className="home__features-feature">
+                        <div className="home__features-title">No CSS Hacks</div>
+                    </div>
+                    <div className="home__features-feature">
+                        <div className="home__features-title">Real Use Cases</div>
+                    </div>
+                    <div className="home__features-feature">
+                        <div className="home__features-title">Good Practices</div>
+                    </div>
+                    <div className="home__features-feature">
+                        <div className="home__features-title">Accessibility</div>
                     </div>
                 </div>
 
-                <section style={{ height: '1000px', overflow: 'hidden', position: 'relative' }}>
-                    <div
-                        style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
-                            left: 0,
-                            position: 'absolute',
-                            top: 0,
-                            width: '100%',
-                            zIndex: 9999,
-                        }}
-                    >
-                        <div
-                            className='text-5xl lg:text-6xl'
-                            style={{
-                                fontWeight: 600,
-                                marginBottom: '16px',
-                            }}
-                        >
-                            {numPatterns} patterns
-                        </div>
-                        <Link
-                            to="/patterns"
-                            className='text-2xl'
-                            style={{
-                                backgroundColor: '#00449e',
-                                borderRadius: '4px',
-                                color: '#FFF',
-                                padding: '12px 16px',
-                                textDecoration: 'none',
-                            }}
-                        >
-                                Explore the collection
-                        </Link>
+                <section className="home__patterns">
+                    <div className="home__patterns-overlay">
+                        <div className="home__patterns-heading">{numPatterns} patterns</div>
+                        <Link to="/patterns" className="home__patterns-explore">Explore the collection</Link>
                     </div>
-                    <div
-                        className="home-cards"
-                        style={{
-                            display: 'flex',
-                            flexWrap: 'wrap',
-                            justifyContent: 'center',
-                            opacity: '0.4',
-                            padding: '32px 16px',
-                        }}
-                    >
+                    <div className="home__patterns-content">
                         <CoverCard pattern={Pattern.HolyGrail} />
                         <CoverCard pattern={Pattern.Sidebar} />
                         <CoverCard pattern={Pattern.SplitScreen} />
