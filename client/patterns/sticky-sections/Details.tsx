@@ -13,7 +13,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Sticky sections">
+        <DetailsLayout pattern={Pattern.StickySections}>
             <Helmet>
                 <meta name="description" content="Create sticky sections with CSS" />
                 <meta name="keywords" content="css layout, css sticky, css sticky sections" />

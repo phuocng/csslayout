@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 
 import './homePage.css';
 
-import Ad from '../components/Ad';
 import CoverCard from '../components/CoverCard';
 import Pattern from '../constants/Pattern';
 import chunk from '../helpers/chunk';

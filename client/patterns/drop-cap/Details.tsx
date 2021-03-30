@@ -10,10 +10,11 @@ import './dropcap.css';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
+import Pattern from '../../constants/Pattern';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Drop cap">
+        <DetailsLayout pattern={Pattern.DropCap}>
             <Helmet>
                 <meta name="description" content="Create a drop cap with CSS" />
                 <meta name="keywords" content="css drop cap" />

@@ -13,7 +13,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Close button">
+        <DetailsLayout pattern={Pattern.CloseButton}>
             <Helmet>
                 <meta name="description" content="Create a close button with CSS flexbox" />
                 <meta name="keywords" content="css close button, css flexbox" />

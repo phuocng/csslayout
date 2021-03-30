@@ -6,6 +6,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
@@ -15,7 +16,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Modal">
+        <DetailsLayout pattern={Pattern.Modal}>
             <Helmet>
                 <meta name="description" content="Create a modal with CSS flexbox" />
                 <meta name="keywords" content="css dialog, css flexbox, css modal" />

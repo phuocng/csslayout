@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
@@ -12,7 +13,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Watermark">
+        <DetailsLayout pattern={Pattern.Watermark}>
             <Helmet>
                 <meta name="description" content="Create a watermark with CSS" />
                 <meta name="keywords" content="css watermark" />

@@ -15,7 +15,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Cookie banner">
+        <DetailsLayout pattern={Pattern.CookieBanner}>
             <Helmet>
                 <meta name="description" content="Create a cookie banner with CSS flexbox" />
                 <meta name="keywords" content="css cookie banner, css flexbox" />

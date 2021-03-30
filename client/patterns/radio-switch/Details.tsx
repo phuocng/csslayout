@@ -17,7 +17,7 @@ const Details: React.FC<{}> = () => {
     const toggle = () => setFirstChecked((c) => !c);
 
     return (
-        <DetailsLayout title="Radio switch">
+        <DetailsLayout pattern={Pattern.RadioSwitch}>
             <Helmet>
                 <meta name="description" content="Create a radio switch with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css radio switch, css switch" />

@@ -63,7 +63,7 @@ const Details: React.FC<{}> = () => {
     };
 
     return (
-        <DetailsLayout title="Custom checkbox button">
+        <DetailsLayout pattern={Pattern.CustomCheckboxButton}>
             <Helmet>
                 <meta name="description" content="Create a custom checkbox button with CSS flexbox" />
                 <meta name="keywords" content="css checkbox, css flexbox" />

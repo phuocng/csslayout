@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import useInterval from '../../hooks/useInterval';
 import DetailsLayout from '../../layouts/DetailsLayout';
@@ -17,7 +18,7 @@ const Details: React.FC<{}> = () => {
     }, 1 * 100);
 
     return (
-        <DetailsLayout title="Progress bar">
+        <DetailsLayout pattern={Pattern.ProgressBar}>
             <Helmet>
                 <meta name="description" content="Create a progress bar with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css progress bar" />

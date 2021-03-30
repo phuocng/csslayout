@@ -14,7 +14,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Split navigation">
+        <DetailsLayout pattern={Pattern.SplitNavigation}>
             <Helmet>
                 <meta name="description" content="Create a split navigation with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css menu, css navigation, css split navigation" />

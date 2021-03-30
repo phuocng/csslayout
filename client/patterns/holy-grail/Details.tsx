@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
@@ -13,7 +14,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Holy grail">
+        <DetailsLayout pattern={Pattern.HolyGrail}>
             <Helmet>
                 <meta name="description" content="Create a holy grail layout with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css holy grail layout, css layout" />

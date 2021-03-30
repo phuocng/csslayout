@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -13,7 +14,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Slider">
+        <DetailsLayout pattern={Pattern.Slider}>
             <Helmet>
                 <meta name="description" content="Create a slider with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css slider" />

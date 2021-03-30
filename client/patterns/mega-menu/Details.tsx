@@ -18,7 +18,7 @@ import Triangle from '../../placeholders/Triangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Mega menu">
+        <DetailsLayout pattern={Pattern.MegaMenu}>
             <Helmet>
                 <meta name="description" content="Create a mega menu with CSS" />
                 <meta name="keywords" content="css mega menu" />

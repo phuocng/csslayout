@@ -19,7 +19,7 @@ const Details: React.FC<{}> = () => {
     const change = (e: React.ChangeEvent<HTMLInputElement>) => setValue(parseInt(e.target.value, 10));
 
     return (
-        <DetailsLayout title="Spin button">
+        <DetailsLayout pattern={Pattern.SpinButton}>
             <Helmet>
                 <meta name="description" content="Create a spin button with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css spin button" />

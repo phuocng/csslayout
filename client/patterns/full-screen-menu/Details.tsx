@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -12,7 +13,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Full screen menu">
+        <DetailsLayout pattern={Pattern.FullScreenMenu}>
             <Helmet>
                 <meta name="description" content="Create a full screen menu with CSS flexbox" />
                 <meta name="keywords" content="css fixed, css flexbox, css menu" />

@@ -14,7 +14,7 @@ import Triangle from '../../placeholders/Triangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Overlay play button">
+        <DetailsLayout pattern={Pattern.OverlayPlayButton}>
             <Helmet>
                 <meta name="description" content="Create an overlay play button with CSS flexbox" />
                 <meta name="keywords" content="css flexbox" />

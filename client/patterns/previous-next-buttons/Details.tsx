@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -12,7 +13,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Previous and next buttons">
+        <DetailsLayout pattern={Pattern.PreviousNextButtons}>
             <Helmet>
                 <meta name="description" content="Create previous and next buttons with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css pagination" />

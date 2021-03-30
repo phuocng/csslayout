@@ -14,7 +14,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Diagonal section">
+        <DetailsLayout pattern={Pattern.DiagonalSection}>
             <Helmet>
                 <meta name="description" content="Create a diagonal section with CSS" />
                 <meta name="keywords" content="css diagonal section, css transform skew" />

@@ -17,7 +17,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Pricing table">
+        <DetailsLayout pattern={Pattern.PricingTable}>
             <Helmet>
                 <meta name="description" content="Create a pricing table with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css pricing table" />

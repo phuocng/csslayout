@@ -15,7 +15,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Card">
+        <DetailsLayout pattern={Pattern.Card}>
             <Helmet>
                 <meta name="description" content="Create a card with CSS flexbox" />
                 <meta name="keywords" content="css card, css flexbox" />

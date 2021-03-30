@@ -5,13 +5,14 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Lined paper">
+        <DetailsLayout pattern={Pattern.LinedPaper}>
             <Helmet>
                 <meta name="description" content="Create lined paper with CSS" />
                 <meta name="keywords" content="css linear gradient, css lined paper, css multiple horizontal lines" />

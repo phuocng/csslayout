@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -12,7 +13,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Upload button">
+        <DetailsLayout pattern={Pattern.UploadButton}>
             <Helmet>
                 <meta name="description" content="Create an upload button with CSS flexbox" />
                 <meta name="keywords" content="css file input, css flexbox, css upload button" />

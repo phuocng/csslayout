@@ -5,13 +5,14 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Validation icon">
+        <DetailsLayout pattern={Pattern.ValidationIcon}>
             <Helmet>
                 <meta name="description" content="Add validation icons to input with CSS" />
                 <meta name="keywords" content="css validation icon" />

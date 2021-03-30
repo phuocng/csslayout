@@ -13,7 +13,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Stacked cards">
+        <DetailsLayout pattern={Pattern.StackedCards}>
             <Helmet>
                 <meta name="description" content="Create stacked cards with CSS" />
                 <meta name="keywords" content="css card, css stacked cards, css transform rotate" />

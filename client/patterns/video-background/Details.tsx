@@ -14,7 +14,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Video background">
+        <DetailsLayout pattern={Pattern.VideoBackground}>
             <Helmet>
                 <meta name="description" content="Add video background with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, object fit cover" />

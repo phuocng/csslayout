@@ -13,7 +13,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Popover arrow">
+        <DetailsLayout pattern={Pattern.PopoverArrow}>
             <Helmet>
                 <meta name="description" content="Create a popover arrow with CSS" />
                 <meta name="keywords" content="css arrow, css popover" />

@@ -13,7 +13,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Arrow buttons">
+        <DetailsLayout pattern={Pattern.ArrowButtons}>
             <Helmet>
                 <meta name="description" content="Create arrow buttons with CSS" />
                 <meta name="keywords" content="css arrow buttons" />

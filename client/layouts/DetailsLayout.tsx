@@ -6,18 +6,20 @@
 import * as React from 'react';
 
 import Ad from '../components/Ad';
-import useDocumentTitle from '../hooks/useDocumentTitle';
-import Layout from './Layout';
 import Product from '../components/Product';
 import { ProductList } from '../constants/ProductList';
+import Pattern from '../constants/Pattern';
 import randomItems from '../helpers/randomIterms';
+import useDocumentTitle from '../hooks/useDocumentTitle';
+import CoverLoader from '../loaders/CoverLoader';
+import Layout from './Layout';
 
 interface DetailsLayoutProps {
-    title: string;
+    pattern: Pattern;
 }
 
-const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
-    useDocumentTitle(`CSS Layout ∙ ${title}`);
+const DetailsLayout: React.FC<DetailsLayoutProps> = ({ pattern, children }) => {
+    useDocumentTitle(`CSS Layout ∙ ${pattern}`);
 
     const products = randomItems(ProductList, 3);
 
@@ -25,7 +27,10 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
         <Layout>
             <div className="hero">
                 <div className="container">
-                    <h1 className="hero__heading">{title}</h1>
+                    <div className="hero__logo">
+                        <CoverLoader pattern={pattern} />
+                    </div>
+                    <h1 className="hero__heading">{pattern}</h1>
                 </div>
             </div>
             <div className="container">

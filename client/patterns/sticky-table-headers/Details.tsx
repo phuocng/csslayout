@@ -15,7 +15,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Sticky table headers">
+        <DetailsLayout pattern={Pattern.StickyTableHeaders}>
             <Helmet>
                 <meta name="description" content="Create sticky table headers with CSS" />
                 <meta name="keywords" content="css position sticky, css sticky table headers" />

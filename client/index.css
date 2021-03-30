@@ -18,10 +18,6 @@ a {
     text-decoration: none;
 }
 
-pre[class*="language-"] {
-   
-}
-
 /* Layout */
 .container {
     margin: 0 auto;
@@ -54,7 +50,8 @@ pre[class*="language-"] {
     padding-bottom: 2rem;
 }
 .hero__logo {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 .hero__logo img {
     height: 16rem;

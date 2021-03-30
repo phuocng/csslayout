@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -36,7 +37,7 @@ const Details: React.FC<{}> = () => {
     };
 
     return (
-        <DetailsLayout title="Dot navigation">
+        <DetailsLayout pattern={Pattern.DotNavigation}>
             <Helmet>
                 <meta name="description" content="Create dot navigation with CSS flexbox" />
                 <meta name="keywords" content="css dot navigation, css flexbox" />

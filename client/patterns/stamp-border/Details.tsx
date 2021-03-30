@@ -5,13 +5,14 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Stamp border">
+        <DetailsLayout pattern={Pattern.StampBorder}>
             <Helmet>
                 <meta name="description" content="Create stamp border with CSS" />
                 <meta name="keywords" content="css radial gradient, css stamp border" />
