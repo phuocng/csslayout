@@ -18,8 +18,8 @@ a {
     text-decoration: none;
 }
 
-code {
-    font-family: 'Source Code Pro', monospace;
+pre[class*="language-"] {
+   
 }
 
 /* Layout */

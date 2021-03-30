@@ -26,12 +26,6 @@ const ProductList: ProductModel[] = [
         themeColor: '#000200',
     },
     {
-        name: 'CSS Layout',
-        url: 'https://csslayout.io',
-        description: 'A collection of popular layouts and patterns made with CSS',
-        themeColor: '#e7d900',
-    },
-    {
         name: 'Front-end Tips',
         url: 'https://getfrontend.tips',
         description: 'Super tiny, quick tips, tricks and best practices of front-end development',

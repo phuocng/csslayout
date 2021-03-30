@@ -3,14 +3,14 @@
  * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 
 import Ad from '../components/Ad';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 import Layout from './Layout';
 import Product from '../components/Product';
 import { ProductList } from '../constants/ProductList';
-import randomFromArray from '../helpers/randomFromArray';
+import randomItems from '../helpers/randomIterms';
 
 interface DetailsLayoutProps {
     title: string;
@@ -19,7 +19,7 @@ interface DetailsLayoutProps {
 const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
     useDocumentTitle(`CSS Layout ∙ ${title}`);
 
-    const product = randomFromArray(ProductList);
+    const products = randomItems(ProductList, 3);
 
     return (
         <Layout>
@@ -36,7 +36,9 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
                     <div className="sidebar">
                         <div className="sidebar__inner">
                             <Ad />
-                            <Product product={product} />
+                            {
+                                products.map(product => <Product key={product.name} product={product} />)
+                            }
                         </div>
                     </div>
                 </div>
