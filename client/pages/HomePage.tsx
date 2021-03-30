@@ -7,7 +7,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
-import './home.css';
+import './homePage.css';
 
 import Ad from '../components/Ad';
 import CoverCard from '../components/CoverCard';
@@ -31,10 +31,10 @@ const HomePage = () => {
                 <meta name="description" content="CSS layouts and patterns" />
                 <meta name="keywords" content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" />
             </Helmet>
-            <div className="home__hero">
+            <div className="hero">
                 <div className="container">
-                    <div className="home__logo"><img src="/assets/logo.png" alt="CSS Layout" /></div>
-                    <h1 className="home__heading">Popular Layouts & patterns made with CSS</h1>
+                    <div className="hero__logo"><img src="/assets/logo.png" alt="CSS Layout" /></div>
+                    <h1 className="hero__heading">Popular Layouts & patterns made with CSS</h1>
                 </div>
             </div>
 

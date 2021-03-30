@@ -3,28 +3,6 @@
  * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
  
-.home__hero {
-    background: var(--background-color);
-    display: flex;
-    justify-content: center;
-    padding-bottom: 4rem;
-}
-.home__logo {
-    text-align: center;
-}
-.home__logo img {
-    height: 16rem;
-    object-fit: cover;
-    width: 24rem;
-}
-.home__heading {
-    color: var(--text-color);
-    font-size: 3rem;
-    margin: 0;
-    text-align: center;
-    text-transform: capitalize;
-}
-
 .home__features {
     display: flex;
     flex-wrap: wrap;
@@ -52,6 +30,7 @@
     overflow: hidden;
     position: relative;
 }
+
 .home__overlay {
     align-items: center;
     display: flex;

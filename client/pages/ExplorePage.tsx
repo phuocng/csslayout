@@ -5,7 +5,6 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
 
 import Ad from '../components/Ad';
 import CoverCard from '../components/CoverCard';
@@ -13,6 +12,7 @@ import Heading from '../components/Heading';
 import Pattern from '../constants/Pattern';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 import Layout from '../layouts/Layout';
+import './explorePage.css';
 
 const ExplorePage = () => {
     useDocumentTitle('CSS Layout ∙ Explore');
@@ -24,42 +24,20 @@ const ExplorePage = () => {
                 <meta name="description" content="CSS layouts and patterns" />
                 <meta name="keywords" content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" />
             </Helmet>
-            <div className='sm:text-2xl p-4 xl:pl-0'>
-                <Link
-                    to="/"
-                    style={{
-                        textDecoration: 'none',
-                    }}
-                >
-                    Home
-                </Link>
-                <span className='mx-2'>/</span>
-                <span>Explore</span>
-            </div>
-            <div>
-                <div className='xl:border-l xl:border-t xl:border-r xl:border-gray-400 p-4'>
-                    <h2
-                        className='text-2xl mb-6'
-                        style={{
-                            fontWeight: 300,
-                            lineHeight: 1.5,
-                            padding: '0',
-                            textAlign: 'center',
-                        }}
-                    >
-                        Here is the collection of {numPatterns} patterns
-                    </h2>
-                    <div className='mb-5' style={{ textAlign: 'center' }}>
-                        All covers you see in this page are made with CSS only. Inspect them! 🎉
-                    </div>
-
-                    <Ad />
+            <div className="hero">
+                <div className="container">
+                    <h1 className="hreo__heading">Collection of {numPatterns} patterns</h1>
+                    <h2 className="hero__subheading">Covers are made with CSS only. Inspect them!</h2>
                 </div>
+            </div>
+
+            <div className="container">
+                <Ad />
 
                 <section>
                     <Heading title="Layout" />
 
-                    <div className='xl:border-l xl:border-r xl:border-gray-400 flex flex-wrap p-8'>
+                    <div className="explore__collection">
                         <CoverCard pattern={Pattern.CardLayout} />
                         <CoverCard pattern={Pattern.HolyGrail} />
                         <CoverCard pattern={Pattern.SameHeightColumns} />
@@ -75,7 +53,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Navigation" />
 
-                    <div className='xl:border-l xl:border-r xl:border-gray-400 flex flex-wrap p-8'>
+                    <div className="explore__collection">
                         <CoverCard pattern={Pattern.Breadcrumb} />
                         <CoverCard pattern={Pattern.CircularNavigation} />
                         <CoverCard pattern={Pattern.DotNavigation} />
@@ -96,7 +74,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Input" />
 
-                    <div className='xl:border-l xl:border-r xl:border-gray-400 flex flex-wrap p-8'>
+                    <div className="explore__collection">
                         <CoverCard pattern={Pattern.ButtonWithIcon} />
                         <CoverCard pattern={Pattern.Chip} />
                         <CoverCard pattern={Pattern.CustomCheckboxButton} />
@@ -119,7 +97,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Display" />
 
-                    <div className='xl:border-l xl:border-r xl:border-gray-400 flex flex-wrap p-8'>
+                    <div className="explore__collection">
                         <CoverCard pattern={Pattern.Accordion} />
                         <CoverCard pattern={Pattern.ArrowButtons} />
                         <CoverCard pattern={Pattern.Avatar} />
@@ -169,7 +147,7 @@ const ExplorePage = () => {
                 <section>
                     <Heading title="Feedback" />
 
-                    <div className='xl:border-b xl:border-l xl:border-r xl:border-gray-400 flex flex-wrap p-8'>
+                    <div className="explore__collection">
                         <CoverCard pattern={Pattern.Modal} />
                         <CoverCard pattern={Pattern.Notification} />
                         <CoverCard pattern={Pattern.PopoverArrow} />

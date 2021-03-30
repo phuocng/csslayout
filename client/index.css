@@ -18,6 +18,10 @@ a {
     text-decoration: none;
 }
 
+code {
+    font-family: 'Source Code Pro', monospace;
+}
+
 /* Layout */
 .container {
     margin: 0 auto;
@@ -28,16 +32,30 @@ a {
     margin: 4rem 0;
 }
 
-.hljs, code {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 14px;
+.hero {
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
 }
-.drop-cap:first-letter {
-    border: 2px solid;
-    float: left;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 1;
-    margin: 0 8px 0 0;
-    padding: 0 8px;    
+.hero__logo {
+    text-align: center;
+}
+.hero__logo img {
+    height: 16rem;
+    object-fit: cover;
+    width: 24rem;
+}
+.hreo__heading {
+    color: var(--text-color);
+    font-size: 3rem;
+    margin: 2rem 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+.hero__subheading {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin: 2rem 0;
+    text-align: center;
 }
