@@ -12,12 +12,18 @@ import './home.css';
 import Ad from '../components/Ad';
 import CoverCard from '../components/CoverCard';
 import Pattern from '../constants/Pattern';
+import chunk from '../helpers/chunk';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 import Layout from '../layouts/Layout';
+
+const NUM_SLIDES = 3;
 
 const HomePage = () => {
     useDocumentTitle('CSS Layout');
     const numPatterns = Object.keys(Pattern).length;
+
+    const numPatternsPerSlide = Math.floor(numPatterns / NUM_SLIDES);
+    const groups = chunk(Object.entries(Pattern).map(([_, v]) => v).slice(0, NUM_SLIDES * numPatternsPerSlide), numPatternsPerSlide);
 
     return (
         <Layout>
@@ -34,80 +40,41 @@ const HomePage = () => {
 
             <div className="container">
                 <div className="home__features">
-                    <div className="home__features-feature">
-                        <div className="home__features-title">Zero Dependencies</div>
+                    <div className="home__feature">
+                        <div className="home__title">Zero Dependencies</div>
                     </div>
-                    <div className="home__features-feature">
-                        <div className="home__features-title">No Frameworks</div>
+                    <div className="home__feature">
+                        <div className="home__title">No Frameworks</div>
                     </div>
-                    <div className="home__features-feature">
-                        <div className="home__features-title">No CSS Hacks</div>
+                    <div className="home__feature">
+                        <div className="home__title">No CSS Hacks</div>
                     </div>
-                    <div className="home__features-feature">
-                        <div className="home__features-title">Real Use Cases</div>
+                    <div className="home__feature">
+                        <div className="home__title">Real Use Cases</div>
                     </div>
-                    <div className="home__features-feature">
-                        <div className="home__features-title">Good Practices</div>
+                    <div className="home__feature">
+                        <div className="home__title">Good Practices</div>
                     </div>
-                    <div className="home__features-feature">
-                        <div className="home__features-title">Accessibility</div>
+                    <div className="home__feature">
+                        <div className="home__title">Accessibility</div>
                     </div>
                 </div>
 
                 <section className="home__patterns">
-                    <div className="home__patterns-overlay">
-                        <div className="home__patterns-heading">{numPatterns} patterns</div>
-                        <Link to="/patterns" className="home__patterns-explore">Explore the collection</Link>
+                    <div className="home__overlay">
+                        <div className="home__heading">{numPatterns} patterns</div>
+                        <Link to="/patterns" className="home__explore">Explore the collection</Link>
                     </div>
-                    <div className="home__patterns-content">
-                        <CoverCard pattern={Pattern.HolyGrail} />
-                        <CoverCard pattern={Pattern.Sidebar} />
-                        <CoverCard pattern={Pattern.SplitScreen} />
-                        <CoverCard pattern={Pattern.StickyFooter} />
-                        <CoverCard pattern={Pattern.StickyHeader} />
-                        <CoverCard pattern={Pattern.AvatarList} />
-                        <CoverCard pattern={Pattern.Badge} />
-                        <CoverCard pattern={Pattern.Breadcrumb} />
-                        <CoverCard pattern={Pattern.ButtonWithIcon} />
-                        <CoverCard pattern={Pattern.Card} />
-                        <CoverCard pattern={Pattern.Centering} />
-                        <CoverCard pattern={Pattern.CircularNavigation} />
-                        <CoverCard pattern={Pattern.DockedAtCorner} />
-                        <CoverCard pattern={Pattern.DotLeader} />
-                        <CoverCard pattern={Pattern.DotNavigation} />
-                        <CoverCard pattern={Pattern.DropArea} />
-                        <CoverCard pattern={Pattern.DropCap} />
-                        <CoverCard pattern={Pattern.Dropdown} />
-                        <CoverCard pattern={Pattern.FeatureList} />
-                        <CoverCard pattern={Pattern.FixedAtCorner} />
-                        <CoverCard pattern={Pattern.FloatingLabel} />
-                        <CoverCard pattern={Pattern.InputAddon} />
-                        <CoverCard pattern={Pattern.MediaObject} />
-                        <CoverCard pattern={Pattern.Menu} />
-                        <CoverCard pattern={Pattern.Modal} />
-                        <CoverCard pattern={Pattern.Notification} />
-                        <CoverCard pattern={Pattern.Pagination} />
-                        <CoverCard pattern={Pattern.PresenceIndicator} />
-                        <CoverCard pattern={Pattern.PreviousNextButtons} />
-                        <CoverCard pattern={Pattern.PricingTable} />
-                        <CoverCard pattern={Pattern.PropertyList} />
-                        <CoverCard pattern={Pattern.ProgressBar} />
-                        <CoverCard pattern={Pattern.QuestionsAndAnswers} />
-                        <CoverCard pattern={Pattern.RadioSwitch} />
-                        <CoverCard pattern={Pattern.Rating} />
-                        <CoverCard pattern={Pattern.SameHeightColumns} />
-                        <CoverCard pattern={Pattern.SearchBox} />
-                        <CoverCard pattern={Pattern.Separator} />
-                        <CoverCard pattern={Pattern.SimpleGrid} />
-                        <CoverCard pattern={Pattern.Slider} />
-                        <CoverCard pattern={Pattern.SpinButton} />
-                        <CoverCard pattern={Pattern.SplitNavigation} />
-                        <CoverCard pattern={Pattern.StepperInput} />
-                        <CoverCard pattern={Pattern.Switch} />
-                        <CoverCard pattern={Pattern.Tab} />
-                        <CoverCard pattern={Pattern.TogglePasswordVisibility} />
-                        <CoverCard pattern={Pattern.UploadButton} />
-                        <CoverCard pattern={Pattern.Wizard} />
+                    <div className="home__sliders">
+                    {
+                        groups.map((patterns, index) => (
+                            <div className="home__slide" key={index}>
+                            {
+                                patterns.map(pattern => <CoverCard key={pattern} pattern={pattern} />)
+                            }
+                            </div>
+                        ))
+                    }
                     </div>
                 </section>
             </div>
