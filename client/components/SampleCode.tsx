@@ -18,6 +18,7 @@ const SampleCode: React.FC<SampleCodeProps> = ({ code, fullHeight = false, lang 
             ? <></>
             : (
                 <pre
+                    className={`language-${lang}`}
                     style={{
                         border: 'none',
                         borderRadius: 0,
