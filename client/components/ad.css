@@ -4,19 +4,18 @@
  */
 
 #carbonads {
-    background-color: #edf2f7;
-    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 0.5rem;
+    height: 9rem;
+    overflow: hidden;
     position: relative;
-    max-width: 24rem;
 }
 .carbon-wrap {
     display: flex;
 }
-
-.carbon-img {
-    margin-right: 0.5rem;
+.carbon-text {
+    padding: 0.5rem;
 }
-
 .carbon-poweredby {
     bottom: 0;
     font-size: 0.75rem;
