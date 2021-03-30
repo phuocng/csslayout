@@ -1,0 +1,22 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
+.product {
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+.product a {
+    text-decoration: none;
+}
+.product__logo {
+    height: auto;
+    width: 100%;
+}
+.product__desc {
+    padding: 0.5rem;
+    text-align: center;
+}

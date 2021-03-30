@@ -28,10 +28,24 @@ code {
     max-width: 64rem;
     padding: 0 1rem;
 }
+.content {
+    display: flex;
+}
 .main {
-    margin: 4rem 0;
+    flex: 1;
+    overflow: auto;
+}
+.sidebar {
+    display: none;
 }
 
+/* Sidebar */
+.sidebar__inner {
+    position: sticky;
+    top: 1rem;
+}
+
+/* Hero */
 .hero {
     background: var(--background-color);
     display: flex;
@@ -58,4 +72,24 @@ code {
     font-size: 2rem;
     margin: 2rem 0;
     text-align: center;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+    .sidebar {
+        display: block;
+        flex: 0 0 10rem;
+        margin-left: 0.5rem;
+    }
+}
+@media (min-width: 768px) {
+    .sidebar {
+        flex-basis: 12rem;
+    }
+}
+@media (min-width: 1024px) {
+    .sidebar {
+        flex-basis: 16rem;
+        margin-left: 1rem;
+    }
 }
