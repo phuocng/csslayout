@@ -28,14 +28,14 @@ const ExplorePage = () => {
             </Helmet>
             <div className="hero">
                 <div className="container">
-                    <h1 className="hreo__heading">Collection of {numPatterns} patterns</h1>
+                    <h1 className="hero__heading">Collection of {numPatterns} patterns</h1>
                     <h2 className="hero__subheading">Covers are made with CSS only. Inspect them!</h2>
                 </div>
             </div>
 
             <div className="container">
                 <div className="content">
-                    <main class="main">
+                    <main className="main">
                         <section>
                             <Heading title="Layout" />
 
