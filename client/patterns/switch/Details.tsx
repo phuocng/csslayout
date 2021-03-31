@@ -27,48 +27,7 @@ const Details: React.FC<{}> = () => {
                     the checkbox will be checked even though it's hidden.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <label
-                                htmlFor="checkbox-switch"
-                                style={{
-                                    backgroundColor: checked ? '#357EDD' : 'rgba(0, 0, 0, 0.1)',
-                                    border: `1px solid ${checked ? '#357EDD' : 'rgba(0, 0, 0, 0.3)'}`,
-                                    borderRadius: '9999px',
-                                    display: 'flex',
-                                    height: '32px',
-                                    justifyContent: checked ? 'flex-end' : '',
-                                    width: '64px',
-                                }}
-                            >
-                                <input
-                                    id="checkbox-switch"
-                                    type="checkbox"
-                                    style={{ display: 'none' }}
-                                    checked={checked}
-                                    onChange={toggle}
-                                />
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        border: checked ? '' : '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRadius: '9999px',
-                                        width: '32px',
-                                    }}
-                                />
-                            </label>
-                        </div>
-                    )}
-                    source={`
+html={`
 <label style="
     display: flex;
 
@@ -107,7 +66,48 @@ const Details: React.FC<{}> = () => {
     " />
 </label>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <label
+                            htmlFor="checkbox-switch"
+                            style={{
+                                backgroundColor: checked ? '#357EDD' : 'rgba(0, 0, 0, 0.1)',
+                                border: `1px solid ${checked ? '#357EDD' : 'rgba(0, 0, 0, 0.3)'}`,
+                                borderRadius: '9999px',
+                                display: 'flex',
+                                height: '32px',
+                                justifyContent: checked ? 'flex-end' : '',
+                                width: '64px',
+                            }}
+                        >
+                            <input
+                                id="checkbox-switch"
+                                type="checkbox"
+                                style={{ display: 'none' }}
+                                checked={checked}
+                                onChange={toggle}
+                            />
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    border: checked ? '' : '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '9999px',
+                                    width: '32px',
+                                }}
+                            />
+                        </label>
+                    </div>
+                </BrowserFrame>
             </div>
             <RelatedPatterns patterns={[Pattern.RadioSwitch]} />
         </DetailsLayout>

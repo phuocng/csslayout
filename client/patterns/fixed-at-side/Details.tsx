@@ -21,28 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                height: '100%',
-                                position: 'relative',
-                                width: '100%',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                                    height: '200px',
-                                    position: 'absolute',
-                                    right: 0,
-                                    top: '50%',
-                                    transform: 'translate(0, -50%)',
-                                    width: '32px',
-                                }}
-                            />
-                        </div>
-                    )}
-                    source={`
+html={`
 <!-- Fixed at the middle of side -->
 <div style="
     right: 0;
@@ -53,7 +32,28 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            height: '100%',
+                            position: 'relative',
+                            width: '100%',
+                        }}
+                    >
+                        <div
+                            style={{
+                                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                                height: '200px',
+                                position: 'absolute',
+                                right: 0,
+                                top: '50%',
+                                transform: 'translate(0, -50%)',
+                                width: '32px',
+                            }}
+                        />
+                    </div>
+                </BrowserFrame>
             </div>
 
             <section>

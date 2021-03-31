@@ -25,38 +25,7 @@ const Details: React.FC<{}> = () => {
                     Hover on the Patterns &rarr; Navigation to see the sub dropdowns.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                padding: '8px',
-                            }}
-                        >
-                            <ul className="p-nested-dropdowns">
-                                <li>Home</li>
-                                <li>
-                                    <div>Patterns</div>
-                                    <ul>
-                                        <li>Layout</li>
-                                        <li>Input</li>
-                                        <li>
-                                            <div>Navigation</div>
-                                            <ul>
-                                                <li>Breadcrumb</li>
-                                                <li>Dropdown</li>
-                                                <li>Menu</li>
-                                                <li>Nested dropdown</li>
-                                            </ul>
-                                        </li>
-                                        <li>Display</li>
-                                        <li>Feedback</li>
-                                    </ul>
-                                </li>
-                                <li>Products</li>
-                                <li>About</li>
-                            </ul>
-                        </div>
-                    )}
-                    source={`
+html={`
 <style>
 /* The root */
 .p-nested-dropdowns {
@@ -144,7 +113,38 @@ const Details: React.FC<{}> = () => {
     <li>About</li>
 </ul>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            padding: '8px',
+                        }}
+                    >
+                        <ul className="p-nested-dropdowns">
+                            <li>Home</li>
+                            <li>
+                                <div>Patterns</div>
+                                <ul>
+                                    <li>Layout</li>
+                                    <li>Input</li>
+                                    <li>
+                                        <div>Navigation</div>
+                                        <ul>
+                                            <li>Breadcrumb</li>
+                                            <li>Dropdown</li>
+                                            <li>Menu</li>
+                                            <li>Nested dropdown</li>
+                                        </ul>
+                                    </li>
+                                    <li>Display</li>
+                                    <li>Feedback</li>
+                                </ul>
+                            </li>
+                            <li>Products</li>
+                            <li>About</li>
+                        </ul>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.Dropdown, Pattern.Menu]} />

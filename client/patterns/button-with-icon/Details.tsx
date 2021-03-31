@@ -21,36 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ width: '256px' }}>
-                                <button
-                                    style={{
-                                        alignItems: 'center',
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRadius: '8px',
-                                        display: 'flex',
-                                        height: '64px',
-                                        padding: '8px',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <div style={{ marginRight: '8px' }}><Circle size={32} /></div>
-                                    <Rectangle />
-                                </button>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <button style="
     /* Center the content */
     align-items: center;
@@ -65,7 +36,36 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ width: '256px' }}>
+                            <button
+                                style={{
+                                    alignItems: 'center',
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '8px',
+                                    display: 'flex',
+                                    height: '64px',
+                                    padding: '8px',
+                                    width: '100%',
+                                }}
+                            >
+                                <div style={{ marginRight: '8px' }}><Circle size={32} /></div>
+                                <Rectangle />
+                            </button>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

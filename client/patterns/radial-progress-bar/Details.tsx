@@ -80,21 +80,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ marginRight: '16px' }}><RadialProgress percentages={45} /></div>
-                            <RadialProgress percentages={80} />
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     position: relative;
 ">
@@ -178,7 +164,21 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ marginRight: '16px' }}><RadialProgress percentages={45} /></div>
+                        <RadialProgress percentages={80} />
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

@@ -20,66 +20,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    padding: '16px',
-                                    position: 'relative',
-                                    width: '300px',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'flex',
-                                        height: '100%',
-                                        justifyContent: 'center',
-                                        left: 0,
-                                        position: 'absolute',
-                                        top: 0,
-                                        width: '100%',
-                                    }}
-                                >
-                                    <div
-                                        style={{
-                                            color: 'rgba(0, 0, 0, 0.2)',
-                                            fontSize: '3rem',
-                                            fontWeight: 'bold',
-                                            textTransform: 'uppercase',
-                                            transform: 'rotate(-45deg)',
-                                            userSelect: 'none',
-                                        }}
-                                    >
-                                        Draft
-                                    </div>
-                                </div>
-
-                                <div style={{ marginBottom: '8px' }}>
-                                    <Block numberOfBlocks={20} />
-                                </div>
-
-                                <div style={{ marginBottom: '8px' }}>
-                                    <Block numberOfBlocks={15} />
-                                </div>
-
-                                <div style={{ marginBottom: '8px' }}>
-                                    <Block numberOfBlocks={10} />
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Used to position the watermark */
     position: relative;
@@ -124,7 +65,66 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                padding: '16px',
+                                position: 'relative',
+                                width: '300px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    height: '100%',
+                                    justifyContent: 'center',
+                                    left: 0,
+                                    position: 'absolute',
+                                    top: 0,
+                                    width: '100%',
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        color: 'rgba(0, 0, 0, 0.2)',
+                                        fontSize: '3rem',
+                                        fontWeight: 'bold',
+                                        textTransform: 'uppercase',
+                                        transform: 'rotate(-45deg)',
+                                        userSelect: 'none',
+                                    }}
+                                >
+                                    Draft
+                                </div>
+                            </div>
+
+                            <div style={{ marginBottom: '8px' }}>
+                                <Block numberOfBlocks={20} />
+                            </div>
+
+                            <div style={{ marginBottom: '8px' }}>
+                                <Block numberOfBlocks={15} />
+                            </div>
+
+                            <div style={{ marginBottom: '8px' }}>
+                                <Block numberOfBlocks={10} />
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

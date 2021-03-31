@@ -25,44 +25,7 @@ const Details: React.FC<{}> = () => {
                     the <Link to='/patterns/centering'>Centering</Link> pattern.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '50%',
-                                    color: '#FFF',
-                                    display: 'inline-block',
-                                    fontSize: '24px',
-                                    height: '48px',
-                                    position: 'relative',
-                                    verticalAlign: 'middle',
-                                    width: '48px',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        left: '50%',
-                                        position: 'absolute',
-                                        top: '50%',
-                                        transform: 'translate(-50%, -50%)',
-                                    }}
-                                >
-                                    PN
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Center the content */
     display: inline-block;
@@ -92,7 +55,44 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                                borderRadius: '50%',
+                                color: '#FFF',
+                                display: 'inline-block',
+                                fontSize: '24px',
+                                height: '48px',
+                                position: 'relative',
+                                verticalAlign: 'middle',
+                                width: '48px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    left: '50%',
+                                    position: 'absolute',
+                                    top: '50%',
+                                    transform: 'translate(-50%, -50%)',
+                                }}
+                            >
+                                PN
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns

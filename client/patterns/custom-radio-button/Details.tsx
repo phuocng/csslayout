@@ -71,53 +71,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ width: '200px' }}>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'inline-flex',
-                                        marginBottom: '16px',
-                                    }}
-                                >
-                                    <Radio value='1'>
-                                        <div style={{ width: '100px' }}><Rectangle /></div>
-                                    </Radio>
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'inline-flex',
-                                        marginBottom: '16px',
-                                    }}
-                                >
-                                    <Radio value='2'>
-                                        <div style={{ width: '200px' }}><Rectangle /></div>
-                                    </Radio>
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'inline-flex',
-                                    }}
-                                >
-                                    <Radio value='3'>
-                                        <div style={{ width: '150px' }}><Rectangle /></div>
-                                    </Radio>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <label style="
     /* Center the content horizontally */
     align-items: center;
@@ -164,7 +118,53 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ width: '200px' }}>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'inline-flex',
+                                    marginBottom: '16px',
+                                }}
+                            >
+                                <Radio value='1'>
+                                    <div style={{ width: '100px' }}><Rectangle /></div>
+                                </Radio>
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'inline-flex',
+                                    marginBottom: '16px',
+                                }}
+                            >
+                                <Radio value='2'>
+                                    <div style={{ width: '200px' }}><Rectangle /></div>
+                                </Radio>
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'inline-flex',
+                                }}
+                            >
+                                <Radio value='3'>
+                                    <div style={{ width: '150px' }}><Rectangle /></div>
+                                </Radio>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
             <RelatedPatterns patterns={[Pattern.CustomCheckboxButton, Pattern.RadioButtonGroup]} />
         </DetailsLayout>

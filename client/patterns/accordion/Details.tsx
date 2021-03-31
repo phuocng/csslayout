@@ -64,89 +64,24 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderBottomColor: 'transparent',
-                                    borderRadius: '4px',
-                                    width: '60%',
-                                }}
-                            >
-                                <Item
-                                    index={0}
-                                    title={<div style={{ width: '40%' }}><Rectangle /></div>}
-                                >
-                                    <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={10} /></div>
-                                </Item>
-                                <Item
-                                    index={1}
-                                    title={<div style={{ width: '80%' }}><Rectangle /></div>}
-                                >
-                                    <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={15} /></div>
-                                </Item>
-                                <Item
-                                    index={2}
-                                    title={<div style={{ width: '60%' }}><Rectangle /></div>}
-                                >
-                                    <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={10} /></div>
-                                </Item>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <!-- Container -->
-<div style="
-    /* Border */
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-bottom-color: transparent;
-    border-radius: 4px;
-">
+<div class="container">
     <!-- Each accordion item -->
-    <div style="
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    ">
+    <div class="item">
         <!-- Heading -->
-        <div style="
-            /* Center the content horizontally */
-            align-items: center;
-            display: flex;
-
-            cursor: pointer;
-            padding: 16px;
-        ">
+        <div class="header">
             <!-- The toggle icon -->
-            <div style="margin-right: 12px;">...</div>
+            <div class="toggle">...</div>
 
             <!-- The title -->
-            <div style="
-                flex: 1; /* Take remaining width */
-            ">
+            <div class="title">
                 ...
             </div>
         </div>
 
         <!-- The content -->
-        <div style="
-            /* For selected item */
-            display: block;
-
-            /* For not selected item */
-            display: none;
-
-            border-top: 1px solid rgba(0, 0, 0, 0.3);
-            padding: 16px;
-        ">
+        <div class="content">
             ...
         </div>
     </div>
@@ -155,7 +90,86 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={`
+.container {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom-color: transparent;
+    border-radius: 4px;
+}
+
+.item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    /* Center the content horizontally */
+    align-items: center;
+    display: flex;
+
+    cursor: pointer;
+    padding: 16px;
+}
+.toggle {
+    margin-right: 12px;
+}
+.title {
+    /* Take remaining width */
+    flex: 1;
+}
+
+.content {
+    /* For not selected item */
+    display: none;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 16px;
+}
+.content.selected {
+    /* For selected item */
+    display: block;
+}
+`}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderBottomColor: 'transparent',
+                                borderRadius: '4px',
+                                width: '60%',
+                            }}
+                        >
+                            <Item
+                                index={0}
+                                title={<div style={{ width: '40%' }}><Rectangle /></div>}
+                            >
+                                <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={10} /></div>
+                            </Item>
+                            <Item
+                                index={1}
+                                title={<div style={{ width: '80%' }}><Rectangle /></div>}
+                            >
+                                <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={15} /></div>
+                            </Item>
+                            <Item
+                                index={2}
+                                title={<div style={{ width: '60%' }}><Rectangle /></div>}
+                            >
+                                <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={10} /></div>
+                            </Item>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.QuestionsAndAnswers]} />

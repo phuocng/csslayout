@@ -22,38 +22,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div style={{ display: 'flex', height: '100%' }}>
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                    display: 'flex',
-                                    flex: 1,
-                                    flexDirection: 'column',
-                                    justifyContent: 'center',
-                                }}
-                            >
-                                <div style={{ marginBottom: '16px' }}><Circle size={128} /></div>
-                                <div style={{ width: '60%' }}><Rectangle /></div>
-                            </div>
-                            <div
-                                style={{
-                                    display: 'flex',
-                                    flex: 1,
-                                    flexDirection: 'column',
-                                    justifyContent: 'center',
-                                }}
-                            >
-                                <div style={{ padding: '32px' }}>
-                                    <div style={{ marginBottom: '32px' }}><Rectangle /></div>
-                                    <div style={{ marginBottom: '32px' }}><Block numberOfBlocks={15} /></div>
-                                    <Block numberOfBlocks={10} />
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="display: flex;">
     <!-- Left content -->
     <div style="flex: 1;">
@@ -66,7 +35,38 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div style={{ display: 'flex', height: '100%' }}>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                display: 'flex',
+                                flex: 1,
+                                flexDirection: 'column',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            <div style={{ marginBottom: '16px' }}><Circle size={128} /></div>
+                            <div style={{ width: '60%' }}><Rectangle /></div>
+                        </div>
+                        <div
+                            style={{
+                                display: 'flex',
+                                flex: 1,
+                                flexDirection: 'column',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            <div style={{ padding: '32px' }}>
+                                <div style={{ marginBottom: '32px' }}><Rectangle /></div>
+                                <div style={{ marginBottom: '32px' }}><Block numberOfBlocks={15} /></div>
+                                <Block numberOfBlocks={10} />
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

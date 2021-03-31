@@ -9,18 +9,21 @@ import SampleCode from '../components/SampleCode';
 import './browserFrame.css';
 
 interface BrowserFrameProps {
-    content: React.ReactNode;
-    source?: string;
+    css: string;
+    html: string;    
 }
 
-const BrowserFrame: React.FC<BrowserFrameProps> = ({ content, source }) => {
+const BrowserFrame: React.FC<BrowserFrameProps> = ({ children, css, html }) => {
     return (
         <div className="demo">
-            <div className="demo__source">
-                {source && <SampleCode fullHeight={true} lang="html" code={source} />}
+            <div className="demo__html">
+                <SampleCode fullHeight={true} lang="html" code={html} />
+            </div>
+            <div className="demo__css">
+                <SampleCode fullHeight={true} lang="css" code={css} />
             </div>
             <div className="demo__live">
-                {content}
+                {children}
             </div>
         </div>
     );

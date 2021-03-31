@@ -21,46 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    height: '200px',
-                                    justifyContent: 'center',
-                                    position: 'relative',
-                                    width: '75%',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                                        height: '100%',
-                                        left: 0,
-                                        position: 'absolute',
-                                        top: 0,
-                                        transform: 'skewY(-5deg)',
-                                        width: '100%',
-                                        zIndex: -1,
-                                    }}
-                                />
-                                <div style={{ width: '60%' }}>
-                                    <Block backgroundColor='#fff' justify='center' numberOfBlocks={5} />
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Used to position the diagonal area */
     position: relative;
@@ -90,7 +51,46 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '200px',
+                                justifyContent: 'center',
+                                position: 'relative',
+                                width: '75%',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                                    height: '100%',
+                                    left: 0,
+                                    position: 'absolute',
+                                    top: 0,
+                                    transform: 'skewY(-5deg)',
+                                    width: '100%',
+                                    zIndex: -1,
+                                }}
+                            />
+                            <div style={{ width: '60%' }}>
+                                <Block backgroundColor='#fff' justify='center' numberOfBlocks={5} />
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.CurvedBackground]} />

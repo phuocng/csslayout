@@ -23,36 +23,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    border: '2px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '0 50% 50% 50%',
-                                    display: 'flex',
-                                    height: '64px',
-                                    justifyContent: 'center',
-                                    transform: 'rotate(45deg)',
-                                    width: '64px',
-                                }}
-                            >
-                                <div style={{ transform: 'rotate(-45deg)' }}>
-                                    <Circle />
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Center the content */
     align-items: center;
@@ -78,7 +49,36 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                border: '2px solid rgba(0, 0, 0, 0.3)',
+                                borderRadius: '0 50% 50% 50%',
+                                display: 'flex',
+                                height: '64px',
+                                justifyContent: 'center',
+                                transform: 'rotate(45deg)',
+                                width: '64px',
+                            }}
+                        >
+                            <div style={{ transform: 'rotate(-45deg)' }}>
+                                <Circle />
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

@@ -20,34 +20,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    display: 'inline-flex',
-                                    flexDirection: 'column',
-                                }}
-                            >
-                                <div style={{ fontSize: '4rem', fontWeight: 500 }}>
-                                    {random(1000, 9999).toLocaleString()}
-                                </div>
-                                <div style={{ fontSize: '1rem', fontWeight: 700, textTransform: 'uppercase' }}>
-                                    stars
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Center the content */
     align-items: center;
@@ -76,7 +49,34 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'inline-flex',
+                                flexDirection: 'column',
+                            }}
+                        >
+                            <div style={{ fontSize: '4rem', fontWeight: 500 }}>
+                                {random(1000, 9999).toLocaleString()}
+                            </div>
+                            <div style={{ fontSize: '1rem', fontWeight: 700, textTransform: 'uppercase' }}>
+                                stars
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

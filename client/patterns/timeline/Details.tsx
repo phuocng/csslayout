@@ -22,77 +22,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    position: 'relative',
-                                    width: '60%',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        borderRight: '2px solid #aaa',
-                                        height: '100%',
-                                        left: '16px',
-                                        position: 'absolute',
-                                        top: 0,
-                                    }}
-                                />
-                                <ul
-                                    style={{
-                                        listStyleType: 'none',
-                                        margin: 0,
-                                        padding: 0,
-                                    }}
-                                >
-                                    <li style={{ marginBottom: '8px' }}>
-                                        <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
-                                            <Circle backgroundColor='#aaa' size={32} />
-                                            <div style={{ flex: 1, marginLeft: '16px' }}>
-                                                <div style={{ width: '80%' }}><Rectangle /></div>
-                                            </div>
-                                        </div>
-                                        <div style={{ marginLeft: '48px' }}>
-                                            <Block numberOfBlocks={10} blockHeight={2} />
-                                        </div>
-                                    </li>
-                                    <li style={{ marginBottom: '8px' }}>
-                                        <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
-                                            <Circle backgroundColor='#aaa' size={32} />
-                                            <div style={{ flex: 1, marginLeft: '16px' }}>
-                                                <div style={{ width: '60%' }}><Rectangle /></div>
-                                            </div>
-                                        </div>
-                                        <div style={{ marginLeft: '48px' }}>
-                                            <Block numberOfBlocks={15} blockHeight={2} />
-                                        </div>
-                                    </li>
-                                    <li style={{ marginBottom: '8px' }}>
-                                        <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
-                                            <Circle backgroundColor='#aaa' size={32} />
-                                            <div style={{ flex: 1, marginLeft: '16px' }}>
-                                                <div style={{ width: '60%' }}><Rectangle /></div>
-                                            </div>
-                                        </div>
-                                        <div style={{ marginLeft: '48px' }}>
-                                            <Block numberOfBlocks={10} blockHeight={2} />
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Used to position the left vertical line */
     position: relative;
@@ -160,7 +90,77 @@ const Details: React.FC<{}> = () => {
     </ul>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                position: 'relative',
+                                width: '60%',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    borderRight: '2px solid #aaa',
+                                    height: '100%',
+                                    left: '16px',
+                                    position: 'absolute',
+                                    top: 0,
+                                }}
+                            />
+                            <ul
+                                style={{
+                                    listStyleType: 'none',
+                                    margin: 0,
+                                    padding: 0,
+                                }}
+                            >
+                                <li style={{ marginBottom: '8px' }}>
+                                    <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
+                                        <Circle backgroundColor='#aaa' size={32} />
+                                        <div style={{ flex: 1, marginLeft: '16px' }}>
+                                            <div style={{ width: '80%' }}><Rectangle /></div>
+                                        </div>
+                                    </div>
+                                    <div style={{ marginLeft: '48px' }}>
+                                        <Block numberOfBlocks={10} blockHeight={2} />
+                                    </div>
+                                </li>
+                                <li style={{ marginBottom: '8px' }}>
+                                    <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
+                                        <Circle backgroundColor='#aaa' size={32} />
+                                        <div style={{ flex: 1, marginLeft: '16px' }}>
+                                            <div style={{ width: '60%' }}><Rectangle /></div>
+                                        </div>
+                                    </div>
+                                    <div style={{ marginLeft: '48px' }}>
+                                        <Block numberOfBlocks={15} blockHeight={2} />
+                                    </div>
+                                </li>
+                                <li style={{ marginBottom: '8px' }}>
+                                    <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
+                                        <Circle backgroundColor='#aaa' size={32} />
+                                        <div style={{ flex: 1, marginLeft: '16px' }}>
+                                            <div style={{ width: '60%' }}><Rectangle /></div>
+                                        </div>
+                                    </div>
+                                    <div style={{ marginLeft: '48px' }}>
+                                        <Block numberOfBlocks={10} blockHeight={2} />
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

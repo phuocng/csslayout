@@ -56,32 +56,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ position: 'relative' }}>
-                                <div style={{ height: '32px', width: '32px' }}>
-                                    <Square />
-                                </div>
-                                {
-                                    Array(numItems).fill(0).map((_, i) => {
-                                        return (
-                                            <CircularItem key={i} degree={360 / numItems * i}>{i + 1}</CircularItem>
-                                        );
-                                    })
-                                }
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     position: relative;
 ">
@@ -133,7 +108,32 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ position: 'relative' }}>
+                            <div style={{ height: '32px', width: '32px' }}>
+                                <Square />
+                            </div>
+                            {
+                                Array(numItems).fill(0).map((_, i) => {
+                                    return (
+                                        <CircularItem key={i} degree={360 / numItems * i}>{i + 1}</CircularItem>
+                                    );
+                                })
+                            }
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

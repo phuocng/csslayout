@@ -23,113 +23,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '100%',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <div style={{ width: '60%' }}>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                        display: 'flex',
-                                        padding: '12px 0',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <div style={{ flex: 1, marginRight: '16px' }}>
-                                        <Rectangle />
-                                    </div>
-                                    <div style={{ display: 'flex', justifyContent: 'center', marginRight: '16px', width: '75px' }}>
-                                        <Rectangle />
-                                    </div>
-                                    <div style={{ display: 'flex', justifyContent: 'center', width: '50px' }}>
-                                        <Rectangle />
-                                    </div>
-                                </div>
-
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                        display: 'flex',
-                                        padding: '8px 0',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <div style={{ flex: 1, marginRight: '16px' }}>
-                                        <Block numberOfBlocks={4} />
-                                    </div>
-                                    <div style={{ display: 'flex', justifyContent: 'center', marginRight: '16px', width: '75px' }}>
-                                        <Circle size={8} />
-                                    </div>
-                                    <div style={{ display: 'flex', justifyContent: 'center', width: '50px' }}>
-                                        <Circle size={8} />
-                                    </div>
-                                </div>
-
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                        display: 'flex',
-                                        padding: '8px 0',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <div style={{ flex: 1, marginRight: '16px' }}>
-                                        <Block numberOfBlocks={5} />
-                                    </div>
-                                    <div style={{ display: 'flex', justifyContent: 'center', marginRight: '16px', width: '75px' }} />
-                                    <div style={{ display: 'flex', justifyContent: 'center', width: '50px' }}>
-                                        <Circle size={8} />
-                                    </div>
-                                </div>
-
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                        display: 'flex',
-                                        padding: '8px 0',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <div style={{ flex: 1, marginRight: '16px' }}>
-                                        <Block numberOfBlocks={4} />
-                                    </div>
-                                    <div style={{ display: 'flex', justifyContent: 'center', marginRight: '16px', width: '75px' }}>
-                                        <Circle size={8} />
-                                    </div>
-                                    <div style={{ display: 'flex', justifyContent: 'center', width: '50px' }} />
-                                </div>
-
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                        display: 'flex',
-                                        padding: '8px 0',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <div style={{ flex: 1, marginRight: '16px' }}>
-                                        <Block numberOfBlocks={6} />
-                                    </div>
-                                    <div style={{ display: 'flex', justifyContent: 'center', marginRight: '16px', width: '75px' }}>
-                                        <Circle size={8} />
-                                    </div>
-                                    <div style={{ display: 'flex', justifyContent: 'center', width: '50px' }} />
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     align-items: center;
     display: flex;
@@ -174,7 +68,113 @@ const Details: React.FC<{}> = () => {
 <!-- Repeated items -->
 ...
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            height: '100%',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <div style={{ width: '60%' }}>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    display: 'flex',
+                                    padding: '12px 0',
+                                    width: '100%',
+                                }}
+                            >
+                                <div style={{ flex: 1, marginRight: '16px' }}>
+                                    <Rectangle />
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'center', marginRight: '16px', width: '75px' }}>
+                                    <Rectangle />
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'center', width: '50px' }}>
+                                    <Rectangle />
+                                </div>
+                            </div>
+
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    display: 'flex',
+                                    padding: '8px 0',
+                                    width: '100%',
+                                }}
+                            >
+                                <div style={{ flex: 1, marginRight: '16px' }}>
+                                    <Block numberOfBlocks={4} />
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'center', marginRight: '16px', width: '75px' }}>
+                                    <Circle size={8} />
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'center', width: '50px' }}>
+                                    <Circle size={8} />
+                                </div>
+                            </div>
+
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    display: 'flex',
+                                    padding: '8px 0',
+                                    width: '100%',
+                                }}
+                            >
+                                <div style={{ flex: 1, marginRight: '16px' }}>
+                                    <Block numberOfBlocks={5} />
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'center', marginRight: '16px', width: '75px' }} />
+                                <div style={{ display: 'flex', justifyContent: 'center', width: '50px' }}>
+                                    <Circle size={8} />
+                                </div>
+                            </div>
+
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    display: 'flex',
+                                    padding: '8px 0',
+                                    width: '100%',
+                                }}
+                            >
+                                <div style={{ flex: 1, marginRight: '16px' }}>
+                                    <Block numberOfBlocks={4} />
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'center', marginRight: '16px', width: '75px' }}>
+                                    <Circle size={8} />
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'center', width: '50px' }} />
+                            </div>
+
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    display: 'flex',
+                                    padding: '8px 0',
+                                    width: '100%',
+                                }}
+                            >
+                                <div style={{ flex: 1, marginRight: '16px' }}>
+                                    <Block numberOfBlocks={6} />
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'center', marginRight: '16px', width: '75px' }}>
+                                    <Circle size={8} />
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'center', width: '50px' }} />
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.FeatureList, Pattern.PricingTable]} />

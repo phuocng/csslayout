@@ -21,55 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    height: '100%',
-                                    position: 'relative',
-                                    width: '100%',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        backgroundColor: 'rgba(0, 0, 0, 0.25)',
-                                        display: 'flex',
-                                        height: '100%',
-                                        justifyContent: 'center',
-                                        left: 0,
-                                        position: 'absolute',
-                                        top: 0,
-                                        width: '100%',
-                                    }}
-                                >
-                                    <div
-                                        style={{
-                                            alignItems: 'center',
-                                            border: '4px solid #FFF',
-                                            borderRadius: '9999px',
-                                            display: 'flex',
-                                            height: '64px',
-                                            justifyContent: 'center',
-                                            width: '64px',
-                                        }}
-                                    >
-                                        <Triangle backgroundColor='#FFF' corner='r' size={8} />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Used to position the overlay */
     position: relative;
@@ -101,7 +53,55 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                height: '100%',
+                                position: 'relative',
+                                width: '100%',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    backgroundColor: 'rgba(0, 0, 0, 0.25)',
+                                    display: 'flex',
+                                    height: '100%',
+                                    justifyContent: 'center',
+                                    left: 0,
+                                    position: 'absolute',
+                                    top: 0,
+                                    width: '100%',
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        alignItems: 'center',
+                                        border: '4px solid #FFF',
+                                        borderRadius: '9999px',
+                                        display: 'flex',
+                                        height: '64px',
+                                        justifyContent: 'center',
+                                        width: '64px',
+                                    }}
+                                >
+                                    <Triangle backgroundColor='#FFF' corner='r' size={8} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
             <RelatedPatterns patterns={[Pattern.VideoBackground]} />
         </DetailsLayout>

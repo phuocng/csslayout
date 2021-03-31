@@ -20,36 +20,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    border: '4px dashed rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '4px',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    height: '80%',
-                                    justifyContent: 'center',
-                                    width: '80%',
-                                }}
-                            >
-                                <div style={{ width: '40%' }}>
-                                    <Block justify='center' numberOfBlocks={10} />
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Center the content */
     align-items: center;
@@ -63,7 +34,36 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                border: '4px dashed rgba(0, 0, 0, 0.3)',
+                                borderRadius: '4px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '80%',
+                                justifyContent: 'center',
+                                width: '80%',
+                            }}
+                        >
+                            <div style={{ width: '40%' }}>
+                                <Block justify='center' numberOfBlocks={10} />
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

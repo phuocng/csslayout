@@ -21,95 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '4px',
-                                    display: 'flex',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        padding: '8px',
-                                        width: '128px',
-                                    }}
-                                >
-                                    <Rectangle />
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        padding: '8px',
-                                    }}
-                                >
-                                    <Circle size={16} />
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        padding: '8px',
-                                    }}
-                                >
-                                    <Circle size={16} />
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        padding: '8px',
-                                    }}
-                                >
-                                    <Circle size={16} />
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        padding: '8px',
-                                    }}
-                                >
-                                    <Circle size={16} />
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        padding: '8px',
-                                        width: '64px',
-                                    }}
-                                >
-                                    <Rectangle />
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     display: flex;
 
@@ -144,7 +56,95 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRadius: '4px',
+                                display: 'flex',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    padding: '8px',
+                                    width: '128px',
+                                }}
+                            >
+                                <Rectangle />
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    padding: '8px',
+                                }}
+                            >
+                                <Circle size={16} />
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    padding: '8px',
+                                }}
+                            >
+                                <Circle size={16} />
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    padding: '8px',
+                                }}
+                            >
+                                <Circle size={16} />
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    padding: '8px',
+                                }}
+                            >
+                                <Circle size={16} />
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    padding: '8px',
+                                    width: '64px',
+                                }}
+                            >
+                                <Rectangle />
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

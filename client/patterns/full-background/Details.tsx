@@ -21,34 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    background: 'url("/assets/full-background.jpeg") center center / cover no-repeat',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    height: '100%',
-                                    justifyContent: 'center',
-                                    width: '100%',
-                                }}
-                            >
-                                <div style={{ width: '250px' }}>
-                                    <Block backgroundColor='#fff' justify='center' numberOfBlocks={10} />
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Center the content */
     align-items: center;
@@ -66,7 +39,34 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                background: 'url("/assets/full-background.jpeg") center center / cover no-repeat',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                height: '100%',
+                                justifyContent: 'center',
+                                width: '100%',
+                            }}
+                        >
+                            <div style={{ width: '250px' }}>
+                                <Block backgroundColor='#fff' justify='center' numberOfBlocks={10} />
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.VideoBackground]} />

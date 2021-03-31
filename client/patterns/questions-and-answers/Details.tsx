@@ -60,64 +60,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ width: '60%' }}>
-                                <div
-                                    style={{
-                                        margin: '0 auto',
-                                        paddingBottom: '24px',
-                                        width: '200px',
-                                    }}
-                                >
-                                    <Rectangle />
-                                </div>
-                                <div
-                                    style={{
-                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderTop: '1px solid rgba(0, 0, 0, 0.3)',
-                                    }}
-                                >
-                                    <Item
-                                        index={0}
-                                        title={<div style={{ width: '40%' }}><Rectangle /></div>}
-                                    >
-                                        <Block numberOfBlocks={10} />
-                                    </Item>
-                                </div>
-                                <div
-                                    style={{
-                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                    }}
-                                >
-                                    <Item
-                                        index={1}
-                                        title={<div style={{ width: '80%' }}><Rectangle /></div>}
-                                    >
-                                        <Block numberOfBlocks={15} />
-                                    </Item>
-                                </div>
-                                <div style={{ borderBottom: '1px solid rgba(0, 0, 0, 0.3)' }}>
-                                    <Item
-                                        index={2}
-                                        title={<div style={{ width: '60%' }}><Rectangle /></div>}
-                                    >
-                                        <Block numberOfBlocks={10} />
-                                    </Item>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <!-- Each question and answer item -->
 <div style="
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -138,7 +81,64 @@ const Details: React.FC<{}> = () => {
     <!-- Answer -->
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ width: '60%' }}>
+                            <div
+                                style={{
+                                    margin: '0 auto',
+                                    paddingBottom: '24px',
+                                    width: '200px',
+                                }}
+                            >
+                                <Rectangle />
+                            </div>
+                            <div
+                                style={{
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+                                }}
+                            >
+                                <Item
+                                    index={0}
+                                    title={<div style={{ width: '40%' }}><Rectangle /></div>}
+                                >
+                                    <Block numberOfBlocks={10} />
+                                </Item>
+                            </div>
+                            <div
+                                style={{
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                }}
+                            >
+                                <Item
+                                    index={1}
+                                    title={<div style={{ width: '80%' }}><Rectangle /></div>}
+                                >
+                                    <Block numberOfBlocks={15} />
+                                </Item>
+                            </div>
+                            <div style={{ borderBottom: '1px solid rgba(0, 0, 0, 0.3)' }}>
+                                <Item
+                                    index={2}
+                                    title={<div style={{ width: '60%' }}><Rectangle /></div>}
+                                >
+                                    <Block numberOfBlocks={10} />
+                                </Item>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.Accordion]} />

@@ -56,31 +56,7 @@ const Details: React.FC<{}> = () => {
                     We use the native <code>kbd</code> tag to display the keyboard shortcut.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <kbd
-                                style={{
-                                    backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                                    borderRadius: '4px',
-                                    boxShadow: 'rgba(0, 0, 0, 0.3) 0px -2px 0px inset, rgba(0, 0, 0, 0.4) 0px 1px 1px',
-                                    color: 'rgba(0, 0, 0, 0.7)',
-                                    padding: '8px',
-                                }}
-                            >
-                                ⌘ + C
-                            </kbd>
-                        </div>
-                    )}
-                    source={`
+html={`
 <kbd style="
     /* Background and color */
     background-color: rgba(0, 0, 0, 0.1);
@@ -96,7 +72,31 @@ const Details: React.FC<{}> = () => {
     ...
 </kbd>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <kbd
+                            style={{
+                                backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                                borderRadius: '4px',
+                                boxShadow: 'rgba(0, 0, 0, 0.3) 0px -2px 0px inset, rgba(0, 0, 0, 0.4) 0px 1px 1px',
+                                color: 'rgba(0, 0, 0, 0.7)',
+                                padding: '8px',
+                            }}
+                        >
+                            ⌘ + C
+                        </kbd>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <section>

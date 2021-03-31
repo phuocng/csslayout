@@ -22,37 +22,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '16px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '8px',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    width: '256px',
-                                }}
-                            >
-                                <Rectangle height={150} />
-                                <div style={{ flex: 1, padding: '16px' }}>
-                                    <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={15} /></div>
-                                    <div style={{ width: '128px' }}>
-                                        <Rectangle height={32} />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     display: flex;
     flex-direction: column;
@@ -75,7 +45,37 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '16px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRadius: '8px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                width: '256px',
+                            }}
+                        >
+                            <Rectangle height={150} />
+                            <div style={{ flex: 1, padding: '16px' }}>
+                                <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={15} /></div>
+                                <div style={{ width: '128px' }}>
+                                    <Rectangle height={32} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.CardLayout, Pattern.StackedCards]} />

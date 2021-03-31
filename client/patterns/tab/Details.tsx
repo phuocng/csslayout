@@ -46,43 +46,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                }}
-                            >
-                                <Tab tabIndex={0}>
-                                    <div style={{ width: '64px' }}>
-                                        <Rectangle height={8} />
-                                    </div>
-                                </Tab>
-                                <Tab tabIndex={1}>
-                                    <div style={{ width: '32px' }}>
-                                        <Rectangle height={8} />
-                                    </div>
-                                </Tab>
-                                <Tab tabIndex={2}>
-                                    <div style={{ width: '128px' }}>
-                                        <Rectangle height={8} />
-                                    </div>
-                                </Tab>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Center the content */
     align-items: center;
@@ -112,7 +76,43 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            <Tab tabIndex={0}>
+                                <div style={{ width: '64px' }}>
+                                    <Rectangle height={8} />
+                                </div>
+                            </Tab>
+                            <Tab tabIndex={1}>
+                                <div style={{ width: '32px' }}>
+                                    <Rectangle height={8} />
+                                </div>
+                            </Tab>
+                            <Tab tabIndex={2}>
+                                <div style={{ width: '128px' }}>
+                                    <Rectangle height={8} />
+                                </div>
+                            </Tab>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

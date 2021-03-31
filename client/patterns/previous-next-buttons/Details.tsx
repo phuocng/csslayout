@@ -20,59 +20,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ width: '50%' }}>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'flex',
-                                        height: '32px',
-                                        justifyContent: 'space-between',
-                                        padding: '8px',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <a
-                                        style={{
-                                            alignItems: 'center',
-                                            border: '1px solid rgba(0, 0, 0, 0.3)',
-                                            borderRadius: '4px',
-                                            display: 'flex',
-                                            padding: '8px',
-                                            width: '30%',
-                                        }}
-                                    >
-                                        <div style={{ marginRight: '8px' }}>&lt;</div>
-                                        <Rectangle />
-                                    </a>
-                                    <a
-                                        style={{
-                                            alignItems: 'center',
-                                            border: '1px solid rgba(0, 0, 0, 0.3)',
-                                            borderRadius: '4px',
-                                            display: 'flex',
-                                            padding: '8px',
-                                            width: '30%',
-                                        }}
-                                    >
-                                        <Rectangle />
-                                        <div style={{ marginLeft: '8px' }}>&gt;</div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     align-items: center;
     display: flex;
@@ -85,7 +33,59 @@ const Details: React.FC<{}> = () => {
     <a>..</a>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ width: '50%' }}>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    height: '32px',
+                                    justifyContent: 'space-between',
+                                    padding: '8px',
+                                    width: '100%',
+                                }}
+                            >
+                                <a
+                                    style={{
+                                        alignItems: 'center',
+                                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '4px',
+                                        display: 'flex',
+                                        padding: '8px',
+                                        width: '30%',
+                                    }}
+                                >
+                                    <div style={{ marginRight: '8px' }}>&lt;</div>
+                                    <Rectangle />
+                                </a>
+                                <a
+                                    style={{
+                                        alignItems: 'center',
+                                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '4px',
+                                        display: 'flex',
+                                        padding: '8px',
+                                        width: '30%',
+                                    }}
+                                >
+                                    <Rectangle />
+                                    <div style={{ marginLeft: '8px' }}>&gt;</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

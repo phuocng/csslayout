@@ -20,36 +20,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '9999px',
-                                    color: '#FFF',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    fontSize: '20px',
-                                    height: '32px',
-                                    justifyContent: 'center',
-                                    width: '32px',
-                                }}
-                            >
-                                1
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Center the content */
     align-items: center;
@@ -68,7 +39,36 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                                borderRadius: '9999px',
+                                color: '#FFF',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                fontSize: '20px',
+                                height: '32px',
+                                justifyContent: 'center',
+                                width: '32px',
+                            }}
+                        >
+                            1
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.Centering, Pattern.InitialAvatar]} />

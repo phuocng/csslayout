@@ -22,28 +22,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'flex-start',
-                                display: 'flex',
-                                height: '100%',
-                                padding: '16px',
-                            }}
-                        >
-                            <div style={{ height: '128px', marginRight: '16px', width: '128px' }}>
-                                <Square />
-                            </div>
-                            <div style={{ flex: 1 }}>
-                                <div style={{ marginBottom: '32px', width: '80%' }}>
-                                    <Rectangle />
-                                </div>
-                                <div style={{ marginBottom: '32px' }}><Block numberOfBlocks={20} /></div>
-                                <div style={{ marginBottom: '32px' }}><Block numberOfBlocks={15} /></div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Align sub-items to top */
     align-items: start;
@@ -68,7 +47,28 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'flex-start',
+                            display: 'flex',
+                            height: '100%',
+                            padding: '16px',
+                        }}
+                    >
+                        <div style={{ height: '128px', marginRight: '16px', width: '128px' }}>
+                            <Square />
+                        </div>
+                        <div style={{ flex: 1 }}>
+                            <div style={{ marginBottom: '32px', width: '80%' }}>
+                                <Rectangle />
+                            </div>
+                            <div style={{ marginBottom: '32px' }}><Block numberOfBlocks={20} /></div>
+                            <div style={{ marginBottom: '32px' }}><Block numberOfBlocks={15} /></div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

@@ -23,40 +23,7 @@ const Details: React.FC<{}> = () => {
                     This pattern is also known as off-canvas.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                height: '100%',
-                                position: 'relative',
-                                width: '100%',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                                    height: '100%',
-                                    left: 0,
-                                    position: 'absolute',
-                                    top: 0,
-                                    width: '100%',
-                                }}
-                            />
-                            <div
-                                style={{
-                                    backgroundColor: '#fff',
-                                    height: '100%',
-                                    left: 0,
-                                    padding: '16px',
-                                    position: 'absolute',
-                                    top: 0,
-                                    width: '250px',
-                                }}
-                            >
-                                <Block numberOfBlocks={20} />
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Container takes full size */
     height: 100%;
@@ -98,7 +65,40 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            height: '100%',
+                            position: 'relative',
+                            width: '100%',
+                        }}
+                    >
+                        <div
+                            style={{
+                                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                                height: '100%',
+                                left: 0,
+                                position: 'absolute',
+                                top: 0,
+                                width: '100%',
+                            }}
+                        />
+                        <div
+                            style={{
+                                backgroundColor: '#fff',
+                                height: '100%',
+                                left: 0,
+                                padding: '16px',
+                                position: 'absolute',
+                                top: 0,
+                                width: '250px',
+                            }}
+                        >
+                            <Block numberOfBlocks={20} />
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

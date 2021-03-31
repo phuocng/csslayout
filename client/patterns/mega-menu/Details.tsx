@@ -28,71 +28,7 @@ const Details: React.FC<{}> = () => {
                     Move the mouse over the second navigation item to see the mega menu.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div style={{ padding: '8px' }}>
-                            <div className='p-mega-menu-container'>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        display: 'inline-flex',
-                                        justifyContent: 'center',
-                                    }}
-                                >
-                                    <div
-                                        style={{
-                                            borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                            padding: '16px',
-                                            width: '150px',
-                                        }}
-                                    >
-                                        <Rectangle />
-                                    </div>
-                                    <div
-                                        className='p-mega-menu-trigger'
-                                        style={{
-                                            borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                            width: '180px',
-                                        }}
-                                    >
-                                        <div style={{ display: 'flex', padding: '16px' }}>
-                                            <div style={{ flex: 1, marginRight: '8px' }}><Rectangle /></div>
-                                            <Triangle size={8} corner='b' />
-                                        </div>
-                                        <div className='p-mega-menu-content'>
-                                            <div style={{ display: 'flex' }}>
-                                                <div style={{ flex: 1, padding: '16px' }}>
-                                                    <Block numberOfBlocks={10} />
-                                                </div>
-                                                <div style={{ flex: 1, padding: '16px' }}>
-                                                    <Block numberOfBlocks={6} />
-                                                </div>
-                                                <div style={{ flex: 1, padding: '16px' }}>
-                                                    <Block numberOfBlocks={8} />
-                                                </div>
-                                                <div style={{ flex: 1, padding: '16px' }}>
-                                                    <Block numberOfBlocks={6} />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        style={{
-                                            padding: '16px',
-                                            width: '120px',
-                                        }}
-                                    >
-                                        <Rectangle />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div style={{ marginTop: '16px' }}>
-                                <Block numberOfBlocks={10} />
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <style>
 .p-mega-menu-container {
     /* Used to position the mega menu */
@@ -142,7 +78,71 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div style={{ padding: '8px' }}>
+                        <div className='p-mega-menu-container'>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    display: 'inline-flex',
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                        padding: '16px',
+                                        width: '150px',
+                                    }}
+                                >
+                                    <Rectangle />
+                                </div>
+                                <div
+                                    className='p-mega-menu-trigger'
+                                    style={{
+                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                        width: '180px',
+                                    }}
+                                >
+                                    <div style={{ display: 'flex', padding: '16px' }}>
+                                        <div style={{ flex: 1, marginRight: '8px' }}><Rectangle /></div>
+                                        <Triangle size={8} corner='b' />
+                                    </div>
+                                    <div className='p-mega-menu-content'>
+                                        <div style={{ display: 'flex' }}>
+                                            <div style={{ flex: 1, padding: '16px' }}>
+                                                <Block numberOfBlocks={10} />
+                                            </div>
+                                            <div style={{ flex: 1, padding: '16px' }}>
+                                                <Block numberOfBlocks={6} />
+                                            </div>
+                                            <div style={{ flex: 1, padding: '16px' }}>
+                                                <Block numberOfBlocks={8} />
+                                            </div>
+                                            <div style={{ flex: 1, padding: '16px' }}>
+                                                <Block numberOfBlocks={6} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    style={{
+                                        padding: '16px',
+                                        width: '120px',
+                                    }}
+                                >
+                                    <Rectangle />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style={{ marginTop: '16px' }}>
+                            <Block numberOfBlocks={10} />
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.Dropdown, Pattern.Menu, Pattern.NestedDropdowns]} />

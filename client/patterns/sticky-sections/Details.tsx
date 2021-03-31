@@ -23,43 +23,7 @@ const Details: React.FC<{}> = () => {
                     Try to scroll the main content to see each section sticks to the top of page.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                height: '100%',
-                                overflow: 'scroll',
-                            }}
-                        >
-                            <section
-                                style={{
-                                    backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                                    height: '100%',
-                                    position: 'sticky',
-                                    top: 0,
-                                    width: '100%',
-                                }}
-                            />
-                            <section
-                                style={{
-                                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                                    height: '100%',
-                                    position: 'sticky',
-                                    top: 0,
-                                    width: '100%',
-                                }}
-                            />
-                            <section
-                                style={{
-                                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                                    height: '100%',
-                                    position: 'sticky',
-                                    top: 0,
-                                    width: '100%',
-                                }}
-                            />
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     height: 100%;
     overflow: scroll;
@@ -80,7 +44,43 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            height: '100%',
+                            overflow: 'scroll',
+                        }}
+                    >
+                        <section
+                            style={{
+                                backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                                height: '100%',
+                                position: 'sticky',
+                                top: 0,
+                                width: '100%',
+                            }}
+                        />
+                        <section
+                            style={{
+                                backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                                height: '100%',
+                                position: 'sticky',
+                                top: 0,
+                                width: '100%',
+                            }}
+                        />
+                        <section
+                            style={{
+                                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                                height: '100%',
+                                position: 'sticky',
+                                top: 0,
+                                width: '100%',
+                            }}
+                        />
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.StickyHeader, Pattern.StickyTableColumn, Pattern.StickyTableHeaders]} />

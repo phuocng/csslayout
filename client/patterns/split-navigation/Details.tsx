@@ -21,37 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <ul
-                                style={{
-                                    alignItems: 'center',
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '8px',
-                                    display: 'flex',
-                                    listStyleType: 'none',
-                                    margin: 0,
-                                    padding: '16px',
-                                    width: '60%',
-                                }}
-                            >
-                                <li style={{ marginRight: '4px', width: '20%' }}><Rectangle /></li>
-                                <li style={{ marginRight: '4px', width: '10%' }}><Rectangle /></li>
-                                <li style={{ marginRight: '4px', width: '20%' }}><Rectangle /></li>
-                                <li style={{ marginLeft: 'auto', width: '10%' }}><Rectangle /></li>
-                            </ul>
-                        </div>
-                    )}
-                    source={`
+html={`
 <ul style="
     /* Content is centered horizontally */
     align-items: center;
@@ -75,7 +45,37 @@ const Details: React.FC<{}> = () => {
     </li>
 </ul>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <ul
+                            style={{
+                                alignItems: 'center',
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRadius: '8px',
+                                display: 'flex',
+                                listStyleType: 'none',
+                                margin: 0,
+                                padding: '16px',
+                                width: '60%',
+                            }}
+                        >
+                            <li style={{ marginRight: '4px', width: '20%' }}><Rectangle /></li>
+                            <li style={{ marginRight: '4px', width: '10%' }}><Rectangle /></li>
+                            <li style={{ marginRight: '4px', width: '20%' }}><Rectangle /></li>
+                            <li style={{ marginLeft: 'auto', width: '10%' }}><Rectangle /></li>
+                        </ul>
+                    </div>
+                </BrowserFrame>
             </div>
             <RelatedPatterns patterns={[Pattern.DotLeader, Pattern.Menu, Pattern.PropertyList]} />
         </DetailsLayout>

@@ -25,77 +25,7 @@ const Details: React.FC<{}> = () => {
                     Try to scroll the main content of table to see the header sticks to the top.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    height: '400px',
-                                    overflow: 'auto',
-                                    width: '60%',
-                                }}
-                            >
-                                <table
-                                    style={{
-                                        borderCollapse: 'collapse',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <thead>
-                                        <tr>
-                                            {
-                                                Array(3).fill(0).map((_, index) => {
-                                                    return (
-                                                        <th
-                                                            key={index}
-                                                            style={{
-                                                                backgroundColor: '#ddd',
-                                                                padding: '16px',
-                                                                position: 'sticky',
-                                                                top: 0,
-                                                                zIndex: 9999,
-                                                            }}
-                                                        >
-                                                            <Rectangle />
-                                                        </th>
-                                                    );
-                                                })
-                                            }
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {
-                                            Array(10).fill(0).map((_, row) => {
-                                                return (
-                                                    <tr key={row} style={{ borderTop: '1px solid rgba(0, 0, 0, 0.3)' }}>
-                                                        {
-                                                            Array(3).fill(0).map((__, col) => {
-                                                                return (
-                                                                    <td key={col} style={{ padding: '16px' }}>
-                                                                        <Block numberOfBlocks={3} />
-                                                                    </td>
-                                                                );
-                                                            })
-                                                        }
-                                                    </tr>
-                                                );
-                                            })
-                                        }
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <table>
     <thead>
         <tr>
@@ -120,7 +50,77 @@ const Details: React.FC<{}> = () => {
     </tbody>
 </table>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                height: '400px',
+                                overflow: 'auto',
+                                width: '60%',
+                            }}
+                        >
+                            <table
+                                style={{
+                                    borderCollapse: 'collapse',
+                                    width: '100%',
+                                }}
+                            >
+                                <thead>
+                                    <tr>
+                                        {
+                                            Array(3).fill(0).map((_, index) => {
+                                                return (
+                                                    <th
+                                                        key={index}
+                                                        style={{
+                                                            backgroundColor: '#ddd',
+                                                            padding: '16px',
+                                                            position: 'sticky',
+                                                            top: 0,
+                                                            zIndex: 9999,
+                                                        }}
+                                                    >
+                                                        <Rectangle />
+                                                    </th>
+                                                );
+                                            })
+                                        }
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        Array(10).fill(0).map((_, row) => {
+                                            return (
+                                                <tr key={row} style={{ borderTop: '1px solid rgba(0, 0, 0, 0.3)' }}>
+                                                    {
+                                                        Array(3).fill(0).map((__, col) => {
+                                                            return (
+                                                                <td key={col} style={{ padding: '16px' }}>
+                                                                    <Block numberOfBlocks={3} />
+                                                                </td>
+                                                            );
+                                                        })
+                                                    }
+                                                </tr>
+                                            );
+                                        })
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns

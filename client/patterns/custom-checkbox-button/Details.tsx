@@ -70,53 +70,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ width: '200px' }}>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'inline-flex',
-                                        marginBottom: '16px',
-                                    }}
-                                >
-                                    <Checkbox value='1' isChecked={false}>
-                                        <div style={{ width: '100px' }}><Rectangle /></div>
-                                    </Checkbox>
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'inline-flex',
-                                        marginBottom: '16px',
-                                    }}
-                                >
-                                    <Checkbox value='2' isChecked={true}>
-                                        <div style={{ width: '200px' }}><Rectangle /></div>
-                                    </Checkbox>
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'inline-flex',
-                                    }}
-                                >
-                                    <Checkbox value='3' isChecked={false}>
-                                        <div style={{ width: '150px' }}><Rectangle /></div>
-                                    </Checkbox>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <label style="
     /* Center the content horizontally */
     align-items: center;
@@ -161,7 +115,53 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ width: '200px' }}>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'inline-flex',
+                                    marginBottom: '16px',
+                                }}
+                            >
+                                <Checkbox value='1' isChecked={false}>
+                                    <div style={{ width: '100px' }}><Rectangle /></div>
+                                </Checkbox>
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'inline-flex',
+                                    marginBottom: '16px',
+                                }}
+                            >
+                                <Checkbox value='2' isChecked={true}>
+                                    <div style={{ width: '200px' }}><Rectangle /></div>
+                                </Checkbox>
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'inline-flex',
+                                }}
+                            >
+                                <Checkbox value='3' isChecked={false}>
+                                    <div style={{ width: '150px' }}><Rectangle /></div>
+                                </Checkbox>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
             <RelatedPatterns patterns={[Pattern.CustomRadioButton, Pattern.RadioButtonGroup]} />
         </DetailsLayout>

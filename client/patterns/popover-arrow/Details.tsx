@@ -20,190 +20,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '4px',
-                                    height: '300px',
-                                    marginBottom: '16px',
-                                    position: 'relative',
-                                    width: '300px',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderTop: '1px solid rgba(0, 0, 0, 0.3)',
-                                        height: '16px',
-                                        left: '32px',
-                                        position: 'absolute',
-                                        top: 0,
-                                        transform: 'translate(50%, -50%) rotate(45deg)',
-                                        width: '16px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderTop: '1px solid rgba(0, 0, 0, 0.3)',
-                                        height: '16px',
-                                        left: '50%',
-                                        position: 'absolute',
-                                        top: 0,
-                                        transform: 'translate(-50%, -50%) rotate(45deg)',
-                                        width: '16px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderTop: '1px solid rgba(0, 0, 0, 0.3)',
-                                        height: '16px',
-                                        position: 'absolute',
-                                        right: '32px',
-                                        top: 0,
-                                        transform: 'translate(-50%, -50%) rotate(45deg)',
-                                        width: '16px',
-                                    }}
-                                />
-
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderTop: '1px solid rgba(0, 0, 0, 0.3)',
-                                        height: '16px',
-                                        position: 'absolute',
-                                        right: 0,
-                                        top: '32px',
-                                        transform: 'translate(50%, 50%) rotate(45deg)',
-                                        width: '16px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderTop: '1px solid rgba(0, 0, 0, 0.3)',
-                                        height: '16px',
-                                        position: 'absolute',
-                                        right: 0,
-                                        top: '50%',
-                                        transform: 'translate(50%, -50%) rotate(45deg)',
-                                        width: '16px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderTop: '1px solid rgba(0, 0, 0, 0.3)',
-                                        bottom: '32px',
-                                        height: '16px',
-                                        position: 'absolute',
-                                        right: 0,
-                                        transform: 'translate(50%, -50%) rotate(45deg)',
-                                        width: '16px',
-                                    }}
-                                />
-
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                        bottom: '-16px',
-                                        height: '16px',
-                                        left: '32px',
-                                        position: 'absolute',
-                                        transform: 'translate(50%, -50%) rotate(45deg)',
-                                        width: '16px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                        bottom: '-16px',
-                                        height: '16px',
-                                        left: '50%',
-                                        position: 'absolute',
-                                        transform: 'translate(-50%, -50%) rotate(45deg)',
-                                        width: '16px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                        bottom: '-16px',
-                                        height: '16px',
-                                        position: 'absolute',
-                                        right: '32px',
-                                        transform: 'translate(-50%, -50%) rotate(45deg)',
-                                        width: '16px',
-                                    }}
-                                />
-
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
-                                        height: '16px',
-                                        left: 0,
-                                        position: 'absolute',
-                                        top: '32px',
-                                        transform: 'translate(-50%, 50%) rotate(45deg)',
-                                        width: '16px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
-                                        height: '16px',
-                                        left: 0,
-                                        position: 'absolute',
-                                        top: '50%',
-                                        transform: 'translate(-50%, -50%) rotate(45deg)',
-                                        width: '16px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
-                                        bottom: '32px',
-                                        height: '16px',
-                                        left: 0,
-                                        position: 'absolute',
-                                        transform: 'translate(-50%, -50%) rotate(45deg)',
-                                        width: '16px',
-                                    }}
-                                />
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Border */
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -431,7 +248,190 @@ const Details: React.FC<{}> = () => {
     " />
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRadius: '4px',
+                                height: '300px',
+                                marginBottom: '16px',
+                                position: 'relative',
+                                width: '300px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+                                    height: '16px',
+                                    left: '32px',
+                                    position: 'absolute',
+                                    top: 0,
+                                    transform: 'translate(50%, -50%) rotate(45deg)',
+                                    width: '16px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+                                    height: '16px',
+                                    left: '50%',
+                                    position: 'absolute',
+                                    top: 0,
+                                    transform: 'translate(-50%, -50%) rotate(45deg)',
+                                    width: '16px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+                                    height: '16px',
+                                    position: 'absolute',
+                                    right: '32px',
+                                    top: 0,
+                                    transform: 'translate(-50%, -50%) rotate(45deg)',
+                                    width: '16px',
+                                }}
+                            />
+
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+                                    height: '16px',
+                                    position: 'absolute',
+                                    right: 0,
+                                    top: '32px',
+                                    transform: 'translate(50%, 50%) rotate(45deg)',
+                                    width: '16px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+                                    height: '16px',
+                                    position: 'absolute',
+                                    right: 0,
+                                    top: '50%',
+                                    transform: 'translate(50%, -50%) rotate(45deg)',
+                                    width: '16px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+                                    bottom: '32px',
+                                    height: '16px',
+                                    position: 'absolute',
+                                    right: 0,
+                                    transform: 'translate(50%, -50%) rotate(45deg)',
+                                    width: '16px',
+                                }}
+                            />
+
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    bottom: '-16px',
+                                    height: '16px',
+                                    left: '32px',
+                                    position: 'absolute',
+                                    transform: 'translate(50%, -50%) rotate(45deg)',
+                                    width: '16px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    bottom: '-16px',
+                                    height: '16px',
+                                    left: '50%',
+                                    position: 'absolute',
+                                    transform: 'translate(-50%, -50%) rotate(45deg)',
+                                    width: '16px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    bottom: '-16px',
+                                    height: '16px',
+                                    position: 'absolute',
+                                    right: '32px',
+                                    transform: 'translate(-50%, -50%) rotate(45deg)',
+                                    width: '16px',
+                                }}
+                            />
+
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                    height: '16px',
+                                    left: 0,
+                                    position: 'absolute',
+                                    top: '32px',
+                                    transform: 'translate(-50%, 50%) rotate(45deg)',
+                                    width: '16px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                    height: '16px',
+                                    left: 0,
+                                    position: 'absolute',
+                                    top: '50%',
+                                    transform: 'translate(-50%, -50%) rotate(45deg)',
+                                    width: '16px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                    bottom: '32px',
+                                    height: '16px',
+                                    left: 0,
+                                    position: 'absolute',
+                                    transform: 'translate(-50%, -50%) rotate(45deg)',
+                                    width: '16px',
+                                }}
+                            />
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.ArrowButtons, Pattern.Tooltip]} />

@@ -44,35 +44,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <ul
-                                style={{
-                                    alignItems: 'center',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    listStyleType: 'none',
-                                    margin: 0,
-                                    padding: 0,
-                                }}
-                            >
-                                <Dot index={0} />
-                                <Dot index={1} />
-                                <Dot index={2} />
-                                <Dot index={3} />
-                            </ul>
-                        </div>
-                    )}
-                    source={`
+html={`
 <ul style="
     /* Center the content */
     align-items: center;
@@ -102,7 +74,35 @@ const Details: React.FC<{}> = () => {
     " />
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <ul
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                listStyleType: 'none',
+                                margin: 0,
+                                padding: 0,
+                            }}
+                        >
+                            <Dot index={0} />
+                            <Dot index={1} />
+                            <Dot index={2} />
+                            <Dot index={3} />
+                        </ul>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

@@ -20,132 +20,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ width: '256px' }}>
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRadius: '4px',
-                                        display: 'flex',
-                                        height: '32px',
-                                        marginBottom: '16px',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <div
-                                        style={{
-                                            alignItems: 'center',
-                                            backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                                            borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                            display: 'flex',
-                                            justifyContent: 'center',
-                                            padding: '8px',
-                                            width: '30%',
-                                        }}
-                                    >
-                                        <Rectangle />
-                                    </div>
-                                    <input
-                                        type="text"
-                                        style={{
-                                            borderColor: 'transparent',
-                                            flex: 1,
-                                            marginRight: '1px',
-                                            padding: '4px',
-                                        }}
-                                    />
-                                </div>
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRadius: '4px',
-                                        display: 'flex',
-                                        height: '32px',
-                                        marginBottom: '16px',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <input
-                                        type="text"
-                                        style={{
-                                            borderColor: 'transparent',
-                                            flex: 1,
-                                            marginLeft: '1px',
-                                            padding: '8px',
-                                        }}
-                                    />
-                                    <div
-                                        style={{
-                                            alignItems: 'center',
-                                            backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                                            borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
-                                            display: 'flex',
-                                            justifyContent: 'center',
-                                            padding: '8px',
-                                            width: '40%',
-                                        }}
-                                    >
-                                        <Rectangle />
-                                    </div>
-                                </div>
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRadius: '4px',
-                                        display: 'flex',
-                                        height: '32px',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <div
-                                        style={{
-                                            alignItems: 'center',
-                                            backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                                            borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                            display: 'flex',
-                                            justifyContent: 'center',
-                                            padding: '8px',
-                                            width: '20%',
-                                        }}
-                                    >
-                                        <Rectangle />
-                                    </div>
-                                    <input
-                                        type="text"
-                                        style={{
-                                            borderColor: 'transparent',
-                                            flex: 1,
-                                            padding: '8px',
-                                        }}
-                                    />
-                                    <div
-                                        style={{
-                                            alignItems: 'center',
-                                            backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                                            borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
-                                            display: 'flex',
-                                            justifyContent: 'center',
-                                            padding: '8px',
-                                            width: '30%',
-                                        }}
-                                    >
-                                        <Rectangle />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <!-- Add-on prepended -->
 <div style="
     display: flex;
@@ -228,7 +103,132 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ width: '256px' }}>
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '4px',
+                                    display: 'flex',
+                                    height: '32px',
+                                    marginBottom: '16px',
+                                    width: '100%',
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        alignItems: 'center',
+                                        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        padding: '8px',
+                                        width: '30%',
+                                    }}
+                                >
+                                    <Rectangle />
+                                </div>
+                                <input
+                                    type="text"
+                                    style={{
+                                        borderColor: 'transparent',
+                                        flex: 1,
+                                        marginRight: '1px',
+                                        padding: '4px',
+                                    }}
+                                />
+                            </div>
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '4px',
+                                    display: 'flex',
+                                    height: '32px',
+                                    marginBottom: '16px',
+                                    width: '100%',
+                                }}
+                            >
+                                <input
+                                    type="text"
+                                    style={{
+                                        borderColor: 'transparent',
+                                        flex: 1,
+                                        marginLeft: '1px',
+                                        padding: '8px',
+                                    }}
+                                />
+                                <div
+                                    style={{
+                                        alignItems: 'center',
+                                        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                                        borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        padding: '8px',
+                                        width: '40%',
+                                    }}
+                                >
+                                    <Rectangle />
+                                </div>
+                            </div>
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '4px',
+                                    display: 'flex',
+                                    height: '32px',
+                                    width: '100%',
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        alignItems: 'center',
+                                        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        padding: '8px',
+                                        width: '20%',
+                                    }}
+                                >
+                                    <Rectangle />
+                                </div>
+                                <input
+                                    type="text"
+                                    style={{
+                                        borderColor: 'transparent',
+                                        flex: 1,
+                                        padding: '8px',
+                                    }}
+                                />
+                                <div
+                                    style={{
+                                        alignItems: 'center',
+                                        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                                        borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        padding: '8px',
+                                        width: '30%',
+                                    }}
+                                >
+                                    <Rectangle />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

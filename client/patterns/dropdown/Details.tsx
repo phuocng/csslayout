@@ -28,76 +28,7 @@ const Details: React.FC<{}> = () => {
                     Move the mouse over the button to see the dropdown.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                className="p-dropdown"
-                                style={{
-                                    position: 'relative',
-                                }}
-                            >
-                                <button
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRadius: '4px',
-                                        display: 'flex',
-                                        height: '32px',
-                                        width: '128px',
-                                    }}
-                                >
-                                    <span style={{ flex: 1, marginRight: '8px' }}><Rectangle /></span>
-                                    <Triangle size={8} corner='b' />
-                                </button>
-
-                                <div
-                                    className="p-dropdown-content"
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        height: '200px',
-                                        left: 0,
-                                        paddingTop: '4px',
-                                        position: 'absolute',
-                                        top: '100%',
-                                        width: '200px',
-                                        zIndex: 9999,
-                                    }}
-                                >
-                                    <div
-                                        style={{
-                                            alignItems: 'center',
-                                            border: '1px solid rgba(0, 0, 0, 0.3)',
-                                            borderRadius: '4px',
-                                            display: 'flex',
-                                            height: '100%',
-                                            justifyContent: 'center',
-                                            padding: '16px',
-                                            width: '100%',
-                                        }}
-                                    >
-                                        <Block numberOfBlocks={10} justify='center' />
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                style={{
-                                    marginTop: '16px',
-                                    width: '256px',
-                                }}
-                            >
-                                <Block numberOfBlocks={20} justify='center' />
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <style>
 /* Hide the dropdown's content by default -->
 .dropdown-content {
@@ -142,7 +73,76 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            className="p-dropdown"
+                            style={{
+                                position: 'relative',
+                            }}
+                        >
+                            <button
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '4px',
+                                    display: 'flex',
+                                    height: '32px',
+                                    width: '128px',
+                                }}
+                            >
+                                <span style={{ flex: 1, marginRight: '8px' }}><Rectangle /></span>
+                                <Triangle size={8} corner='b' />
+                            </button>
+
+                            <div
+                                className="p-dropdown-content"
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    height: '200px',
+                                    left: 0,
+                                    paddingTop: '4px',
+                                    position: 'absolute',
+                                    top: '100%',
+                                    width: '200px',
+                                    zIndex: 9999,
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        alignItems: 'center',
+                                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                                        borderRadius: '4px',
+                                        display: 'flex',
+                                        height: '100%',
+                                        justifyContent: 'center',
+                                        padding: '16px',
+                                        width: '100%',
+                                    }}
+                                >
+                                    <Block numberOfBlocks={10} justify='center' />
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            style={{
+                                marginTop: '16px',
+                                width: '256px',
+                            }}
+                        >
+                            <Block numberOfBlocks={20} justify='center' />
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
             <RelatedPatterns patterns={[Pattern.MegaMenu, Pattern.Menu, Pattern.NestedDropdowns]} />
         </DetailsLayout>

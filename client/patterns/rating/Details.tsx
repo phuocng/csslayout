@@ -20,25 +20,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '100%',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <div className="p-rating">
-                                <Star isActive={false} />
-                                <Star isActive={false} />
-                                <Star isActive={false} />
-                                <Star isActive={false} />
-                                <Star isActive={true} />
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <style>
 .p-rating {
     /* Center the content */
@@ -88,7 +70,25 @@ Note that we use \`flex-direction: row-reverse\` on the container
     <button class="p-rating-star">★</button>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            height: '100%',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <div className="p-rating">
+                            <Star isActive={false} />
+                            <Star isActive={false} />
+                            <Star isActive={false} />
+                            <Star isActive={false} />
+                            <Star isActive={true} />
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

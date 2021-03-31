@@ -40,24 +40,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ marginLeft: '-4px' }}><Avatar /></div>
-                            <div style={{ marginLeft: '-4px' }}><Avatar /></div>
-                            <div style={{ marginLeft: '-4px' }}><Avatar /></div>
-                            <div style={{ marginLeft: '-4px' }}><Avatar /></div>
-                            <div style={{ marginLeft: '-4px' }}><Avatar>+5</Avatar></div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     display: flex;
 ">
@@ -87,7 +70,24 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ marginLeft: '-4px' }}><Avatar /></div>
+                        <div style={{ marginLeft: '-4px' }}><Avatar /></div>
+                        <div style={{ marginLeft: '-4px' }}><Avatar /></div>
+                        <div style={{ marginLeft: '-4px' }}><Avatar /></div>
+                        <div style={{ marginLeft: '-4px' }}><Avatar>+5</Avatar></div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns

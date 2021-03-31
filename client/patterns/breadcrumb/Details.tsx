@@ -20,29 +20,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ alignItems: 'center', display: 'flex' }}>
-                                <div style={{ width: '128px' }}><Rectangle height={16} /></div>
-                                <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
-                                <div style={{ width: '32px' }}><Rectangle height={16} /></div>
-                                <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
-                                <div style={{ width: '64px' }}><Rectangle height={16} /></div>
-                                <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
-                                <div style={{ width: '32px' }}><Rectangle height={16} /></div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Content is centered vertically */
     align-items: center;
@@ -58,7 +36,29 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ alignItems: 'center', display: 'flex' }}>
+                            <div style={{ width: '128px' }}><Rectangle height={16} /></div>
+                            <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
+                            <div style={{ width: '32px' }}><Rectangle height={16} /></div>
+                            <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
+                            <div style={{ width: '64px' }}><Rectangle height={16} /></div>
+                            <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
+                            <div style={{ width: '32px' }}><Rectangle height={16} /></div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

@@ -25,27 +25,7 @@ const Details: React.FC<{}> = () => {
                     Try to scroll the main content to see the header sticks to the top of page.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div>
-                            <div
-                                style={{
-                                    backgroundColor: '#FFF',
-                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                    padding: '16px',
-                                    position: 'sticky',
-                                    top: 0,
-                                }}
-                            >
-                                <div style={{ width: '50%' }}><Rectangle /></div>
-                            </div>
-                            <div style={{ padding: '16px' }}>
-                                <div style={{ marginBottom: '32px' }}><Block numberOfBlocks={20} /></div>
-                                <div style={{ marginBottom: '32px' }}><Block numberOfBlocks={40} /></div>
-                                <div><Block numberOfBlocks={30} /></div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div>
     <header style="
         /* Stick to the top */
@@ -59,7 +39,27 @@ const Details: React.FC<{}> = () => {
     </main>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div>
+                        <div
+                            style={{
+                                backgroundColor: '#FFF',
+                                borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                padding: '16px',
+                                position: 'sticky',
+                                top: 0,
+                            }}
+                        >
+                            <div style={{ width: '50%' }}><Rectangle /></div>
+                        </div>
+                        <div style={{ padding: '16px' }}>
+                            <div style={{ marginBottom: '32px' }}><Block numberOfBlocks={20} /></div>
+                            <div style={{ marginBottom: '32px' }}><Block numberOfBlocks={40} /></div>
+                            <div><Block numberOfBlocks={30} /></div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns

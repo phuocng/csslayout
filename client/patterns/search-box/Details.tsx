@@ -20,65 +20,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ width: '256px' }}>
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRadius: '2px',
-                                        display: 'flex',
-                                        marginBottom: '16px',
-                                    }}
-                                >
-                                    <input
-                                        type="text"
-                                        placeholder="Search"
-                                        style={{
-                                            borderColor: 'transparent',
-                                            flex: 1,
-                                            padding: '4px',
-                                        }}
-                                    />
-                                    <div style={{ padding: '8px' }}>
-                                        <Circle />
-                                    </div>
-                                </div>
-
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRadius: '2px',
-                                        display: 'flex',
-                                        flexDirection: 'row-reverse',
-                                    }}
-                                >
-                                    <input
-                                        type="text"
-                                        placeholder="Search"
-                                        style={{
-                                            borderColor: 'transparent',
-                                            flex: 1,
-                                            padding: '4px',
-                                        }}
-                                    />
-                                    <div style={{ padding: '8px' }}>
-                                        <Circle />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     display: flex;
 
@@ -102,7 +44,65 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ width: '256px' }}>
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '2px',
+                                    display: 'flex',
+                                    marginBottom: '16px',
+                                }}
+                            >
+                                <input
+                                    type="text"
+                                    placeholder="Search"
+                                    style={{
+                                        borderColor: 'transparent',
+                                        flex: 1,
+                                        padding: '4px',
+                                    }}
+                                />
+                                <div style={{ padding: '8px' }}>
+                                    <Circle />
+                                </div>
+                            </div>
+
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '2px',
+                                    display: 'flex',
+                                    flexDirection: 'row-reverse',
+                                }}
+                            >
+                                <input
+                                    type="text"
+                                    placeholder="Search"
+                                    style={{
+                                        borderColor: 'transparent',
+                                        flex: 1,
+                                        padding: '4px',
+                                    }}
+                                />
+                                <div style={{ padding: '8px' }}>
+                                    <Circle />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

@@ -21,28 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ width: '256px' }}>
-                                <div className="p-drop-cap">
-                                    Cascading Style Sheets (CSS) is a style sheet language used for
-                                    describing the presentation of a document written in a markup
-                                    language like HTML. CSS is a cornerstone technology of the World Wide Web,
-                                    alongside HTML and JavaScript.
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <style>
 /* Styles for the first letter */
 .p-drop-cap:first-letter {
@@ -64,7 +43,28 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ width: '256px' }}>
+                            <div className="p-drop-cap">
+                                Cascading Style Sheets (CSS) is a style sheet language used for
+                                describing the presentation of a document written in a markup
+                                language like HTML. CSS is a cornerstone technology of the World Wide Web,
+                                alongside HTML and JavaScript.
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

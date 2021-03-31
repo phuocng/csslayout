@@ -20,52 +20,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    backgroundColor: '#fff',
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '4px',
-                                    height: '250px',
-                                    position: 'relative',
-                                    width: '200px',
-                                }}
-                            >
-                                {
-                                    Array(5).fill(0).map((_, index) => {
-                                        return (
-                                            <div
-                                                key={index}
-                                                style={{
-                                                    backgroundColor: '#fff',
-                                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                                    borderRadius: '4px',
-                                                    height: '100%',
-                                                    left: 0,
-                                                    position: 'absolute',
-                                                    top: 0,
-                                                    transform: `rotate(${5 * (index + 1)}deg)`,
-                                                    width: '100%',
-                                                    zIndex: -1,
-                                                }}
-                                            />
-                                        );
-                                    })
-                                }
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Used to position the stacked cards */
     position: relative;
@@ -96,7 +51,52 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                backgroundColor: '#fff',
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRadius: '4px',
+                                height: '250px',
+                                position: 'relative',
+                                width: '200px',
+                            }}
+                        >
+                            {
+                                Array(5).fill(0).map((_, index) => {
+                                    return (
+                                        <div
+                                            key={index}
+                                            style={{
+                                                backgroundColor: '#fff',
+                                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                                borderRadius: '4px',
+                                                height: '100%',
+                                                left: 0,
+                                                position: 'absolute',
+                                                top: 0,
+                                                transform: `rotate(${5 * (index + 1)}deg)`,
+                                                width: '100%',
+                                                zIndex: -1,
+                                            }}
+                                        />
+                                    );
+                                })
+                            }
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.Card]} />

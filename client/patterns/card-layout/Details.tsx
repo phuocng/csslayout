@@ -21,38 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    display: 'flex',
-                                    flexWrap: 'wrap',
-                                    margin: '0 -8px',
-                                    width: '60%',
-                                }}
-                            >
-                                {
-                                    Array(10).fill(0).map((_, index) => {
-                                        return (
-                                            <div key={index} style={{ flexBasis: '25%', marginBottom: '24px', padding: '0 8px' }}>
-                                                <Rectangle height={80} />
-                                            </div>
-                                        );
-                                    })
-                                }
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     display: flex;
 
@@ -77,7 +46,38 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexWrap: 'wrap',
+                                margin: '0 -8px',
+                                width: '60%',
+                            }}
+                        >
+                            {
+                                Array(10).fill(0).map((_, index) => {
+                                    return (
+                                        <div key={index} style={{ flexBasis: '25%', marginBottom: '24px', padding: '0 8px' }}>
+                                            <Rectangle height={80} />
+                                        </div>
+                                    );
+                                })
+                            }
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.Card, Pattern.SimpleGrid]} />

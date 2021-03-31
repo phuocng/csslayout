@@ -21,32 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    display: 'flex',
-                                    height: '16px',
-                                    width: '256px',
-                                }}
-                            >
-                                <div style={{ width: '20%' }}><Rectangle height={2} /></div>
-                                <Circle size={32} />
-                                <div style={{ flex: 1 }}><Rectangle height={2} /></div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Content is centered horizontally */
     align-items: center;
@@ -89,7 +64,32 @@ const Details: React.FC<{}> = () => {
     "></div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                height: '16px',
+                                width: '256px',
+                            }}
+                        >
+                            <div style={{ width: '20%' }}><Rectangle height={2} /></div>
+                            <Circle size={32} />
+                            <div style={{ flex: 1 }}><Rectangle height={2} /></div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );
