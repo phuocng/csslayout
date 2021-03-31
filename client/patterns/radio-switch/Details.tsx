@@ -26,23 +26,10 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <!-- Container -->
-<div style="
-    background-color: rgba(0, 0, 0, .1);
-    border-radius: 9999px;
-    display: inline-flex;
-    padding: 4px;
-">
+<div class="container">
     <!-- Radio container -->
-    <label style="
-        border-radius: 9999px;
-        cursor: pointer;
-        padding: 4px 8px;
-
-        /* For selected radio only */
-        background-color: #357edd;
-        color: #fff;
-    ">
-        <input type="radio" style="display: none" />
+    <label class="container__label container__label--selected">
+        <input type="radio" class="container__input" />
 
         <!-- Text -->
         ...
@@ -52,7 +39,30 @@ html={`
     ...
 </div>
 `}
-css={``}
+css={`
+.container {
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 9999px;
+    display: inline-flex;
+    padding: 4px;
+}
+
+.container__label {
+    border-radius: 9999px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.container__label--selected {
+    /* For selected radio only */
+    background-color: #357edd;
+    color: #fff;
+}
+
+.container__input {
+    display: none
+}
+`}
                 >
                     <div
                         style={{

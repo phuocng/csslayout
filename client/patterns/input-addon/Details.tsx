@@ -22,88 +22,63 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <!-- Add-on prepended -->
-<div style="
-    display: flex;
-
-    /* Take full size */
-    width: 100%;
-">
+<div class="container">
     <!-- Add-on -->
-    <div style="
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    ">
+    <div class="container__addon">
         ...
     </div>
 
     <!-- Input -->
-    <input type="text" style="
-        /* Take the remaining width */
-        flex: 1;
-    " />
+    <input type="text" class="container__input" />
 </div>
 
 <!-- Add-on appended -->
-<div style="
-    display: flex;
-
-    /* Take full size */
-    width: 100%;
-">
+<div class="container">
     <!-- Input -->
-    <input type="text" style="
-        /* Take the remaining width */
-        flex: 1;
-    " />
+    <input type="text" class="container__input" />
 
     <!-- Add-on -->
-    <div style="
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    ">
+    <div class="container__addon">
         ...
     </div>
 </div>
 
 <!-- Appended and prepended add-ons -->
-<div style="
-    display: flex;
-
-    /* Take full size */
-    width: 100%;
-">
+<div class="container">
     <!-- Add-on -->
-    <div style="
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    ">
+    <div class="container__addon">
         ...
     </div>
 
     <!-- Input -->
-    <input type="text" style="
-        /* Take the remaining width */
-        flex: 1;
-    " />
+    <input type="text" class="container__input" />
 
     <!-- Add-on -->
-    <div style="
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    ">
+    <div class="container__addon">
         ...
     </div>
 </div>
 `}
-css={``}
+css={`
+.container {
+    display: flex;
+
+    /* Take full size */
+    width: 100%;
+}
+
+.container__input {
+    /* Take the remaining width */
+    flex: 1;
+}
+
+.container__addon {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+`}
                 >
                     <div
                         style={{

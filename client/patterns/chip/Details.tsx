@@ -26,7 +26,19 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div style="
+<div class="chip">
+    <!-- Content -->
+    <div class="chip__content">
+        ...
+    </div>
+
+    <!-- The close button -->
+    <!-- See https://csslayout.io/patterns/close-button -->
+    ...
+</div>
+`}
+css={`
+.chip {
     /* Center the content */
     align-items: center;
     display: inline-flex;
@@ -40,18 +52,12 @@ html={`
 
     /* Spacing */
     padding: 4px 8px;
-">
-    <!-- Content -->
-    <div style="margin-right: 4px;">
-        ...
-    </div>
+}
 
-    <!-- The close button -->
-    <!-- See https://csslayout.io/patterns/close-button -->
-    ...
-</div>
+.chip__content {
+    margin-right: 4px;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

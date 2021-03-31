@@ -22,13 +22,7 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<button style="
-    /* Center the content */
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-">
+<button class="button">
     <!-- Icon -->
     ...
 
@@ -36,7 +30,15 @@ html={`
     ...
 </div>
 `}
-css={``}
+css={`
+.button {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+`}
                 >
                     <div
                         style={{

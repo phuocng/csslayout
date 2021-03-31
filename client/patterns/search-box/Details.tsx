@@ -21,7 +21,16 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- Text input -->
+    <input type="text" class="container__input" />
+
+    <!-- Search icon sticks to the left or right -->
+    ...
+</div>
+`}
+css={`
+.container {
     display: flex;
 
     /* If you want to place the icon before the text input */
@@ -29,22 +38,14 @@ html={`
 
     /* Border */
     border: 1px solid rgba(0, 0, 0, 0.3);
-">
-    <!-- Text input -->
-    <input
-        type="text"
-        style="
-            border-color: transparent;
-            /* Take available width */
-            flex: 1;
-        "
-    />
+}
 
-    <!-- Search icon sticks to the left or right -->
-    ...
-</div>
+.container__input {
+    border-color: transparent;
+    /* Take available width */
+    flex: 1;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

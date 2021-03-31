@@ -25,12 +25,30 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<style>
-.p-floating-container {
+<div class="container">
+    <!-- The input -->
+    <input placeholder="Placeholder" class="container__input" />
+
+    <!-- The label -->
+    <label class="container__label">Placeholder</label>
+</div>
+`}
+css={`
+.container {
     position: relative;
 }
 
-.p-floating-container label {
+/*
+Show the label at desired position when the 
+placeholder of input isn't shown
+*/
+.container__input:not(:placeholder-shown) + .container__label {
+    background: #FFF;
+    transform: translate(0, -50%);
+    opacity: 1;
+}
+
+.container__label {
     /* Position the label */
     left: 8px;
     position: absolute;
@@ -38,26 +56,9 @@ html={`
 
     /* Hide it by default */
     opacity: 0;
-    transition: 'all 200ms',
+    transition: all 200ms;
 }
-
-/* Show the label at desired position when the placeholder of input isn't shown */
-.p-floating-container input:not(:placeholder-shown) + label {
-    background: #FFF;
-    transform: translate(0, -50%);
-    opacity: 1;
-}
-</style>
-
-<div class="p-floating-container">
-    <!-- The input -->
-    <input placeholder="Placeholder" />
-
-    <!-- The label -->
-    <label>Placeholder</label>
-</div>
 `}
-css={``}
                 >
                     <div
                         style={{

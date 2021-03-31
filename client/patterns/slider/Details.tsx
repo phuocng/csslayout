@@ -22,49 +22,56 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- Left side -->
+    <!-- Width based on the current value -->
+    <div class="container__left" style="width: 20%"></div>
+
+    <!-- Circle -->
+    <div class="container__circle"></div>
+
+    <!-- Right side -->
+    <div class="container__right"></div>
+</div>
+`}
+css={`
+.container {
     /* Content is centered horizontally */
     align-items: center;
     display: flex;
 
     /* Size */
     height: 32px;
-">
-    <!-- Left side -->
-    <div style="
-        /* Width based on the current value */
-        height: 2px;
-        width: 20%;
+}
 
-        /* Colors */
-        background-color: rgba(0, 0, 0, .3);
-    "></div>
+.container__left {
+    height: 2px;
 
-    <!-- Circle -->
-    <div style="
-        /* Size */
-        height: 32px;
-        width: 32px;
+    /* Colors */
+    background-color: rgba(0, 0, 0, .3);
+}
 
-        /* Rounded border */
-        border-radius: 9999px;
+.container__circle {
+    /* Size */
+    height: 32px;
+    width: 32px;
 
-        /* Colors */
-        background-color: rgba(0, 0, 0, .3);
-    "></div>
+    /* Rounded border */
+    border-radius: 9999px;
 
-    <!-- Right side -->
-    <div style="
-        /* Take the remaining width */
-        flex: 1;
-        height: 2px;
+    /* Colors */
+    background-color: rgba(0, 0, 0, .3);
+}
 
-        /* Colors */
-        background-color: rgba(0, 0, 0, .3);
-    "></div>
-</div>
+.container__right {
+    /* Take the remaining width */
+    flex: 1;
+    height: 2px;
+
+    /* Colors */
+    background-color: rgba(0, 0, 0, .3);
+}
 `}
-css={``}
                 >
                     <div
                         style={{

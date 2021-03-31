@@ -71,51 +71,56 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<label style="
-    /* Center the content horizontally */
-    align-items: center;
-    display: inline-flex;
-
-    /* Cursor */
-    cursor: pointer;
-">
+<label class="label">
     <!-- The real checkbox -->
-    <input
-        type="checkbox"
-        style="
-            /* Hide it */
-            display: none;
-        "
-    />
+    <input type="checkbox" class="label__input" />
 
     <!-- The fake square -->
-    <div style="
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        border-radius: 4px;
-
-        /* Spacing */
-        margin-right: 8px;
-        padding: 4px;
-    ">
+    <div class="label__square">
         <!-- The inner square -->
-        <div style="
-            border-radius: 4px;
-            height: 16px;
-            width: 16px;
-
-            /* For selected checkbox */
-            background-color: #00449E;
-
-            /* For not selected checkbox */
-            background-color: transparent;
-        " />
+        <div class="label__checkbox label__square--selected"></div>
     </div>
 
     <!-- The text -->
     ...
 </div>
 `}
-css={``}
+css={`
+.label {
+    /* Center the content horizontally */
+    align-items: center;
+    display: inline-flex;
+
+    /* Cursor */
+    cursor: pointer;
+}
+
+.label__input {
+    /* Hide it */
+    display: none;
+}
+
+.label__square {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+
+    /* Spacing */
+    margin-right: 8px;
+    padding: 4px;
+}
+
+.label__checkbox {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 16px;
+    width: 16px;
+}
+
+.label__checkbox--selected {
+    /* For selected checkbox */
+    background-color: #00449E;
+}
+`}
                 >
                     <div
                         style={{
