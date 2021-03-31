@@ -44,36 +44,16 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <ul
-                                style={{
-                                    alignItems: 'center',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    listStyleType: 'none',
-                                    margin: 0,
-                                    padding: 0,
-                                }}
-                            >
-                                <Dot index={0} />
-                                <Dot index={1} />
-                                <Dot index={2} />
-                                <Dot index={3} />
-                            </ul>
-                        </div>
-                    )}
-                    source={`
-<ul style="
+html={`
+<ul class="container">
+    <li class="item" />
+
+    <!-- Repeat other dots -->
+    ...
+</div>
+`}
+css={`
+.container {
     /* Center the content */
     align-items: center;
     display: flex;
@@ -83,26 +63,52 @@ const Details: React.FC<{}> = () => {
     list-style-type: none;
     margin: 0;
     padding: 0;
-">
-    <li style="
-        /* Rounded border */
-        border-radius: 9999px;
-        height: 12px;
-        width: 12px;
+}
+.item {
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 12px;
+    width: 12px;
 
-        /* Active dot */
-        background-color: rgba(0, 0, 0, .3);
+    /* Active dot */
+    background-color: rgba(0, 0, 0, .3);
 
-        /* Inactive dot */
-        background-color: transparent;
-        border: 1px solid rgba(0, 0, 0, .3);
+    /* Inactive dot */
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, .3);
 
-        /* OPTIONAL: Spacing between dots */
-        margin: 0 4px;
-    " />
-</div>
+    /* OPTIONAL: Spacing between dots */
+    margin: 0 4px;
+}
 `}
-                />
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <ul
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                listStyleType: 'none',
+                                margin: 0,
+                                padding: 0,
+                            }}
+                        >
+                            <Dot index={0} />
+                            <Dot index={1} />
+                            <Dot index={2} />
+                            <Dot index={3} />
+                        </ul>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

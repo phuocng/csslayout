@@ -40,38 +40,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ width: '40%' }}>
-                                <Item>
-                                    <dt style={{ width: '80%' }}><Rectangle /></dt>
-                                    <dd><Circle /></dd>
-                                </Item>
-                                <Item>
-                                    <dt style={{ width: '60%' }}><Rectangle /></dt>
-                                    <dd><Circle /></dd>
-                                </Item>
-                                <Item>
-                                    <dt style={{ width: '30%' }}><Rectangle /></dt>
-                                    <dd><Circle /></dd>
-                                </Item>
-                                <Item>
-                                    <dt style={{ width: '50%' }}><Rectangle /></dt>
-                                    <dd><Circle /></dd>
-                                </Item>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <!-- A property item -->
 <dl style="
     /* Content is center horizontally */
@@ -97,7 +66,38 @@ const Details: React.FC<{}> = () => {
     <dd>...</dd>
 </dl>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ width: '40%' }}>
+                            <Item>
+                                <dt style={{ width: '80%' }}><Rectangle /></dt>
+                                <dd><Circle /></dd>
+                            </Item>
+                            <Item>
+                                <dt style={{ width: '60%' }}><Rectangle /></dt>
+                                <dd><Circle /></dd>
+                            </Item>
+                            <Item>
+                                <dt style={{ width: '30%' }}><Rectangle /></dt>
+                                <dd><Circle /></dd>
+                            </Item>
+                            <Item>
+                                <dt style={{ width: '50%' }}><Rectangle /></dt>
+                                <dd><Circle /></dd>
+                            </Item>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
             <section>
                 <Heading title="Use cases" />

@@ -28,88 +28,7 @@ const Details: React.FC<{}> = () => {
                     indicate the most popular option.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '16px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    width: '60%',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRadius: '4px',
-                                        display: 'flex',
-                                        flex: 1,
-                                        flexDirection: 'column',
-                                        justifyContent: 'center',
-                                        margin: '0 8px',
-                                        padding: '16px',
-                                    }}
-                                >
-                                    <div style={{ marginBottom: '16px', width: '60%' }}><Rectangle /></div>
-                                    <div style={{ marginBottom: '16px' }}><Circle size={64} /></div>
-                                    <div style={{ marginBottom: '16px', width: '100%' }}>
-                                        <Block numberOfBlocks={10} />
-                                    </div>
-                                    <div style={{ width: '40%' }}><Rectangle height={32} /></div>
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRadius: '4px',
-                                        display: 'flex',
-                                        flex: 1,
-                                        flexDirection: 'column',
-                                        justifyContent: 'center',
-                                        margin: '0 8px',
-                                        padding: '16px',
-                                    }}
-                                >
-                                    <div style={{ marginBottom: '16px', width: '60%' }}><Rectangle /></div>
-                                    <div style={{ marginBottom: '16px' }}><Circle size={64} /></div>
-                                    <div style={{ marginBottom: '16px', width: '100%' }}>
-                                        <Block numberOfBlocks={20} />
-                                    </div>
-                                    <div style={{ width: '40%' }}><Rectangle height={32} /></div>
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRadius: '4px',
-                                        display: 'flex',
-                                        flex: 1,
-                                        flexDirection: 'column',
-                                        justifyContent: 'center',
-                                        margin: '0 8px',
-                                        padding: '16px',
-                                    }}
-                                >
-                                    <div style={{ marginBottom: '16px', width: '60%' }}><Rectangle /></div>
-                                    <div style={{ marginBottom: '16px' }}><Circle size={64} /></div>
-                                    <div style={{ marginBottom: '16px', width: '100%' }}>
-                                        <Block numberOfBlocks={10} />
-                                    </div>
-                                    <div style={{ width: '40%' }}><Rectangle height={32} /></div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Content is centered horizontally */
     align-items: center;
@@ -151,7 +70,88 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '16px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                width: '60%',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '4px',
+                                    display: 'flex',
+                                    flex: 1,
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
+                                    margin: '0 8px',
+                                    padding: '16px',
+                                }}
+                            >
+                                <div style={{ marginBottom: '16px', width: '60%' }}><Rectangle /></div>
+                                <div style={{ marginBottom: '16px' }}><Circle size={64} /></div>
+                                <div style={{ marginBottom: '16px', width: '100%' }}>
+                                    <Block numberOfBlocks={10} />
+                                </div>
+                                <div style={{ width: '40%' }}><Rectangle height={32} /></div>
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '4px',
+                                    display: 'flex',
+                                    flex: 1,
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
+                                    margin: '0 8px',
+                                    padding: '16px',
+                                }}
+                            >
+                                <div style={{ marginBottom: '16px', width: '60%' }}><Rectangle /></div>
+                                <div style={{ marginBottom: '16px' }}><Circle size={64} /></div>
+                                <div style={{ marginBottom: '16px', width: '100%' }}>
+                                    <Block numberOfBlocks={20} />
+                                </div>
+                                <div style={{ width: '40%' }}><Rectangle height={32} /></div>
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '4px',
+                                    display: 'flex',
+                                    flex: 1,
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
+                                    margin: '0 8px',
+                                    padding: '16px',
+                                }}
+                            >
+                                <div style={{ marginBottom: '16px', width: '60%' }}><Rectangle /></div>
+                                <div style={{ marginBottom: '16px' }}><Circle size={64} /></div>
+                                <div style={{ marginBottom: '16px', width: '100%' }}>
+                                    <Block numberOfBlocks={10} />
+                                </div>
+                                <div style={{ width: '40%' }}><Rectangle height={32} /></div>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.FeatureComparison]} />

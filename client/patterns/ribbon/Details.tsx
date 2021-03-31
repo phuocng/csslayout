@@ -21,76 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    backgroundColor: '#BBB',
-                                    display: 'flex',
-                                    height: '32px',
-                                    justifyContent: 'center',
-                                    padding: '0 16px',
-                                    position: 'relative',
-                                    width: '150px',
-                                }}
-                            >
-                                <Rectangle />
-                                <div
-                                    style={{
-                                        border: '16px solid #CCC',
-                                        borderLeftColor: 'transparent',
-                                        bottom: '-8px',
-                                        left: '-24px',
-                                        position: 'absolute',
-                                        zIndex: -1,
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        border: '8px solid transparent',
-                                        borderBottomWidth: 0,
-                                        borderRightWidth: 0,
-                                        borderTopColor: '#AAA',
-                                        left: 0,
-                                        position: 'absolute',
-                                        top: '100%',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        border: '8px solid transparent',
-                                        borderBottomWidth: 0,
-                                        borderLeftWidth: 0,
-                                        borderTopColor: '#AAA',
-                                        position: 'absolute',
-                                        right: 0,
-                                        top: '100%',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        border: '16px solid #CCC',
-                                        borderRightColor: 'transparent',
-                                        bottom: '-8px',
-                                        position: 'absolute',
-                                        right: '-24px',
-                                        zIndex: -1,
-                                    }}
-                                />
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Center the content */
     align-items: center;
@@ -168,7 +99,76 @@ const Details: React.FC<{}> = () => {
     />
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                backgroundColor: '#BBB',
+                                display: 'flex',
+                                height: '32px',
+                                justifyContent: 'center',
+                                padding: '0 16px',
+                                position: 'relative',
+                                width: '150px',
+                            }}
+                        >
+                            <Rectangle />
+                            <div
+                                style={{
+                                    border: '16px solid #CCC',
+                                    borderLeftColor: 'transparent',
+                                    bottom: '-8px',
+                                    left: '-24px',
+                                    position: 'absolute',
+                                    zIndex: -1,
+                                }}
+                            />
+                            <div
+                                style={{
+                                    border: '8px solid transparent',
+                                    borderBottomWidth: 0,
+                                    borderRightWidth: 0,
+                                    borderTopColor: '#AAA',
+                                    left: 0,
+                                    position: 'absolute',
+                                    top: '100%',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    border: '8px solid transparent',
+                                    borderBottomWidth: 0,
+                                    borderLeftWidth: 0,
+                                    borderTopColor: '#AAA',
+                                    position: 'absolute',
+                                    right: 0,
+                                    top: '100%',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    border: '16px solid #CCC',
+                                    borderRightColor: 'transparent',
+                                    bottom: '-8px',
+                                    position: 'absolute',
+                                    right: '-24px',
+                                    zIndex: -1,
+                                }}
+                            />
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.CornerRibbon]} />

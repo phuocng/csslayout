@@ -24,144 +24,15 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '4px',
-                                    width: '40%',
-                                }}
-                            >
-                                <div
-                                    className="p-menu-item"
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'flex',
-                                        height: '32px',
-                                        padding: '0 8px',
-                                    }}
-                                >
-                                    <div style={{ width: '40%' }}><Rectangle /></div>
-                                </div>
-                                <div
-                                    className="p-menu-item"
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'flex',
-                                        height: '32px',
-                                        padding: '0 8px',
-                                    }}
-                                >
-                                    <Circle />
-                                    <div style={{ marginLeft: '4px', width: '50%' }}><Rectangle /></div>
-                                </div>
-                                <div
-                                    className="p-menu-item"
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'flex',
-                                        height: '32px',
-                                        justifyContent: 'space-between',
-                                        padding: '0 8px',
-                                    }}
-                                >
-                                    <div style={{ width: '30%' }}><Rectangle /></div>
-                                    <div>Ctrl + X</div>
-                                </div>
-                                <div
-                                    className="p-menu-item"
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'flex',
-                                        height: '32px',
-                                        justifyContent: 'space-between',
-                                        padding: '0 8px',
-                                    }}
-                                >
-                                    <div style={{ width: '70%' }}><Rectangle /></div>
-                                    <div>Ctrl + C</div>
-                                </div>
-                                <div
-                                    className="p-menu-item"
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'flex',
-                                        height: '32px',
-                                        justifyContent: 'space-between',
-                                        padding: '0 8px',
-                                    }}
-                                >
-                                    <div style={{ width: '20%' }}><Rectangle /></div>
-                                    <Circle />
-                                </div>
-                                <div
-                                    className="p-menu-item"
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'flex',
-                                        height: '32px',
-                                        justifyContent: 'space-between',
-                                        padding: '0 8px',
-                                    }}
-                                >
-                                    <div style={{ alignItems: 'center', display: 'flex', width: '80%' }}>
-                                        <Circle />
-                                        <div style={{ marginLeft: '4px', width: '50%' }}><Rectangle /></div>
-                                    </div>
-                                    <Circle />
-                                </div>
-                                <div style={{ borderBottom: '1px solid rgba(0, 0, 0, 0.3)', height: '1px' }} />
-                                <div
-                                    className="p-menu-item"
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'flex',
-                                        height: '32px',
-                                        justifyContent: 'space-between',
-                                        padding: '0 8px',
-                                    }}
-                                >
-                                    <div style={{ width: '40%' }}><Rectangle /></div>
-                                    <div>Ctrl + V</div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
-<div style="
-    display: flex;
-    flex-direction: column;
-
-    /* Border */
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-">
+html={`
+<div class="container">
     <!-- Normal menu item -->
-    <div style="
-        /* Center the content horizontally */
-        align-items: center;
-        display: flex;
-    ">
+    <div class="item">
         ...
     </div>
 
     <!-- With hot key -->
-    <div style="
-        align-items: center;
-        display: flex;
-        /* Push the hot key to the right */
-        justify-content: space-between;
-    ">
+    <div class="item with-shortcut">
         <!-- Label -->
         ...
         <!-- Hot key -->
@@ -169,16 +40,8 @@ const Details: React.FC<{}> = () => {
     </div>
 
     <!-- With image and hot key -->
-    <div style="
-        align-items: center;
-        display: flex;
-        /* Push the hot key to the right */
-        justify-content: space-between;
-    ">
-        <div style="
-            align-items: center;
-            display: flex;
-        ">
+    <div class="item with-shortcut">
+        <div class="with-image">
             <!-- Image -->
             ...
             <!-- Label -->
@@ -190,13 +53,153 @@ const Details: React.FC<{}> = () => {
     </div>
 
     <!-- Divider -->
-    <div style="
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        height: 1px;
-    " />
+    <div class="divider"></div>
 </div>
 `}
-                />
+css={`
+.container {
+    display: flex;
+    flex-direction: column;
+
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.item {
+    /* Center the content horizontally */
+    align-items: center;
+    display: flex;
+}
+
+.with-shortcut {
+    /* Push the hot key to the right */
+    justify-content: space-between;
+}
+
+.with-image {
+    align-items: center;
+    display: flex;
+}
+
+.divider {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    height: 1px;
+}
+`}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRadius: '4px',
+                                width: '40%',
+                            }}
+                        >
+                            <div
+                                className="p-menu-item"
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    height: '32px',
+                                    padding: '0 8px',
+                                }}
+                            >
+                                <div style={{ width: '40%' }}><Rectangle /></div>
+                            </div>
+                            <div
+                                className="p-menu-item"
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    height: '32px',
+                                    padding: '0 8px',
+                                }}
+                            >
+                                <Circle />
+                                <div style={{ marginLeft: '4px', width: '50%' }}><Rectangle /></div>
+                            </div>
+                            <div
+                                className="p-menu-item"
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    height: '32px',
+                                    justifyContent: 'space-between',
+                                    padding: '0 8px',
+                                }}
+                            >
+                                <div style={{ width: '30%' }}><Rectangle /></div>
+                                <div>Ctrl + X</div>
+                            </div>
+                            <div
+                                className="p-menu-item"
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    height: '32px',
+                                    justifyContent: 'space-between',
+                                    padding: '0 8px',
+                                }}
+                            >
+                                <div style={{ width: '70%' }}><Rectangle /></div>
+                                <div>Ctrl + C</div>
+                            </div>
+                            <div
+                                className="p-menu-item"
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    height: '32px',
+                                    justifyContent: 'space-between',
+                                    padding: '0 8px',
+                                }}
+                            >
+                                <div style={{ width: '20%' }}><Rectangle /></div>
+                                <Circle />
+                            </div>
+                            <div
+                                className="p-menu-item"
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    height: '32px',
+                                    justifyContent: 'space-between',
+                                    padding: '0 8px',
+                                }}
+                            >
+                                <div style={{ alignItems: 'center', display: 'flex', width: '80%' }}>
+                                    <Circle />
+                                    <div style={{ marginLeft: '4px', width: '50%' }}><Rectangle /></div>
+                                </div>
+                                <Circle />
+                            </div>
+                            <div style={{ borderBottom: '1px solid rgba(0, 0, 0, 0.3)', height: '1px' }} />
+                            <div
+                                className="p-menu-item"
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    height: '32px',
+                                    justifyContent: 'space-between',
+                                    padding: '0 8px',
+                                }}
+                            >
+                                <div style={{ width: '40%' }}><Rectangle /></div>
+                                <div>Ctrl + V</div>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
             <RelatedPatterns
                 patterns={[

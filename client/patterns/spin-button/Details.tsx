@@ -26,109 +26,113 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '2px',
-                                    display: 'flex',
-                                }}
-                            >
-                                <input
-                                    type="text"
-                                    style={{
-                                        borderColor: 'transparent',
-                                        marginRight: '4px',
-                                        padding: '4px',
-                                        width: '100px',
-                                    }}
-                                    value={value}
-                                    onChange={change}
-                                />
-                                <div
-                                    style={{
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        justifyContent: 'center',
-                                    }}
-                                >
-                                    <button
-                                        style={{
-                                            borderColor: 'transparent',
-                                            cursor: 'pointer',
-                                            flex: 1,
-                                            padding: '4px 4px 2px 4px',
-                                        }}
-                                        onClick={increase}
-                                    >
-                                        <Triangle size={6} corner="t" />
-                                    </button>
-                                    <button
-                                        style={{
-                                            borderColor: 'transparent',
-                                            cursor: 'pointer',
-                                            flex: 1,
-                                            padding: '2px 4px 4px 4px',
-                                        }}
-                                        onClick={decrease}
-                                    >
-                                        <Triangle size={6} corner="b" />
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
-<div style="
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 2px;
-    display: flex;
-">
+html={`
+<div class="container">
     <!-- Input -->
-    <input type="text" style="
-        border-color: transparent;
-        margin-right: 4px;
-        padding: 4px;
-        width: 100px;
-    " />
+    <input type="text" class="input" />
 
     <!-- Buttons container -->
-    <div style="
-        /* Content is centered vertically */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    ">
+    <div class="buttons">
         <!-- Up button -->
-        <button style="
-            border-color: transparent;
-            /* Make buttons have the same height */
-            flex: 1,
-        ">
+        <button class="button">
             ...
         </button>
 
         <!-- Down button -->
-        <button style="
-            border-color: transparent;
-            /* Make buttons have the same height */
-            flex: 1,
-        ">
+        <button class="button">
             ...
         </button>
     </div>
 </div>
 `}
-                />
+css={`
+.container {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    display: flex;
+}
+
+.input {
+    border-color: transparent;
+    margin-right: 4px;
+    padding: 4px;
+    width: 100px;
+}
+
+.buttons {
+    /* Content is centered vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button {
+    border-color: transparent;
+    /* Make buttons have the same height */
+    flex: 1,
+}
+`}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <div
+                            style={{
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRadius: '2px',
+                                display: 'flex',
+                            }}
+                        >
+                            <input
+                                type="text"
+                                style={{
+                                    borderColor: 'transparent',
+                                    marginRight: '4px',
+                                    padding: '4px',
+                                    width: '100px',
+                                }}
+                                value={value}
+                                onChange={change}
+                            />
+                            <div
+                                style={{
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    justifyContent: 'center',
+                                }}
+                            >
+                                <button
+                                    style={{
+                                        borderColor: 'transparent',
+                                        cursor: 'pointer',
+                                        flex: 1,
+                                        padding: '4px 4px 2px 4px',
+                                    }}
+                                    onClick={increase}
+                                >
+                                    <Triangle size={6} corner="t" />
+                                </button>
+                                <button
+                                    style={{
+                                        borderColor: 'transparent',
+                                        cursor: 'pointer',
+                                        flex: 1,
+                                        padding: '2px 4px 4px 4px',
+                                    }}
+                                    onClick={decrease}
+                                >
+                                    <Triangle size={6} corner="b" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
             <RelatedPatterns patterns={[Pattern.StepperInput]} />
         </DetailsLayout>

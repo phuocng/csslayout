@@ -29,79 +29,22 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '8px',
-                                    display: 'flex',
-                                    height: '32px',
-                                    width: '128px',
-                                }}
-                            >
-                                <button
-                                    style={{
-                                        alignItems: 'center',
-                                        backgroundColor: 'rgba(0, 0, 0, 0.05)',
-                                        borderColor: 'transparent',
-                                        cursor: 'pointer',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        width: '32px',
-                                    }}
-                                    onClick={decrease}
-                                >
-                                    -
-                                </button>
-                                <div
-                                    style={{
-                                        borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
-                                        flex: 1,
-                                        height: '100%',
-                                    }}
-                                >
-                                    <input
-                                        type="text"
-                                        style={{
-                                            borderColor: 'transparent',
-                                            height: '100%',
-                                            padding: '8px',
-                                            width: '100%',
-                                        }}
-                                        value={value}
-                                        onChange={change}
-                                    />
-                                </div>
-                                <button
-                                    style={{
-                                        alignItems: 'center',
-                                        backgroundColor: 'rgba(0, 0, 0, 0.05)',
-                                        borderColor: 'transparent',
-                                        cursor: 'pointer',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        width: '32px',
-                                    }}
-                                    onClick={increase}
-                                >
-                                    +
-                                </button>
-                            </div>
-                        </div>
-                    )}
-                    source={`
-<div style="
+html={`
+<div class="container">
+    <!-- Minus button -->
+    <button class="button">-</button>
+
+    <!-- Input container -->
+    <div class="input-container">
+        <input type="text" class="input" />
+    </div>
+
+    <!-- Plus button -->
+    <button class="button">+</button>
+</div>
+`}
+css={`
+.container {
     display: flex;
 
     /* Border */
@@ -110,40 +53,99 @@ const Details: React.FC<{}> = () => {
     /* Size */
     height: 32px;
     width: 128px;
-">
-    <!-- Minus button -->
-    <button style="
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        justify-content: center;
+}
 
-        /* Size */
-        width: 32px;
-    ">-</button>
+.button {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-    <!-- Input container -->
-    <div style="flex: 1">
-        <input type="text" style="
-            /* Take full size of its container */
-            height: 100%;
-            width: 100%;
-        " />
-    </div>
+    /* Size */
+    width: 32px;
+}
 
-    <!-- Plus button -->
-    <button style="
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        justify-content: center;
+.input-container {
+    flex: 1
+}
 
-        /* Size */
-        width: 32px;
-    ">+</button>
-</div>
+.input {
+    /* Take full size of its container */
+    height: 100%;
+    width: 100%;
+}
 `}
-                />
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRadius: '8px',
+                                display: 'flex',
+                                height: '32px',
+                                width: '128px',
+                            }}
+                        >
+                            <button
+                                style={{
+                                    alignItems: 'center',
+                                    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                                    borderColor: 'transparent',
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    width: '32px',
+                                }}
+                                onClick={decrease}
+                            >
+                                -
+                            </button>
+                            <div
+                                style={{
+                                    borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    flex: 1,
+                                    height: '100%',
+                                }}
+                            >
+                                <input
+                                    type="text"
+                                    style={{
+                                        borderColor: 'transparent',
+                                        height: '100%',
+                                        padding: '8px',
+                                        width: '100%',
+                                    }}
+                                    value={value}
+                                    onChange={change}
+                                />
+                            </div>
+                            <button
+                                style={{
+                                    alignItems: 'center',
+                                    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                                    borderColor: 'transparent',
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    width: '32px',
+                                }}
+                                onClick={increase}
+                            >
+                                +
+                            </button>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
             <RelatedPatterns patterns={[Pattern.SpinButton]} />
         </DetailsLayout>

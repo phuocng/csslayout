@@ -24,67 +24,7 @@ const Details: React.FC<{}> = () => {
                     In this pattern, the video is displayed in the background.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    height: '100%',
-                                    position: 'relative',
-                                    width: '100%',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        height: '100%',
-                                        left: 0,
-                                        overflow: 'hidden',
-                                        position: 'absolute',
-                                        top: 0,
-                                        width: '100%',
-                                    }}
-                                >
-                                    <video
-                                        style={{
-                                            objectFit: 'cover',
-                                            width: '100%',
-                                        }}
-                                        autoPlay={true}
-                                        loop={true}
-                                        muted={true}
-                                        playsInline={true}
-                                        src="/assets/video-background-demo.mp4"
-                                    />
-                                </div>
-
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        height: '100%',
-                                        justifyContent: 'center',
-                                        left: 0,
-                                        position: 'absolute',
-                                        top: 0,
-                                        width: '100%',
-                                    }}
-                                >
-                                    <div style={{ width: '250px' }}>
-                                        <Block backgroundColor='#fff' justify='center' numberOfBlocks={10} />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Used to position the video and content */
     position: relative;
@@ -141,7 +81,67 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <div
+                            style={{
+                                height: '100%',
+                                position: 'relative',
+                                width: '100%',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    height: '100%',
+                                    left: 0,
+                                    overflow: 'hidden',
+                                    position: 'absolute',
+                                    top: 0,
+                                    width: '100%',
+                                }}
+                            >
+                                <video
+                                    style={{
+                                        objectFit: 'cover',
+                                        width: '100%',
+                                    }}
+                                    autoPlay={true}
+                                    loop={true}
+                                    muted={true}
+                                    playsInline={true}
+                                    src="/assets/video-background-demo.mp4"
+                                />
+                            </div>
+
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    height: '100%',
+                                    justifyContent: 'center',
+                                    left: 0,
+                                    position: 'absolute',
+                                    top: 0,
+                                    width: '100%',
+                                }}
+                            >
+                                <div style={{ width: '250px' }}>
+                                    <Block backgroundColor='#fff' justify='center' numberOfBlocks={10} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
             <RelatedPatterns patterns={[Pattern.FullBackground, Pattern.OverlayPlayButton]} />
         </DetailsLayout>

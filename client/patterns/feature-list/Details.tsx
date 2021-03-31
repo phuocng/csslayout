@@ -23,34 +23,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '100%',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <div style={{ width: '60%' }}>
-                                <div style={{ display: 'flex', marginBottom: '32px' }}>
-                                    <div style={{ margin: '0 16px' }}><Circle size={128} /></div>
-                                    <div style={{ flex: 1 }}>
-                                        <div style={{ marginBottom: '32px' }}><Rectangle height={8} /></div>
-                                        <Block numberOfBlocks={10} />
-                                    </div>
-                                </div>
-                                <div style={{ display: 'flex', flexDirection: 'row-reverse', marginBottom: '32px' }}>
-                                    <div style={{ margin: '0 16px' }}><Circle size={128} /></div>
-                                    <div style={{ flex: 1 }}>
-                                        <div style={{ marginBottom: '32px' }}><Rectangle height={8} /></div>
-                                        <Block numberOfBlocks={15} />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <!-- Feature item -->
 <div style="
     display: flex;
@@ -80,7 +53,34 @@ const Details: React.FC<{}> = () => {
 <!-- Repeated items -->
 ...
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            height: '100%',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <div style={{ width: '60%' }}>
+                            <div style={{ display: 'flex', marginBottom: '32px' }}>
+                                <div style={{ margin: '0 16px' }}><Circle size={128} /></div>
+                                <div style={{ flex: 1 }}>
+                                    <div style={{ marginBottom: '32px' }}><Rectangle height={8} /></div>
+                                    <Block numberOfBlocks={10} />
+                                </div>
+                            </div>
+                            <div style={{ display: 'flex', flexDirection: 'row-reverse', marginBottom: '32px' }}>
+                                <div style={{ margin: '0 16px' }}><Circle size={128} /></div>
+                                <div style={{ flex: 1 }}>
+                                    <div style={{ marginBottom: '32px' }}><Rectangle height={8} /></div>
+                                    <Block numberOfBlocks={15} />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.FeatureComparison]} />

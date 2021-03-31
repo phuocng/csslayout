@@ -19,38 +19,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0)',
-                                    backgroundPositionY: '24px',
-                                    backgroundSize: '100% 2em',
-                                    height: '200px',
-                                    lineHeight: '2em',
-                                    width: '75%',
-                                }}
-                            >
-                                <div>
-                                    Cascading Style Sheets (CSS) is a style sheet language used for
-                                    describing the presentation of a document written in a markup
-                                    language like HTML. CSS is a cornerstone technology of the World Wide Web,
-                                    alongside HTML and JavaScript.
-                                </div>
-                                <div style={{ textAlign: 'right' }}>— Wikipedia</div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Lined background */
     background-image: linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0px);
@@ -66,7 +35,38 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0)',
+                                backgroundPositionY: '24px',
+                                backgroundSize: '100% 2em',
+                                height: '200px',
+                                lineHeight: '2em',
+                                width: '75%',
+                            }}
+                        >
+                            <div>
+                                Cascading Style Sheets (CSS) is a style sheet language used for
+                                describing the presentation of a document written in a markup
+                                language like HTML. CSS is a cornerstone technology of the World Wide Web,
+                                alongside HTML and JavaScript.
+                            </div>
+                            <div style={{ textAlign: 'right' }}>— Wikipedia</div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

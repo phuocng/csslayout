@@ -19,39 +19,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    backgroundColor: '#ccc',
-                                    backgroundImage: 'radial-gradient(#fff 50%, transparent 50%)',
-                                    backgroundPosition: '-5px -5px',
-                                    backgroundRepeat: 'repeat',
-                                    backgroundSize: '10px 10px',
-                                    height: '200px',
-                                    padding: '5px',
-                                    width: '200px',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        backgroundColor: '#ccc',
-                                        height: '100%',
-                                        width: '100%',
-                                    }}
-                                />
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Background */
     background-color: #ccc;
@@ -73,7 +41,39 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <div
+                            style={{
+                                backgroundColor: '#ccc',
+                                backgroundImage: 'radial-gradient(#fff 50%, transparent 50%)',
+                                backgroundPosition: '-5px -5px',
+                                backgroundRepeat: 'repeat',
+                                backgroundSize: '10px 10px',
+                                height: '200px',
+                                padding: '5px',
+                                width: '200px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    backgroundColor: '#ccc',
+                                    height: '100%',
+                                    width: '100%',
+                                }}
+                            />
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

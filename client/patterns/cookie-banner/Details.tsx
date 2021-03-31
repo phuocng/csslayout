@@ -22,40 +22,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                position: 'relative',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    backgroundColor: 'rgba(0, 0, 0, 0.05)',
-                                    borderTop: '1px solid rgba(0, 0, 0, 0.3)',
-                                    bottom: 0,
-                                    display: 'flex',
-                                    left: 0,
-                                    padding: '8px',
-                                    position: 'absolute',
-                                    width: '100%',
-                                }}
-                            >
-                                <div style={{ flex: 1, marginRight: '12px' }}>
-                                    <Block numberOfBlocks={5} />
-                                </div>
-                                <div style={{ width: '96px' }}>
-                                    <Rectangle height={32} />
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Banner is displayed at the bottom */
     bottom: 0;
@@ -80,7 +47,40 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            position: 'relative',
+                        }}
+                    >
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                                borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+                                bottom: 0,
+                                display: 'flex',
+                                left: 0,
+                                padding: '8px',
+                                position: 'absolute',
+                                width: '100%',
+                            }}
+                        >
+                            <div style={{ flex: 1, marginRight: '12px' }}>
+                                <Block numberOfBlocks={5} />
+                            </div>
+                            <div style={{ width: '96px' }}>
+                                <Rectangle height={32} />
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
             <RelatedPatterns patterns={[Pattern.FixedAtCorner]} />
         </DetailsLayout>

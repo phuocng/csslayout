@@ -24,99 +24,12 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                                    borderRadius: '9999px',
-                                    display: 'inline-flex',
-                                    padding: '4px',
-                                }}
-                            >
-                                <label
-                                    htmlFor="radio-switch-first"
-                                    style={{
-                                        backgroundColor: isFirstChecked ? '#357EDD' : '',
-                                        borderRadius: '9999px',
-                                        color: isFirstChecked ? '#FFF' : '',
-                                        cursor: 'pointer',
-                                        padding: '16px 8px',
-                                    }}
-                                >
-                                    <input
-                                        id="radio-switch-first"
-                                        type="radio"
-                                        style={{ display: 'none' }}
-                                        checked={isFirstChecked}
-                                        onChange={toggle}
-                                    />
-                                    <div
-                                        style={{
-                                            backgroundColor: isFirstChecked ? '#FFF' : 'rgba(0, 0, 0, 0.2)',
-                                            borderRadius: '4px',
-                                            height: '8px',
-                                            width: '64px',
-                                        }}
-                                    />
-                                </label>
-                                <label
-                                    htmlFor="radio-switch-second"
-                                    style={{
-                                        backgroundColor: isFirstChecked ? '' : '#357EDD',
-                                        borderRadius: '9999px',
-                                        color: isFirstChecked ? '' : '#FFF',
-                                        cursor: 'pointer',
-                                        padding: '16px 8px',
-                                    }}
-                                >
-                                    <input
-                                        id="radio-switch-second"
-                                        type="radio"
-                                        style={{ display: 'none' }}
-                                        checked={!isFirstChecked}
-                                        onChange={toggle}
-                                    />
-                                    <div
-                                        style={{
-                                            backgroundColor: isFirstChecked ? 'rgba(0, 0, 0, 0.2)' : '#FFF',
-                                            borderRadius: '4px',
-                                            height: '8px',
-                                            width: '64px',
-                                        }}
-                                    />
-                                </label>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <!-- Container -->
-<div style="
-    background-color: rgba(0, 0, 0, .1);
-    border-radius: 9999px;
-    display: inline-flex;
-    padding: 4px;
-">
+<div class="container">
     <!-- Radio container -->
-    <label style="
-        border-radius: 9999px;
-        cursor: pointer;
-        padding: 4px 8px;
-
-        /* For selected radio only */
-        background-color: #357edd;
-        color: #fff;
-    ">
-        <input type="radio" style="display: none" />
+    <label class="container__label container__label--selected">
+        <input type="radio" class="container__input" />
 
         <!-- Text -->
         ...
@@ -126,7 +39,104 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={`
+.container {
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 9999px;
+    display: inline-flex;
+    padding: 4px;
+}
+
+.container__label {
+    border-radius: 9999px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.container__label--selected {
+    /* For selected radio only */
+    background-color: #357edd;
+    color: #fff;
+}
+
+.container__input {
+    display: none
+}
+`}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                                borderRadius: '9999px',
+                                display: 'inline-flex',
+                                padding: '4px',
+                            }}
+                        >
+                            <label
+                                htmlFor="radio-switch-first"
+                                style={{
+                                    backgroundColor: isFirstChecked ? '#357EDD' : '',
+                                    borderRadius: '9999px',
+                                    color: isFirstChecked ? '#FFF' : '',
+                                    cursor: 'pointer',
+                                    padding: '16px 8px',
+                                }}
+                            >
+                                <input
+                                    id="radio-switch-first"
+                                    type="radio"
+                                    style={{ display: 'none' }}
+                                    checked={isFirstChecked}
+                                    onChange={toggle}
+                                />
+                                <div
+                                    style={{
+                                        backgroundColor: isFirstChecked ? '#FFF' : 'rgba(0, 0, 0, 0.2)',
+                                        borderRadius: '4px',
+                                        height: '8px',
+                                        width: '64px',
+                                    }}
+                                />
+                            </label>
+                            <label
+                                htmlFor="radio-switch-second"
+                                style={{
+                                    backgroundColor: isFirstChecked ? '' : '#357EDD',
+                                    borderRadius: '9999px',
+                                    color: isFirstChecked ? '' : '#FFF',
+                                    cursor: 'pointer',
+                                    padding: '16px 8px',
+                                }}
+                            >
+                                <input
+                                    id="radio-switch-second"
+                                    type="radio"
+                                    style={{ display: 'none' }}
+                                    checked={!isFirstChecked}
+                                    onChange={toggle}
+                                />
+                                <div
+                                    style={{
+                                        backgroundColor: isFirstChecked ? 'rgba(0, 0, 0, 0.2)' : '#FFF',
+                                        borderRadius: '4px',
+                                        height: '8px',
+                                        width: '64px',
+                                    }}
+                                />
+                            </label>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
             <section>
                 <Heading title="Use cases" />

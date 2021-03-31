@@ -27,39 +27,7 @@ const Details: React.FC<{}> = () => {
                     Move the mouser over the main element to see the tooltip.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                className="p-tooltip"
-                                style={{
-                                    marginBottom: '16px',
-                                    width: '150px',
-                                }}
-                            >
-                                <div
-                                    className="p-tooltip-content"
-                                    style={{
-                                        padding: '8px',
-                                        width: '200px',
-                                    }}
-                                >
-                                    <Block backgroundColor='#fff' justify='center' numberOfBlocks={5} />
-                                </div>
-                                <div className="p-tooltip-arrow" />
-                                <Rectangle height={32} />
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <style>
 .p-tooltip {
     /* Used to position the arrow */
@@ -126,7 +94,39 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            className="p-tooltip"
+                            style={{
+                                marginBottom: '16px',
+                                width: '150px',
+                            }}
+                        >
+                            <div
+                                className="p-tooltip-content"
+                                style={{
+                                    padding: '8px',
+                                    width: '200px',
+                                }}
+                            >
+                                <Block backgroundColor='#fff' justify='center' numberOfBlocks={5} />
+                            </div>
+                            <div className="p-tooltip-arrow" />
+                            <Rectangle height={32} />
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.PopoverArrow]} />

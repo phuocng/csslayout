@@ -25,45 +25,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                                    borderRadius: '9999px',
-                                    height: '16px',
-                                    width: '50%',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        backgroundColor: '#357EDD',
-                                        borderRadius: '9999px',
-                                        color: '#FFF',
-                                        display: 'flex',
-                                        fontSize: '12px',
-                                        height: '100%',
-                                        justifyContent: 'center',
-                                        padding: '4px',
-                                        width: `${progress}%`,
-                                    }}
-                                >
-                                    {progress}%
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Colors */
     background-color: rgba(0, 0, 0, .1);
@@ -92,7 +54,45 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                                borderRadius: '9999px',
+                                height: '16px',
+                                width: '50%',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    backgroundColor: '#357EDD',
+                                    borderRadius: '9999px',
+                                    color: '#FFF',
+                                    display: 'flex',
+                                    fontSize: '12px',
+                                    height: '100%',
+                                    justifyContent: 'center',
+                                    padding: '4px',
+                                    width: `${progress}%`,
+                                }}
+                            >
+                                {progress}%
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

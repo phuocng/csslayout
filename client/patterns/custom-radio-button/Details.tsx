@@ -71,100 +71,107 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ width: '200px' }}>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'inline-flex',
-                                        marginBottom: '16px',
-                                    }}
-                                >
-                                    <Radio value='1'>
-                                        <div style={{ width: '100px' }}><Rectangle /></div>
-                                    </Radio>
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'inline-flex',
-                                        marginBottom: '16px',
-                                    }}
-                                >
-                                    <Radio value='2'>
-                                        <div style={{ width: '200px' }}><Rectangle /></div>
-                                    </Radio>
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'inline-flex',
-                                    }}
-                                >
-                                    <Radio value='3'>
-                                        <div style={{ width: '150px' }}><Rectangle /></div>
-                                    </Radio>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
-<label style="
-    /* Center the content horizontally */
-    align-items: center;
-    display: inline-flex;
-
-    /* Cursor */
-    cursor: pointer;
-">
+html={`
+<label class="label">
     <!-- The real radio -->
-    <input
-        type="radio"
-        style="
-            /* Hide it */
-            display: none;
-        "
-    />
+    <input type="radio" class="label__input" />
 
     <!-- The fake circle -->
-    <div style="
-        /* Rounded border */
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        border-radius: 9999px;
-
-        /* Spacing */
-        margin-right: 8px;
-        padding: 4px;
-    ">
+    <div class="label__circle">
         <!-- The inner circle -->
-        <div style="
-            /* Rounded border */
-            border-radius: 9999px;
-            height: 16px;
-            width: 16px;
-
-            /* For selected radio */
-            background-color: #00449E;
-
-            /* For not selected radio */
-            background-color: transparent;
-        " />
+        <div class="label__radio label__radio--selected"></div>
     </div>
 
     <!-- The text -->
     ...
 </div>
 `}
-                />
+css={`
+.label {
+    /* Center the content horizontally */
+    align-items: center;
+    display: inline-flex;
+
+    /* Cursor */
+    cursor: pointer;
+}
+
+.label__input {
+    /* Hide it */
+    display: none;
+}
+
+.label__circle {
+    /* Rounded border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 9999px;
+
+    /* Spacing */
+    margin-right: 8px;
+    padding: 4px;
+}
+
+.label__radio {
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 16px;
+    width: 16px;
+
+    /* For not selected radio */
+    background-color: transparent;
+}
+
+.label__radio--selected {
+    /* For selected radio */
+    background-color: #00449E;
+}
+`}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ width: '200px' }}>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'inline-flex',
+                                    marginBottom: '16px',
+                                }}
+                            >
+                                <Radio value='1'>
+                                    <div style={{ width: '100px' }}><Rectangle /></div>
+                                </Radio>
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'inline-flex',
+                                    marginBottom: '16px',
+                                }}
+                            >
+                                <Radio value='2'>
+                                    <div style={{ width: '200px' }}><Rectangle /></div>
+                                </Radio>
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'inline-flex',
+                                }}
+                            >
+                                <Radio value='3'>
+                                    <div style={{ width: '150px' }}><Rectangle /></div>
+                                </Radio>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
             <RelatedPatterns patterns={[Pattern.CustomCheckboxButton, Pattern.RadioButtonGroup]} />
         </DetailsLayout>

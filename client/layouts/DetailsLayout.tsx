@@ -20,8 +20,7 @@ interface DetailsLayoutProps {
 
 const DetailsLayout: React.FC<DetailsLayoutProps> = ({ pattern, children }) => {
     useDocumentTitle(`CSS Layout ∙ ${pattern}`);
-
-    const products = randomItems(ProductList, 3);
+    const products = React.useMemo(() => randomItems(ProductList, 3), []);
 
     return (
         <Layout>

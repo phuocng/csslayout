@@ -20,66 +20,17 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ width: '256px' }}>
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRadius: '2px',
-                                        display: 'flex',
-                                        marginBottom: '16px',
-                                    }}
-                                >
-                                    <input
-                                        type="text"
-                                        placeholder="Search"
-                                        style={{
-                                            borderColor: 'transparent',
-                                            flex: 1,
-                                            padding: '4px',
-                                        }}
-                                    />
-                                    <div style={{ padding: '8px' }}>
-                                        <Circle />
-                                    </div>
-                                </div>
+html={`
+<div class="container">
+    <!-- Text input -->
+    <input type="text" class="container__input" />
 
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRadius: '2px',
-                                        display: 'flex',
-                                        flexDirection: 'row-reverse',
-                                    }}
-                                >
-                                    <input
-                                        type="text"
-                                        placeholder="Search"
-                                        style={{
-                                            borderColor: 'transparent',
-                                            flex: 1,
-                                            padding: '4px',
-                                        }}
-                                    />
-                                    <div style={{ padding: '8px' }}>
-                                        <Circle />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
-<div style="
+    <!-- Search icon sticks to the left or right -->
+    ...
+</div>
+`}
+css={`
+.container {
     display: flex;
 
     /* If you want to place the icon before the text input */
@@ -87,22 +38,72 @@ const Details: React.FC<{}> = () => {
 
     /* Border */
     border: 1px solid rgba(0, 0, 0, 0.3);
-">
-    <!-- Text input -->
-    <input
-        type="text"
-        style="
-            border-color: transparent;
-            /* Take available width */
-            flex: 1;
-        "
-    />
+}
 
-    <!-- Search icon sticks to the left or right -->
-    ...
-</div>
+.container__input {
+    border-color: transparent;
+    /* Take available width */
+    flex: 1;
+}
 `}
-                />
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ width: '256px' }}>
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '2px',
+                                    display: 'flex',
+                                    marginBottom: '16px',
+                                }}
+                            >
+                                <input
+                                    type="text"
+                                    placeholder="Search"
+                                    style={{
+                                        borderColor: 'transparent',
+                                        flex: 1,
+                                        padding: '4px',
+                                    }}
+                                />
+                                <div style={{ padding: '8px' }}>
+                                    <Circle />
+                                </div>
+                            </div>
+
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '2px',
+                                    display: 'flex',
+                                    flexDirection: 'row-reverse',
+                                }}
+                            >
+                                <input
+                                    type="text"
+                                    placeholder="Search"
+                                    style={{
+                                        borderColor: 'transparent',
+                                        flex: 1,
+                                        padding: '4px',
+                                    }}
+                                />
+                                <div style={{ padding: '8px' }}>
+                                    <Circle />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

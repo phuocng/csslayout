@@ -20,45 +20,50 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ alignItems: 'center', display: 'flex' }}>
-                                <div style={{ width: '128px' }}><Rectangle height={16} /></div>
-                                <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
-                                <div style={{ width: '32px' }}><Rectangle height={16} /></div>
-                                <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
-                                <div style={{ width: '64px' }}><Rectangle height={16} /></div>
-                                <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
-                                <div style={{ width: '32px' }}><Rectangle height={16} /></div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
-<div style="
-    /* Content is centered vertically */
-    align-items: center;
-    display: flex;
-">
+html={`
+<div class="container">
     <!-- Breadcrumb item -->
     <a>...</a>
 
     <!-- Separator -->
-    <div style="margin: 0 8px;">/</div>
+    <div class="separator">/</div>
 
     <!-- Repeated items and separators -->
     ...
 </div>
 `}
-                />
+css={`
+.container {
+    /* Content is centered vertically */
+    align-items: center;
+    display: flex;
+}
+.separator {
+    margin: 0 8px;
+}
+`}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ alignItems: 'center', display: 'flex' }}>
+                            <div style={{ width: '128px' }}><Rectangle height={16} /></div>
+                            <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
+                            <div style={{ width: '32px' }}><Rectangle height={16} /></div>
+                            <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
+                            <div style={{ width: '64px' }}><Rectangle height={16} /></div>
+                            <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
+                            <div style={{ width: '32px' }}><Rectangle height={16} /></div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

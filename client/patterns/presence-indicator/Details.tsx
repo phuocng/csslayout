@@ -21,41 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    height: '64px',
-                                    marginRight: '16px',
-                                    position: 'relative',
-                                    width: '64px',
-                                }}
-                            >
-                                <Circle size={64} />
-                                <div
-                                    style={{
-                                        backgroundColor: '#FF4136',
-                                        borderRadius: '9999px',
-                                        bottom: 0,
-                                        height: '16px',
-                                        position: 'absolute',
-                                        right: 0,
-                                        transform: 'translate(50%, 50%)',
-                                        width: '16px',
-                                    }}
-                                />
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     position: relative;
 ">
@@ -80,7 +46,41 @@ const Details: React.FC<{}> = () => {
     " />
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                height: '64px',
+                                marginRight: '16px',
+                                position: 'relative',
+                                width: '64px',
+                            }}
+                        >
+                            <Circle size={64} />
+                            <div
+                                style={{
+                                    backgroundColor: '#FF4136',
+                                    borderRadius: '9999px',
+                                    bottom: 0,
+                                    height: '16px',
+                                    position: 'absolute',
+                                    right: 0,
+                                    transform: 'translate(50%, 50%)',
+                                    width: '16px',
+                                }}
+                            />
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns

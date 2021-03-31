@@ -56,85 +56,16 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                className="p-radio-button-group"
-                                style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '4px',
-                                    display: 'flex',
-                                    height: '32px',
-                                }}
-                            >
-                                <Radio value='1'>
-                                    <div style={{ width: '80px' }}><Rectangle /></div>
-                                </Radio>
-                                <Radio value='2'>
-                                    <div style={{ width: '120px' }}><Rectangle /></div>
-                                </Radio>
-                                <Radio value='3'>
-                                    <div style={{ width: '100px' }}><Rectangle /></div>
-                                </Radio>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <style>
-.p-radio-button-group label {
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
-}
 
-/* Remove the right border from the last label */
-.p-radio-button-group label:last-child {
-    border-right-color: transparent;
-}
 </style>
 
-<div
-    class="p-radio-button-group"
-    style="
-        display: flex;
-
-        /* Border */
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        border-radius: 4px;
-        height: 32px;
-    "
->
+<div class="container">
     <!-- Each radio item -->
-    <label style="
-        /* Center the content */
-        align-items: center;
-        display: inline-flex;
-
-        padding: 8px;
-
-        /* For selected radio */
-        background-color: #00449E;
-        color: #FFF;
-
-        /* For not selected radio */
-        background-color: transparent;
-        color: #CCC;
-    ">
+    <label class="container__label">
         <!-- The radio input -->
-        <input
-            type="radio"
-            style="
-                /* Hide it */
-                display: none;
-            "
-        />
+        <input type="radio" class="container__input" />
 
         <!-- The text -->
         ...
@@ -144,7 +75,77 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={`
+.container {
+    display: flex;
+
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    height: 32px;
+}
+
+.container__label {
+    /* Center the content */
+    align-items: center;
+    display: inline-flex;
+
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 8px;
+
+    /* For not selected radio */
+    background-color: transparent;
+    color: #CCC;
+}
+
+.container__label:last-child {
+    /* Remove the right border from the last label */
+    border-right-color: transparent;
+}
+
+.container__label--selected {
+    /* For selected radio */
+    background-color: #00449E;
+    color: #FFF;
+}
+
+.container__input {
+    /* Hide it */
+    display: none;
+}
+`}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            className="p-radio-button-group"
+                            style={{
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRadius: '4px',
+                                display: 'flex',
+                                height: '32px',
+                            }}
+                        >
+                            <Radio value='1'>
+                                <div style={{ width: '80px' }}><Rectangle /></div>
+                            </Radio>
+                            <Radio value='2'>
+                                <div style={{ width: '120px' }}><Rectangle /></div>
+                            </Radio>
+                            <Radio value='3'>
+                                <div style={{ width: '100px' }}><Rectangle /></div>
+                            </Radio>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.CustomCheckboxButton, Pattern.CustomRadioButton]} />

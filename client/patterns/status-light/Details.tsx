@@ -21,41 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    display: 'inline-flex',
-                                    width: '150px',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        backgroundColor: '#4299e1',
-                                        borderRadius: '9999px',
-                                        height: '8px',
-                                        marginRight: '8px',
-                                        width: '8px',
-                                    }}
-                                />
-
-                                <div style={{ flex: 1 }}>
-                                    <Rectangle />
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Center the content */
     align-items: center;
@@ -86,7 +52,41 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'inline-flex',
+                                width: '150px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    backgroundColor: '#4299e1',
+                                    borderRadius: '9999px',
+                                    height: '8px',
+                                    marginRight: '8px',
+                                    width: '8px',
+                                }}
+                            />
+
+                            <div style={{ flex: 1 }}>
+                                <Rectangle />
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <section>

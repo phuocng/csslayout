@@ -20,48 +20,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    display: 'flex',
-                                    position: 'relative',
-                                    width: '60%',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        left: '50%',
-                                        padding: '0 8px',
-                                        position: 'absolute',
-                                        top: '50%',
-                                        transform: 'translate(-50%, -50%)',
-                                    }}
-                                >
-                                    <div style={{ width: '128px' }}><Rectangle height={16} /></div>
-                                </div>
-                                <div
-                                    style={{
-                                        borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                        height: '1px',
-                                        width: '100%',
-                                    }}
-                                />
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Content is centered horizontally */
     align-items: center;
@@ -92,7 +51,48 @@ const Details: React.FC<{}> = () => {
     " />
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                position: 'relative',
+                                width: '60%',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    left: '50%',
+                                    padding: '0 8px',
+                                    position: 'absolute',
+                                    top: '50%',
+                                    transform: 'translate(-50%, -50%)',
+                                }}
+                            >
+                                <div style={{ width: '128px' }}><Rectangle height={16} /></div>
+                            </div>
+                            <div
+                                style={{
+                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                    height: '1px',
+                                    width: '100%',
+                                }}
+                            />
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

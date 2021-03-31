@@ -27,49 +27,16 @@ const Details: React.FC<{}> = () => {
                     the checkbox will be checked even though it's hidden.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <label
-                                htmlFor="checkbox-switch"
-                                style={{
-                                    backgroundColor: checked ? '#357EDD' : 'rgba(0, 0, 0, 0.1)',
-                                    border: `1px solid ${checked ? '#357EDD' : 'rgba(0, 0, 0, 0.3)'}`,
-                                    borderRadius: '9999px',
-                                    display: 'flex',
-                                    height: '32px',
-                                    justifyContent: checked ? 'flex-end' : '',
-                                    width: '64px',
-                                }}
-                            >
-                                <input
-                                    id="checkbox-switch"
-                                    type="checkbox"
-                                    style={{ display: 'none' }}
-                                    checked={checked}
-                                    onChange={toggle}
-                                />
-                                <div
-                                    style={{
-                                        backgroundColor: '#FFF',
-                                        border: checked ? '' : '1px solid rgba(0, 0, 0, 0.3)',
-                                        borderRadius: '9999px',
-                                        width: '32px',
-                                    }}
-                                />
-                            </label>
-                        </div>
-                    )}
-                    source={`
-<label style="
+html={`
+<label class="label">
+    <input type="checkbox" class="input" />
+
+    <!-- Circle -->
+    <div class="circle"></div>
+</label>
+`}
+css={`
+.label {
     display: flex;
 
     /* Rounded border */
@@ -88,26 +55,67 @@ const Details: React.FC<{}> = () => {
     border: 1px solid #357edd;
     /* Push the circle to the right */
     justify-content: flex-end;
-">
-    <!-- Hide the input -->
-    <input type="checkbox" style="display: none" />
+}
 
-    <!-- Circle -->
-    <div style="
-        /* Rounded border */
-        border-radius: 9999px;
+.input {
+    /* Hide the input */
+    display: none;
+}
 
-        /* Size */
-        width: 32px;
+.circle {
+    /* Rounded border */
+    border-radius: 9999px;
 
-        background-color: #FFF;
+    /* Size */
+    width: 32px;
 
-        /* OFF status */
-        border: 1px solid rgba(0, 0, 0, .3);
-    " />
-</label>
+    background-color: #FFF;
+
+    /* OFF status */
+    border: 1px solid rgba(0, 0, 0, .3);
+}
 `}
-                />
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <label
+                            htmlFor="checkbox-switch"
+                            style={{
+                                backgroundColor: checked ? '#357EDD' : 'rgba(0, 0, 0, 0.1)',
+                                border: `1px solid ${checked ? '#357EDD' : 'rgba(0, 0, 0, 0.3)'}`,
+                                borderRadius: '9999px',
+                                display: 'flex',
+                                height: '32px',
+                                justifyContent: checked ? 'flex-end' : '',
+                                width: '64px',
+                            }}
+                        >
+                            <input
+                                id="checkbox-switch"
+                                type="checkbox"
+                                style={{ display: 'none' }}
+                                checked={checked}
+                                onChange={toggle}
+                            />
+                            <div
+                                style={{
+                                    backgroundColor: '#FFF',
+                                    border: checked ? '' : '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRadius: '9999px',
+                                    width: '32px',
+                                }}
+                            />
+                        </label>
+                    </div>
+                </BrowserFrame>
             </div>
             <RelatedPatterns patterns={[Pattern.RadioSwitch]} />
         </DetailsLayout>

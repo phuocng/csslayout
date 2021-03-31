@@ -23,125 +23,7 @@ const Details: React.FC<{}> = () => {
                     the cursors which indicate the associated side can be resized.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    border: '1px dashed rgba(0, 0, 0, 0.3)',
-                                    height: '200px',
-                                    position: 'relative',
-                                    width: '200px',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        cursor: 'nwse-resize',
-                                        height: '12px',
-                                        left: 0,
-                                        position: 'absolute',
-                                        top: 0,
-                                        transform: 'translate(-50%, -50%)',
-                                        width: '12px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        cursor: 'ns-resize',
-                                        height: '12px',
-                                        left: '50%',
-                                        position: 'absolute',
-                                        top: 0,
-                                        transform: 'translate(-50%, -50%)',
-                                        width: '12px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        cursor: 'nesw-resize',
-                                        height: '12px',
-                                        position: 'absolute',
-                                        right: 0,
-                                        top: 0,
-                                        transform: 'translate(50%, -50%)',
-                                        width: '12px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        cursor: 'ew-resize',
-                                        height: '12px',
-                                        position: 'absolute',
-                                        right: 0,
-                                        top: '50%',
-                                        transform: 'translate(50%, -50%)',
-                                        width: '12px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        bottom: 0,
-                                        cursor: 'nwse-resize',
-                                        height: '12px',
-                                        position: 'absolute',
-                                        right: 0,
-                                        transform: 'translate(50%, 50%)',
-                                        width: '12px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        bottom: 0,
-                                        cursor: 'ns-resize',
-                                        height: '12px',
-                                        position: 'absolute',
-                                        right: '50%',
-                                        transform: 'translate(50%, 50%)',
-                                        width: '12px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        bottom: 0,
-                                        cursor: 'nesw-resize',
-                                        height: '12px',
-                                        left: 0,
-                                        position: 'absolute',
-                                        transform: 'translate(-50%, 50%)',
-                                        width: '12px',
-                                    }}
-                                />
-                                <div
-                                    style={{
-                                        border: '1px solid rgba(0, 0, 0, 0.3)',
-                                        cursor: 'ew-resize',
-                                        height: '12px',
-                                        left: 0,
-                                        position: 'absolute',
-                                        top: '50%',
-                                        transform: 'translate(-50%, -50%)',
-                                        width: '12px',
-                                    }}
-                                />
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Border */
     border: 1px dashed rgba(0, 0, 0, 0.3);
@@ -305,7 +187,125 @@ const Details: React.FC<{}> = () => {
     "/>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                border: '1px dashed rgba(0, 0, 0, 0.3)',
+                                height: '200px',
+                                position: 'relative',
+                                width: '200px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    cursor: 'nwse-resize',
+                                    height: '12px',
+                                    left: 0,
+                                    position: 'absolute',
+                                    top: 0,
+                                    transform: 'translate(-50%, -50%)',
+                                    width: '12px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    cursor: 'ns-resize',
+                                    height: '12px',
+                                    left: '50%',
+                                    position: 'absolute',
+                                    top: 0,
+                                    transform: 'translate(-50%, -50%)',
+                                    width: '12px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    cursor: 'nesw-resize',
+                                    height: '12px',
+                                    position: 'absolute',
+                                    right: 0,
+                                    top: 0,
+                                    transform: 'translate(50%, -50%)',
+                                    width: '12px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    cursor: 'ew-resize',
+                                    height: '12px',
+                                    position: 'absolute',
+                                    right: 0,
+                                    top: '50%',
+                                    transform: 'translate(50%, -50%)',
+                                    width: '12px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    bottom: 0,
+                                    cursor: 'nwse-resize',
+                                    height: '12px',
+                                    position: 'absolute',
+                                    right: 0,
+                                    transform: 'translate(50%, 50%)',
+                                    width: '12px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    bottom: 0,
+                                    cursor: 'ns-resize',
+                                    height: '12px',
+                                    position: 'absolute',
+                                    right: '50%',
+                                    transform: 'translate(50%, 50%)',
+                                    width: '12px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    bottom: 0,
+                                    cursor: 'nesw-resize',
+                                    height: '12px',
+                                    left: 0,
+                                    position: 'absolute',
+                                    transform: 'translate(-50%, 50%)',
+                                    width: '12px',
+                                }}
+                            />
+                            <div
+                                style={{
+                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    cursor: 'ew-resize',
+                                    height: '12px',
+                                    left: 0,
+                                    position: 'absolute',
+                                    top: '50%',
+                                    transform: 'translate(-50%, -50%)',
+                                    width: '12px',
+                                }}
+                            />
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

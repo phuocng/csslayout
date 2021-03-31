@@ -25,100 +25,8 @@ const Details: React.FC<{}> = () => {
                     Hover on the Patterns &rarr; Navigation to see the sub dropdowns.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                padding: '8px',
-                            }}
-                        >
-                            <ul className="p-nested-dropdowns">
-                                <li>Home</li>
-                                <li>
-                                    <div>Patterns</div>
-                                    <ul>
-                                        <li>Layout</li>
-                                        <li>Input</li>
-                                        <li>
-                                            <div>Navigation</div>
-                                            <ul>
-                                                <li>Breadcrumb</li>
-                                                <li>Dropdown</li>
-                                                <li>Menu</li>
-                                                <li>Nested dropdown</li>
-                                            </ul>
-                                        </li>
-                                        <li>Display</li>
-                                        <li>Feedback</li>
-                                    </ul>
-                                </li>
-                                <li>Products</li>
-                                <li>About</li>
-                            </ul>
-                        </div>
-                    )}
-                    source={`
-<style>
-/* The root */
-.p-nested-dropdowns {
-    /* Border */
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    display: flex;
-
-    /* Reset list styles */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.p-nested-dropdowns li {
-    /* Spacing */
-    padding: 8px;
-
-    /* Used to position the sub dropdown */
-    position: relative;
-}
-
-/* The sub dropdown */
-.p-nested-dropdowns ul {
-    /* Border */
-    border: 1px solid rgba(0, 0, 0, 0.3);
-
-    /* Hidden by default */
-    display: none;
-
-    /* Absolute position */
-    left: 0;
-    position: absolute;
-    top: 100%;
-
-    /* Reset styles */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    /* Width */
-    width: 200px;
-}
-
-/* The second level sub dropdown */
-.p-nested-dropdowns ul ul {
-    left: 100%;
-    position: absolute;
-    top: 0;
-}
-
-/* Change background color of list item when being hovered */
-.p-nested-dropdowns li:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-/* Show the direct sub dropdown when hovering the list item */
-.p-nested-dropdowns li:hover > ul {
-    display: block;
-}
-</style>
-
-<ul class="p-nested-dropdowns">
+html={`
+<ul class="container">
     <li>Home</li>
     <li>
         <div>Patterns</div>
@@ -144,7 +52,96 @@ const Details: React.FC<{}> = () => {
     <li>About</li>
 </ul>
 `}
-                />
+css={`
+.container {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+
+    /* Reset list styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container li {
+    /* Spacing */
+    padding: 8px;
+
+    /* Used to position the sub dropdown */
+    position: relative;
+}
+
+/* The sub dropdown */
+.container ul {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+    /* Hidden by default */
+    display: none;
+
+    /* Absolute position */
+    left: 0;
+    position: absolute;
+    top: 100%;
+
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    /* Width */
+    width: 200px;
+}
+
+/* The second level sub dropdown */
+.container ul ul {
+    left: 100%;
+    position: absolute;
+    top: 0;
+}
+
+/* Change background color of list item when being hovered */
+.container li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Show the direct sub dropdown when hovering the list item */
+.container li:hover > ul {
+    display: block;
+}
+`}
+                >
+                    <div
+                        style={{
+                            padding: '8px',
+                        }}
+                    >
+                        <ul className="p-nested-dropdowns">
+                            <li>Home</li>
+                            <li>
+                                <div>Patterns</div>
+                                <ul>
+                                    <li>Layout</li>
+                                    <li>Input</li>
+                                    <li>
+                                        <div>Navigation</div>
+                                        <ul>
+                                            <li>Breadcrumb</li>
+                                            <li>Dropdown</li>
+                                            <li>Menu</li>
+                                            <li>Nested dropdown</li>
+                                        </ul>
+                                    </li>
+                                    <li>Display</li>
+                                    <li>Feedback</li>
+                                </ul>
+                            </li>
+                            <li>Products</li>
+                            <li>About</li>
+                        </ul>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.Dropdown, Pattern.Menu]} />

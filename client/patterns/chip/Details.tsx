@@ -25,21 +25,20 @@ const Details: React.FC<{}> = () => {
                     You can use a <Link to='/patterns/close-button'>close button</Link> to remove a chip.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <InputChip>CSS</InputChip>
-                        </div>
-                    )}
-                    source={`
-<div style="
+html={`
+<div class="chip">
+    <!-- Content -->
+    <div class="chip__content">
+        ...
+    </div>
+
+    <!-- The close button -->
+    <!-- See https://csslayout.io/patterns/close-button -->
+    ...
+</div>
+`}
+css={`
+.chip {
     /* Center the content */
     align-items: center;
     display: inline-flex;
@@ -53,18 +52,25 @@ const Details: React.FC<{}> = () => {
 
     /* Spacing */
     padding: 4px 8px;
-">
-    <!-- Content -->
-    <div style="margin-right: 4px;">
-        ...
-    </div>
+}
 
-    <!-- The close button -->
-    <!-- See https://csslayout.io/patterns/close-button -->
-    ...
-</div>
+.chip__content {
+    margin-right: 4px;
+}
 `}
-                />
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <InputChip>CSS</InputChip>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.CloseButton]} />

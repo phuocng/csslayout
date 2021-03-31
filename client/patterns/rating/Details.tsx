@@ -20,27 +20,17 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '100%',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <div className="p-rating">
-                                <Star isActive={false} />
-                                <Star isActive={false} />
-                                <Star isActive={false} />
-                                <Star isActive={false} />
-                                <Star isActive={true} />
-                            </div>
-                        </div>
-                    )}
-                    source={`
-<style>
-.p-rating {
+html={`
+<div class="rating">
+    <button class="rating__star">☆</button>
+    <button class="rating__star">☆</button>
+    <button class="rating__star">☆</button>
+    <button class="rating__star">☆</button>
+    <button class="rating__star">★</button>
+</div>
+`}
+css={`
+.rating {
     /* Center the content */
     align-items: center;
     display: flex;
@@ -51,8 +41,8 @@ const Details: React.FC<{}> = () => {
     font-size: 32px;
 }
 
-.p-rating .p-rating-star:hover,
-.p-rating .p-rating-star:hover ~ .p-rating-star {
+.rating__star:hover,
+.rating__star:hover ~ .rating__star {
     color: transparent;
 }
 
@@ -60,15 +50,15 @@ const Details: React.FC<{}> = () => {
 Make all previous stars selected when hover on a star
 Note that we use \`flex-direction: row-reverse\` on the container
 */
-.p-rating .p-rating-star:hover:before,
-.p-rating .p-rating-star:hover ~ .p-rating-star:before {
+.rating__star:hover:before,
+.rating__star:hover ~ .rating__star:before {
     color: #00449e;
     content: '\\2605';
     left: 0;
     position: absolute;
 }
 
-.p-rating-star {
+.rating__star {
     /* Reset styles for button */
     background-color: transparent;
     border: transparent;
@@ -78,17 +68,25 @@ Note that we use \`flex-direction: row-reverse\` on the container
     /* Used to position the hover state */
     position: relative;
 }
-</style>
-
-<div class="p-rating">
-    <button class="p-rating-star">☆</button>
-    <button class="p-rating-star">☆</button>
-    <button class="p-rating-star">☆</button>
-    <button class="p-rating-star">☆</button>
-    <button class="p-rating-star">★</button>
-</div>
 `}
-                />
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            height: '100%',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <div className="p-rating">
+                            <Star isActive={false} />
+                            <Star isActive={false} />
+                            <Star isActive={false} />
+                            <Star isActive={false} />
+                            <Star isActive={true} />
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

@@ -21,23 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div style={{ height: '100%', position: 'relative' }}>
-                            <div style={{ left: 0, position: 'absolute', top: 0 }}>
-                                <Triangle size={64} corner="tl" />
-                            </div>
-                            <div style={{ position: 'absolute', right: 0, top: 0 }}>
-                                <Triangle size={64} corner="tr" />
-                            </div>
-                            <div style={{ bottom: 0, position: 'absolute', right: 0 }}>
-                                <Triangle size={64} corner="br" />
-                            </div>
-                            <div style={{ bottom: 0, left: 0, position: 'absolute' }}>
-                                <Triangle size={64} corner="bl" />
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     position: relative;
 ">
@@ -78,7 +62,23 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div style={{ height: '100%', position: 'relative' }}>
+                        <div style={{ left: 0, position: 'absolute', top: 0 }}>
+                            <Triangle size={64} corner="tl" />
+                        </div>
+                        <div style={{ position: 'absolute', right: 0, top: 0 }}>
+                            <Triangle size={64} corner="tr" />
+                        </div>
+                        <div style={{ bottom: 0, position: 'absolute', right: 0 }}>
+                            <Triangle size={64} corner="br" />
+                        </div>
+                        <div style={{ bottom: 0, left: 0, position: 'absolute' }}>
+                            <Triangle size={64} corner="bl" />
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
             <RelatedPatterns patterns={[Pattern.CookieBanner, Pattern.CornerRibbon, Pattern.FixedAtSide]} />
         </DetailsLayout>

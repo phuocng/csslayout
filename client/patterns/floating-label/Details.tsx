@@ -24,59 +24,31 @@ const Details: React.FC<{}> = () => {
                     Type something in the input to see how the label is shown up.
                 </div>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                className="p-floating-container"
-                                style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '4px',
-                                    padding: '0 1px',
-                                    position: 'relative',
-                                    width: '200px',
-                                }}
-                            >
-                                <input
-                                    id="floating-label-input"
-                                    placeholder="Placeholder"
-                                    type="text"
-                                    style={{
-                                        borderColor: 'transparent',
-                                        padding: '8px',
-                                        width: '100%',
-                                    }}
-                                />
-                                <label
-                                    htmlFor="floating-label-input"
-                                    style={{
-                                        left: '8px',
-                                        padding: '0 8px',
-                                        position: 'absolute',
-                                        top: 0,
-                                        transition: 'all 200ms',
-                                    }}
-                                >
-                                    Placeholder
-                                </label>
-                            </div>
-                        </div>
-                    )}
-                    source={`
-<style>
-.p-floating-container {
+html={`
+<div class="container">
+    <!-- The input -->
+    <input placeholder="Placeholder" class="container__input" />
+
+    <!-- The label -->
+    <label class="container__label">Placeholder</label>
+</div>
+`}
+css={`
+.container {
     position: relative;
 }
 
-.p-floating-container label {
+/*
+Show the label at desired position when the 
+placeholder of input isn't shown
+*/
+.container__input:not(:placeholder-shown) + .container__label {
+    background: #FFF;
+    transform: translate(0, -50%);
+    opacity: 1;
+}
+
+.container__label {
     /* Position the label */
     left: 8px;
     position: absolute;
@@ -84,26 +56,55 @@ const Details: React.FC<{}> = () => {
 
     /* Hide it by default */
     opacity: 0;
-    transition: 'all 200ms',
+    transition: all 200ms;
 }
-
-/* Show the label at desired position when the placeholder of input isn't shown */
-.p-floating-container input:not(:placeholder-shown) + label {
-    background: #FFF;
-    transform: translate(0, -50%);
-    opacity: 1;
-}
-</style>
-
-<div class="p-floating-container">
-    <!-- The input -->
-    <input placeholder="Placeholder" />
-
-    <!-- The label -->
-    <label>Placeholder</label>
-</div>
 `}
-                />
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            className="p-floating-container"
+                            style={{
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRadius: '4px',
+                                padding: '0 1px',
+                                position: 'relative',
+                                width: '200px',
+                            }}
+                        >
+                            <input
+                                id="floating-label-input"
+                                placeholder="Placeholder"
+                                type="text"
+                                style={{
+                                    borderColor: 'transparent',
+                                    padding: '8px',
+                                    width: '100%',
+                                }}
+                            />
+                            <label
+                                htmlFor="floating-label-input"
+                                style={{
+                                    left: '8px',
+                                    padding: '0 8px',
+                                    position: 'absolute',
+                                    top: 0,
+                                    transition: 'all 200ms',
+                                }}
+                            >
+                                Placeholder
+                            </label>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

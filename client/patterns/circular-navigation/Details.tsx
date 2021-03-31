@@ -56,74 +56,15 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div style={{ position: 'relative' }}>
-                                <div style={{ height: '32px', width: '32px' }}>
-                                    <Square />
-                                </div>
-                                {
-                                    Array(numItems).fill(0).map((_, i) => {
-                                        return (
-                                            <CircularItem key={i} degree={360 / numItems * i}>{i + 1}</CircularItem>
-                                        );
-                                    })
-                                }
-                            </div>
-                        </div>
-                    )}
-                    source={`
-<div style="
-    position: relative;
-">
+html={`
+<div class="container">
     <!-- The trigger element that will show all circles when user clicks it -->
     ...
 
     <!-- A circle menu item -->
-    <div style="
-        /* Position */
-        position: absolute;
-        top: 0;
-        /*
-        80px is the distance from the item to the trigger element.
-        Replace 0deg with 60deg, 180deg, 240deg, 300deg for another item
-        in case you want to have a total of 6 menu items.
-        The formulation is 360 / numberOfItems * indexOfItem
-        */
-        transform: rotate(0deg) translateX(-80px);
-
-        /* Must have the same size as the trigger element */
-        height: 32px;
-        width: 32px;
-    ">
+    <div class="item">
         <!-- The inner -->
-        <div style="
-            /*
-            Rotate it to make it displayed vertically
-            Replace -0deg with -60deg, -180deg, -240deg, -300deg for another item
-            in case you want to have a total of 6 menu items.
-            The formulation is -(360 / numberOfItems * indexOfItem)
-            */
-            transform: rotate(-0deg);
-
-            /* Center the content */
-            align-items: center;
-            display: flex;
-            justify-content: center;
-
-            /* Take full size */
-            height: 100%;
-            width: 100%;
-        ">
+        <div class="inner">
             <!-- The content -->
             ...
         </div>
@@ -133,7 +74,71 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={`
+.container {
+    position: relative;
+}
+.item {
+    /* Position */
+    position: absolute;
+    top: 0;
+    
+    /*
+    80px is the distance from the item to the trigger element.
+    Replace 0deg with 60deg, 180deg, 240deg, 300deg for another item
+    in case you want to have a total of 6 menu items.
+    The formulation is 360 / numberOfItems * indexOfItem
+    */
+    transform: rotate(0deg) translateX(-80px);
+
+    /* Must have the same size as the trigger element */
+    height: 32px;
+    width: 32px;
+}
+.inner {
+    /*
+    Rotate it to make it displayed vertically
+    Replace -0deg with -60deg, -180deg, -240deg, -300deg for another item
+    in case you want to have a total of 6 menu items.
+    The formulation is -(360 / numberOfItems * indexOfItem)
+    */
+    transform: rotate(-0deg);
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+}
+`}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div style={{ position: 'relative' }}>
+                            <div style={{ height: '32px', width: '32px' }}>
+                                <Square />
+                            </div>
+                            {
+                                Array(numItems).fill(0).map((_, i) => {
+                                    return (
+                                        <CircularItem key={i} degree={360 / numItems * i}>{i + 1}</CircularItem>
+                                    );
+                                })
+                            }
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );

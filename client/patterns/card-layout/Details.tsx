@@ -21,55 +21,10 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    display: 'flex',
-                                    flexWrap: 'wrap',
-                                    margin: '0 -8px',
-                                    width: '60%',
-                                }}
-                            >
-                                {
-                                    Array(10).fill(0).map((_, index) => {
-                                        return (
-                                            <div key={index} style={{ flexBasis: '25%', marginBottom: '24px', padding: '0 8px' }}>
-                                                <Rectangle height={80} />
-                                            </div>
-                                        );
-                                    })
-                                }
-                            </div>
-                        </div>
-                    )}
-                    source={`
-<div style="
-    display: flex;
-
-    /* Put a card in the next row when previous cards take all width */
-    flex-wrap: wrap;
-
-    margin-left: -8px;
-    margin-right: -8px;
-">
+html={`
+<div class="container">
     <!-- A card with given width -->
-    <div style="
-        /* There will be 4 cards per row */
-        flex-basis: 25%;
-
-        padding-left: 8px;
-        padding-right: 8px;
-    ">
+    <div class="card">
         ...
     </div>
 
@@ -77,7 +32,55 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={`
+.container {
+    display: flex;
+
+    /* Put a card in the next row when previous cards take all width */
+    flex-wrap: wrap;
+
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.card {
+    /* There will be 4 cards per row */
+    flex-basis: 25%;
+
+    padding-left: 8px;
+    padding-right: 8px;
+}
+`}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexWrap: 'wrap',
+                                margin: '0 -8px',
+                                width: '60%',
+                            }}
+                        >
+                            {
+                                Array(10).fill(0).map((_, index) => {
+                                    return (
+                                        <div key={index} style={{ flexBasis: '25%', marginBottom: '24px', padding: '0 8px' }}>
+                                            <Rectangle height={80} />
+                                        </div>
+                                    );
+                                })
+                            }
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <RelatedPatterns patterns={[Pattern.Card, Pattern.SimpleGrid]} />

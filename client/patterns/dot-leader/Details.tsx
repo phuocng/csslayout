@@ -23,58 +23,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '100%',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <div style={{ width: '400px' }}>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        marginBottom: '8px',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <div style={{ width: '60%' }}><Rectangle /></div>
-                                    <div style={{ borderBottom: '1px dotted rgba(0, 0, 0, 0.3)', flex: 1, margin: '0 4px' }} />
-                                    <Circle />
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        marginBottom: '8px',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <div style={{ width: '40%' }}><Rectangle /></div>
-                                    <div style={{ borderBottom: '1px dotted rgba(0, 0, 0, 0.3)', flex: 1, margin: '0 4px' }} />
-                                    <Circle />
-                                </div>
-                                <div
-                                    style={{
-                                        alignItems: 'center',
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        width: '100%',
-                                    }}
-                                >
-                                    <div style={{ width: '30%' }}><Rectangle /></div>
-                                    <div style={{ borderBottom: '1px dotted rgba(0, 0, 0, 0.3)', flex: 1, margin: '0 4px' }} />
-                                    <Circle />
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     /* Center the content */
     align-items: center;
@@ -100,7 +49,58 @@ const Details: React.FC<{}> = () => {
     <div>...</div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            height: '100%',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <div style={{ width: '400px' }}>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    marginBottom: '8px',
+                                    width: '100%',
+                                }}
+                            >
+                                <div style={{ width: '60%' }}><Rectangle /></div>
+                                <div style={{ borderBottom: '1px dotted rgba(0, 0, 0, 0.3)', flex: 1, margin: '0 4px' }} />
+                                <Circle />
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    marginBottom: '8px',
+                                    width: '100%',
+                                }}
+                            >
+                                <div style={{ width: '40%' }}><Rectangle /></div>
+                                <div style={{ borderBottom: '1px dotted rgba(0, 0, 0, 0.3)', flex: 1, margin: '0 4px' }} />
+                                <Circle />
+                            </div>
+                            <div
+                                style={{
+                                    alignItems: 'center',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    width: '100%',
+                                }}
+                            >
+                                <div style={{ width: '30%' }}><Rectangle /></div>
+                                <div style={{ borderBottom: '1px dotted rgba(0, 0, 0, 0.3)', flex: 1, margin: '0 4px' }} />
+                                <Circle />
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <section>

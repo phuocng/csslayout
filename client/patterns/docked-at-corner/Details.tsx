@@ -22,43 +22,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '8px',
-                                    padding: '16px',
-                                    position: 'relative',
-                                    width: '128px',
-                                }}
-                            >
-                                <Rectangle />
-                                <div
-                                    style={{
-                                        backgroundColor: '#00449E',
-                                        borderRadius: '9999px',
-                                        height: '32px',
-                                        position: 'absolute',
-                                        right: 0,
-                                        top: 0,
-                                        transform: 'translate(50%, -50%)',
-                                        width: '32px',
-                                    }}
-                                />
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     position: relative;
 ">
@@ -80,7 +44,43 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <div
+                            style={{
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRadius: '8px',
+                                padding: '16px',
+                                position: 'relative',
+                                width: '128px',
+                            }}
+                        >
+                            <Rectangle />
+                            <div
+                                style={{
+                                    backgroundColor: '#00449E',
+                                    borderRadius: '9999px',
+                                    height: '32px',
+                                    position: 'absolute',
+                                    right: 0,
+                                    top: 0,
+                                    transform: 'translate(50%, -50%)',
+                                    width: '32px',
+                                }}
+                            />
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
             <section>
                 <Heading title="Use cases" />

@@ -22,51 +22,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '100%',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <div
-                                style={{
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderRadius: '4px',
-                                    height: '256px',
-                                    position: 'relative',
-                                    width: '256px',
-                                }}
-                            >
-                                <div
-                                    style={{
-                                        height: '100px',
-                                        left: 0,
-                                        overflow: 'hidden',
-                                        position: 'absolute',
-                                        top: 0,
-                                        width: '100px',
-                                    }}
-                                >
-                                    <div
-                                        style={{
-                                            backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                                            height: '24px',
-                                            left: '-64px',
-                                            position: 'absolute',
-                                            textAlign: 'center',
-                                            top: '32px',
-                                            transform: 'rotate(-45deg)',
-                                            width: '206px',
-                                        }}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     position: relative;
 ">
@@ -109,7 +65,51 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            height: '100%',
+                            justifyContent: 'center',
+                        }}
+                    >
+                        <div
+                            style={{
+                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRadius: '4px',
+                                height: '256px',
+                                position: 'relative',
+                                width: '256px',
+                            }}
+                        >
+                            <div
+                                style={{
+                                    height: '100px',
+                                    left: 0,
+                                    overflow: 'hidden',
+                                    position: 'absolute',
+                                    top: 0,
+                                    width: '100px',
+                                }}
+                            >
+                                <div
+                                    style={{
+                                        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                                        height: '24px',
+                                        left: '-64px',
+                                        position: 'absolute',
+                                        textAlign: 'center',
+                                        top: '32px',
+                                        transform: 'rotate(-45deg)',
+                                        width: '206px',
+                                    }}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </BrowserFrame>
             </div>
 
             <section>

@@ -21,24 +21,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame
-                    content={(
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '100%',
-                                justifyContent: 'center',
-                                padding: '8px',
-                            }}
-                        >
-                            <Circle size={64} />
-                            <div style={{ marginTop: '16px', width: '40%' }}><Rectangle /></div>
-                            <div style={{ marginTop: '8px', width: '30%' }}><Rectangle /></div>
-                            <div style={{ marginTop: '8px', width: '20%' }}><Rectangle /></div>
-                        </div>
-                    )}
-                    source={`
+html={`
 <div style="
     align-items: center;
     display: flex;
@@ -47,7 +30,24 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                />
+css={``}
+                >
+                    <div
+                        style={{
+                            alignItems: 'center',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            height: '100%',
+                            justifyContent: 'center',
+                            padding: '8px',
+                        }}
+                    >
+                        <Circle size={64} />
+                        <div style={{ marginTop: '16px', width: '40%' }}><Rectangle /></div>
+                        <div style={{ marginTop: '8px', width: '30%' }}><Rectangle /></div>
+                        <div style={{ marginTop: '8px', width: '20%' }}><Rectangle /></div>
+                    </div>
+                </BrowserFrame>
             </div>
         </DetailsLayout>
     );
