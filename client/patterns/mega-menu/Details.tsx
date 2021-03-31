@@ -29,13 +29,34 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<style>
-.p-mega-menu-container {
+<div class="container">
+    <!-- Item -->
+    ...
+
+    <!-- An item that triggers displaying the mega menu -->
+    <div class="trigger">
+        <!-- The trigger item's content -->
+        <div>...</div>
+
+        <!-- Mega menu -->
+        <div class="content">
+            ...
+        </div>
+    </div>
+</div>
+`}
+css={`
+.container {
     /* Used to position the mega menu */
     position: relative;
 }
 
-.p-mega-menu-content {
+.trigger:hover .content {
+    /* Show the mega menu when hovering the trigger item */
+    display: block;
+}
+
+.content {
     /* Border */
     border: 1px solid rgba(0, 0, 0, 0.3);
     margin-top: -1px;
@@ -55,30 +76,7 @@ html={`
     background: #fff;
     z-index: 9999;
 }
-
-.p-mega-menu-trigger:hover .p-mega-menu-content {
-    /* Show the mega menu when hovering the trigger item */
-    display: block;
-}
-</style>
-
-<div class="p-mega-menu-container">
-    <!-- Item -->
-    ...
-
-    <!-- An item that triggers displaying the mega menu -->
-    <div class="p-mega-menu-trigger">
-        <!-- The trigger item's content -->
-        <div>...</div>
-
-        <!-- Mega menu -->
-        <div class="p-mega-menu-content">
-            ...
-        </div>
-    </div>
-</div>
 `}
-css={``}
                 >
                     <div style={{ padding: '8px' }}>
                         <div className='p-mega-menu-container'>

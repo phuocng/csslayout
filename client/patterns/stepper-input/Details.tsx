@@ -30,7 +30,21 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- Minus button -->
+    <button class="button">-</button>
+
+    <!-- Input container -->
+    <div class="input-container">
+        <input type="text" class="input" />
+    </div>
+
+    <!-- Plus button -->
+    <button class="button">+</button>
+</div>
+`}
+css={`
+.container {
     display: flex;
 
     /* Border */
@@ -39,40 +53,28 @@ html={`
     /* Size */
     height: 32px;
     width: 128px;
-">
-    <!-- Minus button -->
-    <button style="
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        justify-content: center;
+}
 
-        /* Size */
-        width: 32px;
-    ">-</button>
+.button {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-    <!-- Input container -->
-    <div style="flex: 1">
-        <input type="text" style="
-            /* Take full size of its container */
-            height: 100%;
-            width: 100%;
-        " />
-    </div>
+    /* Size */
+    width: 32px;
+}
 
-    <!-- Plus button -->
-    <button style="
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        justify-content: center;
+.input-container {
+    flex: 1
+}
 
-        /* Size */
-        width: 32px;
-    ">+</button>
-</div>
+.input {
+    /* Take full size of its container */
+    height: 100%;
+    width: 100%;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

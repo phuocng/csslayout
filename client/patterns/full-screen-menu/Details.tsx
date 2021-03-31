@@ -21,7 +21,20 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- The close button -->
+    <button class="close">
+        ...
+    </button>
+
+    <!-- The navigation menu -->
+    <ul>
+        ...
+    </ul>
+</div>
+`}
+css={`
+.container {
     /* Full screen overlay */
     height: 100%;
     left: 0;
@@ -33,24 +46,15 @@ html={`
     align-items: center;
     display: flex;
     justify-content: center;
-">
-    <!-- The close button -->
-    <button style="
-        /* Shown at top right corner */
-        position: absolute;
-        right: 16px;
-        top: 16px;
-    ">
-        ...
-    </button>
+}
 
-    <!-- The navigation menu -->
-    <ul>
-        ...
-    </ul>
-</div>
+.close {
+    /* Shown at top right corner */
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

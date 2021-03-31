@@ -47,36 +47,42 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    /* Center the content */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-">
+<div class="tabs">
     <!-- Active tab -->
-    <div style="
-        /* Border */
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        /* Hide the bottom border */
-        border-bottom-color: transparent;
-
-        /* Border radius */
-        border-top-left-radius: 2px;
-        border-top-right-radius: 2px;
-    ">
+    <div class="tab--active">
         ...
     </div>
 
     <!-- Inactive tab -->
-    <div style="
-        /* Has only the bottom border */
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    ">
+    <div class="tab--inactive">
         ...
     </div>
 </div>
 `}
-css={``}
+css={`
+.tabs {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.tab--active {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    /* Hide the bottom border */
+    border-bottom-color: transparent;
+
+    /* Border radius */
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.tab--inactive {
+    /* Has only the bottom border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+`}
                 >
                     <div
                         style={{

@@ -28,7 +28,15 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<label style="
+<label class="label">
+    <input type="checkbox" class="input" />
+
+    <!-- Circle -->
+    <div class="circle"></div>
+</label>
+`}
+css={`
+.label {
     display: flex;
 
     /* Rounded border */
@@ -47,26 +55,26 @@ html={`
     border: 1px solid #357edd;
     /* Push the circle to the right */
     justify-content: flex-end;
-">
-    <!-- Hide the input -->
-    <input type="checkbox" style="display: none" />
+}
 
-    <!-- Circle -->
-    <div style="
-        /* Rounded border */
-        border-radius: 9999px;
+.input {
+    /* Hide the input */
+    display: none;
+}
 
-        /* Size */
-        width: 32px;
+.circle {
+    /* Rounded border */
+    border-radius: 9999px;
 
-        background-color: #FFF;
+    /* Size */
+    width: 32px;
 
-        /* OFF status */
-        border: 1px solid rgba(0, 0, 0, .3);
-    " />
-</label>
+    background-color: #FFF;
+
+    /* OFF status */
+    border: 1px solid rgba(0, 0, 0, .3);
+}
 `}
-css={``}
                 >
                     <div
                         style={{

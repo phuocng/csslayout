@@ -45,7 +45,15 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<ul style="
+<ul class="container">
+    <li class="item" />
+
+    <!-- Repeat other dots -->
+    ...
+</div>
+`}
+css={`
+.container {
     /* Center the content */
     align-items: center;
     display: flex;
@@ -55,26 +63,24 @@ html={`
     list-style-type: none;
     margin: 0;
     padding: 0;
-">
-    <li style="
-        /* Rounded border */
-        border-radius: 9999px;
-        height: 12px;
-        width: 12px;
+}
+.item {
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 12px;
+    width: 12px;
 
-        /* Active dot */
-        background-color: rgba(0, 0, 0, .3);
+    /* Active dot */
+    background-color: rgba(0, 0, 0, .3);
 
-        /* Inactive dot */
-        background-color: transparent;
-        border: 1px solid rgba(0, 0, 0, .3);
+    /* Inactive dot */
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, .3);
 
-        /* OPTIONAL: Spacing between dots */
-        margin: 0 4px;
-    " />
-</div>
+    /* OPTIONAL: Spacing between dots */
+    margin: 0 4px;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

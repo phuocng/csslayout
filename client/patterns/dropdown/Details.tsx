@@ -29,51 +29,45 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<style>
+<div class="dropdown">
+    <!-- The trigger element -->
+    <button>...</button>
+
+    <!-- The content -->
+    <div class="dropdown-content">
+        ...
+    </div>
+</div>
+`}
+css={`
+.dropdown {
+    position: relative;   
+}
+
 /* Hide the dropdown's content by default -->
 .dropdown-content {
     display: none;
+
+    /* Position it right below the trigger element */
+    left: 0;
+    paddingTop: 4px;
+    position: absolute;
+    top: 100%;
+
+    /* It should be on the top of other elements */
+    background-color: #FFF;
+    zIndex: 9999;
+
+    /* Size */
+    height: 200px;
+    width: 200px;
 }
 
 /* Show the content when hover on the container -->
 .dropdown:hover .dropdown-content {
     display: block;
 }
-</style>
-
-<div
-    class="dropdown"
-    style="
-        position: relative;
-    "
->
-    <!-- The trigger element -->
-    <button>...</button>
-
-    <!-- The content -->
-    <div
-        class="dropdown-content"
-        style="
-            /* Position it right below the trigger element */
-            left: 0,
-            paddingTop: '4px',
-            position: 'absolute',
-            top: '100%',
-
-            /* It should be on the top of other elements */
-            backgroundColor: '#FFF',
-            zIndex: 9999,
-
-            /* Size */
-            height: '200px',
-            width: '200px',
-        "
-    >
-        ...
-    </div>
-</div>
 `}
-css={``}
                 >
                     <div
                         style={{

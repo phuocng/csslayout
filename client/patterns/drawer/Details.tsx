@@ -24,7 +24,18 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- Backdrop -->
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        ...
+    </div>
+</div>
+`}
+css={`
+.container {
     /* Container takes full size */
     height: 100%;
     left: 0;
@@ -33,39 +44,32 @@ html={`
     width: 100%;
 
     z-index: 9999;
-">
-    <!-- Backdrop -->
-    <div style="
-        /* Take full size */
-        height: 100%;
-        left: 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
+}
+.overlay {
+    /* Take full size */
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
-        /* User still can see the content of main page */
-        background-color: rgba(0, 0, 0, 0.5);
+    /* User still can see the content of main page */
+    background-color: rgba(0, 0, 0, 0.5);
 
-        z-index: -1;
-    " />
+    z-index: -1;
+}
+.sidebar {
+    /* Take full height */
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 200px;
 
-    <!-- Sidebar -->
-    <div style="
-        /* Take full height */
-        height: 100%;
-        left: 0;
-        position: fixed;
-        top: 0;
-        width: 200px;
-
-        /* Background */
-        background-color: #fff;
-    ">
-        ...
-    </div>
-</div>
+    /* Background */
+    background-color: #fff;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

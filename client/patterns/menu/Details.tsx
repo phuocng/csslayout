@@ -25,30 +25,14 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    display: flex;
-    flex-direction: column;
-
-    /* Border */
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-">
+<div class="container">
     <!-- Normal menu item -->
-    <div style="
-        /* Center the content horizontally */
-        align-items: center;
-        display: flex;
-    ">
+    <div class="item">
         ...
     </div>
 
     <!-- With hot key -->
-    <div style="
-        align-items: center;
-        display: flex;
-        /* Push the hot key to the right */
-        justify-content: space-between;
-    ">
+    <div class="item with-shortcut">
         <!-- Label -->
         ...
         <!-- Hot key -->
@@ -56,16 +40,8 @@ html={`
     </div>
 
     <!-- With image and hot key -->
-    <div style="
-        align-items: center;
-        display: flex;
-        /* Push the hot key to the right */
-        justify-content: space-between;
-    ">
-        <div style="
-            align-items: center;
-            display: flex;
-        ">
+    <div class="item with-shortcut">
+        <div class="with-image">
             <!-- Image -->
             ...
             <!-- Label -->
@@ -77,13 +53,40 @@ html={`
     </div>
 
     <!-- Divider -->
-    <div style="
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        height: 1px;
-    " />
+    <div class="divider"></div>
 </div>
 `}
-css={``}
+css={`
+.container {
+    display: flex;
+    flex-direction: column;
+
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.item {
+    /* Center the content horizontally */
+    align-items: center;
+    display: flex;
+}
+
+.with-shortcut {
+    /* Push the hot key to the right */
+    justify-content: space-between;
+}
+
+.with-image {
+    align-items: center;
+    display: flex;
+}
+
+.divider {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    height: 1px;
+}
+`}
                 >
                     <div
                         style={{

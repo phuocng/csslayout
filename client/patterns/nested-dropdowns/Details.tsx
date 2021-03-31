@@ -26,68 +26,7 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<style>
-/* The root */
-.p-nested-dropdowns {
-    /* Border */
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    display: flex;
-
-    /* Reset list styles */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.p-nested-dropdowns li {
-    /* Spacing */
-    padding: 8px;
-
-    /* Used to position the sub dropdown */
-    position: relative;
-}
-
-/* The sub dropdown */
-.p-nested-dropdowns ul {
-    /* Border */
-    border: 1px solid rgba(0, 0, 0, 0.3);
-
-    /* Hidden by default */
-    display: none;
-
-    /* Absolute position */
-    left: 0;
-    position: absolute;
-    top: 100%;
-
-    /* Reset styles */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    /* Width */
-    width: 200px;
-}
-
-/* The second level sub dropdown */
-.p-nested-dropdowns ul ul {
-    left: 100%;
-    position: absolute;
-    top: 0;
-}
-
-/* Change background color of list item when being hovered */
-.p-nested-dropdowns li:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-/* Show the direct sub dropdown when hovering the list item */
-.p-nested-dropdowns li:hover > ul {
-    display: block;
-}
-</style>
-
-<ul class="p-nested-dropdowns">
+<ul class="container">
     <li>Home</li>
     <li>
         <div>Patterns</div>
@@ -113,7 +52,65 @@ html={`
     <li>About</li>
 </ul>
 `}
-css={``}
+css={`
+.container {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
+
+    /* Reset list styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container li {
+    /* Spacing */
+    padding: 8px;
+
+    /* Used to position the sub dropdown */
+    position: relative;
+}
+
+/* The sub dropdown */
+.container ul {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+    /* Hidden by default */
+    display: none;
+
+    /* Absolute position */
+    left: 0;
+    position: absolute;
+    top: 100%;
+
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    /* Width */
+    width: 200px;
+}
+
+/* The second level sub dropdown */
+.container ul ul {
+    left: 100%;
+    position: absolute;
+    top: 0;
+}
+
+/* Change background color of list item when being hovered */
+.container li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Show the direct sub dropdown when hovering the list item */
+.container li:hover > ul {
+    display: block;
+}
+`}
                 >
                     <div
                         style={{

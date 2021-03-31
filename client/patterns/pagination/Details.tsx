@@ -22,41 +22,41 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- Pagination item -->
+    <div style="
+        
+    ">
+        ...
+    </div>
+
+    <!-- Repeat other items -->
+    ...
+</div>
+`}
+css={`
+.container {
     display: flex;
 
     /* Border */
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 4px;
-">
-    <!-- Pagination item -->
-    <div style="
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        justify-content: center;
+}
 
-        /* Right border */
-        border-right: 1px solid rgba(0, 0, 0, 0.3);
-    ">
-        ...
-    </div>
+.item {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-    <!-- Don't set the right border for the last item -->
-    <div style="
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        justify-content: center;
-
-        /* No right border */
-        border-right: none;
-    ">
-        ...
-    </div>
-</div>
+    /* Right border */
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+.item + .item {
+    /* No right border */
+    border-right: none;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

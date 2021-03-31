@@ -24,7 +24,19 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- The real file input -->
+    <input type="file" class="input" />
+
+    <!-- The upload icon -->
+    <div class="icon">...</div>
+
+    <!-- The label -->
+    ...
+</div>
+`}
+css={`
+.container {
     /* Used to position the input */
     position: relative;
 
@@ -34,31 +46,24 @@ html={`
 
     /* Border */
     border: 1px solid rgba(0, 0, 0, 0.3);
-">
-    <!-- The real file input -->
-    <input
-        type="file"
-        style="
-            /* Take the full size */
-            height: 100%;
-            left: 0;
-            position: absolute;
-            top: 0;
-            width: 100%;
+}
 
-            /* Make it transparent */
-            opacity: 0;
-        "
-    />
+.input {
+    /* Take the full size */
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 
-    <!-- The upload icon -->
-    <div style="margin-right: 8px">...</div>
+    /* Make it transparent */
+    opacity: 0;
+}
 
-    <!-- The label -->
-    ...
-</div>
+.icon {
+    margin-right: 8px
+}
 `}
-css={``}
                 >
                     <div
                         style={{

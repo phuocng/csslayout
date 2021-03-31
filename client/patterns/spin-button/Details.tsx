@@ -27,47 +27,51 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 2px;
-    display: flex;
-">
+<div class="container">
     <!-- Input -->
-    <input type="text" style="
-        border-color: transparent;
-        margin-right: 4px;
-        padding: 4px;
-        width: 100px;
-    " />
+    <input type="text" class="input" />
 
     <!-- Buttons container -->
-    <div style="
-        /* Content is centered vertically */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    ">
+    <div class="buttons">
         <!-- Up button -->
-        <button style="
-            border-color: transparent;
-            /* Make buttons have the same height */
-            flex: 1,
-        ">
+        <button class="button">
             ...
         </button>
 
         <!-- Down button -->
-        <button style="
-            border-color: transparent;
-            /* Make buttons have the same height */
-            flex: 1,
-        ">
+        <button class="button">
             ...
         </button>
     </div>
 </div>
 `}
-css={``}
+css={`
+.container {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    display: flex;
+}
+
+.input {
+    border-color: transparent;
+    margin-right: 4px;
+    padding: 4px;
+    width: 100px;
+}
+
+.buttons {
+    /* Content is centered vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button {
+    border-color: transparent;
+    /* Make buttons have the same height */
+    flex: 1,
+}
+`}
                 >
                     <div
                         style={{

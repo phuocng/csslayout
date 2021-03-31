@@ -22,7 +22,20 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<ul style="
+<ul class="container">
+    <!-- Navigation item -->
+    <li>
+        <a href="">...</a>
+    </li>
+
+    <!-- Navigation item that sticks to the right -->
+    <li class="item-right">
+        <a href="">...</a>
+    </li>
+</ul>
+`}
+css={`
+.container {
     /* Content is centered horizontally */
     align-items: center;
     display: flex;
@@ -30,22 +43,13 @@ html={`
     /* Reset styles */
     list-style-type: none;
     margin: 0;
-">
-    <!-- Navigation item -->
-    <li>
-        <a href="">...</a>
-    </li>
+}
 
-    <!-- Navigation item that sticks to the right -->
-    <li style="
-        /* Sticks to the right */
-        margin-left: auto;
-    ">
-        <a href="">...</a>
-    </li>
-</ul>
+.item-right {
+    /* Sticks to the right */
+    margin-left: auto;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

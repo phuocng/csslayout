@@ -21,11 +21,7 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-">
+<div class="container">
     <!-- Previous link sticks to the left -->
     <a>..</a>
 
@@ -33,7 +29,13 @@ html={`
     <a>..</a>
 </div>
 `}
-css={``}
+css={`
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+`}
                 >
                     <div
                         style={{

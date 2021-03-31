@@ -23,21 +23,9 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    display: flex;
-
-    /* Border */
-    border: 1px solid rgba(0, 0, 0, 0.3);
-">
+<div class="container">
     <!-- Text input -->
-    <input
-        type="text"
-        style="
-            border-color: transparent;
-            /* Take available width */
-            flex: 1;
-        "
-    />
+    <input type="text" class="input" />
 
     <!-- Toggle button sticks to the right -->
     <button>
@@ -45,7 +33,20 @@ html={`
     </button>
 </div>
 `}
-css={``}
+css={`
+.container {
+    display: flex;
+
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.input {
+    border-color: transparent;
+    /* Take available width */
+    flex: 1;
+}
+`}
                 >
                     <div
                         style={{

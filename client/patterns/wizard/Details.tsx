@@ -23,71 +23,75 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    display: flex;
-">
+<div class="wizard">
     <!-- Step -->
-    <div style="
-        /* Make all steps have the same width */
-        flex: 1;
-    ">
-        <div style="
-            /* Center the content */
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        ">
+    <div class="step">
+        <div class="step__dot">
             <!-- The left connector -->
-            <div style="
-                flex: 1;
-                height: 1px;
-
-                background-color: rgba(0, 0, 0, .3);
-                /*
-                For the first step, you might need to set it to transparent background:
-                background-color: transparent;
-                */
-            " />
+            <div class="step__connector"></div>
 
             <!-- The step number -->
-            <div style="
-                /* Center the content */
-                align-items: center;
-                display: flex;
-                justify-content: center;
-
-                /* Rounded border */
-                background-color: rgba(0, 0, 0, .3);
-                border-radius: 9999px;
-                height: 32px;
-                width: 32px;
-
-                /* OPTIONAL: Spacing between it and connectors */
-                margin-left: 4px;
-                margin-right: 4px;
-            ">
+            <div class="step__number">
                 ...
             </div>
 
             <!-- The right connector -->
-            <div style="
-                flex: 1;
-                height: 1px;
-
-                background-color: rgba(0, 0, 0, .3);
-                /*
-                For the last step, you might need to set it to transparent background:
-                background-color: transparent;
-                */
-            " />
+            <div class="step__connector"></div>
         </div>
 
         <!-- Title of step -->
         ...
     </div>
+
+    <!-- Repeat other steps -->
+    ...
 </div>
 `}
-css={``}
+css={`
+.wizard {
+    display: flex;
+}
+
+.step {
+    /* Make all steps have the same width */
+    flex: 1;
+}
+
+.step__dot {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.step__connector {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.step:first-child .step__connector,
+.step:last-child .step__connector {
+    background-color: transparent;
+}
+
+.step__number {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Rounded border */
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 9999px;
+    height: 32px;
+    width: 32px;
+
+    /* OPTIONAL: Spacing between it and connectors */
+    margin-left: 4px;
+    margin-right: 4px;
+}
+`}
                 >
                     <div
                         style={{
