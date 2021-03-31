@@ -21,7 +21,12 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    ...
+</div>
+`}
+css={`
+.container {
     /* Background color */
     background-color: rgba(0, 0, 0, 0.3);
 
@@ -31,11 +36,8 @@ html={`
     /* Curved corners */
     border-bottom-left-radius: 50% 40%;
     border-bottom-right-radius: 50% 40%;
-">
-    ...
-</div>
+}
 `}
-css={``}
                 >
                     <div
                         style={{

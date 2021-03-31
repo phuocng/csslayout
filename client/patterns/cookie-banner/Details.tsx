@@ -23,7 +23,18 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- Tells visitors that the website uses cookie -->
+    <div class="container__content">
+        ...
+    </div>
+
+    <!-- Close button -->
+    ...
+</div>
+`}
+css={`
+.container {
     /* Banner is displayed at the bottom */
     bottom: 0;
     left: 0;
@@ -34,20 +45,13 @@ html={`
     align-items: center;
     display: flex;
     justify-content: center;
-">
-    <!-- Tells visitors that the website uses cookie -->
-    <div style="
-        /* Take available width */
-        flex: 1;
-    ">
-        ...
-    </div>
+}
 
-    <!-- Close button -->
-    ...
-</div>
+.container__content {
+    /* Take available width */
+    flex: 1;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

@@ -21,35 +21,41 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    /* Center the content */
-    align-items: center;
-    display: inline-flex;
-    flex-direction: column;
-">
+<div class="container">
     <!-- Value -->
-    <div style="
-        /* Big font size */
-        font-size: 4rem;
-        font-weight: 500;
-    ">
+    <div class="container__value">
         ...
     </div>
 
     <!-- Label -->
-    <div style="
-        /* Smaller font size */
-        font-size: 1rem;
-        font-weight: 700;
-
-        /* Uppercase the label */
-        text-transform: uppercase;
-    ">
+    <div class="container__label">
         ...
     </div>
 </div>
 `}
-css={``}
+css={`
+.container {
+    /* Center the content */
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.container__value {
+    /* Big font size */
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.container__label {
+    /* Smaller font size */
+    font-size: 1rem;
+    font-weight: 700;
+
+    /* Uppercase the label */
+    text-transform: uppercase;
+}
+`}
                 >
                     <div
                         style={{

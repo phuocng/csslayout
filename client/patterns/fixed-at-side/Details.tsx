@@ -23,16 +23,18 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <!-- Fixed at the middle of side -->
-<div style="
+<div class="container">
+    ...
+</div>
+`}
+css={`
+.container {
     right: 0;
     position: fixed;
     top: 50%;
     transform: translate(0px, -50%);
-">
-    ...
-</div>
+}
 `}
-css={``}
                 >
                     <div
                         style={{

@@ -20,7 +20,12 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    ...
+</div>
+`}
+css={`
+.container {
     /* Lined background */
     background-image: linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0px);
     background-size: 100% 2em;
@@ -31,11 +36,8 @@ html={`
     */
     background-position-y: 24px;
     line-height: 2em;
-">
-    ...
-</div>
+}
 `}
-css={``}
                 >
                     <div
                         style={{

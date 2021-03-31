@@ -23,28 +23,32 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    position: relative;
-">
+<div class="container">
     <!-- Docked at the top right corner -->
-    <div style="
-        position: absolute;
-        right: 0;
-        top: 0;
-        transform: translate(50%, -50%);
-
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    ">
+    <div class="container__docker">
         ...
     </div>
 
     ...
 </div>
 `}
-css={``}
+css={`
+.container {
+    position: relative;
+}
+
+.container__docker {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+`}
                 >
                     <div
                         style={{

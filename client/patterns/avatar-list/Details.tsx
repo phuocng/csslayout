@@ -41,26 +41,10 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    display: flex;
-">
+<div class="container">
     <!-- Avatar item -->
-    <div style="
-        /* Nagative margin make avatar overlap to previous one */
-        margin-left: -4px;
-    ">
-        <div style="
-            /* Add a white curve between avatars */
-            box-shadow: 0 0 0 4px #FFF;
-
-            /* Center the content */
-            align-items: center;
-            display: flex;
-            justify-content: center;
-
-            /* Rounded border */
-            border-radius: 9999px;
-        ">
+    <div class="container__item">
+        <div class="container__avatar">
             <!-- Image -->
             ...
         </div>
@@ -70,7 +54,29 @@ html={`
     ...
 </div>
 `}
-css={``}
+css={`
+.container {
+    display: flex;
+}
+
+.container__item {
+    /* Nagative margin make avatar overlap to previous one */
+    margin-left: -4px;
+}
+
+.container__avatar {
+    /* Add a white curve between avatars */
+    box-shadow: 0 0 0 4px #FFF;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Rounded border */
+    border-radius: 9999px;
+}
+`}
                 >
                     <div
                         style={{

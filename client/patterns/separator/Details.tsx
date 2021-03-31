@@ -21,37 +21,43 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- Text -->
+    <div class="container__content">
+        ...
+    </div>
+
+    <!-- Separator line -->
+    <div class="container__separator"></div>
+</div>
+`}
+css={`
+.container {
     /* Content is centered horizontally */
     align-items: center;
     display: flex;
 
     /* Used to set the position of text */
     position: relative;
-">
-    <!-- Text -->
-    <div style="
-        /* We won't see the separator line */
-        background: #FFF;
+}
 
-        /* Displayed at the center of container */
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    ">
-        ...
-    </div>
+.container__content {
+    /* We won't see the separator line */
+    background: #FFF;
 
-    <!-- Separator line -->
-    <div style="
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        height: 1px;
-        width: 100%;
-    " />
-</div>
+    /* Displayed at the center of container */
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container__separator {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    height: 1px;
+    width: 100%;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

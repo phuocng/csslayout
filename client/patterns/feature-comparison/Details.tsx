@@ -24,36 +24,14 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    align-items: center;
-    display: flex;
-
-    /* Bottom border */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-
-    /* Spacing */
-    padding: 12px 0px;
-">
+<div class="container">
     <!-- Feature name -->
-    <div style="
-        /* Take available width */
-        flex: 1;
-
-        /* Spacing */
-        margin-right: 16px;
-    ">
+    <div class="container__feature">
         ...
     </div>
 
     <!-- The model -->
-    <div style="
-        /* Center the content */
-        display: flex;
-        justify-content: center;
-
-        /* Spacing */
-        margin-right: 16px;
-    ">
+    <div class="container__model">
         <!--
         For the first row: display the model name (Basic, Pro, etc.)
         From the second row: display a yes/no icon indicating the feature is available or not
@@ -68,7 +46,35 @@ html={`
 <!-- Repeated items -->
 ...
 `}
-css={``}
+css={`
+.container {
+    align-items: center;
+    display: flex;
+
+    /* Bottom border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+    /* Spacing */
+    padding: 12px 0px;
+}
+
+.container__feature {
+    /* Take available width */
+    flex: 1;
+
+    /* Spacing */
+    margin-right: 16px;
+}
+
+.container__model {
+    /* Center the content */
+    display: flex;
+    justify-content: center;
+
+    /* Spacing */
+    margin-right: 16px;
+}
+`}
                 >
                     <div
                         style={{

@@ -22,7 +22,25 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- The content -->
+    ...
+
+    <!-- The left side -->
+    <div class="container__side container__side--left"></div>
+
+    <!-- The left triangle displayed below the content -->
+    <div class="container__triangle container__triangle--left"></div>
+
+    <!-- The right triangle displayed below the content -->
+    <div class="container__triangle container__triangle--right"></div>
+
+    <!-- The right side -->
+    <div class="container__side container__side--right"></div>
+</div>
+`}
+css={`
+.container {
     /* Center the content */
     align-items: center;
     display: flex;
@@ -36,70 +54,49 @@ html={`
 
     /* Use to position the corners */
     position: relative;
-">
-    <!-- The content -->
-    ...
+}
 
-    <!-- The left side -->
-    <div style="
-        /* Position */
-        bottom: -8px;
-        position: absolute;
-        left: -24px;
+.container__side {
+    bottom: -8px;
+    position: absolute;
 
-        /* Displayed under the container */
-        z-index: -1;
+    /* Displayed under the container */
+    z-index: -1;
 
-        /* Background */
-        border: 16px solid #CCC;
-        border-left-color: transparent;
-    "
-    />
+    /* Background */
+    border: 16px solid #CCC;
+    border-left-color: transparent;
+}
 
-    <!-- The left triangle displayed below the content -->
-    <div style="
-        left: 0;
-        position: absolute;
-        top: 100%;
+.container__side--left {
+    /* Position */
+    left: -24px;
+}
 
-        /* Background */
-        border: 8px solid transparent;
-        border-bottom-width: 0;
-        border-right-width: 0;
-        border-top-color: #AAA;
-    " />
+.container__side--right {
+    /* Position */
+    right: -24px;
+}
 
-    <!-- The right triangle displayed below the content -->
-    <div style="
-        position: absolute;
-        right: 0;
-        top: 100%;
+.container__triangle {
+    position: absolute;
+    top: 100%;
 
-        /* Background */
-        border: 8px solid transparent;
-        border-bottom-width: 0;
-        border-left-width: 0;
-        border-top-color: #AAA;
-    " />
+    border: 8px solid transparent;
+    border-bottom-width: 0;
+    border-top-color: #AAA;
+}
 
-    <!-- The right side -->
-    <div style="
-        /* Position */
-        bottom: -8px;
-        position: absolute;
-        right: -24px;
+.container__triangle--left {
+    border-right-width: 0;
+    left: 0;
+}
 
-        /* Displayed under the container */
-        z-index: -1;
-
-        /* Background */
-        border: 16px solid #CCC;
-        border-right-color: transparent;
-    "
-    />
-</div>
+.container__triangle--right {
+    border-left-width: 0;
+    right: 0;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

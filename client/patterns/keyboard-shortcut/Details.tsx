@@ -57,22 +57,25 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<kbd style="
+<kbd class="container">
+    ...
+</kbd>
+`}
+css={`
+.container {
     /* Background and color */
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     color: rgba(0, 0, 0, 0.7);
 
     /* Bottom shadow */
-    box-shadow: rgba(0, 0, 0, 0.3) 0px -2px 0px inset, rgba(0, 0, 0, 0.4) 0px 1px 1px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px -2px 0px inset, 
+                rgba(0, 0, 0, 0.4) 0px 1px 1px;
 
     /* Spacing */
     padding: 8px;
-">
-    ...
-</kbd>
+}
 `}
-css={``}
                 >
                     <div
                         style={{

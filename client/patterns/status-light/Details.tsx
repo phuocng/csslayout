@@ -22,37 +22,43 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    /* Center the content */
-    align-items: center;
-    display: flex;
-">
+<div class="container">
     <!-- Status light -->
-    <div style="
-        /* Background color */
-        background-color: rgb(66, 153, 225);
-
-        /* Rounded border */
-        border-radius: 9999px;
-
-        /* Size */
-        height: 8px;
-        width: 8px;
-
-        /* Spacing */
-        margin-right: 8px;
-    "></div>
+    <div class="container__status"></div>
 
     <!-- Content -->
-    <div style="
-        /* Take available width */
-        flex: 1;
-    ">
+    <div class="container__content">
         ...
     </div>
 </div>
 `}
-css={``}
+css={`
+.container {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+}
+
+.container__status {
+    /* Background color */
+    background-color: rgb(66, 153, 225);
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Size */
+    height: 8px;
+    width: 8px;
+
+    /* Spacing */
+    margin-right: 8px;
+}
+
+.container__content {
+    /* Take available width */
+    flex: 1;
+}
+`}
                 >
                     <div
                         style={{

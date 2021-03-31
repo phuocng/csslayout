@@ -21,37 +21,41 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    /* Used to position the stacked cards */
-    position: relative;
-">
+<div class="container">
     <!-- Repeat if you want to have more cards -->
-    <div style="
-        /* Absolute position */
-        left: 0px;
-        position: absolute;
-        top: 0px;
-
-        /* Take full size */
-        height: 100%;
-        width: 100%;
-
-        /* Displayed under the container */
-        z-index: -1;
-
-        /* Background and border colors */
-        background-color: rgb(255, 255, 255);
-        border: 1px solid rgba(0, 0, 0, 0.3);
-
-        /* Rotate it. Change the number of degrees for the following cards */
-        transform: rotate(5deg);
-    " />
+    <div class="container__card"></div>
 
     <!-- Main card's content -->
     ...
 </div>
 `}
-css={``}
+css={`
+.container {
+    /* Used to position the stacked cards */
+    position: relative;
+}
+
+.container__card {
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Displayed under the container */
+    z-index: -1;
+
+    /* Background and border colors */
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+    /* Rotate it. Change the number of degrees for the following cards */
+    transform: rotate(5deg);
+}
+`}
                 >
                     <div
                         style={{

@@ -20,7 +20,16 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- Inner -->
+    <div class="container__inner">
+        <!-- Content -->
+        ...
+    </div>
+</div>
+`}
+css={`
+.container {
     /* Background */
     background-color: #ccc;
     background-image: radial-gradient(#fff 50%, transparent 50%);
@@ -30,18 +39,13 @@ html={`
 
     /* Spacing */
     padding: 5px;
-">
-    <!-- Inner -->
-    <div style="
-        /* Background */
-        background-color: #ccc;
-    ">
-        <!-- Content -->
-        ...
-    </div>
-</div>
+}
+
+.container__inner {
+    /* Background */
+    background-color: #ccc;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

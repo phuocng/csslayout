@@ -29,17 +29,7 @@ html={`
 <table>
     <thead>
         <tr>
-            <th style="
-                /* Background color */
-                background-color: #ddd;
-
-                /* Stick to the top */
-                position: sticky;
-                top: 0;
-
-                /* Displayed on top of other rows when scrolling */
-                z-index: 9999;
-            ">
+            <th class="header">
                 ...
             </th>
 
@@ -50,7 +40,19 @@ html={`
     </tbody>
 </table>
 `}
-css={``}
+css={`
+.header {
+    /* Background color */
+    background-color: #ddd;
+
+    /* Stick to the top */
+    position: sticky;
+    top: 0;
+
+    /* Displayed on top of other rows when scrolling */
+    z-index: 9999;
+}
+`}
                 >
                     <div
                         style={{

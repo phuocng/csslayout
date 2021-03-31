@@ -22,94 +22,43 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <!-- Up arrow button -->
-<button style="
-    /* Center the content */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-
-    /* Spacing */
-    padding: 8px;
-">
+<button class="container">
     <!-- Arrow -->
-    <div style="
-        /* Transparent background */
-        background-color: transparent;
-
-        /* Edges */
-        border-left: 1px solid rgba(0, 0, 0, 0.3);
-        border-top: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translateY(25%) rotate(45deg);
-
-        /* Size */
-        height: 12px;
-        width: 12px;
-    "></div>
+    <div class="container__arrow container__arrow--up"></div>
 
     <!-- Content -->
     ...
 </button>
 
 <!-- Right arrow button -->
-<button style="
-    /* Center the content */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-
-    /* Spacing */
-    padding: 8px;
-">
+<button class="container">
     <!-- Content -->
     ...
 
     <!-- Arrow -->
-    <div style="
-        /* Transparent background */
-        background-color: transparent;
-
-        /* Edges */
-        border-right: 1px solid rgba(0, 0, 0, 0.3);
-        border-top: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translateX(-25%) rotate(45deg);
-
-        /* Size */
-        height: 12px;
-        width: 12px;
-    "></div>
+    <div class="container__arrow container__arrow--right"></div>
 </button>
 
 <!-- Down arrow button -->
-<button style="
-    /* Center the content */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-
-    /* Spacing */
-    padding: 8px;
-">
+<button class="container">
     <!-- Arrow -->
-    <div style="
-        /* Transparent background */
-        background-color: transparent;
-
-        /* Edges */
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        border-right: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translateY(-25%) rotate(45deg);
-
-        /* Size */
-        height: 12px;
-        width: 12px;
-    "></div>
+    <div class="container__arrow container__arrow--down"></div>
 
     <!-- Content -->
     ...
 </button>
 
 <!-- Left arrow button -->
-<button style="
+<button class="container">
+    <!-- Arrow -->
+    <div class="container__arrow container__arrow--left"></div>
+
+    <!-- Content -->
+    ...
+</button>
+`}
+css={`
+.container {
     /* Center the content */
     align-items: center;
     display: flex;
@@ -117,27 +66,44 @@ html={`
 
     /* Spacing */
     padding: 8px;
-">
-    <!-- Arrow -->
-    <div style="
-        /* Transparent background */
-        background-color: transparent;
+}
 
-        /* Edges */
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        border-left: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translateX(25%) rotate(45deg);
+.container__arrow {
+    /* Transparent background */
+    background-color: transparent;
 
-        /* Size */
-        height: 12px;
-        width: 12px;
-    "></div>
+    /* Size */
+    height: 12px;
+    width: 12px;
+}
 
-    <!-- Content -->
-    ...
-</button>
-`}
-css={`
+.container__arrow--up {
+    /* Edges */
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translateY(25%) rotate(45deg);
+}
+
+.container__arrow--right {
+    /* Edges */
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translateX(-25%) rotate(45deg);
+}
+
+.container__arrow--down {
+    /* Edges */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translateY(-25%) rotate(45deg);
+}
+
+.container__arrow--left {
+    /* Edges */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translateX(25%) rotate(45deg);
+}
 `}
                 >
                     <div

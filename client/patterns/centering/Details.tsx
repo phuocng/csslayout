@@ -22,15 +22,17 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    align-items: center;
-    display: flex;
-    justify-content: center;
-">
+<div class="container">
     ...
 </div>
 `}
-css={``}
+css={`
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+`}
                 >
                     <div
                         style={{
