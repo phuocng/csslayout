@@ -24,170 +24,134 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- The content -->
+    ...
+
+    <!-- The top left square -->
+    <div class="container__resizer container__resizer--tl"></div>
+
+    <!-- The top square -->
+    <div class="container__resizer container__resizer--tc"></div>
+
+    <!-- The top right square -->
+    <div class="container__resizer container__resizer--tr"></div>
+
+    <!-- The right square -->
+    <div class="container__resizer container__resizer--rc"></div>
+
+    <!-- The right bottom square -->
+    <div class="container__resizer container__resizer--rb"></div>
+
+    <!-- The bottom square -->
+    <div class="container__resizer container__resizer--bc"></div>
+
+    <!-- The bottom left square -->
+    <div class="container__resizer container__resizer--bl"></div>
+
+    <!-- The left square -->
+    <div class="container__resizer container__resizer--lc"></div>
+</div>
+`}
+css={`
+.container {
     /* Border */
     border: 1px dashed rgba(0, 0, 0, 0.3);
 
     /* Used to position the squares */
     position: relative;
-">
-    <!-- The content -->
-    ...
+}
 
-    <!-- The top left square -->
-    <div style="
-        /* Border */
-        border: 1px solid rgba(0, 0, 0, 0.3);
+.container__resizer {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    position: absolute;
 
-        /* Resize cursor */
-        cursor: nwse-resize;
+    /* Size */
+    height: 12px;
+    width: 12px;
+}
 
-        /* Positioned at the top left corner */
-        left: 0px;
-        position: absolute;
-        top: 0px;
-        transform: translate(-50%, -50%);
+.container__resizer--tl {
+    /* Resize cursor */
+    cursor: nwse-resize;
 
-        /* Size */
-        height: 12px;
-        width: 12px;
-    "/>
+    /* Positioned at the top left corner */
+    left: 0px;
+    top: 0px;
+    transform: translate(-50%, -50%);
+}
 
-    <!-- The top square -->
-    <div style="
-        /* Border */
-        border: 1px solid rgba(0, 0, 0, 0.3);
+.container__resizer--tc {
+    /* Resize cursor */
+    cursor: ns-resize;
 
-        /* Resize cursor */
-        cursor: ns-resize;
+    /* Positioned at the middle of top side */
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%, -50%);
+}
 
-        /* Positioned at the middle of top side */
-        left: 50%;
-        position: absolute;
-        top: 0px;
-        transform: translate(-50%, -50%);
+.container__resizer--tr {
+    /* Resize cursor */
+    cursor: nesw-resize;
 
-        /* Size */
-        height: 12px;
-        width: 12px;
-    "/>
+    /* Positioned at the top right corner */
+    right: 0px;
+    top: 0px;
+    transform: translate(50%, -50%);
+}
 
-    <!-- The top right square -->
-    <div style="
-        /* Border */
-        border: 1px solid rgba(0, 0, 0, 0.3);
+.container__resizer--rc {
+    /* Resize cursor */
+    cursor: ew-resize;
 
-        /* Resize cursor */
-        cursor: nesw-resize;
+    /* Positioned at the middle of right side */
+    right: 0px;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
 
-        /* Positioned at the top right corner */
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        transform: translate(50%, -50%);
+.container__resizer--rb {
+    /* Resize cursor */
+    cursor: nwse-resize;
 
-        /* Size */
-        height: 12px;
-        width: 12px;
-    "/>
+    /* Positioned at the right bottom corner */
+    bottom: 0px;
+    right: 0px;
+    transform: translate(50%, 50%);
+}
 
-    <!-- The right square -->
-    <div style="
-        /* Border */
-        border: 1px solid rgba(0, 0, 0, 0.3);
+.container__resizer--bc {
+    /* Resize cursor */
+    cursor: ns-resize;
 
-        /* Resize cursor */
-        cursor: ew-resize;
+    /* Positioned at the middle of bottom side */
+    bottom: 0px;
+    right: 50%;
+    transform: translate(50%, 50%);
+}
 
-        /* Positioned at the middle of right side */
-        position: absolute;
-        right: 0px;
-        top: 50%;
-        transform: translate(50%, -50%);
+.container__resizer--bl {
+    /* Resize cursor */
+    cursor: nesw-resize;
 
-        /* Size */
-        height: 12px;
-        width: 12px;
-    "/>
+    /* Positioned at the bottom left corner */
+    bottom: 0px;
+    left: 0px;
+    transform: translate(-50%, 50%);
+}
 
-    <!-- The right bottom square -->
-    <div style="
-        /* Border */
-        border: 1px solid rgba(0, 0, 0, 0.3);
+.container__resizer--lc {
+    /* Resize cursor */
+    cursor: ew-resize;
 
-        /* Resize cursor */
-        cursor: nwse-resize;
-
-        /* Positioned at the right bottom corner */
-        bottom: 0px;
-        position: absolute;
-        right: 0px;
-        transform: translate(50%, 50%);
-
-        /* Size */
-        height: 12px;
-        width: 12px;
-    "/>
-
-    <!-- The bottom square -->
-    <div style="
-        /* Border */
-        border: 1px solid rgba(0, 0, 0, 0.3);
-
-        /* Resize cursor */
-        cursor: ns-resize;
-
-        /* Positioned at the middle of bottom side */
-        bottom: 0px;
-        position: absolute;
-        right: 50%;
-        transform: translate(50%, 50%);
-
-        /* Size */
-        height: 12px;
-        width: 12px;
-    "/>
-
-    <!-- The bottom left square -->
-    <div style="
-        /* Border */
-        border: 1px solid rgba(0, 0, 0, 0.3);
-
-        /* Resize cursor */
-        cursor: nesw-resize;
-
-        /* Positioned at the bottom left corner */
-        bottom: 0px;
-        left: 0px;
-        position: absolute;
-        transform: translate(-50%, 50%);
-
-        /* Size */
-        height: 12px;
-        width: 12px;
-    "/>
-
-    <!-- The left square -->
-    <div style="
-        /* Border */
-        border: 1px solid rgba(0, 0, 0, 0.3);
-
-        /* Resize cursor */
-        cursor: ew-resize;
-
-        /* Positioned at the middle of left side */
-        left: 0px;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-
-        /* Size */
-        height: 12px;
-        width: 12px;
-    "/>
-</div>
+    /* Positioned at the middle of left side */
+    left: 0px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 `}
-css={``}
                 >
                     <div
                         style={{

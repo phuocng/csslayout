@@ -26,26 +26,8 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    /* Colors */
-    background-color: rgba(0, 0, 0, .1);
-
-    /* Rounded border */
-    border-radius: 9999px;
-">
-    <div style="
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        justify-content: center;
-
-        /* Colors */
-        background-color: #357edd;
-        color: #fff;
-
-        /* Rounded border */
-        border-radius: 9999px;
-
+<div class="container">
+    <div class="container__progress" style="
         /* Width based on the number of percentages */
         width: 40%;
     ">
@@ -54,7 +36,29 @@ html={`
     </div>
 </div>
 `}
-css={``}
+css={`
+.container {
+    /* Colors */
+    background-color: rgba(0, 0, 0, .1);
+
+    /* Rounded border */
+    border-radius: 9999px;
+}
+
+.container__progress {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Colors */
+    background-color: #357edd;
+    color: #fff;
+
+    /* Rounded border */
+    border-radius: 9999px;
+}
+`}
                 >
                     <div
                         style={{

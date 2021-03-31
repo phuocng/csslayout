@@ -27,10 +27,7 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div style="
-    display: flex;
-    justify-content: space-between;
-">
+<div class="container">
     <!-- Content -->
     ...
 
@@ -38,7 +35,12 @@ html={`
     ...
 </div>
 `}
-css={``}
+css={`
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+`}
                 >
                     <div
                         style={{

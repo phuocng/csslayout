@@ -22,31 +22,35 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    position: relative;
-">
+<div class="container">
     <!-- Other element such as avatar -->
     ...
 
     <!-- The presence indicator -->
-    <div style="
-        /* Shown at the bottom right corner */
-        bottom: 0,
-        position: absolute;
-        right: 0;
-        transform: translate(50%, 50%);
-
-        /* Rounded border */
-        border-radius: 9999px;
-        height: 16px;
-        width: 16px;
-
-        /* Background color */
-        background-color: #FF4136;
-    " />
+    <div class="container__indicator"></div>
 </div>
 `}
-css={``}
+css={`
+.container {
+    position: relative;
+}
+
+.container__indicator {
+    /* Shown at the bottom right corner */
+    bottom: 0,
+    position: absolute;
+    right: 0;
+    transform: translate(50%, 50%);
+
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 16px;
+    width: 16px;
+
+    /* Background color */
+    background-color: #FF4136;
+}
+`}
                 >
                     <div
                         style={{
