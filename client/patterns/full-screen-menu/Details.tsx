@@ -64,6 +64,7 @@ css={`
                             height: '100%',
                             justifyContent: 'center',
                             padding: '8px',
+                            position: 'relative',
                         }}
                     >
                         <button
