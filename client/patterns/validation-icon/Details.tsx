@@ -20,39 +20,45 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    /* Used to position the validation icon */
-    position: relative;
-">
+<div class="container">
     <!-- The input -->
-    <input style="
-        /* Border */
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        border-radius: 4px;
-
-        /* Take the full width */
-        width: 100%;
-
-        /* Don't overlap the icon */
-        padding-right: 24px;
-    " />
+    <input class="container__input" />
 
     <!-- The icon container -->
-    <i style="
-        /* Positioned at the right side */
-        position: absolute;
-        right: 8px;
-        top: 50%;
-        transform: translate(0, -50%);
-
-        z-index: 10;
-    ">
+    <span class="container__icon">
         <!-- The SVG icon represents any state such as valid, invalid, loading, etc. -->
         ...
-    </i>
+    </span>
 </div>
 `}
-css={``}
+css={`
+.container {
+    /* Used to position the validation icon */
+    position: relative;
+}
+
+.container__input {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+
+    /* Take the full width */
+    width: 100%;
+
+    /* Don't overlap the icon */
+    padding-right: 24px;
+}
+
+.container__icon {
+    /* Positioned at the right side */
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    z-index: 10;
+}
+`}
                 >
                     <div
                         style={{

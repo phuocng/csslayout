@@ -28,19 +28,32 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<style>
-.p-tooltip {
+<div class="container">
+    <!-- The tooltip content -->
+    <div class="container__content">
+        ...
+    </div>
+
+    <!-- The tooltip arrow -->
+    <div class="container__arrow" />
+
+    <!-- The trigger element -->
+    ...
+</div>
+`}
+css={`
+.container {
     /* Used to position the arrow */
     position: relative;
 }
 
 /* Show the arrow and content when hovering the trigger element */
-.p-tooltip:hover .p-tooltip-arrow,
-.p-tooltip:hover .p-tooltip-content {
+.container:hover .container__arrow,
+.container:hover .container__content {
     opacity: 1;
 }
 
-.p-tooltip-arrow {
+.container__arrow {
     /* Invisible by default */
     opacity: 0;
 
@@ -62,7 +75,7 @@ html={`
     z-index: 10;
 }
 
-.p-tooltip-content {
+.container__content {
     /* Invisible by default */
     opacity: 0;
 
@@ -79,22 +92,7 @@ html={`
     /* Displayed on top of other element */
     z-index: 10;
 }
-</style>
-
-<div class="p-tooltip">
-    <!-- The tooltip content -->
-    <div class="p-tooltip-content">
-        ...
-    </div>
-
-    <!-- The tooltip arrow -->
-    <div class="p-tooltip-arrow" />
-
-    <!-- The trigger element -->
-    ...
-</div>
 `}
-css={``}
                 >
                     <div
                         style={{

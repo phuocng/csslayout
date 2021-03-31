@@ -21,234 +21,197 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- The content -->
+    ...
+
+    <!-- Top left arrow -->
+    <div class="container__arrow container__arrow--tl"></div>
+
+    <!-- Top center arrow -->
+    <div class="container__arrow container__arrow--tc"></div>
+
+    <!-- Top right arrow -->
+    <div class="container__arrow container__arrow--tr"></div>
+
+    <!-- Right top arrow -->
+    <div class="container__arrow container__arrow--rt"></div>
+
+    <!-- Right center arrow -->
+    <div class="container__arrow container__arrow--rc"></div>
+
+    <!-- Right bottom arrow -->
+    <div class="container__arrow container__arrow--rb"></div>
+
+    <!-- Bottom left arrow -->
+    <div class="container__arrow container__arrow--bl"></div>
+
+    <!-- Bottom center arrow -->
+    <div class="container__arrow container__arrow--bc"></div>
+
+    <!-- Bottom right arrow -->
+    <div class="container__arrow container__arrow--br"></div>
+
+    <!-- Left top arrow -->
+    <div class="container__arrow container__arrow--lt"></div>
+
+    <!-- Left center arrow -->
+    <div class="container__arrow container__arrow--lc"></div>
+
+    <!-- Left bottom arrow -->
+    <div class="container__arrow container__arrow--lb"></div>
+</div>
+`}
+css={`
+.container {
     /* Border */
     border: 1px solid rgba(0, 0, 0, 0.3);
 
     /* Used to position the arrow */
     position: relative;
-">
-    <!-- The content -->
-    ...
+}
 
-    <!-- Top left arrow -->
-    <div style="
-        /* Position at the top left corner */
-        left: 32px;
-        position: absolute;
-        top: 0px;
+.container__arrow {
+    /* Size */
+    height: 16px;
+    width: 16px;
 
-        /* Border */
-        background-color: #FFF;
-        border-left: 1px solid rgba(0, 0, 0, 0.3);
-        border-top: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translate(50%, -50%) rotate(45deg);
+    background-color: #FFF;
+    position: absolute;
+}
 
-        /* Size */
-        height: 16px;
-        width: 16px;
-    " />
+.container__arrow--tl {
+    /* Position at the top left corner */
+    left: 32px;
+    top: 0px;
 
-    <!-- Top center arrow -->
-    <div style="
-        /* Position at the top center */
-        left: 50%;
-        position: absolute;
-        top: 0px;
+    /* Border */
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(50%, -50%) rotate(45deg);
+}
 
-        /* Border */
-        background-color: #FFF;
-        border-left: 1px solid rgba(0, 0, 0, 0.3);
-        border-top: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translate(-50%, -50%) rotate(45deg);
+.container__arrow--tc {
+    /* Position at the top center */
+    left: 50%;
+    top: 0px;
 
-        /* Size */
-        height: 16px;
-        width: 16px;
-    " />
+    /* Border */
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
 
-    <!-- Top right arrow -->
-    <div style="
-        /* Position at the top right corner */
-        position: absolute;
-        right: 32px;
-        top: 0px;
+.container__arrow--tr {
+    /* Position at the top right corner */
+    right: 32px;
+    top: 0px;
 
-        /* Border */
-        background-color: #FFF;
-        border-left: 1px solid rgba(0, 0, 0, 0.3);
-        border-top: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translate(-50%, -50%) rotate(45deg);
+    /* Border */
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
 
-        /* Size */
-        height: 16px;
-        width: 16px;
-    " />
+.container__arrow--rt {
+    /* Position at the right top corner */
+    right: 0;
+    top: 32px;
 
-    <!-- Right top arrow -->
-    <div style="
-        /* Position at the right top corner */
-        position: absolute;
-        right: 0;
-        top: 32px;
+    /* Border */
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(50%, 50%) rotate(45deg);
+}
 
-        /* Border */
-        background-color: #FFF;
-        border-right: 1px solid rgba(0, 0, 0, 0.3);
-        border-top: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translate(50%, 50%) rotate(45deg);
+.container__arrow--rc {
+    /* Position at the right center */
+    right: 0;
+    top: 50%;
 
-        /* Size */
-        height: 16px;
-        width: 16px;
-    " />
+    /* Border */
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(50%, -50%) rotate(45deg);
+}
 
-    <!-- Right center arrow -->
-    <div style="
-        /* Position at the right center */
-        position: absolute;
-        right: 0;
-        top: 50%;
+.container__arrow--rb {
+    /* Position at the right bottom corner */
+    bottom: 32px;
+    right: 0;
 
-        /* Border */
-        background-color: #FFF;
-        border-right: 1px solid rgba(0, 0, 0, 0.3);
-        border-top: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translate(50%, -50%) rotate(45deg);
+    /* Border */
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(50%, -50%) rotate(45deg);
+}
 
-        /* Size */
-        height: 16px;
-        width: 16px;
-    " />
+.container__arrow--bl {
+    /* Position at the bottom left corner */
+    bottom: -16px;
+    left: 32px;
 
-    <!-- Right bottom arrow -->
-    <div style="
-        /* Position at the right bottom corner */
-        bottom: 32px;
-        position: absolute;
-        right: 0;
+    /* Border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(50%, -50%) rotate(45deg);
+}
 
-        /* Border */
-        background-color: #FFF;
-        border-right: 1px solid rgba(0, 0, 0, 0.3);
-        border-top: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translate(50%, -50%) rotate(45deg);
+.container__arrow--bc {
+    /* Position at the bottom center */
+    bottom: -16px;
+    left: 50%;
 
-        /* Size */
-        height: 16px;
-        width: 16px;
-    " />
+    /* Border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
 
-    <!-- Bottom left arrow -->
-    <div style="
-        /* Position at the bottom left corner */
-        bottom: -16px;
-        position: absolute;
-        left: 32px;
+.container__arrow--br {
+    /* Position at the bottom right corner */
+    bottom: -16px;
+    right: 32px;
 
-        /* Border */
-        background-color: #FFF;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        border-right: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translate(50%, -50%) rotate(45deg);
+    /* Border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
 
-        /* Size */
-        height: 16px;
-        width: 16px;
-    " />
+.container__arrow--lt {
+    /* Position at the left top corner */
+    left: 0;
+    top: 32px;
 
-    <!-- Bottom center arrow -->
-    <div style="
-        /* Position at the bottom center */
-        bottom: -16px;
-        position: absolute;
-        left: 50%;
+    /* Border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, 50%) rotate(45deg);
+}
 
-        /* Border */
-        background-color: #FFF;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        border-right: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translate(-50%, -50%) rotate(45deg);
+.container__arrow--lc {
+    /* Position at the left center */
+    left: 0;
+    top: 50%;
 
-        /* Size */
-        height: 16px;
-        width: 16px;
-    " />
+    /* Border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
 
-    <!-- Bottom right arrow -->
-    <div style="
-        /* Position at the bottom right corner */
-        bottom: -16px;
-        position: absolute;
-        right: 32px;
+.container__arrow--lb {
+    /* Position at the left bottom corner */
+    bottom: 32px;
+    left: 0;
 
-        /* Border */
-        background-color: #FFF;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        border-right: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translate(-50%, -50%) rotate(45deg);
-
-        /* Size */
-        height: 16px;
-        width: 16px;
-    " />
-
-    <!-- Left top arrow -->
-    <div style="
-        /* Position at the left top corner */
-        left: 0;
-        position: absolute;
-        top: 32px;
-
-        /* Border */
-        background-color: #FFF;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        border-left: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translate(-50%, 50%) rotate(45deg);
-
-        /* Size */
-        height: 16px;
-        width: 16px;
-    " />
-
-    <!-- Left center arrow -->
-    <div style="
-        /* Position at the left center */
-        left: 0;
-        position: absolute;
-        top: 50%;
-
-        /* Border */
-        background-color: #FFF;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        border-left: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translate(-50%, -50%) rotate(45deg);
-
-        /* Size */
-        height: 16px;
-        width: 16px;
-    " />
-
-    <!-- Left bottom arrow -->
-    <div style="
-        /* Position at the left bottom corner */
-        bottom: 32px;
-        left: 0;
-        position: absolute;
-
-        /* Border */
-        background-color: #FFF;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        border-left: 1px solid rgba(0, 0, 0, 0.3);
-        transform: translate(-50%, -50%) rotate(45deg);
-
-        /* Size */
-        height: 16px;
-        width: 16px;
-    " />
-</div>
+    /* Border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
 `}
-css={``}
                 >
                     <div
                         style={{
