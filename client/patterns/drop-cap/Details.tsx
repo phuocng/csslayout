@@ -22,9 +22,13 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<style>
+<div class="container">
+    ...
+</div>
+`}
+css={`
 /* Styles for the first letter */
-.p-drop-cap:first-letter {
+.container:first-letter {
     /* Display at the left */
     float: left;
     line-height: 1;
@@ -37,13 +41,7 @@ html={`
     font-size: 64px;
     font-weight: 700;
 }
-</style>
-
-<div class="p-drop-cap">
-    ...
-</div>
 `}
-css={``}
                 >
                     <div
                         style={{

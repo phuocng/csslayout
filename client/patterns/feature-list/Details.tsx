@@ -25,27 +25,14 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <!-- Feature item -->
-<div style="
-    display: flex;
-
-    /* OPTIONAL: Reverse the order of image and content */
-    flex-direction: row-reverse;
-
-    /* OPTIONAL: Spacing between items */
-    margin: 16px 0;
-">
+<div class="container">
     <!-- Image -->
-    <div style="
-        width: 128px;
-    ">
+    <div class="container__image">
         ...
     </div>
 
     <!-- Right side -->
-    <div style="
-        /* Take the remaining width */
-        flex: 1;
-    ">
+    <div class="container__feature">
         ...
     </div>
 </div>
@@ -53,7 +40,26 @@ html={`
 <!-- Repeated items -->
 ...
 `}
-css={``}
+css={`
+.container {
+    display: flex;
+
+    /* OPTIONAL: Reverse the order of image and content */
+    flex-direction: row-reverse;
+
+    /* OPTIONAL: Spacing between items */
+    margin: 16px 0;
+}
+
+.container__image {
+    width: 128px;
+}
+
+.container__feature {
+    /* Take the remaining width */
+    flex: 1;
+}
+`}
                 >
                     <div
                         style={{

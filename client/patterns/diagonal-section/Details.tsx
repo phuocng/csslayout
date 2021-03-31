@@ -22,36 +22,40 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    /* Used to position the diagonal area */
-    position: relative;
-">
+<div class="container">
     <!-- The diagonal area -->
-    <div style="
-        /* Absolute position */
-        left: 0px;
-        position: absolute;
-        top: 0px;
-
-        /* Take full size */
-        height: 100%;
-        width: 100%;
-
-        /* Create diagonal sides */
-        transform: skewY(-5deg);
-
-        /* Background color */
-        background-color: rgba(0, 0, 0, 0.3);
-
-        /* Displayed under the main content */
-        z-index: -1;
-    " />
+    <div class="container__diagonal"></div>
 
     <!-- Content -->
     ...
 </div>
 `}
-css={``}
+css={`
+.container {
+    /* Used to position the diagonal area */
+    position: relative;
+}
+
+.container__diagonal {
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Create diagonal sides */
+    transform: skewY(-5deg);
+
+    /* Background color */
+    background-color: rgba(0, 0, 0, 0.3);
+
+    /* Displayed under the main content */
+    z-index: -1;
+}
+`}
                 >
                     <div
                         style={{

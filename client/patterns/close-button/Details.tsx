@@ -21,7 +21,14 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<button style="
+<button class="container">
+    <div class="container__line container__line--first"></div>
+
+    <div class="container__line container__line--second"></div>
+</button>
+`}
+css={`
+.container {
     /* Reset */
     background-color: transparent;
     border-color: transparent;
@@ -35,39 +42,42 @@ html={`
 
     /* Used to position the inner */
     position: relative;
-">
-    <div style="
-        /* Background color */
-        background-color: rgba(0, 0, 0, 0.3);
+}
 
-        /* Position */
-        left: 0px;
-        position: absolute;
-        top: 50%;
-        transform: translate(0%, -50%) rotate(45deg);
+.container__line {
+    /* Background color */
+    background-color: rgba(0, 0, 0, 0.3);
 
-        /* Size */
-        height: 1px;
-        width: 100%;
-    " />
+    /* Position */
+    position: absolute;
 
-    <div style="
-        /* Background color */
-        background-color: rgba(0, 0, 0, 0.3);
+    /* Size */
+    height: 1px;
+    width: 100%;
+}
 
-        /* Position */
-        left: 50%;
-        position: absolute;
-        top: 0px;
-        transform: translate(-50%, 0%) rotate(45deg);
+.container__line--first {
+    /* Position */
+    left: 0px;
+    top: 50%;
+    transform: translate(0%, -50%) rotate(45deg);
 
-        /* Size */
-        height: 100%;
-        width: 1px;
-    " />
-</button>
+    /* Size */
+    height: 1px;
+    width: 100%;
+}
+
+.container__line--second {
+    /* Position */
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%, 0%) rotate(45deg);
+
+    /* Size */
+    height: 100%;
+    width: 1px;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

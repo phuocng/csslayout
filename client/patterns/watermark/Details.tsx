@@ -21,42 +21,11 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    /* Used to position the watermark */
-    position: relative;
-">
+<div class="container">
     <!-- Watermark container -->
-    <div style="
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        justify-content: center;
-
-        /* Absolute position */
-        left: 0px;
-        position: absolute;
-        top: 0px;
-
-        /* Take full size */
-        height: 100%;
-        width: 100%;
-    ">
+    <div class="container__wrapper">
         <!-- The watermark -->
-        <div style="
-            /* Text color */
-            color: rgba(0, 0, 0, 0.2);
-
-            /* Text styles */
-            font-size: 3rem;
-            font-weight: bold;
-            text-transform: uppercase;
-
-            /* Rotate the text */
-            transform: rotate(-45deg);
-
-            /* Disable the selection */
-            user-select: none;
-        ">
+        <div class="container__watermark">
             Draft
         </div>
     </div>
@@ -65,7 +34,44 @@ html={`
     ...
 </div>
 `}
-css={``}
+css={`
+.container {
+    /* Used to position the watermark */
+    position: relative;
+}
+
+.container__wrapper {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+}
+
+.container__watermark {
+    /* Text color */
+    color: rgba(0, 0, 0, 0.2);
+
+    /* Text styles */
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    /* Rotate the text */
+    transform: rotate(-45deg);
+
+    /* Disable the selection */
+    user-select: none;
+}
+`}
                 >
                     <div
                         style={{

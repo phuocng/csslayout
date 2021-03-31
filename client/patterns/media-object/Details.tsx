@@ -23,31 +23,37 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    /* Align sub-items to top */
-    align-items: start;
-    display: flex;
-">
+<div class="container">
     <!-- Media object -->
-    <div style="
-        margin-right: 16px;
-
-        /* Set the width for the media object */
-        width: 200px;
-    ">
+    <div class="container__media">
         ...
     </div>
 
     <!-- Main content -->
-    <div style="
-        /* Take the remaining width */
-        flex: 1;
-    ">
+    <div class="container__content">
         ...
     </div>
 </div>
 `}
-css={``}
+css={`
+.container {
+    /* Align sub-items to top */
+    align-items: start;
+    display: flex;
+}
+
+.container__media {
+    margin-right: 16px;
+
+    /* Set the width for the media object */
+    width: 200px;
+}
+
+.container__content {
+    /* Take the remaining width */
+    flex: 1;
+}
+`}
                 >
                     <div
                         style={{

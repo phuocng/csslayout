@@ -26,7 +26,15 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <div class="container__letters">
+        <!-- The letters -->
+        ...
+    </div>
+</div>
+`}
+css={`
+.container {
     /* Center the content */
     display: inline-block;
     vertical-align: middle;
@@ -42,20 +50,16 @@ html={`
     border-radius: 50%;
     height: 48px;
     width: 48px;
-">
-    <div style="
-        /* Center the content */
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    ">
-        <!-- The letters -->
-        ...
-    </div>
-</div>
+}
+
+.container__letters {
+    /* Center the content */
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 `}
-css={``}
                 >
                     <div
                         style={{

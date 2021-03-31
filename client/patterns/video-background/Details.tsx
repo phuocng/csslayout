@@ -25,63 +25,70 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div style="
-    /* Used to position the video and content */
-    position: relative;
-">
+<div class="container">
     <!-- The video container -->
-    <div style="
-        /* Positioned at the top left corner */
-        left: 0px;
-        position: absolute;
-        top: 0px;
-
-        /* Take full size */
-        height: 100%;
-        width: 100%;
-
-        /* Hide the scrollbar */
-        overflow: hidden;
-    ">
-        <video
-            style="
-                object-fit: cover;
-
-                /* Center the video */
-                left: 50%;
-                position: absolute;
-                top: 50%;
-                transform: translate(-50%, -50%);
-
-                /* Take full width */
-                width: 100%;
-            "
-            src="..."
-        >
+    <div class="container__wrapper">
+        <video class="container__video" src="...">
+            ...
+        </video>
     </div>
 
     <!-- The content -->
-    <div style="
-        /* Positioned at the top left corner */
-        left: 0px;
-        position: absolute;
-        top: 0px;
-
-        /* Take full size */
-        height: 100%;
-        width: 100%;
-
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    ">
+    <div class="container__content">
         ...
     </div>
 </div>
 `}
-css={``}
+css={`
+.container {
+    /* Used to position the video and content */
+    position: relative;
+}
+
+.container__wrapper {
+    /* Positioned at the top left corner */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Hide the scrollbar */
+    overflow: hidden;
+}
+
+.container__video {
+    object-fit: cover;
+
+    /* Center the video */
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Take full width */
+    width: 100%;
+}
+
+.container__content {
+    /* Positioned at the top left corner */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+`}
                 >
                     <div
                         style={{

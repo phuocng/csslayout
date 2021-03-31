@@ -23,49 +23,55 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    position: relative;
-">
+<div class="container">
     <!-- The container -->
-    <div style="
-        /* Displayed at the top left corner */
-        left: 0px;
-        position: absolute;
-        top: 0px;
-
-        /* Size */
-        height: 100px;
-        width: 100px;
-
-        /* Hide the part of its children which is displayed outside */
-        overflow: hidden;
-    ">
+    <div class="container__wrapper">
         <!-- The ribbon -->
-        <div style="
-            /* Position */
-            left: -64px;
-            position: absolute;
-            top: 32px;
-
-            /* Size */
-            height: 24px;
-            width: 206px;
-
-            /* Displayed diagonally */
-            transform: rotate(-45deg);
-
-            /* Background color */
-            background-color: rgba(0, 0, 0, 0.3);
-
-            /* Centerize the text content */
-            text-align: center;
-        ">
+        <div class="container__ribbon">
             ...
         </div>
     </div>
 </div>
 `}
-css={``}
+css={`
+.container {
+    position: relative;
+}
+
+.container__wrapper {
+    /* Displayed at the top left corner */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Size */
+    height: 100px;
+    width: 100px;
+
+    /* Hide the part of its children which is displayed outside */
+    overflow: hidden;
+}
+
+.container__ribbon {
+    /* Position */
+    left: -64px;
+    position: absolute;
+    top: 32px;
+
+    /* Size */
+    height: 24px;
+    width: 206px;
+
+    /* Displayed diagonally */
+    transform: rotate(-45deg);
+
+    /* Background color */
+    background-color: rgba(0, 0, 0, 0.3);
+
+    /* Centerize the text content */
+    text-align: center;
+}
+`}
                 >
                     <div
                         style={{

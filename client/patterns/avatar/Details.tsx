@@ -21,27 +21,28 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- Avatar image -->
+    <img class="container__avatar" src="..." />
+</div>
+`}
+css={`
+.container {
     /* Rounded border */
     border-radius: 50%;
     height: 64px;
     width: 64px;
-">
-    <!-- Avatar image -->
-    <img
-        src="..."
-        style="
-            /* Rounded border */
-            border-radius: 50%;
+}
 
-            /* Take full size */
-            height: 100%;
-            width: 100%;
-        "
-    />
-</div>
+.container__avatar {
+    /* Rounded border */
+    border-radius: 50%;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

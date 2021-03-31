@@ -29,30 +29,9 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div style="
-    /* Content is centered horizontally */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-">
+<div class="container">
     <!-- Pricing column -->
-    <div style="
-        /* Content is centered vertically */
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        /* Make all columns have the same width */
-        flex: 1;
-
-        /* OPTIONAL: Space between columns */
-        margin: 0 8px;
-
-        /* OPTIONAL: Border */
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        border-radius: 4px;
-    ">
+    <div class="container__column">
         <!-- Title -->
         ...
 
@@ -70,7 +49,32 @@ html={`
     ...
 </div>
 `}
-css={``}
+css={`
+.container {
+    /* Content is centered horizontally */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container__column {
+    /* Content is centered vertically */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* Make all columns have the same width */
+    flex: 1;
+
+    /* OPTIONAL: Space between columns */
+    margin: 0 8px;
+
+    /* OPTIONAL: Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+`}
                 >
                     <div
                         style={{

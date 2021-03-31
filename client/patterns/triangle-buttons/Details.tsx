@@ -22,82 +22,43 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <!-- Up triangle button -->
-<button style="
-    /* Center the content */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-
-    /* Spacing */
-    padding: 8px;
-">
+<button class="container">
     <!-- Triangle -->
-    <div style="
-        border-color: transparent transparent rgba(0, 0, 0, 0.3);
-        border-style: solid;
-        border-width: 0px 8px 8px;
-
-        /* Size */
-        height: 0px;
-        width: 0px;
-    "></div>
+    <div class="container__triangle container__triangle--up"></div>
 
     <!-- Content -->
     ...
 </button>
 
 <!-- Right triangle button -->
-<button style="
-    /* Center the content */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-
-    /* Spacing */
-    padding: 8px;
-">
+<button class="container">
     <!-- Content -->
     ...
 
     <!-- Triangle -->
-    <div style="
-        border-color: transparent transparent transparent rgba(0, 0, 0, 0.3);
-        border-style: solid;
-        border-width: 8px 0px 8px 8px;
-
-        /* Size */
-        height: 0px;
-        width: 0px;
-    "></div>
+    <div class="container__triangle container__triangle--right"></div>
 </button>
 
 <!-- Down triangle button -->
-<button style="
-    /* Center the content */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-
-    /* Spacing */
-    padding: 8px;
-">
+<button class="container">
     <!-- Triangle -->
-    <div style="
-        border-color: rgba(0, 0, 0, 0.3) transparent transparent;
-        border-style: solid;
-        border-width: 8px 8px 0px;
-
-        /* Size */
-        height: 0px;
-        width: 0px;
-    "></div>
+    <div class="container__triangle container__triangle--down"></div>
 
     <!-- Content -->
     ...
 </button>
 
 <!-- Left triangle button -->
-<button style="
+<button class="container">
+    <!-- Triangle -->
+    <div class="container__triangle container__triangle--left"></div>
+
+    <!-- Content -->
+    ...
+</button>
+`}
+css={`
+.container {
     /* Center the content */
     align-items: center;
     display: flex;
@@ -105,23 +66,36 @@ html={`
 
     /* Spacing */
     padding: 8px;
-">
-    <!-- Triangle -->
-    <div style="
-        border-color: transparent rgba(0, 0, 0, 0.3) transparent transparent;
-        border-style: solid;
-        border-width: 8px 8px 8px 0px;
+}
 
-        /* Size */
-        height: 0px;
-        width: 0px;
-    "></div>
+.container__triangle {
+    border-style: solid;
 
-    <!-- Content -->
-    ...
-</button>
+    /* Size */
+    height: 0px;
+    width: 0px;
+}
+
+.container__triangle--up {
+    border-color: transparent transparent rgba(0, 0, 0, 0.3);
+    border-width: 0px 8px 8px;
+}
+
+.container__triangle--right {
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.3);
+    border-width: 8px 0px 8px 8px;
+}
+
+.container__triangle--down {
+    border-color: rgba(0, 0, 0, 0.3) transparent transparent;
+    border-width: 8px 8px 0px;
+}
+
+.container__triangle--left {
+    border-color: transparent rgba(0, 0, 0, 0.3) transparent transparent;
+    border-width: 8px 8px 8px 0px;
+}
 `}
-css={``}
                 >
                     <div
                         style={{

@@ -42,7 +42,16 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <!-- A property item -->
-<dl style="
+<dl class="container">
+    <!-- Property name -->
+    <dt>...</dt>
+
+    <!-- Property value -->
+    <dd>...</dd>
+</dl>
+`}
+css={`
+.container {
     /* Content is center horizontally */
     align-items: center;
     display: flex;
@@ -58,15 +67,8 @@ html={`
     /* Spacing */
     margin: 0px;
     padding: 8px 0px;
-">
-    <!-- Property name -->
-    <dt>...</dt>
-
-    <!-- Property value -->
-    <dd>...</dd>
-</dl>
+}
 `}
-css={``}
                 >
                     <div
                         style={{

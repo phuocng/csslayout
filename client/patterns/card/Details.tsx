@@ -23,29 +23,35 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    display: flex;
-    flex-direction: column;
-">
+<div class="container">
     <!-- Cover -->
-    <div style="
-        height: 150px;
-        width: 100%;
-    ">
+    <div class="container__cover">
         ...
     </div>
 
     <!-- Content -->
-    <div style="
-        /* Take available height */
-        flex: 1;
-    ">
+    <div class="container__content">
         ...
     </div>
     ...
 </div>
 `}
-css={``}
+css={`
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container__cover {
+    height: 150px;
+    width: 100%;
+}
+
+.container__content {
+    /* Take available height */
+    flex: 1;
+}
+`}
                 >
                     <div
                         style={{

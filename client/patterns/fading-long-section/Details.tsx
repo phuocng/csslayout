@@ -24,38 +24,44 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div style="
-    /* Used to position the faded element */
-    position: relative;
-">
+<div class="container"
     <!-- Main content -->
-    <div style="
-        /* Height */
-        height: 200px;
-
-        /* Scrollable */
-        overflow-y: scroll;
-    ">
+    <div class="container__content">
         ...
     </div>
 
     <!-- The faded element -->
-    <div style="
-        /* Displayed at the bottom */
-        bottom: 0;
-        left: 0;
-        position: absolute;
-
-        /* Size */
-        height: 30px;
-        width: 100%;
-
-        /* Gradient background */
-        background: linear-gradient(rgba(255, 255, 255, 0.01), #fff);
-    " />
+    <div class="container__fading"></div>
 </div>
 `}
-css={``}
+css={`
+.container {
+    /* Used to position the faded element */
+    position: relative;
+}
+
+.container__content {
+    /* Height */
+    height: 200px;
+
+    /* Scrollable */
+    overflow-y: scroll;
+}
+
+.container__fading {
+    /* Displayed at the bottom */
+    bottom: 0;
+    left: 0;
+    position: absolute;
+
+    /* Size */
+    height: 30px;
+    width: 100%;
+
+    /* Gradient background */
+    background: linear-gradient(rgba(255, 255, 255, 0.01), #fff);
+}
+`}
                 >
                     <div
                         style={{

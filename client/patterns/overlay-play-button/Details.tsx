@@ -22,38 +22,42 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    /* Used to position the overlay */
-    position: relative;
-">
+<div class="container">
     <!-- The video element -->
     <video src="..." />
 
     <!-- The overlay area -->
-    <div style="
-        /* Position */
-        left: 0;
-        position: absolute;
-        top: 0;
-
-        /* Take full size */
-        height: 100%;
-        width: 100%;
-
-        /* Center the content */
-        align-items: center;
-        display: flex;
-        justify-content: center;
-
-        /* Add a dark background */
-        background-color: 'rgba(0, 0, 0, 0.25)',
-    ">
+    <div class="container__overlay">
         <!-- The player button -->
         ...
     </div>
 </div>
 `}
-css={``}
+css={`
+.container {
+    /* Used to position the overlay */
+    position: relative;
+}
+
+.container__overlay {
+    /* Position */
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Add a dark background */
+    background-color: rgba(0, 0, 0, 0.25);
+}
+`}
                 >
                     <div
                         style={{

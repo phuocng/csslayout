@@ -24,32 +24,36 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    /* Center the content */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-">
+<div class="container">
     <!-- Left side -->
     <div>...</div>
 
     <!-- Dots -->
-    <div style="
-        /* Bottom border */
-        border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
-
-        /* Take remaining width */
-        flex: 1;
-
-        /* Spacing */
-        margin: 0px 4px;
-    " />
+    <div class="container__dots"></div>
 
     <!-- Right side -->
     <div>...</div>
 </div>
 `}
-css={``}
+css={`
+.container {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container__dots {
+    /* Bottom border */
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+
+    /* Take remaining width */
+    flex: 1;
+
+    /* Spacing */
+    margin: 0px 4px;
+}
+`}
                 >
                     <div
                         style={{

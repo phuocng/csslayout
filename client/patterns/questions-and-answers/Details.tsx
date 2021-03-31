@@ -62,15 +62,9 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <!-- Each question and answer item -->
-<div style="
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-">
+<div class="container">
     <!-- Heading -->
-    <div style="
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    ">
+    <div class="container__heading">
         <!-- Question -->
         ...
 
@@ -81,7 +75,17 @@ html={`
     <!-- Answer -->
 </div>
 `}
-css={``}
+css={`
+.container {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.container__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+`}
                 >
                     <div
                         style={{

@@ -24,7 +24,15 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
+<div class="container">
+    <!-- Display the content vertically -->
+    <div class="container__content">
+        ...
+    </div>
+</div>
+`}
+css={`
+.container {
     /* Center the content */
     align-items: center;
     display: flex;
@@ -40,16 +48,12 @@ html={`
     /* Size */
     height: 64px;
     width: 64px;
-">
-    <!-- Display the content vertically -->
-    <div style="
-        transform: rotate(-45deg);
-    ">
-        ...
-    </div>
-</div>
+}
+
+.container__content {
+    transform: rotate(-45deg);
+}
 `}
-css={``}
                 >
                     <div
                         style={{
