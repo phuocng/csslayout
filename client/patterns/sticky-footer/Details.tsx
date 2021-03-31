@@ -25,23 +25,32 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div style="
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-">
-    <header style="flex-shrink: 0;">
+<div class="container">
+    <header class="header">
         ...
     </header>
-    <main style="flex-grow: 1;">
+    <main class="main">
         ...
     </main>
-    <footer style="flex-shrink: 0;">
+    <footer class="footer">
         ...
     </footer>
 </div>
 `}
-css={``}
+css={`
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.header,
+.footer {
+    flex-shrink: 0;
+}
+.main {
+    flex-grow: 1;
+}
+`}
                 >
                     <div
                         style={{

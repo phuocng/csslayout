@@ -22,23 +22,9 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="
-    display: flex;
-
-    /* Put a card in the next row when previous cards take all width */
-    flex-wrap: wrap;
-
-    margin-left: -8px;
-    margin-right: -8px;
-">
+<div class="container">
     <!-- A card with given width -->
-    <div style="
-        /* There will be 4 cards per row */
-        flex-basis: 25%;
-
-        padding-left: 8px;
-        padding-right: 8px;
-    ">
+    <div class="card">
         ...
     </div>
 
@@ -46,7 +32,24 @@ html={`
     ...
 </div>
 `}
-css={``}
+css={`
+.container {
+    display: flex;
+
+    /* Put a card in the next row when previous cards take all width */
+    flex-wrap: wrap;
+
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.card {
+    /* There will be 4 cards per row */
+    flex-basis: 25%;
+
+    padding-left: 8px;
+    padding-right: 8px;
+}
+`}
                 >
                     <div
                         style={{

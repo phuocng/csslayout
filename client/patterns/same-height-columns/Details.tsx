@@ -22,25 +22,14 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="display: flex;">
+<div class="container">
     <!-- Column -->
-    <div style="
-        flex: 1;
-        /* Space between columns */
-        margin: 0 8px;
-
-        /* Layout each column */
-        display: flex;
-        flex-direction: column;
-    ">
+    <div class="column">
         <!-- Cover -->
         ...
 
         <!-- Content -->
-        <div style="
-            /* Take available height */
-            flex: 1;
-        ">
+        <div class="content">
             ...
         </div>
 
@@ -52,7 +41,24 @@ html={`
     ...
 </div>
 `}
-css={``}
+css={`
+.container {
+    display: flex;
+}
+.column {
+    flex: 1;
+    /* Space between columns */
+    margin: 0 8px;
+
+    /* Layout each column */
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    /* Take available height */
+    flex: 1;
+}
+`}
                 >
                     <div
                         style={{

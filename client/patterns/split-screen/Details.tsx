@@ -23,19 +23,26 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div style="display: flex;">
+<div class="container">
     <!-- Left content -->
-    <div style="flex: 1;">
+    <div class="half">
         ...
     </div>
 
     <!-- Right content -->
-    <div style="flex: 1;">
+    <div class="half">
         ...
     </div>
 </div>
 `}
-css={``}
+css={`
+.container {
+    display: flex;
+}
+.half {
+    flex: 1;
+}
+`}
                 >
                     <div style={{ display: 'flex', height: '100%' }}>
                         <div

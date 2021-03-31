@@ -27,11 +27,7 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <div>
-    <header style="
-        /* Stick to the top */
-        position: sticky;
-        top: 0;
-    ">
+    <header class="header">
         ...
     </header>
     <main>
@@ -39,7 +35,13 @@ html={`
     </main>
 </div>
 `}
-css={``}
+css={`
+.header {
+    /* Stick to the top */
+    position: sticky;
+    top: 0;
+}
+`}
                 >
                     <div>
                         <div

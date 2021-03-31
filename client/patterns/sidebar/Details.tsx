@@ -22,25 +22,33 @@ const Details: React.FC<{}> = () => {
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>Try to scroll the main content!</div>
                 <BrowserFrame
 html={`
-<div style="display: flex;">
+<div class="container">
     <!-- Sidebar -->
-    <aside style="width: 30%;">
+    <aside class="sidebar">
         ...
     </aside>
 
     <!-- Main -->
-    <main style="
-        /* Take the remaining width */
-        flex: 1;
-
-        /* Make it scrollable */
-        overflow: auto;
-    ">
+    <main class="main">
         ...
     </main>
 </div>
 `}
-css={``}
+css={`
+.container {
+    display: flex;
+}
+.sidebar {
+    width: 30%;
+}
+.main {
+    /* Take the remaining width */
+    flex: 1;
+
+    /* Make it scrollable */
+    overflow: auto;
+}
+`}
                 >
                     <div style={{ display: 'flex', height: '100%' }}>
                         <div

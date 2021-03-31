@@ -23,30 +23,36 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame                    
 html={`
 <!-- Row -->
-<div style="
-    display: flex;
-
-    margin-left: -8px;
-    margin-right: -8px;
-">
+<div class="row">
     <!--Cell with given width. Replace 25% with whatever you want -->
-    <div style="
-        flex: 0 0 25%;
-        padding-left: 8px;
-        padding-right: 8px;
-    ">25%</div>
+    <div class="cell width-1/4">25%</div>
 
     <!-- Cell that takes remaining width -->
-    <div style="
-        flex: 1;
-        padding-left: 8px;
-        padding-right: 8px;
-    ">
+    <div class="cell width-fill">
         ...
     </div>
 </div>
 `}
-css={``}
+css={`
+.row {
+    display: flex;
+
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.cell {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* Cell with given width. Replace 25% with whatever you want */
+.cell.width-1/4 {
+    flex: 0 0 25%;
+}
+.cell.width-fill {
+    flex: 1;
+}
+`}
                 >
                     <div
                         style={{

@@ -24,19 +24,8 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div style="
-    height: 100%;
-    overflow: scroll;
-">
-    <section style="
-        /* Take full size */
-        height: 100%;
-        width: 100%;
-
-        /* Stick to the top */
-        position: sticky;
-        top: 0;
-    ">
+<div class="container">
+    <section class="section">
         ...
     </section>
 
@@ -44,7 +33,21 @@ html={`
     ...
 </div>
 `}
-css={``}
+css={`
+.container {
+    height: 100%;
+    overflow: scroll;
+}
+.section {
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Stick to the top */
+    position: sticky;
+    top: 0;
+}
+`}
                 >
                     <div
                         style={{
