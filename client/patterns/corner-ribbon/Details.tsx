@@ -15,7 +15,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Corner ribbon">
+        <DetailsLayout pattern={Pattern.CornerRibbon}>
             <Helmet>
                 <meta name="description" content="Create a corner ribbon with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css ribbon" />

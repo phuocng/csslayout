@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
@@ -12,7 +13,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Drawer">
+        <DetailsLayout pattern={Pattern.Drawer}>
             <Helmet>
                 <meta name="description" content="Create a drawer navigation with CSS" />
                 <meta name="keywords" content="css drawer, css off-canvas" />

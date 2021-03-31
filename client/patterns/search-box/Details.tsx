@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -12,7 +13,7 @@ import Circle from '../../placeholders/Circle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Search box">
+        <DetailsLayout pattern={Pattern.SearchBox}>
             <Helmet>
                 <meta name="description" content="Create a search box with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css search box" />

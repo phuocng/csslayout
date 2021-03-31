@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -38,7 +39,7 @@ const Details: React.FC<{}> = () => {
     };
 
     return (
-        <DetailsLayout title="Tab">
+        <DetailsLayout pattern={Pattern.Tab}>
             <Helmet>
                 <meta name="description" content="Create tabs with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css navigation, css tab" />

@@ -14,7 +14,7 @@ import Triangle from '../../placeholders/Triangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Fixed at corner">
+        <DetailsLayout pattern={Pattern.FixedAtCorner}>
             <Helmet>
                 <meta name="description" content="Fix an element at corner with CSS" />
                 <meta name="keywords" content="css fixed" />

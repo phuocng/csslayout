@@ -15,7 +15,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Docked at corner">
+        <DetailsLayout pattern={Pattern.DockedAtCorner}>
             <Helmet>
                 <meta name="description" content="Dock an element at corner with CSS" />
                 <meta name="keywords" content="css docked, css flexbox" />

@@ -10,10 +10,11 @@ import './floating-label.css';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
+import Pattern from '../../constants/Pattern';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Floating label">
+        <DetailsLayout pattern={Pattern.FloatingLabel}>
             <Helmet>
                 <meta name="description" content="Create a floating label with CSS" />
                 <meta name="keywords" content="css floating label, placeholder shown" />

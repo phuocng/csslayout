@@ -33,9 +33,7 @@ const Ad: React.FC<{}> = () => {
     }, []);
 
     return (
-        <div className='flex justify-center mx-4 my-6'>
-            <div ref={containerRef} />
-        </div>
+        <div ref={containerRef} />
     );
 };
 

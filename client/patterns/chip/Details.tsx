@@ -15,7 +15,7 @@ import InputChip from './InputChip';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Chip">
+        <DetailsLayout pattern={Pattern.Chip}>
             <Helmet>
                 <meta name="description" content="Create a chip component with CSS flexbox" />
                 <meta name="keywords" content="css chip, css flexbox, css tag" />

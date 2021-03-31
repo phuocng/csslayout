@@ -15,7 +15,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Nested dropdowns">
+        <DetailsLayout pattern={Pattern.NestedDropdowns}>
             <Helmet>
                 <meta name="description" content="Create nested dropdown menu with CSS" />
                 <meta name="keywords" content="css dropdown menu, css multi-level dropdown menu, css nested dropdown menu" />

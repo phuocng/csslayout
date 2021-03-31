@@ -3,46 +3,50 @@
  * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+import * as React from 'react';
 
 import Ad from '../components/Ad';
+import Product from '../components/Product';
+import { ProductList } from '../constants/ProductList';
+import Pattern from '../constants/Pattern';
+import randomItems from '../helpers/randomIterms';
 import useDocumentTitle from '../hooks/useDocumentTitle';
+import CoverLoader from '../loaders/CoverLoader';
 import Layout from './Layout';
 
 interface DetailsLayoutProps {
-    title: string;
+    pattern: Pattern;
 }
 
-const DetailsLayout: React.FC<DetailsLayoutProps> = ({ title, children }) => {
-    useDocumentTitle(`CSS Layout ∙ ${title}`);
+const DetailsLayout: React.FC<DetailsLayoutProps> = ({ pattern, children }) => {
+    useDocumentTitle(`CSS Layout ∙ ${pattern}`);
+
+    const products = randomItems(ProductList, 3);
 
     return (
         <Layout>
-            <div className='flex sm:text-2xl p-4 xl:pl-0'>
-                <Link
-                    to="/"
-                    style={{
-                        textDecoration: 'none',
-                    }}
-                >
-                    Home
-                </Link>
-                <span className='mx-2'>/</span>
-                <Link
-                    to="/patterns"
-                    style={{
-                        textDecoration: 'none',
-                    }}
-                >
-                    Explore
-                </Link>
-                <span className='mx-2'>/</span>
-                <h1>{title}</h1>
+            <div className="hero">
+                <div className="container">
+                    <div className="hero__logo">
+                        <CoverLoader pattern={pattern} />
+                    </div>
+                    <h1 className="hero__heading">{pattern}</h1>
+                </div>
             </div>
-            <div className='xl:border xl:border-gray-400'>
-                {children}
-                <Ad />
+            <div className="container">
+                <div className="content">
+                    <main className="main">
+                        {children}
+                    </main>
+                    <div className="sidebar">
+                        <div className="sidebar__inner">
+                            <Ad />
+                            {
+                                products.map(product => <Product key={product.name} product={product} />)
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
         </Layout>
     );

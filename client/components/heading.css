@@ -1,0 +1,18 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
+.heading {
+    display: grid;
+    font-size: 2rem;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 1rem;
+    text-align: center;
+}
+.heading::before,
+.heading::after {
+    align-self: center;
+    border-top: 0.25rem double var(--text-color);
+    content: '';
+}

@@ -33,7 +33,7 @@ const Avatar: React.FC<{}> = ({ children }) => {
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Avatar list">
+        <DetailsLayout pattern={Pattern.AvatarList}>
             <Helmet>
                 <meta name="description" content="Create an avatar list with CSS flexbox" />
                 <meta name="keywords" content="css avatar, css flexbox" />

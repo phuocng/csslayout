@@ -16,7 +16,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Feature comparison">
+        <DetailsLayout pattern={Pattern.FeatureComparison}>
             <Helmet>
                 <meta name="description" content="Create a feature comparison list with CSS flexbox" />
                 <meta name="keywords" content="css feature comparison, css flexbox" />

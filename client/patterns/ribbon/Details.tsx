@@ -14,7 +14,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Ribbon">
+        <DetailsLayout pattern={Pattern.Ribbon}>
             <Helmet>
                 <meta name="description" content="Create a ribbon with CSS" />
                 <meta name="keywords" content="css ribbon" />

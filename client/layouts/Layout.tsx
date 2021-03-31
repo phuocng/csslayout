@@ -3,22 +3,20 @@
  * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React, { useEffect } from 'react';
+import * as React from 'react';
 
 import Footer from './Footer';
-import Github from './Github';
+import Header from './Header';
 
 const Layout: React.FC<{}> = ({ children }) => {
-    useEffect(() => {
+    React.useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     return (
         <>
-            <Github />
-            <div className="ml-auto mr-auto max-w-4xl mb-12">
-                {children}
-            </div>
+            <Header />
+            {children}
             <Footer />
         </>
     );

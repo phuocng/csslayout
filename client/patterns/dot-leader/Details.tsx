@@ -16,7 +16,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Dot leader">
+        <DetailsLayout pattern={Pattern.DotLeader}>
             <Helmet>
                 <meta name="description" content="Create dot leaders with CSS flexbox" />
                 <meta name="keywords" content="css dot leader, css flexbox" />

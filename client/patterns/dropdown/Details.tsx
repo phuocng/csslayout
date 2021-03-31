@@ -18,7 +18,7 @@ import Triangle from '../../placeholders/Triangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Dropdown">
+        <DetailsLayout pattern={Pattern.Dropdown}>
             <Helmet>
                 <meta name="description" content="Create a dropdown with CSS" />
                 <meta name="keywords" content="css dropdown, css menu" />

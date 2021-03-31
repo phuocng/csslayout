@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import random from '../../helpers/random';
 import DetailsLayout from '../../layouts/DetailsLayout';
@@ -12,7 +13,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Statistic">
+        <DetailsLayout pattern={Pattern.Statistic}>
             <Helmet>
                 <meta name="description" content="Create a statistic component with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css statistic" />

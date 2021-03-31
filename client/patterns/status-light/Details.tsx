@@ -7,13 +7,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import Heading from '../../components/Heading';
+import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Status light">
+        <DetailsLayout pattern={Pattern.StatusLight}>
             <Helmet>
                 <meta name="description" content="Create a status light with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css status light" />

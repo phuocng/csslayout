@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
@@ -14,7 +15,7 @@ import Line from '../../placeholders/Line';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Wizard">
+        <DetailsLayout pattern={Pattern.Wizard}>
             <Helmet>
                 <meta name="description" content="Create a wizard with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css stepper, css wizard" />

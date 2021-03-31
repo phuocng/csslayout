@@ -13,7 +13,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Triangle buttons">
+        <DetailsLayout pattern={Pattern.TriangleButtons}>
             <Helmet>
                 <meta name="description" content="Create triangle buttons with CSS" />
                 <meta name="keywords" content="css triangle buttons" />

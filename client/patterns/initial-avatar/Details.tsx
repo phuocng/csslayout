@@ -14,7 +14,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Initial avatar">
+        <DetailsLayout pattern={Pattern.InitialAvatar}>
             <Helmet>
                 <meta name="description" content="Create an initial avatar with CSS" />
                 <meta name="keywords" content="css avatar" />

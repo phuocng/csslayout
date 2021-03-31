@@ -5,13 +5,14 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Resizable element">
+        <DetailsLayout pattern={Pattern.ResizableElement}>
             <Helmet>
                 <meta name="description" content="Create resizable indicators with CSS" />
                 <meta name="keywords" content="css resizable, css resize cursor" />

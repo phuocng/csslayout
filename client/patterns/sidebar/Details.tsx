@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
@@ -12,7 +13,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Sidebar">
+        <DetailsLayout pattern={Pattern.Sidebar}>
             <Helmet>
                 <meta name="description" content="Create a sidebar with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css layout, css sidebar" />

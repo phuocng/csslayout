@@ -14,7 +14,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Simple grid">
+        <DetailsLayout pattern={Pattern.SimpleGrid}>
             <Helmet>
                 <meta name="description" content="Create a simple grid with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css flexbox grid, css grid, css layout" />

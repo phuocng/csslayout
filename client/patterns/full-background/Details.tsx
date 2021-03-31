@@ -14,7 +14,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Full background">
+        <DetailsLayout pattern={Pattern.FullBackground}>
             <Helmet>
                 <meta name="description" content="Create a full background element with CSS" />
                 <meta name="keywords" content="css background size cover, css full background" />

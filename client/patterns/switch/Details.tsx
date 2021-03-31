@@ -16,7 +16,7 @@ const Details: React.FC<{}> = () => {
     const toggle = () => setChecked((c) => !c);
 
     return (
-        <DetailsLayout title="Switch">
+        <DetailsLayout pattern={Pattern.Switch}>
             <Helmet>
                 <meta name="description" content="Create a switch with CSS flexbox" />
                 <meta name="keywords" content="css custom checkbox, css flexbox, css switch, css switcher" />

@@ -57,7 +57,7 @@ const Details: React.FC<{}> = () => {
     };
 
     return (
-        <DetailsLayout title="Accordion">
+        <DetailsLayout pattern={Pattern.Accordion}>
             <Helmet>
                 <meta name="description" content="Create an accordion with CSS flexbox" />
                 <meta name="keywords" content="css accordion, css flexbox" />

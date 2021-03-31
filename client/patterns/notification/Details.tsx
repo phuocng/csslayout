@@ -6,6 +6,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
@@ -14,7 +15,7 @@ import Circle from '../../placeholders/Circle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Notification">
+        <DetailsLayout pattern={Pattern.Notification}>
             <Helmet>
                 <meta name="description" content="Create a notification with CSS flexbox" />
                 <meta name="keywords" content="css alert, css flexbox, css notification" />

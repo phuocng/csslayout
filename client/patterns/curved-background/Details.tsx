@@ -13,7 +13,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Curved background">
+        <DetailsLayout pattern={Pattern.CurvedBackground}>
             <Helmet>
                 <meta name="description" content="Create an element with curved background" />
                 <meta name="keywords" content="css border radius, css curved background" />

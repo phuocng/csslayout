@@ -26,10 +26,6 @@ if (process.env.NODE_ENV === "analyse") {
 module.exports = {
     mode: process.env.NODE_ENV,
     entry: {
-        'vendor-styles': [
-            './vendors/tailwind@1.1.4/tailwind.css',
-        ],
-        // The CSS for client should come after `vendor-styles`
         client: './client/index.tsx',
     },
     output: {
@@ -53,17 +49,6 @@ module.exports = {
                         loader: MiniCssExtractPlugin.loader,
                     },
                     'css-loader',
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            postcssOptions: {
-                                ident: 'postcss',
-                                plugins: [
-                                    require('tailwindcss'),
-                                ],
-                            }
-                        },
-                    },
                 ],
             },
             {

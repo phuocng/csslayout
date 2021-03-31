@@ -4,24 +4,20 @@
  */
 
 #carbonads {
-    background-color: #edf2f7;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 0.5rem;
     padding: 0.5rem;
-    position: relative;
-    max-width: 24rem;
 }
-.carbon-wrap {
-    display: flex;
-}
-
 .carbon-img {
-    margin-right: 0.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: center;
 }
-
 .carbon-poweredby {
-    bottom: 0;
+    display: block;
     font-size: 0.75rem;
-    padding-bottom: 0.5rem;
-    padding-right: 0.5rem;
-    position: absolute;
-    right: 0;
+    text-align: right;
+}
+.carbon-text {
+    display: block;
 }

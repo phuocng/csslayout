@@ -17,7 +17,7 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     const numberOfColumns = 10;
     return (
-        <DetailsLayout title="Sticky table column">
+        <DetailsLayout pattern={Pattern.StickyTableColumn}>
             <Helmet>
                 <meta name="description" content="Create sticky table column with CSS" />
                 <meta name="keywords" content="css position sticky, css sticky table column" />

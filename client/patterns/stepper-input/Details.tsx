@@ -22,7 +22,7 @@ const Details: React.FC<{}> = () => {
     };
 
     return (
-        <DetailsLayout title="Stepper input">
+        <DetailsLayout pattern={Pattern.StepperInput}>
             <Helmet>
                 <meta name="description" content="Create a stepper input with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css stepper input" />

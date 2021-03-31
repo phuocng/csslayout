@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import Heading from '../../components/Heading';
+import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
@@ -45,7 +46,7 @@ const Item: React.FC<ItemProps> = ({ action, keys }) => {
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Keyboard shortcut">
+        <DetailsLayout pattern={Pattern.KeyboardShortcut}>
             <Helmet>
                 <meta name="description" content="Create a keyboard shortcut with CSS" />
                 <meta name="keywords" content="kbd tag, keyboard shortcut" />

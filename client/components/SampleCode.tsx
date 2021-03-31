@@ -3,7 +3,7 @@
  * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 
 import highlight from '../helpers/highlight';
 
@@ -18,8 +18,12 @@ const SampleCode: React.FC<SampleCodeProps> = ({ code, fullHeight = false, lang 
             ? <></>
             : (
                 <pre
-                    className="hljs"
+                    className={`language-${lang}`}
                     style={{
+                        border: 'none',
+                        borderRadius: 0,
+                        boxShadow: 'none',
+                        fontFamily: "'Source Code Pro', monospace",
                         height: fullHeight ? '100%' : 'auto',
                         lineHeight: 1.5,
                         margin: 0,

@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -12,7 +13,7 @@ import Circle from '../../placeholders/Circle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Teardrop">
+        <DetailsLayout pattern={Pattern.Teardrop}>
             <Helmet>
                 <meta name="description" content="Create a teardrop with CSS" />
                 <meta

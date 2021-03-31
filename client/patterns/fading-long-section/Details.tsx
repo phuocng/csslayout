@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Pattern from '../../constants/Pattern';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
@@ -12,7 +13,7 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Fading long section">
+        <DetailsLayout pattern={Pattern.FadingLongSection}>
             <Helmet>
                 <meta name="description" content="Fading long section to indicate there is more content" />
                 <meta name="keywords" content="css fading overflow, css linear gradient" />

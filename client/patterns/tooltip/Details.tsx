@@ -17,7 +17,7 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout title="Tooltip">
+        <DetailsLayout pattern={Pattern.Tooltip}>
             <Helmet>
                 <meta name="description" content="Create a tooltip with CSS" />
                 <meta name="keywords" content="css tooltip" />
