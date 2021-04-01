@@ -4,6 +4,7 @@
  */
 
 .heading {
+    color: var(--color-gray-9);
     display: grid;
     font-size: 2rem;
     grid-template-columns: 1fr auto 1fr;
@@ -13,6 +14,6 @@
 .heading::before,
 .heading::after {
     align-self: center;
-    border-top: 0.25rem double var(--text-color);
+    border-top: 0.25rem double var(--color-gray-9);
     content: '';
 }

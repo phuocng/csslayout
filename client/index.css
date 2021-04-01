@@ -5,7 +5,11 @@
 
 :root {
     --background-color: #e7d900;
-    --text-color: #111827;
+    --color-blue-6: #2563EB;
+    --color-gray-2: #E5E7EB;
+    --color-gray-5: #6B7280;
+    --color-gray-8: #27272A;
+    --color-gray-9: #111827;
 } 
 body {
     font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -60,17 +64,83 @@ a {
     width: 20rem;
 }
 .hero__heading {
-    color: var(--text-color);
+    color: var(--color-gray-9);
     font-size: 2rem;
     line-height: 1.5;
     text-align: center;
     text-transform: capitalize;
 }
 .hero__subheading {
-    color: var(--text-color);
+    color: var(--color-gray-9);
     font-size: 1.5rem;
     line-height: 1.5;
     text-align: center;
+}
+
+/*
+Prism theme
+Credit to https://github.com/tailwindlabs/tailwindcss.com/blob/master/src/css/prism.css
+*/
+pre {
+    background: var(--color-gray-8);
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    color: #FFF;
+    font-family: "Source Code Pro", monospace;
+    height: 100%;
+    line-height: 1.5;
+    margin: 0px;
+    overflow: auto;
+    padding: 1rem;
+}
+
+.token.tag,
+.token.class-name,
+.token.selector,
+.token.selector .class,
+.token.function {
+    color: #E879F9;
+}
+
+.token.attr-name,
+.token.keyword,
+.token.rule,
+.token.operator,
+.token.pseudo-class,
+.token.important {
+    color: #22D3EE;
+}
+
+.token.attr-value,
+.token.class,
+.token.string,
+.token.number,
+.token.unit,
+.token.color {
+    color: #BEF264;
+}
+
+.token.punctuation,
+.token.module,
+.token.property {
+    color: #BAE6FD;
+}
+
+.token.atapply .token:not(.rule):not(.important) {
+    color: inherit;
+}
+
+.language-shell .token:not(.comment) {
+    color: inherit;
+}
+
+.language-css .token.function {
+    color: inherit;
+}
+
+.token.comment {
+    color: #A1A1AA;
 }
 
 /* Responsive */

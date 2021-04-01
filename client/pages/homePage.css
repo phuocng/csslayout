@@ -15,12 +15,13 @@
     width: 50%;
 }
 .home__icon {
-    color: #1e1d6e;
+    color: var(--color-blue-6);
     margin-bottom: 1rem;
 }
 .home__title {
+    color: var(--color-gray-5);
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .home__patterns {
@@ -42,6 +43,7 @@
     z-index: 10;
 }
 .home__heading {
+    color: var(--color-gray-9);
     font-size: 4rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -49,7 +51,7 @@
 .home__explore {
     background-color: var(--background-color);
     border-radius: 0.4rem;
-    color: var(--text-color);
+    color: var(--color-gray-9);
     font-size: 1.5rem;
     font-weight: 600;
     padding: 1rem 2rem;

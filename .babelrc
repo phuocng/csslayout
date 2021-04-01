@@ -3,7 +3,7 @@
         "@loadable/babel-plugin",
         ["prismjs", {
             "languages": ["css", "html", "javascript", "jsx", "tsx"],
-            "theme": "twilight",
+            // "theme": "okaidia",
             "css": true
         }]
     ],

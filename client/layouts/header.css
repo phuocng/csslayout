@@ -16,6 +16,6 @@
     margin-right: auto;
 }
 .header__nav a {
-    color: var(--text-color);
+    color: var(--color-gray-9);
     margin-left: 1rem;
 }
