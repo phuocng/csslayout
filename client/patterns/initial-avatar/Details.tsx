@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
@@ -26,15 +26,15 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div class="container">
-    <div class="container__letters">
+<div class="avatar">
+    <div class="avatar__letters">
         <!-- The letters -->
         ...
     </div>
 </div>
 `}
 css={`
-.container {
+.avatar {
     /* Center the content */
     display: inline-block;
     vertical-align: middle;
@@ -52,7 +52,7 @@ css={`
     width: 48px;
 }
 
-.container__letters {
+.avatar__letters {
     /* Center the content */
     left: 50%;
     position: absolute;

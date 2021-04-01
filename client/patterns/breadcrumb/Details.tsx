@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
@@ -21,24 +21,25 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div class="container">
+<div class="breadcrumb">
     <!-- Breadcrumb item -->
     <a>...</a>
 
     <!-- Separator -->
-    <div class="separator">/</div>
+    <div class="breadcrumb__separator">/</div>
 
     <!-- Repeated items and separators -->
     ...
 </div>
 `}
 css={`
-.container {
+.breadcrumb {
     /* Content is centered vertically */
     align-items: center;
     display: flex;
 }
-.separator {
+
+.breadcrumb__separator {
     margin: 0 8px;
 }
 `}

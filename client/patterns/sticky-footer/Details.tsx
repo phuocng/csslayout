@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
@@ -26,13 +26,13 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <div class="container">
-    <header class="header">
+    <header class="container__header">
         ...
     </header>
-    <main class="main">
+    <main class="container__main">
         ...
     </main>
-    <footer class="footer">
+    <footer class="container__footer">
         ...
     </footer>
 </div>
@@ -43,11 +43,13 @@ css={`
     flex-direction: column;
     height: 100%;
 }
-.header,
-.footer {
+
+.container__header,
+.container__footer {
     flex-shrink: 0;
 }
-.main {
+
+.container__main {
     flex-grow: 1;
 }
 `}

@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import './mega-menu.css';
@@ -34,12 +34,12 @@ html={`
     ...
 
     <!-- An item that triggers displaying the mega menu -->
-    <div class="trigger">
+    <div class="container__trigger">
         <!-- The trigger item's content -->
         <div>...</div>
 
         <!-- Mega menu -->
-        <div class="content">
+        <div class="container__content">
             ...
         </div>
     </div>
@@ -51,12 +51,12 @@ css={`
     position: relative;
 }
 
-.trigger:hover .content {
+.container__trigger:hover .container__content {
     /* Show the mega menu when hovering the trigger item */
     display: block;
 }
 
-.content {
+.container__content {
     /* Border */
     border: 1px solid rgba(0, 0, 0, 0.3);
     margin-top: -1px;

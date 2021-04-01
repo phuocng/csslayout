@@ -1,6 +1,6 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
 import * as React from 'react';
@@ -19,15 +19,6 @@ const SampleCode: React.FC<SampleCodeProps> = ({ code, fullHeight = false, lang 
             : (
                 <pre
                     className={`language-${lang}`}
-                    style={{
-                        border: 'none',
-                        borderRadius: 0,
-                        boxShadow: 'none',
-                        fontFamily: "'Source Code Pro', monospace",
-                        height: fullHeight ? '100%' : 'auto',
-                        lineHeight: 1.5,
-                        margin: 0,
-                    }}
                     dangerouslySetInnerHTML={{ __html: highlight(code, lang) }}
                 />
             );

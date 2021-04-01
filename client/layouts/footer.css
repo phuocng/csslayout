@@ -1,8 +1,14 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 .footer {
-    padding: 2rem 0 4rem 0;
+    padding: 2rem 0;
 }
 .footer__about {
-    border-bottom: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--color-gray-2);
+    color: var(--color-gray-9);
     display: flex;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
@@ -12,10 +18,9 @@
 }
 .footer__social {
     margin-left: 0.5rem;
-    color: var(--text-color);
+    color: var(--color-gray-5);
 }
 .footer__grid {
-    display: flex;
     margin-left: -1rem;
     margin-right: -1rem;
 }
@@ -33,5 +38,10 @@
     margin: 0.25rem 0;
 }
 .footer__product a {
-    color: var(--text-color);
+    color: var(--color-gray-5);
+}
+@media (min-width: 640px) {
+    .footer__grid {
+        display: flex;
+    }
 }

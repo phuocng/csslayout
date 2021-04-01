@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -12,7 +12,7 @@ import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = React.useState(false);
     const toggle = () => setChecked((c) => !c);
 
     return (
@@ -29,10 +29,10 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <label class="label">
-    <input type="checkbox" class="input" />
+    <input type="checkbox" class="label__input" />
 
     <!-- Circle -->
-    <div class="circle"></div>
+    <div class="label__circle"></div>
 </label>
 `}
 css={`
@@ -57,12 +57,12 @@ css={`
     justify-content: flex-end;
 }
 
-.input {
+.label__input {
     /* Hide the input */
     display: none;
 }
 
-.circle {
+.label__circle {
     /* Rounded border */
     border-radius: 9999px;
 

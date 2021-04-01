@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -23,9 +23,9 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div class="container">
+<div class="banner">
     <!-- Tells visitors that the website uses cookie -->
-    <div class="container__content">
+    <div class="banner__content">
         ...
     </div>
 
@@ -34,7 +34,7 @@ html={`
 </div>
 `}
 css={`
-.container {
+.banner {
     /* Banner is displayed at the bottom */
     bottom: 0;
     left: 0;
@@ -47,7 +47,7 @@ css={`
     justify-content: center;
 }
 
-.container__content {
+.banner__content {
     /* Take available width */
     flex: 1;
 }

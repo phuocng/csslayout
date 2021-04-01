@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -20,7 +20,7 @@ interface ItemProps {
 }
 
 const Details: React.FC<{}> = () => {
-    const [activeItem, setActiveItem] = useState(-1);
+    const [activeItem, setActiveItem] = React.useState(-1);
 
     const Item: React.FC<ItemProps> = ({ index, title, children }) => {
         const isOpened = (index === activeItem);

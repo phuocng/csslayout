@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
@@ -22,11 +22,9 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div class="container">
+<div class="pagination">
     <!-- Pagination item -->
-    <div style="
-        
-    ">
+    <div class="pagination__item">
         ...
     </div>
 
@@ -35,7 +33,7 @@ html={`
 </div>
 `}
 css={`
-.container {
+.pagination {
     display: flex;
 
     /* Border */
@@ -43,7 +41,7 @@ css={`
     border-radius: 4px;
 }
 
-.item {
+.pagination__item {
     /* Center the content */
     align-items: center;
     display: flex;
@@ -52,7 +50,7 @@ css={`
     /* Right border */
     border-right: 1px solid rgba(0, 0, 0, 0.3);
 }
-.item + .item {
+.pagination__item + .pagination__item {
     /* No right border */
     border-right: none;
 }

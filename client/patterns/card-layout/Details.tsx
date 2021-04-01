@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -22,9 +22,9 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div class="container">
+<div class="cards">
     <!-- A card with given width -->
-    <div class="card">
+    <div class="cards__item">
         ...
     </div>
 
@@ -33,7 +33,7 @@ html={`
 </div>
 `}
 css={`
-.container {
+.cards {
     display: flex;
 
     /* Put a card in the next row when previous cards take all width */
@@ -42,7 +42,8 @@ css={`
     margin-left: -8px;
     margin-right: -8px;
 }
-.card {
+
+.cards__item {
     /* There will be 4 cards per row */
     flex-basis: 25%;
 

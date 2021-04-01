@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
@@ -57,15 +57,14 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div class="container">
+<div class="navigation">
     <!-- The trigger element that will show all circles when user clicks it -->
     ...
 
     <!-- A circle menu item -->
-    <div class="item">
-        <!-- The inner -->
-        <div class="inner">
-            <!-- The content -->
+    <div class="navigation__circle">
+        <!-- The content -->
+        <div class="navigation__content">            
             ...
         </div>
     </div>
@@ -75,10 +74,11 @@ html={`
 </div>
 `}
 css={`
-.container {
+.navigation {
     position: relative;
 }
-.item {
+
+.navigation__circle {
     /* Position */
     position: absolute;
     top: 0;
@@ -95,7 +95,8 @@ css={`
     height: 32px;
     width: 32px;
 }
-.inner {
+
+.navigation__content {
     /*
     Rotate it to make it displayed vertically
     Replace -0deg with -60deg, -180deg, -240deg, -300deg for another item

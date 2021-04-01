@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
@@ -11,7 +11,7 @@ import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
-    const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = React.useState(false);
     const toggle = () => setVisible((v) => !v);
 
     return (
@@ -25,7 +25,7 @@ const Details: React.FC<{}> = () => {
 html={`
 <div class="container">
     <!-- Text input -->
-    <input type="text" class="input" />
+    <input type="text" class="container__input" />
 
     <!-- Toggle button sticks to the right -->
     <button>
@@ -41,7 +41,7 @@ css={`
     border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.input {
+.container__input {
     border-color: transparent;
     /* Take available width */
     flex: 1;

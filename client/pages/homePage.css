@@ -1,6 +1,6 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
  
 .home__features {
@@ -10,19 +10,18 @@
     max-width: 48rem;
 }
 .home__feature {
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
-    width: 33.333%;
+    width: 50%;
 }
-.home__feature:not(:nth-child(3n)) {
-    border-right: 1px solid var(--text-color);
-}
-.home__feature:nth-child(-n+3) {
-    border-bottom: 1px solid var(--text-color);
+.home__icon {
+    color: var(--color-blue-6);
+    margin-bottom: 1rem;
 }
 .home__title {
-    font-size: 2rem;
-    font-weight: 500;
+    color: var(--color-gray-5);
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .home__patterns {
@@ -44,6 +43,7 @@
     z-index: 10;
 }
 .home__heading {
+    color: var(--color-gray-9);
     font-size: 4rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -51,17 +51,19 @@
 .home__explore {
     background-color: var(--background-color);
     border-radius: 0.4rem;
-    color: var(--text-color);
-    font-size: 2rem;
+    color: var(--color-gray-9);
+    font-size: 1.5rem;
+    font-weight: 600;
     padding: 1rem 2rem;
 }
 
 .home__sliders {
     align-items: center;
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
+    height: 180rem;
     opacity: 0.4;
-    width: 192rem;
 }
 .home__slide {
     animation: slide 20s linear infinite;
@@ -69,15 +71,23 @@
     flex-wrap: wrap;
     height: 60rem;
     justify-content: center;
-    width: 64rem;
+    width: 60rem;
     will-change: transform;
+}
+
+.home__soon {
+    background: #1e1d6e;
+    border-radius: 9999px;
+    color: #fff;
+    display: inline-block;
+    padding: 0.125rem 1rem;
 }
 
 @keyframes slide {
     from {
-        transform: translateX(0);
+        transform: translateY(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateY(-100%);
     }
 }

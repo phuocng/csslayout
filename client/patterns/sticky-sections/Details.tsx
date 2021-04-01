@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -25,7 +25,7 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <div class="container">
-    <section class="section">
+    <section class="container__section">
         ...
     </section>
 
@@ -38,7 +38,8 @@ css={`
     height: 100%;
     overflow: scroll;
 }
-.section {
+
+.container__section {
     /* Take full size */
     height: 100%;
     width: 100%;

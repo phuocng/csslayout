@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -41,10 +41,10 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div class="container">
+<div class="avatars">
     <!-- Avatar item -->
-    <div class="container__item">
-        <div class="container__avatar">
+    <div class="avatars__item">
+        <div class="avatars__image">
             <!-- Image -->
             ...
         </div>
@@ -55,16 +55,16 @@ html={`
 </div>
 `}
 css={`
-.container {
+.avatars {
     display: flex;
 }
 
-.container__item {
+.avatars__item {
     /* Nagative margin make avatar overlap to previous one */
     margin-left: -4px;
 }
 
-.container__avatar {
+.avatars__image {
     /* Add a white curve between avatars */
     box-shadow: 0 0 0 4px #FFF;
 

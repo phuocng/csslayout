@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -29,7 +29,7 @@ html={`
     </li>
 
     <!-- Navigation item that sticks to the right -->
-    <li class="item-right">
+    <li class="container__item--right">
         <a href="">...</a>
     </li>
 </ul>
@@ -45,7 +45,7 @@ css={`
     margin: 0;
 }
 
-.item-right {
+.container__item--right {
     /* Sticks to the right */
     margin-left: auto;
 }

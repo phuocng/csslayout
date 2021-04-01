@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
@@ -23,7 +23,7 @@ const Details: React.FC<{}> = () => {
 html={`
 <div class="container">
     <!-- The close button -->
-    <button class="close">
+    <button class="container__close">
         ...
     </button>
 
@@ -48,7 +48,7 @@ css={`
     justify-content: center;
 }
 
-.close {
+.container__close {
     /* Shown at top right corner */
     position: absolute;
     right: 16px;

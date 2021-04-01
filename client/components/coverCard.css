@@ -1,17 +1,17 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
 .cover {
     align-items: center;
-    color: var(--text-color);
+    color: var(--color-gray-9);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 1rem;
     text-decoration: none;
-    width: 50%;
+    width: 7rem;
 }
 .cover__name {
     font-weight: normal;
@@ -20,18 +20,8 @@
     text-align: center;
 }
 
-@media (min-width: 640px) {
-    .cover {
-        width: 25%;
-    }
-}
 @media (min-width: 768px) {
     .cover {
-        width: 20%;
-    }
-}
-@media (min-width: 1024px) {
-    .cover {
-        width: 16.666666666666668%;
+        width: 8rem;
     }
 }

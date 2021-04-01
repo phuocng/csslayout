@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
@@ -15,7 +15,7 @@ interface DotProps {
 }
 
 const Details: React.FC<{}> = () => {
-    const [activeItem, setActiveItem] = useState(0);
+    const [activeItem, setActiveItem] = React.useState(0);
 
     const Dot: React.FC<DotProps> = ({ index }) => {
         const isActive = index === activeItem;
@@ -45,15 +45,15 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<ul class="container">
-    <li class="item" />
+<ul class="dots">
+    <li class="dots__item"></li>
 
     <!-- Repeat other dots -->
     ...
 </div>
 `}
 css={`
-.container {
+.dots {
     /* Center the content */
     align-items: center;
     display: flex;
@@ -64,7 +64,8 @@ css={`
     margin: 0;
     padding: 0;
 }
-.item {
+
+.dots__item {
     /* Rounded border */
     border-radius: 9999px;
     height: 12px;

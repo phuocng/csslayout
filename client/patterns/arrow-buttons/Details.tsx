@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -22,43 +22,43 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <!-- Up arrow button -->
-<button class="container">
+<button class="button">
     <!-- Arrow -->
-    <div class="container__arrow container__arrow--up"></div>
+    <div class="button__arrow button__arrow--up"></div>
 
     <!-- Content -->
     ...
 </button>
 
 <!-- Right arrow button -->
-<button class="container">
+<button class="button">
     <!-- Content -->
     ...
 
     <!-- Arrow -->
-    <div class="container__arrow container__arrow--right"></div>
+    <div class="button__arrow button__arrow--right"></div>
 </button>
 
 <!-- Down arrow button -->
-<button class="container">
+<button class="button">
     <!-- Arrow -->
-    <div class="container__arrow container__arrow--down"></div>
+    <div class="button__arrow button__arrow--down"></div>
 
     <!-- Content -->
     ...
 </button>
 
 <!-- Left arrow button -->
-<button class="container">
+<button class="button">
     <!-- Arrow -->
-    <div class="container__arrow container__arrow--left"></div>
+    <div class="button__arrow button__arrow--left"></div>
 
     <!-- Content -->
     ...
 </button>
 `}
 css={`
-.container {
+.button {
     /* Center the content */
     align-items: center;
     display: flex;
@@ -68,7 +68,7 @@ css={`
     padding: 8px;
 }
 
-.container__arrow {
+.button__arrow {
     /* Transparent background */
     background-color: transparent;
 
@@ -77,28 +77,28 @@ css={`
     width: 12px;
 }
 
-.container__arrow--up {
+.button__arrow--up {
     /* Edges */
     border-left: 1px solid rgba(0, 0, 0, 0.3);
     border-top: 1px solid rgba(0, 0, 0, 0.3);
     transform: translateY(25%) rotate(45deg);
 }
 
-.container__arrow--right {
+.button__arrow--right {
     /* Edges */
     border-right: 1px solid rgba(0, 0, 0, 0.3);
     border-top: 1px solid rgba(0, 0, 0, 0.3);
     transform: translateX(-25%) rotate(45deg);
 }
 
-.container__arrow--down {
+.button__arrow--down {
     /* Edges */
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     border-right: 1px solid rgba(0, 0, 0, 0.3);
     transform: translateY(-25%) rotate(45deg);
 }
 
-.container__arrow--left {
+.button__arrow--left {
     /* Edges */
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     border-left: 1px solid rgba(0, 0, 0, 0.3);

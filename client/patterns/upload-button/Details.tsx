@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
@@ -26,10 +26,10 @@ const Details: React.FC<{}> = () => {
 html={`
 <div class="container">
     <!-- The real file input -->
-    <input type="file" class="input" />
+    <input type="file" class="container__input" />
 
     <!-- The upload icon -->
-    <div class="icon">...</div>
+    <div class="container__icon">...</div>
 
     <!-- The label -->
     ...
@@ -48,7 +48,7 @@ css={`
     border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.input {
+.container__input {
     /* Take the full size */
     height: 100%;
     left: 0;
@@ -60,7 +60,7 @@ css={`
     opacity: 0;
 }
 
-.icon {
+.container__icon {
     margin-right: 8px
 }
 `}

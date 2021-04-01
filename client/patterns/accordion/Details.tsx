@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -20,7 +20,7 @@ interface ItemProps {
 }
 
 const Details: React.FC<{}> = () => {
-    const [activeItem, setActiveItem] = useState(1);
+    const [activeItem, setActiveItem] = React.useState(1);
 
     const Item: React.FC<ItemProps> = ({ index, title, children }) => {
         const isOpened = (index === activeItem);
@@ -66,22 +66,22 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <!-- Container -->
-<div class="container">
+<div class="accordion">
     <!-- Each accordion item -->
-    <div class="item">
+    <div class="accordion__item">
         <!-- Heading -->
-        <div class="header">
+        <div class="accordion__header">
             <!-- The toggle icon -->
-            <div class="toggle">...</div>
+            <div class="accordion__toggle">...</div>
 
             <!-- The title -->
-            <div class="title">
+            <div class="accordion__title">
                 ...
             </div>
         </div>
 
         <!-- The content -->
-        <div class="content">
+        <div class="accordion__content">
             ...
         </div>
     </div>
@@ -91,18 +91,18 @@ html={`
 </div>
 `}
 css={`
-.container {
+.accordion {
     /* Border */
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-bottom-color: transparent;
     border-radius: 4px;
 }
 
-.item {
+.accordion__item {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.header {
+.accordion__header {
     /* Center the content horizontally */
     align-items: center;
     display: flex;
@@ -110,22 +110,25 @@ css={`
     cursor: pointer;
     padding: 16px;
 }
-.toggle {
+
+.accordion__toggle {
     margin-right: 12px;
 }
-.title {
+
+.accordion__title {
     /* Take remaining width */
     flex: 1;
 }
 
-.content {
+.accordion__content {
     /* For not selected item */
     display: none;
 
     border-top: 1px solid rgba(0, 0, 0, 0.3);
     padding: 16px;
 }
-.content.selected {
+
+.accordion__content--selected {
     /* For selected item */
     display: block;
 }

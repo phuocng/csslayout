@@ -1,18 +1,20 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
 .demo {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 0.25rem;
 }
+
 .demo__live {
     height: 32rem;
 }
+
 .demo__css,
 .demo__html {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
     height: 16rem;
     overflow: auto;
 }

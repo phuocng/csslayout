@@ -1,3 +1,8 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 .header {
     background-color: var(--background-color);
 }
@@ -11,6 +16,6 @@
     margin-right: auto;
 }
 .header__nav a {
-    color: var(--text-color);
+    color: var(--color-gray-9);
     margin-left: 1rem;
 }

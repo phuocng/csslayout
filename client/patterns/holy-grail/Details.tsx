@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
@@ -26,15 +26,15 @@ html={`
     <header>
         ...
     </header>
-    <main class="main">
+    <main class="container__main">
         <!-- Left sidebar -->
-        <aside class="left">...</aside>
+        <aside class="container__left">...</aside>
 
         <!-- Main content -->
-        <article class="middle">...</article>
+        <article class="container__middle">...</article>
 
         <!-- Right sidebar -->
-        <nav class="right">...</nav>
+        <nav class="container__right">...</nav>
     </main>
     <footer>
         ...
@@ -46,7 +46,8 @@ css={`
     display: flex;
     flex-direction: column;
 }
-.main {
+
+.container__main {
     /* Take the remaining height */
     flex-grow: 1;
 
@@ -54,14 +55,17 @@ css={`
     display: flex;
     flex-direction: row;
 }
-.left {
+
+.container__left {
     width: 25%;
 }
-.middle {
+
+.container__middle {
     /* Take the remaining width */
     flex-grow: 1;
 }
-.right {
+
+.container__right {
     width: 20%;
 }
 `}

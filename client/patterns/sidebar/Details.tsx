@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
@@ -24,12 +24,12 @@ const Details: React.FC<{}> = () => {
 html={`
 <div class="container">
     <!-- Sidebar -->
-    <aside class="sidebar">
+    <aside class="container__sidebar">
         ...
     </aside>
 
     <!-- Main -->
-    <main class="main">
+    <main class="container__main">
         ...
     </main>
 </div>
@@ -38,10 +38,12 @@ css={`
 .container {
     display: flex;
 }
-.sidebar {
+
+.container__sidebar {
     width: 30%;
 }
-.main {
+
+.container__main {
     /* Take the remaining width */
     flex: 1;
 

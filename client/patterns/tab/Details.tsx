@@ -1,9 +1,9 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
@@ -16,7 +16,7 @@ interface TabProps {
 }
 
 const Details: React.FC<{}> = () => {
-    const [activeTab, setActiveTab] = useState(0);
+    const [activeTab, setActiveTab] = React.useState(0);
 
     const Tab: React.FC<TabProps> = ({ tabIndex, children }) => {
         const isActive = tabIndex === activeTab;
@@ -49,12 +49,12 @@ const Details: React.FC<{}> = () => {
 html={`
 <div class="tabs">
     <!-- Active tab -->
-    <div class="tab--active">
+    <div class="tabs__tab--active">
         ...
     </div>
 
     <!-- Inactive tab -->
-    <div class="tab--inactive">
+    <div class="tabs__tab--inactive">
         ...
     </div>
 </div>
@@ -67,7 +67,7 @@ css={`
     justify-content: center;
 }
 
-.tab--active {
+.tabs__tab--active {
     /* Border */
     border: 1px solid rgba(0, 0, 0, 0.3);
     /* Hide the bottom border */
@@ -78,7 +78,7 @@ css={`
     border-top-right-radius: 2px;
 }
 
-.tab--inactive {
+.tabs__tab--inactive {
     /* Has only the bottom border */
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
