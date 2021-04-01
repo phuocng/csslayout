@@ -44,6 +44,7 @@ a {
 
 /* Hero */
 .hero {
+    --current-background-color: var(--background-color);
     background: var(--background-color);
     display: flex;
     justify-content: center;

@@ -31,7 +31,7 @@ const Cover: React.FC<{}> = () => {
                 >
                     <div
                         style={{
-                            backgroundColor: '#FFF',
+                            backgroundColor: 'var(--current-background-color, #FFF)',
                             borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
                             borderRight: '1px solid rgba(0, 0, 0, 0.3)',
                             height: '10px',
