@@ -28,9 +28,9 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div class="container">
+<div class="modal">
     <!-- Header -->
-    <div class="container__header">
+    <div class="modal__header">
         <!-- Title -->
         ...
         <!-- Close icon sticks to the right -->
@@ -41,26 +41,26 @@ html={`
     ...
 
     <!-- Footer -->
-    <div class="container__footer">
+    <div class="modal__footer">
         ...
     </div>
 </div>
 `}
 css={`
-.container {
+.modal {
     /* Border */
     border: 1px solid rgba(0, 0, 0.3);
     border-radius: 4px;
 }
 
-.container__header {
+.modal__header {
     display: flex;
     justify-content: space-between;
     /* Border */
     border-bottom: 1px solid rgba(0, 0, 0.3);
 }
 
-.container__footer {
+.modal__footer {
     display: flex;
     /* Push the buttons to the right */
     justify-content: flex-end;

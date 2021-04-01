@@ -25,10 +25,10 @@ html={`
 <!-- Row -->
 <div class="row">
     <!--Cell with given width. Replace 25% with whatever you want -->
-    <div class="cell width-1/4">25%</div>
+    <div class="row__cell row__cell--1/4">25%</div>
 
     <!-- Cell that takes remaining width -->
-    <div class="cell width-fill">
+    <div class="row__cell row__cell--fill">
         ...
     </div>
 </div>
@@ -40,16 +40,18 @@ css={`
     margin-left: -8px;
     margin-right: -8px;
 }
-.cell {
+
+.row__cell {
     padding-left: 8px;
     padding-right: 8px;
 }
 
 /* Cell with given width. Replace 25% with whatever you want */
-.cell.width-1/4 {
+.row__cell--1/4 {
     flex: 0 0 25%;
 }
-.cell.width-fill {
+
+.row__cell--fill {
     flex: 1;
 }
 `}

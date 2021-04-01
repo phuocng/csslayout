@@ -29,10 +29,10 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <label class="label">
-    <input type="checkbox" class="input" />
+    <input type="checkbox" class="label__input" />
 
     <!-- Circle -->
-    <div class="circle"></div>
+    <div class="label__circle"></div>
 </label>
 `}
 css={`
@@ -57,12 +57,12 @@ css={`
     justify-content: flex-end;
 }
 
-.input {
+.label__input {
     /* Hide the input */
     display: none;
 }
 
-.circle {
+.label__circle {
     /* Rounded border */
     border-radius: 9999px;
 

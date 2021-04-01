@@ -21,14 +21,14 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<button class="container">
-    <div class="container__line container__line--first"></div>
+<button class="button">
+    <div class="button__line button__line--first"></div>
 
-    <div class="container__line container__line--second"></div>
+    <div class="button__line button__line--second"></div>
 </button>
 `}
 css={`
-.container {
+.button {
     /* Reset */
     background-color: transparent;
     border-color: transparent;
@@ -44,7 +44,7 @@ css={`
     position: relative;
 }
 
-.container__line {
+.button__line {
     /* Background color */
     background-color: rgba(0, 0, 0, 0.3);
 
@@ -56,7 +56,7 @@ css={`
     width: 100%;
 }
 
-.container__line--first {
+.button__line--first {
     /* Position */
     left: 0px;
     top: 50%;
@@ -67,7 +67,7 @@ css={`
     width: 100%;
 }
 
-.container__line--second {
+.button__line--second {
     /* Position */
     left: 50%;
     top: 0px;

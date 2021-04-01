@@ -25,12 +25,12 @@ const Details: React.FC<{}> = () => {
 html={`
 <div class="container">
     <!-- Left content -->
-    <div class="half">
+    <div class="container__half">
         ...
     </div>
 
     <!-- Right content -->
-    <div class="half">
+    <div class="container__half">
         ...
     </div>
 </div>
@@ -39,7 +39,8 @@ css={`
 .container {
     display: flex;
 }
-.half {
+
+.container__half {
     flex: 1;
 }
 `}

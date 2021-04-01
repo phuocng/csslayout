@@ -45,15 +45,15 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<ul class="container">
-    <li class="item" />
+<ul class="dots">
+    <li class="dots__item"></li>
 
     <!-- Repeat other dots -->
     ...
 </div>
 `}
 css={`
-.container {
+.dots {
     /* Center the content */
     align-items: center;
     display: flex;
@@ -64,7 +64,8 @@ css={`
     margin: 0;
     padding: 0;
 }
-.item {
+
+.dots__item {
     /* Rounded border */
     border-radius: 9999px;
     height: 12px;

@@ -26,7 +26,7 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<ul class="container">
+<ul class="dropdown">
     <li>Home</li>
     <li>
         <div>Patterns</div>
@@ -53,7 +53,7 @@ html={`
 </ul>
 `}
 css={`
-.container {
+.dropdown {
     /* Border */
     border: 1px solid rgba(0, 0, 0, 0.3);
     display: flex;
@@ -64,7 +64,7 @@ css={`
     padding: 0;
 }
 
-.container li {
+.dropdown li {
     /* Spacing */
     padding: 8px;
 
@@ -73,7 +73,7 @@ css={`
 }
 
 /* The sub dropdown */
-.container ul {
+.dropdown ul {
     /* Border */
     border: 1px solid rgba(0, 0, 0, 0.3);
 
@@ -95,19 +95,19 @@ css={`
 }
 
 /* The second level sub dropdown */
-.container ul ul {
+.dropdown ul ul {
     left: 100%;
     position: absolute;
     top: 0;
 }
 
 /* Change background color of list item when being hovered */
-.container li:hover {
+.dropdown li:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Show the direct sub dropdown when hovering the list item */
-.container li:hover > ul {
+.dropdown li:hover > ul {
     display: block;
 }
 `}

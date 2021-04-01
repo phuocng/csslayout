@@ -25,7 +25,7 @@ const Details: React.FC<{}> = () => {
                 <BrowserFrame
 html={`
 <div class="container">
-    <section class="section">
+    <section class="container__section">
         ...
     </section>
 
@@ -38,7 +38,8 @@ css={`
     height: 100%;
     overflow: scroll;
 }
-.section {
+
+.container__section {
     /* Take full size */
     height: 100%;
     width: 100%;

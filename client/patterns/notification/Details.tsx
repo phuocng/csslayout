@@ -27,7 +27,7 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div class="container">
+<div class="notification">
     <!-- Content -->
     ...
 
@@ -36,7 +36,7 @@ html={`
 </div>
 `}
 css={`
-.container {
+.notification {
     display: flex;
     justify-content: space-between;
 }

@@ -29,17 +29,17 @@ const Details: React.FC<{}> = () => {
 html={`
 <div class="container">
     <!-- Input -->
-    <input type="text" class="input" />
+    <input type="text" class="container__input" />
 
     <!-- Buttons container -->
-    <div class="buttons">
+    <div class="container__buttons">
         <!-- Up button -->
-        <button class="button">
+        <button class="container__button">
             ...
         </button>
 
         <!-- Down button -->
-        <button class="button">
+        <button class="container__button">
             ...
         </button>
     </div>
@@ -52,21 +52,21 @@ css={`
     display: flex;
 }
 
-.input {
+.container__input {
     border-color: transparent;
     margin-right: 4px;
     padding: 4px;
     width: 100px;
 }
 
-.buttons {
+.container__buttons {
     /* Content is centered vertically */
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.button {
+.container__button {
     border-color: transparent;
     /* Make buttons have the same height */
     flex: 1,

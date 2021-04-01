@@ -23,7 +23,7 @@ const Details: React.FC<{}> = () => {
 html={`
 <div class="container">
     <!-- The close button -->
-    <button class="close">
+    <button class="container__close">
         ...
     </button>
 
@@ -48,7 +48,7 @@ css={`
     justify-content: center;
 }
 
-.close {
+.container__close {
     /* Shown at top right corner */
     position: absolute;
     right: 16px;

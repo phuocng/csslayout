@@ -30,21 +30,21 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div class="container">
+<div class="stepper">
     <!-- Minus button -->
-    <button class="button">-</button>
+    <button class="stepper__button">-</button>
 
     <!-- Input container -->
-    <div class="input-container">
-        <input type="text" class="input" />
+    <div class="stepper__content">
+        <input type="text" class="stepper__input" />
     </div>
 
     <!-- Plus button -->
-    <button class="button">+</button>
+    <button class="stepper__button">+</button>
 </div>
 `}
 css={`
-.container {
+.stepper {
     display: flex;
 
     /* Border */
@@ -55,7 +55,7 @@ css={`
     width: 128px;
 }
 
-.button {
+.stepper__button {
     /* Center the content */
     align-items: center;
     display: flex;
@@ -65,11 +65,11 @@ css={`
     width: 32px;
 }
 
-.input-container {
-    flex: 1
+.stepper__content {
+    flex: 1;
 }
 
-.input {
+.stepper__input {
     /* Take full size of its container */
     height: 100%;
     width: 100%;

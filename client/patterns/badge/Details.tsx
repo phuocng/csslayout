@@ -21,12 +21,12 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div class="container">
+<div class="badge">
     ...
 </div>
 `}
 css={`
-.container {
+.badge {
     /* Center the content */
     align-items: center;
     display: flex;

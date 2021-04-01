@@ -29,7 +29,7 @@ html={`
     </li>
 
     <!-- Navigation item that sticks to the right -->
-    <li class="item-right">
+    <li class="container__item--right">
         <a href="">...</a>
     </li>
 </ul>
@@ -45,7 +45,7 @@ css={`
     margin: 0;
 }
 
-.item-right {
+.container__item--right {
     /* Sticks to the right */
     margin-left: auto;
 }

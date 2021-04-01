@@ -25,7 +25,7 @@ const Details: React.FC<{}> = () => {
 html={`
 <div class="container">
     <!-- Text input -->
-    <input type="text" class="input" />
+    <input type="text" class="container__input" />
 
     <!-- Toggle button sticks to the right -->
     <button>
@@ -41,7 +41,7 @@ css={`
     border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.input {
+.container__input {
     border-color: transparent;
     /* Take available width */
     flex: 1;

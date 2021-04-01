@@ -24,12 +24,12 @@ const Details: React.FC<{}> = () => {
 html={`
 <div class="container">
     <!-- Sidebar -->
-    <aside class="sidebar">
+    <aside class="container__sidebar">
         ...
     </aside>
 
     <!-- Main -->
-    <main class="main">
+    <main class="container__main">
         ...
     </main>
 </div>
@@ -38,10 +38,12 @@ css={`
 .container {
     display: flex;
 }
-.sidebar {
+
+.container__sidebar {
     width: 30%;
 }
-.main {
+
+.container__main {
     /* Take the remaining width */
     flex: 1;
 

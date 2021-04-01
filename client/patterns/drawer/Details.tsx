@@ -26,10 +26,10 @@ const Details: React.FC<{}> = () => {
 html={`
 <div class="container">
     <!-- Backdrop -->
-    <div class="overlay"></div>
+    <div class="container__overlay"></div>
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="container__sidebar">
         ...
     </div>
 </div>
@@ -45,7 +45,8 @@ css={`
 
     z-index: 9999;
 }
-.overlay {
+
+.container__overlay {
     /* Take full size */
     height: 100%;
     left: 0;
@@ -58,7 +59,8 @@ css={`
 
     z-index: -1;
 }
-.sidebar {
+
+.container__sidebar {
     /* Take full height */
     height: 100%;
     left: 0;

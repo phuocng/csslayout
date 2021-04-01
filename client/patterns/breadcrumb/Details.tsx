@@ -21,24 +21,25 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div class="container">
+<div class="breadcrumb">
     <!-- Breadcrumb item -->
     <a>...</a>
 
     <!-- Separator -->
-    <div class="separator">/</div>
+    <div class="breadcrumb__separator">/</div>
 
     <!-- Repeated items and separators -->
     ...
 </div>
 `}
 css={`
-.container {
+.breadcrumb {
     /* Content is centered vertically */
     align-items: center;
     display: flex;
 }
-.separator {
+
+.breadcrumb__separator {
     margin: 0 8px;
 }
 `}

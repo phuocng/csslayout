@@ -26,15 +26,15 @@ const Details: React.FC<{}> = () => {
                 </div>
                 <BrowserFrame
 html={`
-<div class="container">
-    <div class="container__letters">
+<div class="avatar">
+    <div class="avatar__letters">
         <!-- The letters -->
         ...
     </div>
 </div>
 `}
 css={`
-.container {
+.avatar {
     /* Center the content */
     display: inline-block;
     vertical-align: middle;
@@ -52,7 +52,7 @@ css={`
     width: 48px;
 }
 
-.container__letters {
+.avatar__letters {
     /* Center the content */
     left: 50%;
     position: absolute;

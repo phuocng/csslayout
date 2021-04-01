@@ -24,12 +24,12 @@ const Details: React.FC<{}> = () => {
 html={`
 <div class="container">
     <!-- Column -->
-    <div class="column">
+    <div class="container__column">
         <!-- Cover -->
         ...
 
         <!-- Content -->
-        <div class="content">
+        <div class="container__content">
             ...
         </div>
 
@@ -45,7 +45,8 @@ css={`
 .container {
     display: flex;
 }
-.column {
+
+.container__column {
     flex: 1;
     /* Space between columns */
     margin: 0 8px;
@@ -54,7 +55,8 @@ css={`
     display: flex;
     flex-direction: column;
 }
-.content {
+
+.container__content {
     /* Take available height */
     flex: 1;
 }

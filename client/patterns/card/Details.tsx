@@ -23,31 +23,31 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div class="container">
+<div class="card">
     <!-- Cover -->
-    <div class="container__cover">
+    <div class="card__cover">
         ...
     </div>
 
     <!-- Content -->
-    <div class="container__content">
+    <div class="card__content">
         ...
     </div>
     ...
 </div>
 `}
 css={`
-.container {
+.card {
     display: flex;
     flex-direction: column;
 }
 
-.container__cover {
+.card__cover {
     height: 150px;
     width: 100%;
 }
 
-.container__content {
+.card__content {
     /* Take available height */
     flex: 1;
 }

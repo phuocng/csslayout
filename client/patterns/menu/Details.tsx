@@ -25,39 +25,42 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<div class="container">
+<div class="menu">
     <!-- Normal menu item -->
-    <div class="item">
+    <div class="menu__item">
         ...
     </div>
 
     <!-- With hot key -->
-    <div class="item with-shortcut">
+    <div class="menu__item">
         <!-- Label -->
         ...
         <!-- Hot key -->
-        ...
+        <div class="menu__hotkey">
+            ...
+        </div>
     </div>
 
     <!-- With image and hot key -->
-    <div class="item with-shortcut">
-        <div class="with-image">
-            <!-- Image -->
-            ...
-            <!-- Label -->
-            ...
-        </div>
+    <div class="menu__item">
+        <!-- Image -->
+        ...
+
+        <!-- Label -->
+        ...
 
         <!-- Hot key -->
-        ...
+        <div class="menu__hotkey">
+            ...
+        </div>
     </div>
 
     <!-- Divider -->
-    <div class="divider"></div>
+    <div class="menu__divider"></div>
 </div>
 `}
 css={`
-.container {
+.menu {
     display: flex;
     flex-direction: column;
 
@@ -66,23 +69,18 @@ css={`
     border-radius: 4px;
 }
 
-.item {
+.menu__item {
     /* Center the content horizontally */
     align-items: center;
     display: flex;
 }
 
-.with-shortcut {
+.menu__hotkey {
     /* Push the hot key to the right */
-    justify-content: space-between;
+    margin-left: auto;
 }
 
-.with-image {
-    align-items: center;
-    display: flex;
-}
-
-.divider {
+.menu__divider {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     height: 1px;
 }

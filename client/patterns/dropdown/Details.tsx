@@ -34,7 +34,7 @@ html={`
     <button>...</button>
 
     <!-- The content -->
-    <div class="dropdown-content">
+    <div class="dropdown__content">
         ...
     </div>
 </div>
@@ -45,7 +45,7 @@ css={`
 }
 
 /* Hide the dropdown's content by default -->
-.dropdown-content {
+.dropdown__content {
     display: none;
 
     /* Position it right below the trigger element */
@@ -64,7 +64,7 @@ css={`
 }
 
 /* Show the content when hover on the container -->
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown__content {
     display: block;
 }
 `}
