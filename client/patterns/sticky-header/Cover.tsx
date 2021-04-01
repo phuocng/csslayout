@@ -3,7 +3,7 @@
  * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 
 import Frame from '../../placeholders/Frame';
 import Line from '../../placeholders/Line';

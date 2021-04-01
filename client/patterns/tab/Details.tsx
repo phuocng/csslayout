@@ -3,7 +3,7 @@
  * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
@@ -16,7 +16,7 @@ interface TabProps {
 }
 
 const Details: React.FC<{}> = () => {
-    const [activeTab, setActiveTab] = useState(0);
+    const [activeTab, setActiveTab] = React.useState(0);
 
     const Tab: React.FC<TabProps> = ({ tabIndex, children }) => {
         const isActive = tabIndex === activeTab;

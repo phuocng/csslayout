@@ -3,7 +3,7 @@
  * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -12,7 +12,7 @@ import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
-    const [value, setValue] = useState(0);
+    const [value, setValue] = React.useState(0);
     const decrease = () => setValue(value - 1);
     const increase = () => setValue(value + 1);
     const change = (e: React.ChangeEvent<HTMLInputElement>) => {

@@ -3,15 +3,15 @@
  * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React, { useEffect, useRef } from 'react';
+import * as React from 'react';
 
 import './ad.css';
 
 const Ad: React.FC<{}> = () => {
-    const containerRef = useRef<HTMLDivElement | null>(null);
+    const containerRef = React.useRef<HTMLDivElement | null>(null);
     const source = 'https://cdn.carbonads.com/carbon.js?serve=CE7I6KQL&placement=csslayoutio';
 
-    useEffect(() => {
+    React.useEffect(() => {
         // Ignore if the code is reached in snapping mode
         if (navigator.userAgent === 'ReactSnap') {
             return;

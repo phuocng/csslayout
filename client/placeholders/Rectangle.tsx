@@ -3,7 +3,7 @@
  * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 
 interface RectangleProps {
     height?: number;

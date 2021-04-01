@@ -3,7 +3,7 @@
  * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import './radio-button-group.css';
@@ -19,7 +19,7 @@ interface RadioProps {
 }
 
 const Details: React.FC<{}> = () => {
-    const [selectedValue, setSelectedValue] = useState('1');
+    const [selectedValue, setSelectedValue] = React.useState('1');
 
     const Radio: React.FC<RadioProps> = ({ value, children }) => {
         const click = () => setSelectedValue(value);

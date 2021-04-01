@@ -3,7 +3,7 @@
  * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
@@ -11,7 +11,7 @@ import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
-    const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = React.useState(false);
     const toggle = () => setVisible((v) => !v);
 
     return (

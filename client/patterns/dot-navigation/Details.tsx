@@ -3,7 +3,7 @@
  * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
@@ -15,7 +15,7 @@ interface DotProps {
 }
 
 const Details: React.FC<{}> = () => {
-    const [activeItem, setActiveItem] = useState(0);
+    const [activeItem, setActiveItem] = React.useState(0);
 
     const Dot: React.FC<DotProps> = ({ index }) => {
         const isActive = index === activeItem;

@@ -3,7 +3,7 @@
  * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React, { useState } from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
@@ -12,7 +12,7 @@ import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = React.useState(false);
     const toggle = () => setChecked((c) => !c);
 
     return (

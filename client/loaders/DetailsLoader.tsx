@@ -4,7 +4,7 @@
  */
 
 import loadable, { LoadableComponent } from '@loadable/component';
-import React from 'react';
+import * as React from 'react';
 
 import './spinner.css';
 
