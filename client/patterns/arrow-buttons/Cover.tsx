@@ -23,7 +23,6 @@ const Cover: React.FC<{}> = () => {
                 <div style={{ height: '100%', position: 'relative', width: '100%' }}>
                     <div
                         style={{
-                            backgroundColor: '#FFF',
                             borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
                             borderTop: '1px solid rgba(0, 0, 0, 0.3)',
                             height: '16px',
@@ -36,7 +35,6 @@ const Cover: React.FC<{}> = () => {
                     />
                     <div
                         style={{
-                            backgroundColor: '#FFF',
                             borderRight: '1px solid rgba(0, 0, 0, 0.3)',
                             borderTop: '1px solid rgba(0, 0, 0, 0.3)',
                             height: '16px',
@@ -49,7 +47,6 @@ const Cover: React.FC<{}> = () => {
                     />
                     <div
                         style={{
-                            backgroundColor: '#FFF',
                             borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
                             borderRight: '1px solid rgba(0, 0, 0, 0.3)',
                             bottom: '-16px',
@@ -62,7 +59,6 @@ const Cover: React.FC<{}> = () => {
                     />
                     <div
                         style={{
-                            backgroundColor: '#FFF',
                             borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
                             borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
                             height: '16px',
