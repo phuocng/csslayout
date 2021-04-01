@@ -238,7 +238,7 @@ css={`
                 </BrowserFrame>
             </div>
 
-            <RelatedPatterns patterns={[Pattern.ArrowButtons]} />
+            <RelatedPatterns patterns={[Pattern.ArrowButtons, Pattern.Voting]} />
         </DetailsLayout>
     );
 };

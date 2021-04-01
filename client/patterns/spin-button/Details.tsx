@@ -134,7 +134,7 @@ css={`
                     </div>
                 </BrowserFrame>
             </div>
-            <RelatedPatterns patterns={[Pattern.StepperInput]} />
+            <RelatedPatterns patterns={[Pattern.StepperInput, Pattern.Voting]} />
         </DetailsLayout>
     );
 };
