@@ -63,7 +63,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     height: 180rem;
-    opacity: 0.4;
+    opacity: 0.8;
 }
 .home__slide {
     animation: slide 20s linear infinite;
