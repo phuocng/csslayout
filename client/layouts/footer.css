@@ -2,7 +2,7 @@
     padding: 2rem 0;
 }
 .footer__about {
-    border-bottom: 1px solid var(--text-color);
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
     display: flex;
     margin-bottom: 1rem;
     padding-bottom: 1rem;

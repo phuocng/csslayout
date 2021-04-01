@@ -10,15 +10,13 @@
     max-width: 48rem;
 }
 .home__feature {
-    padding: 0.5rem;
+    padding: 1rem;
     text-align: center;
     width: 50%;
 }
-.home__feature:not(:nth-child(2n)) {
-    border-right: 1px solid var(--text-color);
-}
-.home__feature:nth-child(-n+2) {
-    border-bottom: 1px solid var(--text-color);
+.home__icon {
+    color: #1e1d6e;
+    margin-bottom: 1rem;
 }
 .home__title {
     font-size: 1.5rem;
@@ -73,6 +71,14 @@
     justify-content: center;
     width: 60rem;
     will-change: transform;
+}
+
+.home__soon {
+    background: #1e1d6e;
+    border-radius: 9999px;
+    color: #fff;
+    display: inline-block;
+    padding: 0.125rem 1rem;
 }
 
 @keyframes slide {
