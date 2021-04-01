@@ -5,7 +5,7 @@
 
 :root {
     --background-color: #e7d900;
-    --text-color: #1e1d6e;
+    --text-color: #111827;
 } 
 body {
     font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -22,6 +22,7 @@ a {
 .container {
     margin: 0 auto;
     max-width: 64rem;
+    padding: 0 1rem;
 }
 .content {
     display: flex;
@@ -46,28 +47,28 @@ a {
     background: var(--background-color);
     display: flex;
     justify-content: center;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 .hero__logo {
     display: flex;
     justify-content: center;
 }
 .hero__logo img {
-    height: 16rem;
+    height: 12rem;
     object-fit: cover;
-    width: 24rem;
+    width: 20rem;
 }
 .hero__heading {
     color: var(--text-color);
-    font-size: 3rem;
-    margin: 2rem 0;
+    font-size: 2rem;
+    line-height: 1.5;
     text-align: center;
     text-transform: capitalize;
 }
 .hero__subheading {
     color: var(--text-color);
-    font-size: 2rem;
-    margin: 2rem 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
     text-align: center;
 }
 

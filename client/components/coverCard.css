@@ -11,7 +11,7 @@
     justify-content: flex-start;
     padding: 1rem;
     text-decoration: none;
-    width: 50%;
+    width: 7rem;
 }
 .cover__name {
     font-weight: normal;
@@ -20,18 +20,8 @@
     text-align: center;
 }
 
-@media (min-width: 640px) {
-    .cover {
-        width: 25%;
-    }
-}
 @media (min-width: 768px) {
     .cover {
-        width: 20%;
-    }
-}
-@media (min-width: 1024px) {
-    .cover {
-        width: 16.666666666666668%;
+        width: 8rem;
     }
 }

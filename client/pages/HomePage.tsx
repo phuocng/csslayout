@@ -51,12 +51,6 @@ const HomePage = () => {
                     <div className="home__feature">
                         <div className="home__title">Real Use Cases</div>
                     </div>
-                    <div className="home__feature">
-                        <div className="home__title">Good Practices</div>
-                    </div>
-                    <div className="home__feature">
-                        <div className="home__title">Accessibility</div>
-                    </div>
                 </div>
 
                 <section className="home__patterns">

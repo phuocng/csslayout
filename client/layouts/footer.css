@@ -1,5 +1,5 @@
 .footer {
-    padding: 2rem 0 4rem 0;
+    padding: 2rem 0;
 }
 .footer__about {
     border-bottom: 1px solid var(--text-color);
@@ -15,7 +15,6 @@
     color: var(--text-color);
 }
 .footer__grid {
-    display: flex;
     margin-left: -1rem;
     margin-right: -1rem;
 }
@@ -34,4 +33,9 @@
 }
 .footer__product a {
     color: var(--text-color);
+}
+@media (min-width: 640px) {
+    .footer__grid {
+        display: flex;
+    }
 }
