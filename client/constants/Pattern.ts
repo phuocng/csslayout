@@ -93,6 +93,7 @@ enum Pattern {
     UploadButton = 'Upload button',
     ValidationIcon = 'Validation icon',
     VideoBackground = 'Video background',
+    Voting = 'Voting',
     Watermark = 'Watermark',
     Wizard = 'Wizard',
 }

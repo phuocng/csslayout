@@ -142,6 +142,7 @@ const ExplorePage = () => {
                                 <CoverCard pattern={Pattern.Timeline} />
                                 <CoverCard pattern={Pattern.TriangleButtons} />
                                 <CoverCard pattern={Pattern.VideoBackground} />
+                                <CoverCard pattern={Pattern.Voting} />
                                 <CoverCard pattern={Pattern.Watermark} />
                             </div>
                         </section>

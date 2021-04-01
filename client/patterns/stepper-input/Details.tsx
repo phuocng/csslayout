@@ -147,7 +147,7 @@ css={`
                     </div>
                 </BrowserFrame>
             </div>
-            <RelatedPatterns patterns={[Pattern.SpinButton]} />
+            <RelatedPatterns patterns={[Pattern.SpinButton, Pattern.Voting]} />
         </DetailsLayout>
     );
 };
