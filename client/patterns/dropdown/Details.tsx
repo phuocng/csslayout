@@ -87,6 +87,7 @@ css={`
                         >
                             <button
                                 style={{
+                                    alignItems: 'center',
                                     border: '1px solid rgba(0, 0, 0, 0.3)',
                                     borderRadius: '4px',
                                     display: 'flex',
