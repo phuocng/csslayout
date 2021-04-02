@@ -9,6 +9,7 @@
 .p-tooltip:hover .p-tooltip-arrow,
 .p-tooltip:hover .p-tooltip-content {
     opacity: 1;
+    pointer-events: initial;
 }
 .p-tooltip-arrow {
     border: 8px solid transparent;
@@ -17,6 +18,7 @@
     height: 0;
     left: 50%;
     opacity: 0;
+    pointer-events: none;
     position: absolute;
     transform: translate(-50%, 8px);
     width: 0;
@@ -28,6 +30,7 @@
     bottom: 100%;
     left: 50%;
     opacity: 0;
+    pointer-events: none;
     position: absolute;
     transform: translate(-50%, -8px);
     z-index: 10;

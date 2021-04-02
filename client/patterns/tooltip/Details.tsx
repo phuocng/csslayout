@@ -47,15 +47,19 @@ css={`
     position: relative;
 }
 
-/* Show the arrow and content when hovering the trigger element */
+/* Show the arrow and content and restore pointer events when hovering the trigger element */
 .container:hover .container__arrow,
 .container:hover .container__content {
     opacity: 1;
+    pointer-events: initial;
 }
 
 .container__arrow {
     /* Invisible by default */
     opacity: 0;
+
+    /* To prevent accidental interactions with other elements  */
+    pointer-events: none;
 
     /* Border */
     border: 8px solid transparent;
@@ -78,6 +82,9 @@ css={`
 .container__content {
     /* Invisible by default */
     opacity: 0;
+
+    /* To prevent accidental interactions with other elements  */
+    pointer-events: none;
 
     /* Background color, must be the same as the border color of arrow */
     background-color: #00439e;
