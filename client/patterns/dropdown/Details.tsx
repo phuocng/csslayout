@@ -44,7 +44,7 @@ css={`
     position: relative;   
 }
 
-/* Hide the dropdown's content by default -->
+/* Hide the dropdown's content by default */
 .dropdown__content {
     display: none;
 
@@ -63,7 +63,7 @@ css={`
     width: 200px;
 }
 
-/* Show the content when hover on the container -->
+/* Show the content when hover on the container */
 .dropdown:hover .dropdown__content {
     display: block;
 }
@@ -87,6 +87,7 @@ css={`
                         >
                             <button
                                 style={{
+                                    alignItems: 'center',
                                     border: '1px solid rgba(0, 0, 0, 0.3)',
                                     borderRadius: '4px',
                                     display: 'flex',
