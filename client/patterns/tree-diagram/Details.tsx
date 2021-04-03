@@ -6,6 +6,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
+import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -13,18 +14,13 @@ import Square from '../../placeholders/Square';
 import './tree-diagram.css';
 
 const Details: React.FC<{}> = () => {
-    const [value, setValue] = React.useState(900);
-    const decrease = () => setValue(value - 1);
-    const increase = () => setValue(value + 1);
-
     return (
         <DetailsLayout pattern={Pattern.TreeDiagram}>
             <Helmet>
                 <meta name="description" content="Create a tree diagram with CSS" />
                 <meta name="keywords" content="css sitemap, css tree diagram" />
             </Helmet>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
+            <BrowserFrame
 html={`
 <div className="tree-diagram">
     <ul>
@@ -129,56 +125,57 @@ li.tree-diagram__root::before {
     border-right: none;
 }
 `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '0.5rem',
+                    }}
                 >
-                    <div
-                        style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '0.5rem',
-                        }}
-                    >
-                        <div className="tree-diagram">
-                            <ul>
-                                <li className="tree-diagram__root">
-                                    <Square size='2.5rem' />
-                                    <ul>
-                                        <li>
-                                            <Square size='2rem' />
-                                            <ul>
-                                                <li><Square size='1.5rem' /></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <Square size='2rem' />
-                                            <ul>
-                                                <li>
-                                                    <Square size='1.5rem' />
-                                                    <ul>
-                                                        <li><Square size='1rem' /></li>
-                                                        <li><Square size='1rem' /></li>
-                                                        <li><Square size='1rem' /></li>
-                                                    </ul>
-                                                </li>
-                                                <li><Square size='1.5rem' /></li>
-                                                <li>
-                                                    <Square size='1.5rem' />
-                                                    <ul>
-                                                        <li><Square size='1rem' /></li>
-                                                        <li><Square size='1rem' /></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><Square size='2rem' /></li>
-                                    </ul>
-                                </li>                                
-                            </ul>
-                        </div>
+                    <div className="tree-diagram">
+                        <ul>
+                            <li className="tree-diagram__root">
+                                <Square size='2.5rem' />
+                                <ul>
+                                    <li>
+                                        <Square size='2rem' />
+                                        <ul>
+                                            <li><Square size='1.5rem' /></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <Square size='2rem' />
+                                        <ul>
+                                            <li>
+                                                <Square size='1.5rem' />
+                                                <ul>
+                                                    <li><Square size='1rem' /></li>
+                                                    <li><Square size='1rem' /></li>
+                                                    <li><Square size='1rem' /></li>
+                                                </ul>
+                                            </li>
+                                            <li><Square size='1.5rem' /></li>
+                                            <li>
+                                                <Square size='1.5rem' />
+                                                <ul>
+                                                    <li><Square size='1rem' /></li>
+                                                    <li><Square size='1rem' /></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><Square size='2rem' /></li>
+                                </ul>
+                            </li>                                
+                        </ul>
                     </div>
-                </BrowserFrame>
-            </div>
+                </div>
+            </BrowserFrame>
+
+            <RelatedPatterns patterns={[Pattern.FolderStructure]} />
         </DetailsLayout>
     );
 };
