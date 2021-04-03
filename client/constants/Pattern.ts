@@ -36,6 +36,7 @@ enum Pattern {
     FixedAtCorner = 'Fixed at corner',
     FixedAtSide = 'Fixed at side',
     FloatingLabel = 'Floating label',
+    FolderStructure = 'Folder structure',
     FullBackground = 'Full background',
     FullScreenMenu = 'Full screen menu',
     HolyGrail = 'Holy grail',

@@ -14,7 +14,7 @@ const Rectangle: React.FC<RectangleProps> = ({ height = 8 }) => {
         <div
             style={{
                 backgroundColor: 'rgba(0, 0, 0, .3)',
-                borderRadius: '2px',
+                borderRadius: '0.25rem',
                 height: `${height}px`,
                 width: '100%',
             }}
