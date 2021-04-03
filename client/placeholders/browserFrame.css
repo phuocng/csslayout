@@ -10,6 +10,7 @@
 
 .demo__live {
     height: 32rem;
+    overflow: auto;
 }
 
 .demo__css,
