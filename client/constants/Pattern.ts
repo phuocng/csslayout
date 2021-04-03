@@ -56,6 +56,7 @@ enum Pattern {
     PresenceIndicator = 'Presence indicator',
     PreviousNextButtons = 'Previous next buttons',
     PricingTable = 'Pricing table',
+    PriceTag = 'Price tag',
     PropertyList = 'Property list',
     ProgressBar = 'Progress bar',
     QuestionsAndAnswers = 'Questions and answers',
