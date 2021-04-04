@@ -1,0 +1,26 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
+.layered-card {
+    position: relative;
+}
+
+.layered-card::before {
+    background: rgba(0, 0, 0, 0.3);
+    content: '';
+    
+    /* Position */
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translate(1rem, 1rem);
+
+    /* Size */
+    height: 100%;
+    width: 100%;
+
+    /* Display under the main content */
+    z-index: -1;
+}

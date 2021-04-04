@@ -20,8 +20,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create a card with CSS flexbox" />
                 <meta name="keywords" content="css card, css flexbox" />
             </Helmet>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
+            <BrowserFrame
 html={`
 <div class="card">
     <!-- Cover -->
@@ -52,39 +51,38 @@ css={`
     flex: 1;
 }
 `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '16px',
+                    }}
                 >
                     <div
                         style={{
-                            alignItems: 'center',
+                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderRadius: '8px',
                             display: 'flex',
                             flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '16px',
+                            width: '256px',
                         }}
                     >
-                        <div
-                            style={{
-                                border: '1px solid rgba(0, 0, 0, 0.3)',
-                                borderRadius: '8px',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                width: '256px',
-                            }}
-                        >
-                            <Rectangle height={150} />
-                            <div style={{ flex: 1, padding: '16px' }}>
-                                <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={15} /></div>
-                                <div style={{ width: '128px' }}>
-                                    <Rectangle height={32} />
-                                </div>
+                        <Rectangle height={150} />
+                        <div style={{ flex: 1, padding: '16px' }}>
+                            <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={15} /></div>
+                            <div style={{ width: '128px' }}>
+                                <Rectangle height={32} />
                             </div>
                         </div>
                     </div>
-                </BrowserFrame>
-            </div>
+                </div>
+            </BrowserFrame>
 
-            <RelatedPatterns patterns={[Pattern.CardLayout, Pattern.StackedCards, Pattern.ThreeDimensionsCard]} />
+            <RelatedPatterns patterns={[Pattern.CardLayout, Pattern.LayeredCard, Pattern.StackedCards, Pattern.ThreeDimensionsCard]} />
         </DetailsLayout>
     );
 };

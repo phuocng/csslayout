@@ -18,8 +18,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="description" content="Create stacked cards with CSS" />
                 <meta name="keywords" content="css card, css stacked cards, css transform rotate" />
             </Helmet>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
+            <BrowserFrame
 html={`
 <div class="container">
     <!-- Repeat if you want to have more cards -->
@@ -56,54 +55,53 @@ css={`
     transform: rotate(5deg);
 }
 `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '8px',
+                    }}
                 >
                     <div
                         style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '8px',
+                            backgroundColor: '#fff',
+                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderRadius: '4px',
+                            height: '250px',
+                            position: 'relative',
+                            width: '200px',
                         }}
                     >
-                        <div
-                            style={{
-                                backgroundColor: '#fff',
-                                border: '1px solid rgba(0, 0, 0, 0.3)',
-                                borderRadius: '4px',
-                                height: '250px',
-                                position: 'relative',
-                                width: '200px',
-                            }}
-                        >
-                            {
-                                Array(5).fill(0).map((_, index) => {
-                                    return (
-                                        <div
-                                            key={index}
-                                            style={{
-                                                backgroundColor: '#fff',
-                                                border: '1px solid rgba(0, 0, 0, 0.3)',
-                                                borderRadius: '4px',
-                                                height: '100%',
-                                                left: 0,
-                                                position: 'absolute',
-                                                top: 0,
-                                                transform: `rotate(${5 * (index + 1)}deg)`,
-                                                width: '100%',
-                                                zIndex: -1,
-                                            }}
-                                        />
-                                    );
-                                })
-                            }
-                        </div>
+                        {
+                            Array(5).fill(0).map((_, index) => {
+                                return (
+                                    <div
+                                        key={index}
+                                        style={{
+                                            backgroundColor: '#fff',
+                                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                                            borderRadius: '4px',
+                                            height: '100%',
+                                            left: 0,
+                                            position: 'absolute',
+                                            top: 0,
+                                            transform: `rotate(${5 * (index + 1)}deg)`,
+                                            width: '100%',
+                                            zIndex: -1,
+                                        }}
+                                    />
+                                );
+                            })
+                        }
                     </div>
-                </BrowserFrame>
-            </div>
+                </div>
+            </BrowserFrame>
 
-            <RelatedPatterns patterns={[Pattern.Card, Pattern.ThreeDimensionsCard]} />
+            <RelatedPatterns patterns={[Pattern.Card, Pattern.LayeredCard, Pattern.ThreeDimensionsCard]} />
         </DetailsLayout>
     );
 };

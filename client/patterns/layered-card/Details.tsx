@@ -14,61 +14,41 @@ import './styles.css';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.ThreeDimensionsCard}>
+        <DetailsLayout pattern={Pattern.LayeredCard}>
             <Helmet>
-                <meta name="description" content="Create a 3D card with CSS" />
-                <meta name="keywords" content="css 3D card" />
+                <meta name="description" content="Create a layered card with CSS" />
+                <meta name="keywords" content="css layered card" />
             </Helmet>
             <BrowserFrame
 html={`
-<div class="three-dimensions-card">
+<div class="layered-card">
     ...
 </div>
 `}
 css={`
-:root {
-    --three-dimensions-card-left-side-width: 1rem;
-}
-
-.three-dimensions-card {
+.layered-card {
     position: relative;
 }
 
-/* The left side */
-.three-dimensions-card::before { 
+.layered-card::before {
     background: rgba(0, 0, 0, 0.3);
     content: '';
     
     /* Position */
-    top: var(--three-dimensions-card-left-side-width);
-    left: 0px;
+    top: 0;
+    left: 0;
     position: absolute;
-    transform: translate(-100%, 0) skewY(-45deg);
-    transform-origin: left top;
+    transform: translate(1rem, 1rem);
 
     /* Size */
     height: 100%;
-    width: var(--three-dimensions-card-left-side-width);
-}
-
-/* The bottom side */
-.three-dimensions-card::after {
-    background: rgba(0, 0, 0, 0.3);
-    content: '';    
-    
-    /* Position */
-    bottom: 0px;
-    left: 0px;
-    position: absolute;
-    transform: translate(0, 100%) skewX(-45deg);
-    transform-origin: left top;
-
-    /* Size */
-    height: var(--three-dimensions-card-left-side-width);
     width: 100%;
+
+    /* Display under the main content */
+    z-index: -1;
 }
 `}
-            >
+                >
                 <div
                     style={{
                         alignItems: 'center',
@@ -78,19 +58,20 @@ css={`
                         padding: '8px',
                     }}
                 >
-                    <div className="three-dimensions-card">
+                    <div className="layered-card">
                         <div
                             style={{
                                 border: '1px solid rgba(0, 0, 0, 0.3)',
-                                height: '8rem',
-                                width: '16rem',
+                                background: '#FFF',
+                                height: '12rem',
+                                width: '12rem',
                             }}
                         />
                     </div>
                 </div>
             </BrowserFrame>
 
-            <RelatedPatterns patterns={[Pattern.Card, Pattern.LayeredCard, Pattern.StackedCards]} />
+            <RelatedPatterns patterns={[Pattern.Card, Pattern.StackedCards, Pattern.ThreeDimensionsCard]} />
         </DetailsLayout>
     );
 };
