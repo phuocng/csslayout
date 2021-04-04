@@ -84,7 +84,7 @@ css={`
                 </BrowserFrame>
             </div>
 
-            <RelatedPatterns patterns={[Pattern.CardLayout, Pattern.StackedCards]} />
+            <RelatedPatterns patterns={[Pattern.CardLayout, Pattern.StackedCards, Pattern.ThreeDimensionsCard]} />
         </DetailsLayout>
     );
 };
