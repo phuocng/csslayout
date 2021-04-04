@@ -103,7 +103,7 @@ css={`
                 </BrowserFrame>
             </div>
 
-            <RelatedPatterns patterns={[Pattern.Card]} />
+            <RelatedPatterns patterns={[Pattern.Card, Pattern.ThreeDimensionsCard]} />
         </DetailsLayout>
     );
 };

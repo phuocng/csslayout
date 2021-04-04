@@ -3,7 +3,7 @@
  * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-enum Pattern {
+enum Pattern {    
     Accordion = 'Accordion',
     ArrowButtons = 'Arrow buttons',
     Avatar = 'Avatar',
@@ -88,6 +88,7 @@ enum Pattern {
     Switch = 'Switch',
     Tab = 'Tab',
     Teardrop = 'Teardrop',
+    ThreeDimensionsCard = 'Three dimensions card',
     Timeline = 'Timeline',
     TogglePasswordVisibility = 'Toggle password visibility',
     Tooltip = 'Tooltip',
