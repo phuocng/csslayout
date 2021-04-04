@@ -43,6 +43,7 @@ enum Pattern {
     InitialAvatar = 'Initial avatar',
     InputAddon = 'Input addon',
     KeyboardShortcut = 'Keyboard shortcut',
+    LayeredCard = 'Layered card',
     LinedPaper = 'Lined paper',
     MediaObject = 'Media object',
     MegaMenu = 'Mega menu',
