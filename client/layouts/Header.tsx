@@ -8,7 +8,23 @@ import { Link } from 'react-router-dom';
 
 import './header.css';
 
+const STARS_KEY = 'stars';
+
 const Header: React.FC<{}> = () => {
+    const stars = window.localStorage.getItem(STARS_KEY) || '';
+    const [totalStars, setTotalStars] = React.useState(stars);
+
+    React.useEffect(() => {
+        if (window.location.pathname === '/' || stars === '') {
+            fetch('https://api.github.com/repos/phuoc-ng/csslayout')
+                .then(res => res.json())
+                .then(data => setTotalStars(data.stargazers_count))
+                .catch(console.log);
+        }
+    }, []);
+
+    React.useEffect(() => window.localStorage.setItem(STARS_KEY, totalStars), [totalStars]);
+
     return (
         <header className="header">
             <div className="container">
@@ -17,7 +33,7 @@ const Header: React.FC<{}> = () => {
                         <img src="/assets/logo.svg" />
                     </Link>
                     <Link to="/patterns">Patterns</Link>
-                    <a href="https://github.com/phuoc-ng/csslayout">GitHub</a>
+                    <a href="https://github.com/phuoc-ng/csslayout">{totalStars}★</a>
                 </div>
             </div>
         </header>
