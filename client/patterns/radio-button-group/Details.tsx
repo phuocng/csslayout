@@ -57,10 +57,6 @@ const Details: React.FC<{}> = () => {
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`
-<style>
-
-</style>
-
 <div class="container">
     <!-- Each radio item -->
     <label class="container__label">
