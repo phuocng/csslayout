@@ -22,7 +22,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <BrowserFrame
 html={`
-<div className="folder-structure">
+<div class="folder-structure">
     <ul>
         <li>
             <!-- Content -->

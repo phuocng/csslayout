@@ -22,7 +22,7 @@ const Details: React.FC<{}> = () => {
             </Helmet>
             <BrowserFrame
 html={`
-<div className="tree-diagram">
+<div class="tree-diagram">
     <ul>
         <li>
             <!-- Content -->
