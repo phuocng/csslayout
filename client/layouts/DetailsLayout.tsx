@@ -26,7 +26,8 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({ pattern, children }) => {
     return (
         <Layout>
             <Helmet>
-                <meta name="title" content={`CSS Layout ∙ ${pattern}`} />                
+                <title>CSS Layout ∙ {pattern}</title>
+                <meta name="title" content={`CSS Layout ∙ ${pattern}`} />
 
                 <meta property="og:image" content={`https://csslayout.io/assets/patterns/${patternSlug}.png`} />
                 <meta property="og:title" content={`CSS Layout ∙ ${pattern}`} />

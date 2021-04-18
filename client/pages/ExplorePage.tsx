@@ -21,23 +21,18 @@ const ExplorePage = () => {
     return (
         <Layout>
             <Helmet>
-                <title>CSS Layout ∙ Explore</title>
+                <title>CSS Layout ∙ Patterns</title>
                 <meta name="title" content="CSS Layout ∙ Patterns" />
                 <meta name="description" content="CSS layouts and patterns" />
                 <meta name="keywords" content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" />
 
                 <meta property="og:description" content="CSS layouts and patterns" />
                 <meta property="og:image" content="https://csslayout.io/assets/screenshot.png" />
-                <meta property="og:site_name" content="CSS Layout" />
                 <meta property="og:title" content="CSS Layout ∙ Patterns" />
-                <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://csslayout.io/patterns" />
 
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:creator" content="@nghuuphuoc" />
                 <meta property="twitter:description" content="CSS layouts and patterns" />
                 <meta property="twitter:image" content="https://csslayout.io/assets/screenshot.png" />
-                <meta property="twitter:site" content="@nghuuphuoc" />
                 <meta property="twitter:title" content="CSS Layout ∙ Patterns" />
                 <meta property="twitter:url" content="https://csslayout.io/patterns" />
             </Helmet>
