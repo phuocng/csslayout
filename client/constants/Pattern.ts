@@ -101,6 +101,7 @@ enum Pattern {
     Voting = 'Voting',
     Watermark = 'Watermark',
     Wizard = 'Wizard',
+    ZigzagTimeline = 'Zigzag timeline',
 }
 
 export default Pattern;

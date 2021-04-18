@@ -1,5 +1,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+    <url><loc>https://csslayout.io</loc></url>
     <url><loc>https://csslayout.io/patterns</loc></url>
+
+    <!-- Patterns -->
     <url><loc>https://csslayout.io/patterns/accordion</loc></url>
     <url><loc>https://csslayout.io/patterns/arrow-buttons</loc></url>
     <url><loc>https://csslayout.io/patterns/avatar</loc></url>
@@ -97,4 +100,5 @@
     <url><loc>https://csslayout.io/patterns/voting</loc></url>
     <url><loc>https://csslayout.io/patterns/watermark</loc></url>
     <url><loc>https://csslayout.io/patterns/wizard</loc></url>
+    <url><loc>https://csslayout.io/patterns/zigzag-timeline</loc></url>
 </urlset>
