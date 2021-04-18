@@ -20,6 +20,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Tooltip}>
             <Helmet>
                 <meta name="description" content="Create a tooltip with CSS" />
+                <meta name="og:description" content="Create a tooltip with CSS" />
+                <meta name="twitter:description" content="Create a tooltip with CSS" />
                 <meta name="keywords" content="css tooltip" />
             </Helmet>
             <div className='p-8 pb-20'>

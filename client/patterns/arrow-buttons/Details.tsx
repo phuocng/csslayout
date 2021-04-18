@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.ArrowButtons}>
             <Helmet>
                 <meta name="description" content="Create arrow buttons with CSS" />
+                <meta name="og:description" content="Create arrow buttons with CSS" />
+                <meta name="twitter:description" content="Create arrow buttons with CSS" />
                 <meta name="keywords" content="css arrow buttons" />
             </Helmet>
             <div className='p-8 pb-20'>

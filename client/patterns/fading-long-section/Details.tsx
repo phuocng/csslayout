@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.FadingLongSection}>
             <Helmet>
                 <meta name="description" content="Fading long section to indicate there is more content" />
+                <meta name="og:description" content="Fading long section to indicate there is more content" />
+                <meta name="twitter:description" content="Fading long section to indicate there is more content" />
                 <meta name="keywords" content="css fading overflow, css linear gradient" />
             </Helmet>
             <div className='p-8 pb-20'>

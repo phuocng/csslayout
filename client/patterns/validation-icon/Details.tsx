@@ -15,6 +15,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.ValidationIcon}>
             <Helmet>
                 <meta name="description" content="Add validation icons to input with CSS" />
+                <meta name="og:description" content="Add validation icons to input with CSS" />
+                <meta name="twitter:description" content="Add validation icons to input with CSS" />
                 <meta name="keywords" content="css validation icon" />
             </Helmet>
             <div className='p-8 pb-20'>

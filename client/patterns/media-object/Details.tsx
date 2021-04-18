@@ -18,6 +18,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.MediaObject}>
             <Helmet>
                 <meta name="description" content="Create a media object with CSS flexbox" />
+                <meta name="og:description" content="Create a media object with CSS flexbox" />
+                <meta name="twitter:description" content="Create a media object with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, media object" />
             </Helmet>
             <div className='p-8 pb-20'>

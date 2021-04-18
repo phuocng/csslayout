@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.PreviousNextButtons}>
             <Helmet>
                 <meta name="description" content="Create previous and next buttons with CSS flexbox" />
+                <meta name="og:description" content="Create previous and next buttons with CSS flexbox" />
+                <meta name="twitter:description" content="Create previous and next buttons with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css pagination" />
             </Helmet>
             <div className='p-8 pb-20'>

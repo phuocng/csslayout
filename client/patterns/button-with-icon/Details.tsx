@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.ButtonWithIcon}>
             <Helmet>
                 <meta name="description" content="Create an icon button with CSS flexbox" />
+                <meta name="og:description" content="Create an icon button with CSS flexbox" />
+                <meta name="twitter:description" content="Create an icon button with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css icon button" />
             </Helmet>
             <div className='p-8 pb-20'>

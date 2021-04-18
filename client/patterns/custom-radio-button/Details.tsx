@@ -67,6 +67,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.CustomRadioButton}>
             <Helmet>
                 <meta name="description" content="Create a custom radio button with CSS flexbox" />
+                <meta name="og:description" content="Create a custom radio button with CSS flexbox" />
+                <meta name="twitter:description" content="Create a custom radio button with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css radio" />
             </Helmet>
             <div className='p-8 pb-20'>

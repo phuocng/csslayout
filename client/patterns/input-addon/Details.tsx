@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.InputAddon}>
             <Helmet>
                 <meta name="description" content="Create an input add-on with CSS flexbox" />
+                <meta name="og:description" content="Create an input add-on with CSS flexbox" />
+                <meta name="twitter:description" content="Create an input add-on with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css input add-on" />
             </Helmet>
             <div className='p-8 pb-20'>

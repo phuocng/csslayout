@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.FloatingLabel}>
             <Helmet>
                 <meta name="description" content="Create a floating label with CSS" />
+                <meta name="og:description" content="Create a floating label with CSS" />
+                <meta name="twitter:description" content="Create a floating label with CSS" />
                 <meta name="keywords" content="css floating label, placeholder shown" />
             </Helmet>
             <div className='p-8 pb-20'>

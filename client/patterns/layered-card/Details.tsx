@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.LayeredCard}>
             <Helmet>
                 <meta name="description" content="Create a layered card with CSS" />
+                <meta name="og:description" content="Create a layered card with CSS" />
+                <meta name="twitter:description" content="Create a layered card with CSS" />
                 <meta name="keywords" content="css layered card" />
             </Helmet>
             <BrowserFrame

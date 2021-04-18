@@ -21,6 +21,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.ProgressBar}>
             <Helmet>
                 <meta name="description" content="Create a progress bar with CSS flexbox" />
+                <meta name="og:description" content="Create a progress bar with CSS flexbox" />
+                <meta name="twitter:description" content="Create a progress bar with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css progress bar" />
             </Helmet>
             <div className='p-8 pb-20'>

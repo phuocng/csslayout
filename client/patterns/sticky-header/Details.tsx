@@ -18,6 +18,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.StickyHeader}>
             <Helmet>
                 <meta name="description" content="Create a sticky header with CSS" />
+                <meta name="og:description" content="Create a sticky header with CSS" />
+                <meta name="twitter:description" content="Create a sticky header with CSS" />
                 <meta name="keywords" content="css layout, css position sticky, css sticky header" />
             </Helmet>
             <div className='p-8 pb-20'>

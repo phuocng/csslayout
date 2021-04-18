@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Centering}>
             <Helmet>
                 <meta name="description" content="Center an element with CSS flexbox" />
+                <meta name="og:description" content="Center an element with CSS flexbox" />
+                <meta name="twitter:description" content="Center an element with CSS flexbox" />
                 <meta name="keywords" content="css centering, css flexbox" />
             </Helmet>
             <div className='p-8 pb-20'>

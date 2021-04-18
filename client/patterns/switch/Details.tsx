@@ -19,6 +19,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Switch}>
             <Helmet>
                 <meta name="description" content="Create a switch with CSS flexbox" />
+                <meta name="og:description" content="Create a switch with CSS flexbox" />
+                <meta name="twitter:description" content="Create a switch with CSS flexbox" />
                 <meta name="keywords" content="css custom checkbox, css flexbox, css switch, css switcher" />
             </Helmet>
             <div className='p-8 pb-20'>

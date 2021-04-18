@@ -15,6 +15,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.ResizableElement}>
             <Helmet>
                 <meta name="description" content="Create resizable indicators with CSS" />
+                <meta name="og:description" content="Create resizable indicators with CSS" />
+                <meta name="twitter:description" content="Create resizable indicators with CSS" />
                 <meta name="keywords" content="css resizable, css resize cursor" />
             </Helmet>
             <div className='p-8 pb-20'>

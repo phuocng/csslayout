@@ -56,6 +56,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.QuestionsAndAnswers}>
             <Helmet>
                 <meta name="description" content="Create a questions and answers section with CSS flexbox" />
+                <meta name="og:description" content="Create a questions and answers section with CSS flexbox" />
+                <meta name="twitter:description" content="Create a questions and answers section with CSS flexbox" />
                 <meta name="keywords" content="css accordion, css faq, css flexbox" />
             </Helmet>
             <div className='p-8 pb-20'>

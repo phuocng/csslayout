@@ -42,6 +42,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Tab}>
             <Helmet>
                 <meta name="description" content="Create tabs with CSS flexbox" />
+                <meta name="og:description" content="Create tabs with CSS flexbox" />
+                <meta name="twitter:description" content="Create tabs with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css navigation, css tab" />
             </Helmet>
             <div className='p-8 pb-20'>

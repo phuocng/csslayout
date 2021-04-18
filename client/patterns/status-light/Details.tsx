@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.StatusLight}>
             <Helmet>
                 <meta name="description" content="Create a status light with CSS flexbox" />
+                <meta name="og:description" content="Create a status light with CSS flexbox" />
+                <meta name="twitter:description" content="Create a status light with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css status light" />
             </Helmet>
             <div className='p-8 pb-20'>

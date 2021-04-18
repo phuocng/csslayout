@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.DropCap}>
             <Helmet>
                 <meta name="description" content="Create a drop cap with CSS" />
+                <meta name="og:description" content="Create a drop cap with CSS" />
+                <meta name="twitter:description" content="Create a drop cap with CSS" />
                 <meta name="keywords" content="css drop cap" />
             </Helmet>
             <div className='p-8 pb-20'>

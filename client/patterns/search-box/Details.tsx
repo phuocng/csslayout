@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.SearchBox}>
             <Helmet>
                 <meta name="description" content="Create a search box with CSS flexbox" />
+                <meta name="og:description" content="Create a search box with CSS flexbox" />
+                <meta name="twitter:description" content="Create a search box with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css search box" />
             </Helmet>
             <div className='p-8 pb-20'>

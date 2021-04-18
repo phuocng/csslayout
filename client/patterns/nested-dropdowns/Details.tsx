@@ -18,6 +18,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.NestedDropdowns}>
             <Helmet>
                 <meta name="description" content="Create nested dropdown menu with CSS" />
+                <meta name="og:description" content="Create nested dropdown menu with CSS" />
+                <meta name="twitter:description" content="Create nested dropdown menu with CSS" />
                 <meta name="keywords" content="css dropdown menu, css multi-level dropdown menu, css nested dropdown menu" />
             </Helmet>
             <div className='p-8 pb-20'>

@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.CloseButton}>
             <Helmet>
                 <meta name="description" content="Create a close button with CSS flexbox" />
+                <meta name="og:description" content="Create a close button with CSS flexbox" />
+                <meta name="twitter:description" content="Create a close button with CSS flexbox" />
                 <meta name="keywords" content="css close button, css flexbox" />
             </Helmet>
             <div className='p-8 pb-20'>

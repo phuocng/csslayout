@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.SameHeightColumns}>
             <Helmet>
                 <meta name="description" content="Create same height columns with CSS flexbox" />
+                <meta name="og:description" content="Create same height columns with CSS flexbox" />
+                <meta name="twitter:description" content="Create same height columns with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css layout, css same height columns" />
             </Helmet>
             <div className='p-8 pb-20'>

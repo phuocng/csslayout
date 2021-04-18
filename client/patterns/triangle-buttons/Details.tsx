@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.TriangleButtons}>
             <Helmet>
                 <meta name="description" content="Create triangle buttons with CSS" />
+                <meta name="og:description" content="Create triangle buttons with CSS" />
+                <meta name="twitter:description" content="Create triangle buttons with CSS" />
                 <meta name="keywords" content="css triangle buttons" />
             </Helmet>
             <div className='p-8 pb-20'>

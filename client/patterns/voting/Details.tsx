@@ -20,6 +20,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Voting}>
             <Helmet>
                 <meta name="description" content="Create a voting control with CSS flexbox" />
+                <meta name="og:description" content="Create a voting control with CSS flexbox" />
+                <meta name="twitter:description" content="Create a voting control with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css triangle buttons, css voting control" />
             </Helmet>
             <div className='p-8 pb-20'>
