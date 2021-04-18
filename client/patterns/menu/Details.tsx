@@ -20,6 +20,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Menu}>
             <Helmet>
                 <meta name="description" content="Create a menu with CSS flexbox" />
+                <meta name="og:description" content="Create a menu with CSS flexbox" />
+                <meta name="twitter:description" content="Create a menu with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css menu" />
             </Helmet>
             <div className='p-8 pb-20'>

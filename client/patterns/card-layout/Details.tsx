@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.CardLayout}>
             <Helmet>
                 <meta name="description" content="Create a card layout with CSS flexbox" />
+                <meta name="og:description" content="Create a card layout with CSS flexbox" />
+                <meta name="twitter:description" content="Create a card layout with CSS flexbox" />
                 <meta name="keywords" content="css card layout, css flexbox, css layout" />
             </Helmet>
             <div className='p-8 pb-20'>

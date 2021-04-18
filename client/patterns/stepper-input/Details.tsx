@@ -25,6 +25,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.StepperInput}>
             <Helmet>
                 <meta name="description" content="Create a stepper input with CSS flexbox" />
+                <meta name="og:description" content="Create a stepper input with CSS flexbox" />
+                <meta name="twitter:description" content="Create a stepper input with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css stepper input" />
             </Helmet>
             <div className='p-8 pb-20'>

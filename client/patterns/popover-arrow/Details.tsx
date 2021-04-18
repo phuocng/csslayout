@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.PopoverArrow}>
             <Helmet>
                 <meta name="description" content="Create a popover arrow with CSS" />
+                <meta name="og:description" content="Create a popover arrow with CSS" />
+                <meta name="twitter:description" content="Create a popover arrow with CSS" />
                 <meta name="keywords" content="css arrow, css popover" />
             </Helmet>
             <div className='p-8 pb-20'>

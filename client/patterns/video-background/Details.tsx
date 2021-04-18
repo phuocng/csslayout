@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.VideoBackground}>
             <Helmet>
                 <meta name="description" content="Add video background with CSS flexbox" />
+                <meta name="og:description" content="Add video background with CSS flexbox" />
+                <meta name="twitter:description" content="Add video background with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, object fit cover" />
             </Helmet>
             <div className='p-8 pb-20'>

@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.FullScreenMenu}>
             <Helmet>
                 <meta name="description" content="Create a full screen menu with CSS flexbox" />
+                <meta name="og:description" content="Create a full screen menu with CSS flexbox" />
+                <meta name="twitter:description" content="Create a full screen menu with CSS flexbox" />
                 <meta name="keywords" content="css fixed, css flexbox, css menu" />
             </Helmet>
             <div className='p-8 pb-20'>

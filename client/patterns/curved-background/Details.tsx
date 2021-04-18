@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.CurvedBackground}>
             <Helmet>
                 <meta name="description" content="Create an element with curved background" />
+                <meta name="og:description" content="Create an element with curved background" />
+                <meta name="twitter:description" content="Create an element with curved background" />
                 <meta name="keywords" content="css border radius, css curved background" />
             </Helmet>
             <div className='p-8 pb-20'>

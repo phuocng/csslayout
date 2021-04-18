@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.FixedAtSide}>
             <Helmet>
                 <meta name="description" content="Fix an element at the middle of side with CSS" />
+                <meta name="og:description" content="Fix an element at the middle of side with CSS" />
+                <meta name="twitter:description" content="Fix an element at the middle of side with CSS" />
                 <meta name="keywords" content="css fixed" />
             </Helmet>
             <div className='p-8 pb-20'>

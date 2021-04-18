@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Separator}>
             <Helmet>
                 <meta name="description" content="Create a separator with CSS flexbox" />
+                <meta name="og:description" content="Create a separator with CSS flexbox" />
+                <meta name="twitter:description" content="Create a separator with CSS flexbox" />
                 <meta name="keywords" content="css divider, css flexbox, css separator" />
             </Helmet>
             <div className='p-8 pb-20'>

@@ -76,6 +76,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.RadialProgressBar}>
             <Helmet>
                 <meta name="description" content="Create a radial progress bar with CSS flexbox" />
+                <meta name="og:description" content="Create a radial progress bar with CSS flexbox" />
+                <meta name="twitter:description" content="Create a radial progress bar with CSS flexbox" />
                 <meta name="keywords" content="css clip rect, css flexbox, css progress bar" />
             </Helmet>
             <div className='p-8 pb-20'>

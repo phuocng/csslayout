@@ -18,6 +18,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Notification}>
             <Helmet>
                 <meta name="description" content="Create a notification with CSS flexbox" />
+                <meta name="og:description" content="Create a notification with CSS flexbox" />
+                <meta name="twitter:description" content="Create a notification with CSS flexbox" />
                 <meta name="keywords" content="css alert, css flexbox, css notification" />
             </Helmet>
             <div className='p-8 pb-20'>

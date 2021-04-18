@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Breadcrumb}>
             <Helmet>
                 <meta name="description" content="Create a breadcrumb with CSS flexbox" />
+                <meta name="og:description" content="Create a breadcrumb with CSS flexbox" />
+                <meta name="twitter:description" content="Create a breadcrumb with CSS flexbox" />
                 <meta name="keywords" content="css breadcrumb, css flexbox" />
             </Helmet>
             <div className='p-8 pb-20'>

@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.StackedCards}>
             <Helmet>
                 <meta name="description" content="Create stacked cards with CSS" />
+                <meta name="og:description" content="Create stacked cards with CSS" />
+                <meta name="twitter:description" content="Create stacked cards with CSS" />
                 <meta name="keywords" content="css card, css stacked cards, css transform rotate" />
             </Helmet>
             <BrowserFrame

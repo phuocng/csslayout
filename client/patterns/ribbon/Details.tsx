@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Ribbon}>
             <Helmet>
                 <meta name="description" content="Create a ribbon with CSS" />
+                <meta name="og:description" content="Create a ribbon with CSS" />
+                <meta name="twitter:description" content="Create a ribbon with CSS" />
                 <meta name="keywords" content="css ribbon" />
             </Helmet>
             <div className='p-8 pb-20'>

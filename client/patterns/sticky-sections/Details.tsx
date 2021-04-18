@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.StickySections}>
             <Helmet>
                 <meta name="description" content="Create sticky sections with CSS" />
+                <meta name="og:description" content="Create sticky sections with CSS" />
+                <meta name="twitter:description" content="Create sticky sections with CSS" />
                 <meta name="keywords" content="css layout, css sticky, css sticky sections" />
             </Helmet>
             <div className='p-8 pb-20'>

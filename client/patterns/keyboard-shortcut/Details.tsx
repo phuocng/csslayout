@@ -49,6 +49,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.KeyboardShortcut}>
             <Helmet>
                 <meta name="description" content="Create a keyboard shortcut with CSS" />
+                <meta name="og:description" content="Create a keyboard shortcut with CSS" />
+                <meta name="twitter:description" content="Create a keyboard shortcut with CSS" />
                 <meta name="keywords" content="kbd tag, keyboard shortcut" />
             </Helmet>
             <div className='p-8 pb-20'>

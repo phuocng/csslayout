@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.UploadButton}>
             <Helmet>
                 <meta name="description" content="Create an upload button with CSS flexbox" />
+                <meta name="og:description" content="Create an upload button with CSS flexbox" />
+                <meta name="twitter:description" content="Create an upload button with CSS flexbox" />
                 <meta name="keywords" content="css file input, css flexbox, css upload button" />
             </Helmet>
             <div className='p-8 pb-20'>

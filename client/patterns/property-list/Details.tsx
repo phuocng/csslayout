@@ -36,6 +36,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.PropertyList}>
             <Helmet>
                 <meta name="description" content="Create a property list with CSS flexbox" />
+                <meta name="og:description" content="Create a property list with CSS flexbox" />
+                <meta name="twitter:description" content="Create a property list with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, property list" />
             </Helmet>
             <div className='p-8 pb-20'>

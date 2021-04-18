@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Drawer}>
             <Helmet>
                 <meta name="description" content="Create a drawer navigation with CSS" />
+                <meta name="og:description" content="Create a drawer navigation with CSS" />
+                <meta name="twitter:description" content="Create a drawer navigation with CSS" />
                 <meta name="keywords" content="css drawer, css off-canvas" />
             </Helmet>
             <div className='p-8 pb-20'>

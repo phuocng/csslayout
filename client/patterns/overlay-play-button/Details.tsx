@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.OverlayPlayButton}>
             <Helmet>
                 <meta name="description" content="Create an overlay play button with CSS flexbox" />
+                <meta name="og:description" content="Create an overlay play button with CSS flexbox" />
+                <meta name="twitter:description" content="Create an overlay play button with CSS flexbox" />
                 <meta name="keywords" content="css flexbox" />
             </Helmet>
             <div className='p-8 pb-20'>

@@ -18,6 +18,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.FolderStructure}>
             <Helmet>
                 <meta name="description" content="Create a folder structure with CSS" />
+                <meta name="og:description" content="Create a folder structure with CSS" />
+                <meta name="twitter:description" content="Create a folder structure with CSS" />
                 <meta name="keywords" content="css folder structure, css folder tree" />
             </Helmet>
             <BrowserFrame

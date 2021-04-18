@@ -52,6 +52,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.RadioButtonGroup}>
             <Helmet>
                 <meta name="description" content="Create a radio button group with CSS flexbox" />
+                <meta name="og:description" content="Create a radio button group with CSS flexbox" />
+                <meta name="twitter:description" content="Create a radio button group with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css radio button" />
             </Helmet>
             <div className='p-8 pb-20'>

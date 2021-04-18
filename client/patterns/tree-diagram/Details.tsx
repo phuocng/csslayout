@@ -18,6 +18,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.TreeDiagram}>
             <Helmet>
                 <meta name="description" content="Create a tree diagram with CSS" />
+                <meta name="og:description" content="Create a tree diagram with CSS" />
+                <meta name="twitter:description" content="Create a tree diagram with CSS" />
                 <meta name="keywords" content="css sitemap, css tree diagram" />
             </Helmet>
             <BrowserFrame

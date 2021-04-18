@@ -12,13 +12,11 @@ import './homePage.css';
 import CoverCard from '../components/CoverCard';
 import Pattern from '../constants/Pattern';
 import chunk from '../helpers/chunk';
-import useDocumentTitle from '../hooks/useDocumentTitle';
 import Layout from '../layouts/Layout';
 
 const NUM_SLIDES = 3;
 
 const HomePage = () => {
-    useDocumentTitle('CSS Layout');
     const numPatterns = Object.keys(Pattern).length;
 
     const numPatternsPerSlide = Math.floor(numPatterns / NUM_SLIDES);
@@ -27,8 +25,25 @@ const HomePage = () => {
     return (
         <Layout>
             <Helmet>
+                <title>CSS Layout</title>
+                <meta name="title" content="CSS Layout" />
                 <meta name="description" content="CSS layouts and patterns" />
                 <meta name="keywords" content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" />
+                
+                <meta property="og:description" content="A collection of popular layouts and patterns made with CSS" />
+                <meta property="og:image" content="https://csslayout.io/assets/screenshot.png" />
+                <meta property="og:site_name" content="CSS Layout" />
+                <meta property="og:title" content="CSS Layout ∙ A collection of popular layouts and patterns made with CSS" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://csslayout.io" />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:creator" content="@nghuuphuoc" />
+                <meta property="twitter:description" content="A collection of popular layouts and patterns made with CSS" />
+                <meta property="twitter:image" content="https://csslayout.io/assets/screenshot.png" />
+                <meta property="twitter:site" content="@nghuuphuoc" />
+                <meta property="twitter:title" content="CSS Layout ∙ A collection of popular layouts and patterns made with CSS" />
+                <meta property="twitter:url" content="https://csslayout.io" />
             </Helmet>
             <div className="hero">
                 <div className="container">

@@ -19,6 +19,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.FeatureComparison}>
             <Helmet>
                 <meta name="description" content="Create a feature comparison list with CSS flexbox" />
+                <meta name="og:description" content="Create a feature comparison list with CSS flexbox" />
+                <meta name="twitter:description" content="Create a feature comparison list with CSS flexbox" />
                 <meta name="keywords" content="css feature comparison, css flexbox" />
             </Helmet>
             <div className='p-8 pb-20'>

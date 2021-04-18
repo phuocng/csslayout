@@ -20,6 +20,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.StickyTableColumn}>
             <Helmet>
                 <meta name="description" content="Create sticky table column with CSS" />
+                <meta name="og:description" content="Create sticky table column with CSS" />
+                <meta name="twitter:description" content="Create sticky table column with CSS" />
                 <meta name="keywords" content="css position sticky, css sticky table column" />
             </Helmet>
             <div className='p-8 pb-20'>

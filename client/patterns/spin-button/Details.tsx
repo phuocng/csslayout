@@ -22,6 +22,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.SpinButton}>
             <Helmet>
                 <meta name="description" content="Create a spin button with CSS flexbox" />
+                <meta name="og:description" content="Create a spin button with CSS flexbox" />
+                <meta name="twitter:description" content="Create a spin button with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css spin button" />
             </Helmet>
             <div className='p-8 pb-20'>

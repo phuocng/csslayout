@@ -15,6 +15,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.LinedPaper}>
             <Helmet>
                 <meta name="description" content="Create lined paper with CSS" />
+                <meta name="og:description" content="Create lined paper with CSS" />
+                <meta name="twitter:description" content="Create lined paper with CSS" />
                 <meta name="keywords" content="css linear gradient, css lined paper, css multiple horizontal lines" />
             </Helmet>
             <div className='p-8 pb-20'>

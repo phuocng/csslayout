@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Rating}>
             <Helmet>
                 <meta name="description" content="Create a star rating with CSS flexbox" />
+                <meta name="og:description" content="Create a star rating with CSS flexbox" />
+                <meta name="twitter:description" content="Create a star rating with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css star rating" />
             </Helmet>
             <div className='p-8 pb-20'>

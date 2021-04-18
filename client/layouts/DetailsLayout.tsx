@@ -4,13 +4,14 @@
  */
 
 import * as React from 'react';
+import { Helmet } from 'react-helmet';
 
 import Ad from '../components/Ad';
 import Product from '../components/Product';
 import { ProductList } from '../constants/ProductList';
 import Pattern from '../constants/Pattern';
 import randomItems from '../helpers/randomIterms';
-import useDocumentTitle from '../hooks/useDocumentTitle';
+import slug from '../helpers/slug';
 import CoverLoader from '../loaders/CoverLoader';
 import Layout from './Layout';
 
@@ -19,11 +20,22 @@ interface DetailsLayoutProps {
 }
 
 const DetailsLayout: React.FC<DetailsLayoutProps> = ({ pattern, children }) => {
-    useDocumentTitle(`CSS Layout ∙ ${pattern}`);
     const products = React.useMemo(() => randomItems(ProductList, 3), []);
+    const patternSlug = slug(pattern);
 
     return (
         <Layout>
+            <Helmet>
+                <meta name="title" content={`CSS Layout ∙ ${pattern}`} />                
+
+                <meta property="og:image" content={`https://csslayout.io/assets/patterns/${patternSlug}.png`} />
+                <meta property="og:title" content={`CSS Layout ∙ ${pattern}`} />
+                <meta property="og:url" content={`https://csslayout.io/patterns/${patternSlug}`} />
+
+                <meta property="twitter:image" content={`https://csslayout.io/assets/patterns/${patternSlug}.png`} />
+                <meta property="twitter:title" content={`CSS Layout ∙ ${pattern}`} />
+                <meta property="twitter:url" content={`https://csslayout.io/patterns/${patternSlug}`} />
+            </Helmet>
             <div className="hero">
                 <div className="container">
                     <div className="hero__logo">

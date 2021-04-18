@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.FullBackground}>
             <Helmet>
                 <meta name="description" content="Create a full background element with CSS" />
+                <meta name="og:description" content="Create a full background element with CSS" />
+                <meta name="twitter:description" content="Create a full background element with CSS" />
                 <meta name="keywords" content="css background size cover, css full background" />
             </Helmet>
             <div className='p-8 pb-20'>

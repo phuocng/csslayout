@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.SplitNavigation}>
             <Helmet>
                 <meta name="description" content="Create a split navigation with CSS flexbox" />
+                <meta name="og:description" content="Create a split navigation with CSS flexbox" />
+                <meta name="twitter:description" content="Create a split navigation with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css menu, css navigation, css split navigation" />
             </Helmet>
             <div className='p-8 pb-20'>

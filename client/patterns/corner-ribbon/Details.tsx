@@ -18,6 +18,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.CornerRibbon}>
             <Helmet>
                 <meta name="description" content="Create a corner ribbon with CSS flexbox" />
+                <meta name="og:description" content="Create a corner ribbon with CSS flexbox" />
+                <meta name="twitter:description" content="Create a corner ribbon with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css ribbon" />
             </Helmet>
             <div className='p-8 pb-20'>

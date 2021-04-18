@@ -16,10 +16,9 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Teardrop}>
             <Helmet>
                 <meta name="description" content="Create a teardrop with CSS" />
-                <meta
-                    name="keywords"
-                    content="css border radius, css teardrop, css water drop shape, css water droplet"
-                />
+                <meta name="og:description" content="Create a teardrop with CSS" />
+                <meta name="twitter:description" content="Create a teardrop with CSS" />
+                <meta name="keywords" content="css border radius, css teardrop, css water drop shape, css water droplet" />
             </Helmet>
             <div className='p-8 pb-20'>
                 <BrowserFrame

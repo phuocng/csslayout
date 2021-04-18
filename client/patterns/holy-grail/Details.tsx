@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.HolyGrail}>
             <Helmet>
                 <meta name="description" content="Create a holy grail layout with CSS flexbox" />
+                <meta name="og:description" content="Create a holy grail layout with CSS flexbox" />
+                <meta name="twitter:description" content="Create a holy grail layout with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css holy grail layout, css layout" />
             </Helmet>
             <div className='p-8 pb-20'>

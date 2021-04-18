@@ -18,6 +18,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.DockedAtCorner}>
             <Helmet>
                 <meta name="description" content="Dock an element at corner with CSS" />
+                <meta name="og:description" content="Dock an element at corner with CSS" />
+                <meta name="twitter:description" content="Dock an element at corner with CSS" />
                 <meta name="keywords" content="css docked, css flexbox" />
             </Helmet>
             <div className='p-8 pb-20'>

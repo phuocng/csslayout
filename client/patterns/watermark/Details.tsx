@@ -16,6 +16,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Watermark}>
             <Helmet>
                 <meta name="description" content="Create a watermark with CSS" />
+                <meta name="og:description" content="Create a watermark with CSS" />
+                <meta name="twitter:description" content="Create a watermark with CSS" />
                 <meta name="keywords" content="css watermark" />
             </Helmet>
             <div className='p-8 pb-20'>

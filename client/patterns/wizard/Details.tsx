@@ -18,6 +18,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.Wizard}>
             <Helmet>
                 <meta name="description" content="Create a wizard with CSS flexbox" />
+                <meta name="og:description" content="Create a wizard with CSS flexbox" />
+                <meta name="twitter:description" content="Create a wizard with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css stepper, css wizard" />
             </Helmet>
             <div className='p-8 pb-20'>

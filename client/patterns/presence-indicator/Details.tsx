@@ -17,6 +17,8 @@ const Details: React.FC<{}> = () => {
         <DetailsLayout pattern={Pattern.PresenceIndicator}>
             <Helmet>
                 <meta name="description" content="Create a presence indicator with CSS" />
+                <meta name="og:description" content="Create a presence indicator with CSS" />
+                <meta name="twitter:description" content="Create a presence indicator with CSS" />
                 <meta name="keywords" content="css indicator" />
             </Helmet>
             <div className='p-8 pb-20'>
