@@ -9,7 +9,7 @@
         "deploy": "npm run build && netlify deploy --dir=dist --prod",
         "analyse": "NODE_ENV=analyse webpack --config webpack.config.js -p",
         "lint": "tslint -c tslint.json -o tslint.log 'client/**/*.{ts,tsx}'",
-        "screenshot": "rm -rf public/patterns && mkdir public/patterns && TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node bin/generateScreenshots.ts"
+        "screenshot": "rm -rf public/assets/patterns && mkdir public/assets/patterns && TS_NODE_COMPILER_OPTIONS='{\"module\":\"commonjs\"}' ts-node bin/generateScreenshots.ts"
     },
     "dependencies": {
         "@loadable/component": "^5.14.1",

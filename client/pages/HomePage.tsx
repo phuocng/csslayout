@@ -12,13 +12,11 @@ import './homePage.css';
 import CoverCard from '../components/CoverCard';
 import Pattern from '../constants/Pattern';
 import chunk from '../helpers/chunk';
-import useDocumentTitle from '../hooks/useDocumentTitle';
 import Layout from '../layouts/Layout';
 
 const NUM_SLIDES = 3;
 
 const HomePage = () => {
-    useDocumentTitle('CSS Layout');
     const numPatterns = Object.keys(Pattern).length;
 
     const numPatternsPerSlide = Math.floor(numPatterns / NUM_SLIDES);
@@ -27,6 +25,8 @@ const HomePage = () => {
     return (
         <Layout>
             <Helmet>
+                <title>CSS Layout</title>
+                <meta name="title" content="CSS Layout" />
                 <meta name="description" content="CSS layouts and patterns" />
                 <meta name="keywords" content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" />
             </Helmet>

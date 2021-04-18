@@ -12,17 +12,17 @@ import Heading from '../components/Heading';
 import Product from '../components/Product';
 import Pattern from '../constants/Pattern';
 import { ProductList } from '../constants/ProductList';
-import useDocumentTitle from '../hooks/useDocumentTitle';
 import Layout from '../layouts/Layout';
 import './explorePage.css';
 
 const ExplorePage = () => {
-    useDocumentTitle('CSS Layout ∙ Explore');
     const numPatterns = Object.keys(Pattern).length;
 
     return (
         <Layout>
             <Helmet>
+                <title>CSS Layout ∙ Explore</title>
+                <meta name="title" content="CSS Layout ∙ Explore" />
                 <meta name="description" content="CSS layouts and patterns" />
                 <meta name="keywords" content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" />
             </Helmet>

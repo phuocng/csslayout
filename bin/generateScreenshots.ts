@@ -19,7 +19,7 @@ process.setMaxListeners(0);
             await page.waitForSelector('.demo');
             const element = await page.$('.demo');
             await element.screenshot({
-                path: `public/patterns/${pattern}.png`
+                path: `public/assets/patterns/${pattern}.png`
             });
             await page.close();
         })
