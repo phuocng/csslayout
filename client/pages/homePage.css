@@ -44,9 +44,10 @@
 }
 .home__heading {
     color: var(--color-gray-9);
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin: 1rem;
+    text-align: center;
 }
 .home__explore {
     background-color: var(--background-color);
