@@ -7,6 +7,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
+import RelatedPatterns from '../../components/RelatedPatterns';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -23,8 +24,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="twitter:description" content="Create a zigzag timeline" />
                 <meta name="keywords" content="css timeline, css zigzag timeline" />
             </Helmet>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
+            <BrowserFrame
 html={`
 <div class="zigzag-timeline__item">
     <!-- Milestone -->
@@ -82,52 +82,53 @@ css={`
     transform: translate(50%, -50%);
 }
 `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                        margin: '0 auto',
+                        padding: '0.5rem',
+                        width: '60%',
+                    }}
                 >
                     <div
-                        style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
-                            margin: '0 auto',
-                            padding: '0.5rem',
-                            width: '60%',
+                        className='zigzag-timeline__item'
+                        style={{                                
+                            padding: '1rem 1.5rem',
                         }}
                     >
-                        <div
-                            className='zigzag-timeline__item'
-                            style={{                                
-                                padding: '1rem 1.5rem',
-                            }}
-                        >
-                            <div className='zigzag-timeline__milestone'/>
-                            <div style={{ marginBottom: '1rem', width: '80%' }}><Rectangle /></div>
-                            <Block numberOfBlocks={10} />
-                        </div>
-                        <div
-                            className='zigzag-timeline__item'
-                            style={{
-                                padding: '1rem 1.5rem',
-                            }}
-                        >
-                            <div className='zigzag-timeline__milestone' />
-                            <div style={{ marginBottom: '1rem', width: '60%' }}><Rectangle /></div>
-                            <Block numberOfBlocks={20} />
-                        </div>
-                        <div
-                            className='zigzag-timeline__item'
-                            style={{
-                                padding: '1rem 1.5rem',
-                            }}
-                        >
-                            <div className='zigzag-timeline__milestone' />
-                            <div style={{ marginBottom: '1rem', width: '70%' }}><Rectangle /></div>
-                            <Block numberOfBlocks={15} />
-                        </div>
+                        <div className='zigzag-timeline__milestone'/>
+                        <div style={{ marginBottom: '1rem', width: '80%' }}><Rectangle /></div>
+                        <Block numberOfBlocks={10} />
                     </div>
-                </BrowserFrame>
-            </div>
+                    <div
+                        className='zigzag-timeline__item'
+                        style={{
+                            padding: '1rem 1.5rem',
+                        }}
+                    >
+                        <div className='zigzag-timeline__milestone' />
+                        <div style={{ marginBottom: '1rem', width: '60%' }}><Rectangle /></div>
+                        <Block numberOfBlocks={20} />
+                    </div>
+                    <div
+                        className='zigzag-timeline__item'
+                        style={{
+                            padding: '1rem 1.5rem',
+                        }}
+                    >
+                        <div className='zigzag-timeline__milestone' />
+                        <div style={{ marginBottom: '1rem', width: '70%' }}><Rectangle /></div>
+                        <Block numberOfBlocks={15} />
+                    </div>
+                </div>
+            </BrowserFrame>
+
+            <RelatedPatterns patterns={[Pattern.Timeline]} />
         </DetailsLayout>
     );
 };
