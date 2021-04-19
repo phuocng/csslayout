@@ -73,7 +73,7 @@ You might be interested in my products:
 
 _Products_
 * [Blur Page - A browser extension to hide sensitive information on a web page](https://blur.page)
-* [Check Browsers Support - A browser extension to check browser compatibility without leaving your tab](https://checkbrowsers.support")
+* [Check Browsers Support - A browser extension to check browser compatibility without leaving your tab](https://checkbrowsers.support)
 * [Fake Numbers - Generate fake and valid numbers](https://fakenumbers.io)
 * [Form Validation - The best validation library for JavaScript](https://formvalidation.io)
 * [React PDF Viewer - A React component to view a PDF document](https://react-pdf-viewer.dev)
