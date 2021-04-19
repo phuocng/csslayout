@@ -59,9 +59,8 @@ a {
     justify-content: center;
 }
 .hero__logo img {
-    height: 12rem;
     object-fit: cover;
-    width: 20rem;
+    width: 16rem;
 }
 .hero__heading {
     color: var(--color-gray-9);
@@ -154,13 +153,13 @@ pre {
 }
 @media (min-width: 768px) {
     .sidebar {
-        flex-basis: 10rem;
+        flex-basis: 12rem;
         margin-left: 1rem;
     }
 }
 @media (min-width: 1024px) {
     .sidebar {
-        flex-basis: 12rem;
+        flex-basis: 16rem;
         margin-left: 2rem;
     }
 }

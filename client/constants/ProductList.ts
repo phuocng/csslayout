@@ -13,6 +13,12 @@ const ProductList: ProductModel[] = [
         themeColor: '#4e7fb8',
     },
     {
+        name: 'Check Browsers Support',
+        url: 'https://checkbrowsers.support',
+        description: 'A browser extension to check browser compatibility without leaving your tab',
+        themeColor: '#f33446',
+    },
+    {
         name: 'Form Validation',
         url: 'https://formvalidation.io',
         description: 'The best validation library for JavaScript',

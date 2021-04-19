@@ -43,7 +43,8 @@ const HomePage = () => {
             <div className="hero">
                 <div className="container">
                     <div className="hero__logo"><img src="/assets/logo.png" alt="CSS Layout" /></div>
-                    <h1 className="hero__heading">Popular Layouts & patterns made with CSS</h1>
+                    <h1 className="home__heading">CSS Layout</h1>
+                    <h2 className="hero__subheading">Popular Layouts & patterns made with CSS</h2>
                 </div>
             </div>
 

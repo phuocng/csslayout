@@ -7,6 +7,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
+import RelatedPatterns from '../../components/RelatedPatterns';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -22,8 +23,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="twitter:description" content="Create a timeline with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css timeline" />
             </Helmet>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
+            <BrowserFrame
 html={`
 <div class="container">
     <!-- Left vertical line -->
@@ -111,77 +111,78 @@ css={`
     margin-left: 48px;
 }
 `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '8px',
+                    }}
                 >
                     <div
                         style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '8px',
+                            position: 'relative',
+                            width: '60%',
                         }}
                     >
                         <div
                             style={{
-                                position: 'relative',
-                                width: '60%',
+                                borderRight: '2px solid #aaa',
+                                height: '100%',
+                                left: '16px',
+                                position: 'absolute',
+                                top: 0,
+                            }}
+                        />
+                        <ul
+                            style={{
+                                listStyleType: 'none',
+                                margin: 0,
+                                padding: 0,
                             }}
                         >
-                            <div
-                                style={{
-                                    borderRight: '2px solid #aaa',
-                                    height: '100%',
-                                    left: '16px',
-                                    position: 'absolute',
-                                    top: 0,
-                                }}
-                            />
-                            <ul
-                                style={{
-                                    listStyleType: 'none',
-                                    margin: 0,
-                                    padding: 0,
-                                }}
-                            >
-                                <li style={{ marginBottom: '8px' }}>
-                                    <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
-                                        <Circle backgroundColor='#aaa' size={32} />
-                                        <div style={{ flex: 1, marginLeft: '16px' }}>
-                                            <div style={{ width: '80%' }}><Rectangle /></div>
-                                        </div>
+                            <li style={{ marginBottom: '8px' }}>
+                                <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
+                                    <Circle backgroundColor='#aaa' size={32} />
+                                    <div style={{ flex: 1, marginLeft: '16px' }}>
+                                        <div style={{ width: '80%' }}><Rectangle /></div>
                                     </div>
-                                    <div style={{ marginLeft: '48px' }}>
-                                        <Block numberOfBlocks={10} blockHeight={2} />
+                                </div>
+                                <div style={{ marginLeft: '48px' }}>
+                                    <Block numberOfBlocks={10} blockHeight={2} />
+                                </div>
+                            </li>
+                            <li style={{ marginBottom: '8px' }}>
+                                <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
+                                    <Circle backgroundColor='#aaa' size={32} />
+                                    <div style={{ flex: 1, marginLeft: '16px' }}>
+                                        <div style={{ width: '60%' }}><Rectangle /></div>
                                     </div>
-                                </li>
-                                <li style={{ marginBottom: '8px' }}>
-                                    <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
-                                        <Circle backgroundColor='#aaa' size={32} />
-                                        <div style={{ flex: 1, marginLeft: '16px' }}>
-                                            <div style={{ width: '60%' }}><Rectangle /></div>
-                                        </div>
+                                </div>
+                                <div style={{ marginLeft: '48px' }}>
+                                    <Block numberOfBlocks={15} blockHeight={2} />
+                                </div>
+                            </li>
+                            <li style={{ marginBottom: '8px' }}>
+                                <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
+                                    <Circle backgroundColor='#aaa' size={32} />
+                                    <div style={{ flex: 1, marginLeft: '16px' }}>
+                                        <div style={{ width: '60%' }}><Rectangle /></div>
                                     </div>
-                                    <div style={{ marginLeft: '48px' }}>
-                                        <Block numberOfBlocks={15} blockHeight={2} />
-                                    </div>
-                                </li>
-                                <li style={{ marginBottom: '8px' }}>
-                                    <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
-                                        <Circle backgroundColor='#aaa' size={32} />
-                                        <div style={{ flex: 1, marginLeft: '16px' }}>
-                                            <div style={{ width: '60%' }}><Rectangle /></div>
-                                        </div>
-                                    </div>
-                                    <div style={{ marginLeft: '48px' }}>
-                                        <Block numberOfBlocks={10} blockHeight={2} />
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                                </div>
+                                <div style={{ marginLeft: '48px' }}>
+                                    <Block numberOfBlocks={10} blockHeight={2} />
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                </BrowserFrame>
-            </div>
+                </div>
+            </BrowserFrame>
+
+            <RelatedPatterns patterns={[Pattern.ZigzagTimeline]} />
         </DetailsLayout>
     );
 };
