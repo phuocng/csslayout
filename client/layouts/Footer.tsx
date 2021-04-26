@@ -41,36 +41,39 @@ const Footer: React.FC<{}> = () => {
                                 <a href="https://fakenumbers.io" rel="noopener noreferrer" target="_blank" title="A JavaScript library to fake a number">Fake Numbers</a>
                             </li>
                             <li className="footer__product">
-                                <a href="https://formvalidation.io" rel="noopener noreferrer" target="_blank" title="The best validation library for JavaScript">Form Validation</a>
-                            </li>
+                                <a href="https://intersectionobserver.io" rel="noopener noreferrer" target="_blank" title="Practical, real world examples of Intersection Observer">Intersection Observer Examples</a>
+                            </li>                            
                         </ul>
                     </div>
                     <div className="footer__col">
                         <ul className="footer__products">                            
                             <li className="footer__product">
+                                <a href="https://formvalidation.io" rel="noopener noreferrer" target="_blank" title="The best validation library for JavaScript">Form Validation</a>
+                            </li>
+                            <li className="footer__product">
                                 <a href="https://react-pdf-viewer.dev" rel="noopener noreferrer" target="_blank" title="A PDF viewer made for React">React PDF Viewer</a>
                             </li>
                             <li className="footer__product">
-                                <a href="https://1loc.dev" rel="noopener noreferrer" target="_blank" title="Favorite JavaScript utilities in single line of code">1 LOC (4.1k ★)</a>
+                                <a href="https://1loc.dev" rel="noopener noreferrer" target="_blank" title="Favorite JavaScript utilities in single line of code">1 LOC (4.2k ★)</a>
                             </li>
                             <li className="footer__product">
-                                <a href="https://csslayout.io" rel="noopener noreferrer" target="_blank" title="A collection of popular layouts and patterns made with CSS">CSS Layout (3.3k ★)</a>
-                            </li>
-                            <li className="footer__product">
-                                <a href="https://getfrontend.tips" rel="noopener noreferrer" target="_blank" title="Super tiny, quick tips, tricks and best practices of front-end development">Front-end Tips</a>
-                            </li>
+                                <a href="https://csslayout.io" rel="noopener noreferrer" target="_blank" title="A collection of popular layouts and patterns made with CSS">CSS Layout (3.5k ★)</a>
+                            </li>                            
                         </ul>
                     </div>
                     <div className="footer__col">
                         <ul className="footer__products">
                             <li className="footer__product">
-                                <a href="https://htmldom.dev" rel="noopener noreferrer" target="_blank" title="Common tasks of managing HTML DOM with native API">HTML DOM (3.6k ★)</a>
+                                <a href="https://getfrontend.tips" rel="noopener noreferrer" target="_blank" title="Super tiny, quick tips, tricks and best practices of front-end development">Front-end Tips</a>
+                            </li>
+                            <li className="footer__product">
+                                <a href="https://htmldom.dev" rel="noopener noreferrer" target="_blank" title="Common tasks of managing HTML DOM with native API">HTML DOM (3.7k ★)</a>
                             </li>
                             <li className="footer__product">
                                 <a href="https://responsive.page" rel="noopener noreferrer" target="_blank" title="A collection of patterns to create a responsive web page">Responsive Design Patterns</a>
                             </li>
                             <li className="footer__product">
-                                <a href="https://thisthat.dev" rel="noopener noreferrer"  target="_blank" title="What is the difference between ___ and ___ in the front-end development?">this VS that (700 ★)</a>
+                                <a href="https://thisthat.dev" rel="noopener noreferrer"  target="_blank" title="What is the difference between ___ and ___ in the front-end development?">this VS that (750 ★)</a>
                             </li>
                         </ul>
                     </div>
