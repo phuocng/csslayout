@@ -45,6 +45,7 @@ enum Pattern {
     KeyboardShortcut = 'Keyboard shortcut',
     LayeredCard = 'Layered card',
     LinedPaper = 'Lined paper',
+    MasonryGrid = 'Masonry grid',
     MediaObject = 'Media object',
     MegaMenu = 'Mega menu',
     Menu = 'Menu',

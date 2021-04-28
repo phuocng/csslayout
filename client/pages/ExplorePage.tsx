@@ -52,6 +52,7 @@ const ExplorePage = () => {
                             <div className="explore__collection">
                                 <CoverCard pattern={Pattern.CardLayout} />
                                 <CoverCard pattern={Pattern.HolyGrail} />
+                                <CoverCard pattern={Pattern.MasonryGrid} />
                                 <CoverCard pattern={Pattern.SameHeightColumns} />
                                 <CoverCard pattern={Pattern.Sidebar} />
                                 <CoverCard pattern={Pattern.SimpleGrid} />

@@ -1,0 +1,20 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
+.masonry-grid {
+    column-count: 3;
+    column-gap: 1rem;
+
+    /* Misc */
+    width: 100%;
+}
+
+.masonry-grid__item {
+    /* Prevent a column from breaking into multiple columns */
+    break-inside: avoid;
+
+    /* Misc */
+    margin-bottom: 1rem;
+}
