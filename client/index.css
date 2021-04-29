@@ -71,10 +71,6 @@ a {
     display: flex;
     justify-content: center;
 }
-.hero__logo img {
-    object-fit: cover;
-    width: 16rem;
-}
 .hero__heading {
     color: var(--color-gray-9);
     font-size: 2rem;
