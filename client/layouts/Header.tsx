@@ -30,7 +30,7 @@ const Header: React.FC<{}> = () => {
             <div className="container">
                 <div className="header__nav">
                     <Link to="/">
-                        <img src="/assets/logo.svg" />
+                        <img src="/assets/logo.svg" height="64" width="64" alt="CSS Layout" />
                     </Link>
                     <Link to="/patterns">Patterns</Link>
                     <a href="https://github.com/phuoc-ng/csslayout">{totalStars}★</a>
