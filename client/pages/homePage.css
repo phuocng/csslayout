@@ -6,13 +6,12 @@
 .home__features {
     display: flex;
     flex-wrap: wrap;
-    margin: 2.5rem auto;
-    max-width: 48rem;
+    margin: 1rem -1rem;
 }
 .home__feature {
     padding: 1rem;
     text-align: center;
-    width: 50%;
+    width: 100%;
 }
 .home__icon {
     color: var(--color-blue-6);
@@ -25,7 +24,7 @@
 }
 
 .home__patterns {
-    height: 60rem;
+    height: 80rem;
     overflow: hidden;
     position: relative;
 }
@@ -63,16 +62,13 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: 180rem;
     opacity: 0.8;
 }
 .home__slide {
     animation: slide 20s linear infinite;
     display: flex;
     flex-wrap: wrap;
-    height: 60rem;
     justify-content: center;
-    width: 60rem;
     will-change: transform;
 }
 
@@ -90,5 +86,17 @@
     }
     to {
         transform: translateY(-100%);
+    }
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+    .home__feature {
+        width: 50%;
+    }
+}
+@media (min-width: 1024px) {
+    .home__feature {
+        width: 33.333333%;
     }
 }
