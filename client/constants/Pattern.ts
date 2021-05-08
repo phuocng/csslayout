@@ -17,6 +17,7 @@ enum Pattern {
     Chip = 'Chip',
     CircularNavigation = 'Circular navigation',
     CloseButton = 'Close button',
+    ColorSwatch = 'Color swatch',
     CookieBanner = 'Cookie banner',
     CornerRibbon = 'Corner ribbon',
     CurvedBackground = 'Curved background',
