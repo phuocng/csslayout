@@ -38,7 +38,7 @@ a {
 /* Layout */
 .container {
     margin: 0 auto;
-    max-width: 64rem;
+    max-width: 80rem;
     padding: 0 1rem;
 }
 .content {
