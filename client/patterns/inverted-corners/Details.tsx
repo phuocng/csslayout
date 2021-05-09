@@ -7,6 +7,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
 import Heading from '../../components/Heading';
+import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -94,6 +95,8 @@ css={`
                     <div className='inverted-corners inverted-corners--speech'>Speech Bubble</div>
                 </div>
             </section>
+
+            <RelatedPatterns patterns={[Pattern.ConcaveCorners]} />
         </DetailsLayout>
     );
 };
