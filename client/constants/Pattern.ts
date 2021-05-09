@@ -18,6 +18,7 @@ enum Pattern {
     CircularNavigation = 'Circular navigation',
     CloseButton = 'Close button',
     ColorSwatch = 'Color swatch',
+    ConcaveCorners = 'Concave corners',
     CookieBanner = 'Cookie banner',
     CornerRibbon = 'Corner ribbon',
     CurvedBackground = 'Curved background',
