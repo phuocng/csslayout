@@ -47,7 +47,6 @@ a {
 }
 .main {
     flex: 1;
-    overflow: auto;
 }
 .sidebar {
     display: none;
@@ -80,7 +79,7 @@ a {
     font-size: 2rem;
     line-height: 1.5;
     text-align: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 .hero__subheading {
     color: var(--color-gray-9);
