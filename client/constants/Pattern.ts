@@ -43,6 +43,7 @@ enum Pattern {
     HolyGrail = 'Holy grail',
     InitialAvatar = 'Initial avatar',
     InputAddon = 'Input addon',
+    InvertedCorners = 'Inverted corners',
     KeyboardShortcut = 'Keyboard shortcut',
     LayeredCard = 'Layered card',
     LinedPaper = 'Lined paper',

@@ -3,20 +3,8 @@
  * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-.demo {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 0.5rem;
-    overflow: hidden;
-}
-
 .demo__live {
+    border: 1px solid rgba(0, 0, 0, 0.2);
     height: 32rem;
-    overflow: auto;
-}
-
-.demo__css,
-.demo__html {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-    height: 16rem;
     overflow: auto;
 }

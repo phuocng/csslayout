@@ -41,20 +41,18 @@ a {
     max-width: 80rem;
     padding: 0 1rem;
 }
-.content {
-    display: flex;
-    margin: 4rem 0;
-}
 .main {
     flex: 1;
-    overflow: auto;
+    overflow: hidden;
+    padding: 4rem 0;
 }
 .sidebar {
     display: none;
+    padding: 4rem 0;
 }
 
 /* Sidebar */
-.sidebar__inner {
+.sidebar__inner {    
     position: sticky;
     top: 1rem;
 }
@@ -80,7 +78,7 @@ a {
     font-size: 2rem;
     line-height: 1.5;
     text-align: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 .hero__subheading {
     color: var(--color-gray-9);
@@ -101,11 +99,11 @@ pre {
     color: #FFF;
     font-family: "Source Code Pro", monospace;
     font-size: 1rem;
-    height: 100%;
     line-height: 1.5;
     margin: 0px;
-    overflow: auto;
+    overflow-x: auto;
     padding: 1rem;
+    white-space: pre;
 }
 
 .token.tag,
@@ -158,6 +156,9 @@ pre {
 
 /* Responsive */
 @media (min-width: 640px) {
+    .content {
+        display: flex;
+    }
     .sidebar {
         display: block;
         flex: 0 0 8rem;
