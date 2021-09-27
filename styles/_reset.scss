@@ -1,0 +1,30 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+}
+ol,
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
