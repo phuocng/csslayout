@@ -6,7 +6,7 @@
 import * as React from 'react';
 
 import Pattern from '../constants/Pattern';
-import CoverCard from './CoverCard';
+import CoverCard from '../../components/CoverCard';
 import Heading from './Heading';
 
 interface RelatedPatternsProps {

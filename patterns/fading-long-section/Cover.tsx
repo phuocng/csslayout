@@ -5,7 +5,7 @@
 
 import * as React from 'react';
 
-import random from '../../helpers/random';
+import { random } from '../../utils/random';
 import Frame from '../../placeholders/Frame';
 import Line from '../../placeholders/Line';
 

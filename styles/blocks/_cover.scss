@@ -1,9 +1,4 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
-.cover {
+.block-cover {
     align-items: center;
     color: var(--color-gray-9);
     display: flex;
@@ -13,7 +8,7 @@
     text-decoration: none;
     width: 7rem;
 }
-.cover__name {
+.block-cover__name {
     font-weight: normal;
     margin: 0;
     padding-top: 0.5rem;
@@ -21,7 +16,7 @@
 }
 
 @media (min-width: 768px) {
-    .cover {
+    .block-cover {
         width: 8rem;
     }
 }

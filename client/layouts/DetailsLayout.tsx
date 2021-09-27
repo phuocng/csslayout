@@ -11,8 +11,8 @@ import Product from '../components/Product';
 import { ProductList } from '../constants/ProductList';
 import Pattern from '../constants/Pattern';
 import randomItems from '../helpers/randomIterms';
-import slug from '../helpers/slug';
-import CoverLoader from '../loaders/CoverLoader';
+import slug from '../../utils/slug';
+import CoverLoader from '../../components/CoverLoader';
 import Layout from './Layout';
 
 interface DetailsLayoutProps {

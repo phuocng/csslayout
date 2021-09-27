@@ -7,7 +7,7 @@ import * as React from 'react';
 
 import './product.css';
 import ProductModel from '../constants/ProductModel';
-import slug from '../helpers/slug';
+import slug from '../../utils/slug';
 
 interface ProductProps {
     product: ProductModel;

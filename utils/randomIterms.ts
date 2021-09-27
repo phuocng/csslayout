@@ -1,11 +1,6 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 type Tuple<T> = [number, T[]];
 
-function randomItems<T>(arr: T[], count: number): T[] {
+export function randomItems<T>(arr: T[], count: number): T[] {
     const result = arr.concat().reduce(
         (p, _, __, arr) => {
             const [a, b] = p;
@@ -17,5 +12,3 @@ function randomItems<T>(arr: T[], count: number): T[] {
     );
     return (result as Tuple<T>)[1];
 };
-
-export default randomItems;

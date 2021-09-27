@@ -9,7 +9,7 @@ class MyDocument extends Document {
                     <meta charSet="utf-8" />
 
                     <meta content="A collection of popular layouts and patterns made with CSS" name="description" />
-                    <meta content="CSS flexbox, CSS grid, CSS layout, CSS patterns" name="keywords" />
+                    <meta content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" name="keywords" />
                     <meta content="Nguyen Huu Phuoc" name="author" />
                     <meta content="@nghuuphuoc" name="twitter:site" />
                     <meta content="summary" name="twitter:card" />

@@ -7,7 +7,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Pattern from '../../constants/Pattern';
 
-import random from '../../helpers/random';
+import { random } from '../../utils/random';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 

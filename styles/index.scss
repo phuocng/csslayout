@@ -1,6 +1,10 @@
 @import './reset';
 
 // Blocks
+@import 'blocks/cover';
 @import 'blocks/footer';
 @import 'blocks/header';
 @import 'blocks/layout';
+
+// Pages
+@import 'pages/home';
