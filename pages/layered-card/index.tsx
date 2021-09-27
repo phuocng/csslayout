@@ -6,7 +6,6 @@ import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import './styles.css';
 
 const Details: React.FC<{}> = () => {
     return (

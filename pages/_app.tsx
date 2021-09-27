@@ -1,10 +1,14 @@
+import React from 'react';
 import Head from 'next/head';
 
 // Design
 import '@1milligram/design/lib/styles/index.css';
 import '../styles/index.scss';
 
-export default function MyApp({ Component, pageProps }) {
+const MyApp: React.FC<{
+    Component: any;
+    pageProps: any;
+}> = ({ Component, pageProps }) => {
     return (
         <>
             <Head>
@@ -13,4 +17,6 @@ export default function MyApp({ Component, pageProps }) {
             <Component {...pageProps} />
         </>
     );
-}
+};
+
+export default MyApp;

@@ -8,8 +8,6 @@ import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
-import './masonry-grid.css';
-
 const Details: React.FC<{}> = () => {
     return (
         <PatternLayout pattern={Pattern.MasonryGrid}>

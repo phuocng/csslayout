@@ -12,10 +12,10 @@ const BrowserFrame: React.FC<BrowserFrameProps> = ({ children, css, html }) => {
     return (
         <Window>
             <div className="demo__html">
-                <Code className="lang-html">{html}</Code>
+                <Code language="markup">{html}</Code>
             </div>
             <div className="demo__css">
-                <Code className="lang-css">{css}</Code>
+                <Code language="css">{css}</Code>
             </div>
             <div className="demo__live">{children}</div>
         </Window>

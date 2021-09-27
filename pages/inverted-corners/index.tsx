@@ -7,8 +7,6 @@ import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
-import './inverted-corners.css';
-
 const Details: React.FC<{}> = () => {
     return (
         <PatternLayout pattern={Pattern.InvertedCorners}>

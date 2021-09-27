@@ -7,7 +7,6 @@ import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Square from '../../placeholders/Square';
-import './folder-structure.css';
 
 const Details: React.FC<{}> = () => {
     return (
