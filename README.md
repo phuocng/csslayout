@@ -9,8 +9,6 @@ A collection of popular layouts and patterns made with CSS:
 * Good practices (coming soon)
 * Accessibility Support (coming soon)
 
-[![CSS Layout](/public/assets/screenshot.png)](https://csslayout.io)
-
 ## Why
 
 Being a front-end engineer, I have to deal with a lot of layouts and components.
