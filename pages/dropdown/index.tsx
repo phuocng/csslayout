@@ -6,8 +6,6 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import './dropdown.css';
-
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';

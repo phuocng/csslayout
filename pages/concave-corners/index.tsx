@@ -11,8 +11,6 @@ import Pattern from '../../constants/Pattern';
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
-import './concave-corners.css';
-
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.ConcaveCorners}>

@@ -6,8 +6,6 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 
-import './dropcap.css';
-
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Pattern from '../../constants/Pattern';
