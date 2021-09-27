@@ -4,23 +4,23 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.SplitNavigation}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a split navigation with CSS flexbox" />
                 <meta name="og:description" content="Create a split navigation with CSS flexbox" />
                 <meta name="twitter:description" content="Create a split navigation with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css menu, css navigation, css split navigation" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

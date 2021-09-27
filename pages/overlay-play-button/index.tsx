@@ -4,23 +4,23 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Triangle from '../../placeholders/Triangle';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.OverlayPlayButton}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create an overlay play button with CSS flexbox" />
                 <meta name="og:description" content="Create an overlay play button with CSS flexbox" />
                 <meta name="twitter:description" content="Create an overlay play button with CSS flexbox" />
                 <meta name="keywords" content="css flexbox" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

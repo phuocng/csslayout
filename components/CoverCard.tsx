@@ -139,7 +139,7 @@ export const CoverCard: React.FC<CoverCardProps> = ({ pattern }) => {
     const Cover = CoverList[pattern];
 
     return (
-        <Link href={`/patterns/${slug(pattern)}`}>
+        <Link href={`/${slug(pattern)}`}>
             <a className="block-cover">
                 <Cover />
                 <h4 className="block-cover__name">

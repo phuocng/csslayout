@@ -4,10 +4,10 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
-import Pattern from '../../constants/Pattern';
+import Head from 'next/head';
+import { Pattern } from '../../constants/Pattern';
 
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 interface RadialProgressProps {
@@ -74,12 +74,12 @@ const RadialProgress: React.FC<RadialProgressProps> = ({ percentages }) => {
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.RadialProgressBar}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a radial progress bar with CSS flexbox" />
                 <meta name="og:description" content="Create a radial progress bar with CSS flexbox" />
                 <meta name="twitter:description" content="Create a radial progress bar with CSS flexbox" />
                 <meta name="keywords" content="css clip rect, css flexbox, css progress bar" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

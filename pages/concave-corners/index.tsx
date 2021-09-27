@@ -4,22 +4,22 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.ConcaveCorners}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create concave corners with CSS" />
                 <meta name="og:description" content="Create concave corners with CSS" />
                 <meta name="twitter:description" content="Create concave corners with CSS" />
                 <meta name="keywords" content="css border radius, css concave border radius, css concave corners" />
-            </Helmet>
+            </Head>
             <BrowserFrame
 html={`
 <div class="concave-corners">

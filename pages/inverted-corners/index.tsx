@@ -4,12 +4,12 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
 import Heading from '../../components/Heading';
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 import './inverted-corners.css';
@@ -17,12 +17,12 @@ import './inverted-corners.css';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.InvertedCorners}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create inverted corners with CSS" />
                 <meta name="og:description" content="Create inverted corners with CSS" />
                 <meta name="twitter:description" content="Create inverted corners with CSS" />
                 <meta name="keywords" content="css border radius, css inverted border radius, css inverted corners" />
-            </Helmet>
+            </Head>
             <BrowserFrame
 html={`
 <div class="inverted-corners">

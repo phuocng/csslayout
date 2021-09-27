@@ -4,23 +4,23 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.VideoBackground}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Add video background with CSS flexbox" />
                 <meta name="og:description" content="Add video background with CSS flexbox" />
                 <meta name="twitter:description" content="Add video background with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, object fit cover" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     In this pattern, the video is displayed in the background.

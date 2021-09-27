@@ -4,12 +4,12 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import { Link } from 'react-router-dom';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
@@ -18,12 +18,12 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.PricingTable}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a pricing table with CSS flexbox" />
                 <meta name="og:description" content="Create a pricing table with CSS flexbox" />
                 <meta name="twitter:description" content="Create a pricing table with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css pricing table" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     You can <Link to='/patterns/ribbon'>add</Link> <Link to='/patterns/corner-ribbon'>a ribbon</Link> to

@@ -4,11 +4,11 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
-import Pattern from '../../constants/Pattern';
+import Head from 'next/head';
+import { Pattern } from '../../constants/Pattern';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
@@ -17,12 +17,12 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.Timeline}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a timeline with CSS flexbox" />
                 <meta name="og:description" content="Create a timeline with CSS flexbox" />
                 <meta name="twitter:description" content="Create a timeline with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css timeline" />
-            </Helmet>
+            </Head>
             <BrowserFrame
 html={`
 <div class="container">

@@ -4,22 +4,22 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
-import Pattern from '../../constants/Pattern';
+import Head from 'next/head';
+import { Pattern } from '../../constants/Pattern';
 
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.UploadButton}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create an upload button with CSS flexbox" />
                 <meta name="og:description" content="Create an upload button with CSS flexbox" />
                 <meta name="twitter:description" content="Create an upload button with CSS flexbox" />
                 <meta name="keywords" content="css file input, css flexbox, css upload button" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     You can click the button to choose a file.

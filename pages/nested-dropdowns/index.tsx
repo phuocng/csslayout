@@ -4,24 +4,24 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
 import './nested-dropdowns.css';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.NestedDropdowns}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create nested dropdown menu with CSS" />
                 <meta name="og:description" content="Create nested dropdown menu with CSS" />
                 <meta name="twitter:description" content="Create nested dropdown menu with CSS" />
                 <meta name="keywords" content="css dropdown menu, css multi-level dropdown menu, css nested dropdown menu" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Hover on the Patterns &rarr; Navigation to see the sub dropdowns.

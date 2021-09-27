@@ -5,8 +5,7 @@
 
 import * as React from 'react';
 
-import SampleCode from '../components/SampleCode';
-import './browserFrame.css';
+import { Code } from '../components/Code';
 
 interface BrowserFrameProps {
     css: string;
@@ -17,10 +16,10 @@ const BrowserFrame: React.FC<BrowserFrameProps> = ({ children, css, html }) => {
     return (
         <>
             <div className="demo__html">
-                <SampleCode fullHeight={true} lang="html" code={html} />
+                <Code className="lang-html">{html}</Code>
             </div>
             <div className="demo__css">
-                <SampleCode fullHeight={true} lang="css" code={css} />
+                <Code className="lang-css">{css}</Code>
             </div>
             <div className="demo__live">
                 {children}

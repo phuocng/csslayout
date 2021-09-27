@@ -4,23 +4,23 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.PresenceIndicator}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a presence indicator with CSS" />
                 <meta name="og:description" content="Create a presence indicator with CSS" />
                 <meta name="twitter:description" content="Create a presence indicator with CSS" />
                 <meta name="keywords" content="css indicator" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

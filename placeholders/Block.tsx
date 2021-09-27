@@ -5,7 +5,7 @@
 
 import * as React from 'react';
 
-import random from '../helpers/random';
+import { random } from '../utils/random';
 
 interface BlockProps {
     backgroundColor?: string;

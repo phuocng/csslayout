@@ -4,23 +4,23 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
 import Heading from '../../components/Heading';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.StatusLight}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a status light with CSS flexbox" />
                 <meta name="og:description" content="Create a status light with CSS flexbox" />
                 <meta name="twitter:description" content="Create a status light with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css status light" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

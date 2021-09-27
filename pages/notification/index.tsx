@@ -4,11 +4,11 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import Pattern from '../../constants/Pattern';
+import { Pattern } from '../../constants/Pattern';
 
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
@@ -16,12 +16,12 @@ import Circle from '../../placeholders/Circle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.Notification}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a notification with CSS flexbox" />
                 <meta name="og:description" content="Create a notification with CSS flexbox" />
                 <meta name="twitter:description" content="Create a notification with CSS flexbox" />
                 <meta name="keywords" content="css alert, css flexbox, css notification" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     You can use the <Link to='/patterns/close-button'>close button</Link> to

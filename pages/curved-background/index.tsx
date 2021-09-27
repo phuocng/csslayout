@@ -4,22 +4,22 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.CurvedBackground}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create an element with curved background" />
                 <meta name="og:description" content="Create an element with curved background" />
                 <meta name="twitter:description" content="Create an element with curved background" />
                 <meta name="keywords" content="css border radius, css curved background" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

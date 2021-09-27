@@ -4,11 +4,11 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
@@ -16,12 +16,12 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.StickyTableHeaders}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create sticky table headers with CSS" />
                 <meta name="og:description" content="Create sticky table headers with CSS" />
                 <meta name="twitter:description" content="Create sticky table headers with CSS" />
                 <meta name="keywords" content="css position sticky, css sticky table headers" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Try to scroll the main content of table to see the header sticks to the top.

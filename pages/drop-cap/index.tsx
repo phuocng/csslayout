@@ -4,21 +4,21 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import Pattern from '../../constants/Pattern';
+import { Pattern } from '../../constants/Pattern';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.DropCap}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a drop cap with CSS" />
                 <meta name="og:description" content="Create a drop cap with CSS" />
                 <meta name="twitter:description" content="Create a drop cap with CSS" />
                 <meta name="keywords" content="css drop cap" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

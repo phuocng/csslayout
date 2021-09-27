@@ -4,21 +4,21 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
-import Pattern from '../../constants/Pattern';
+import Head from 'next/head';
+import { Pattern } from '../../constants/Pattern';
 
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.ValidationIcon}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Add validation icons to input with CSS" />
                 <meta name="og:description" content="Add validation icons to input with CSS" />
                 <meta name="twitter:description" content="Add validation icons to input with CSS" />
                 <meta name="keywords" content="css validation icon" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

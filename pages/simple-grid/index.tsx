@@ -4,23 +4,23 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.SimpleGrid}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a simple grid with CSS flexbox" />
                 <meta name="og:description" content="Create a simple grid with CSS flexbox" />
                 <meta name="twitter:description" content="Create a simple grid with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css flexbox grid, css grid, css layout" />
-            </Helmet>
+            </Head>
             <BrowserFrame
 html={`
 <!-- Row -->

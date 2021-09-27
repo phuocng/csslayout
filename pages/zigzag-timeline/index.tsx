@@ -4,11 +4,11 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
-import Pattern from '../../constants/Pattern';
+import Head from 'next/head';
+import { Pattern } from '../../constants/Pattern';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
@@ -18,12 +18,12 @@ import './zigzag-timeline.css';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.ZigzagTimeline}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a zigzag timeline" />
                 <meta name="og:description" content="Create a zigzag timeline" />
                 <meta name="twitter:description" content="Create a zigzag timeline" />
                 <meta name="keywords" content="css timeline, css zigzag timeline" />
-            </Helmet>
+            </Head>
             <BrowserFrame
 html={`
 <div class="zigzag-timeline__item">

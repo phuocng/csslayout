@@ -4,23 +4,23 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
 import './floating-label.css';
 
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import Pattern from '../../constants/Pattern';
+import { Pattern } from '../../constants/Pattern';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.FloatingLabel}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a floating label with CSS" />
                 <meta name="og:description" content="Create a floating label with CSS" />
                 <meta name="twitter:description" content="Create a floating label with CSS" />
                 <meta name="keywords" content="css floating label, placeholder shown" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Type something in the input to see how the label is shown up.

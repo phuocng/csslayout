@@ -5,11 +5,11 @@
 
 // tslint:disable:prefer-object-spread
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
@@ -18,12 +18,12 @@ const Details: React.FC<{}> = () => {
     const numberOfColumns = 10;
     return (
         <DetailsLayout pattern={Pattern.StickyTableColumn}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create sticky table column with CSS" />
                 <meta name="og:description" content="Create sticky table column with CSS" />
                 <meta name="twitter:description" content="Create sticky table column with CSS" />
                 <meta name="keywords" content="css position sticky, css sticky table column" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Try to scroll the main content of table horizontally to see the first column sticks to the left.

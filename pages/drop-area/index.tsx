@@ -4,22 +4,22 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
-import Pattern from '../../constants/Pattern';
+import Head from 'next/head';
+import { Pattern } from '../../constants/Pattern';
 
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.DropArea}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a dropping area with CSS flexbox" />
                 <meta name="og:description" content="Create a dropping area with CSS flexbox" />
                 <meta name="twitter:description" content="Create a dropping area with CSS flexbox" />
                 <meta name="keywords" content="css dropping area, css flexbox" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

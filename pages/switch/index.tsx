@@ -4,11 +4,11 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
@@ -17,12 +17,12 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout pattern={Pattern.Switch}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a switch with CSS flexbox" />
                 <meta name="og:description" content="Create a switch with CSS flexbox" />
                 <meta name="twitter:description" content="Create a switch with CSS flexbox" />
                 <meta name="keywords" content="css custom checkbox, css flexbox, css switch, css switcher" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px'}}>
                     The checkbox is placed inside a label. So when clicking on the label,

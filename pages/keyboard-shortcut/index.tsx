@@ -4,12 +4,12 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import { Link } from 'react-router-dom';
 
 import Heading from '../../components/Heading';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 interface ItemProps {
@@ -47,12 +47,12 @@ const Item: React.FC<ItemProps> = ({ action, keys }) => {
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.KeyboardShortcut}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a keyboard shortcut with CSS" />
                 <meta name="og:description" content="Create a keyboard shortcut with CSS" />
                 <meta name="twitter:description" content="Create a keyboard shortcut with CSS" />
                 <meta name="keywords" content="kbd tag, keyboard shortcut" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     We use the native <code>kbd</code> tag to display the keyboard shortcut.

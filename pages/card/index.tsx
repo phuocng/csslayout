@@ -4,11 +4,11 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
@@ -16,12 +16,12 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.Card}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a card with CSS flexbox" />
                 <meta name="og:description" content="Create a card with CSS flexbox" />
                 <meta name="twitter:description" content="Create a card with CSS flexbox" />
                 <meta name="keywords" content="css card, css flexbox" />
-            </Helmet>
+            </Head>
             <BrowserFrame
 html={`
 <div class="card">

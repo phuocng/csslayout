@@ -4,10 +4,10 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
-import Pattern from '../../constants/Pattern';
+import Head from 'next/head';
+import { Pattern } from '../../constants/Pattern';
 
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
@@ -16,12 +16,12 @@ import Square from '../../placeholders/Square';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.MediaObject}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a media object with CSS flexbox" />
                 <meta name="og:description" content="Create a media object with CSS flexbox" />
                 <meta name="twitter:description" content="Create a media object with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, media object" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

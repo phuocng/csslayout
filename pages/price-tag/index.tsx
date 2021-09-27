@@ -4,23 +4,23 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import './price-tag.css';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.PriceTag}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a price tag with CSS" />
                 <meta name="og:description" content="Create a price tag with CSS" />
                 <meta name="twitter:description" content="Create a price tag with CSS" />
                 <meta name="keywords" content="css price tag" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

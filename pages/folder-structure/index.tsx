@@ -4,11 +4,11 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Square from '../../placeholders/Square';
 import './folder-structure.css';
@@ -16,12 +16,12 @@ import './folder-structure.css';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.FolderStructure}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a folder structure with CSS" />
                 <meta name="og:description" content="Create a folder structure with CSS" />
                 <meta name="twitter:description" content="Create a folder structure with CSS" />
                 <meta name="keywords" content="css folder structure, css folder tree" />
-            </Helmet>
+            </Head>
             <BrowserFrame
 html={`
 <div class="folder-structure">

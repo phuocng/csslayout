@@ -4,10 +4,10 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
-import Pattern from '../../constants/Pattern';
+import Head from 'next/head';
+import { Pattern } from '../../constants/Pattern';
 
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
@@ -15,12 +15,12 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.Centering}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Center an element with CSS flexbox" />
                 <meta name="og:description" content="Center an element with CSS flexbox" />
                 <meta name="twitter:description" content="Center an element with CSS flexbox" />
                 <meta name="keywords" content="css centering, css flexbox" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

@@ -4,23 +4,23 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
 import Heading from '../../components/Heading';
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.FixedAtSide}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Fix an element at the middle of side with CSS" />
                 <meta name="og:description" content="Fix an element at the middle of side with CSS" />
                 <meta name="twitter:description" content="Fix an element at the middle of side with CSS" />
                 <meta name="keywords" content="css fixed" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

@@ -4,12 +4,12 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
 import Heading from '../../components/Heading';
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
@@ -34,12 +34,12 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout pattern={Pattern.PropertyList}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a property list with CSS flexbox" />
                 <meta name="og:description" content="Create a property list with CSS flexbox" />
                 <meta name="twitter:description" content="Create a property list with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, property list" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

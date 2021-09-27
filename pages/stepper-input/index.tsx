@@ -4,11 +4,11 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
@@ -23,12 +23,12 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout pattern={Pattern.StepperInput}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a stepper input with CSS flexbox" />
                 <meta name="og:description" content="Create a stepper input with CSS flexbox" />
                 <meta name="twitter:description" content="Create a stepper input with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css stepper input" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <BrowserFrame
 html={`

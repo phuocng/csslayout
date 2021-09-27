@@ -4,21 +4,21 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.ColorSwatch}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a color swatch with CSS flexbox" />
                 <meta name="og:description" content="Create a color swatch with CSS flexbox" />
                 <meta name="twitter:description" content="Create a color swatch with CSS flexbox" />
                 <meta name="keywords" content="css color swatch, css flexbox" />
-            </Helmet>
+            </Head>
             <BrowserFrame
 html={`
 <div class="swatch">

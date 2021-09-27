@@ -4,23 +4,23 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import './styles.css';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.ThreeDimensionsCard}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a 3D card with CSS" />
                 <meta name="og:description" content="Create a 3D card with CSS" />
                 <meta name="twitter:description" content="Create a 3D card with CSS" />
                 <meta name="keywords" content="css 3D card" />
-            </Helmet>
+            </Head>
             <BrowserFrame
 html={`
 <div class="three-dimensions-card">

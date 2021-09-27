@@ -4,13 +4,13 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
 import './mega-menu.css';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
@@ -19,12 +19,12 @@ import Triangle from '../../placeholders/Triangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.MegaMenu}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a mega menu with CSS" />
                 <meta name="og:description" content="Create a mega menu with CSS" />
                 <meta name="twitter:description" content="Create a mega menu with CSS" />
                 <meta name="keywords" content="css mega menu" />
-            </Helmet>
+            </Head>
             <div className='p-8 pb-20'>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Move the mouse over the second navigation item to see the mega menu.

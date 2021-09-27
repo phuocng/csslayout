@@ -4,11 +4,11 @@
  */
 
 import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 
-import RelatedPatterns from '../../components/RelatedPatterns';
-import Pattern from '../../constants/Pattern';
-import DetailsLayout from '../../layouts/DetailsLayout';
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { DetailsLayout } from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
@@ -17,12 +17,12 @@ import './masonry-grid.css';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout pattern={Pattern.MasonryGrid}>
-            <Helmet>
+            <Head>
                 <meta name="description" content="Create a masonry grid with CSS" />
                 <meta name="og:description" content="Create a masonry grid with CSS" />
                 <meta name="twitter:description" content="Create a masonry grid with CSS" />
                 <meta name="keywords" content="css column-count, css column-gap, css masonry, css masonry grid" />
-            </Helmet>
+            </Head>
             <BrowserFrame
 html={`
 <div class="masonry-grid">
