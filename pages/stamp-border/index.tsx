@@ -1,27 +1,21 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
-import { Pattern } from '../../constants/Pattern';
 
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { Pattern } from '../../constants/Pattern';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.StampBorder}>
+        <PatternLayout pattern={Pattern.StampBorder}>
             <Head>
                 <meta name="description" content="Create stamp border with CSS" />
                 <meta name="og:description" content="Create stamp border with CSS" />
                 <meta name="twitter:description" content="Create stamp border with CSS" />
                 <meta name="keywords" content="css radial gradient, css stamp border" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <div class="container">
     <!-- Inner -->
     <div class="container__inner">
@@ -30,58 +24,57 @@ html={`
     </div>
 </div>
 `}
-css={`
-.container {
-    /* Background */
-    background-color: #ccc;
-    background-image: radial-gradient(#fff 50%, transparent 50%);
-    background-position: -5px -5px;
-    background-repeat: repeat;
-    background-size: 10px 10px;
+                css={`
+                    .container {
+                        /* Background */
+                        background-color: #ccc;
+                        background-image: radial-gradient(#fff 50%, transparent 50%);
+                        background-position: -5px -5px;
+                        background-repeat: repeat;
+                        background-size: 10px 10px;
 
-    /* Spacing */
-    padding: 5px;
-}
+                        /* Spacing */
+                        padding: 5px;
+                    }
 
-.container__inner {
-    /* Background */
-    background-color: #ccc;
-}
-`}
+                    .container__inner {
+                        /* Background */
+                        background-color: #ccc;
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                    }}
                 >
                     <div
                         style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
+                            backgroundColor: '#ccc',
+                            backgroundImage: 'radial-gradient(#fff 50%, transparent 50%)',
+                            backgroundPosition: '-5px -5px',
+                            backgroundRepeat: 'repeat',
+                            backgroundSize: '10px 10px',
+                            height: '200px',
+                            padding: '5px',
+                            width: '200px',
                         }}
                     >
                         <div
                             style={{
                                 backgroundColor: '#ccc',
-                                backgroundImage: 'radial-gradient(#fff 50%, transparent 50%)',
-                                backgroundPosition: '-5px -5px',
-                                backgroundRepeat: 'repeat',
-                                backgroundSize: '10px 10px',
-                                height: '200px',
-                                padding: '5px',
-                                width: '200px',
+                                height: '100%',
+                                width: '100%',
                             }}
-                        >
-                            <div
-                                style={{
-                                    backgroundColor: '#ccc',
-                                    height: '100%',
-                                    width: '100%',
-                                }}
-                            />
-                        </div>
+                        />
                     </div>
-                </BrowserFrame>
-            </div>
-        </DetailsLayout>
+                </div>
+            </BrowserFrame>
+        </PatternLayout>
     );
 };
 

@@ -31,8 +31,9 @@ const Cover: React.FC<{}> = () => {
                 >
                     <thead>
                         <tr>
-                            {
-                                Array(3).fill(0).map((_, index) => {
+                            {Array(3)
+                                .fill(0)
+                                .map((_, index) => {
                                     return (
                                         <th
                                             key={index}
@@ -44,17 +45,18 @@ const Cover: React.FC<{}> = () => {
                                             {index === 0 ? <Rectangle /> : <Line />}
                                         </th>
                                     );
-                                })
-                            }
+                                })}
                         </tr>
                     </thead>
                     <tbody>
-                        {
-                            Array(2).fill(0).map((_, row) => {
+                        {Array(2)
+                            .fill(0)
+                            .map((_, row) => {
                                 return (
                                     <tr key={row} style={{ borderTop: '1px solid rgba(0, 0, 0, 0.3)' }}>
-                                        {
-                                            Array(3).fill(0).map((__, col) => {
+                                        {Array(3)
+                                            .fill(0)
+                                            .map((__, col) => {
                                                 return (
                                                     <td
                                                         key={col}
@@ -66,12 +68,10 @@ const Cover: React.FC<{}> = () => {
                                                         {col === 0 ? <Rectangle /> : <Line />}
                                                     </td>
                                                 );
-                                            })
-                                        }
+                                            })}
                                     </tr>
                                 );
-                            })
-                        }
+                            })}
                     </tbody>
                 </table>
             </div>

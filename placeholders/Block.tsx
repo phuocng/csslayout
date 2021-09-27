@@ -29,8 +29,9 @@ const Block: React.FC<BlockProps> = ({
                 width: '100%',
             }}
         >
-            {
-                Array(numberOfBlocks).fill(0).map((_, i) => {
+            {Array(numberOfBlocks)
+                .fill(0)
+                .map((_, i) => {
                     const s = random(1, 5);
                     return (
                         <div
@@ -51,8 +52,7 @@ const Block: React.FC<BlockProps> = ({
                             />
                         </div>
                     );
-                })
-            }
+                })}
         </div>
     );
 };

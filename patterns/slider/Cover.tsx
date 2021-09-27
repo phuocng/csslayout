@@ -30,9 +30,13 @@ const Cover: React.FC<{}> = () => {
                         width: '80%',
                     }}
                 >
-                    <div style={{ width: '20%' }}><Line /></div>
+                    <div style={{ width: '20%' }}>
+                        <Line />
+                    </div>
                     <Circle />
-                    <div style={{ flex: 1 }}><Line /></div>
+                    <div style={{ flex: 1 }}>
+                        <Line />
+                    </div>
                 </div>
             </div>
         </Frame>

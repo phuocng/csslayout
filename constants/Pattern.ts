@@ -101,4 +101,4 @@ export enum Pattern {
     Watermark = 'Watermark',
     Wizard = 'Wizard',
     ZigzagTimeline = 'Zigzag timeline',
-};
+}

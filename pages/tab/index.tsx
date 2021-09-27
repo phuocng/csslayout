@@ -1,13 +1,8 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
-import { Pattern } from '../../constants/Pattern';
 
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { Pattern } from '../../constants/Pattern';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
@@ -39,16 +34,15 @@ const Details: React.FC<{}> = () => {
     };
 
     return (
-        <DetailsLayout pattern={Pattern.Tab}>
+        <PatternLayout pattern={Pattern.Tab}>
             <Head>
                 <meta name="description" content="Create tabs with CSS flexbox" />
                 <meta name="og:description" content="Create tabs with CSS flexbox" />
                 <meta name="twitter:description" content="Create tabs with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css navigation, css tab" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <div class="tabs">
     <!-- Active tab -->
     <div class="tabs__tab--active">
@@ -61,68 +55,67 @@ html={`
     </div>
 </div>
 `}
-css={`
-.tabs {
-    /* Center the content */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
+                css={`
+                    .tabs {
+                        /* Center the content */
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+                    }
 
-.tabs__tab--active {
-    /* Border */
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    /* Hide the bottom border */
-    border-bottom-color: transparent;
+                    .tabs__tab--active {
+                        /* Border */
+                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        /* Hide the bottom border */
+                        border-bottom-color: transparent;
 
-    /* Border radius */
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-}
+                        /* Border radius */
+                        border-top-left-radius: 2px;
+                        border-top-right-radius: 2px;
+                    }
 
-.tabs__tab--inactive {
-    /* Has only the bottom border */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
-`}
+                    .tabs__tab--inactive {
+                        /* Has only the bottom border */
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '8px',
+                    }}
                 >
                     <div
                         style={{
                             alignItems: 'center',
                             display: 'flex',
-                            flexDirection: 'column',
-                            height: '100%',
                             justifyContent: 'center',
-                            padding: '8px',
                         }}
                     >
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                justifyContent: 'center',
-                            }}
-                        >
-                            <Tab tabIndex={0}>
-                                <div style={{ width: '64px' }}>
-                                    <Rectangle height={8} />
-                                </div>
-                            </Tab>
-                            <Tab tabIndex={1}>
-                                <div style={{ width: '32px' }}>
-                                    <Rectangle height={8} />
-                                </div>
-                            </Tab>
-                            <Tab tabIndex={2}>
-                                <div style={{ width: '128px' }}>
-                                    <Rectangle height={8} />
-                                </div>
-                            </Tab>
-                        </div>
+                        <Tab tabIndex={0}>
+                            <div style={{ width: '64px' }}>
+                                <Rectangle height={8} />
+                            </div>
+                        </Tab>
+                        <Tab tabIndex={1}>
+                            <div style={{ width: '32px' }}>
+                                <Rectangle height={8} />
+                            </div>
+                        </Tab>
+                        <Tab tabIndex={2}>
+                            <div style={{ width: '128px' }}>
+                                <Rectangle height={8} />
+                            </div>
+                        </Tab>
                     </div>
-                </BrowserFrame>
-            </div>
-        </DetailsLayout>
+                </div>
+            </BrowserFrame>
+        </PatternLayout>
     );
 };
 

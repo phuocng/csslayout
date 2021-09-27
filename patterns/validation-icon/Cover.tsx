@@ -42,7 +42,7 @@ const Cover: React.FC<{}> = () => {
                             style={{
                                 fill: 'none',
                                 height: '16px',
-                                stroke: "rgba(0, 0, 0, 0.5)",
+                                stroke: 'rgba(0, 0, 0, 0.5)',
                                 strokeLinecap: 'round',
                                 strokeLinejoin: 'round',
                                 strokeWidth: 1,

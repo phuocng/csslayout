@@ -9,16 +9,25 @@ class MyDocument extends Document {
                     <meta charSet="utf-8" />
 
                     <meta content="A collection of popular layouts and patterns made with CSS" name="description" />
-                    <meta content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" name="keywords" />
+                    <meta
+                        content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template"
+                        name="keywords"
+                    />
                     <meta content="Nguyen Huu Phuoc" name="author" />
                     <meta content="@nghuuphuoc" name="twitter:site" />
                     <meta content="summary" name="twitter:card" />
-                    <meta content="A collection of popular layouts and patterns made with CSS" name="twitter:description" />
+                    <meta
+                        content="A collection of popular layouts and patterns made with CSS"
+                        name="twitter:description"
+                    />
                     <meta content="A collection of popular layouts and patterns made with CSS" name="twitter:title" />
                     <meta content="/assets/logo.png" name="twitter:image" />
 
                     <meta content="A collection of popular layouts and patterns made with CSS" property="og:title" />
-                    <meta content="A collection of popular layouts and patterns made with CSS" property="og:description" />
+                    <meta
+                        content="A collection of popular layouts and patterns made with CSS"
+                        property="og:description"
+                    />
                     <meta content="article" property="og:type" />
                     <meta content="https://csslayout.io" property="og:url" />
                     <meta content="/assets/logo.png" property="og:image" />

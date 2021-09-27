@@ -43,9 +43,15 @@ const Cover: React.FC<{}> = () => {
                             width: '.75rem',
                         }}
                     />
-                    <div style={{ marginBottom: '0.25rem', width: '80%' }}><Rectangle /></div>
-                    <div style={{ marginBottom: '0.25rem', width: '80%' }}><Line /></div>
-                    <div style={{ marginBottom: '0.25rem', width: '60%' }}><Line /></div>
+                    <div style={{ marginBottom: '0.25rem', width: '80%' }}>
+                        <Rectangle />
+                    </div>
+                    <div style={{ marginBottom: '0.25rem', width: '80%' }}>
+                        <Line />
+                    </div>
+                    <div style={{ marginBottom: '0.25rem', width: '60%' }}>
+                        <Line />
+                    </div>
                 </div>
                 <div
                     style={{
@@ -61,15 +67,21 @@ const Cover: React.FC<{}> = () => {
                             borderRadius: '50%',
                             height: '.75rem',
                             left: 0,
-                            position: 'absolute',                            
+                            position: 'absolute',
                             top: '50%',
                             transform: 'translate(-50%, -50%)',
                             width: '.75rem',
                         }}
                     />
-                    <div style={{ marginBottom: '0.25rem', width: '80%' }}><Rectangle /></div>
-                    <div style={{ marginBottom: '0.25rem', width: '60%' }}><Line /></div>
-                    <div style={{ marginBottom: '0.25rem', width: '80%' }}><Line /></div>
+                    <div style={{ marginBottom: '0.25rem', width: '80%' }}>
+                        <Rectangle />
+                    </div>
+                    <div style={{ marginBottom: '0.25rem', width: '60%' }}>
+                        <Line />
+                    </div>
+                    <div style={{ marginBottom: '0.25rem', width: '80%' }}>
+                        <Line />
+                    </div>
                 </div>
             </div>
         </Frame>

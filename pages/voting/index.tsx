@@ -1,14 +1,10 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
@@ -17,16 +13,15 @@ const Details: React.FC<{}> = () => {
     const increase = () => setValue(value + 1);
 
     return (
-        <DetailsLayout pattern={Pattern.Voting}>
+        <PatternLayout pattern={Pattern.Voting}>
             <Head>
                 <meta name="description" content="Create a voting control with CSS flexbox" />
                 <meta name="og:description" content="Create a voting control with CSS flexbox" />
                 <meta name="twitter:description" content="Create a voting control with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css triangle buttons, css voting control" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <div class="voting">
     <!-- Up button -->
     <button class="voting__button">
@@ -44,148 +39,143 @@ html={`
     </button>
 </div>
 `}
-css={`
-.voting {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 0.25rem;
-    display: flex;
-    flex-direction: column;
-    height: 8rem;
-}
+                css={`
+                    .voting {
+                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border-radius: 0.25rem;
+                        display: flex;
+                        flex-direction: column;
+                        height: 8rem;
+                    }
 
-.voting__button {
-    /* Reset */
-    background: none;
-    border: none;
-    cursor: pointer;
-    
-    /* Size */
-    height: 1rem;
+                    .voting__button {
+                        /* Reset */
+                        background: none;
+                        border: none;
+                        cursor: pointer;
 
-    /* Position the triangle */
-    position: relative;
-}
+                        /* Size */
+                        height: 1rem;
 
-.voting__triangle {
-    border-style: solid;
+                        /* Position the triangle */
+                        position: relative;
+                    }
 
-    /* Size */
-    height: 0;
-    width: 0;
-}
+                    .voting__triangle {
+                        border-style: solid;
 
-.voting__triangle--up {
-    border-color: transparent transparent rgba(0, 0, 0, 0.3);
-    border-width: 0 0.5rem 0.5rem;
-}
+                        /* Size */
+                        height: 0;
+                        width: 0;
+                    }
 
-.voting__triangle--down {
-    border-color: rgba(0, 0, 0, 0.3) transparent transparent;
-    border-width: 0.5rem 0.5rem 0px;
-}
+                    .voting__triangle--up {
+                        border-color: transparent transparent rgba(0, 0, 0, 0.3);
+                        border-width: 0 0.5rem 0.5rem;
+                    }
 
-.voting__number {
-    /* Take the available height */
-    flex: 1;
+                    .voting__triangle--down {
+                        border-color: rgba(0, 0, 0, 0.3) transparent transparent;
+                        border-width: 0.5rem 0.5rem 0px;
+                    }
 
-    /* Center the number */
-    align-items: center;
-    display: flex;
-    justify-content: center;
+                    .voting__number {
+                        /* Take the available height */
+                        flex: 1;
 
-    /* Spacing */
-    padding: 0.25rem;
-}
-`}
+                        /* Center the number */
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+
+                        /* Spacing */
+                        padding: 0.25rem;
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '0.5rem',
+                    }}
                 >
                     <div
                         style={{
-                            alignItems: 'center',
+                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderRadius: '0.25rem',
                             display: 'flex',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '0.5rem',
+                            flexDirection: 'column',
+                            height: '8rem',
                         }}
                     >
-                        <div
+                        <button
                             style={{
-                                border: '1px solid rgba(0, 0, 0, 0.3)',
-                                borderRadius: '0.25rem',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                height: '8rem',
+                                background: 'none',
+                                border: 'none',
+                                cursor: 'pointer',
+                                height: '1rem',
+                                position: 'relative',
                             }}
+                            onClick={increase}
                         >
-                            <button
-                                style={{
-                                    background: 'none',
-                                    border: 'none',
-                                    cursor: 'pointer',
-                                    height: '1rem',
-                                    position: 'relative',
-                                }}
-                                onClick={increase}
-                            >
-                                <div
-                                    style={{
-                                        borderColor: 'transparent transparent rgba(0, 0, 0, 0.3) transparent',
-                                        borderStyle: 'solid',
-                                        borderWidth: '0 0.5rem 0.5rem 0.5rem',
-                                        height: 0,
-                                        left: '50%',
-                                        position: 'absolute',
-                                        top: '50%',
-                                        transform: 'translate(-50%, -50%)',
-                                        width: 0,
-                                    }}
-                                />
-                            </button>
                             <div
                                 style={{
-                                    alignItems: 'center',
-                                    display: 'flex',
-                                    flex: 1,
-                                    padding: '0.25rem',
-                                    justifyContent: 'center',
+                                    borderColor: 'transparent transparent rgba(0, 0, 0, 0.3) transparent',
+                                    borderStyle: 'solid',
+                                    borderWidth: '0 0.5rem 0.5rem 0.5rem',
+                                    height: 0,
+                                    left: '50%',
+                                    position: 'absolute',
+                                    top: '50%',
+                                    transform: 'translate(-50%, -50%)',
+                                    width: 0,
                                 }}
-                            >
-                                {value}
-                            </div>
-                            <button
-                                style={{
-                                    background: 'none',
-                                    border: 'none',
-                                    cursor: 'pointer',
-                                    height: '1rem',
-                                    position: 'relative',
-                                }}
-                                onClick={decrease}
-                            >
-                                <div
-                                    style={{
-                                        borderColor: 'rgba(0, 0, 0, 0.3) transparent transparent transparent',
-                                        borderStyle: 'solid',
-                                        borderWidth: '0.5rem 0.5rem 0 0.5rem',
-                                        height: 0,
-                                        left: '50%',
-                                        position: 'absolute',
-                                        top: '50%',
-                                        transform: 'translate(-50%, -50%)',
-                                        width: 0,
-                                    }}
-                                />
-                            </button>
+                            />
+                        </button>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'flex',
+                                flex: 1,
+                                padding: '0.25rem',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            {value}
                         </div>
+                        <button
+                            style={{
+                                background: 'none',
+                                border: 'none',
+                                cursor: 'pointer',
+                                height: '1rem',
+                                position: 'relative',
+                            }}
+                            onClick={decrease}
+                        >
+                            <div
+                                style={{
+                                    borderColor: 'rgba(0, 0, 0, 0.3) transparent transparent transparent',
+                                    borderStyle: 'solid',
+                                    borderWidth: '0.5rem 0.5rem 0 0.5rem',
+                                    height: 0,
+                                    left: '50%',
+                                    position: 'absolute',
+                                    top: '50%',
+                                    transform: 'translate(-50%, -50%)',
+                                    width: 0,
+                                }}
+                            />
+                        </button>
                     </div>
-                </BrowserFrame>
-            </div>
-
-            <RelatedPatterns
-                patterns={[
-                    Pattern.SpinButton, Pattern.StepperInput, Pattern.TriangleButtons
-                ]}
-            />
-        </DetailsLayout>
+                </div>
+            </BrowserFrame>
+            <Spacer size="extraLarge" />
+            <RelatedPatterns patterns={[Pattern.SpinButton, Pattern.StepperInput, Pattern.TriangleButtons]} />
+        </PatternLayout>
     );
 };
 

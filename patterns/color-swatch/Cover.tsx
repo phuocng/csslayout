@@ -19,21 +19,21 @@ const Cover: React.FC<{}> = () => {
                     justifyContent: 'center',
                     padding: '8px',
                 }}
-            >   
-                {
-                    Array(4).fill(0).map((_, index) => (
+            >
+                {Array(4)
+                    .fill(0)
+                    .map((_, index) => (
                         <div
                             key={index}
                             style={{
                                 backgroundColor: `rgba(0, 0, 0, 0.${index * 2 + 1})`,
-                                borderRadius: '9999px',                                
+                                borderRadius: '9999px',
                                 height: '1.5rem',
                                 margin: '0.5rem',
                                 width: '1.5rem',
                             }}
                         />
-                    ))
-                }
+                    ))}
             </div>
         </Frame>
     );

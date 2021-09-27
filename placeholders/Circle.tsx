@@ -10,10 +10,7 @@ interface CircleProps {
     size?: number;
 }
 
-const Circle: React.FC<CircleProps> = ({
-    backgroundColor = 'rgba(0, 0, 0, .3)',
-    size = 16,
-}) => {
+const Circle: React.FC<CircleProps> = ({ backgroundColor = 'rgba(0, 0, 0, .3)', size = 16 }) => {
     return (
         <div
             style={{

@@ -51,7 +51,7 @@ const Cover: React.FC<{}> = () => {
                                 width: '32px',
                             }}
                         >
-                            <Triangle backgroundColor='#FFF' corner='r' size={8} />
+                            <Triangle backgroundColor="#FFF" corner="r" size={8} />
                         </div>
                     </div>
                 </div>

@@ -25,8 +25,8 @@ const Cover: React.FC<{}> = () => {
                         height: '2rem',
                         position: 'relative',
                         width: '100%',
-                    }
-                }>
+                    }}
+                >
                     <div
                         style={{
                             background: 'rgba(0, 0, 0, 0.3)',
@@ -43,7 +43,7 @@ const Cover: React.FC<{}> = () => {
                         style={{
                             background: 'rgba(0, 0, 0, 0.3)',
                             bottom: 0,
-                            height: '0.5rem',                   
+                            height: '0.5rem',
                             left: 0,
                             position: 'absolute',
                             transform: 'translate(0, 100%) skewX(-45deg)',

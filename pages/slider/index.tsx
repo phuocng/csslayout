@@ -1,29 +1,23 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
-import { Pattern } from '../../constants/Pattern';
 
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { Pattern } from '../../constants/Pattern';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.Slider}>
+        <PatternLayout pattern={Pattern.Slider}>
             <Head>
                 <meta name="description" content="Create a slider with CSS flexbox" />
                 <meta name="og:description" content="Create a slider with CSS flexbox" />
                 <meta name="twitter:description" content="Create a slider with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css slider" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <div class="container">
     <!-- Left side -->
     <!-- Width based on the current value -->
@@ -36,71 +30,74 @@ html={`
     <div class="container__right"></div>
 </div>
 `}
-css={`
-.container {
-    /* Content is centered horizontally */
-    align-items: center;
-    display: flex;
+                css={`
+                    .container {
+                        /* Content is centered horizontally */
+                        align-items: center;
+                        display: flex;
 
-    /* Size */
-    height: 32px;
-}
+                        /* Size */
+                        height: 32px;
+                    }
 
-.container__left {
-    height: 2px;
+                    .container__left {
+                        height: 2px;
 
-    /* Colors */
-    background-color: rgba(0, 0, 0, .3);
-}
+                        /* Colors */
+                        background-color: rgba(0, 0, 0, 0.3);
+                    }
 
-.container__circle {
-    /* Size */
-    height: 32px;
-    width: 32px;
+                    .container__circle {
+                        /* Size */
+                        height: 32px;
+                        width: 32px;
 
-    /* Rounded border */
-    border-radius: 9999px;
+                        /* Rounded border */
+                        border-radius: 9999px;
 
-    /* Colors */
-    background-color: rgba(0, 0, 0, .3);
-}
+                        /* Colors */
+                        background-color: rgba(0, 0, 0, 0.3);
+                    }
 
-.container__right {
-    /* Take the remaining width */
-    flex: 1;
-    height: 2px;
+                    .container__right {
+                        /* Take the remaining width */
+                        flex: 1;
+                        height: 2px;
 
-    /* Colors */
-    background-color: rgba(0, 0, 0, .3);
-}
-`}
+                        /* Colors */
+                        background-color: rgba(0, 0, 0, 0.3);
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '8px',
+                    }}
                 >
                     <div
                         style={{
                             alignItems: 'center',
                             display: 'flex',
-                            flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '8px',
+                            height: '16px',
+                            width: '256px',
                         }}
                     >
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'flex',
-                                height: '16px',
-                                width: '256px',
-                            }}
-                        >
-                            <div style={{ width: '20%' }}><Rectangle height={2} /></div>
-                            <Circle size={32} />
-                            <div style={{ flex: 1 }}><Rectangle height={2} /></div>
+                        <div style={{ width: '20%' }}>
+                            <Rectangle height={2} />
+                        </div>
+                        <Circle size={32} />
+                        <div style={{ flex: 1 }}>
+                            <Rectangle height={2} />
                         </div>
                     </div>
-                </BrowserFrame>
-            </div>
-        </DetailsLayout>
+                </div>
+            </BrowserFrame>
+        </PatternLayout>
     );
 };
 

@@ -25,17 +25,35 @@ const Cover: React.FC<{}> = () => {
                     <Square />
                 </div>
                 <div style={{ flex: 1 }}>
-                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
-                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
-                    <div style={{ marginBottom: '16px', width: '80%' }}><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}>
+                        <Line />
+                    </div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}>
+                        <Line />
+                    </div>
+                    <div style={{ marginBottom: '16px', width: '80%' }}>
+                        <Line />
+                    </div>
 
-                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
-                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
-                    <div style={{ marginBottom: '16px', width: '80%' }}><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}>
+                        <Line />
+                    </div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}>
+                        <Line />
+                    </div>
+                    <div style={{ marginBottom: '16px', width: '80%' }}>
+                        <Line />
+                    </div>
 
-                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
-                    <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
-                    <div style={{ marginBottom: '4px', width: '80%' }}><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}>
+                        <Line />
+                    </div>
+                    <div style={{ marginBottom: '4px', width: '100%' }}>
+                        <Line />
+                    </div>
+                    <div style={{ marginBottom: '4px', width: '80%' }}>
+                        <Line />
+                    </div>
                 </div>
             </div>
         </Frame>

@@ -1,22 +1,20 @@
 import * as React from 'react';
-import { Heading, Spacer } from '@1milligram/design';
+import { Heading } from '@1milligram/design';
 
 import { Pattern } from '../constants/Pattern';
 import { CoverCard } from './CoverCard';
 
-interface RelatedPatternsProps {
+export const RelatedPatterns: React.FC<{
     patterns: Pattern[];
-}
-
-export const RelatedPatterns: React.FC<RelatedPatternsProps> = ({ patterns }) => {
+}> = ({ patterns }) => {
     return (
         <section>
             <Heading level={2}>See also</Heading>
 
             <div style={{ alignItems: 'start', display: 'flex', flexWrap: 'wrap', padding: '1.5rem' }}>
-                {
-                    patterns.map((pattern) => <CoverCard key={pattern} pattern={pattern} />)
-                }
+                {patterns.map((pattern) => (
+                    <CoverCard key={pattern} pattern={pattern} />
+                ))}
             </div>
         </section>
     );

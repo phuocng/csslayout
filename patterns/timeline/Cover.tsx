@@ -47,30 +47,50 @@ const Cover: React.FC<{}> = () => {
                     >
                         <li style={{ marginBottom: '8px' }}>
                             <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
-                                <Circle backgroundColor='#aaa' size={12} />
+                                <Circle backgroundColor="#aaa" size={12} />
                                 <div style={{ flex: 1, marginLeft: '8px' }}>
-                                    <div style={{ width: '80%' }}><Rectangle /></div>
+                                    <div style={{ width: '80%' }}>
+                                        <Rectangle />
+                                    </div>
                                 </div>
                             </div>
                             <div style={{ marginLeft: '20px' }}>
-                                <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
-                                <div style={{ marginBottom: '4px', width: '80%' }}><Line /></div>
-                                <div style={{ marginBottom: '4px', width: '60%' }}><Line /></div>
-                                <div style={{ width: '40%' }}><Line /></div>
+                                <div style={{ marginBottom: '4px', width: '100%' }}>
+                                    <Line />
+                                </div>
+                                <div style={{ marginBottom: '4px', width: '80%' }}>
+                                    <Line />
+                                </div>
+                                <div style={{ marginBottom: '4px', width: '60%' }}>
+                                    <Line />
+                                </div>
+                                <div style={{ width: '40%' }}>
+                                    <Line />
+                                </div>
                             </div>
                         </li>
                         <li>
                             <div style={{ alignItems: 'center', display: 'flex', marginBottom: '4px' }}>
-                                <Circle backgroundColor='#aaa' size={12} />
+                                <Circle backgroundColor="#aaa" size={12} />
                                 <div style={{ flex: 1, marginLeft: '8px' }}>
-                                    <div style={{ width: '60%' }}><Rectangle /></div>
+                                    <div style={{ width: '60%' }}>
+                                        <Rectangle />
+                                    </div>
                                 </div>
                             </div>
                             <div style={{ marginLeft: '20px' }}>
-                                <div style={{ marginBottom: '4px', width: '80%' }}><Line /></div>
-                                <div style={{ marginBottom: '4px', width: '60%' }}><Line /></div>
-                                <div style={{ marginBottom: '4px', width: '40%' }}><Line /></div>
-                                <div style={{ width: '80%' }}><Line /></div>
+                                <div style={{ marginBottom: '4px', width: '80%' }}>
+                                    <Line />
+                                </div>
+                                <div style={{ marginBottom: '4px', width: '60%' }}>
+                                    <Line />
+                                </div>
+                                <div style={{ marginBottom: '4px', width: '40%' }}>
+                                    <Line />
+                                </div>
+                                <div style={{ width: '80%' }}>
+                                    <Line />
+                                </div>
                             </div>
                         </li>
                     </ul>

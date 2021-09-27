@@ -1,21 +1,17 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Square from '../../placeholders/Square';
 import './folder-structure.css';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.FolderStructure}>
+        <PatternLayout pattern={Pattern.FolderStructure}>
             <Head>
                 <meta name="description" content="Create a folder structure with CSS" />
                 <meta name="og:description" content="Create a folder structure with CSS" />
@@ -23,7 +19,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css folder structure, css folder tree" />
             </Head>
             <BrowserFrame
-html={`
+                html={`
 <div class="folder-structure">
     <ul>
         <li>
@@ -53,57 +49,59 @@ html={`
     </ul>
 </div>
 `}
-css={`
-:root {
-    --folder-structure-item-height: 1rem;
-    --folder-structure-item-margin-left: 2rem;
-    --folder-structure-item-padding-top: 1rem;
-}
+                css={`
+                    :root {
+                        --folder-structure-item-height: 1rem;
+                        --folder-structure-item-margin-left: 2rem;
+                        --folder-structure-item-padding-top: 1rem;
+                    }
 
-.folder-structure ul {
-    /* Reset */
-    list-style-type: none;
-    margin: 0;
-}
+                    .folder-structure ul {
+                        /* Reset */
+                        list-style-type: none;
+                        margin: 0;
+                    }
 
-.folder-structure li {
-    padding: var(--folder-structure-item-padding-top) 0rem 0rem 0rem;
-    position: relative;
-}
+                    .folder-structure li {
+                        padding: var(--folder-structure-item-padding-top) 0rem 0rem 0rem;
+                        position: relative;
+                    }
 
-.folder-structure li::before {
-    border-left: 1px solid rgba(0, 0, 0, .3);
-    content: '';
-    
-    /* Position */
-    left: 0;
-    position: absolute;
-    top: 0;
-    transform: translate(calc(-1 * var(--folder-structure-item-margin-left)), 0);
+                    .folder-structure li::before {
+                        border-left: 1px solid rgba(0, 0, 0, 0.3);
+                        content: '';
 
-    /* Size */
-    height: 100%;
-}
+                        /* Position */
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+                        transform: translate(calc(-1 * var(--folder-structure-item-margin-left)), 0);
 
-.folder-structure li::after {
-    border-bottom: 1px solid rgba(0, 0, 0, .3);
-    content: '';
+                        /* Size */
+                        height: 100%;
+                    }
 
-    /* Position */
-    left: 0;
-    position: absolute;
-    top: calc(var(--folder-structure-item-padding-top) + var(--folder-structure-item-height) / 2);
-    transform: translate(-100%, 0);
+                    .folder-structure li::after {
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+                        content: '';
 
-    /* Size */
-    width: var(--folder-structure-item-margin-left);
-}
+                        /* Position */
+                        left: 0;
+                        position: absolute;
+                        top: calc(var(--folder-structure-item-padding-top) + var(--folder-structure-item-height) / 2);
+                        transform: translate(-100%, 0);
 
-/* Remove the border from the last item */
-.folder-structure li:last-child::before {
-    height: calc(var(--folder-structure-item-padding-top) + var(--folder-structure-item-height) / 2);
-}
-`}
+                        /* Size */
+                        width: var(--folder-structure-item-margin-left);
+                    }
+
+                    /* Remove the border from the last item */
+                    .folder-structure li:last-child::before {
+                        height: calc(
+                            var(--folder-structure-item-padding-top) + var(--folder-structure-item-height) / 2
+                        );
+                    }
+                `}
             >
                 <div
                     style={{
@@ -117,40 +115,57 @@ css={`
                     <div className="folder-structure">
                         <ul>
                             <li>
-                                <Square size='1rem' />
+                                <Square size="1rem" />
                                 <ul>
-                                    <li><Square size='1rem' /></li>
+                                    <li>
+                                        <Square size="1rem" />
+                                    </li>
                                 </ul>
                             </li>
                             <li>
-                                <Square size='1rem' />
+                                <Square size="1rem" />
                                 <ul>
                                     <li>
-                                        <Square size='1rem' />
+                                        <Square size="1rem" />
                                         <ul>
-                                            <li><Square size='1rem' /></li>
-                                            <li><Square size='1rem' /></li>
-                                            <li><Square size='1rem' /></li>
+                                            <li>
+                                                <Square size="1rem" />
+                                            </li>
+                                            <li>
+                                                <Square size="1rem" />
+                                            </li>
+                                            <li>
+                                                <Square size="1rem" />
+                                            </li>
                                         </ul>
                                     </li>
-                                    <li><Square size='1rem' /></li>
                                     <li>
-                                        <Square size='1rem' />
+                                        <Square size="1rem" />
+                                    </li>
+                                    <li>
+                                        <Square size="1rem" />
                                         <ul>
-                                            <li><Square size='1rem' /></li>
-                                            <li><Square size='1rem' /></li>
+                                            <li>
+                                                <Square size="1rem" />
+                                            </li>
+                                            <li>
+                                                <Square size="1rem" />
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
-                            <li><Square size='1rem' /></li>
+                            <li>
+                                <Square size="1rem" />
+                            </li>
                         </ul>
                     </div>
                 </div>
             </BrowserFrame>
 
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.TreeDiagram]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

@@ -11,11 +11,7 @@ interface TriangleProps {
     size?: number;
 }
 
-const Triangle: React.FC<TriangleProps> = ({
-    backgroundColor = 'rgba(0, 0, 0, .3)',
-    size = 16,
-    corner = 'tl',
-}) => {
+const Triangle: React.FC<TriangleProps> = ({ backgroundColor = 'rgba(0, 0, 0, .3)', size = 16, corner = 'tl' }) => {
     let bw = '';
     let bc = '';
     switch (corner) {

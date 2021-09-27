@@ -12,11 +12,7 @@ interface StarProps {
 }
 
 const Star: React.FC<StarProps> = ({ isActive }) => {
-    return (
-        <button className="p-rating-star">
-            {isActive ? '★' : '☆'}
-        </button>
-    );
+    return <button className="p-rating-star">{isActive ? '★' : '☆'}</button>;
 };
 
 export default Star;

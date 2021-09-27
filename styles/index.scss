@@ -1,7 +1,9 @@
 @import './reset';
 
 // Blocks
-@import 'blocks/_browser-frame';
+@import 'blocks/ad';
+@import 'blocks/browser-frame';
+@import 'blocks/code';
 @import 'blocks/cover';
 @import 'blocks/footer';
 @import 'blocks/header';

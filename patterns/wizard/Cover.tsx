@@ -46,7 +46,9 @@ const Cover: React.FC<{}> = () => {
                         >
                             1
                         </div>
-                        <div style={{ flex: 1 }}><Line /></div>
+                        <div style={{ flex: 1 }}>
+                            <Line />
+                        </div>
                     </div>
                     <div
                         style={{
@@ -56,7 +58,9 @@ const Cover: React.FC<{}> = () => {
                             justifyContent: 'center',
                         }}
                     >
-                        <div style={{ flex: 1 }}><Line /></div>
+                        <div style={{ flex: 1 }}>
+                            <Line />
+                        </div>
                         <div
                             style={{
                                 alignItems: 'center',
@@ -72,7 +76,9 @@ const Cover: React.FC<{}> = () => {
                         >
                             2
                         </div>
-                        <div style={{ flex: 1 }}><Line /></div>
+                        <div style={{ flex: 1 }}>
+                            <Line />
+                        </div>
                     </div>
                     <div
                         style={{
@@ -82,7 +88,9 @@ const Cover: React.FC<{}> = () => {
                             justifyContent: 'center',
                         }}
                     >
-                        <div style={{ flex: 1 }}><Line /></div>
+                        <div style={{ flex: 1 }}>
+                            <Line />
+                        </div>
                         <div
                             style={{
                                 alignItems: 'center',

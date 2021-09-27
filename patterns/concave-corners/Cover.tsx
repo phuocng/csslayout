@@ -61,7 +61,7 @@ const Cover: React.FC<{}> = () => {
                             background: 'var(--current-background-color, #FFF)',
                             borderRadius: '1rem 0 0 0',
                             bottom: 0,
-                            height: '1rem',                            
+                            height: '1rem',
                             position: 'absolute',
                             right: 0,
                             width: '1rem',

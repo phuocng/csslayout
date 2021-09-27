@@ -10,10 +10,7 @@ interface SquareProps {
     size?: string;
 }
 
-const Square: React.FC<SquareProps> = ({
-    backgroundColor = 'rgba(0, 0, 0, 0.3)',
-    size = '100%',
-}) => {
+const Square: React.FC<SquareProps> = ({ backgroundColor = 'rgba(0, 0, 0, 0.3)', size = '100%' }) => {
     return (
         <div
             style={{

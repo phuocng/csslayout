@@ -1,14 +1,10 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Triangle from '../../placeholders/Triangle';
 
@@ -19,16 +15,15 @@ const Details: React.FC<{}> = () => {
     const change = (e: React.ChangeEvent<HTMLInputElement>) => setValue(parseInt(e.target.value, 10));
 
     return (
-        <DetailsLayout pattern={Pattern.SpinButton}>
+        <PatternLayout pattern={Pattern.SpinButton}>
             <Head>
                 <meta name="description" content="Create a spin button with CSS flexbox" />
                 <meta name="og:description" content="Create a spin button with CSS flexbox" />
                 <meta name="twitter:description" content="Create a spin button with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css spin button" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <div class="container">
     <!-- Input -->
     <input type="text" class="container__input" />
@@ -47,97 +42,97 @@ html={`
     </div>
 </div>
 `}
-css={`
-.container {
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 2px;
-    display: flex;
-}
+                css={`
+                    .container {
+                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border-radius: 2px;
+                        display: flex;
+                    }
 
-.container__input {
-    border-color: transparent;
-    margin-right: 4px;
-    padding: 4px;
-    width: 100px;
-}
+                    .container__input {
+                        border-color: transparent;
+                        margin-right: 4px;
+                        padding: 4px;
+                        width: 100px;
+                    }
 
-.container__buttons {
-    /* Content is centered vertically */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+                    .container__buttons {
+                        /* Content is centered vertically */
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
 
-.container__button {
-    border-color: transparent;
-    /* Make buttons have the same height */
-    flex: 1,
-}
-`}
+                    .container__button {
+                        border-color: transparent;
+                        /* Make buttons have the same height */
+                        flex: 1;
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                    }}
                 >
                     <div
                         style={{
-                            alignItems: 'center',
+                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderRadius: '2px',
                             display: 'flex',
-                            flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
                         }}
                     >
+                        <input
+                            type="text"
+                            style={{
+                                borderColor: 'transparent',
+                                marginRight: '4px',
+                                padding: '4px',
+                                width: '100px',
+                            }}
+                            value={value}
+                            onChange={change}
+                        />
                         <div
                             style={{
-                                border: '1px solid rgba(0, 0, 0, 0.3)',
-                                borderRadius: '2px',
                                 display: 'flex',
+                                flexDirection: 'column',
+                                justifyContent: 'center',
                             }}
                         >
-                            <input
-                                type="text"
+                            <button
                                 style={{
                                     borderColor: 'transparent',
-                                    marginRight: '4px',
-                                    padding: '4px',
-                                    width: '100px',
+                                    cursor: 'pointer',
+                                    flex: 1,
+                                    padding: '4px 4px 2px 4px',
                                 }}
-                                value={value}
-                                onChange={change}
-                            />
-                            <div
-                                style={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    justifyContent: 'center',
-                                }}
+                                onClick={increase}
                             >
-                                <button
-                                    style={{
-                                        borderColor: 'transparent',
-                                        cursor: 'pointer',
-                                        flex: 1,
-                                        padding: '4px 4px 2px 4px',
-                                    }}
-                                    onClick={increase}
-                                >
-                                    <Triangle size={6} corner="t" />
-                                </button>
-                                <button
-                                    style={{
-                                        borderColor: 'transparent',
-                                        cursor: 'pointer',
-                                        flex: 1,
-                                        padding: '2px 4px 4px 4px',
-                                    }}
-                                    onClick={decrease}
-                                >
-                                    <Triangle size={6} corner="b" />
-                                </button>
-                            </div>
+                                <Triangle size={6} corner="t" />
+                            </button>
+                            <button
+                                style={{
+                                    borderColor: 'transparent',
+                                    cursor: 'pointer',
+                                    flex: 1,
+                                    padding: '2px 4px 4px 4px',
+                                }}
+                                onClick={decrease}
+                            >
+                                <Triangle size={6} corner="b" />
+                            </button>
                         </div>
                     </div>
-                </BrowserFrame>
-            </div>
+                </div>
+            </BrowserFrame>
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.StepperInput, Pattern.Voting]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

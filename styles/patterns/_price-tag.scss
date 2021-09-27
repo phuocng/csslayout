@@ -10,7 +10,7 @@
 
 .price-tag {
     background: var(--price-tag-background);
-    color: #FFF;
+    color: #fff;
 
     /* Center the price */
     align-items: center;
@@ -33,11 +33,9 @@
 
     border-color: transparent var(--price-tag-background) transparent transparent;
     border-style: solid;
-    border-width: calc(var(--price-tag-height) / 2)
-                  calc(var(--price-tag-height) / 2)
-                  calc(var(--price-tag-height) / 2)
-                  0rem;
-    
+    border-width: calc(var(--price-tag-height) / 2) calc(var(--price-tag-height) / 2) calc(var(--price-tag-height) / 2)
+        0rem;
+
     /* Position */
     left: 0px;
     position: absolute;
@@ -49,10 +47,10 @@
 .price-tag::after {
     content: '';
 
-    /* Make it like a cirle */ 
-    background: #FFF;
+    /* Make it like a cirle */
+    background: #fff;
     border-radius: 9999rem;
-    
+
     /* Position */
     left: 0;
     position: absolute;

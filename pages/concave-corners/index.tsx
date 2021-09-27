@@ -1,19 +1,15 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.ConcaveCorners}>
+        <PatternLayout pattern={Pattern.ConcaveCorners}>
             <Head>
                 <meta name="description" content="Create concave corners with CSS" />
                 <meta name="og:description" content="Create concave corners with CSS" />
@@ -21,7 +17,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css border radius, css concave border radius, css concave corners" />
             </Head>
             <BrowserFrame
-html={`
+                html={`
 <div class="concave-corners">
     <!-- The top-left corner -->
     <div class="concave-corners__corner concave-corners__corner--tl"></div>
@@ -39,69 +35,69 @@ html={`
     ...
 </div>
 `}
-css={`
-:root {
-    --concave-corners-background: rgba(0, 0, 0, .3);
-    --concave-corners-size: 1rem;
-}
+                css={`
+                    :root {
+                        --concave-corners-background: rgba(0, 0, 0, 0.3);
+                        --concave-corners-size: 1rem;
+                    }
 
-.concave-corners {
-    background-color: var(--concave-corners-background);
-    
-    /* Used to position the corners */
-    position: relative;
+                    .concave-corners {
+                        background-color: var(--concave-corners-background);
 
-    /* Misc */
-    height: 100%;
-}
+                        /* Used to position the corners */
+                        position: relative;
 
-.concave-corners__corner {
-    /* Absolute position */
-    position: absolute;
+                        /* Misc */
+                        height: 100%;
+                    }
 
-    /* Size */
-    height: var(--concave-corners-size);    
-    width: var(--concave-corners-size);
+                    .concave-corners__corner {
+                        /* Absolute position */
+                        position: absolute;
 
-    background: #FFF;
-}
+                        /* Size */
+                        height: var(--concave-corners-size);
+                        width: var(--concave-corners-size);
 
-.concave-corners__corner--tl {
-    /* Position */
-    left: 0;
-    top: 0;
+                        background: #fff;
+                    }
 
-    /* Border radius */
-    border-radius: 0 0 var(--concave-corners-size) 0;
-}
+                    .concave-corners__corner--tl {
+                        /* Position */
+                        left: 0;
+                        top: 0;
 
-.concave-corners__corner--tr {
-    /* Position */ 
-    right: 0;
-    top: 0;
+                        /* Border radius */
+                        border-radius: 0 0 var(--concave-corners-size) 0;
+                    }
 
-    /* Border radius */
-    border-radius: 0 0 0 var(--concave-corners-size);
-}
+                    .concave-corners__corner--tr {
+                        /* Position */
+                        right: 0;
+                        top: 0;
 
-.concave-corners__corner--bl {
-    /* Position */
-    bottom: 0;
-    left: 0;
+                        /* Border radius */
+                        border-radius: 0 0 0 var(--concave-corners-size);
+                    }
 
-    /* Border radius */
-    border-radius: 0 var(--concave-corners-size) 0 0;
-}
+                    .concave-corners__corner--bl {
+                        /* Position */
+                        bottom: 0;
+                        left: 0;
 
-.concave-corners__corner--br {
-    /* Position */
-    bottom: 0;
-    right: 0;
+                        /* Border radius */
+                        border-radius: 0 var(--concave-corners-size) 0 0;
+                    }
 
-    /* Border radius */
-    border-radius: var(--concave-corners-size) 0 0 0;
-}
-`}
+                    .concave-corners__corner--br {
+                        /* Position */
+                        bottom: 0;
+                        right: 0;
+
+                        /* Border radius */
+                        border-radius: var(--concave-corners-size) 0 0 0;
+                    }
+                `}
             >
                 <div
                     style={{
@@ -119,18 +115,19 @@ css={`
                             width: '16rem',
                         }}
                     >
-                        <div className='concave-corners'>
-                            <div className='concave-corners__corner concave-corners__corner--tl' />
-                            <div className='concave-corners__corner concave-corners__corner--tr' />
-                            <div className='concave-corners__corner concave-corners__corner--bl' />
-                            <div className='concave-corners__corner concave-corners__corner--br' />
+                        <div className="concave-corners">
+                            <div className="concave-corners__corner concave-corners__corner--tl" />
+                            <div className="concave-corners__corner concave-corners__corner--tr" />
+                            <div className="concave-corners__corner concave-corners__corner--bl" />
+                            <div className="concave-corners__corner concave-corners__corner--br" />
                         </div>
                     </div>
                 </div>
             </BrowserFrame>
 
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.InvertedCorners]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

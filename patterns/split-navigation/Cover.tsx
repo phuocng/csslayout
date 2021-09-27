@@ -31,9 +31,15 @@ const Cover: React.FC<{}> = () => {
                         width: '100%',
                     }}
                 >
-                    <div style={{ marginRight: '4px', width: '16px' }}><Rectangle /></div>
-                    <div style={{ marginRight: '4px', width: '16px' }}><Rectangle /></div>
-                    <div style={{ marginLeft: 'auto', width: '16px' }}><Rectangle /></div>
+                    <div style={{ marginRight: '4px', width: '16px' }}>
+                        <Rectangle />
+                    </div>
+                    <div style={{ marginRight: '4px', width: '16px' }}>
+                        <Rectangle />
+                    </div>
+                    <div style={{ marginLeft: 'auto', width: '16px' }}>
+                        <Rectangle />
+                    </div>
                 </div>
             </div>
         </Frame>

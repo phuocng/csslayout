@@ -1,15 +1,10 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Heading, Spacer } from '@1milligram/design';
 
-import Heading from '../../components/Heading';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
@@ -33,16 +28,15 @@ const Details: React.FC<{}> = () => {
     };
 
     return (
-        <DetailsLayout pattern={Pattern.PropertyList}>
+        <PatternLayout pattern={Pattern.PropertyList}>
             <Head>
                 <meta name="description" content="Create a property list with CSS flexbox" />
                 <meta name="og:description" content="Create a property list with CSS flexbox" />
                 <meta name="twitter:description" content="Create a property list with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, property list" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <!-- A property item -->
 <dl class="container">
     <!-- Property name -->
@@ -52,59 +46,76 @@ html={`
     <dd>...</dd>
 </dl>
 `}
-css={`
-.container {
-    /* Content is center horizontally */
-    align-items: center;
-    display: flex;
+                css={`
+                    .container {
+                        /* Content is center horizontally */
+                        align-items: center;
+                        display: flex;
 
-    /*
+                        /*
     The property name will stick to the left, and the value
     will stick to the right
     */
-    justify-content: space-between;
+                        justify-content: space-between;
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 
-    /* Spacing */
-    margin: 0px;
-    padding: 8px 0px;
-}
-`}
+                        /* Spacing */
+                        margin: 0px;
+                        padding: 8px 0px;
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '8px',
+                    }}
                 >
-                    <div
-                        style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '8px',
-                        }}
-                    >
-                        <div style={{ width: '40%' }}>
-                            <Item>
-                                <dt style={{ width: '80%' }}><Rectangle /></dt>
-                                <dd><Circle /></dd>
-                            </Item>
-                            <Item>
-                                <dt style={{ width: '60%' }}><Rectangle /></dt>
-                                <dd><Circle /></dd>
-                            </Item>
-                            <Item>
-                                <dt style={{ width: '30%' }}><Rectangle /></dt>
-                                <dd><Circle /></dd>
-                            </Item>
-                            <Item>
-                                <dt style={{ width: '50%' }}><Rectangle /></dt>
-                                <dd><Circle /></dd>
-                            </Item>
-                        </div>
+                    <div style={{ width: '40%' }}>
+                        <Item>
+                            <dt style={{ width: '80%' }}>
+                                <Rectangle />
+                            </dt>
+                            <dd>
+                                <Circle />
+                            </dd>
+                        </Item>
+                        <Item>
+                            <dt style={{ width: '60%' }}>
+                                <Rectangle />
+                            </dt>
+                            <dd>
+                                <Circle />
+                            </dd>
+                        </Item>
+                        <Item>
+                            <dt style={{ width: '30%' }}>
+                                <Rectangle />
+                            </dt>
+                            <dd>
+                                <Circle />
+                            </dd>
+                        </Item>
+                        <Item>
+                            <dt style={{ width: '50%' }}>
+                                <Rectangle />
+                            </dt>
+                            <dd>
+                                <Circle />
+                            </dd>
+                        </Item>
                     </div>
-                </BrowserFrame>
-            </div>
+                </div>
+            </BrowserFrame>
+            <Spacer size="extraLarge" />
+
             <section>
-                <Heading title="Use cases" />
+                <Heading level={2}>Use cases</Heading>
 
                 <div style={{ padding: '32px', width: '500px' }}>
                     <Item>
@@ -125,8 +136,9 @@ css={`
                     </Item>
                 </div>
             </section>
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.DotLeader, Pattern.Menu, Pattern.SplitNavigation]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

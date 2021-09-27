@@ -32,7 +32,9 @@ const Cover: React.FC<{}> = () => {
                         width: '100%',
                     }}
                 >
-                    <div style={{ marginRight: '4px' }}><Circle /></div>
+                    <div style={{ marginRight: '4px' }}>
+                        <Circle />
+                    </div>
                     <Rectangle />
                 </div>
             </div>

@@ -25,17 +25,33 @@ const Cover: React.FC<{}> = () => {
                     style={{
                         columnCount: 3,
                         columnGap: '0.25rem',
-                        width: '80%'
+                        width: '80%',
                     }}
                 >
-                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}><Rectangle height={16} /></div>
-                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}><Rectangle height={12} /></div>
-                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}><Rectangle height={8} /></div>
-                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}><Rectangle height={24} /></div>
-                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}><Rectangle height={16} /></div>
-                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}><Rectangle height={12} /></div>
-                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}><Rectangle height={16} /></div>
-                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}><Rectangle height={12} /></div>
+                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}>
+                        <Rectangle height={16} />
+                    </div>
+                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}>
+                        <Rectangle height={12} />
+                    </div>
+                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}>
+                        <Rectangle height={8} />
+                    </div>
+                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}>
+                        <Rectangle height={24} />
+                    </div>
+                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}>
+                        <Rectangle height={16} />
+                    </div>
+                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}>
+                        <Rectangle height={12} />
+                    </div>
+                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}>
+                        <Rectangle height={16} />
+                    </div>
+                    <div style={{ breakInside: 'avoid', marginBottom: '0.25rem' }}>
+                        <Rectangle height={12} />
+                    </div>
                 </div>
             </div>
         </Frame>

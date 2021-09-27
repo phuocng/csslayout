@@ -8,7 +8,7 @@
 }
 
 .p-floating-container input:not(:placeholder-shown) + label {
-    background: #FFF;
+    background: #fff;
     transform: translate(0, -50%);
     opacity: 1;
 }

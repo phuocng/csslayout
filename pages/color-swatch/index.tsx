@@ -1,18 +1,13 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
 
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.ColorSwatch}>
+        <PatternLayout pattern={Pattern.ColorSwatch}>
             <Head>
                 <meta name="description" content="Create a color swatch with CSS flexbox" />
                 <meta name="og:description" content="Create a color swatch with CSS flexbox" />
@@ -20,7 +15,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css color swatch, css flexbox" />
             </Head>
             <BrowserFrame
-html={`
+                html={`
 <div class="swatch">
     <div class="swatch__item" style="background-color: ..."></div>
 
@@ -28,22 +23,22 @@ html={`
     ...
 </div>
 `}
-css={`
-.swatch {
-    /* Wrap the items */
-    display: flex;
-    flex-wrap: wrap;
-}
-.swatch__item {
-    /* Rounded border */
-    border-radius: 9999px;
-    height: 1.5rem;
-    width: 1.5rem;
+                css={`
+                    .swatch {
+                        /* Wrap the items */
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                    .swatch__item {
+                        /* Rounded border */
+                        border-radius: 9999px;
+                        height: 1.5rem;
+                        width: 1.5rem;
 
-    /* Space between items */
-    margin: 0.5rem;
-}
-`}
+                        /* Space between items */
+                        margin: 0.5rem;
+                    }
+                `}
             >
                 <div
                     style={{
@@ -60,24 +55,24 @@ css={`
                             flexWrap: 'wrap',
                         }}
                     >
-                    {
-                        Array(9).fill(0).map((_, index) => (
-                            <div
-                                key={index}
-                                style={{
-                                    backgroundColor: `rgba(0, 0, 0, 0.${index + 1})`,
-                                    borderRadius: '9999px',
-                                    height: '1.5rem',
-                                    margin: '0.5rem',
-                                    width: '1.5rem',
-                                }}
-                            />
-                        ))
-                    }
+                        {Array(9)
+                            .fill(0)
+                            .map((_, index) => (
+                                <div
+                                    key={index}
+                                    style={{
+                                        backgroundColor: `rgba(0, 0, 0, 0.${index + 1})`,
+                                        borderRadius: '9999px',
+                                        height: '1.5rem',
+                                        margin: '0.5rem',
+                                        width: '1.5rem',
+                                    }}
+                                />
+                            ))}
                     </div>
                 </div>
             </BrowserFrame>
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

@@ -1,19 +1,15 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.Avatar}>
+        <PatternLayout pattern={Pattern.Avatar}>
             <Head>
                 <meta name="description" content="Create an avatar component with CSS flexbox" />
                 <meta name="og:description" content="Create an avatar component with CSS flexbox" />
@@ -21,29 +17,29 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css avatar, css flexbox" />
             </Head>
             <BrowserFrame
-html={`
+                html={`
 <div class="avatar">
     <!-- Avatar image -->
     <img class="avatar__image" src="..." />
 </div>
 `}
-css={`
-.avatar {
-    /* Rounded border */
-    border-radius: 50%;
-    height: 64px;
-    width: 64px;
-}
+                css={`
+                    .avatar {
+                        /* Rounded border */
+                        border-radius: 50%;
+                        height: 64px;
+                        width: 64px;
+                    }
 
-.avatar__image {
-    /* Rounded border */
-    border-radius: 50%;
+                    .avatar__image {
+                        /* Rounded border */
+                        border-radius: 50%;
 
-    /* Take full size */
-    height: 100%;
-    width: 100%;
-}
-`}
+                        /* Take full size */
+                        height: 100%;
+                        width: 100%;
+                    }
+                `}
             >
                 <div
                     style={{
@@ -69,7 +65,7 @@ css={`
                             style={{
                                 fill: 'none',
                                 height: '100%',
-                                stroke: "#FFF",
+                                stroke: '#FFF',
                                 strokeLinecap: 'round',
                                 strokeLinejoin: 'round',
                                 strokeWidth: 1,
@@ -85,9 +81,9 @@ css={`
                     </div>
                 </div>
             </BrowserFrame>
-
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.AvatarList, Pattern.InitialAvatar, Pattern.PresenceIndicator]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

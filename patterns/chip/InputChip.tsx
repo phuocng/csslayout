@@ -17,9 +17,7 @@ const InputChip: React.FC<{}> = ({ children }) => {
                 padding: '4px 8px',
             }}
         >
-            <div style={{ flex: 1, marginRight: '4px' }}>
-                {children}
-            </div>
+            <div style={{ flex: 1, marginRight: '4px' }}>{children}</div>
             <button
                 style={{
                     backgroundColor: 'transparent',

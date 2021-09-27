@@ -30,15 +30,15 @@ const Cover: React.FC<{}> = () => {
                         width: '100%',
                     }}
                 >
-                    {
-                        Array(20).fill(0).map((_, index) => {
+                    {Array(20)
+                        .fill(0)
+                        .map((_, index) => {
                             return (
                                 <div key={index} style={{ marginBottom: '4px', width: `${random(4, 10) * 10}%` }}>
                                     <Line />
                                 </div>
                             );
-                        })
-                    }
+                        })}
                     <div
                         style={{
                             background: 'linear-gradient(rgba(255, 255, 255, 0.001), #fff)',

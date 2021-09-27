@@ -37,8 +37,12 @@ const Cover: React.FC<{}> = () => {
                             justifyContent: 'center',
                         }}
                     >
-                        <div style={{ flex: 1, padding: '4px 4px 2px 4px' }}><Triangle size={6} corner="t" /></div>
-                        <div style={{ flex: 1, padding: '2px 4px 4px 4px' }}><Triangle size={6} corner="b" /></div>
+                        <div style={{ flex: 1, padding: '4px 4px 2px 4px' }}>
+                            <Triangle size={6} corner="t" />
+                        </div>
+                        <div style={{ flex: 1, padding: '2px 4px 4px 4px' }}>
+                            <Triangle size={6} corner="b" />
+                        </div>
                     </div>
                 </div>
             </div>

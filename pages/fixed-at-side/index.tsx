@@ -1,67 +1,61 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Heading, Spacer } from '@1milligram/design';
 
-import Heading from '../../components/Heading';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.FixedAtSide}>
+        <PatternLayout pattern={Pattern.FixedAtSide}>
             <Head>
                 <meta name="description" content="Fix an element at the middle of side with CSS" />
                 <meta name="og:description" content="Fix an element at the middle of side with CSS" />
                 <meta name="twitter:description" content="Fix an element at the middle of side with CSS" />
                 <meta name="keywords" content="css fixed" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <!-- Fixed at the middle of side -->
 <div class="container">
     ...
 </div>
 `}
-css={`
-.container {
-    right: 0;
-    position: fixed;
-    top: 50%;
-    transform: translate(0px, -50%);
-}
-`}
+                css={`
+                    .container {
+                        right: 0;
+                        position: fixed;
+                        top: 50%;
+                        transform: translate(0px, -50%);
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        height: '100%',
+                        position: 'relative',
+                        width: '100%',
+                    }}
                 >
                     <div
                         style={{
-                            height: '100%',
-                            position: 'relative',
-                            width: '100%',
+                            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                            height: '200px',
+                            position: 'absolute',
+                            right: 0,
+                            top: '50%',
+                            transform: 'translate(0, -50%)',
+                            width: '32px',
                         }}
-                    >
-                        <div
-                            style={{
-                                backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                                height: '200px',
-                                position: 'absolute',
-                                right: 0,
-                                top: '50%',
-                                transform: 'translate(0, -50%)',
-                                width: '32px',
-                            }}
-                        />
-                    </div>
-                </BrowserFrame>
-            </div>
+                    />
+                </div>
+            </BrowserFrame>
+            <Spacer size="extraLarge" />
 
             <section>
-                <Heading title="Use cases" />
+                <Heading level={2}>Use cases</Heading>
 
                 <div style={{ padding: '48px' }}>
                     <div
@@ -261,8 +255,9 @@ css={`
                 </div>
             </section>
 
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.FixedAtCorner]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

@@ -4,13 +4,13 @@
  */
 
 :root {
-    --inverted-corners-background: #52525B;
+    --inverted-corners-background: #52525b;
     --inverted-corners-size: 2rem;
 }
 
 .inverted-corners {
     background-color: var(--inverted-corners-background);
-    
+
     /* Used to position the corner */
     position: relative;
 
@@ -49,5 +49,5 @@
     justify-content: center;
 
     /* Misc */
-    color: #FFF;
+    color: #fff;
 }

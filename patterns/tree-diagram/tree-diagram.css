@@ -14,7 +14,7 @@
 }
 
 .tree-diagram ul ul::before {
-    border-right: 1px solid rgba(0, 0, 0, .3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
     content: '';
     height: 1rem;
     position: absolute;
@@ -29,13 +29,13 @@
 
     /* Center the content */
     align-items: center;
-    display: flex;    
+    display: flex;
     flex-direction: column;
 }
 
 .tree-diagram li::before {
-    border-right: 1px solid rgba(0, 0, 0, .3);
-    border-top: 1px solid rgba(0, 0, 0, .3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
     content: '';
     height: 1rem;
 
@@ -47,7 +47,7 @@
 }
 
 .tree-diagram li::after {
-    border-top: 1px solid rgba(0, 0, 0, .3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
     content: '';
 
     /* Position */

@@ -22,15 +22,15 @@ const Cover: React.FC<{}> = () => {
                 }}
             >
                 <div style={{ display: 'flex', flexWrap: 'wrap', width: '100%' }}>
-                    {
-                        Array(9).fill(0).map((_, index) => {
+                    {Array(9)
+                        .fill(0)
+                        .map((_, index) => {
                             return (
                                 <div key={index} style={{ flexBasis: '33%', padding: '4px' }}>
                                     <Rectangle height={20} />
                                 </div>
                             );
-                        })
-                    }
+                        })}
                 </div>
             </div>
         </Frame>

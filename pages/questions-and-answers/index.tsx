@@ -1,14 +1,10 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
@@ -23,7 +19,7 @@ const Details: React.FC<{}> = () => {
     const [activeItem, setActiveItem] = React.useState(-1);
 
     const Item: React.FC<ItemProps> = ({ index, title, children }) => {
-        const isOpened = (index === activeItem);
+        const isOpened = index === activeItem;
         const click = () => setActiveItem(isOpened ? -1 : index);
         return (
             <>
@@ -53,16 +49,15 @@ const Details: React.FC<{}> = () => {
     };
 
     return (
-        <DetailsLayout pattern={Pattern.QuestionsAndAnswers}>
+        <PatternLayout pattern={Pattern.QuestionsAndAnswers}>
             <Head>
                 <meta name="description" content="Create a questions and answers section with CSS flexbox" />
                 <meta name="og:description" content="Create a questions and answers section with CSS flexbox" />
                 <meta name="twitter:description" content="Create a questions and answers section with CSS flexbox" />
                 <meta name="keywords" content="css accordion, css faq, css flexbox" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <!-- Each question and answer item -->
 <div class="container">
     <!-- Heading -->
@@ -77,78 +72,89 @@ html={`
     <!-- Answer -->
 </div>
 `}
-css={`
-.container {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
+                css={`
+                    .container {
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+                    }
 
-.container__heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-`}
+                    .container__heading {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '8px',
+                    }}
                 >
-                    <div
-                        style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '8px',
-                        }}
-                    >
-                        <div style={{ width: '60%' }}>
-                            <div
-                                style={{
-                                    margin: '0 auto',
-                                    paddingBottom: '24px',
-                                    width: '200px',
-                                }}
+                    <div style={{ width: '60%' }}>
+                        <div
+                            style={{
+                                margin: '0 auto',
+                                paddingBottom: '24px',
+                                width: '200px',
+                            }}
+                        >
+                            <Rectangle />
+                        </div>
+                        <div
+                            style={{
+                                borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+                            }}
+                        >
+                            <Item
+                                index={0}
+                                title={
+                                    <div style={{ width: '40%' }}>
+                                        <Rectangle />
+                                    </div>
+                                }
                             >
-                                <Rectangle />
-                            </div>
-                            <div
-                                style={{
-                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                    borderTop: '1px solid rgba(0, 0, 0, 0.3)',
-                                }}
+                                <Block numberOfBlocks={10} />
+                            </Item>
+                        </div>
+                        <div
+                            style={{
+                                borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                            }}
+                        >
+                            <Item
+                                index={1}
+                                title={
+                                    <div style={{ width: '80%' }}>
+                                        <Rectangle />
+                                    </div>
+                                }
                             >
-                                <Item
-                                    index={0}
-                                    title={<div style={{ width: '40%' }}><Rectangle /></div>}
-                                >
-                                    <Block numberOfBlocks={10} />
-                                </Item>
-                            </div>
-                            <div
-                                style={{
-                                    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-                                }}
+                                <Block numberOfBlocks={15} />
+                            </Item>
+                        </div>
+                        <div style={{ borderBottom: '1px solid rgba(0, 0, 0, 0.3)' }}>
+                            <Item
+                                index={2}
+                                title={
+                                    <div style={{ width: '60%' }}>
+                                        <Rectangle />
+                                    </div>
+                                }
                             >
-                                <Item
-                                    index={1}
-                                    title={<div style={{ width: '80%' }}><Rectangle /></div>}
-                                >
-                                    <Block numberOfBlocks={15} />
-                                </Item>
-                            </div>
-                            <div style={{ borderBottom: '1px solid rgba(0, 0, 0, 0.3)' }}>
-                                <Item
-                                    index={2}
-                                    title={<div style={{ width: '60%' }}><Rectangle /></div>}
-                                >
-                                    <Block numberOfBlocks={10} />
-                                </Item>
-                            </div>
+                                <Block numberOfBlocks={10} />
+                            </Item>
                         </div>
                     </div>
-                </BrowserFrame>
-            </div>
-
+                </div>
+            </BrowserFrame>
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.Accordion]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

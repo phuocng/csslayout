@@ -1,29 +1,24 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.SplitNavigation}>
+        <PatternLayout pattern={Pattern.SplitNavigation}>
             <Head>
                 <meta name="description" content="Create a split navigation with CSS flexbox" />
                 <meta name="og:description" content="Create a split navigation with CSS flexbox" />
                 <meta name="twitter:description" content="Create a split navigation with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css menu, css navigation, css split navigation" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <ul class="container">
     <!-- Navigation item -->
     <li>
@@ -36,55 +31,63 @@ html={`
     </li>
 </ul>
 `}
-css={`
-.container {
-    /* Content is centered horizontally */
-    align-items: center;
-    display: flex;
+                css={`
+                    .container {
+                        /* Content is centered horizontally */
+                        align-items: center;
+                        display: flex;
 
-    /* Reset styles */
-    list-style-type: none;
-    margin: 0;
-}
+                        /* Reset styles */
+                        list-style-type: none;
+                        margin: 0;
+                    }
 
-.container__item--right {
-    /* Sticks to the right */
-    margin-left: auto;
-}
-`}
+                    .container__item--right {
+                        /* Sticks to the right */
+                        margin-left: auto;
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '8px',
+                    }}
                 >
-                    <div
+                    <ul
                         style={{
                             alignItems: 'center',
+                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderRadius: '8px',
                             display: 'flex',
-                            flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '8px',
+                            listStyleType: 'none',
+                            margin: 0,
+                            padding: '16px',
+                            width: '60%',
                         }}
                     >
-                        <ul
-                            style={{
-                                alignItems: 'center',
-                                border: '1px solid rgba(0, 0, 0, 0.3)',
-                                borderRadius: '8px',
-                                display: 'flex',
-                                listStyleType: 'none',
-                                margin: 0,
-                                padding: '16px',
-                                width: '60%',
-                            }}
-                        >
-                            <li style={{ marginRight: '4px', width: '20%' }}><Rectangle /></li>
-                            <li style={{ marginRight: '4px', width: '10%' }}><Rectangle /></li>
-                            <li style={{ marginRight: '4px', width: '20%' }}><Rectangle /></li>
-                            <li style={{ marginLeft: 'auto', width: '10%' }}><Rectangle /></li>
-                        </ul>
-                    </div>
-                </BrowserFrame>
-            </div>
+                        <li style={{ marginRight: '4px', width: '20%' }}>
+                            <Rectangle />
+                        </li>
+                        <li style={{ marginRight: '4px', width: '10%' }}>
+                            <Rectangle />
+                        </li>
+                        <li style={{ marginRight: '4px', width: '20%' }}>
+                            <Rectangle />
+                        </li>
+                        <li style={{ marginLeft: 'auto', width: '10%' }}>
+                            <Rectangle />
+                        </li>
+                    </ul>
+                </div>
+            </BrowserFrame>
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.DotLeader, Pattern.Menu, Pattern.PropertyList]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

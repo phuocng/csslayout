@@ -1,28 +1,22 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
-import { Pattern } from '../../constants/Pattern';
 
+import { Pattern } from '../../constants/Pattern';
 import { random } from '../../utils/random';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.Statistic}>
+        <PatternLayout pattern={Pattern.Statistic}>
             <Head>
                 <meta name="description" content="Create a statistic component with CSS flexbox" />
                 <meta name="og:description" content="Create a statistic component with CSS flexbox" />
                 <meta name="twitter:description" content="Create a statistic component with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css statistic" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <div class="container">
     <!-- Value -->
     <div class="container__value">
@@ -35,58 +29,53 @@ html={`
     </div>
 </div>
 `}
-css={`
-.container {
-    /* Center the content */
-    align-items: center;
-    display: inline-flex;
-    flex-direction: column;
-}
+                css={`
+                    .container {
+                        /* Center the content */
+                        align-items: center;
+                        display: inline-flex;
+                        flex-direction: column;
+                    }
 
-.container__value {
-    /* Big font size */
-    font-size: 4rem;
-    font-weight: 500;
-}
+                    .container__value {
+                        /* Big font size */
+                        font-size: 4rem;
+                        font-weight: 500;
+                    }
 
-.container__label {
-    /* Smaller font size */
-    font-size: 1rem;
-    font-weight: 700;
+                    .container__label {
+                        /* Smaller font size */
+                        font-size: 1rem;
+                        font-weight: 700;
 
-    /* Uppercase the label */
-    text-transform: uppercase;
-}
-`}
+                        /* Uppercase the label */
+                        text-transform: uppercase;
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '8px',
+                    }}
                 >
                     <div
                         style={{
                             alignItems: 'center',
-                            display: 'flex',
+                            display: 'inline-flex',
                             flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '8px',
                         }}
                     >
-                        <div
-                            style={{
-                                alignItems: 'center',
-                                display: 'inline-flex',
-                                flexDirection: 'column',
-                            }}
-                        >
-                            <div style={{ fontSize: '4rem', fontWeight: 500 }}>
-                                {random(1000, 9999).toLocaleString()}
-                            </div>
-                            <div style={{ fontSize: '1rem', fontWeight: 700, textTransform: 'uppercase' }}>
-                                stars
-                            </div>
-                        </div>
+                        <div style={{ fontSize: '4rem', fontWeight: 500 }}>{random(1000, 9999).toLocaleString()}</div>
+                        <div style={{ fontSize: '1rem', fontWeight: 700, textTransform: 'uppercase' }}>stars</div>
                     </div>
-                </BrowserFrame>
-            </div>
-        </DetailsLayout>
+                </div>
+            </BrowserFrame>
+        </PatternLayout>
     );
 };
 

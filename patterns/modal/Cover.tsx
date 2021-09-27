@@ -37,14 +37,24 @@ const Cover: React.FC<{}> = () => {
                             padding: '0 4px',
                         }}
                     >
-                        <div style={{ width: '60%' }}><Rectangle height={2} /></div>
+                        <div style={{ width: '60%' }}>
+                            <Rectangle height={2} />
+                        </div>
                         <div style={{ color: 'rgba(0, 0, 0, 0.7)' }}>&times;</div>
                     </div>
                     <div style={{ padding: '4px' }}>
-                        <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
-                        <div style={{ marginBottom: '4px', width: '80%' }}><Line /></div>
-                        <div style={{ marginBottom: '4px', width: '60%' }}><Line /></div>
-                        <div style={{ width: '40%' }}><Line /></div>
+                        <div style={{ marginBottom: '4px', width: '100%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '80%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '60%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ width: '40%' }}>
+                            <Line />
+                        </div>
                     </div>
                     <div
                         style={{
@@ -54,8 +64,12 @@ const Cover: React.FC<{}> = () => {
                             padding: '4px',
                         }}
                     >
-                        <div style={{ marginRight: '8px', width: '33.3333%' }}><Rectangle height={8} /></div>
-                        <div style={{ width: '33.3333%' }}><Rectangle height={8} /></div>
+                        <div style={{ marginRight: '8px', width: '33.3333%' }}>
+                            <Rectangle height={8} />
+                        </div>
+                        <div style={{ width: '33.3333%' }}>
+                            <Rectangle height={8} />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,19 +1,15 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.StackedCards}>
+        <PatternLayout pattern={Pattern.StackedCards}>
             <Head>
                 <meta name="description" content="Create stacked cards with CSS" />
                 <meta name="og:description" content="Create stacked cards with CSS" />
@@ -21,7 +17,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css card, css stacked cards, css transform rotate" />
             </Head>
             <BrowserFrame
-html={`
+                html={`
 <div class="container">
     <!-- Repeat if you want to have more cards -->
     <div class="container__card"></div>
@@ -30,33 +26,33 @@ html={`
     ...
 </div>
 `}
-css={`
-.container {
-    /* Used to position the stacked cards */
-    position: relative;
-}
+                css={`
+                    .container {
+                        /* Used to position the stacked cards */
+                        position: relative;
+                    }
 
-.container__card {
-    /* Absolute position */
-    left: 0px;
-    position: absolute;
-    top: 0px;
+                    .container__card {
+                        /* Absolute position */
+                        left: 0px;
+                        position: absolute;
+                        top: 0px;
 
-    /* Take full size */
-    height: 100%;
-    width: 100%;
+                        /* Take full size */
+                        height: 100%;
+                        width: 100%;
 
-    /* Displayed under the container */
-    z-index: -1;
+                        /* Displayed under the container */
+                        z-index: -1;
 
-    /* Background and border colors */
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgba(0, 0, 0, 0.3);
+                        /* Background and border colors */
+                        background-color: rgb(255, 255, 255);
+                        border: 1px solid rgba(0, 0, 0, 0.3);
 
-    /* Rotate it. Change the number of degrees for the following cards */
-    transform: rotate(5deg);
-}
-`}
+                        /* Rotate it. Change the number of degrees for the following cards */
+                        transform: rotate(5deg);
+                    }
+                `}
             >
                 <div
                     style={{
@@ -78,8 +74,9 @@ css={`
                             width: '200px',
                         }}
                     >
-                        {
-                            Array(5).fill(0).map((_, index) => {
+                        {Array(5)
+                            .fill(0)
+                            .map((_, index) => {
                                 return (
                                     <div
                                         key={index}
@@ -97,14 +94,14 @@ css={`
                                         }}
                                     />
                                 );
-                            })
-                        }
+                            })}
                     </div>
                 </div>
             </BrowserFrame>
 
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.Card, Pattern.LayeredCard, Pattern.ThreeDimensionsCard]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

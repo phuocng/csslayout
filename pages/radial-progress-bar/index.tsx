@@ -1,13 +1,8 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
-import { Pattern } from '../../constants/Pattern';
 
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { Pattern } from '../../constants/Pattern';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 interface RadialProgressProps {
@@ -34,9 +29,7 @@ const RadialProgress: React.FC<RadialProgressProps> = ({ percentages }) => {
             </div>
             <div
                 style={{
-                    clip: percentages >= 50
-                            ? 'rect(auto, auto, auto, auto)'
-                            : 'rect(0px, 128px, 128px, 64px)',
+                    clip: percentages >= 50 ? 'rect(auto, auto, auto, auto)' : 'rect(0px, 128px, 128px, 64px)',
                     height: '100%',
                     left: 0,
                     position: 'absolute',
@@ -51,7 +44,7 @@ const RadialProgress: React.FC<RadialProgressProps> = ({ percentages }) => {
                         clip: 'rect(0px, 64px, 128px, 0px)',
                         height: '100%',
                         position: 'absolute',
-                        transform: `rotate(${percentages * 360 / 100}deg)`,
+                        transform: `rotate(${(percentages * 360) / 100}deg)`,
                         width: '100%',
                     }}
                 />
@@ -73,16 +66,15 @@ const RadialProgress: React.FC<RadialProgressProps> = ({ percentages }) => {
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.RadialProgressBar}>
+        <PatternLayout pattern={Pattern.RadialProgressBar}>
             <Head>
                 <meta name="description" content="Create a radial progress bar with CSS flexbox" />
                 <meta name="og:description" content="Create a radial progress bar with CSS flexbox" />
                 <meta name="twitter:description" content="Create a radial progress bar with CSS flexbox" />
                 <meta name="keywords" content="css clip rect, css flexbox, css progress bar" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <div class="container">
     <!-- Show number of percentages -->
     <div class="container__percentages">
@@ -99,90 +91,91 @@ html={`
     </div>
 </div>
 `}
-css={`
-.container {
-    position: relative;
-}
+                css={`
+                    .container {
+                        position: relative;
+                    }
 
-.container__percentages {
-    /* Center the content */
-    align-items: center;
-    display: flex;
-    justify-content: center;
+                    .container__percentages {
+                        /* Center the content */
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
 
-    /* Rounded border */
-    border: 12px solid rgba(0, 0, 0, 0.3);
-    border-radius: 9999px;
+                        /* Rounded border */
+                        border: 12px solid rgba(0, 0, 0, 0.3);
+                        border-radius: 9999px;
 
-    /* Size */
-    height: 128px;
-    width: 128px;
-}
+                        /* Size */
+                        height: 128px;
+                        width: 128px;
+                    }
 
-.container__curve {
-    /* Position */
-    left: 0;
-    position: absolute;
-    top: 0;
+                    .container__curve {
+                        /* Position */
+                        left: 0;
+                        position: absolute;
+                        top: 0;
 
-    /* Take full size */
-    height: 100%;
-    width: 100%;
+                        /* Take full size */
+                        height: 100%;
+                        width: 100%;
 
-    /* If percentages is less than 50 */
-    clip: rect(0px, 128px, 128px, 64px);
+                        /* If percentages is less than 50 */
+                        clip: rect(0px, 128px, 128px, 64px);
 
-    /* If percentages is greater than or equals to 50 */
-    clip: rect(auto, auto, auto, auto);
-}
+                        /* If percentages is greater than or equals to 50 */
+                        clip: rect(auto, auto, auto, auto);
+                    }
 
-.container__half {
-    /* Take full size */
-    height: 100%;
-    position: absolute;
-    width: 100%;
+                    .container__half {
+                        /* Take full size */
+                        height: 100%;
+                        position: absolute;
+                        width: 100%;
 
-    /*
+                        /*
     Background color of curve.
     The border width should be the same as the area showing the percentages
     */
-    border: 12px solid rgb(0, 68, 158);
-    border-radius: 9999px;
-}
+                        border: 12px solid rgb(0, 68, 158);
+                        border-radius: 9999px;
+                    }
 
-.container__half--first {    
-    /* Position */
-    clip: rect(0px, 64px, 128px, 0px);
-    transform: rotate(162deg); /* Number of percentages * 360 / 100 */
-}
+                    .container__half--first {
+                        /* Position */
+                        clip: rect(0px, 64px, 128px, 0px);
+                        transform: rotate(162deg); /* Number of percentages * 360 / 100 */
+                    }
 
-.container__half--second {
-    /* Position */
-    clip: rect(0px, 64px, 128px, 0px);
+                    .container__half--second {
+                        /* Position */
+                        clip: rect(0px, 64px, 128px, 0px);
 
-    /* If percentages is less than 50 */
-    transform: rotate(0deg);
+                        /* If percentages is less than 50 */
+                        transform: rotate(0deg);
 
-    /* If percentages is greater than or equals to 50 */
-    transform: rotate(180deg);
-}
-`}
+                        /* If percentages is greater than or equals to 50 */
+                        transform: rotate(180deg);
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '8px',
+                    }}
                 >
-                    <div
-                        style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '8px',
-                        }}
-                    >
-                        <div style={{ marginRight: '16px' }}><RadialProgress percentages={45} /></div>
-                        <RadialProgress percentages={80} />
+                    <div style={{ marginRight: '16px' }}>
+                        <RadialProgress percentages={45} />
                     </div>
-                </BrowserFrame>
-            </div>
-        </DetailsLayout>
+                    <RadialProgress percentages={80} />
+                </div>
+            </BrowserFrame>
+        </PatternLayout>
     );
 };
 

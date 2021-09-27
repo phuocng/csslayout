@@ -1,30 +1,24 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import { Heading, Spacer } from '@1milligram/design';
 
-import Heading from '../../components/Heading';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.CornerRibbon}>
+        <PatternLayout pattern={Pattern.CornerRibbon}>
             <Head>
                 <meta name="description" content="Create a corner ribbon with CSS flexbox" />
                 <meta name="og:description" content="Create a corner ribbon with CSS flexbox" />
                 <meta name="twitter:description" content="Create a corner ribbon with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css ribbon" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <div class="container">
     <!-- The container -->
     <div class="container__wrapper">
@@ -35,98 +29,102 @@ html={`
     </div>
 </div>
 `}
-css={`
-.container {
-    position: relative;
-}
+                css={`
+                    .container {
+                        position: relative;
+                    }
 
-.container__wrapper {
-    /* Displayed at the top left corner */
-    left: 0px;
-    position: absolute;
-    top: 0px;
+                    .container__wrapper {
+                        /* Displayed at the top left corner */
+                        left: 0px;
+                        position: absolute;
+                        top: 0px;
 
-    /* Size */
-    height: 100px;
-    width: 100px;
+                        /* Size */
+                        height: 100px;
+                        width: 100px;
 
-    /* Hide the part of its children which is displayed outside */
-    overflow: hidden;
-}
+                        /* Hide the part of its children which is displayed outside */
+                        overflow: hidden;
+                    }
 
-.container__ribbon {
-    /* Position */
-    left: -64px;
-    position: absolute;
-    top: 32px;
+                    .container__ribbon {
+                        /* Position */
+                        left: -64px;
+                        position: absolute;
+                        top: 32px;
 
-    /* Size */
-    height: 24px;
-    width: 206px;
+                        /* Size */
+                        height: 24px;
+                        width: 206px;
 
-    /* Displayed diagonally */
-    transform: rotate(-45deg);
+                        /* Displayed diagonally */
+                        transform: rotate(-45deg);
 
-    /* Background color */
-    background-color: rgba(0, 0, 0, 0.3);
+                        /* Background color */
+                        background-color: rgba(0, 0, 0, 0.3);
 
-    /* Centerize the text content */
-    text-align: center;
-}
-`}
+                        /* Centerize the text content */
+                        text-align: center;
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        height: '100%',
+                        justifyContent: 'center',
+                    }}
                 >
                     <div
                         style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            height: '100%',
-                            justifyContent: 'center',
+                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderRadius: '4px',
+                            height: '256px',
+                            position: 'relative',
+                            width: '256px',
                         }}
                     >
                         <div
                             style={{
-                                border: '1px solid rgba(0, 0, 0, 0.3)',
-                                borderRadius: '4px',
-                                height: '256px',
-                                position: 'relative',
-                                width: '256px',
+                                height: '100px',
+                                left: 0,
+                                overflow: 'hidden',
+                                position: 'absolute',
+                                top: 0,
+                                width: '100px',
                             }}
                         >
                             <div
                                 style={{
-                                    height: '100px',
-                                    left: 0,
-                                    overflow: 'hidden',
+                                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                                    height: '24px',
+                                    left: '-64px',
                                     position: 'absolute',
-                                    top: 0,
-                                    width: '100px',
+                                    textAlign: 'center',
+                                    top: '32px',
+                                    transform: 'rotate(-45deg)',
+                                    width: '206px',
                                 }}
-                            >
-                                <div
-                                    style={{
-                                        backgroundColor: 'rgba(0, 0, 0, 0.3)',
-                                        height: '24px',
-                                        left: '-64px',
-                                        position: 'absolute',
-                                        textAlign: 'center',
-                                        top: '32px',
-                                        transform: 'rotate(-45deg)',
-                                        width: '206px',
-                                    }}
-                                />
-                            </div>
+                            />
                         </div>
                     </div>
-                </BrowserFrame>
-            </div>
+                </div>
+            </BrowserFrame>
+
+            <Spacer size="extraLarge" />
 
             <section>
-                <Heading title="Use cases" />
+                <Heading level={2}>Use cases</Heading>
 
-                <div style={{ padding: '32px' }}>
+                <div style={{ padding: '2rem' }}>
                     <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
-                        You can add a ribbon to a <Link to='/patterns/pricing-table'> pricing table</Link> to
-                        indicate the most popular option.
+                        You can add a ribbon to a{' '}
+                        <Link href="/pricing-table">
+                            <a>pricing table</a>
+                        </Link>{' '}
+                        to indicate the most popular option.
                     </div>
 
                     <div
@@ -197,8 +195,9 @@ css={`
                 </div>
             </section>
 
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.FixedAtCorner, Pattern.Ribbon]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

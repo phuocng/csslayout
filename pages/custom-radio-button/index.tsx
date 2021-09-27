@@ -1,14 +1,10 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
@@ -49,9 +45,7 @@ const Details: React.FC<{}> = () => {
                 >
                     <div
                         style={{
-                            backgroundColor: value === selectedValue
-                                ? '#00449E'
-                                : 'transparent',
+                            backgroundColor: value === selectedValue ? '#00449E' : 'transparent',
                             borderRadius: '9999px',
                             height: '16px',
                             width: '16px',
@@ -64,16 +58,15 @@ const Details: React.FC<{}> = () => {
     };
 
     return (
-        <DetailsLayout pattern={Pattern.CustomRadioButton}>
+        <PatternLayout pattern={Pattern.CustomRadioButton}>
             <Head>
                 <meta name="description" content="Create a custom radio button with CSS flexbox" />
                 <meta name="og:description" content="Create a custom radio button with CSS flexbox" />
                 <meta name="twitter:description" content="Create a custom radio button with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css radio" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <label class="label">
     <!-- The real radio -->
     <input type="radio" class="label__input" />
@@ -88,95 +81,101 @@ html={`
     ...
 </div>
 `}
-css={`
-.label {
-    /* Center the content horizontally */
-    align-items: center;
-    display: inline-flex;
+                css={`
+                    .label {
+                        /* Center the content horizontally */
+                        align-items: center;
+                        display: inline-flex;
 
-    /* Cursor */
-    cursor: pointer;
-}
+                        /* Cursor */
+                        cursor: pointer;
+                    }
 
-.label__input {
-    /* Hide it */
-    display: none;
-}
+                    .label__input {
+                        /* Hide it */
+                        display: none;
+                    }
 
-.label__circle {
-    /* Rounded border */
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 9999px;
+                    .label__circle {
+                        /* Rounded border */
+                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border-radius: 9999px;
 
-    /* Spacing */
-    margin-right: 8px;
-    padding: 4px;
-}
+                        /* Spacing */
+                        margin-right: 8px;
+                        padding: 4px;
+                    }
 
-.label__radio {
-    /* Rounded border */
-    border-radius: 9999px;
-    height: 16px;
-    width: 16px;
+                    .label__radio {
+                        /* Rounded border */
+                        border-radius: 9999px;
+                        height: 16px;
+                        width: 16px;
 
-    /* For not selected radio */
-    background-color: transparent;
-}
+                        /* For not selected radio */
+                        background-color: transparent;
+                    }
 
-.label__radio--selected {
-    /* For selected radio */
-    background-color: #00449E;
-}
-`}
+                    .label__radio--selected {
+                        /* For selected radio */
+                        background-color: #00449e;
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '8px',
+                    }}
                 >
-                    <div
-                        style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '8px',
-                        }}
-                    >
-                        <div style={{ width: '200px' }}>
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    display: 'inline-flex',
-                                    marginBottom: '16px',
-                                }}
-                            >
-                                <Radio value='1'>
-                                    <div style={{ width: '100px' }}><Rectangle /></div>
-                                </Radio>
-                            </div>
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    display: 'inline-flex',
-                                    marginBottom: '16px',
-                                }}
-                            >
-                                <Radio value='2'>
-                                    <div style={{ width: '200px' }}><Rectangle /></div>
-                                </Radio>
-                            </div>
-                            <div
-                                style={{
-                                    alignItems: 'center',
-                                    display: 'inline-flex',
-                                }}
-                            >
-                                <Radio value='3'>
-                                    <div style={{ width: '150px' }}><Rectangle /></div>
-                                </Radio>
-                            </div>
+                    <div style={{ width: '200px' }}>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'inline-flex',
+                                marginBottom: '16px',
+                            }}
+                        >
+                            <Radio value="1">
+                                <div style={{ width: '100px' }}>
+                                    <Rectangle />
+                                </div>
+                            </Radio>
+                        </div>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'inline-flex',
+                                marginBottom: '16px',
+                            }}
+                        >
+                            <Radio value="2">
+                                <div style={{ width: '200px' }}>
+                                    <Rectangle />
+                                </div>
+                            </Radio>
+                        </div>
+                        <div
+                            style={{
+                                alignItems: 'center',
+                                display: 'inline-flex',
+                            }}
+                        >
+                            <Radio value="3">
+                                <div style={{ width: '150px' }}>
+                                    <Rectangle />
+                                </div>
+                            </Radio>
                         </div>
                     </div>
-                </BrowserFrame>
-            </div>
+                </div>
+            </BrowserFrame>
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.CustomCheckboxButton, Pattern.RadioButtonGroup]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

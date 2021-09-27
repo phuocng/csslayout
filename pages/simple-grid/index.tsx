@@ -1,20 +1,16 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.SimpleGrid}>
+        <PatternLayout pattern={Pattern.SimpleGrid}>
             <Head>
                 <meta name="description" content="Create a simple grid with CSS flexbox" />
                 <meta name="og:description" content="Create a simple grid with CSS flexbox" />
@@ -22,7 +18,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css flexbox grid, css grid, css layout" />
             </Head>
             <BrowserFrame
-html={`
+                html={`
 <!-- Row -->
 <div class="row">
     <!--Cell with given width. Replace 25% with whatever you want -->
@@ -34,28 +30,28 @@ html={`
     </div>
 </div>
 `}
-css={`
-.row {
-    display: flex;
+                css={`
+                    .row {
+                        display: flex;
 
-    margin-left: -8px;
-    margin-right: -8px;
-}
+                        margin-left: -8px;
+                        margin-right: -8px;
+                    }
 
-.row__cell {
-    padding-left: 8px;
-    padding-right: 8px;
-}
+                    .row__cell {
+                        padding-left: 8px;
+                        padding-right: 8px;
+                    }
 
-/* Cell with given width. Replace 25% with whatever you want */
-.row__cell--1/4 {
-    flex: 0 0 25%;
-}
+                    /* Cell with given width. Replace 25% with whatever you want */
+                    .row__cell--1/4 {
+                        flex: 0 0 25%;
+                    }
 
-.row__cell--fill {
-    flex: 1;
-}
-`}
+                    .row__cell--fill {
+                        flex: 1;
+                    }
+                `}
             >
                 <div
                     style={{
@@ -140,8 +136,9 @@ css={`
                 </div>
             </BrowserFrame>
 
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.CardLayout, Pattern.MasonryGrid]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

@@ -32,9 +32,15 @@ const Cover: React.FC<{}> = () => {
                             width: '100%',
                         }}
                     >
-                        <div style={{ width: '16px' }}><Line /></div>
-                        <div style={{ marginLeft: 'auto', width: '16px' }}><Line /></div>
-                        <div style={{ marginLeft: '4px', width: '16px' }}><Line /></div>
+                        <div style={{ width: '16px' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginLeft: 'auto', width: '16px' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginLeft: '4px', width: '16px' }}>
+                            <Line />
+                        </div>
                     </div>
                 </div>
                 <div style={{ display: 'flex', flexGrow: 1 }}>
@@ -45,17 +51,33 @@ const Cover: React.FC<{}> = () => {
                             width: '30%',
                         }}
                     >
-                        <div style={{ marginBottom: '4px' }}><Line /></div>
-                        <div style={{ width: '80%' }}><Line /></div>
+                        <div style={{ marginBottom: '4px' }}>
+                            <Line />
+                        </div>
+                        <div style={{ width: '80%' }}>
+                            <Line />
+                        </div>
                     </div>
                     <div style={{ flex: 1, padding: '8px' }}>
-                        <div style={{ marginBottom: '4px' }}><Line /></div>
-                        <div style={{ marginBottom: '4px', width: '60%' }}><Line /></div>
-                        <div style={{ marginBottom: '8px', width: '80%' }}><Line /></div>
+                        <div style={{ marginBottom: '4px' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '60%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '8px', width: '80%' }}>
+                            <Line />
+                        </div>
 
-                        <div style={{ marginBottom: '4px' }}><Line /></div>
-                        <div style={{ marginBottom: '4px', width: '60%' }}><Line /></div>
-                        <div style={{ marginBottom: '4px', width: '80%' }}><Line /></div>
+                        <div style={{ marginBottom: '4px' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '60%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '80%' }}>
+                            <Line />
+                        </div>
                     </div>
                     <div
                         style={{
@@ -64,8 +86,12 @@ const Cover: React.FC<{}> = () => {
                             width: '30%',
                         }}
                     >
-                        <div style={{ marginBottom: '4px' }}><Line /></div>
-                        <div style={{ width: '80%' }}><Line /></div>
+                        <div style={{ marginBottom: '4px' }}>
+                            <Line />
+                        </div>
+                        <div style={{ width: '80%' }}>
+                            <Line />
+                        </div>
                     </div>
                 </div>
                 <div
@@ -82,9 +108,15 @@ const Cover: React.FC<{}> = () => {
                             width: '100%',
                         }}
                     >
-                        <div style={{ width: '16px' }}><Line /></div>
-                        <div style={{ marginLeft: '4px', width: '16px' }}><Line /></div>
-                        <div style={{ marginLeft: '4px', width: '16px' }}><Line /></div>
+                        <div style={{ width: '16px' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginLeft: '4px', width: '16px' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginLeft: '4px', width: '16px' }}>
+                            <Line />
+                        </div>
                     </div>
                 </div>
             </div>

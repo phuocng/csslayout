@@ -34,7 +34,7 @@ const Cover: React.FC<{}> = () => {
                         style={{
                             fill: 'none',
                             height: '100%',
-                            stroke: "#FFF",
+                            stroke: '#FFF',
                             strokeLinecap: 'round',
                             strokeLinejoin: 'round',
                             strokeWidth: 1,

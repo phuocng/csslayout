@@ -2,21 +2,20 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Heading, Spacer } from '@1milligram/design';
 
+import { Ad } from '../components/Ad';
 import { Pattern } from '../constants/Pattern';
 import { slug } from '../utils/slug';
 import { Layout } from './Layout';
 
-interface DetailsLayoutProps {
+export const PatternLayout: React.FC<{
     pattern: Pattern;
-}
-
-export const DetailsLayout: React.FC<DetailsLayoutProps> = ({ pattern, children }) => {
+}> = ({ pattern, children }) => {
     const patternSlug = slug(pattern);
 
     return (
         <Layout title={pattern}>
             <Head>
-                <title>CSS Layout ∙ {pattern}</title>
+                <title>{pattern} - CSS Layout</title>
                 <meta name="title" content={`${pattern} - CSS Layout`} />
 
                 <meta property="og:image" content={`https://csslayout.io/assets/patterns/${patternSlug}.png`} />
@@ -33,9 +32,13 @@ export const DetailsLayout: React.FC<DetailsLayoutProps> = ({ pattern, children 
                     <Spacer size="extraLarge" />
                     <Heading level={1}>{pattern}</Heading>
                     <Spacer size="large" />
+                    <div className="block-ad">
+                        <Ad />
+                    </div>
+                    <Spacer size="medium" />
                 </div>
-
                 {children}
+                <Spacer size="extraLarge" />
             </div>
         </Layout>
     );

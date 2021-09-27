@@ -1,30 +1,24 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Heading, Spacer } from '@1milligram/design';
 
-import Heading from '../../components/Heading';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.DockedAtCorner}>
+        <PatternLayout pattern={Pattern.DockedAtCorner}>
             <Head>
                 <meta name="description" content="Dock an element at corner with CSS" />
                 <meta name="og:description" content="Dock an element at corner with CSS" />
                 <meta name="twitter:description" content="Dock an element at corner with CSS" />
                 <meta name="keywords" content="css docked, css flexbox" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <div class="container">
     <!-- Docked at the top right corner -->
     <div class="container__docker">
@@ -34,62 +28,64 @@ html={`
     ...
 </div>
 `}
-css={`
-.container {
-    position: relative;
-}
+                css={`
+                    .container {
+                        position: relative;
+                    }
 
-.container__docker {
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translate(50%, -50%);
+                    .container__docker {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        transform: translate(50%, -50%);
 
-    /* Center the content */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-`}
+                        /* Center the content */
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '8px',
+                    }}
                 >
                     <div
                         style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '8px',
+                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderRadius: '8px',
+                            padding: '16px',
+                            position: 'relative',
+                            width: '128px',
                         }}
                     >
+                        <Rectangle />
                         <div
                             style={{
-                                border: '1px solid rgba(0, 0, 0, 0.3)',
-                                borderRadius: '8px',
-                                padding: '16px',
-                                position: 'relative',
-                                width: '128px',
+                                backgroundColor: '#00449E',
+                                borderRadius: '9999px',
+                                height: '32px',
+                                position: 'absolute',
+                                right: 0,
+                                top: 0,
+                                transform: 'translate(50%, -50%)',
+                                width: '32px',
                             }}
-                        >
-                            <Rectangle />
-                            <div
-                                style={{
-                                    backgroundColor: '#00449E',
-                                    borderRadius: '9999px',
-                                    height: '32px',
-                                    position: 'absolute',
-                                    right: 0,
-                                    top: 0,
-                                    transform: 'translate(50%, -50%)',
-                                    width: '32px',
-                                }}
-                            />
-                        </div>
+                        />
                     </div>
-                </BrowserFrame>
-            </div>
+                </div>
+            </BrowserFrame>
+
+            <Spacer size="extraLarge" />
+
             <section>
-                <Heading title="Use cases" />
+                <Heading level={2}>Use cases</Heading>
 
                 <div style={{ padding: '32px' }}>
                     <div
@@ -156,8 +152,9 @@ css={`
                     </div>
                 </div>
             </section>
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.PresenceIndicator]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

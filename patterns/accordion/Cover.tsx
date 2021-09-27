@@ -40,7 +40,7 @@ const Cover: React.FC<{}> = () => {
                             }}
                         >
                             <div style={{ marginRight: '4px' }}>
-                                <Triangle corner='r' size={6} />
+                                <Triangle corner="r" size={6} />
                             </div>
                             <div style={{ flex: 1 }}>
                                 <Rectangle height={4} />
@@ -56,7 +56,7 @@ const Cover: React.FC<{}> = () => {
                             }}
                         >
                             <div style={{ marginRight: '4px' }}>
-                                <Triangle corner='b' size={6} />
+                                <Triangle corner="b" size={6} />
                             </div>
                             <div style={{ flex: 1 }}>
                                 <Rectangle height={4} />
@@ -64,8 +64,12 @@ const Cover: React.FC<{}> = () => {
                         </div>
                     </div>
                     <div style={{ padding: '8px' }}>
-                        <div style={{ marginBottom: '4px', width: '60%' }}><Line /></div>
-                        <div style={{ width: '80%' }}><Line /></div>
+                        <div style={{ marginBottom: '4px', width: '60%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ width: '80%' }}>
+                            <Line />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -28,9 +28,7 @@ const Cover: React.FC<{}> = () => {
                         justifyContent: 'center',
                     }}
                 >
-                    <div style={{ color: 'rgba(0, 0, 0, 0.7)', fontSize: '2.5rem', fontWeight: 500 }}>
-                        1k+
-                    </div>
+                    <div style={{ color: 'rgba(0, 0, 0, 0.7)', fontSize: '2.5rem', fontWeight: 500 }}>1k+</div>
                     <div style={{ color: 'rgba(0, 0, 0, 0.4)', fontSize: '.75rem', textTransform: 'uppercase' }}>
                         stars
                     </div>

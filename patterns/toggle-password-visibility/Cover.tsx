@@ -33,9 +33,15 @@ const Cover: React.FC<{}> = () => {
                     }}
                 >
                     <div style={{ alignItems: 'center', display: 'flex' }}>
-                        <div style={{ marginRight: '4px' }}><Circle size={8} /></div>
-                        <div style={{ marginRight: '4px' }}><Circle size={8} /></div>
-                        <div style={{ marginRight: '4px' }}><Circle size={8} /></div>
+                        <div style={{ marginRight: '4px' }}>
+                            <Circle size={8} />
+                        </div>
+                        <div style={{ marginRight: '4px' }}>
+                            <Circle size={8} />
+                        </div>
+                        <div style={{ marginRight: '4px' }}>
+                            <Circle size={8} />
+                        </div>
                     </div>
                     <Circle />
                 </div>

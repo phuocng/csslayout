@@ -30,11 +30,17 @@ const Cover: React.FC<{}> = () => {
                         width: '80%',
                     }}
                 >
-                    <div style={{ width: '20%' }}><Rectangle /></div>
+                    <div style={{ width: '20%' }}>
+                        <Rectangle />
+                    </div>
                     <div style={{ color: '#000', margin: '0 4px' }}>/</div>
-                    <div style={{ width: '20%' }}><Rectangle /></div>
+                    <div style={{ width: '20%' }}>
+                        <Rectangle />
+                    </div>
                     <div style={{ color: '#000', margin: '0 4px' }}>/</div>
-                    <div style={{ width: '20%' }}><Rectangle /></div>
+                    <div style={{ width: '20%' }}>
+                        <Rectangle />
+                    </div>
                 </div>
             </div>
         </Frame>

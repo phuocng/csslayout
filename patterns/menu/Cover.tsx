@@ -51,7 +51,9 @@ const Cover: React.FC<{}> = () => {
                             padding: '0 8px',
                         }}
                     >
-                        <div style={{ width: '80%' }}><Line /></div>
+                        <div style={{ width: '80%' }}>
+                            <Line />
+                        </div>
                     </div>
                     <div
                         style={{
@@ -61,7 +63,9 @@ const Cover: React.FC<{}> = () => {
                             padding: '0 8px',
                         }}
                     >
-                        <div style={{ width: '60%' }}><Line /></div>
+                        <div style={{ width: '60%' }}>
+                            <Line />
+                        </div>
                     </div>
                 </div>
             </div>

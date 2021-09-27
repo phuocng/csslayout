@@ -29,8 +29,8 @@ const Cover: React.FC<{}> = () => {
                         justifyContent: 'center',
                         position: 'relative',
                         width: '100%',
-                    }
-                }>
+                    }}
+                >
                     <div
                         style={{
                             borderColor: 'transparent rgba(0, 0, 0, 0.3) transparent transparent',

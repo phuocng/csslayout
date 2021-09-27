@@ -17,7 +17,9 @@ const HomePage = () => {
                     <div>Following covers are made with CSS only. Inspect them!</div>
                 </div>
 
-                <div className="page-home__category"><Heading level={2}>Display</Heading></div>
+                <div className="page-home__category">
+                    <Heading level={2}>Display</Heading>
+                </div>
                 <div className="page-home__collection">
                     <CoverCard pattern={Pattern.Accordion} />
                     <CoverCard pattern={Pattern.ArrowButtons} />
@@ -74,7 +76,9 @@ const HomePage = () => {
                     <CoverCard pattern={Pattern.ZigzagTimeline} />
                 </div>
 
-                <div className="page-home__category"><Heading level={2}>Feedback</Heading></div>
+                <div className="page-home__category">
+                    <Heading level={2}>Feedback</Heading>
+                </div>
                 <div className="page-home__collection">
                     <CoverCard pattern={Pattern.Modal} />
                     <CoverCard pattern={Pattern.Notification} />
@@ -86,8 +90,10 @@ const HomePage = () => {
                     <CoverCard pattern={Pattern.Tooltip} />
                     <CoverCard pattern={Pattern.ValidationIcon} />
                 </div>
-                
-                <div className="page-home__category"><Heading level={2}>Input</Heading></div>
+
+                <div className="page-home__category">
+                    <Heading level={2}>Input</Heading>
+                </div>
                 <div className="page-home__collection">
                     <CoverCard pattern={Pattern.ButtonWithIcon} />
                     <CoverCard pattern={Pattern.Chip} />
@@ -107,7 +113,9 @@ const HomePage = () => {
                     <CoverCard pattern={Pattern.UploadButton} />
                 </div>
 
-                <div className="page-home__category"><Heading level={2}>Layout</Heading></div>
+                <div className="page-home__category">
+                    <Heading level={2}>Layout</Heading>
+                </div>
                 <div className="page-home__collection">
                     <CoverCard pattern={Pattern.CardLayout} />
                     <CoverCard pattern={Pattern.HolyGrail} />
@@ -121,7 +129,9 @@ const HomePage = () => {
                     <CoverCard pattern={Pattern.StickySections} />
                 </div>
 
-                <div className="page-home__category"><Heading level={2}>Navigation</Heading></div>
+                <div className="page-home__category">
+                    <Heading level={2}>Navigation</Heading>
+                </div>
                 <div className="page-home__collection">
                     <CoverCard pattern={Pattern.Breadcrumb} />
                     <CoverCard pattern={Pattern.CircularNavigation} />

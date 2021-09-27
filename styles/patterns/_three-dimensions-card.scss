@@ -12,10 +12,10 @@
 }
 
 /* The left side */
-.three-dimensions-card::before { 
+.three-dimensions-card::before {
     background: rgba(0, 0, 0, 0.3);
     content: '';
-    
+
     /* Position */
     top: var(--three-dimensions-card-left-side-width);
     left: 0px;
@@ -31,8 +31,8 @@
 /* The bottom side */
 .three-dimensions-card::after {
     background: rgba(0, 0, 0, 0.3);
-    content: '';    
-    
+    content: '';
+
     /* Position */
     bottom: 0px;
     left: 0px;

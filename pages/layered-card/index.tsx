@@ -1,20 +1,16 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import './styles.css';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.LayeredCard}>
+        <PatternLayout pattern={Pattern.LayeredCard}>
             <Head>
                 <meta name="description" content="Create a layered card with CSS" />
                 <meta name="og:description" content="Create a layered card with CSS" />
@@ -22,35 +18,35 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css layered card" />
             </Head>
             <BrowserFrame
-html={`
+                html={`
 <div class="layered-card">
     ...
 </div>
 `}
-css={`
-.layered-card {
-    position: relative;
-}
+                css={`
+                    .layered-card {
+                        position: relative;
+                    }
 
-.layered-card::before {
-    background: rgba(0, 0, 0, 0.3);
-    content: '';
-    
-    /* Position */
-    top: 0;
-    left: 0;
-    position: absolute;
-    transform: translate(1rem, 1rem);
+                    .layered-card::before {
+                        background: rgba(0, 0, 0, 0.3);
+                        content: '';
 
-    /* Size */
-    height: 100%;
-    width: 100%;
+                        /* Position */
+                        top: 0;
+                        left: 0;
+                        position: absolute;
+                        transform: translate(1rem, 1rem);
 
-    /* Display under the main content */
-    z-index: -1;
-}
-`}
-                >
+                        /* Size */
+                        height: 100%;
+                        width: 100%;
+
+                        /* Display under the main content */
+                        z-index: -1;
+                    }
+                `}
+            >
                 <div
                     style={{
                         alignItems: 'center',
@@ -73,8 +69,9 @@ css={`
                 </div>
             </BrowserFrame>
 
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.Card, Pattern.StackedCards, Pattern.ThreeDimensionsCard]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

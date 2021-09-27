@@ -19,8 +19,9 @@ const Cover: React.FC<{}> = () => {
                     padding: '8px',
                 }}
             >
-                {
-                    Array(3).fill(null).map((_, i) => {
+                {Array(3)
+                    .fill(null)
+                    .map((_, i) => {
                         return (
                             <div key={i} style={{ marginLeft: '-4px' }}>
                                 <div
@@ -41,8 +42,7 @@ const Cover: React.FC<{}> = () => {
                                 </div>
                             </div>
                         );
-                    })
-                }
+                    })}
             </div>
         </Frame>
     );

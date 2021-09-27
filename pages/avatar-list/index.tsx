@@ -1,14 +1,10 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Avatar: React.FC<{}> = ({ children }) => {
@@ -33,16 +29,15 @@ const Avatar: React.FC<{}> = ({ children }) => {
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.AvatarList}>
+        <PatternLayout pattern={Pattern.AvatarList}>
             <Head>
                 <meta name="description" content="Create an avatar list with CSS flexbox" />
                 <meta name="og:description" content="Create an avatar list with CSS flexbox" />
                 <meta name="twitter:description" content="Create an avatar list with CSS flexbox" />
                 <meta name="keywords" content="css avatar, css flexbox" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <div class="avatars">
     <!-- Avatar item -->
     <div class="avatars__item">
@@ -56,52 +51,63 @@ html={`
     ...
 </div>
 `}
-css={`
-.avatars {
-    display: flex;
-}
+                css={`
+                    .avatars {
+                        display: flex;
+                    }
 
-.avatars__item {
-    /* Nagative margin make avatar overlap to previous one */
-    margin-left: -4px;
-}
+                    .avatars__item {
+                        /* Nagative margin make avatar overlap to previous one */
+                        margin-left: -4px;
+                    }
 
-.avatars__image {
-    /* Add a white curve between avatars */
-    box-shadow: 0 0 0 4px #FFF;
+                    .avatars__image {
+                        /* Add a white curve between avatars */
+                        box-shadow: 0 0 0 4px #fff;
 
-    /* Center the content */
-    align-items: center;
-    display: flex;
-    justify-content: center;
+                        /* Center the content */
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
 
-    /* Rounded border */
-    border-radius: 9999px;
-}
-`}
+                        /* Rounded border */
+                        border-radius: 9999px;
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '8px',
+                    }}
                 >
-                    <div
-                        style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '8px',
-                        }}
-                    >
-                        <div style={{ marginLeft: '-4px' }}><Avatar /></div>
-                        <div style={{ marginLeft: '-4px' }}><Avatar /></div>
-                        <div style={{ marginLeft: '-4px' }}><Avatar /></div>
-                        <div style={{ marginLeft: '-4px' }}><Avatar /></div>
-                        <div style={{ marginLeft: '-4px' }}><Avatar>+5</Avatar></div>
+                    <div style={{ marginLeft: '-4px' }}>
+                        <Avatar />
                     </div>
-                </BrowserFrame>
-            </div>
+                    <div style={{ marginLeft: '-4px' }}>
+                        <Avatar />
+                    </div>
+                    <div style={{ marginLeft: '-4px' }}>
+                        <Avatar />
+                    </div>
+                    <div style={{ marginLeft: '-4px' }}>
+                        <Avatar />
+                    </div>
+                    <div style={{ marginLeft: '-4px' }}>
+                        <Avatar>+5</Avatar>
+                    </div>
+                </div>
+            </BrowserFrame>
+
+            <Spacer size="extraLarge" />
 
             <RelatedPatterns
                 patterns={[Pattern.Avatar, Pattern.Centering, Pattern.InitialAvatar, Pattern.PresenceIndicator]}
             />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

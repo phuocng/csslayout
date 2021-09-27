@@ -43,7 +43,7 @@ const Cover: React.FC<{}> = () => {
                             width: '24px',
                         }}
                     >
-                        <Square backgroundColor='transparent' />
+                        <Square backgroundColor="transparent" />
                     </div>
                     <div style={{ flex: 1 }}>
                         <Rectangle />
@@ -70,7 +70,7 @@ const Cover: React.FC<{}> = () => {
                             width: '24px',
                         }}
                     >
-                        <Square backgroundColor='#00449E' />
+                        <Square backgroundColor="#00449E" />
                     </div>
                     <div style={{ flex: 1 }}>
                         <Rectangle />

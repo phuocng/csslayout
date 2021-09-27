@@ -52,23 +52,47 @@ const Cover: React.FC<{}> = () => {
                     }}
                 >
                     <div style={{ flex: 1, padding: '4px' }}>
-                        <div style={{ marginBottom: '4px' }}><Line /></div>
-                        <div style={{ marginBottom: '4px', width: '60%' }}><Line /></div>
-                        <div style={{ marginBottom: '4px' }}><Line /></div>
-                        <div style={{ width: '80%' }}><Line /></div>
+                        <div style={{ marginBottom: '4px' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '60%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px' }}>
+                            <Line />
+                        </div>
+                        <div style={{ width: '80%' }}>
+                            <Line />
+                        </div>
                     </div>
                     <div style={{ flex: 1, padding: '4px' }}>
-                        <div style={{ marginBottom: '4px', width: '60%' }}><Line /></div>
-                        <div style={{ marginBottom: '4px', width: '80%' }}><Line /></div>
-                        <div style={{ marginBottom: '4px' }}><Line /></div>
-                        <div style={{ width: '60%' }}><Line /></div>
+                        <div style={{ marginBottom: '4px', width: '60%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '80%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px' }}>
+                            <Line />
+                        </div>
+                        <div style={{ width: '60%' }}>
+                            <Line />
+                        </div>
                     </div>
 
                     <div style={{ flex: 1, padding: '4px' }}>
-                        <div style={{ marginBottom: '4px', width: '80%' }}><Line /></div>
-                        <div style={{ marginBottom: '4px', width: '40%' }}><Line /></div>
-                        <div style={{ marginBottom: '4px' }}><Line /></div>
-                        <div style={{ width: '80%' }}><Line /></div>
+                        <div style={{ marginBottom: '4px', width: '80%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '40%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px' }}>
+                            <Line />
+                        </div>
+                        <div style={{ width: '80%' }}>
+                            <Line />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -23,7 +23,9 @@ const Cover: React.FC<{}> = () => {
                         justifyContent: 'center',
                     }}
                 >
-                    <div style={{ marginBottom: '4px' }}><Circle /></div>
+                    <div style={{ marginBottom: '4px' }}>
+                        <Circle />
+                    </div>
                 </div>
                 <div
                     style={{
@@ -33,11 +35,21 @@ const Cover: React.FC<{}> = () => {
                     }}
                 >
                     <div style={{ padding: '8px' }}>
-                        <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
-                        <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
-                        <div style={{ marginBottom: '4px', width: '80%' }}><Line /></div>
-                        <div style={{ marginBottom: '4px', width: '80%' }}><Line /></div>
-                        <div style={{ width: '60%' }}><Line /></div>
+                        <div style={{ marginBottom: '4px', width: '100%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '100%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '80%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '80%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ width: '60%' }}>
+                            <Line />
+                        </div>
                     </div>
                 </div>
             </div>

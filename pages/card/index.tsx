@@ -1,21 +1,17 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.Card}>
+        <PatternLayout pattern={Pattern.Card}>
             <Head>
                 <meta name="description" content="Create a card with CSS flexbox" />
                 <meta name="og:description" content="Create a card with CSS flexbox" />
@@ -23,7 +19,7 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css card, css flexbox" />
             </Head>
             <BrowserFrame
-html={`
+                html={`
 <div class="card">
     <!-- Cover -->
     <div class="card__cover">
@@ -37,22 +33,22 @@ html={`
     ...
 </div>
 `}
-css={`
-.card {
-    display: flex;
-    flex-direction: column;
-}
+                css={`
+                    .card {
+                        display: flex;
+                        flex-direction: column;
+                    }
 
-.card__cover {
-    height: 150px;
-    width: 100%;
-}
+                    .card__cover {
+                        height: 150px;
+                        width: 100%;
+                    }
 
-.card__content {
-    /* Take available height */
-    flex: 1;
-}
-`}
+                    .card__content {
+                        /* Take available height */
+                        flex: 1;
+                    }
+                `}
             >
                 <div
                     style={{
@@ -75,7 +71,9 @@ css={`
                     >
                         <Rectangle height={150} />
                         <div style={{ flex: 1, padding: '16px' }}>
-                            <div style={{ marginBottom: '16px' }}><Block numberOfBlocks={15} /></div>
+                            <div style={{ marginBottom: '16px' }}>
+                                <Block numberOfBlocks={15} />
+                            </div>
                             <div style={{ width: '128px' }}>
                                 <Rectangle height={32} />
                             </div>
@@ -84,8 +82,11 @@ css={`
                 </div>
             </BrowserFrame>
 
-            <RelatedPatterns patterns={[Pattern.CardLayout, Pattern.LayeredCard, Pattern.StackedCards, Pattern.ThreeDimensionsCard]} />
-        </DetailsLayout>
+            <Spacer size="extraLarge" />
+            <RelatedPatterns
+                patterns={[Pattern.CardLayout, Pattern.LayeredCard, Pattern.StackedCards, Pattern.ThreeDimensionsCard]}
+            />
+        </PatternLayout>
     );
 };
 

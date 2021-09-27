@@ -8,7 +8,7 @@
     position: relative;
 
     /* Border */
-    border-bottom: 1px solid #71717A;
+    border-bottom: 1px solid #71717a;
 
     /* Take full width */
     width: 100%;
@@ -16,7 +16,7 @@
 
 .zigzag-timeline__milestone {
     /* Absolute position */
-    position: absolute;    
+    position: absolute;
     top: 50%;
 
     /* Circle it */
@@ -25,22 +25,21 @@
     width: 2rem;
 
     /* Misc */
-    background: #71717A;
+    background: #71717a;
 }
 
 /* Styles for even items */
 .zigzag-timeline__item:nth-child(2n) {
-    border-left: 1px solid #71717A;
-    
+    border-left: 1px solid #71717a;
 }
 .zigzag-timeline__item:nth-child(2n) .zigzag-timeline__milestone {
     left: 0;
-    transform: translate(-50%, -50%);    
+    transform: translate(-50%, -50%);
 }
 
 /* Styles for odd items */
 .zigzag-timeline__item:nth-child(2n + 1) {
-    border-right: 1px solid #71717A;
+    border-right: 1px solid #71717a;
 }
 .zigzag-timeline__item:nth-child(2n + 1) .zigzag-timeline__milestone {
     right: 0;

@@ -1,14 +1,10 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
@@ -16,16 +12,15 @@ import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.FeatureList}>
+        <PatternLayout pattern={Pattern.FeatureList}>
             <Head>
                 <meta name="description" content="Create a feature list with CSS flexbox" />
                 <meta name="og:description" content="Create a feature list with CSS flexbox" />
                 <meta name="twitter:description" content="Create a feature list with CSS flexbox" />
                 <meta name="keywords" content="css feature list, css flexbox" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <!-- Feature item -->
 <div class="container">
     <!-- Image -->
@@ -42,57 +37,64 @@ html={`
 <!-- Repeated items -->
 ...
 `}
-css={`
-.container {
-    display: flex;
+                css={`
+                    .container {
+                        display: flex;
 
-    /* OPTIONAL: Reverse the order of image and content */
-    flex-direction: row-reverse;
+                        /* OPTIONAL: Reverse the order of image and content */
+                        flex-direction: row-reverse;
 
-    /* OPTIONAL: Spacing between items */
-    margin: 16px 0;
-}
+                        /* OPTIONAL: Spacing between items */
+                        margin: 16px 0;
+                    }
 
-.container__image {
-    width: 128px;
-}
+                    .container__image {
+                        width: 128px;
+                    }
 
-.container__feature {
-    /* Take the remaining width */
-    flex: 1;
-}
-`}
+                    .container__feature {
+                        /* Take the remaining width */
+                        flex: 1;
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        height: '100%',
+                        justifyContent: 'center',
+                    }}
                 >
-                    <div
-                        style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            height: '100%',
-                            justifyContent: 'center',
-                        }}
-                    >
-                        <div style={{ width: '60%' }}>
-                            <div style={{ display: 'flex', marginBottom: '32px' }}>
-                                <div style={{ margin: '0 16px' }}><Circle size={128} /></div>
-                                <div style={{ flex: 1 }}>
-                                    <div style={{ marginBottom: '32px' }}><Rectangle height={8} /></div>
-                                    <Block numberOfBlocks={10} />
-                                </div>
+                    <div style={{ width: '60%' }}>
+                        <div style={{ display: 'flex', marginBottom: '32px' }}>
+                            <div style={{ margin: '0 16px' }}>
+                                <Circle size={128} />
                             </div>
-                            <div style={{ display: 'flex', flexDirection: 'row-reverse', marginBottom: '32px' }}>
-                                <div style={{ margin: '0 16px' }}><Circle size={128} /></div>
-                                <div style={{ flex: 1 }}>
-                                    <div style={{ marginBottom: '32px' }}><Rectangle height={8} /></div>
-                                    <Block numberOfBlocks={15} />
+                            <div style={{ flex: 1 }}>
+                                <div style={{ marginBottom: '32px' }}>
+                                    <Rectangle height={8} />
                                 </div>
+                                <Block numberOfBlocks={10} />
+                            </div>
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'row-reverse', marginBottom: '32px' }}>
+                            <div style={{ margin: '0 16px' }}>
+                                <Circle size={128} />
+                            </div>
+                            <div style={{ flex: 1 }}>
+                                <div style={{ marginBottom: '32px' }}>
+                                    <Rectangle height={8} />
+                                </div>
+                                <Block numberOfBlocks={15} />
                             </div>
                         </div>
                     </div>
-                </BrowserFrame>
-            </div>
-
+                </div>
+            </BrowserFrame>
+            <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.FeatureComparison]} />
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

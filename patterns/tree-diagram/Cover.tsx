@@ -20,10 +20,7 @@ const Cover: React.FC<{}> = () => {
                     padding: '0.5rem',
                 }}
             >
-                <div
-                    style={{
-                    }}
-                >
+                <div style={{}}>
                     <div
                         style={{
                             display: 'flex',

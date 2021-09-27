@@ -32,7 +32,9 @@ const Cover: React.FC<{}> = () => {
                         width: '80%',
                     }}
                 >
-                    <div style={{ width: '60%' }}><Rectangle /></div>
+                    <div style={{ width: '60%' }}>
+                        <Rectangle />
+                    </div>
                     <div style={{ color: 'rgba(0, 0, 0, 0.7)' }}>&times;</div>
                 </div>
             </div>

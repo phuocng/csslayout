@@ -1,29 +1,23 @@
-/**
- * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
- */
-
 import * as React from 'react';
 import Head from 'next/head';
 
-import Heading from '../../components/Heading';
+import { Heading, Spacer } from '@1milligram/design';
 import { Pattern } from '../../constants/Pattern';
-import { DetailsLayout } from '../../layouts/DetailsLayout';
+import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
     return (
-        <DetailsLayout pattern={Pattern.StatusLight}>
+        <PatternLayout pattern={Pattern.StatusLight}>
             <Head>
                 <meta name="description" content="Create a status light with CSS flexbox" />
                 <meta name="og:description" content="Create a status light with CSS flexbox" />
                 <meta name="twitter:description" content="Create a status light with CSS flexbox" />
                 <meta name="keywords" content="css flexbox, css status light" />
             </Head>
-            <div className='p-8 pb-20'>
-                <BrowserFrame
-html={`
+            <BrowserFrame
+                html={`
 <div class="container">
     <!-- Status light -->
     <div class="container__status"></div>
@@ -34,71 +28,71 @@ html={`
     </div>
 </div>
 `}
-css={`
-.container {
-    /* Center the content */
-    align-items: center;
-    display: flex;
-}
+                css={`
+                    .container {
+                        /* Center the content */
+                        align-items: center;
+                        display: flex;
+                    }
 
-.container__status {
-    /* Background color */
-    background-color: rgb(66, 153, 225);
+                    .container__status {
+                        /* Background color */
+                        background-color: rgb(66, 153, 225);
 
-    /* Rounded border */
-    border-radius: 9999px;
+                        /* Rounded border */
+                        border-radius: 9999px;
 
-    /* Size */
-    height: 8px;
-    width: 8px;
+                        /* Size */
+                        height: 8px;
+                        width: 8px;
 
-    /* Spacing */
-    margin-right: 8px;
-}
+                        /* Spacing */
+                        margin-right: 8px;
+                    }
 
-.container__content {
-    /* Take available width */
-    flex: 1;
-}
-`}
+                    .container__content {
+                        /* Take available width */
+                        flex: 1;
+                    }
+                `}
+            >
+                <div
+                    style={{
+                        alignItems: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        height: '100%',
+                        justifyContent: 'center',
+                        padding: '8px',
+                    }}
                 >
                     <div
                         style={{
                             alignItems: 'center',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
-                            padding: '8px',
+                            display: 'inline-flex',
+                            width: '150px',
                         }}
                     >
                         <div
                             style={{
-                                alignItems: 'center',
-                                display: 'inline-flex',
-                                width: '150px',
+                                backgroundColor: '#4299e1',
+                                borderRadius: '9999px',
+                                height: '8px',
+                                marginRight: '8px',
+                                width: '8px',
                             }}
-                        >
-                            <div
-                                style={{
-                                    backgroundColor: '#4299e1',
-                                    borderRadius: '9999px',
-                                    height: '8px',
-                                    marginRight: '8px',
-                                    width: '8px',
-                                }}
-                            />
+                        />
 
-                            <div style={{ flex: 1 }}>
-                                <Rectangle />
-                            </div>
+                        <div style={{ flex: 1 }}>
+                            <Rectangle />
                         </div>
                     </div>
-                </BrowserFrame>
-            </div>
+                </div>
+            </BrowserFrame>
+            <Spacer size="extraLarge" />
 
             <section>
-                <Heading title="Use cases" />
+                <Heading level={2}>Use cases</Heading>
 
                 <div style={{ padding: '48px' }}>
                     <div
@@ -127,7 +121,6 @@ css={`
                                         width: '8px',
                                     }}
                                 />
-
                                 In review
                             </div>
 
@@ -147,7 +140,6 @@ css={`
                                         width: '8px',
                                     }}
                                 />
-
                                 Draft
                             </div>
 
@@ -166,14 +158,13 @@ css={`
                                         width: '8px',
                                     }}
                                 />
-
                                 Published
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-        </DetailsLayout>
+        </PatternLayout>
     );
 };
 

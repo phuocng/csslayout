@@ -33,9 +33,15 @@ const Cover: React.FC<{}> = () => {
                         width: '100%',
                     }}
                 >
-                    <div style={{ marginBottom: '4px', width: '60%' }}><Line /></div>
-                    <div style={{ marginBottom: '4px', width: '50%' }}><Line /></div>
-                    <div style={{ width: '30%' }}><Line /></div>
+                    <div style={{ marginBottom: '4px', width: '60%' }}>
+                        <Line />
+                    </div>
+                    <div style={{ marginBottom: '4px', width: '50%' }}>
+                        <Line />
+                    </div>
+                    <div style={{ width: '30%' }}>
+                        <Line />
+                    </div>
                 </div>
             </div>
         </Frame>

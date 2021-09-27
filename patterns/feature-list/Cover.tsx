@@ -24,21 +24,41 @@ const Cover: React.FC<{}> = () => {
                 }}
             >
                 <div style={{ display: 'flex', marginBottom: '8px', width: '100%' }}>
-                    <div style={{ margin: '0 4px' }}><Circle size={32} /></div>
+                    <div style={{ margin: '0 4px' }}>
+                        <Circle size={32} />
+                    </div>
                     <div style={{ flex: 1 }}>
-                        <div style={{ marginBottom: '8px', width: '100%' }}><Rectangle height={4} /></div>
-                        <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
-                        <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
-                        <div style={{ width: '80%' }}><Line /></div>
+                        <div style={{ marginBottom: '8px', width: '100%' }}>
+                            <Rectangle height={4} />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '100%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '100%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ width: '80%' }}>
+                            <Line />
+                        </div>
                     </div>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'row-reverse', width: '100%' }}>
-                    <div style={{ margin: '0 4px' }}><Circle size={32} /></div>
+                    <div style={{ margin: '0 4px' }}>
+                        <Circle size={32} />
+                    </div>
                     <div style={{ flex: 1 }}>
-                        <div style={{ marginBottom: '8px', width: '100%' }}><Rectangle height={4} /></div>
-                        <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
-                        <div style={{ marginBottom: '4px', width: '100%' }}><Line /></div>
-                        <div style={{ width: '80%' }}><Line /></div>
+                        <div style={{ marginBottom: '8px', width: '100%' }}>
+                            <Rectangle height={4} />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '100%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ marginBottom: '4px', width: '100%' }}>
+                            <Line />
+                        </div>
+                        <div style={{ width: '80%' }}>
+                            <Line />
+                        </div>
                     </div>
                 </div>
             </div>

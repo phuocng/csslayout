@@ -31,7 +31,9 @@ const Cover: React.FC<{}> = () => {
                         width: '100%',
                     }}
                 >
-                    <div style={{ width: '60%' }}><Rectangle height={4} /></div>
+                    <div style={{ width: '60%' }}>
+                        <Rectangle height={4} />
+                    </div>
                     <div style={{ borderBottom: '1px dotted rgba(0, 0, 0, 0.3)', flex: 1, margin: '0 4px' }} />
                     <Circle size={8} />
                 </div>
@@ -44,7 +46,9 @@ const Cover: React.FC<{}> = () => {
                         width: '100%',
                     }}
                 >
-                    <div style={{ width: '40%' }}><Rectangle height={4} /></div>
+                    <div style={{ width: '40%' }}>
+                        <Rectangle height={4} />
+                    </div>
                     <div style={{ borderBottom: '1px dotted rgba(0, 0, 0, 0.3)', flex: 1, margin: '0 4px' }} />
                     <Circle size={8} />
                 </div>
@@ -56,7 +60,9 @@ const Cover: React.FC<{}> = () => {
                         width: '100%',
                     }}
                 >
-                    <div style={{ width: '30%' }}><Rectangle height={4} /></div>
+                    <div style={{ width: '30%' }}>
+                        <Rectangle height={4} />
+                    </div>
                     <div style={{ borderBottom: '1px dotted rgba(0, 0, 0, 0.3)', flex: 1, margin: '0 4px' }} />
                     <Circle size={8} />
                 </div>

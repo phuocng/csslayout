@@ -23,13 +23,13 @@ const Cover: React.FC<{}> = () => {
                 }}
             >
                 <div style={{ marginBottom: '4px', width: '80%' }}>
-                    <Line backgroundColor='#fff' />
+                    <Line backgroundColor="#fff" />
                 </div>
                 <div style={{ marginBottom: '4px', width: '60%' }}>
-                    <Line backgroundColor='#fff' />
+                    <Line backgroundColor="#fff" />
                 </div>
                 <div style={{ width: '40%' }}>
-                    <Line backgroundColor='#fff' />
+                    <Line backgroundColor="#fff" />
                 </div>
             </div>
         </Frame>

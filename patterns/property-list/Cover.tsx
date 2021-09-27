@@ -32,7 +32,9 @@ const Cover: React.FC<{}> = () => {
                             padding: '4px 0',
                         }}
                     >
-                        <div style={{ width: '60%' }}><Rectangle height={8} /></div>
+                        <div style={{ width: '60%' }}>
+                            <Rectangle height={8} />
+                        </div>
                         <Circle size={12} />
                     </div>
                     <div
@@ -44,7 +46,9 @@ const Cover: React.FC<{}> = () => {
                             padding: '4px 0',
                         }}
                     >
-                        <div style={{ width: '20%' }}><Rectangle height={8} /></div>
+                        <div style={{ width: '20%' }}>
+                            <Rectangle height={8} />
+                        </div>
                         <Circle size={12} />
                     </div>
                     <div
@@ -56,7 +60,9 @@ const Cover: React.FC<{}> = () => {
                             padding: '4px 0',
                         }}
                     >
-                        <div style={{ width: '40%' }}><Rectangle height={8} /></div>
+                        <div style={{ width: '40%' }}>
+                            <Rectangle height={8} />
+                        </div>
                         <Circle size={12} />
                     </div>
                 </div>
