@@ -1,0 +1,48 @@
+:root {
+    --inverted-corners-background: #52525b;
+    --inverted-corners-size: 2rem;
+}
+
+.inverted-corners {
+    background-color: var(--inverted-corners-background);
+
+    /* Used to position the corner */
+    position: relative;
+
+    /* Misc */
+    height: 100%;
+}
+
+.inverted-corners::before {
+    content: '';
+
+    /* Absolute position */
+    bottom: calc(-2 * var(--inverted-corners-size));
+    left: 0;
+    position: absolute;
+
+    /* Size */
+    height: calc(2 * var(--inverted-corners-size));
+    width: var(--inverted-corners-size);
+
+    /* Border */
+    background-color: transparent;
+    border-top-left-radius: var(--inverted-corners-size);
+    box-shadow: var(--inverted-corners-background) 0px calc(-1 * var(--inverted-corners-size)) 0px 0px;
+}
+
+/* Use case */
+.inverted-corners--speech {
+    /* Border radius */
+    border-bottom-right-radius: var(--inverted-corners-size);
+    border-top-left-radius: var(--inverted-corners-size);
+    border-top-right-radius: var(--inverted-corners-size);
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Misc */
+    color: #fff;
+}

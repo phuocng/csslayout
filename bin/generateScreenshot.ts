@@ -13,20 +13,20 @@ const main = () => {
     }
 
     const pattern = args[2];
-    
+
     (async () => {
-        const browser = await puppeteer.launch();    
-           
+        const browser = await puppeteer.launch();
+
         const page = await browser.newPage();
-        await page.goto(`http://localhost:1234/patterns/${pattern}`);
+        await page.goto(`http://localhost:3000/${pattern}`);
 
         await page.waitForSelector('.demo__live');
         const element = await page.$('.demo__live');
         await element.screenshot({
-            path: `public/assets/patterns/${pattern}.png`
+            path: `public/assets/patterns/${pattern}.png`,
         });
         await page.close();
-        
+
         await browser.close();
     })();
 };

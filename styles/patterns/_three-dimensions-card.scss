@@ -1,0 +1,41 @@
+:root {
+    --three-dimensions-card-left-side-width: 1rem;
+}
+
+.three-dimensions-card {
+    position: relative;
+}
+
+/* The left side */
+.three-dimensions-card::before {
+    background: rgba(0, 0, 0, 0.3);
+    content: '';
+
+    /* Position */
+    top: var(--three-dimensions-card-left-side-width);
+    left: 0px;
+    position: absolute;
+    transform: translate(-100%, 0) skewY(-45deg);
+    transform-origin: left top;
+
+    /* Size */
+    height: 100%;
+    width: var(--three-dimensions-card-left-side-width);
+}
+
+/* The bottom side */
+.three-dimensions-card::after {
+    background: rgba(0, 0, 0, 0.3);
+    content: '';
+
+    /* Position */
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    transform: translate(0, 100%) skewX(-45deg);
+    transform-origin: left top;
+
+    /* Size */
+    height: var(--three-dimensions-card-left-side-width);
+    width: 100%;
+}

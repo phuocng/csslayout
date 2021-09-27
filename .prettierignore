@@ -1,0 +1,4 @@
+.netlify
+.next
+node_modules
+out

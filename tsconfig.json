@@ -7,6 +7,16 @@
         "module": "esnext",
         "moduleResolution": "node",
         "target": "esnext",
-        "jsx": "react"
-    }
+        "jsx": "preserve",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": false,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["bin", "node_modules"]
 }
