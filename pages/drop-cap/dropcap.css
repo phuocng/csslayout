@@ -1,0 +1,14 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
+.p-drop-cap:first-letter {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    float: left;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 8px 0 0;
+    padding: 0 8px; 
+}

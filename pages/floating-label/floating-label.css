@@ -1,0 +1,14 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
+.p-floating-container label {
+    opacity: 0;
+}
+
+.p-floating-container input:not(:placeholder-shown) + label {
+    background: #FFF;
+    transform: translate(0, -50%);
+    opacity: 1;
+}
