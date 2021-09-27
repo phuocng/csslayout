@@ -2,7 +2,6 @@ import Head from 'next/head';
 
 // Design
 import '@1milligram/design/lib/styles/index.css';
-import '@1milligram/frame/lib/styles/index.css';
 import '../styles/index.scss';
 
 export default function MyApp({ Component, pageProps }) {
