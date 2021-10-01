@@ -13,6 +13,7 @@ const Cover: React.FC<{}> = () => {
                     justifyContent: 'center',
                     padding: '1.5rem',
                     position: 'relative',
+                    zIndex: 0,
                 }}
             >
                 <div
