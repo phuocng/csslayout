@@ -32,7 +32,6 @@ const Cover: React.FC<{}> = () => {
                             position: 'absolute',
                             transform: 'translate(-50%, 4px)',
                             width: 0,
-                            zIndex: 10,
                         }}
                     />
                     <div
@@ -45,7 +44,6 @@ const Cover: React.FC<{}> = () => {
                             position: 'absolute',
                             transform: 'translate(-50%, -4px)',
                             width: '80px',
-                            zIndex: 10,
                         }}
                     />
                     <Rectangle height={16} />
