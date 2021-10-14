@@ -24,7 +24,7 @@ const Details: React.FC<{}> = () => {
 
     <!-- Label -->
     ...
-</div>
+</button>
 `}
                 css={`
                     .button {
