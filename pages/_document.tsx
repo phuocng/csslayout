@@ -5,8 +5,10 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <link href="/favicon.png" rel="icon" />
                     <meta charSet="utf-8" />
+                    <link rel="icon" href="/favicon.png" type="image/png" />
+                    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+                    <link rel="mask-icon" href="/mask-favicon.svg" color="#1975FF" />
 
                     <meta content="A collection of popular layouts and patterns made with CSS" name="description" />
                     <meta
@@ -21,7 +23,6 @@ class MyDocument extends Document {
                         name="twitter:description"
                     />
                     <meta content="A collection of popular layouts and patterns made with CSS" name="twitter:title" />
-                    <meta content="/assets/logo.png" name="twitter:image" />
 
                     <meta content="A collection of popular layouts and patterns made with CSS" property="og:title" />
                     <meta
@@ -30,10 +31,8 @@ class MyDocument extends Document {
                     />
                     <meta content="article" property="og:type" />
                     <meta content="https://csslayout.io" property="og:url" />
-                    <meta content="/assets/logo.png" property="og:image" />
                     <meta content="CSS Layout" property="og:site_name" />
 
-                    <link rel="icon" href="/assets/favicon.png" />
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
                     <link
