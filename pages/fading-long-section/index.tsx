@@ -20,7 +20,7 @@ const Details: React.FC<{}> = () => {
             </div>
             <BrowserFrame
                 html={`
-<div class="container"
+<div class="container">
     <!-- Main content -->
     <div class="container__content">
         ...
