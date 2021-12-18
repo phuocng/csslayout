@@ -45,13 +45,13 @@ const Details: React.FC<{}> = () => {
 
                         /* Position it right below the trigger element */
                         left: 0;
-                        paddingtop: 4px;
+                        padding-top: 4px;
                         position: absolute;
                         top: 100%;
 
                         /* It should be on the top of other elements */
                         background-color: #fff;
-                        zindex: 9999;
+                        z-index: 9999;
 
                         /* Size */
                         height: 200px;
