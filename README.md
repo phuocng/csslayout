@@ -46,7 +46,7 @@ Visit http://localhost:3000 to see it in action.
 
 ## Contributing
 
-PRs are welcomed. If you thing there are any missing useful layouts or patterns, please create an issue or submit a PR.
+PRs are welcomed. If you think there are any missing useful layouts or patterns, please create an issue or submit a PR.
 
 It's important to note that you should run the following command to lint the code:
 
