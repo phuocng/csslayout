@@ -2,6 +2,5 @@
 .netlify
 .next
 node_modules
-out
 package-lock.json
 tslint.log
