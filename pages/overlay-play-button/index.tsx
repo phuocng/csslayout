@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -9,6 +10,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Triangle from '../../placeholders/Triangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.OverlayPlayButton}>
             <Head>
@@ -18,43 +21,49 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- The video element -->
     <video src="..." />
 
     <!-- The overlay area -->
-    <div class="container__overlay">
+    <div class="${prefix}${container}__overlay">
         <!-- The player button -->
         ...
     </div>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Used to position the overlay */
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Used to position the overlay */
+    position: relative;
+}
 
-                    .container__overlay {
-                        /* Position */
-                        left: 0;
-                        position: absolute;
-                        top: 0;
+.${prefix}${container}__overlay {
+    /* Position */
+    left: 0;
+    position: absolute;
+    top: 0;
 
-                        /* Take full size */
-                        height: 100%;
-                        width: 100%;
+    /* Take full size */
+    height: 100%;
+    width: 100%;
 
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-                        /* Add a dark background */
-                        background-color: rgba(0, 0, 0, 0.25);
-                    }
-                `}
+    /* Add a dark background */
+    background-color: rgba(0, 0, 0, 0.25);
+}
+`
+                }
             >
                 <div
                     style={{

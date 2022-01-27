@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
@@ -9,6 +10,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'notification';
     return (
         <PatternLayout pattern={Pattern.Notification}>
             <Head>
@@ -25,21 +28,27 @@ const Details: React.FC<{}> = () => {
                 to represent the button for closing the notification.
             </div>
             <BrowserFrame
-                html={`
-<div class="notification">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Content -->
     ...
 
     <!-- Close button sticks to the right -->
     ...
 </div>
-`}
-                css={`
-                    .notification {
-                        display: flex;
-                        justify-content: space-between;
-                    }
-                `}
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
+    justify-content: space-between;
+}
+`
+                }
             >
                 <div
                     style={{

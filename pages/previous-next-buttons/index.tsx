@@ -2,11 +2,14 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Pattern } from '../../constants/Pattern';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.PreviousNextButtons}>
             <Head>
@@ -16,22 +19,28 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css pagination" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Previous link sticks to the left -->
     <a>..</a>
 
     <!-- Next link sticks to the right -->
     <a>..</a>
 </div>
-`}
-                css={`
-                    .container {
+`
+                }
+                css={
+                    '' +
+                    `
+                    .${prefix}${container} {
                         align-items: center;
                         display: flex;
                         justify-content: space-between;
                     }
-                `}
+                `
+                }
             >
                 <div
                     style={{

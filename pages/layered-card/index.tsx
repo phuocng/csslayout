@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'layered-card';
     return (
         <PatternLayout pattern={Pattern.LayeredCard}>
             <Head>
@@ -17,34 +20,40 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css layered card" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="layered-card">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     ...
 </div>
-`}
-                css={`
-                    .layered-card {
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+`
+.${prefix}${container} {
+    position: relative;
+}
 
-                    .layered-card::before {
-                        background: rgba(0, 0, 0, 0.3);
-                        content: '';
+.${prefix}${container}::before {
+    background: rgba(0, 0, 0, 0.3);
+    content: '';
 
-                        /* Position */
-                        top: 0;
-                        left: 0;
-                        position: absolute;
-                        transform: translate(1rem, 1rem);
+    /* Position */
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translate(1rem, 1rem);
 
-                        /* Size */
-                        height: 100%;
-                        width: 100%;
+    /* Size */
+    height: 100%;
+    width: 100%;
 
-                        /* Display under the main content */
-                        z-index: -1;
-                    }
-                `}
+    /* Display under the main content */
+    z-index: -1;
+}
+`
+                }
             >
                 <div
                     style={{

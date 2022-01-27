@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'three-dimensions-card';
     return (
         <PatternLayout pattern={Pattern.ThreeDimensionsCard}>
             <Head>
@@ -17,54 +20,60 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css 3D card" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="three-dimensions-card">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     ...
 </div>
-`}
-                css={`
-                    :root {
-                        --three-dimensions-card-left-side-width: 1rem;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+:root {
+    --${prefix}${container}-left-side-width: 1rem;
+}
 
-                    .three-dimensions-card {
-                        position: relative;
-                    }
+.${prefix}${container} {
+    position: relative;
+}
 
-                    /* The left side */
-                    .three-dimensions-card::before {
-                        background: rgba(0, 0, 0, 0.3);
-                        content: '';
+/* The left side */
+.${prefix}${container}::before {
+    background: rgba(0, 0, 0, 0.3);
+    content: '';
 
-                        /* Position */
-                        top: var(--three-dimensions-card-left-side-width);
-                        left: 0px;
-                        position: absolute;
-                        transform: translate(-100%, 0) skewY(-45deg);
-                        transform-origin: left top;
+    /* Position */
+    top: var(--${prefix}${container}-left-side-width);
+    left: 0px;
+    position: absolute;
+    transform: translate(-100%, 0) skewY(-45deg);
+    transform-origin: left top;
 
-                        /* Size */
-                        height: 100%;
-                        width: var(--three-dimensions-card-left-side-width);
-                    }
+    /* Size */
+    height: 100%;
+    width: var(--${prefix}${container}-left-side-width);
+}
 
-                    /* The bottom side */
-                    .three-dimensions-card::after {
-                        background: rgba(0, 0, 0, 0.3);
-                        content: '';
+/* The bottom side */
+.${prefix}${container}::after {
+    background: rgba(0, 0, 0, 0.3);
+    content: '';
 
-                        /* Position */
-                        bottom: 0px;
-                        left: 0px;
-                        position: absolute;
-                        transform: translate(0, 100%) skewX(-45deg);
-                        transform-origin: left top;
+    /* Position */
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    transform: translate(0, 100%) skewX(-45deg);
+    transform-origin: left top;
 
-                        /* Size */
-                        height: var(--three-dimensions-card-left-side-width);
-                        width: 100%;
-                    }
-                `}
+    /* Size */
+    height: var(--${prefix}${container}-left-side-width);
+    width: 100%;
+}
+`
+                }
             >
                 <div
                     style={{

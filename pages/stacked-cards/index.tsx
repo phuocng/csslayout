@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.StackedCards}>
             <Head>
@@ -17,42 +20,48 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css card, css stacked cards, css transform rotate" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Repeat if you want to have more cards -->
-    <div class="container__card"></div>
+    <div class="${prefix}${container}__card"></div>
 
     <!-- Main card's content -->
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        /* Used to position the stacked cards */
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Used to position the stacked cards */
+    position: relative;
+}
 
-                    .container__card {
-                        /* Absolute position */
-                        left: 0px;
-                        position: absolute;
-                        top: 0px;
+.${prefix}${container}__card {
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 0px;
 
-                        /* Take full size */
-                        height: 100%;
-                        width: 100%;
+    /* Take full size */
+    height: 100%;
+    width: 100%;
 
-                        /* Displayed under the container */
-                        z-index: -1;
+    /* Displayed under the container */
+    z-index: -1;
 
-                        /* Background and border colors */
-                        background-color: rgb(255, 255, 255);
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+    /* Background and border colors */
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.3);
 
-                        /* Rotate it. Change the number of degrees for the following cards */
-                        transform: rotate(5deg);
-                    }
-                `}
+    /* Rotate it. Change the number of degrees for the following cards */
+    transform: rotate(5deg);
+}
+`
+                }
             >
                 <div
                     style={{

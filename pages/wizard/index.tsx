@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
@@ -9,6 +10,8 @@ import Circle from '../../placeholders/Circle';
 import Line from '../../placeholders/Line';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'wizard';
     return (
         <PatternLayout pattern={Pattern.Wizard}>
             <Head>
@@ -18,21 +21,23 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css stepper, css wizard" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="wizard">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Step -->
-    <div class="wizard__step">
-        <div class="wizard__dot">
+    <div class="${prefix}${container}__step">
+        <div class="${prefix}${container}__dot">
             <!-- The left connector -->
-            <div class="wizard__connector"></div>
+            <div class="${prefix}${container}__connector"></div>
 
             <!-- The step number -->
-            <div class="wizard__number">
+            <div class="${prefix}${container}__number">
                 ...
             </div>
 
             <!-- The right connector -->
-            <div class="wizard__connector"></div>
+            <div class="${prefix}${container}__connector"></div>
         </div>
 
         <!-- Title of step -->
@@ -42,52 +47,56 @@ const Details: React.FC<{}> = () => {
     <!-- Repeat other steps -->
     ...
 </div>
-`}
-                css={`
-                    .wizard {
-                        display: flex;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
+}
 
-                    .wizard__step {
-                        /* Make all steps have the same width */
-                        flex: 1;
-                    }
+.${prefix}${container}__step {
+    /* Make all steps have the same width */
+    flex: 1;
+}
 
-                    .wizard__dot {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
-                    }
+.${prefix}${container}__dot {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
-                    .wizard__connector {
-                        flex: 1;
-                        height: 1px;
-                        background-color: rgba(0, 0, 0, 0.3);
-                    }
+.${prefix}${container}__connector {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
 
-                    .wizard__step:first-child .wizard__connector,
-                    .wizard__step:last-child .wizard__connector {
-                        background-color: transparent;
-                    }
+.${prefix}${container}__step:first-child .${prefix}${container}__connector,
+.${prefix}${container}__step:last-child .${prefix}${container}__connector {
+    background-color: transparent;
+}
 
-                    .wizard__number {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
+.${prefix}${container}__number {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-                        /* Rounded border */
-                        background-color: rgba(0, 0, 0, 0.3);
-                        border-radius: 9999px;
-                        height: 32px;
-                        width: 32px;
+    /* Rounded border */
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 9999px;
+    height: 32px;
+    width: 32px;
 
-                        /* OPTIONAL: Spacing between it and connectors */
-                        margin-left: 4px;
-                        margin-right: 4px;
-                    }
-                `}
+    /* OPTIONAL: Spacing between it and connectors */
+    margin-left: 4px;
+    margin-right: 4px;
+}
+`
+                }
             >
                 <div
                     style={{

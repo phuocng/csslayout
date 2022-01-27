@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -9,6 +10,8 @@ import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.FullBackground}>
             <Head>
@@ -18,27 +21,33 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css background size cover, css full background" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-                        /* Take full size */
-                        height: 100vh;
-                        width: 100%;
+    /* Take full size */
+    height: 100vh;
+    width: 100%;
 
-                        /* Background */
-                        background: url('/assets/full-background.jpeg') center center / cover no-repeat;
-                    }
-                `}
+    /* Background */
+    background: url('/assets/full-background.jpeg') center center / cover no-repeat;
+}
+`
+                }
             >
                 <div
                     style={{

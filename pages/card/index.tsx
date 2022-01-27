@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -10,6 +11,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'card';
     return (
         <PatternLayout pattern={Pattern.Card}>
             <Head>
@@ -19,36 +22,42 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css card, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="card">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Cover -->
-    <div class="card__cover">
+    <div class="${prefix}${container}__cover">
         ...
     </div>
 
     <!-- Content -->
-    <div class="card__content">
+    <div class="${prefix}${container}__content">
         ...
     </div>
     ...
 </div>
-`}
-                css={`
-                    .card {
-                        display: flex;
-                        flex-direction: column;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
+    flex-direction: column;
+}
 
-                    .card__cover {
-                        height: 150px;
-                        width: 100%;
-                    }
+.${prefix}${container}__cover {
+    height: 150px;
+    width: 100%;
+}
 
-                    .card__content {
-                        /* Take available height */
-                        flex: 1;
-                    }
-                `}
+.${prefix}${container}__content {
+    /* Take available height */
+    flex: 1;
+}
+`
+                }
             >
                 <div
                     style={{

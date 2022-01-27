@@ -1,11 +1,14 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     const [visible, setVisible] = React.useState(false);
     const toggle = () => setVisible((v) => !v);
 
@@ -18,31 +21,37 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, toggle password visibility" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Text input -->
-    <input type="text" class="container__input" />
+    <input type="text" class="${prefix}${container}__input" />
 
     <!-- Toggle button sticks to the right -->
     <button>
         ...
     </button>
 </div>
-`}
-                css={`
-                    .container {
-                        display: flex;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
 
-                        /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                    }
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
 
-                    .container__input {
-                        border-color: transparent;
-                        /* Take available width */
-                        flex: 1;
-                    }
-                `}
+.${prefix}${container}__input {
+    border-color: transparent;
+    /* Take available width */
+    flex: 1;
+}
+`
+                }
             >
                 <div
                     style={{

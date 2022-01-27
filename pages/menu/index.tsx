@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -10,6 +11,8 @@ import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'menu';
     return (
         <PatternLayout pattern={Pattern.Menu}>
             <Head>
@@ -19,25 +22,27 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css menu" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="menu">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Normal menu item -->
-    <div class="menu__item">
+    <div class="${prefix}${container}__item">
         ...
     </div>
 
     <!-- With hot key -->
-    <div class="menu__item">
+    <div class="${prefix}${container}__item">
         <!-- Label -->
         ...
         <!-- Hot key -->
-        <div class="menu__hotkey">
+        <div class="${prefix}${container}__hotkey">
             ...
         </div>
     </div>
 
     <!-- With image and hot key -->
-    <div class="menu__item">
+    <div class="${prefix}${container}__item">
         <!-- Image -->
         ...
 
@@ -45,41 +50,45 @@ const Details: React.FC<{}> = () => {
         ...
 
         <!-- Hot key -->
-        <div class="menu__hotkey">
+        <div class="${prefix}${container}__hotkey">
             ...
         </div>
     </div>
 
     <!-- Divider -->
-    <div class="menu__divider"></div>
+    <div class="${prefix}${container}__divider"></div>
 </div>
-`}
-                css={`
-                    .menu {
-                        display: flex;
-                        flex-direction: column;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
+    flex-direction: column;
 
-                        /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                        border-radius: 4px;
-                    }
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
 
-                    .menu__item {
-                        /* Center the content horizontally */
-                        align-items: center;
-                        display: flex;
-                    }
+.${prefix}${container}__item {
+    /* Center the content horizontally */
+    align-items: center;
+    display: flex;
+}
 
-                    .menu__hotkey {
-                        /* Push the hot key to the right */
-                        margin-left: auto;
-                    }
+.${prefix}${container}__hotkey {
+    /* Push the hot key to the right */
+    margin-left: auto;
+}
 
-                    .menu__divider {
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                        height: 1px;
-                    }
-                `}
+.${prefix}${container}__divider {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    height: 1px;
+}
+`
+                }
             >
                 <div
                     style={{

@@ -1,12 +1,15 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.UploadButton}>
             <Head>
@@ -17,47 +20,53 @@ const Details: React.FC<{}> = () => {
             </Head>
             <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>You can click the button to choose a file.</div>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- The real file input -->
-    <input type="file" class="container__input" />
+    <input type="file" class="${prefix}${container}__input" />
 
     <!-- The upload icon -->
-    <div class="container__icon">...</div>
+    <div class="${prefix}${container}__icon">...</div>
 
     <!-- The label -->
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        /* Used to position the input */
-                        position: relative;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Used to position the input */
+    position: relative;
 
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
+    /* Center the content */
+    align-items: center;
+    display: flex;
 
-                        /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                    }
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
 
-                    .container__input {
-                        /* Take the full size */
-                        height: 100%;
-                        left: 0;
-                        position: absolute;
-                        top: 0;
-                        width: 100%;
+.${prefix}${container}__input {
+    /* Take the full size */
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 
-                        /* Make it transparent */
-                        opacity: 0;
-                    }
+    /* Make it transparent */
+    opacity: 0;
+}
 
-                    .container__icon {
-                        margin-right: 8px;
-                    }
-                `}
+.${prefix}${container}__icon {
+    margin-right: 8px;
+}
+`
+                }
             >
                 <div
                     style={{

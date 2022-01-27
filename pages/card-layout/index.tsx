@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -9,6 +10,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'cards';
     return (
         <PatternLayout pattern={Pattern.CardLayout}>
             <Head>
@@ -18,36 +21,42 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css card layout, css flexbox, css layout" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="cards">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- A card with given width -->
-    <div class="cards__item">
+    <div class="${prefix}${container}__item">
         ...
     </div>
 
     <!-- Repeat other cards -->
     ...
 </div>
-`}
-                css={`
-                    .cards {
-                        display: flex;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
 
-                        /* Put a card in the next row when previous cards take all width */
-                        flex-wrap: wrap;
+    /* Put a card in the next row when previous cards take all width */
+    flex-wrap: wrap;
 
-                        margin-left: -8px;
-                        margin-right: -8px;
-                    }
+    margin-left: -8px;
+    margin-right: -8px;
+}
 
-                    .cards__item {
-                        /* There will be 4 cards per row */
-                        flex-basis: 25%;
+.${prefix}${container}__item {
+    /* There will be 4 cards per row */
+    flex-basis: 25%;
 
-                        padding-left: 8px;
-                        padding-right: 8px;
-                    }
-                `}
+    padding-left: 8px;
+    padding-right: 8px;
+}
+`
+                }
             >
                 <div
                     style={{

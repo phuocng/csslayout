@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -8,6 +9,8 @@ import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'pagination';
     return (
         <PatternLayout pattern={Pattern.Pagination}>
             <Head>
@@ -17,40 +20,46 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css pagination" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="pagination">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Pagination item -->
-    <div class="pagination__item">
+    <div class="${prefix}${container}__item">
         ...
     </div>
 
     <!-- Repeat other items -->
     ...
 </div>
-`}
-                css={`
-                    .pagination {
-                        display: flex;
+`
+                }
+                css={
+                    '' +
+`
+.${prefix}${container} {
+    display: flex;
 
-                        /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                        border-radius: 4px;
-                    }
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
 
-                    .pagination__item {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
+.${prefix}${container}__item {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-                        /* Right border */
-                        border-right: 1px solid rgba(0, 0, 0, 0.3);
-                    }
-                    .pagination__item + .pagination__item {
-                        /* No right border */
-                        border-right: none;
-                    }
-                `}
+    /* Right border */
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+.${prefix}${container}__item + .${prefix}${container}__item {
+    /* No right border */
+    border-right: none;
+}
+`
+                }
             >
                 <div
                     style={{

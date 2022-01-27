@@ -3,12 +3,15 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'avatar';
     return (
         <PatternLayout pattern={Pattern.InitialAvatar}>
             <Head>
@@ -25,41 +28,47 @@ const Details: React.FC<{}> = () => {
                 pattern.
             </div>
             <BrowserFrame
-                html={`
-<div class="avatar">
-    <div class="avatar__letters">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
+    <div class="${prefix}${container}__letters">
         <!-- The letters -->
         ...
     </div>
 </div>
-`}
-                css={`
-                    .avatar {
-                        /* Center the content */
-                        display: inline-block;
-                        vertical-align: middle;
+`
+                }
+                css={
+                    '' +
+`
+.${prefix}${container} {
+    /* Center the content */
+    display: inline-block;
+    vertical-align: middle;
 
-                        /* Used to position the content */
-                        position: relative;
+    /* Used to position the content */
+    position: relative;
 
-                        /* Colors */
-                        background-color: rgba(0, 0, 0, 0.3);
-                        color: #fff;
+    /* Colors */
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
 
-                        /* Rounded border */
-                        border-radius: 50%;
-                        height: 48px;
-                        width: 48px;
-                    }
+    /* Rounded border */
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+}
 
-                    .avatar__letters {
-                        /* Center the content */
-                        left: 50%;
-                        position: absolute;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                    }
-                `}
+.${prefix}${container}__letters {
+    /* Center the content */
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+`
+                }
             >
                 <div
                     style={{

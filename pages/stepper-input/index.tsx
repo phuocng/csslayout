@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'stepper';
     const [value, setValue] = React.useState(0);
     const decrease = () => setValue(value - 1);
     const increase = () => setValue(value + 1);
@@ -26,52 +29,58 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css stepper input" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="stepper">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Minus button -->
-    <button class="stepper__button">-</button>
+    <button class="${prefix}${container}__button">-</button>
 
     <!-- Input container -->
-    <div class="stepper__content">
-        <input type="text" class="stepper__input" />
+    <div class="${prefix}${container}__content">
+        <input type="text" class="${prefix}${container}__input" />
     </div>
 
     <!-- Plus button -->
-    <button class="stepper__button">+</button>
+    <button class="${prefix}${container}__button">+</button>
 </div>
-`}
-                css={`
-                    .stepper {
-                        display: flex;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
 
-                        /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
 
-                        /* Size */
-                        height: 32px;
-                        width: 128px;
-                    }
+    /* Size */
+    height: 32px;
+    width: 128px;
+}
 
-                    .stepper__button {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
+.${prefix}${container}__button {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-                        /* Size */
-                        width: 32px;
-                    }
+    /* Size */
+    width: 32px;
+}
 
-                    .stepper__content {
-                        flex: 1;
-                    }
+.${prefix}${container}__content {
+    flex: 1;
+}
 
-                    .stepper__input {
-                        /* Take full size of its container */
-                        height: 100%;
-                        width: 100%;
-                    }
-                `}
+.${prefix}${container}__input {
+    /* Take full size of its container */
+    height: 100%;
+    width: 100%;
+}
+`
+                }
             >
                 <div
                     style={{

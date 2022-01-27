@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -59,6 +60,8 @@ const InputChip: React.FC<{}> = ({ children }) => {
 };
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'chip';
     return (
         <PatternLayout pattern={Pattern.Chip}>
             <Head>
@@ -75,10 +78,12 @@ const Details: React.FC<{}> = () => {
                 to remove a chip.
             </div>
             <BrowserFrame
-                html={`
-<div class="chip">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Content -->
-    <div class="chip__content">
+    <div class="${prefix}${container}__content">
         ...
     </div>
 
@@ -86,28 +91,32 @@ const Details: React.FC<{}> = () => {
     <!-- See https://csslayout.io/patterns/close-button -->
     ...
 </div>
-`}
-                css={`
-                    .chip {
-                        /* Center the content */
-                        align-items: center;
-                        display: inline-flex;
-                        justify-content: center;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content */
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
 
-                        /* Background color */
-                        background-color: rgba(0, 0, 0, 0.1);
+    /* Background color */
+    background-color: rgba(0, 0, 0, 0.1);
 
-                        /* Rounded border */
-                        border-radius: 9999px;
+    /* Rounded border */
+    border-radius: 9999px;
 
-                        /* Spacing */
-                        padding: 4px 8px;
-                    }
+    /* Spacing */
+    padding: 4px 8px;
+}
 
-                    .chip__content {
-                        margin-right: 4px;
-                    }
-                `}
+.${prefix}${container}__content {
+    margin-right: 4px;
+}
+`
+                }
             >
                 <div
                     style={{

@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Heading, Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     const [isFirstChecked, setFirstChecked] = React.useState(false);
     const toggle = () => setFirstChecked((c) => !c);
 
@@ -20,12 +23,14 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css radio switch, css switch" />
             </Head>
             <BrowserFrame
-                html={`
+                html={
+                    '' +
+                    `
 <!-- Container -->
-<div class="container">
+<div class="${prefix}${container}">
     <!-- Radio container -->
-    <label class="container__label container__label--selected">
-        <input type="radio" class="container__input" />
+    <label class="${prefix}${container}__label ${prefix}${container}__label--selected">
+        <input type="radio" class="${prefix}${container}__input" />
 
         <!-- Text -->
         ...
@@ -34,31 +39,35 @@ const Details: React.FC<{}> = () => {
     <!-- Other radio item -->
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        background-color: rgba(0, 0, 0, 0.1);
-                        border-radius: 9999px;
-                        display: inline-flex;
-                        padding: 4px;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 9999px;
+    display: inline-flex;
+    padding: 4px;
+}
 
-                    .container__label {
-                        border-radius: 9999px;
-                        cursor: pointer;
-                        padding: 4px 8px;
-                    }
+.${prefix}${container}__label {
+    border-radius: 9999px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
 
-                    .container__label--selected {
-                        /* For selected radio only */
-                        background-color: #357edd;
-                        color: #fff;
-                    }
+.${prefix}${container}__label--selected {
+    /* For selected radio only */
+    background-color: #357edd;
+    color: #fff;
+}
 
-                    .container__input {
-                        display: none;
-                    }
-                `}
+.${prefix}${container}__input {
+    display: none;
+}
+`
+                }
             >
                 <div
                     style={{

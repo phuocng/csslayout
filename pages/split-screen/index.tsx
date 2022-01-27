@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
@@ -9,6 +10,8 @@ import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.SplitScreen}>
             <Head>
@@ -18,28 +21,34 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css layout, css split screen" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Left content -->
-    <div class="container__half">
+    <div class="${prefix}${container}__half">
         ...
     </div>
 
     <!-- Right content -->
-    <div class="container__half">
+    <div class="${prefix}${container}__half">
         ...
     </div>
 </div>
-`}
-                css={`
-                    .container {
-                        display: flex;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
+}
 
-                    .container__half {
-                        flex: 1;
-                    }
-                `}
+.${prefix}${container}__half {
+    flex: 1;
+}
+`
+                }
             >
                 <div style={{ display: 'flex', height: '100%' }}>
                     <div

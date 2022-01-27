@@ -1,12 +1,15 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.Teardrop}>
             <Head>
@@ -19,37 +22,43 @@ const Details: React.FC<{}> = () => {
                 />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Display the content vertically -->
-    <div class="container__content">
+    <div class="${prefix}${container}__content">
         ...
     </div>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-                        /* Border */
-                        border: 2px solid rgba(0, 0, 0, 0.3);
-                        border-radius: 0px 50% 50% 50%;
+    /* Border */
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0px 50% 50% 50%;
 
-                        /* Angle at the top */
-                        transform: rotate(45deg);
+    /* Angle at the top */
+    transform: rotate(45deg);
 
-                        /* Size */
-                        height: 64px;
-                        width: 64px;
-                    }
+    /* Size */
+    height: 64px;
+    width: 64px;
+}
 
-                    .container__content {
-                        transform: rotate(-45deg);
-                    }
-                `}
+.${prefix}${container}__content {
+    transform: rotate(-45deg);
+}
+`
+                }
             >
                 <div
                     style={{

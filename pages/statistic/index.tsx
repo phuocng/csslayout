@@ -1,12 +1,15 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { random } from '../../utils/random';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.Statistic}>
             <Head>
@@ -16,42 +19,48 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css statistic" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Value -->
-    <div class="container__value">
+    <div class="${prefix}${container}__value">
         ...
     </div>
 
     <!-- Label -->
-    <div class="container__label">
+    <div class="${prefix}${container}__label">
         ...
     </div>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Center the content */
-                        align-items: center;
-                        display: inline-flex;
-                        flex-direction: column;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content */
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+}
 
-                    .container__value {
-                        /* Big font size */
-                        font-size: 4rem;
-                        font-weight: 500;
-                    }
+.${prefix}${container}__value {
+    /* Big font size */
+    font-size: 4rem;
+    font-weight: 500;
+}
 
-                    .container__label {
-                        /* Smaller font size */
-                        font-size: 1rem;
-                        font-weight: 700;
+.${prefix}${container}__label {
+    /* Smaller font size */
+    font-size: 1rem;
+    font-weight: 700;
 
-                        /* Uppercase the label */
-                        text-transform: uppercase;
-                    }
-                `}
+    /* Uppercase the label */
+    text-transform: uppercase;
+}
+`
+                }
             >
                 <div
                     style={{

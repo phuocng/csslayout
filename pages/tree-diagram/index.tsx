@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -9,6 +10,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Square from '../../placeholders/Square';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'tree-diagram';
     return (
         <PatternLayout pattern={Pattern.TreeDiagram}>
             <Head>
@@ -18,8 +21,10 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css sitemap, css tree diagram" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="tree-diagram">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <ul>
         <li>
             <!-- Content -->
@@ -47,81 +52,85 @@ const Details: React.FC<{}> = () => {
         ...
     </ul>
 </div>
-`}
-                css={`
-                    .tree-diagram ul {
-                        display: flex;
-                        position: relative;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} ul {
+    display: flex;
+    position: relative;
 
-                        /* Reset */
-                        list-style-type: none;
-                        margin: 0;
-                        padding: 1rem 0.5rem 0rem 0.5rem;
-                    }
+    /* Reset */
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem 0.5rem 0rem 0.5rem;
+}
 
-                    .tree-diagram ul ul::before {
-                        border-right: 1px solid rgba(0, 0, 0, 0.3);
-                        content: '';
+.${prefix}${container} ul ul::before {
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    content: '';
 
-                        /* Position */
-                        position: absolute;
-                        top: 0;
-                        right: 50%;
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 50%;
 
-                        /* Size */
-                        height: 1rem;
-                        width: 50%;
-                    }
+    /* Size */
+    height: 1rem;
+    width: 50%;
+}
 
-                    .tree-diagram li {
-                        padding: 1rem 0.5rem 0rem 0.5rem;
-                        position: relative;
+.${prefix}${container} li {
+    padding: 1rem 0.5rem 0rem 0.5rem;
+    position: relative;
 
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        flex-direction: column;
-                    }
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
 
-                    .tree-diagram li::before {
-                        border-right: 1px solid rgba(0, 0, 0, 0.3);
-                        border-top: 1px solid rgba(0, 0, 0, 0.3);
-                        content: '';
+.${prefix}${container} li::before {
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    content: '';
 
-                        /* Position */
-                        position: absolute;
-                        top: 0;
-                        right: 50%;
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 50%;
 
-                        /* Size */
-                        height: 1rem;
-                        width: 50%;
-                    }
+    /* Size */
+    height: 1rem;
+    width: 50%;
+}
 
-                    .tree-diagram li::after {
-                        border-top: 1px solid rgba(0, 0, 0, 0.3);
-                        content: '';
+.${prefix}${container} li::after {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    content: '';
 
-                        /* Position */
-                        position: absolute;
-                        top: 0;
-                        right: 0;
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 0;
 
-                        /* Size */
-                        width: 50%;
-                    }
+    /* Size */
+    width: 50%;
+}
 
-                    .tree-diagram li:first-child::before,
-                    .tree-diagram li:last-child::after {
-                        /* Remove the top of border from the first and last items */
-                        border-top: none;
-                    }
+.${prefix}${container} li:first-child::before,
+.${prefix}${container} li:last-child::after {
+    /* Remove the top of border from the first and last items */
+    border-top: none;
+}
 
-                    /* Add a root item if you want */
-                    li.tree-diagram__root::before {
-                        border-right: none;
-                    }
-                `}
+/* Add a root item if you want */
+li.${prefix}${container}__root::before {
+    border-right: none;
+}
+`
+                }
             >
                 <div
                     style={{

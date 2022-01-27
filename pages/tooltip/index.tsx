@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -10,6 +11,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.Tooltip}>
             <Head>
@@ -22,79 +25,85 @@ const Details: React.FC<{}> = () => {
                 Move the mouser over the main element to see the tooltip.
             </div>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- The tooltip content -->
-    <div class="container__content">
+    <div class="${prefix}${container}__content">
         ...
     </div>
 
     <!-- The tooltip arrow -->
-    <div class="container__arrow" />
+    <div class="${prefix}${container}__arrow" />
 
     <!-- The trigger element -->
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        /* Used to position the arrow */
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Used to position the arrow */
+    position: relative;
+}
 
-                    /* Show the arrow and content and restore pointer events when hovering the trigger element */
-                    .container:hover .container__arrow,
-                    .container:hover .container__content {
-                        opacity: 1;
-                        pointer-events: initial;
-                    }
+/* Show the arrow and content and restore pointer events when hovering the trigger element */
+.${prefix}${container}:hover .${prefix}${container}__arrow,
+.${prefix}${container}:hover .${prefix}${container}__content {
+    opacity: 1;
+    pointer-events: initial;
+}
 
-                    .container__arrow {
-                        /* Invisible by default */
-                        opacity: 0;
+.${prefix}${container}__arrow {
+    /* Invisible by default */
+    opacity: 0;
 
-                        /* To prevent accidental interactions with other elements  */
-                        pointer-events: none;
+    /* To prevent accidental interactions with other elements  */
+    pointer-events: none;
 
-                        /* Border */
-                        border: 8px solid transparent;
-                        border-top-color: #00439e;
+    /* Border */
+    border: 8px solid transparent;
+    border-top-color: #00439e;
 
-                        /* Position */
-                        bottom: 100%;
-                        left: 50%;
-                        position: absolute;
-                        transform: translate(-50%, 8px);
+    /* Position */
+    bottom: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 8px);
 
-                        /* Zero size */
-                        height: 0;
-                        width: 0;
+    /* Zero size */
+    height: 0;
+    width: 0;
 
-                        /* Displayed on top of other element */
-                        z-index: 10;
-                    }
+    /* Displayed on top of other element */
+    z-index: 10;
+}
 
-                    .container__content {
-                        /* Invisible by default */
-                        opacity: 0;
+.${prefix}${container}__content {
+    /* Invisible by default */
+    opacity: 0;
 
-                        /* To prevent accidental interactions with other elements  */
-                        pointer-events: none;
+    /* To prevent accidental interactions with other elements  */
+    pointer-events: none;
 
-                        /* Background color, must be the same as the border color of arrow */
-                        background-color: #00439e;
-                        border-radius: 2px;
+    /* Background color, must be the same as the border color of arrow */
+    background-color: #00439e;
+    border-radius: 2px;
 
-                        /* Position */
-                        bottom: 100%;
-                        left: 50%;
-                        position: absolute;
-                        transform: translate(-50%, -8px);
+    /* Position */
+    bottom: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -8px);
 
-                        /* Displayed on top of other element */
-                        z-index: 10;
-                    }
-                `}
+    /* Displayed on top of other element */
+    z-index: 10;
+}
+`
+                }
             >
                 <div
                     style={{

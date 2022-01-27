@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Heading, Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -10,6 +11,8 @@ import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.DotLeader}>
             <Head>
@@ -19,37 +22,43 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css dot leader, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Left side -->
     <div>...</div>
 
     <!-- Dots -->
-    <div class="container__dots"></div>
+    <div class="${prefix}${container}__dots"></div>
 
     <!-- Right side -->
     <div>...</div>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
-                    .container__dots {
-                        /* Bottom border */
-                        border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+.${prefix}${container}__dots {
+    /* Bottom border */
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
 
-                        /* Take remaining width */
-                        flex: 1;
+    /* Take remaining width */
+    flex: 1;
 
-                        /* Spacing */
-                        margin: 0px 4px;
-                    }
-                `}
+    /* Spacing */
+    margin: 0px 4px;
+}
+`
+                }
             >
                 <div
                     style={{

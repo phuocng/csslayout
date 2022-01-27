@@ -1,12 +1,15 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.FullScreenMenu}>
             <Head>
@@ -16,10 +19,12 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css fixed, css flexbox, css menu" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- The close button -->
-    <button class="container__close">
+    <button class="${prefix}${container}__close">
         ...
     </button>
 
@@ -28,29 +33,33 @@ const Details: React.FC<{}> = () => {
         ...
     </ul>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Full screen overlay */
-                        height: 100%;
-                        left: 0;
-                        position: fixed;
-                        top: 0;
-                        width: 100%;
+`
+                }
+                css={
+                    '' +
+`
+.${prefix}${container} {
+    /* Full screen overlay */
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
-                    }
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
-                    .container__close {
-                        /* Shown at top right corner */
-                        position: absolute;
-                        right: 16px;
-                        top: 16px;
-                    }
-                `}
+.${prefix}${container}__close {
+    /* Shown at top right corner */
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+`
+                }
             >
                 <div
                     style={{

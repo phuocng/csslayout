@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -9,6 +10,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.PresenceIndicator}>
             <Head>
@@ -18,21 +21,26 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css indicator" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Other element such as avatar -->
     ...
 
     <!-- The presence indicator -->
-    <div class="container__indicator"></div>
+    <div class="${prefix}${container}__indicator"></div>
 </div>
-`}
-                css={`
-.container {
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
     position: relative;
 }
 
-.container__indicator {
+.${prefix}${container}__indicator {
     /* Shown at the bottom right corner */
     bottom: 0,
     position: absolute;
@@ -47,7 +55,8 @@ const Details: React.FC<{}> = () => {
     /* Background color */
     background-color: #FF4136;
 }
-`}
+`
+                }
             >
                 <div
                     style={{

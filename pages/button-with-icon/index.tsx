@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -8,6 +9,8 @@ import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'button';
     return (
         <PatternLayout pattern={Pattern.ButtonWithIcon}>
             <Head>
@@ -17,24 +20,30 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css icon button" />
             </Head>
             <BrowserFrame
-                html={`
-<button class="button">
+                html={
+                    '' +
+                    `
+<button class="${prefix}${container}">
     <!-- Icon -->
     ...
 
     <!-- Label -->
     ...
 </button>
-`}
-                css={`
-                    .button {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                    }
-                `}
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+`
+                }
             >
                 <div
                     style={{

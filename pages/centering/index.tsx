@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -8,6 +9,8 @@ import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.Centering}>
             <Head>
@@ -17,18 +20,24 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css centering, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
-                    }
-                `}
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+`
+                }
             >
                 <div
                     style={{

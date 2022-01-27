@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Heading, Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -40,6 +41,8 @@ const Item: React.FC<ItemProps> = ({ action, keys }) => {
 };
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.KeyboardShortcut}>
             <Head>
@@ -52,25 +55,31 @@ const Details: React.FC<{}> = () => {
                 We use the native <code>kbd</code> tag to display the keyboard shortcut.
             </div>
             <BrowserFrame
-                html={`
-<kbd class="container">
+                html={
+                    '' +
+                    `
+<kbd class="${prefix}${container}">
     ...
 </kbd>
-`}
-                css={`
-                    .container {
-                        /* Background and color */
-                        background-color: rgba(0, 0, 0, 0.1);
-                        border-radius: 4px;
-                        color: rgba(0, 0, 0, 0.7);
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Background and color */
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.7);
 
-                        /* Bottom shadow */
-                        box-shadow: rgba(0, 0, 0, 0.3) 0px -2px 0px inset, rgba(0, 0, 0, 0.4) 0px 1px 1px;
+    /* Bottom shadow */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px -2px 0px inset, rgba(0, 0, 0, 0.4) 0px 1px 1px;
 
-                        /* Spacing */
-                        padding: 8px;
-                    }
-                `}
+    /* Spacing */
+    padding: 8px;
+}
+`
+                }
             >
                 <div
                     style={{

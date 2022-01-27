@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -16,6 +17,8 @@ interface ItemProps {
 }
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     const [activeItem, setActiveItem] = React.useState(-1);
 
     const Item: React.FC<ItemProps> = ({ index, title, children }) => {
@@ -57,11 +60,13 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css accordion, css faq, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
+                html={
+                    '' +
+                    `
 <!-- Each question and answer item -->
-<div class="container">
+<div class="${prefix}${container}">
     <!-- Heading -->
-    <div class="container__heading">
+    <div class="${prefix}${container}__heading">
         <!-- Question -->
         ...
 
@@ -71,18 +76,22 @@ const Details: React.FC<{}> = () => {
 
     <!-- Answer -->
 </div>
-`}
-                css={`
-                    .container {
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
 
-                    .container__heading {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                    }
-                `}
+.${prefix}${container}__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+`
+                }
             >
                 <div
                     style={{

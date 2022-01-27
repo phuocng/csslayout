@@ -1,11 +1,14 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'swatch';
     return (
         <PatternLayout pattern={Pattern.ColorSwatch}>
             <Head>
@@ -15,30 +18,36 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css color swatch, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="swatch">
-    <div class="swatch__item" style="background-color: ..."></div>
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
+    <div class="${prefix}${container}__item" style="background-color: ..."></div>
 
     <!-- Repeat other items -->
     ...
 </div>
-`}
-                css={`
-                    .swatch {
-                        /* Wrap the items */
-                        display: flex;
-                        flex-wrap: wrap;
-                    }
-                    .swatch__item {
-                        /* Rounded border */
-                        border-radius: 9999px;
-                        height: 1.5rem;
-                        width: 1.5rem;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Wrap the items */
+    display: flex;
+    flex-wrap: wrap;
+}
+.${prefix}${container}__item {
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 1.5rem;
+    width: 1.5rem;
 
-                        /* Space between items */
-                        margin: 0.5rem;
-                    }
-                `}
+    /* Space between items */
+    margin: 0.5rem;
+}
+`
+                }
             >
                 <div
                     style={{

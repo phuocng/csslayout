@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -9,6 +10,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Triangle from '../../placeholders/Triangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.FixedAtCorner}>
             <Head>
@@ -18,58 +21,64 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css fixed" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Top-left corner -->
-    <div class="container__corner container__corner--tl">
+    <div class="${prefix}${container}__corner ${prefix}${container}__corner--tl">
         ...
     </div>
 
     <!-- Top-right corner -->
-    <div class="container__corner container__corner--tr">
+    <div class="${prefix}${container}__corner ${prefix}${container}__corner--tr">
         ...
     </div>
 
     <!-- Bottom-right corner -->
-    <div class="container__corner container__corner--br">
+    <div class="${prefix}${container}__corner ${prefix}${container}__corner--br">
         ...
     </div>
 
     <!-- Bottom-left corner -->
-    <div class="container__corner container__corner--bl">    
+    <div class="${prefix}${container}__corner ${prefix}${container}__corner--bl">    
         ...
     </div>
 </div>
-`}
-                css={`
-                    .container {
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    position: relative;
+}
 
-                    .container__corner {
-                        position: absolute;
-                    }
+.${prefix}${container}__corner {
+    position: absolute;
+}
 
-                    .container__corner--tl {
-                        left: 0;
-                        top: 0;
-                    }
+.${prefix}${container}__corner--tl {
+    left: 0;
+    top: 0;
+}
 
-                    .container__corner--tr {
-                        top: 0;
-                        right: 0;
-                    }
+.${prefix}${container}__corner--tr {
+    top: 0;
+    right: 0;
+}
 
-                    .container__corner--br {
-                        bottom: 0;
-                        right: 0;
-                    }
+.${prefix}${container}__corner--br {
+    bottom: 0;
+    right: 0;
+}
 
-                    .container__corner--bl {
-                        bottom: 0;
-                        left: 0;
-                    }
-                `}
+.${prefix}${container}__corner--bl {
+    bottom: 0;
+    left: 0;
+}
+`
+                }
             >
                 <div style={{ height: '100%', position: 'relative' }}>
                     <div style={{ left: 0, position: 'absolute', top: 0 }}>

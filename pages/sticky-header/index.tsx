@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -10,6 +11,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'header';
     return (
         <PatternLayout pattern={Pattern.StickyHeader}>
             <Head>
@@ -22,23 +25,29 @@ const Details: React.FC<{}> = () => {
                 Try to scroll the main content to see the header sticks to the top of page.
             </div>
             <BrowserFrame
-                html={`
+                html={
+                    '' +
+                    `
 <div>
-    <header class="header">
+    <header class="${prefix}${container}">
         ...
     </header>
     <main>
         ...
     </main>
 </div>
-`}
-                css={`
-                    .header {
-                        /* Stick to the top */
-                        position: sticky;
-                        top: 0;
-                    }
-                `}
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Stick to the top */
+    position: sticky;
+    top: 0;
+}
+`
+                }
             >
                 <div>
                     <div

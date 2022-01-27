@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'voting';
     const [value, setValue] = React.useState(900);
     const decrease = () => setValue(value - 1);
     const increase = () => setValue(value + 1);
@@ -21,77 +24,83 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css triangle buttons, css voting control" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="voting">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Up button -->
-    <button class="voting__button">
-        <div class="voting__triangle voting__triangle--up"></div>
+    <button class="${prefix}${container}__button">
+        <div class="${prefix}${container}__triangle ${prefix}${container}__triangle--up"></div>
     </button>
 
     <!-- Number -->
-    <div class="voting__number">
+    <div class="${prefix}${container}__number">
         ...
     </div>
 
     <!-- Down button -->
-    <button class="voting__button">
-        <div class="voting__triangle voting__triangle--down"></div>
+    <button class="${prefix}${container}__button">
+        <div class="${prefix}${container}__triangle ${prefix}${container}__triangle--down"></div>
     </button>
 </div>
-`}
-                css={`
-                    .voting {
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                        border-radius: 0.25rem;
-                        display: flex;
-                        flex-direction: column;
-                        height: 8rem;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    height: 8rem;
+}
 
-                    .voting__button {
-                        /* Reset */
-                        background: none;
-                        border: none;
-                        cursor: pointer;
+.${prefix}${container}__button {
+    /* Reset */
+    background: none;
+    border: none;
+    cursor: pointer;
 
-                        /* Size */
-                        height: 1rem;
+    /* Size */
+    height: 1rem;
 
-                        /* Position the triangle */
-                        position: relative;
-                    }
+    /* Position the triangle */
+    position: relative;
+}
 
-                    .voting__triangle {
-                        border-style: solid;
+.${prefix}${container}__triangle {
+    border-style: solid;
 
-                        /* Size */
-                        height: 0;
-                        width: 0;
-                    }
+    /* Size */
+    height: 0;
+    width: 0;
+}
 
-                    .voting__triangle--up {
-                        border-color: transparent transparent rgba(0, 0, 0, 0.3);
-                        border-width: 0 0.5rem 0.5rem;
-                    }
+.${prefix}${container}__triangle--up {
+    border-color: transparent transparent rgba(0, 0, 0, 0.3);
+    border-width: 0 0.5rem 0.5rem;
+}
 
-                    .voting__triangle--down {
-                        border-color: rgba(0, 0, 0, 0.3) transparent transparent;
-                        border-width: 0.5rem 0.5rem 0px;
-                    }
+.${prefix}${container}__triangle--down {
+    border-color: rgba(0, 0, 0, 0.3) transparent transparent;
+    border-width: 0.5rem 0.5rem 0px;
+}
 
-                    .voting__number {
-                        /* Take the available height */
-                        flex: 1;
+.${prefix}${container}__number {
+    /* Take the available height */
+    flex: 1;
 
-                        /* Center the number */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
+    /* Center the number */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-                        /* Spacing */
-                        padding: 0.25rem;
-                    }
-                `}
+    /* Spacing */
+    padding: 0.25rem;
+}
+`
+                }
             >
                 <div
                     style={{

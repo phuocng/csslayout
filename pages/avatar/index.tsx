@@ -2,12 +2,16 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'avatar';
+
     return (
         <PatternLayout pattern={Pattern.Avatar}>
             <Head>
@@ -17,29 +21,35 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css avatar, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="avatar">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Avatar image -->
-    <img class="avatar__image" src="..." />
+    <img class="${prefix}${container}__image" src="..." />
 </div>
-`}
-                css={`
-                    .avatar {
-                        /* Rounded border */
-                        border-radius: 50%;
-                        height: 64px;
-                        width: 64px;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Rounded border */
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+}
 
-                    .avatar__image {
-                        /* Rounded border */
-                        border-radius: 50%;
+.${prefix}${container}__image {
+    /* Rounded border */
+    border-radius: 50%;
 
-                        /* Take full size */
-                        height: 100%;
-                        width: 100%;
-                    }
-                `}
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+}
+                `
+                }
             >
                 <div
                     style={{

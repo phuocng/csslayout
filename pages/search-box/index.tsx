@@ -1,12 +1,15 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Circle from '../../placeholders/Circle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.SearchBox}>
             <Head>
@@ -16,32 +19,38 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css search box" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Text input -->
-    <input type="text" class="container__input" />
+    <input type="text" class="${prefix}${container}__input" />
 
     <!-- Search icon sticks to the left or right -->
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        display: flex;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
 
-                        /* If you want to place the icon before the text input */
-                        flex-direction: row-reverse;
+    /* If you want to place the icon before the text input */
+    flex-direction: row-reverse;
 
-                        /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                    }
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
 
-                    .container__input {
-                        border-color: transparent;
-                        /* Take available width */
-                        flex: 1;
-                    }
-                `}
+.${prefix}${container}__input {
+    border-color: transparent;
+    /* Take available width */
+    flex: 1;
+}
+`
+                }
             >
                 <div
                     style={{

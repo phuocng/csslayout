@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -11,6 +12,8 @@ import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.FeatureList}>
             <Head>
@@ -20,43 +23,49 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css feature list, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
+                html={
+                    '' +
+                    `
 <!-- Feature item -->
-<div class="container">
+<div class="${prefix}${container}">
     <!-- Image -->
-    <div class="container__image">
+    <div class="${prefix}${container}__image">
         ...
     </div>
 
     <!-- Right side -->
-    <div class="container__feature">
+    <div class="${prefix}${container}__feature">
         ...
     </div>
 </div>
 
 <!-- Repeated items -->
 ...
-`}
-                css={`
-                    .container {
-                        display: flex;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
 
-                        /* OPTIONAL: Reverse the order of image and content */
-                        flex-direction: row-reverse;
+    /* OPTIONAL: Reverse the order of image and content */
+    flex-direction: row-reverse;
 
-                        /* OPTIONAL: Spacing between items */
-                        margin: 16px 0;
-                    }
+    /* OPTIONAL: Spacing between items */
+    margin: 16px 0;
+}
 
-                    .container__image {
-                        width: 128px;
-                    }
+.${prefix}${container}__image {
+    width: 128px;
+}
 
-                    .container__feature {
-                        /* Take the remaining width */
-                        flex: 1;
-                    }
-                `}
+.${prefix}${container}__feature {
+    /* Take the remaining width */
+    flex: 1;
+}
+`
+                }
             >
                 <div
                     style={{

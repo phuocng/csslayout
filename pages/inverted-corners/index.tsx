@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Heading, Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'inverted-corners';
     return (
         <PatternLayout pattern={Pattern.InvertedCorners}>
             <Head>
@@ -17,43 +20,49 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css border radius, css inverted border radius, css inverted corners" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="inverted-corners">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     ...
 </div>
-`}
-                css={`
-                    :root {
-                        --inverted-corners-background: #52525b;
-                        --inverted-corners-size: 2rem;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+:root {
+    --${prefix}${container}-background: #52525b;
+    --${prefix}${container}-size: 2rem;
+}
 
-                    .inverted-corners {
-                        background-color: var(--inverted-corners-background);
+.${prefix}${container} {
+    background-color: var(--${prefix}${container}-background);
 
-                        /* Used to position the corner */
-                        position: relative;
-                    }
+    /* Used to position the corner */
+    position: relative;
+}
 
-                    .inverted-corners::before {
-                        content: '';
+.${prefix}${container}::before {
+    content: '';
 
-                        /* Absolute position */
-                        bottom: calc(-2 * var(--inverted-corners-size));
-                        left: 0;
-                        position: absolute;
+    /* Absolute position */
+    bottom: calc(-2 * var(--${prefix}${container}-size));
+    left: 0;
+    position: absolute;
 
-                        /* Size */
-                        height: calc(2 * var(--inverted-corners-size));
-                        width: var(--inverted-corners-size);
+    /* Size */
+    height: calc(2 * var(--${prefix}${container}-size));
+    width: var(--${prefix}${container}-size);
 
-                        /* Border */
-                        background-color: transparent;
-                        border-top-left-radius: var(--inverted-corners-size);
-                        box-shadow: var(--inverted-corners-background) 0px calc(-1 * var(--inverted-corners-size)) 0px
-                            0px;
-                    }
-                `}
+    /* Border */
+    background-color: transparent;
+    border-top-left-radius: var(--${prefix}${container}-size);
+    box-shadow: var(--${prefix}${container}-background) 0px calc(-1 * var(--${prefix}${container}-size)) 0px
+        0px;
+}
+`
+                }
             >
                 <div
                     style={{

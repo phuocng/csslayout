@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -14,6 +15,8 @@ const Star: React.FC<StarProps> = ({ isActive }) => {
 };
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'rating';
     return (
         <PatternLayout pattern={Pattern.Rating}>
             <Head>
@@ -23,55 +26,61 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css star rating" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="rating">
-    <button class="rating__star">☆</button>
-    <button class="rating__star">☆</button>
-    <button class="rating__star">☆</button>
-    <button class="rating__star">☆</button>
-    <button class="rating__star">★</button>
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
+    <button class="${prefix}${container}__star">☆</button>
+    <button class="${prefix}${container}__star">☆</button>
+    <button class="${prefix}${container}__star">☆</button>
+    <button class="${prefix}${container}__star">☆</button>
+    <button class="${prefix}${container}__star">★</button>
 </div>
-`}
-                css={`
-                    .rating {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-                        flex-direction: row-reverse;
+    flex-direction: row-reverse;
 
-                        font-size: 32px;
-                    }
+    font-size: 32px;
+}
 
-                    .rating__star:hover,
-                    .rating__star:hover ~ .rating__star {
-                        color: transparent;
-                    }
+.${prefix}${container}__star:hover,
+.${prefix}${container}__star:hover ~ .${prefix}${container}__star {
+    color: transparent;
+}
 
-                    /*
-Make all previous stars selected when hover on a star
-Note that we use \`flex-direction: row-reverse\` on the container
+/*
+    Make all previous stars selected when hover on a star
+    Note that we use \`flex-direction: row-reverse\` on the container
 */
-                    .rating__star:hover:before,
-                    .rating__star:hover ~ .rating__star:before {
-                        color: #00449e;
-                        content: '\\2605';
-                        left: 0;
-                        position: absolute;
-                    }
+.${prefix}${container}__star:hover:before,
+.${prefix}${container}__star:hover ~ .${prefix}${container}__star:before {
+    color: #00449e;
+    content: '\\2605';
+    left: 0;
+    position: absolute;
+}
 
-                    .rating__star {
-                        /* Reset styles for button */
-                        background-color: transparent;
-                        border: transparent;
-                        margin: 0 2px;
-                        padding: 0;
+.${prefix}${container}__star {
+    /* Reset styles for button */
+    background-color: transparent;
+    border: transparent;
+    margin: 0 2px;
+    padding: 0;
 
-                        /* Used to position the hover state */
-                        position: relative;
-                    }
-                `}
+    /* Used to position the hover state */
+    position: relative;
+}
+`
+                }
             >
                 <div
                     style={{

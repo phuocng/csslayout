@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
@@ -8,6 +9,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.HolyGrail}>
             <Head>
@@ -17,54 +20,60 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css holy grail layout, css layout" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <header>
         ...
     </header>
-    <main class="container__main">
+    <main class="${prefix}${container}__main">
         <!-- Left sidebar -->
-        <aside class="container__left">...</aside>
+        <aside class="${prefix}${container}__left">...</aside>
 
         <!-- Main content -->
-        <article class="container__middle">...</article>
+        <article class="${prefix}${container}__middle">...</article>
 
         <!-- Right sidebar -->
-        <nav class="container__right">...</nav>
+        <nav class="${prefix}${container}__right">...</nav>
     </main>
     <footer>
         ...
     </footer>
 </div>
-`}
-                css={`
-                    .container {
-                        display: flex;
-                        flex-direction: column;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
+    flex-direction: column;
+}
 
-                    .container__main {
-                        /* Take the remaining height */
-                        flex-grow: 1;
+.${prefix}${container}__main {
+    /* Take the remaining height */
+    flex-grow: 1;
 
-                        /* Layout the left sidebar, main content and right sidebar */
-                        display: flex;
-                        flex-direction: row;
-                    }
+    /* Layout the left sidebar, main content and right sidebar */
+    display: flex;
+    flex-direction: row;
+}
 
-                    .container__left {
-                        width: 25%;
-                    }
+.${prefix}${container}__left {
+    width: 25%;
+}
 
-                    .container__middle {
-                        /* Take the remaining width */
-                        flex-grow: 1;
-                    }
+.${prefix}${container}__middle {
+    /* Take the remaining width */
+    flex-grow: 1;
+}
 
-                    .container__right {
-                        width: 20%;
-                    }
-                `}
+.${prefix}${container}__right {
+    width: 20%;
+}
+`
+                }
             >
                 <div
                     style={{

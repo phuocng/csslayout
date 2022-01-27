@@ -2,12 +2,16 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'button';
+
     return (
         <PatternLayout pattern={Pattern.ArrowButtons}>
             <Head>
@@ -17,91 +21,97 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css arrow buttons" />
             </Head>
             <BrowserFrame
-                html={`
+                html={
+                    '' +
+                    `
 <!-- Up arrow button -->
-<button class="button">
+<button class="${prefix}${container}">
     <!-- Arrow -->
-    <div class="button__arrow button__arrow--up"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--up"></div>
 
     <!-- Content -->
     ...
 </button>
 
 <!-- Right arrow button -->
-<button class="button">
+<button class="${prefix}${container}">
     <!-- Content -->
     ...
 
     <!-- Arrow -->
-    <div class="button__arrow button__arrow--right"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--right"></div>
 </button>
 
 <!-- Down arrow button -->
-<button class="button">
+<button class="${prefix}${container}">
     <!-- Arrow -->
-    <div class="button__arrow button__arrow--down"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--down"></div>
 
     <!-- Content -->
     ...
 </button>
 
 <!-- Left arrow button -->
-<button class="button">
+<button class="${prefix}${container}">
     <!-- Arrow -->
-    <div class="button__arrow button__arrow--left"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--left"></div>
 
     <!-- Content -->
     ...
 </button>
-`}
-                css={`
-                    .button {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-                        /* Spacing */
-                        padding: 8px;
-                    }
+    /* Spacing */
+    padding: 8px;
+}
 
-                    .button__arrow {
-                        /* Transparent background */
-                        background-color: transparent;
+.${prefix}${container}__arrow {
+    /* Transparent background */
+    background-color: transparent;
 
-                        /* Size */
-                        height: 12px;
-                        width: 12px;
-                    }
+    /* Size */
+    height: 12px;
+    width: 12px;
+}
 
-                    .button__arrow--up {
-                        /* Edges */
-                        border-left: 1px solid rgba(0, 0, 0, 0.3);
-                        border-top: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translateY(25%) rotate(45deg);
-                    }
+.${prefix}${container}__arrow--up {
+    /* Edges */
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translateY(25%) rotate(45deg);
+}
 
-                    .button__arrow--right {
-                        /* Edges */
-                        border-right: 1px solid rgba(0, 0, 0, 0.3);
-                        border-top: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translateX(-25%) rotate(45deg);
-                    }
+.${prefix}${container}__arrow--right {
+    /* Edges */
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translateX(-25%) rotate(45deg);
+}
 
-                    .button__arrow--down {
-                        /* Edges */
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                        border-right: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translateY(-25%) rotate(45deg);
-                    }
+.${prefix}${container}__arrow--down {
+    /* Edges */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translateY(-25%) rotate(45deg);
+}
 
-                    .button__arrow--left {
-                        /* Edges */
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                        border-left: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translateX(25%) rotate(45deg);
-                    }
-                `}
+.${prefix}${container}__arrow--left {
+    /* Edges */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translateX(25%) rotate(45deg);
+}
+                `
+                }
             >
                 <div
                     style={{

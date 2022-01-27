@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -9,6 +10,8 @@ import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.DiagonalSection}>
             <Head>
@@ -18,41 +21,47 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css diagonal section, css transform skew" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- The diagonal area -->
-    <div class="container__diagonal"></div>
+    <div class="${prefix}${container}__diagonal"></div>
 
     <!-- Content -->
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        /* Used to position the diagonal area */
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+`
+.${prefix}${container} {
+    /* Used to position the diagonal area */
+    position: relative;
+}
 
-                    .container__diagonal {
-                        /* Absolute position */
-                        left: 0px;
-                        position: absolute;
-                        top: 0px;
+.${prefix}${container}__diagonal {
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 0px;
 
-                        /* Take full size */
-                        height: 100%;
-                        width: 100%;
+    /* Take full size */
+    height: 100%;
+    width: 100%;
 
-                        /* Create diagonal sides */
-                        transform: skewY(-5deg);
+    /* Create diagonal sides */
+    transform: skewY(-5deg);
 
-                        /* Background color */
-                        background-color: rgba(0, 0, 0, 0.3);
+    /* Background color */
+    background-color: rgba(0, 0, 0, 0.3);
 
-                        /* Displayed under the main content */
-                        z-index: -1;
-                    }
-                `}
+    /* Displayed under the main content */
+    z-index: -1;
+}
+`
+}
             >
                 <div
                     style={{

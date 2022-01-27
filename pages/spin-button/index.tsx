@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -9,6 +10,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Triangle from '../../placeholders/Triangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     const [value, setValue] = React.useState(0);
     const decrease = () => setValue(value - 1);
     const increase = () => setValue(value + 1);
@@ -23,52 +26,58 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css spin button" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Input -->
-    <input type="text" class="container__input" />
+    <input type="text" class="${prefix}${container}__input" />
 
     <!-- Buttons container -->
-    <div class="container__buttons">
+    <div class="${prefix}${container}__buttons">
         <!-- Up button -->
-        <button class="container__button">
+        <button class="${prefix}${container}__button">
             ...
         </button>
 
         <!-- Down button -->
-        <button class="container__button">
+        <button class="${prefix}${container}__button">
             ...
         </button>
     </div>
 </div>
-`}
-                css={`
-                    .container {
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                        border-radius: 2px;
-                        display: flex;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    display: flex;
+}
 
-                    .container__input {
-                        border-color: transparent;
-                        margin-right: 4px;
-                        padding: 4px;
-                        width: 100px;
-                    }
+.${prefix}${container}__input {
+    border-color: transparent;
+    margin-right: 4px;
+    padding: 4px;
+    width: 100px;
+}
 
-                    .container__buttons {
-                        /* Content is centered vertically */
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                    }
+.${prefix}${container}__buttons {
+    /* Content is centered vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-                    .container__button {
-                        border-color: transparent;
-                        /* Make buttons have the same height */
-                        flex: 1;
-                    }
-                `}
+.${prefix}${container}__button {
+    border-color: transparent;
+    /* Make buttons have the same height */
+    flex: 1;
+}
+`
+                }
             >
                 <div
                     style={{

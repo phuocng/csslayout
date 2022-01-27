@@ -1,12 +1,15 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.DropArea}>
             <Head>
@@ -16,13 +19,18 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css dropping area, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     ...
 </div>
-`}
-                css={`
-.container {
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
     /* Center the content */
     align-items: center;
     display: flex;
@@ -32,7 +40,8 @@ const Details: React.FC<{}> = () => {
     border: 4px dashed rgba(0, 0, 0, 0.3),
     border-radius: 4px;
 }
-`}
+`
+                }
             >
                 <div
                     style={{

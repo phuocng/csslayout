@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -11,6 +12,8 @@ import Rectangle from '../../placeholders/Rectangle';
 import Triangle from '../../placeholders/Triangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.MegaMenu}>
             <Head>
@@ -23,55 +26,61 @@ const Details: React.FC<{}> = () => {
                 Move the mouse over the second navigation item to see the mega menu.
             </div>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Item -->
     ...
 
     <!-- An item that triggers displaying the mega menu -->
-    <div class="container__trigger">
+    <div class="${prefix}${container}__trigger">
         <!-- The trigger item's content -->
         <div>...</div>
 
         <!-- Mega menu -->
-        <div class="container__content">
+        <div class="${prefix}${container}__content">
             ...
         </div>
     </div>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Used to position the mega menu */
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Used to position the mega menu */
+    position: relative;
+}
 
-                    .container__trigger:hover .container__content {
-                        /* Show the mega menu when hovering the trigger item */
-                        display: block;
-                    }
+.${prefix}${container}__trigger:hover .${prefix}${container}__content {
+    /* Show the mega menu when hovering the trigger item */
+    display: block;
+}
 
-                    .container__content {
-                        /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                        margin-top: -1px;
+.${prefix}${container}__content {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-top: -1px;
 
-                        /* Hidden by default */
-                        display: none;
+    /* Hidden by default */
+    display: none;
 
-                        /* Absolute position */
-                        left: 0px;
-                        position: absolute;
-                        top: 100%;
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 100%;
 
-                        /* Take full width */
-                        width: 100%;
+    /* Take full width */
+    width: 100%;
 
-                        /* Displayed on top of other elements */
-                        background: #fff;
-                        z-index: 9999;
-                    }
-                `}
+    /* Displayed on top of other elements */
+    background: #fff;
+    z-index: 9999;
+}
+`
+                }
             >
                 <div style={{ padding: '8px' }}>
                     <div className="p-mega-menu-container">

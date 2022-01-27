@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
@@ -10,6 +11,8 @@ import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'modal';
     return (
         <PatternLayout pattern={Pattern.Modal}>
             <Head>
@@ -26,10 +29,12 @@ const Details: React.FC<{}> = () => {
                 to represent the button for closing the modal.
             </div>
             <BrowserFrame
-                html={`
-<div class="modal">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Header -->
-    <div class="modal__header">
+    <div class="${prefix}${container}__header">
         <!-- Title -->
         ...
         <!-- Close icon sticks to the right -->
@@ -40,33 +45,37 @@ const Details: React.FC<{}> = () => {
     ...
 
     <!-- Footer -->
-    <div class="modal__footer">
+    <div class="${prefix}${container}__footer">
         ...
     </div>
 </div>
-`}
-                css={`
-                    .modal {
-                        /* Border */
-                        border: 1px solid rgba(0, 0, 0.3);
-                        border-radius: 4px;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0.3);
+    border-radius: 4px;
+}
 
-                    .modal__header {
-                        display: flex;
-                        justify-content: space-between;
-                        /* Border */
-                        border-bottom: 1px solid rgba(0, 0, 0.3);
-                    }
+.${prefix}${container}__header {
+    display: flex;
+    justify-content: space-between;
+    /* Border */
+    border-bottom: 1px solid rgba(0, 0, 0.3);
+}
 
-                    .modal__footer {
-                        display: flex;
-                        /* Push the buttons to the right */
-                        justify-content: flex-end;
-                        /* Border */
-                        border-top: 1px solid rgba(0, 0, 0.3);
-                    }
-                `}
+.${prefix}${container}__footer {
+    display: flex;
+    /* Push the buttons to the right */
+    justify-content: flex-end;
+    /* Border */
+    border-top: 1px solid rgba(0, 0, 0.3);
+}
+`
+                }
             >
                 <div
                     style={{

@@ -3,12 +3,16 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Heading, Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
+
     return (
         <PatternLayout pattern={Pattern.CornerRibbon}>
             <Head>
@@ -18,56 +22,62 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css ribbon" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- The container -->
-    <div class="container__wrapper">
+    <div class="${prefix}${container}__wrapper">
         <!-- The ribbon -->
-        <div class="container__ribbon">
+        <div class="${prefix}${container}__ribbon">
             ...
         </div>
     </div>
 </div>
-`}
-                css={`
-                    .container {
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    position: relative;
+}
 
-                    .container__wrapper {
-                        /* Displayed at the top left corner */
-                        left: 0px;
-                        position: absolute;
-                        top: 0px;
+.${prefix}${container}__wrapper {
+    /* Displayed at the top left corner */
+    left: 0px;
+    position: absolute;
+    top: 0px;
 
-                        /* Size */
-                        height: 100px;
-                        width: 100px;
+    /* Size */
+    height: 100px;
+    width: 100px;
 
-                        /* Hide the part of its children which is displayed outside */
-                        overflow: hidden;
-                    }
+    /* Hide the part of its children which is displayed outside */
+    overflow: hidden;
+}
 
-                    .container__ribbon {
-                        /* Position */
-                        left: -64px;
-                        position: absolute;
-                        top: 32px;
+.${prefix}${container}__ribbon {
+    /* Position */
+    left: -64px;
+    position: absolute;
+    top: 32px;
 
-                        /* Size */
-                        height: 24px;
-                        width: 206px;
+    /* Size */
+    height: 24px;
+    width: 206px;
 
-                        /* Displayed diagonally */
-                        transform: rotate(-45deg);
+    /* Displayed diagonally */
+    transform: rotate(-45deg);
 
-                        /* Background color */
-                        background-color: rgba(0, 0, 0, 0.3);
+    /* Background color */
+    background-color: rgba(0, 0, 0, 0.3);
 
-                        /* Centerize the text content */
-                        text-align: center;
-                    }
-                `}
+    /* Centerize the text content */
+    text-align: center;
+}
+`
+                }
             >
                 <div
                     style={{

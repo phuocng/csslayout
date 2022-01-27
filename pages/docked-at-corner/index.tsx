@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Heading, Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -9,6 +10,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.DockedAtCorner}>
             <Head>
@@ -18,33 +21,39 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css docked, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Docked at the top right corner -->
-    <div class="container__docker">
+    <div class="${prefix}${container}__docker">
         ...
     </div>
 
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    position: relative;
+}
 
-                    .container__docker {
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                        transform: translate(50%, -50%);
+.${prefix}${container}__docker {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
 
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
-                    }
-                `}
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+`
+                }
             >
                 <div
                     style={{

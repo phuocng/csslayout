@@ -1,12 +1,15 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.InputAddon}>
             <Head>
@@ -16,65 +19,71 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css input add-on" />
             </Head>
             <BrowserFrame
-                html={`
+                html={
+                    '' +
+                    `
 <!-- Add-on prepended -->
-<div class="container">
+<div class="${prefix}${container}">
     <!-- Add-on -->
-    <div class="container__addon">
+    <div class="${prefix}${container}__addon">
         ...
     </div>
 
     <!-- Input -->
-    <input type="text" class="container__input" />
+    <input type="text" class="${prefix}${container}__input" />
 </div>
 
 <!-- Add-on appended -->
-<div class="container">
+<div class="${prefix}${container}">
     <!-- Input -->
-    <input type="text" class="container__input" />
+    <input type="text" class="${prefix}${container}__input" />
 
     <!-- Add-on -->
-    <div class="container__addon">
+    <div class="${prefix}${container}__addon">
         ...
     </div>
 </div>
 
 <!-- Appended and prepended add-ons -->
-<div class="container">
+<div class="${prefix}${container}">
     <!-- Add-on -->
-    <div class="container__addon">
+    <div class="${prefix}${container}__addon">
         ...
     </div>
 
     <!-- Input -->
-    <input type="text" class="container__input" />
+    <input type="text" class="${prefix}${container}__input" />
 
     <!-- Add-on -->
-    <div class="container__addon">
+    <div class="${prefix}${container}__addon">
         ...
     </div>
 </div>
-`}
-                css={`
-                    .container {
-                        display: flex;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
 
-                        /* Take full size */
-                        width: 100%;
-                    }
+    /* Take full size */
+    width: 100%;
+}
 
-                    .container__input {
-                        /* Take the remaining width */
-                        flex: 1;
-                    }
+.${prefix}${container}__input {
+    /* Take the remaining width */
+    flex: 1;
+}
 
-                    .container__addon {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
-                    }
-                `}
+.${prefix}${container}__addon {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+`
+                }
             >
                 <div
                     style={{

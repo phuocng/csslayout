@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'dropdown';
     return (
         <PatternLayout pattern={Pattern.NestedDropdowns}>
             <Head>
@@ -23,8 +26,10 @@ const Details: React.FC<{}> = () => {
                 Hover on the Patterns &rarr; Navigation to see the sub dropdowns.
             </div>
             <BrowserFrame
-                html={`
-<ul class="dropdown">
+                html={
+                    '' +
+                    `
+<ul class="${prefix}${container}">
     <li>Home</li>
     <li>
         <div>Patterns</div>
@@ -49,66 +54,70 @@ const Details: React.FC<{}> = () => {
     <li>Products</li>
     <li>About</li>
 </ul>
-`}
-                css={`
-                    .dropdown {
-                        /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                        display: flex;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    display: flex;
 
-                        /* Reset list styles */
-                        list-style-type: none;
-                        margin: 0;
-                        padding: 0;
-                    }
+    /* Reset list styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
-                    .dropdown li {
-                        /* Spacing */
-                        padding: 8px;
+.${prefix}${container} li {
+    /* Spacing */
+    padding: 8px;
 
-                        /* Used to position the sub dropdown */
-                        position: relative;
-                    }
+    /* Used to position the sub dropdown */
+    position: relative;
+}
 
-                    /* The sub dropdown */
-                    .dropdown ul {
-                        /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+/* The sub dropdown */
+.${prefix}${container} ul {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
 
-                        /* Hidden by default */
-                        display: none;
+    /* Hidden by default */
+    display: none;
 
-                        /* Absolute position */
-                        left: 0;
-                        position: absolute;
-                        top: 100%;
+    /* Absolute position */
+    left: 0;
+    position: absolute;
+    top: 100%;
 
-                        /* Reset styles */
-                        list-style-type: none;
-                        margin: 0;
-                        padding: 0;
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 
-                        /* Width */
-                        width: 200px;
-                    }
+    /* Width */
+    width: 200px;
+}
 
-                    /* The second level sub dropdown */
-                    .dropdown ul ul {
-                        left: 100%;
-                        position: absolute;
-                        top: 0;
-                    }
+/* The second level sub dropdown */
+.${prefix}${container} ul ul {
+    left: 100%;
+    position: absolute;
+    top: 0;
+}
 
-                    /* Change background color of list item when being hovered */
-                    .dropdown li:hover {
-                        background-color: rgba(0, 0, 0, 0.1);
-                    }
+/* Change background color of list item when being hovered */
+.${prefix}${container} li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
 
-                    /* Show the direct sub dropdown when hovering the list item */
-                    .dropdown li:hover > ul {
-                        display: block;
-                    }
-                `}
+/* Show the direct sub dropdown when hovering the list item */
+.${prefix}${container} li:hover > ul {
+    display: block;
+}
+`
+                }
             >
                 <div
                     style={{

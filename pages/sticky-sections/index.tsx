@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.StickySections}>
             <Head>
@@ -20,32 +23,38 @@ const Details: React.FC<{}> = () => {
                 Try to scroll the main content to see each section sticks to the top of page.
             </div>
             <BrowserFrame
-                html={`
-<div class="container">
-    <section class="container__section">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
+    <section class="${prefix}${container}__section">
         ...
     </section>
 
     <!-- Repeat other sections -->
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        height: 100%;
-                        overflow: scroll;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    height: 100%;
+    overflow: scroll;
+}
 
-                    .container__section {
-                        /* Take full size */
-                        height: 100%;
-                        width: 100%;
+.${prefix}${container}__section {
+    /* Take full size */
+    height: 100%;
+    width: 100%;
 
-                        /* Stick to the top */
-                        position: sticky;
-                        top: 0;
-                    }
-                `}
+    /* Stick to the top */
+    position: sticky;
+    top: 0;
+}
+`
+                }
             >
                 <div
                     style={{

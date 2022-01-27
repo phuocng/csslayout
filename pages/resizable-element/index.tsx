@@ -1,11 +1,14 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.ResizableElement}>
             <Head>
@@ -19,135 +22,141 @@ const Details: React.FC<{}> = () => {
                 cursors which indicate the associated side can be resized.
             </div>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- The content -->
     ...
 
     <!-- The top left square -->
-    <div class="container__resizer container__resizer--tl"></div>
+    <div class="${prefix}${container}__resizer ${prefix}${container}__resizer--tl"></div>
 
     <!-- The top square -->
-    <div class="container__resizer container__resizer--tc"></div>
+    <div class="${prefix}${container}__resizer ${prefix}${container}__resizer--tc"></div>
 
     <!-- The top right square -->
-    <div class="container__resizer container__resizer--tr"></div>
+    <div class="${prefix}${container}__resizer ${prefix}${container}__resizer--tr"></div>
 
     <!-- The right square -->
-    <div class="container__resizer container__resizer--rc"></div>
+    <div class="${prefix}${container}__resizer ${prefix}${container}__resizer--rc"></div>
 
     <!-- The right bottom square -->
-    <div class="container__resizer container__resizer--rb"></div>
+    <div class="${prefix}${container}__resizer ${prefix}${container}__resizer--rb"></div>
 
     <!-- The bottom square -->
-    <div class="container__resizer container__resizer--bc"></div>
+    <div class="${prefix}${container}__resizer ${prefix}${container}__resizer--bc"></div>
 
     <!-- The bottom left square -->
-    <div class="container__resizer container__resizer--bl"></div>
+    <div class="${prefix}${container}__resizer ${prefix}${container}__resizer--bl"></div>
 
     <!-- The left square -->
-    <div class="container__resizer container__resizer--lc"></div>
+    <div class="${prefix}${container}__resizer ${prefix}${container}__resizer--lc"></div>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Border */
-                        border: 1px dashed rgba(0, 0, 0, 0.3);
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Border */
+    border: 1px dashed rgba(0, 0, 0, 0.3);
 
-                        /* Used to position the squares */
-                        position: relative;
-                    }
+    /* Used to position the squares */
+    position: relative;
+}
 
-                    .container__resizer {
-                        /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                        position: absolute;
+.${prefix}${container}__resizer {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    position: absolute;
 
-                        /* Size */
-                        height: 12px;
-                        width: 12px;
-                    }
+    /* Size */
+    height: 12px;
+    width: 12px;
+}
 
-                    .container__resizer--tl {
-                        /* Resize cursor */
-                        cursor: nwse-resize;
+.${prefix}${container}__resizer--tl {
+    /* Resize cursor */
+    cursor: nwse-resize;
 
-                        /* Positioned at the top left corner */
-                        left: 0px;
-                        top: 0px;
-                        transform: translate(-50%, -50%);
-                    }
+    /* Positioned at the top left corner */
+    left: 0px;
+    top: 0px;
+    transform: translate(-50%, -50%);
+}
 
-                    .container__resizer--tc {
-                        /* Resize cursor */
-                        cursor: ns-resize;
+.${prefix}${container}__resizer--tc {
+    /* Resize cursor */
+    cursor: ns-resize;
 
-                        /* Positioned at the middle of top side */
-                        left: 50%;
-                        top: 0px;
-                        transform: translate(-50%, -50%);
-                    }
+    /* Positioned at the middle of top side */
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%, -50%);
+}
 
-                    .container__resizer--tr {
-                        /* Resize cursor */
-                        cursor: nesw-resize;
+.${prefix}${container}__resizer--tr {
+    /* Resize cursor */
+    cursor: nesw-resize;
 
-                        /* Positioned at the top right corner */
-                        right: 0px;
-                        top: 0px;
-                        transform: translate(50%, -50%);
-                    }
+    /* Positioned at the top right corner */
+    right: 0px;
+    top: 0px;
+    transform: translate(50%, -50%);
+}
 
-                    .container__resizer--rc {
-                        /* Resize cursor */
-                        cursor: ew-resize;
+.${prefix}${container}__resizer--rc {
+    /* Resize cursor */
+    cursor: ew-resize;
 
-                        /* Positioned at the middle of right side */
-                        right: 0px;
-                        top: 50%;
-                        transform: translate(50%, -50%);
-                    }
+    /* Positioned at the middle of right side */
+    right: 0px;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
 
-                    .container__resizer--rb {
-                        /* Resize cursor */
-                        cursor: nwse-resize;
+.${prefix}${container}__resizer--rb {
+    /* Resize cursor */
+    cursor: nwse-resize;
 
-                        /* Positioned at the right bottom corner */
-                        bottom: 0px;
-                        right: 0px;
-                        transform: translate(50%, 50%);
-                    }
+    /* Positioned at the right bottom corner */
+    bottom: 0px;
+    right: 0px;
+    transform: translate(50%, 50%);
+}
 
-                    .container__resizer--bc {
-                        /* Resize cursor */
-                        cursor: ns-resize;
+.${prefix}${container}__resizer--bc {
+    /* Resize cursor */
+    cursor: ns-resize;
 
-                        /* Positioned at the middle of bottom side */
-                        bottom: 0px;
-                        right: 50%;
-                        transform: translate(50%, 50%);
-                    }
+    /* Positioned at the middle of bottom side */
+    bottom: 0px;
+    right: 50%;
+    transform: translate(50%, 50%);
+}
 
-                    .container__resizer--bl {
-                        /* Resize cursor */
-                        cursor: nesw-resize;
+.${prefix}${container}__resizer--bl {
+    /* Resize cursor */
+    cursor: nesw-resize;
 
-                        /* Positioned at the bottom left corner */
-                        bottom: 0px;
-                        left: 0px;
-                        transform: translate(-50%, 50%);
-                    }
+    /* Positioned at the bottom left corner */
+    bottom: 0px;
+    left: 0px;
+    transform: translate(-50%, 50%);
+}
 
-                    .container__resizer--lc {
-                        /* Resize cursor */
-                        cursor: ew-resize;
+.${prefix}${container}__resizer--lc {
+    /* Resize cursor */
+    cursor: ew-resize;
 
-                        /* Positioned at the middle of left side */
-                        left: 0px;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                    }
-                `}
+    /* Positioned at the middle of left side */
+    left: 0px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+`
+                }
             >
                 <div
                     style={{

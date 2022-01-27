@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -11,6 +12,8 @@ import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.Timeline}>
             <Head>
@@ -20,28 +23,30 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css timeline" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Left vertical line -->
-    <div class="container__line"></div>
+    <div class="${prefix}${container}__line"></div>
 
     <!-- The timeline items container -->
-    <ul class="container__items">
+    <ul class="${prefix}${container}__items">
         <!-- Each timeline item -->
-        <li class="container__item">
+        <li class="${prefix}${container}__item">
             <!-- The circle and title -->
-            <div class="container__top">
+            <div class="${prefix}${container}__top">
                 <!-- The circle -->
-                <div class="container__circle"></div>
+                <div class="${prefix}${container}__circle"></div>
 
                 <!-- The title -->
-                <div class="container__title">
+                <div class="${prefix}${container}__title">
                     ...
                 </div>
             </div>
 
             <!-- The description -->
-            <div class="container__desc">
+            <div class="${prefix}${container}__desc">
                 ...
             </div>
         </li>
@@ -50,63 +55,67 @@ const Details: React.FC<{}> = () => {
         ...
     </ul>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Used to position the left vertical line */
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Used to position the left vertical line */
+    position: relative;
+}
 
-                    .container__line {
-                        /* Border */
-                        border-right: 2px solid #aaa;
+.${prefix}${container}__line {
+    /* Border */
+    border-right: 2px solid #aaa;
 
-                        /* Positioned at the left */
-                        left: 16px;
-                        position: absolute;
-                        top: 0px;
+    /* Positioned at the left */
+    left: 16px;
+    position: absolute;
+    top: 0px;
 
-                        /* Take full height */
-                        height: 100%;
-                    }
+    /* Take full height */
+    height: 100%;
+}
 
-                    .container__items {
-                        /* Reset styles */
-                        list-style-type: none;
-                        margin: 0px;
-                        padding: 0px;
-                    }
+.${prefix}${container}__items {
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
 
-                    .container__item {
-                        margin-bottom: 8px;
-                    }
+.${prefix}${container}__item {
+    margin-bottom: 8px;
+}
 
-                    .container__top {
-                        /* Center the content horizontally */
-                        align-items: center;
-                        display: flex;
-                    }
+.${prefix}${container}__top {
+    /* Center the content horizontally */
+    align-items: center;
+    display: flex;
+}
 
-                    .container__circle {
-                        /* Rounded border */
-                        background-color: rgb(170, 170, 170);
-                        border-radius: 9999px;
+.${prefix}${container}__circle {
+    /* Rounded border */
+    background-color: rgb(170, 170, 170);
+    border-radius: 9999px;
 
-                        /* Size */
-                        height: 32px;
-                        width: 32px;
-                    }
+    /* Size */
+    height: 32px;
+    width: 32px;
+}
 
-                    .container__title {
-                        /* Take available width */
-                        flex: 1;
-                    }
+.${prefix}${container}__title {
+    /* Take available width */
+    flex: 1;
+}
 
-                    .container__desc {
-                        /* Make it align with the title */
-                        margin-left: 48px;
-                    }
-                `}
+.${prefix}${container}__desc {
+    /* Make it align with the title */
+    margin-left: 48px;
+}
+`
+                }
             >
                 <div
                     style={{

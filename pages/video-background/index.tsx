@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -9,6 +10,8 @@ import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.VideoBackground}>
             <Head>
@@ -21,71 +24,77 @@ const Details: React.FC<{}> = () => {
                 In this pattern, the video is displayed in the background.
             </div>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- The video container -->
-    <div class="container__wrapper">
-        <video class="container__video" src="...">
+    <div class="${prefix}${container}__wrapper">
+        <video class="${prefix}${container}__video" src="...">
             ...
         </video>
     </div>
 
     <!-- The content -->
-    <div class="container__content">
+    <div class="${prefix}${container}__content">
         ...
     </div>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Used to position the video and content */
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Used to position the video and content */
+    position: relative;
+}
 
-                    .container__wrapper {
-                        /* Positioned at the top left corner */
-                        left: 0px;
-                        position: absolute;
-                        top: 0px;
+.${prefix}${container}__wrapper {
+    /* Positioned at the top left corner */
+    left: 0px;
+    position: absolute;
+    top: 0px;
 
-                        /* Take full size */
-                        height: 100%;
-                        width: 100%;
+    /* Take full size */
+    height: 100%;
+    width: 100%;
 
-                        /* Hide the scrollbar */
-                        overflow: hidden;
-                    }
+    /* Hide the scrollbar */
+    overflow: hidden;
+}
 
-                    .container__video {
-                        object-fit: cover;
+.${prefix}${container}__video {
+    object-fit: cover;
 
-                        /* Center the video */
-                        left: 50%;
-                        position: absolute;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
+    /* Center the video */
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
-                        /* Take full width */
-                        width: 100%;
-                    }
+    /* Take full width */
+    width: 100%;
+}
 
-                    .container__content {
-                        /* Positioned at the top left corner */
-                        left: 0px;
-                        position: absolute;
-                        top: 0px;
+.${prefix}${container}__content {
+    /* Positioned at the top left corner */
+    left: 0px;
+    position: absolute;
+    top: 0px;
 
-                        /* Take full size */
-                        height: 100%;
-                        width: 100%;
+    /* Take full size */
+    height: 100%;
+    width: 100%;
 
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                    }
-                `}
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+`
+                }
             >
                 <div
                     style={{

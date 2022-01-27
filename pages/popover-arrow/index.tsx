@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.PopoverArrow}>
             <Head>
@@ -17,198 +20,204 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css arrow, css popover" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- The content -->
     ...
 
     <!-- Top left arrow -->
-    <div class="container__arrow container__arrow--tl"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--tl"></div>
 
     <!-- Top center arrow -->
-    <div class="container__arrow container__arrow--tc"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--tc"></div>
 
     <!-- Top right arrow -->
-    <div class="container__arrow container__arrow--tr"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--tr"></div>
 
     <!-- Right top arrow -->
-    <div class="container__arrow container__arrow--rt"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--rt"></div>
 
     <!-- Right center arrow -->
-    <div class="container__arrow container__arrow--rc"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--rc"></div>
 
     <!-- Right bottom arrow -->
-    <div class="container__arrow container__arrow--rb"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--rb"></div>
 
     <!-- Bottom left arrow -->
-    <div class="container__arrow container__arrow--bl"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--bl"></div>
 
     <!-- Bottom center arrow -->
-    <div class="container__arrow container__arrow--bc"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--bc"></div>
 
     <!-- Bottom right arrow -->
-    <div class="container__arrow container__arrow--br"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--br"></div>
 
     <!-- Left top arrow -->
-    <div class="container__arrow container__arrow--lt"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--lt"></div>
 
     <!-- Left center arrow -->
-    <div class="container__arrow container__arrow--lc"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--lc"></div>
 
     <!-- Left bottom arrow -->
-    <div class="container__arrow container__arrow--lb"></div>
+    <div class="${prefix}${container}__arrow ${prefix}${container}__arrow--lb"></div>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+`
+                }
+                css={
+                    '' +
+`
+.${prefix}${container} {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
 
-                        /* Used to position the arrow */
-                        position: relative;
-                    }
+    /* Used to position the arrow */
+    position: relative;
+}
 
-                    .container__arrow {
-                        /* Size */
-                        height: 16px;
-                        width: 16px;
+.${prefix}${container}__arrow {
+    /* Size */
+    height: 16px;
+    width: 16px;
 
-                        background-color: #fff;
-                        position: absolute;
-                    }
+    background-color: #fff;
+    position: absolute;
+}
 
-                    .container__arrow--tl {
-                        /* Position at the top left corner */
-                        left: 32px;
-                        top: 0px;
+.${prefix}${container}__arrow--tl {
+    /* Position at the top left corner */
+    left: 32px;
+    top: 0px;
 
-                        /* Border */
-                        border-left: 1px solid rgba(0, 0, 0, 0.3);
-                        border-top: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translate(50%, -50%) rotate(45deg);
-                    }
+    /* Border */
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(50%, -50%) rotate(45deg);
+}
 
-                    .container__arrow--tc {
-                        /* Position at the top center */
-                        left: 50%;
-                        top: 0px;
+.${prefix}${container}__arrow--tc {
+    /* Position at the top center */
+    left: 50%;
+    top: 0px;
 
-                        /* Border */
-                        border-left: 1px solid rgba(0, 0, 0, 0.3);
-                        border-top: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translate(-50%, -50%) rotate(45deg);
-                    }
+    /* Border */
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
 
-                    .container__arrow--tr {
-                        /* Position at the top right corner */
-                        right: 32px;
-                        top: 0px;
+.${prefix}${container}__arrow--tr {
+    /* Position at the top right corner */
+    right: 32px;
+    top: 0px;
 
-                        /* Border */
-                        border-left: 1px solid rgba(0, 0, 0, 0.3);
-                        border-top: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translate(-50%, -50%) rotate(45deg);
-                    }
+    /* Border */
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
 
-                    .container__arrow--rt {
-                        /* Position at the right top corner */
-                        right: 0;
-                        top: 32px;
+.${prefix}${container}__arrow--rt {
+    /* Position at the right top corner */
+    right: 0;
+    top: 32px;
 
-                        /* Border */
-                        border-right: 1px solid rgba(0, 0, 0, 0.3);
-                        border-top: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translate(50%, 50%) rotate(45deg);
-                    }
+    /* Border */
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(50%, 50%) rotate(45deg);
+}
 
-                    .container__arrow--rc {
-                        /* Position at the right center */
-                        right: 0;
-                        top: 50%;
+.${prefix}${container}__arrow--rc {
+    /* Position at the right center */
+    right: 0;
+    top: 50%;
 
-                        /* Border */
-                        border-right: 1px solid rgba(0, 0, 0, 0.3);
-                        border-top: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translate(50%, -50%) rotate(45deg);
-                    }
+    /* Border */
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(50%, -50%) rotate(45deg);
+}
 
-                    .container__arrow--rb {
-                        /* Position at the right bottom corner */
-                        bottom: 32px;
-                        right: 0;
+.${prefix}${container}__arrow--rb {
+    /* Position at the right bottom corner */
+    bottom: 32px;
+    right: 0;
 
-                        /* Border */
-                        border-right: 1px solid rgba(0, 0, 0, 0.3);
-                        border-top: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translate(50%, -50%) rotate(45deg);
-                    }
+    /* Border */
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(50%, -50%) rotate(45deg);
+}
 
-                    .container__arrow--bl {
-                        /* Position at the bottom left corner */
-                        bottom: -16px;
-                        left: 32px;
+.${prefix}${container}__arrow--bl {
+    /* Position at the bottom left corner */
+    bottom: -16px;
+    left: 32px;
 
-                        /* Border */
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                        border-right: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translate(50%, -50%) rotate(45deg);
-                    }
+    /* Border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(50%, -50%) rotate(45deg);
+}
 
-                    .container__arrow--bc {
-                        /* Position at the bottom center */
-                        bottom: -16px;
-                        left: 50%;
+.${prefix}${container}__arrow--bc {
+    /* Position at the bottom center */
+    bottom: -16px;
+    left: 50%;
 
-                        /* Border */
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                        border-right: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translate(-50%, -50%) rotate(45deg);
-                    }
+    /* Border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
 
-                    .container__arrow--br {
-                        /* Position at the bottom right corner */
-                        bottom: -16px;
-                        right: 32px;
+.${prefix}${container}__arrow--br {
+    /* Position at the bottom right corner */
+    bottom: -16px;
+    right: 32px;
 
-                        /* Border */
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                        border-right: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translate(-50%, -50%) rotate(45deg);
-                    }
+    /* Border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
 
-                    .container__arrow--lt {
-                        /* Position at the left top corner */
-                        left: 0;
-                        top: 32px;
+.${prefix}${container}__arrow--lt {
+    /* Position at the left top corner */
+    left: 0;
+    top: 32px;
 
-                        /* Border */
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                        border-left: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translate(-50%, 50%) rotate(45deg);
-                    }
+    /* Border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, 50%) rotate(45deg);
+}
 
-                    .container__arrow--lc {
-                        /* Position at the left center */
-                        left: 0;
-                        top: 50%;
+.${prefix}${container}__arrow--lc {
+    /* Position at the left center */
+    left: 0;
+    top: 50%;
 
-                        /* Border */
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                        border-left: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translate(-50%, -50%) rotate(45deg);
-                    }
+    /* Border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
 
-                    .container__arrow--lb {
-                        /* Position at the left bottom corner */
-                        bottom: 32px;
-                        left: 0;
+.${prefix}${container}__arrow--lb {
+    /* Position at the left bottom corner */
+    bottom: 32px;
+    left: 0;
 
-                        /* Border */
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                        border-left: 1px solid rgba(0, 0, 0, 0.3);
-                        transform: translate(-50%, -50%) rotate(45deg);
-                    }
-                `}
+    /* Border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+`
+                }
             >
                 <div
                     style={{

@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'badge';
     return (
         <PatternLayout pattern={Pattern.Badge}>
             <Head>
@@ -17,28 +20,34 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css badge, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="badge">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     ...
 </div>
-`}
-                css={`
-                    .badge {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-                        /* Colors */
-                        background-color: rgba(0, 0, 0, 0.3);
-                        color: #fff;
+    /* Colors */
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
 
-                        /* Rounded border */
-                        border-radius: 9999px;
-                        height: 32px;
-                        width: 32px;
-                    }
-                `}
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 32px;
+    width: 32px;
+}
+`
+                }
             >
                 <div
                     style={{

@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -11,6 +12,8 @@ import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.FeatureComparison}>
             <Head>
@@ -20,15 +23,17 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css feature comparison, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Feature name -->
-    <div class="container__feature">
+    <div class="${prefix}${container}__feature">
         ...
     </div>
 
     <!-- The model -->
-    <div class="container__model">
+    <div class="${prefix}${container}__model">
         <!--
         For the first row: display the model name (Basic, Pro, etc.)
         From the second row: display a yes/no icon indicating the feature is available or not
@@ -42,36 +47,40 @@ const Details: React.FC<{}> = () => {
 
 <!-- Repeated items -->
 ...
-`}
-                css={`
-                    .container {
-                        align-items: center;
-                        display: flex;
+`
+                }
+                css={
+                    '' +
+`
+.${prefix}${container} {
+    align-items: center;
+    display: flex;
 
-                        /* Bottom border */
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    /* Bottom border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 
-                        /* Spacing */
-                        padding: 12px 0px;
-                    }
+    /* Spacing */
+    padding: 12px 0px;
+}
 
-                    .container__feature {
-                        /* Take available width */
-                        flex: 1;
+.${prefix}${container}__feature {
+    /* Take available width */
+    flex: 1;
 
-                        /* Spacing */
-                        margin-right: 16px;
-                    }
+    /* Spacing */
+    margin-right: 16px;
+}
 
-                    .container__model {
-                        /* Center the content */
-                        display: flex;
-                        justify-content: center;
+.${prefix}${container}__model {
+    /* Center the content */
+    display: flex;
+    justify-content: center;
 
-                        /* Spacing */
-                        margin-right: 16px;
-                    }
-                `}
+    /* Spacing */
+    margin-right: 16px;
+}
+`
+}
             >
                 <div
                     style={{

@@ -1,11 +1,14 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import { Pattern } from '../../constants/Pattern';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.FloatingLabel}>
             <Head>
@@ -18,41 +21,47 @@ const Details: React.FC<{}> = () => {
                 Type something in the input to see how the label is shown up.
             </div>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- The input -->
-    <input placeholder="Placeholder" class="container__input" />
+    <input placeholder="Placeholder" class="${prefix}${container}__input" />
 
     <!-- The label -->
-    <label class="container__label">Placeholder</label>
+    <label class="${prefix}${container}__label">Placeholder</label>
 </div>
-`}
-                css={`
-                    .container {
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    position: relative;
+}
 
-                    /*
+/*
 Show the label at desired position when the 
 placeholder of input isn't shown
 */
-                    .container__input:not(:placeholder-shown) + .container__label {
-                        background: #fff;
-                        transform: translate(0, -50%);
-                        opacity: 1;
-                    }
+.${prefix}${container}__input:not(:placeholder-shown) + .${prefix}${container}__label {
+    background: #fff;
+    transform: translate(0, -50%);
+    opacity: 1;
+}
 
-                    .container__label {
-                        /* Position the label */
-                        left: 8px;
-                        position: absolute;
-                        top: 0;
+.${prefix}${container}__label {
+    /* Position the label */
+    left: 8px;
+    position: absolute;
+    top: 0;
 
-                        /* Hide it by default */
-                        opacity: 0;
-                        transition: all 200ms;
-                    }
-                `}
+    /* Hide it by default */
+    opacity: 0;
+    transition: all 200ms;
+}
+`
+                }
             >
                 <div
                     style={{

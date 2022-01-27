@@ -1,11 +1,14 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.StampBorder}>
             <Head>
@@ -15,33 +18,39 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css radial gradient, css stamp border" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Inner -->
-    <div class="container__inner">
+    <div class="${prefix}${container}__inner">
         <!-- Content -->
         ...
     </div>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Background */
-                        background-color: #ccc;
-                        background-image: radial-gradient(#fff 50%, transparent 50%);
-                        background-position: -5px -5px;
-                        background-repeat: repeat;
-                        background-size: 10px 10px;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Background */
+    background-color: #ccc;
+    background-image: radial-gradient(#fff 50%, transparent 50%);
+    background-position: -5px -5px;
+    background-repeat: repeat;
+    background-size: 10px 10px;
 
-                        /* Spacing */
-                        padding: 5px;
-                    }
+    /* Spacing */
+    padding: 5px;
+}
 
-                    .container__inner {
-                        /* Background */
-                        background-color: #ccc;
-                    }
-                `}
+.${prefix}${container}__inner {
+    /* Background */
+    background-color: #ccc;
+}
+`
+                }
             >
                 <div
                     style={{

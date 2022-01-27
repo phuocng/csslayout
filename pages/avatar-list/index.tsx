@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -28,6 +29,9 @@ const Avatar: React.FC<{}> = ({ children }) => {
 };
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'avatars';
+
     return (
         <PatternLayout pattern={Pattern.AvatarList}>
             <Head>
@@ -37,11 +41,13 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css avatar, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="avatars">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Avatar item -->
-    <div class="avatars__item">
-        <div class="avatars__image">
+    <div class="${prefix}${container}__item">
+        <div class="${prefix}${container}__image">
             <!-- Image -->
             ...
         </div>
@@ -50,30 +56,34 @@ const Details: React.FC<{}> = () => {
     <!-- Repeat other avatars -->
     ...
 </div>
-`}
-                css={`
-                    .avatars {
-                        display: flex;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
+}
 
-                    .avatars__item {
-                        /* Nagative margin make avatar overlap to previous one */
-                        margin-left: -4px;
-                    }
+.${prefix}${container}__item {
+    /* Nagative margin make avatar overlap to previous one */
+    margin-left: -4px;
+}
 
-                    .avatars__image {
-                        /* Add a white curve between avatars */
-                        box-shadow: 0 0 0 4px #fff;
+.${prefix}${container}__image {
+    /* Add a white curve between avatars */
+    box-shadow: 0 0 0 4px #fff;
 
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-                        /* Rounded border */
-                        border-radius: 9999px;
-                    }
-                `}
+    /* Rounded border */
+    border-radius: 9999px;
+}
+                `
+                }
             >
                 <div
                     style={{

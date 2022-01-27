@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'button';
     return (
         <PatternLayout pattern={Pattern.CloseButton}>
             <Head>
@@ -17,64 +20,70 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css close button, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<button class="button">
-    <div class="button__line button__line--first"></div>
+                html={
+                    '' +
+                    `
+<button class="${prefix}${container}">
+    <div class="${prefix}${container}__line ${prefix}${container}__line--first"></div>
 
-    <div class="button__line button__line--second"></div>
+    <div class="${prefix}${container}__line ${prefix}${container}__line--second"></div>
 </button>
-`}
-                css={`
-                    .button {
-                        /* Reset */
-                        background-color: transparent;
-                        border-color: transparent;
+`
+                }
+                css={
+                    '' +
+`
+.${prefix}${container} {
+    /* Reset */
+    background-color: transparent;
+    border-color: transparent;
 
-                        /* Cursor */
-                        cursor: pointer;
+    /* Cursor */
+    cursor: pointer;
 
-                        /* Size */
-                        height: 32px;
-                        width: 32px;
+    /* Size */
+    height: 32px;
+    width: 32px;
 
-                        /* Used to position the inner */
-                        position: relative;
-                    }
+    /* Used to position the inner */
+    position: relative;
+}
 
-                    .button__line {
-                        /* Background color */
-                        background-color: rgba(0, 0, 0, 0.3);
+.${prefix}${container}__line {
+    /* Background color */
+    background-color: rgba(0, 0, 0, 0.3);
 
-                        /* Position */
-                        position: absolute;
+    /* Position */
+    position: absolute;
 
-                        /* Size */
-                        height: 1px;
-                        width: 100%;
-                    }
+    /* Size */
+    height: 1px;
+    width: 100%;
+}
 
-                    .button__line--first {
-                        /* Position */
-                        left: 0px;
-                        top: 50%;
-                        transform: translate(0%, -50%) rotate(45deg);
+.${prefix}${container}__line--first {
+    /* Position */
+    left: 0px;
+    top: 50%;
+    transform: translate(0%, -50%) rotate(45deg);
 
-                        /* Size */
-                        height: 1px;
-                        width: 100%;
-                    }
+    /* Size */
+    height: 1px;
+    width: 100%;
+}
 
-                    .button__line--second {
-                        /* Position */
-                        left: 50%;
-                        top: 0px;
-                        transform: translate(-50%, 0%) rotate(45deg);
+.${prefix}${container}__line--second {
+    /* Position */
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%, 0%) rotate(45deg);
 
-                        /* Size */
-                        height: 100%;
-                        width: 1px;
-                    }
-                `}
+    /* Size */
+    height: 100%;
+    width: 1px;
+}
+`
+                }
             >
                 <div
                     style={{

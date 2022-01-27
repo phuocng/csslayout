@@ -1,11 +1,14 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.ValidationIcon}>
             <Head>
@@ -15,46 +18,52 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css validation icon" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- The input -->
-    <input class="container__input" />
+    <input class="${prefix}${container}__input" />
 
     <!-- The icon container -->
-    <span class="container__icon">
+    <span class="${prefix}${container}__icon">
         <!-- The SVG icon represents any state such as valid, invalid, loading, etc. -->
         ...
     </span>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Used to position the validation icon */
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Used to position the validation icon */
+    position: relative;
+}
 
-                    .container__input {
-                        /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                        border-radius: 4px;
+.${prefix}${container}__input {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
 
-                        /* Take the full width */
-                        width: 100%;
+    /* Take the full width */
+    width: 100%;
 
-                        /* Don't overlap the icon */
-                        padding-right: 24px;
-                    }
+    /* Don't overlap the icon */
+    padding-right: 24px;
+}
 
-                    .container__icon {
-                        /* Positioned at the right side */
-                        position: absolute;
-                        right: 8px;
-                        top: 50%;
-                        transform: translate(0, -50%);
+.${prefix}${container}__icon {
+    /* Positioned at the right side */
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translate(0, -50%);
 
-                        z-index: 10;
-                    }
-                `}
+    z-index: 10;
+}
+`
+                }
             >
                 <div
                     style={{

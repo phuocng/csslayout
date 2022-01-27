@@ -3,6 +3,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -11,6 +12,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'header';
     const numberOfColumns = 10;
     return (
         <PatternLayout pattern={Pattern.StickyTableColumn}>
@@ -24,11 +27,13 @@ const Details: React.FC<{}> = () => {
                 Try to scroll the main content of table horizontally to see the first column sticks to the left.
             </div>
             <BrowserFrame
-                html={`
+                html={
+                    '' +
+                    `
 <table>
     <thead>
         <tr>
-            <th class="header">
+            <th class="${prefix}${container}">
                 ...
             </th>
 
@@ -38,20 +43,24 @@ const Details: React.FC<{}> = () => {
     <tbody>
     </tbody>
 </table>
-`}
-                css={`
-                    .header {
-                        /* Background color */
-                        background-color: #ddd;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Background color */
+    background-color: #ddd;
 
-                        /* Stick to the left */
-                        left: 0;
-                        position: sticky;
+    /* Stick to the left */
+    left: 0;
+    position: sticky;
 
-                        /* Displayed on top of other rows when scrolling */
-                        z-index: 9999;
-                    }
-                `}
+    /* Displayed on top of other rows when scrolling */
+    z-index: 9999;
+}
+`
+                }
             >
                 <div
                     style={{

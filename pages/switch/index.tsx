@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'label';
     const [checked, setChecked] = React.useState(false);
     const toggle = () => setChecked((c) => !c);
 
@@ -24,54 +27,60 @@ const Details: React.FC<{}> = () => {
                 though it's hidden.
             </div>
             <BrowserFrame
-                html={`
-<label class="label">
-    <input type="checkbox" class="label__input" />
+                html={
+                    '' +
+                    `
+<label class="${prefix}${container}">
+    <input type="checkbox" class="${prefix}${container}__input" />
 
     <!-- Circle -->
-    <div class="label__circle"></div>
+    <div class="${prefix}${container}__circle"></div>
 </label>
-`}
-                css={`
-                    .label {
-                        display: flex;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
 
-                        /* Rounded border */
-                        border-radius: 9999px;
+    /* Rounded border */
+    border-radius: 9999px;
 
-                        /* Size */
-                        height: 32px;
-                        width: 64px;
+    /* Size */
+    height: 32px;
+    width: 64px;
 
-                        /* OFF status */
-                        background-color: rgba(0, 0, 0, 0.1);
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+    /* OFF status */
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
 
-                        /* ON status */
-                        background-color: #357edd;
-                        border: 1px solid #357edd;
-                        /* Push the circle to the right */
-                        justify-content: flex-end;
-                    }
+    /* ON status */
+    background-color: #357edd;
+    border: 1px solid #357edd;
+    /* Push the circle to the right */
+    justify-content: flex-end;
+}
 
-                    .label__input {
-                        /* Hide the input */
-                        display: none;
-                    }
+.${prefix}${container}__input {
+    /* Hide the input */
+    display: none;
+}
 
-                    .label__circle {
-                        /* Rounded border */
-                        border-radius: 9999px;
+.${prefix}${container}__circle {
+    /* Rounded border */
+    border-radius: 9999px;
 
-                        /* Size */
-                        width: 32px;
+    /* Size */
+    width: 32px;
 
-                        background-color: #fff;
+    background-color: #fff;
 
-                        /* OFF status */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                    }
-                `}
+    /* OFF status */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+`
+                }
             >
                 <div
                     style={{

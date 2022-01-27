@@ -1,12 +1,15 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.Watermark}>
             <Head>
@@ -16,12 +19,14 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css watermark" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Watermark container -->
-    <div class="container__wrapper">
+    <div class="${prefix}${container}__wrapper">
         <!-- The watermark -->
-        <div class="container__watermark">
+        <div class="${prefix}${container}__watermark">
             Draft
         </div>
     </div>
@@ -29,45 +34,49 @@ const Details: React.FC<{}> = () => {
     <!-- Other content -->
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        /* Used to position the watermark */
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Used to position the watermark */
+    position: relative;
+}
 
-                    .container__wrapper {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
+.${prefix}${container}__wrapper {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-                        /* Absolute position */
-                        left: 0px;
-                        position: absolute;
-                        top: 0px;
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 0px;
 
-                        /* Take full size */
-                        height: 100%;
-                        width: 100%;
-                    }
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+}
 
-                    .container__watermark {
-                        /* Text color */
-                        color: rgba(0, 0, 0, 0.2);
+.${prefix}${container}__watermark {
+    /* Text color */
+    color: rgba(0, 0, 0, 0.2);
 
-                        /* Text styles */
-                        font-size: 3rem;
-                        font-weight: bold;
-                        text-transform: uppercase;
+    /* Text styles */
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
 
-                        /* Rotate the text */
-                        transform: rotate(-45deg);
+    /* Rotate the text */
+    transform: rotate(-45deg);
 
-                        /* Disable the selection */
-                        user-select: none;
-                    }
-                `}
+    /* Disable the selection */
+    user-select: none;
+}
+`
+                }
             >
                 <div
                     style={{

@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -10,6 +11,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'zigzag-timeline';
     return (
         <PatternLayout pattern={Pattern.ZigzagTimeline}>
             <Head>
@@ -19,8 +22,10 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css timeline, css zigzag timeline" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="zigzag-timeline__item">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}__item">
     <!-- Milestone -->
     <div className="zigzag-timeline__milestone">...</div>
 
@@ -30,51 +35,55 @@ const Details: React.FC<{}> = () => {
 
 <!-- Repeat other items -->
 ...
-`}
-                css={`
-                    .zigzag-timeline__item {
-                        /* Used to position the milestone */
-                        position: relative;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container}__item {
+    /* Used to position the milestone */
+    position: relative;
 
-                        /* Border */
-                        border-bottom: 1px solid #71717a;
+    /* Border */
+    border-bottom: 1px solid #71717a;
 
-                        /* Take full width */
-                        width: 100%;
-                    }
+    /* Take full width */
+    width: 100%;
+}
 
-                    .zigzag-timeline__milestone {
-                        /* Absolute position */
-                        position: absolute;
-                        top: 50%;
+.${prefix}${container}__milestone {
+    /* Absolute position */
+    position: absolute;
+    top: 50%;
 
-                        /* Circle it */
-                        border-radius: 50%;
-                        height: 2rem;
-                        width: 2rem;
+    /* Circle it */
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
 
-                        /* Misc */
-                        background: #71717a;
-                    }
+    /* Misc */
+    background: #71717a;
+}
 
-                    /* Styles for even items */
-                    .zigzag-timeline__item:nth-child(2n) {
-                        border-left: 1px solid #71717a;
-                    }
-                    .zigzag-timeline__item:nth-child(2n) .zigzag-timeline__milestone {
-                        left: 0;
-                        transform: translate(-50%, -50%);
-                    }
+/* Styles for even items */
+.${prefix}${container}__item:nth-child(2n) {
+    border-left: 1px solid #71717a;
+}
+.${prefix}${container}__item:nth-child(2n) .${prefix}${container}__milestone {
+    left: 0;
+    transform: translate(-50%, -50%);
+}
 
-                    /* Styles for odd items */
-                    .zigzag-timeline__item:nth-child(2n + 1) {
-                        border-right: 1px solid #71717a;
-                    }
-                    .zigzag-timeline__item:nth-child(2n + 1) .zigzag-timeline__milestone {
-                        right: 0;
-                        transform: translate(50%, -50%);
-                    }
-                `}
+/* Styles for odd items */
+.${prefix}${container}__item:nth-child(2n + 1) {
+    border-right: 1px solid #71717a;
+}
+.${prefix}${container}__item:nth-child(2n + 1) .${prefix}${container}__milestone {
+    right: 0;
+    transform: translate(50%, -50%);
+}
+`
+                }
             >
                 <div
                     style={{

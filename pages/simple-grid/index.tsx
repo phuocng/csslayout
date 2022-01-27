@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -9,6 +10,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'row';
     return (
         <PatternLayout pattern={Pattern.SimpleGrid}>
             <Head>
@@ -18,40 +21,46 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css flexbox grid, css grid, css layout" />
             </Head>
             <BrowserFrame
-                html={`
+                html={
+                    '' +
+                    `
 <!-- Row -->
-<div class="row">
+<div class="${prefix}${container}">
     <!--Cell with given width. Replace 25% with whatever you want -->
-    <div class="row__cell row__cell--1/4">25%</div>
+    <div class="${prefix}${container}__cell ${prefix}${container}__cell--1/4">25%</div>
 
     <!-- Cell that takes remaining width -->
-    <div class="row__cell row__cell--fill">
+    <div class="${prefix}${container}__cell ${prefix}${container}__cell--fill">
         ...
     </div>
 </div>
-`}
-                css={`
-                    .row {
-                        display: flex;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
 
-                        margin-left: -8px;
-                        margin-right: -8px;
-                    }
+    margin-left: -8px;
+    margin-right: -8px;
+}
 
-                    .row__cell {
-                        padding-left: 8px;
-                        padding-right: 8px;
-                    }
+.${prefix}${container}__cell {
+    padding-left: 8px;
+    padding-right: 8px;
+}
 
-                    /* Cell with given width. Replace 25% with whatever you want */
-                    .row__cell--1/4 {
-                        flex: 0 0 25%;
-                    }
+/* Cell with given width. Replace 25% with whatever you want */
+.${prefix}${container}__cell--1/4 {
+    flex: 0 0 25%;
+}
 
-                    .row__cell--fill {
-                        flex: 1;
-                    }
-                `}
+.${prefix}${container}__cell--fill {
+    flex: 1;
+}
+`
+                }
             >
                 <div
                     style={{

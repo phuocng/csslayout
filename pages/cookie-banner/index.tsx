@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -10,6 +11,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'banner';
     return (
         <PatternLayout pattern={Pattern.CookieBanner}>
             <Head>
@@ -19,36 +22,42 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css cookie banner, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="banner">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Tells visitors that the website uses cookie -->
-    <div class="banner__content">
+    <div class="${prefix}${container}__content">
         ...
     </div>
 
     <!-- Close button -->
     ...
 </div>
-`}
-                css={`
-                    .banner {
-                        /* Banner is displayed at the bottom */
-                        bottom: 0;
-                        left: 0;
-                        position: fixed;
-                        width: 100%;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Banner is displayed at the bottom */
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
 
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
-                    }
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
-                    .banner__content {
-                        /* Take available width */
-                        flex: 1;
-                    }
-                `}
+.${prefix}${container}__content {
+    /* Take available width */
+    flex: 1;
+}
+`
+                }
             >
                 <div
                     style={{

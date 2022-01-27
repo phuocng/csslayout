@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -41,6 +42,8 @@ const CircularItem: React.FC<CircularItemProps> = ({ degree, children }) => {
 };
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'navigation';
     const numItems = 6;
 
     return (
@@ -52,15 +55,17 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css circular navigation, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="navigation">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- The trigger element that will show all circles when user clicks it -->
     ...
 
     <!-- A circle menu item -->
-    <div class="navigation__circle">
+    <div class="${prefix}${container}__circle">
         <!-- The content -->
-        <div class="navigation__content">            
+        <div class="${prefix}${container}__content">            
             ...
         </div>
     </div>
@@ -68,49 +73,53 @@ const Details: React.FC<{}> = () => {
     <!-- Repeat menu items -->
     ...
 </div>
-`}
-                css={`
-                    .navigation {
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+`
+.${prefix}${container} {
+    position: relative;
+}
 
-                    .navigation__circle {
-                        /* Position */
-                        position: absolute;
-                        top: 0;
+.${prefix}${container}__circle {
+    /* Position */
+    position: absolute;
+    top: 0;
 
-                        /*
-    80px is the distance from the item to the trigger element.
-    Replace 0deg with 60deg, 180deg, 240deg, 300deg for another item
-    in case you want to have a total of 6 menu items.
-    The formulation is 360 / numberOfItems * indexOfItem
+    /*
+        80px is the distance from the item to the trigger element.
+        Replace 0deg with 60deg, 180deg, 240deg, 300deg for another item
+        in case you want to have a total of 6 menu items.
+        The formulation is 360 / numberOfItems * indexOfItem
     */
-                        transform: rotate(0deg) translateX(-80px);
+    transform: rotate(0deg) translateX(-80px);
 
-                        /* Must have the same size as the trigger element */
-                        height: 32px;
-                        width: 32px;
-                    }
+    /* Must have the same size as the trigger element */
+    height: 32px;
+    width: 32px;
+}
 
-                    .navigation__content {
-                        /*
-    Rotate it to make it displayed vertically
-    Replace -0deg with -60deg, -180deg, -240deg, -300deg for another item
-    in case you want to have a total of 6 menu items.
-    The formulation is -(360 / numberOfItems * indexOfItem)
+.${prefix}${container}__content {
+    /*
+        Rotate it to make it displayed vertically
+        Replace -0deg with -60deg, -180deg, -240deg, -300deg for another item
+        in case you want to have a total of 6 menu items.
+        The formulation is -(360 / numberOfItems * indexOfItem)
     */
-                        transform: rotate(-0deg);
+    transform: rotate(-0deg);
 
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-                        /* Take full size */
-                        height: 100%;
-                        width: 100%;
-                    }
-                `}
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+}
+`
+}
             >
                 <div
                     style={{

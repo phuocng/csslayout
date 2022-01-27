@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -11,6 +12,9 @@ interface TabProps {
 }
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'tabs';
+
     const [activeTab, setActiveTab] = React.useState(0);
 
     const Tab: React.FC<TabProps> = ({ tabIndex, children }) => {
@@ -42,43 +46,49 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css navigation, css tab" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="tabs">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Active tab -->
-    <div class="tabs__tab--active">
+    <div class="${prefix}${container}__tab--active">
         ...
     </div>
 
     <!-- Inactive tab -->
-    <div class="tabs__tab--inactive">
+    <div class="${prefix}${container}__tab--inactive">
         ...
     </div>
 </div>
-`}
-                css={`
-                    .tabs {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
-                    .tabs__tab--active {
-                        /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                        /* Hide the bottom border */
-                        border-bottom-color: transparent;
+.${prefix}${container}__tab--active {
+    /* Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    /* Hide the bottom border */
+    border-bottom-color: transparent;
 
-                        /* Border radius */
-                        border-top-left-radius: 2px;
-                        border-top-right-radius: 2px;
-                    }
+    /* Border radius */
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
 
-                    .tabs__tab--inactive {
-                        /* Has only the bottom border */
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                    }
-                `}
+.${prefix}${container}__tab--inactive {
+    /* Has only the bottom border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+`
+                }
             >
                 <div
                     style={{

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -10,6 +11,8 @@ interface DotProps {
 }
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'dots';
     const [activeItem, setActiveItem] = React.useState(0);
 
     const Dot: React.FC<DotProps> = ({ index }) => {
@@ -40,44 +43,50 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css dot navigation, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<ul class="dots">
-    <li class="dots__item"></li>
+                html={
+                    '' +
+                    `
+<ul class="${prefix}${container}">
+    <li class="${prefix}${container}__item"></li>
 
     <!-- Repeat other dots -->
     ...
 </div>
-`}
-                css={`
-                    .dots {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-                        /* Reset styles */
-                        list-style-type: none;
-                        margin: 0;
-                        padding: 0;
-                    }
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
-                    .dots__item {
-                        /* Rounded border */
-                        border-radius: 9999px;
-                        height: 12px;
-                        width: 12px;
+.${prefix}${container}__item {
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 12px;
+    width: 12px;
 
-                        /* Active dot */
-                        background-color: rgba(0, 0, 0, 0.3);
+    /* Active dot */
+    background-color: rgba(0, 0, 0, 0.3);
 
-                        /* Inactive dot */
-                        background-color: transparent;
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+    /* Inactive dot */
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.3);
 
-                        /* OPTIONAL: Spacing between dots */
-                        margin: 0 4px;
-                    }
-                `}
+    /* OPTIONAL: Spacing between dots */
+    margin: 0 4px;
+}
+`
+                }
             >
                 <div
                     style={{

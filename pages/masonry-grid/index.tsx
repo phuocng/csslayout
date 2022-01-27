@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -9,6 +10,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'masonry-grid';
     return (
         <PatternLayout pattern={Pattern.MasonryGrid}>
             <Head>
@@ -18,34 +21,40 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css column-count, css column-gap, css masonry, css masonry grid" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="masonry-grid">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!--Item -->
-    <div class="masonry-grid__item">...</div>
+    <div class="${prefix}${container}__item">...</div>
 
     <!-- Repeat other items -->
 </div>
-`}
-                css={`
-                    .masonry-grid {
-                        /* It is split into 3 columns */
-                        column-count: 3;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* It is split into 3 columns */
+    column-count: 3;
 
-                        /* The space between columns */
-                        column-gap: 1rem;
+    /* The space between columns */
+    column-gap: 1rem;
 
-                        /* Misc */
-                        width: 100%;
-                    }
+    /* Misc */
+    width: 100%;
+}
 
-                    .masonry-grid__item {
-                        /* Prevent a column from breaking into multiple columns */
-                        break-inside: avoid;
+.${prefix}${container}__item {
+    /* Prevent a column from breaking into multiple columns */
+    break-inside: avoid;
 
-                        /* Misc */
-                        margin-bottom: 1rem;
-                    }
-                `}
+    /* Misc */
+    margin-bottom: 1rem;
+}
+`
+                }
             >
                 <div
                     style={{

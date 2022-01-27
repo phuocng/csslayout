@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Heading, Spacer } from '@1milligram/design';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -8,6 +9,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.StatusLight}>
             <Head>
@@ -17,44 +20,50 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css status light" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Status light -->
-    <div class="container__status"></div>
+    <div class="${prefix}${container}__status"></div>
 
     <!-- Content -->
-    <div class="container__content">
+    <div class="${prefix}${container}__content">
         ...
     </div>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+}
 
-                    .container__status {
-                        /* Background color */
-                        background-color: rgb(66, 153, 225);
+.${prefix}${container}__status {
+    /* Background color */
+    background-color: rgb(66, 153, 225);
 
-                        /* Rounded border */
-                        border-radius: 9999px;
+    /* Rounded border */
+    border-radius: 9999px;
 
-                        /* Size */
-                        height: 8px;
-                        width: 8px;
+    /* Size */
+    height: 8px;
+    width: 8px;
 
-                        /* Spacing */
-                        margin-right: 8px;
-                    }
+    /* Spacing */
+    margin-right: 8px;
+}
 
-                    .container__content {
-                        /* Take available width */
-                        flex: 1;
-                    }
-                `}
+.${prefix}${container}__content {
+    /* Take available width */
+    flex: 1;
+}
+`
+                }
             >
                 <div
                     style={{

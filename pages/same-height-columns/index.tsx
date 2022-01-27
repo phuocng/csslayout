@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
@@ -8,6 +9,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.SameHeightColumns}>
             <Head>
@@ -17,15 +20,17 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css layout, css same height columns" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Column -->
-    <div class="container__column">
+    <div class="${prefix}${container}__column">
         <!-- Cover -->
         ...
 
         <!-- Content -->
-        <div class="container__content">
+        <div class="${prefix}${container}__content">
             ...
         </div>
 
@@ -36,27 +41,31 @@ const Details: React.FC<{}> = () => {
     <!-- Repeat with other columns -->
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        display: flex;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
+}
 
-                    .container__column {
-                        flex: 1;
-                        /* Space between columns */
-                        margin: 0 8px;
+.${prefix}${container}__column {
+    flex: 1;
+    /* Space between columns */
+    margin: 0 8px;
 
-                        /* Layout each column */
-                        display: flex;
-                        flex-direction: column;
-                    }
+    /* Layout each column */
+    display: flex;
+    flex-direction: column;
+}
 
-                    .container__content {
-                        /* Take available height */
-                        flex: 1;
-                    }
-                `}
+.${prefix}${container}__content {
+    /* Take available height */
+    flex: 1;
+}
+`
+                }
             >
                 <div
                     style={{

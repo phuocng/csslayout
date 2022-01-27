@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.TriangleButtons}>
             <Head>
@@ -17,82 +20,88 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css triangle buttons" />
             </Head>
             <BrowserFrame
-                html={`
+                html={
+                    '' +
+                    `
 <!-- Up triangle button -->
-<button class="container">
+<button class="${prefix}${container}">
     <!-- Triangle -->
-    <div class="container__triangle container__triangle--up"></div>
+    <div class="${prefix}${container}__triangle ${prefix}${container}__triangle--up"></div>
 
     <!-- Content -->
     ...
 </button>
 
 <!-- Right triangle button -->
-<button class="container">
+<button class="${prefix}${container}">
     <!-- Content -->
     ...
 
     <!-- Triangle -->
-    <div class="container__triangle container__triangle--right"></div>
+    <div class="${prefix}${container}__triangle ${prefix}${container}__triangle--right"></div>
 </button>
 
 <!-- Down triangle button -->
-<button class="container">
+<button class="${prefix}${container}">
     <!-- Triangle -->
-    <div class="container__triangle container__triangle--down"></div>
+    <div class="${prefix}${container}__triangle ${prefix}${container}__triangle--down"></div>
 
     <!-- Content -->
     ...
 </button>
 
 <!-- Left triangle button -->
-<button class="container">
+<button class="${prefix}${container}">
     <!-- Triangle -->
-    <div class="container__triangle container__triangle--left"></div>
+    <div class="${prefix}${container}__triangle ${prefix}${container}__triangle--left"></div>
 
     <!-- Content -->
     ...
 </button>
-`}
-                css={`
-                    .container {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
-                        /* Spacing */
-                        padding: 8px;
-                    }
+    /* Spacing */
+    padding: 8px;
+}
 
-                    .container__triangle {
-                        border-style: solid;
+.${prefix}${container}__triangle {
+    border-style: solid;
 
-                        /* Size */
-                        height: 0px;
-                        width: 0px;
-                    }
+    /* Size */
+    height: 0px;
+    width: 0px;
+}
 
-                    .container__triangle--up {
-                        border-color: transparent transparent rgba(0, 0, 0, 0.3);
-                        border-width: 0px 8px 8px;
-                    }
+.${prefix}${container}__triangle--up {
+    border-color: transparent transparent rgba(0, 0, 0, 0.3);
+    border-width: 0px 8px 8px;
+}
 
-                    .container__triangle--right {
-                        border-color: transparent transparent transparent rgba(0, 0, 0, 0.3);
-                        border-width: 8px 0px 8px 8px;
-                    }
+.${prefix}${container}__triangle--right {
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.3);
+    border-width: 8px 0px 8px 8px;
+}
 
-                    .container__triangle--down {
-                        border-color: rgba(0, 0, 0, 0.3) transparent transparent;
-                        border-width: 8px 8px 0px;
-                    }
+.${prefix}${container}__triangle--down {
+    border-color: rgba(0, 0, 0, 0.3) transparent transparent;
+    border-width: 8px 8px 0px;
+}
 
-                    .container__triangle--left {
-                        border-color: transparent rgba(0, 0, 0, 0.3) transparent transparent;
-                        border-width: 8px 8px 8px 0px;
-                    }
-                `}
+.${prefix}${container}__triangle--left {
+    border-color: transparent rgba(0, 0, 0, 0.3) transparent transparent;
+    border-width: 8px 8px 8px 0px;
+}
+`
+                }
             >
                 <div
                     style={{

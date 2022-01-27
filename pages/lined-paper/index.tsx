@@ -1,11 +1,14 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.LinedPaper}>
             <Head>
@@ -15,25 +18,31 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css linear gradient, css lined paper, css multiple horizontal lines" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        /* Lined background */
-                        background-image: linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0px);
-                        background-size: 100% 2em;
+`
+                }
+                css={
+                    '' +
+`
+.${prefix}${container} {
+    /* Lined background */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0px);
+    background-size: 100% 2em;
 
-                        /*
-    Display the content on top of the lines.
-    The line height must be the same as the background size defined above
+    /*
+        Display the content on top of the lines.
+        The line height must be the same as the background size defined above
     */
-                        background-position-y: 24px;
-                        line-height: 2em;
-                    }
-                `}
+    background-position-y: 24px;
+    line-height: 2em;
+}
+`
+}
             >
                 <div
                     style={{

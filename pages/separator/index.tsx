@@ -1,12 +1,15 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.Separator}>
             <Head>
@@ -16,44 +19,50 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css divider, css flexbox, css separator" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Text -->
-    <div class="container__content">
+    <div class="${prefix}${container}__content">
         ...
     </div>
 
     <!-- Separator line -->
-    <div class="container__separator"></div>
+    <div class="${prefix}${container}__separator"></div>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Content is centered horizontally */
-                        align-items: center;
-                        display: flex;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Content is centered horizontally */
+    align-items: center;
+    display: flex;
 
-                        /* Used to set the position of text */
-                        position: relative;
-                    }
+    /* Used to set the position of text */
+    position: relative;
+}
 
-                    .container__content {
-                        /* We won't see the separator line */
-                        background: #fff;
+.${prefix}${container}__content {
+    /* We won't see the separator line */
+    background: #fff;
 
-                        /* Displayed at the center of container */
-                        left: 50%;
-                        position: absolute;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                    }
+    /* Displayed at the center of container */
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
-                    .container__separator {
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                        height: 1px;
-                        width: 100%;
-                    }
-                `}
+.${prefix}${container}__separator {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    height: 1px;
+    width: 100%;
+}
+`
+                }
             >
                 <div
                     style={{

@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -13,6 +14,9 @@ interface RadioProps {
 }
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'label';
+
     const [selectedValue, setSelectedValue] = React.useState('1');
 
     const Radio: React.FC<RadioProps> = ({ value, children }) => {
@@ -66,61 +70,67 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css radio" />
             </Head>
             <BrowserFrame
-                html={`
-<label class="label">
+                html={
+                    '' +
+                    `
+<label class="${prefix}${container}">
     <!-- The real radio -->
-    <input type="radio" class="label__input" />
+    <input type="radio" class="${prefix}${container}__input" />
 
     <!-- The fake circle -->
-    <div class="label__circle">
+    <div class="${prefix}${container}__circle">
         <!-- The inner circle -->
-        <div class="label__radio label__radio--selected"></div>
+        <div class="${prefix}${container}__radio ${prefix}${container}__radio--selected"></div>
     </div>
 
     <!-- The text -->
     ...
 </div>
-`}
-                css={`
-                    .label {
-                        /* Center the content horizontally */
-                        align-items: center;
-                        display: inline-flex;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content horizontally */
+    align-items: center;
+    display: inline-flex;
 
-                        /* Cursor */
-                        cursor: pointer;
-                    }
+    /* Cursor */
+    cursor: pointer;
+}
 
-                    .label__input {
-                        /* Hide it */
-                        display: none;
-                    }
+.${prefix}${container}__input {
+    /* Hide it */
+    display: none;
+}
 
-                    .label__circle {
-                        /* Rounded border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                        border-radius: 9999px;
+.${prefix}${container}__circle {
+    /* Rounded border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 9999px;
 
-                        /* Spacing */
-                        margin-right: 8px;
-                        padding: 4px;
-                    }
+    /* Spacing */
+    margin-right: 8px;
+    padding: 4px;
+}
 
-                    .label__radio {
-                        /* Rounded border */
-                        border-radius: 9999px;
-                        height: 16px;
-                        width: 16px;
+.${prefix}${container}__radio {
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 16px;
+    width: 16px;
 
-                        /* For not selected radio */
-                        background-color: transparent;
-                    }
+    /* For not selected radio */
+    background-color: transparent;
+}
 
-                    .label__radio--selected {
-                        /* For selected radio */
-                        background-color: #00449e;
-                    }
-                `}
+.${prefix}${container}__radio--selected {
+    /* For selected radio */
+    background-color: #00449e;
+}
+`
+                }
             >
                 <div
                     style={{

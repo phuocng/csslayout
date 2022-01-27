@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -11,6 +12,8 @@ import Rectangle from '../../placeholders/Rectangle';
 import Triangle from '../../placeholders/Triangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'dropdown';
     return (
         <PatternLayout pattern={Pattern.Dropdown}>
             <Head>
@@ -23,46 +26,52 @@ const Details: React.FC<{}> = () => {
                 Move the mouse over the button to see the dropdown.
             </div>
             <BrowserFrame
-                html={`
-<div class="dropdown">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- The trigger element -->
     <button>...</button>
 
     <!-- The content -->
-    <div class="dropdown__content">
+    <div class="${prefix}${container}__content">
         ...
     </div>
 </div>
-`}
-                css={`
-                    .dropdown {
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+`
+.${prefix}${container} {
+    position: relative;
+}
 
-                    /* Hide the dropdown's content by default */
-                    .dropdown__content {
-                        display: none;
+/* Hide the dropdown's content by default */
+.${prefix}${container}__content {
+    display: none;
 
-                        /* Position it right below the trigger element */
-                        left: 0;
-                        padding-top: 4px;
-                        position: absolute;
-                        top: 100%;
+    /* Position it right below the trigger element */
+    left: 0;
+    padding-top: 4px;
+    position: absolute;
+    top: 100%;
 
-                        /* It should be on the top of other elements */
-                        background-color: #fff;
-                        z-index: 9999;
+    /* It should be on the top of other elements */
+    background-color: #fff;
+    z-index: 9999;
 
-                        /* Size */
-                        height: 200px;
-                        width: 200px;
-                    }
+    /* Size */
+    height: 200px;
+    width: 200px;
+}
 
-                    /* Show the content when hover on the container */
-                    .dropdown:hover .dropdown__content {
-                        display: block;
-                    }
-                `}
+/* Show the content when hover on the container */
+.${prefix}${container}:hover .${prefix}${container}__content {
+    display: block;
+}
+`
+                }
             >
                 <div
                     style={{

@@ -1,12 +1,15 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.Drawer}>
             <Head>
@@ -17,55 +20,61 @@ const Details: React.FC<{}> = () => {
             </Head>
             <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>This pattern is also known as off-canvas.</div>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Backdrop -->
-    <div class="container__overlay"></div>
+    <div class="${prefix}${container}__overlay"></div>
 
     <!-- Sidebar -->
-    <div class="container__sidebar">
+    <div class="${prefix}${container}__sidebar">
         ...
     </div>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Container takes full size */
-                        height: 100%;
-                        left: 0;
-                        position: fixed;
-                        top: 0;
-                        width: 100%;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Container takes full size */
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
-                        z-index: 9999;
-                    }
+    z-index: 9999;
+}
 
-                    .container__overlay {
-                        /* Take full size */
-                        height: 100%;
-                        left: 0;
-                        position: fixed;
-                        top: 0;
-                        width: 100%;
+.${prefix}${container}__overlay {
+    /* Take full size */
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
-                        /* User still can see the content of main page */
-                        background-color: rgba(0, 0, 0, 0.5);
+    /* User still can see the content of main page */
+    background-color: rgba(0, 0, 0, 0.5);
 
-                        z-index: -1;
-                    }
+    z-index: -1;
+}
 
-                    .container__sidebar {
-                        /* Take full height */
-                        height: 100%;
-                        left: 0;
-                        position: fixed;
-                        top: 0;
-                        width: 200px;
+.${prefix}${container}__sidebar {
+    /* Take full height */
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 200px;
 
-                        /* Background */
-                        background-color: #fff;
-                    }
-                `}
+    /* Background */
+    background-color: #fff;
+}
+`
+                }
             >
                 <div
                     style={{

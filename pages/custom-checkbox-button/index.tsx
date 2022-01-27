@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -14,6 +15,9 @@ interface CheckboxProps {
 }
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'label';
+
     const Checkbox: React.FC<CheckboxProps> = ({ isChecked, value, children }) => {
         const [checked, setChecked] = React.useState(isChecked);
         const click = () => setChecked((c) => !c);
@@ -67,57 +71,63 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css checkbox, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<label class="label">
+                html={
+                    '' +
+                    `
+<label class="${prefix}${container}">
     <!-- The real checkbox -->
-    <input type="checkbox" class="label__input" />
+    <input type="checkbox" class="${prefix}${container}__input" />
 
     <!-- The fake square -->
-    <div class="label__square">
+    <div class="${prefix}${container}__square">
         <!-- The inner square -->
-        <div class="label__checkbox label__square--selected"></div>
+        <div class="${prefix}${container}__checkbox label__square--selected"></div>
     </div>
 
     <!-- The text -->
     ...
 </div>
-`}
-                css={`
-                    .label {
-                        /* Center the content horizontally */
-                        align-items: center;
-                        display: inline-flex;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Center the content horizontally */
+    align-items: center;
+    display: inline-flex;
 
-                        /* Cursor */
-                        cursor: pointer;
-                    }
+    /* Cursor */
+    cursor: pointer;
+}
 
-                    .label__input {
-                        /* Hide it */
-                        display: none;
-                    }
+.${prefix}${container}__input {
+    /* Hide it */
+    display: none;
+}
 
-                    .label__square {
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                        border-radius: 4px;
+.${prefix}${container}__square {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
 
-                        /* Spacing */
-                        margin-right: 8px;
-                        padding: 4px;
-                    }
+    /* Spacing */
+    margin-right: 8px;
+    padding: 4px;
+}
 
-                    .label__checkbox {
-                        background-color: transparent;
-                        border-radius: 4px;
-                        height: 16px;
-                        width: 16px;
-                    }
+.${prefix}${container}__checkbox {
+    background-color: transparent;
+    border-radius: 4px;
+    height: 16px;
+    width: 16px;
+}
 
-                    .label__checkbox--selected {
-                        /* For selected checkbox */
-                        background-color: #00449e;
-                    }
-                `}
+.${prefix}${container}__checkbox--selected {
+    /* For selected checkbox */
+    background-color: #00449e;
+}
+`
+                }
             >
                 <div
                     style={{

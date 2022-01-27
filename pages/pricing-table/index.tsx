@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -12,6 +13,8 @@ import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.PricingTable}>
             <Head>
@@ -31,10 +34,12 @@ const Details: React.FC<{}> = () => {
                 to indicate the most popular option.
             </div>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Pricing column -->
-    <div class="container__column">
+    <div class="${prefix}${container}__column">
         <!-- Title -->
         ...
 
@@ -51,33 +56,37 @@ const Details: React.FC<{}> = () => {
     <!-- Repeated pricing columns -->
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        /* Content is centered horizontally */
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Content is centered horizontally */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
-                    .container__column {
-                        /* Content is centered vertically */
-                        align-items: center;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
+.${prefix}${container}__column {
+    /* Content is centered vertically */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-                        /* Make all columns have the same width */
-                        flex: 1;
+    /* Make all columns have the same width */
+    flex: 1;
 
-                        /* OPTIONAL: Space between columns */
-                        margin: 0 8px;
+    /* OPTIONAL: Space between columns */
+    margin: 0 8px;
 
-                        /* OPTIONAL: Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
-                        border-radius: 4px;
-                    }
-                `}
+    /* OPTIONAL: Border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+`
+                }
             >
                 <div
                     style={{

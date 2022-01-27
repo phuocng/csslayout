@@ -2,11 +2,14 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Pattern } from '../../constants/Pattern';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.FadingLongSection}>
             <Head>
@@ -19,45 +22,51 @@ const Details: React.FC<{}> = () => {
                 Fading a long section to indicate there is more content.
             </div>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Main content -->
-    <div class="container__content">
+    <div class="${prefix}${container}__content">
         ...
     </div>
 
     <!-- The faded element -->
-    <div class="container__fading"></div>
+    <div class="${prefix}${container}__fading"></div>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Used to position the faded element */
-                        position: relative;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Used to position the faded element */
+    position: relative;
+}
 
-                    .container__content {
-                        /* Height */
-                        height: 200px;
+.${prefix}${container}__content {
+    /* Height */
+    height: 200px;
 
-                        /* Scrollable */
-                        overflow-y: scroll;
-                    }
+    /* Scrollable */
+    overflow-y: scroll;
+}
 
-                    .container__fading {
-                        /* Displayed at the bottom */
-                        bottom: 0;
-                        left: 0;
-                        position: absolute;
+.${prefix}${container}__fading {
+    /* Displayed at the bottom */
+    bottom: 0;
+    left: 0;
+    position: absolute;
 
-                        /* Size */
-                        height: 30px;
-                        width: 100%;
+    /* Size */
+    height: 30px;
+    width: 100%;
 
-                        /* Gradient background */
-                        background: linear-gradient(rgba(255, 255, 255, 0.01), #fff);
-                    }
-                `}
+    /* Gradient background */
+    background: linear-gradient(rgba(255, 255, 255, 0.01), #fff);
+}
+`
+                }
             >
                 <div
                     style={{

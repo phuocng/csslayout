@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -9,6 +10,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.SplitNavigation}>
             <Head>
@@ -18,35 +21,41 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, css menu, css navigation, css split navigation" />
             </Head>
             <BrowserFrame
-                html={`
-<ul class="container">
+                html={
+                    '' +
+                    `
+<ul class="${prefix}${container}">
     <!-- Navigation item -->
     <li>
         <a href="">...</a>
     </li>
 
     <!-- Navigation item that sticks to the right -->
-    <li class="container__item--right">
+    <li class="${prefix}${container}__item--right">
         <a href="">...</a>
     </li>
 </ul>
-`}
-                css={`
-                    .container {
-                        /* Content is centered horizontally */
-                        align-items: center;
-                        display: flex;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Content is centered horizontally */
+    align-items: center;
+    display: flex;
 
-                        /* Reset styles */
-                        list-style-type: none;
-                        margin: 0;
-                    }
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0;
+}
 
-                    .container__item--right {
-                        /* Sticks to the right */
-                        margin-left: auto;
-                    }
-                `}
+.${prefix}${container}__item--right {
+    /* Sticks to the right */
+    margin-left: auto;
+}
+`
+                }
             >
                 <div
                     style={{

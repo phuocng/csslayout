@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -9,6 +10,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Square from '../../placeholders/Square';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'folder-structure';
     return (
         <PatternLayout pattern={Pattern.FolderStructure}>
             <Head>
@@ -18,8 +21,10 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css folder structure, css folder tree" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="folder-structure">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <ul>
         <li>
             <!-- Content -->
@@ -47,60 +52,64 @@ const Details: React.FC<{}> = () => {
         ...
     </ul>
 </div>
-`}
-                css={`
-                    :root {
-                        --folder-structure-item-height: 1rem;
-                        --folder-structure-item-margin-left: 2rem;
-                        --folder-structure-item-padding-top: 1rem;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+:root {
+    --${prefix}${container}-item-height: 1rem;
+    --${prefix}${container}-item-margin-left: 2rem;
+    --${prefix}${container}-item-padding-top: 1rem;
+}
 
-                    .folder-structure ul {
-                        /* Reset */
-                        list-style-type: none;
-                        margin: 0;
-                    }
+.${prefix}${container} ul {
+    /* Reset */
+    list-style-type: none;
+    margin: 0;
+}
 
-                    .folder-structure li {
-                        padding: var(--folder-structure-item-padding-top) 0rem 0rem 0rem;
-                        position: relative;
-                    }
+.${prefix}${container} li {
+    padding: var(--${prefix}${container}-item-padding-top) 0rem 0rem 0rem;
+    position: relative;
+}
 
-                    .folder-structure li::before {
-                        border-left: 1px solid rgba(0, 0, 0, 0.3);
-                        content: '';
+.${prefix}${container} li::before {
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    content: '';
 
-                        /* Position */
-                        left: 0;
-                        position: absolute;
-                        top: 0;
-                        transform: translate(calc(-1 * var(--folder-structure-item-margin-left)), 0);
+    /* Position */
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translate(calc(-1 * var(--${prefix}${container}-item-margin-left)), 0);
 
-                        /* Size */
-                        height: 100%;
-                    }
+    /* Size */
+    height: 100%;
+}
 
-                    .folder-structure li::after {
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                        content: '';
+.${prefix}${container} li::after {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    content: '';
 
-                        /* Position */
-                        left: 0;
-                        position: absolute;
-                        top: calc(var(--folder-structure-item-padding-top) + var(--folder-structure-item-height) / 2);
-                        transform: translate(-100%, 0);
+    /* Position */
+    left: 0;
+    position: absolute;
+    top: calc(var(--${prefix}${container}-item-padding-top) + var(--${prefix}${container}-item-height) / 2);
+    transform: translate(-100%, 0);
 
-                        /* Size */
-                        width: var(--folder-structure-item-margin-left);
-                    }
+    /* Size */
+    width: var(--${prefix}${container}-item-margin-left);
+}
 
-                    /* Remove the border from the last item */
-                    .folder-structure li:last-child::before {
-                        height: calc(
-                            var(--folder-structure-item-padding-top) + var(--folder-structure-item-height) / 2
-                        );
-                    }
-                `}
+/* Remove the border from the last item */
+.${prefix}${container} li:last-child::before {
+    height: calc(
+        var(--${prefix}${container}-item-padding-top) + var(--${prefix}${container}-item-height) / 2
+    );
+}
+`
+                }
             >
                 <div
                     style={{

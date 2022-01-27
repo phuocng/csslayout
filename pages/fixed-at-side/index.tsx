@@ -2,12 +2,15 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Heading, Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.FixedAtSide}>
             <Head>
@@ -17,20 +20,26 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css fixed" />
             </Head>
             <BrowserFrame
-                html={`
+                html={
+                    '' +
+                    `
 <!-- Fixed at the middle of side -->
-<div class="container">
+<div class="${prefix}${container}">
     ...
 </div>
-`}
-                css={`
-                    .container {
-                        right: 0;
-                        position: fixed;
-                        top: 50%;
-                        transform: translate(0px, -50%);
-                    }
-                `}
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    right: 0;
+    position: fixed;
+    top: 50%;
+    transform: translate(0px, -50%);
+}
+`
+                }
             >
                 <div
                     style={{

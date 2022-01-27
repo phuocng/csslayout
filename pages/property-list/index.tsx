@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Heading, Spacer } from '@1milligram/design';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { RelatedPatterns } from '../../components/RelatedPatterns';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
@@ -10,6 +11,8 @@ import Circle from '../../placeholders/Circle';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     const Item: React.FC<{}> = ({ children }) => {
         return (
             <dl
@@ -36,35 +39,41 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, property list" />
             </Head>
             <BrowserFrame
-                html={`
+                html={
+                    '' +
+                    `
 <!-- A property item -->
-<dl class="container">
+<dl class="${prefix}${container}">
     <!-- Property name -->
     <dt>...</dt>
 
     <!-- Property value -->
     <dd>...</dd>
 </dl>
-`}
-                css={`
-                    .container {
-                        /* Content is center horizontally */
-                        align-items: center;
-                        display: flex;
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Content is center horizontally */
+    align-items: center;
+    display: flex;
 
-                        /*
-    The property name will stick to the left, and the value
-    will stick to the right
+    /*
+        The property name will stick to the left, and the value
+        will stick to the right
     */
-                        justify-content: space-between;
+    justify-content: space-between;
 
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 
-                        /* Spacing */
-                        margin: 0px;
-                        padding: 8px 0px;
-                    }
-                `}
+    /* Spacing */
+    margin: 0px;
+    padding: 8px 0px;
+}
+`
+                }
             >
                 <div
                     style={{

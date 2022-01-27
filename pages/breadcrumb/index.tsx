@@ -1,12 +1,15 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'breadcrumb';
     return (
         <PatternLayout pattern={Pattern.Breadcrumb}>
             <Head>
@@ -16,29 +19,35 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css breadcrumb, css flexbox" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="breadcrumb">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Breadcrumb item -->
     <a>...</a>
 
     <!-- Separator -->
-    <div class="breadcrumb__separator">/</div>
+    <div class="${prefix}${container}__separator">/</div>
 
     <!-- Repeated items and separators -->
     ...
 </div>
-`}
-                css={`
-                    .breadcrumb {
-                        /* Content is centered vertically */
-                        align-items: center;
-                        display: flex;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Content is centered vertically */
+    align-items: center;
+    display: flex;
+}
 
-                    .breadcrumb__separator {
-                        margin: 0 8px;
-                    }
-                `}
+.${prefix}${container}__separator {
+    margin: 0 8px;
+}
+`
+                }
             >
                 <div
                     style={{

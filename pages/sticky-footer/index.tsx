@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
@@ -8,6 +9,8 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.StickyFooter}>
             <Head>
@@ -20,35 +23,41 @@ const Details: React.FC<{}> = () => {
                 The footer always sticks to the bottom if the main content is short.
             </div>
             <BrowserFrame
-                html={`
-<div class="container">
-    <header class="container__header">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
+    <header class="${prefix}${container}__header">
         ...
     </header>
-    <main class="container__main">
+    <main class="${prefix}${container}__main">
         ...
     </main>
-    <footer class="container__footer">
+    <footer class="${prefix}${container}__footer">
         ...
     </footer>
 </div>
-`}
-                css={`
-                    .container {
-                        display: flex;
-                        flex-direction: column;
-                        height: 100%;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
-                    .container__header,
-                    .container__footer {
-                        flex-shrink: 0;
-                    }
+.${prefix}${container}__header,
+.${prefix}${container}__footer {
+    flex-shrink: 0;
+}
 
-                    .container__main {
-                        flex-grow: 1;
-                    }
-                `}
+.${prefix}${container}__main {
+    flex-grow: 1;
+}
+`
+                }
             >
                 <div
                     style={{

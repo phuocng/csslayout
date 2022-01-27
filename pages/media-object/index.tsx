@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Head from 'next/head';
 
+import { PrefixContext } from '../../context/prefixContext';
 import { Pattern } from '../../constants/Pattern';
 import { PatternLayout } from '../../layouts/PatternLayout';
 import Block from '../../placeholders/Block';
@@ -9,6 +10,8 @@ import Rectangle from '../../placeholders/Rectangle';
 import Square from '../../placeholders/Square';
 
 const Details: React.FC<{}> = () => {
+    let { prefix, container } = React.useContext(PrefixContext);
+    container = container || 'container';
     return (
         <PatternLayout pattern={Pattern.MediaObject}>
             <Head>
@@ -18,38 +21,44 @@ const Details: React.FC<{}> = () => {
                 <meta name="keywords" content="css flexbox, media object" />
             </Head>
             <BrowserFrame
-                html={`
-<div class="container">
+                html={
+                    '' +
+                    `
+<div class="${prefix}${container}">
     <!-- Media object -->
-    <div class="container__media">
+    <div class="${prefix}${container}__media">
         ...
     </div>
 
     <!-- Main content -->
-    <div class="container__content">
+    <div class="${prefix}${container}__content">
         ...
     </div>
 </div>
-`}
-                css={`
-                    .container {
-                        /* Align sub-items to top */
-                        align-items: start;
-                        display: flex;
-                    }
+`
+                }
+                css={
+                    '' +
+                    `
+.${prefix}${container} {
+    /* Align sub-items to top */
+    align-items: start;
+    display: flex;
+}
 
-                    .container__media {
-                        margin-right: 16px;
+.${prefix}${container}__media {
+    margin-right: 16px;
 
-                        /* Set the width for the media object */
-                        width: 200px;
-                    }
+    /* Set the width for the media object */
+    width: 200px;
+}
 
-                    .container__content {
-                        /* Take the remaining width */
-                        flex: 1;
-                    }
-                `}
+.${prefix}${container}__content {
+    /* Take the remaining width */
+    flex: 1;
+}
+`
+                }
             >
                 <div
                     style={{
