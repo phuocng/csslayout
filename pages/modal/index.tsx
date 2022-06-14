@@ -48,7 +48,7 @@ const Details: React.FC<{}> = () => {
                 css={`
                     .modal {
                         /* Border */
-                        border: 1px solid rgba(0, 0, 0.3);
+                        border: 1px solid rgba(0, 0, 0, 0.3);
                         border-radius: 4px;
                     }
 
@@ -56,7 +56,7 @@ const Details: React.FC<{}> = () => {
                         display: flex;
                         justify-content: space-between;
                         /* Border */
-                        border-bottom: 1px solid rgba(0, 0, 0.3);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
                     }
 
                     .modal__footer {
@@ -64,7 +64,7 @@ const Details: React.FC<{}> = () => {
                         /* Push the buttons to the right */
                         justify-content: flex-end;
                         /* Border */
-                        border-top: 1px solid rgba(0, 0, 0.3);
+                        border-top: 1px solid rgba(0, 0, 0, 0.3);
                     }
                 `}
             >
