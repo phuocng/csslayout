@@ -1,12 +1,13 @@
-import * as React from 'react';
-import Head from 'next/head';
-import { Spacer } from '@1milligram/design';
+import * as React from 'react'
+import Head from 'next/head'
+import { Spacer } from '@1milligram/design'
 
-import { RelatedPatterns } from '../../components/RelatedPatterns';
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
-import Rectangle from '../../placeholders/Rectangle';
+import { RelatedPatterns } from '../../components/RelatedPatterns'
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import Rectangle from '../../placeholders/Rectangle'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
     return (
@@ -26,7 +27,7 @@ const Details: React.FC<{}> = () => {
     <!-- Repeat other items -->
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .masonry-grid {
                         /* It is split into 3 columns */
                         column-count: 3;
@@ -95,7 +96,7 @@ const Details: React.FC<{}> = () => {
             <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.CardLayout, Pattern.SimpleGrid]} />
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

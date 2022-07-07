@@ -1,10 +1,11 @@
-import * as React from 'react';
-import Head from 'next/head';
+import * as React from 'react'
+import Head from 'next/head'
 
-import { Pattern } from '../../constants/Pattern';
-import { random } from '../../utils/random';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
+import { Pattern } from '../../constants/Pattern'
+import { random } from '../../utils/random'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
     return (
@@ -29,7 +30,7 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .container {
                         /* Center the content */
                         align-items: center;
@@ -76,7 +77,7 @@ const Details: React.FC<{}> = () => {
                 </div>
             </BrowserFrame>
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

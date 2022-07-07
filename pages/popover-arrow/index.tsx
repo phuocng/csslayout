@@ -1,11 +1,12 @@
-import * as React from 'react';
-import Head from 'next/head';
-import { Spacer } from '@1milligram/design';
+import * as React from 'react'
+import Head from 'next/head'
+import { Spacer } from '@1milligram/design'
 
-import { RelatedPatterns } from '../../components/RelatedPatterns';
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
+import { RelatedPatterns } from '../../components/RelatedPatterns'
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
     return (
@@ -59,7 +60,7 @@ const Details: React.FC<{}> = () => {
     <div class="container__arrow container__arrow--lb"></div>
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .container {
                         /* Border */
                         border: 1px solid rgba(0, 0, 0, 0.3);
@@ -395,7 +396,7 @@ const Details: React.FC<{}> = () => {
             <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.ArrowButtons, Pattern.Tooltip]} />
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

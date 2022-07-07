@@ -1,11 +1,12 @@
-import * as React from 'react';
-import Head from 'next/head';
-import { Heading, Spacer } from '@1milligram/design';
+import * as React from 'react'
+import Head from 'next/head'
+import { Heading, Spacer } from '@1milligram/design'
 
-import { RelatedPatterns } from '../../components/RelatedPatterns';
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
+import { RelatedPatterns } from '../../components/RelatedPatterns'
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
     return (
@@ -23,7 +24,7 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .container {
                         right: 0;
                         position: fixed;
@@ -258,7 +259,7 @@ const Details: React.FC<{}> = () => {
             <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.FixedAtCorner]} />
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

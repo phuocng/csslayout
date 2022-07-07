@@ -1,11 +1,12 @@
-import * as React from 'react';
-import Head from 'next/head';
-import { Spacer } from '@1milligram/design';
+import * as React from 'react'
+import Head from 'next/head'
+import { Spacer } from '@1milligram/design'
 
-import { RelatedPatterns } from '../../components/RelatedPatterns';
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
+import { RelatedPatterns } from '../../components/RelatedPatterns'
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
     return (
@@ -50,7 +51,7 @@ const Details: React.FC<{}> = () => {
     <li>About</li>
 </ul>
 `}
-                css={`
+                css={removeIndent`
                     .dropdown {
                         /* Border */
                         border: 1px solid rgba(0, 0, 0, 0.3);
@@ -143,7 +144,7 @@ const Details: React.FC<{}> = () => {
             <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.Dropdown, Pattern.Menu]} />
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

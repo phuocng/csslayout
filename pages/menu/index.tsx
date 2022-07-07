@@ -1,13 +1,14 @@
-import * as React from 'react';
-import Head from 'next/head';
-import { Spacer } from '@1milligram/design';
+import * as React from 'react'
+import Head from 'next/head'
+import { Spacer } from '@1milligram/design'
 
-import { RelatedPatterns } from '../../components/RelatedPatterns';
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
-import Circle from '../../placeholders/Circle';
-import Rectangle from '../../placeholders/Rectangle';
+import { RelatedPatterns } from '../../components/RelatedPatterns'
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import Circle from '../../placeholders/Circle'
+import Rectangle from '../../placeholders/Rectangle'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
     return (
@@ -54,7 +55,7 @@ const Details: React.FC<{}> = () => {
     <div class="menu__divider"></div>
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .menu {
                         display: flex;
                         flex-direction: column;
@@ -220,7 +221,7 @@ const Details: React.FC<{}> = () => {
                 ]}
             />
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

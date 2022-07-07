@@ -1,9 +1,10 @@
-import * as React from 'react';
-import Head from 'next/head';
+import * as React from 'react'
+import Head from 'next/head'
 
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
     return (
@@ -20,7 +21,7 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .container {
                         /* Lined background */
                         background-image: linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0px);
@@ -65,7 +66,7 @@ const Details: React.FC<{}> = () => {
                 </div>
             </BrowserFrame>
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

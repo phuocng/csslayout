@@ -1,26 +1,27 @@
-import * as React from 'react';
-import Head from 'next/head';
-import { Spacer } from '@1milligram/design';
+import * as React from 'react'
+import Head from 'next/head'
+import { Spacer } from '@1milligram/design'
 
-import { RelatedPatterns } from '../../components/RelatedPatterns';
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import Block from '../../placeholders/Block';
-import BrowserFrame from '../../placeholders/BrowserFrame';
-import Rectangle from '../../placeholders/Rectangle';
-import Triangle from '../../placeholders/Triangle';
+import { RelatedPatterns } from '../../components/RelatedPatterns'
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import Block from '../../placeholders/Block'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import Rectangle from '../../placeholders/Rectangle'
+import Triangle from '../../placeholders/Triangle'
+import { removeIndent } from '../../utils/removeIndent'
 
 interface ItemProps {
-    index: number;
-    title: React.ReactNode;
+    index: number
+    title: React.ReactNode
 }
 
 const Details: React.FC<{}> = () => {
-    const [activeItem, setActiveItem] = React.useState(-1);
+    const [activeItem, setActiveItem] = React.useState(-1)
 
     const Item: React.FC<ItemProps> = ({ index, title, children }) => {
-        const isOpened = index === activeItem;
-        const click = () => setActiveItem(isOpened ? -1 : index);
+        const isOpened = index === activeItem
+        const click = () => setActiveItem(isOpened ? -1 : index)
         return (
             <>
                 <div
@@ -45,8 +46,8 @@ const Details: React.FC<{}> = () => {
                     {children}
                 </div>
             </>
-        );
-    };
+        )
+    }
 
     return (
         <PatternLayout pattern={Pattern.QuestionsAndAnswers}>
@@ -72,7 +73,7 @@ const Details: React.FC<{}> = () => {
     <!-- Answer -->
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .container {
                         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
                     }
@@ -155,7 +156,7 @@ const Details: React.FC<{}> = () => {
             <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.Accordion]} />
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

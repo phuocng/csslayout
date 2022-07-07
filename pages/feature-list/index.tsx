@@ -1,14 +1,15 @@
-import * as React from 'react';
-import Head from 'next/head';
-import { Spacer } from '@1milligram/design';
+import * as React from 'react'
+import Head from 'next/head'
+import { Spacer } from '@1milligram/design'
 
-import { RelatedPatterns } from '../../components/RelatedPatterns';
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import Block from '../../placeholders/Block';
-import BrowserFrame from '../../placeholders/BrowserFrame';
-import Circle from '../../placeholders/Circle';
-import Rectangle from '../../placeholders/Rectangle';
+import { RelatedPatterns } from '../../components/RelatedPatterns'
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import Block from '../../placeholders/Block'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import Circle from '../../placeholders/Circle'
+import Rectangle from '../../placeholders/Rectangle'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
     return (
@@ -37,7 +38,7 @@ const Details: React.FC<{}> = () => {
 <!-- Repeated items -->
 ...
 `}
-                css={`
+                css={removeIndent`
                     .container {
                         display: flex;
 
@@ -95,7 +96,7 @@ const Details: React.FC<{}> = () => {
             <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.FeatureComparison]} />
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

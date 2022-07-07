@@ -1,18 +1,19 @@
-import * as React from 'react';
-import Head from 'next/head';
-import { Spacer } from '@1milligram/design';
+import * as React from 'react'
+import Head from 'next/head'
+import { Spacer } from '@1milligram/design'
 
-import { RelatedPatterns } from '../../components/RelatedPatterns';
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
-import Triangle from '../../placeholders/Triangle';
+import { RelatedPatterns } from '../../components/RelatedPatterns'
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import Triangle from '../../placeholders/Triangle'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
-    const [value, setValue] = React.useState(0);
-    const decrease = () => setValue(value - 1);
-    const increase = () => setValue(value + 1);
-    const change = (e: React.ChangeEvent<HTMLInputElement>) => setValue(parseInt(e.target.value, 10));
+    const [value, setValue] = React.useState(0)
+    const decrease = () => setValue(value - 1)
+    const increase = () => setValue(value + 1)
+    const change = (e: React.ChangeEvent<HTMLInputElement>) => setValue(parseInt(e.target.value, 10))
 
     return (
         <PatternLayout pattern={Pattern.SpinButton}>
@@ -42,7 +43,7 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .container {
                         border: 1px solid rgba(0, 0, 0, 0.3);
                         border-radius: 2px;
@@ -133,7 +134,7 @@ const Details: React.FC<{}> = () => {
             <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.StepperInput, Pattern.Voting]} />
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

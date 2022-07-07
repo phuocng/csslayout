@@ -1,12 +1,13 @@
-import * as React from 'react';
-import Head from 'next/head';
-import { Spacer } from '@1milligram/design';
+import * as React from 'react'
+import Head from 'next/head'
+import { Spacer } from '@1milligram/design'
 
-import { RelatedPatterns } from '../../components/RelatedPatterns';
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
-import Square from '../../placeholders/Square';
+import { RelatedPatterns } from '../../components/RelatedPatterns'
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import Square from '../../placeholders/Square'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
     return (
@@ -48,7 +49,7 @@ const Details: React.FC<{}> = () => {
     </ul>
 </div>
 `}
-                css={`
+                css={removeIndent`
                     :root {
                         --folder-structure-item-height: 1rem;
                         --folder-structure-item-margin-left: 2rem;
@@ -165,7 +166,7 @@ const Details: React.FC<{}> = () => {
             <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.TreeDiagram]} />
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

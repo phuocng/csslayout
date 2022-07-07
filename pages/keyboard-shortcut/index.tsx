@@ -1,15 +1,16 @@
-import * as React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Heading, Spacer } from '@1milligram/design';
+import * as React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
+import { Heading, Spacer } from '@1milligram/design'
 
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import { removeIndent } from '../../utils/removeIndent'
 
 interface ItemProps {
-    action: string;
-    keys: string;
+    action: string
+    keys: string
 }
 
 const Item: React.FC<ItemProps> = ({ action, keys }) => {
@@ -36,8 +37,8 @@ const Item: React.FC<ItemProps> = ({ action, keys }) => {
                 {keys}
             </kbd>
         </div>
-    );
-};
+    )
+}
 
 const Details: React.FC<{}> = () => {
     return (
@@ -57,7 +58,7 @@ const Details: React.FC<{}> = () => {
     ...
 </kbd>
 `}
-                css={`
+                css={removeIndent`
                     .container {
                         /* Background and color */
                         background-color: rgba(0, 0, 0, 0.1);
@@ -116,7 +117,7 @@ const Details: React.FC<{}> = () => {
                 </div>
             </section>
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

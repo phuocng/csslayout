@@ -1,21 +1,22 @@
-import * as React from 'react';
-import Head from 'next/head';
+import * as React from 'react'
+import Head from 'next/head'
 
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
-import Rectangle from '../../placeholders/Rectangle';
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import Rectangle from '../../placeholders/Rectangle'
+import { removeIndent } from '../../utils/removeIndent'
 
 interface TabProps {
-    tabIndex: number;
+    tabIndex: number
 }
 
 const Details: React.FC<{}> = () => {
-    const [activeTab, setActiveTab] = React.useState(0);
+    const [activeTab, setActiveTab] = React.useState(0)
 
     const Tab: React.FC<TabProps> = ({ tabIndex, children }) => {
-        const isActive = tabIndex === activeTab;
-        const click = () => setActiveTab(tabIndex);
+        const isActive = tabIndex === activeTab
+        const click = () => setActiveTab(tabIndex)
         return (
             <div
                 style={{
@@ -30,8 +31,8 @@ const Details: React.FC<{}> = () => {
             >
                 {children}
             </div>
-        );
-    };
+        )
+    }
 
     return (
         <PatternLayout pattern={Pattern.Tab}>
@@ -55,7 +56,7 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .tabs {
                         /* Center the content */
                         align-items: center;
@@ -116,7 +117,7 @@ const Details: React.FC<{}> = () => {
                 </div>
             </BrowserFrame>
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

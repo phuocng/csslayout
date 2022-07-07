@@ -1,12 +1,13 @@
-import * as React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import * as React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
 
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import Block from '../../placeholders/Block';
-import BrowserFrame from '../../placeholders/BrowserFrame';
-import Circle from '../../placeholders/Circle';
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import Block from '../../placeholders/Block'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import Circle from '../../placeholders/Circle'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
     return (
@@ -34,7 +35,7 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .notification {
                         display: flex;
                         justify-content: space-between;
@@ -82,7 +83,7 @@ const Details: React.FC<{}> = () => {
                 </div>
             </BrowserFrame>
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

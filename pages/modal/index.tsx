@@ -1,13 +1,14 @@
-import * as React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import * as React from 'react'
+import Head from 'next/head'
+import Link from 'next/link'
 
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import Block from '../../placeholders/Block';
-import BrowserFrame from '../../placeholders/BrowserFrame';
-import Circle from '../../placeholders/Circle';
-import Rectangle from '../../placeholders/Rectangle';
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import Block from '../../placeholders/Block'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import Circle from '../../placeholders/Circle'
+import Rectangle from '../../placeholders/Rectangle'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
     return (
@@ -45,7 +46,7 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .modal {
                         /* Border */
                         border: 1px solid rgba(0, 0, 0, 0.3);
@@ -126,7 +127,7 @@ const Details: React.FC<{}> = () => {
                 </div>
             </BrowserFrame>
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

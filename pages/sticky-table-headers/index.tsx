@@ -1,13 +1,14 @@
-import * as React from 'react';
-import Head from 'next/head';
-import { Spacer } from '@1milligram/design';
+import * as React from 'react'
+import Head from 'next/head'
+import { Spacer } from '@1milligram/design'
 
-import { RelatedPatterns } from '../../components/RelatedPatterns';
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import Block from '../../placeholders/Block';
-import BrowserFrame from '../../placeholders/BrowserFrame';
-import Rectangle from '../../placeholders/Rectangle';
+import { RelatedPatterns } from '../../components/RelatedPatterns'
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import Block from '../../placeholders/Block'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import Rectangle from '../../placeholders/Rectangle'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
     return (
@@ -37,7 +38,7 @@ const Details: React.FC<{}> = () => {
     </tbody>
 </table>
 `}
-                css={`
+                css={removeIndent`
                     .header {
                         /* Background color */
                         background-color: #ddd;
@@ -93,7 +94,7 @@ const Details: React.FC<{}> = () => {
                                                 >
                                                     <Rectangle />
                                                 </th>
-                                            );
+                                            )
                                         })}
                                 </tr>
                             </thead>
@@ -110,10 +111,10 @@ const Details: React.FC<{}> = () => {
                                                             <td key={col} style={{ padding: '16px' }}>
                                                                 <Block numberOfBlocks={3} />
                                                             </td>
-                                                        );
+                                                        )
                                                     })}
                                             </tr>
-                                        );
+                                        )
                                     })}
                             </tbody>
                         </table>
@@ -124,7 +125,7 @@ const Details: React.FC<{}> = () => {
 
             <RelatedPatterns patterns={[Pattern.StickyHeader, Pattern.StickySections, Pattern.StickyTableColumn]} />
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

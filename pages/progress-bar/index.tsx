@@ -1,16 +1,17 @@
-import * as React from 'react';
-import Head from 'next/head';
-import { Pattern } from '../../constants/Pattern';
+import * as React from 'react'
+import Head from 'next/head'
+import { Pattern } from '../../constants/Pattern'
 
-import useInterval from '../../hooks/useInterval';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
+import useInterval from '../../hooks/useInterval'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
-    const [progress, setProgress] = React.useState(0);
+    const [progress, setProgress] = React.useState(0)
     useInterval(() => {
-        setProgress((v) => (v === 100 ? 0 : v + 1));
-    }, 1 * 100);
+        setProgress((v) => (v === 100 ? 0 : v + 1))
+    }, 1 * 100)
 
     return (
         <PatternLayout pattern={Pattern.ProgressBar}>
@@ -32,7 +33,7 @@ const Details: React.FC<{}> = () => {
     </div>
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .container {
                         /* Colors */
                         background-color: rgba(0, 0, 0, 0.1);
@@ -94,7 +95,7 @@ const Details: React.FC<{}> = () => {
                 </div>
             </BrowserFrame>
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

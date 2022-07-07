@@ -1,9 +1,10 @@
-import * as React from 'react';
-import Head from 'next/head';
+import * as React from 'react'
+import Head from 'next/head'
 
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
-import { Pattern } from '../../constants/Pattern';
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import { Pattern } from '../../constants/Pattern'
+import { removeIndent } from '../../utils/removeIndent'
 
 const Details: React.FC<{}> = () => {
     return (
@@ -27,7 +28,7 @@ const Details: React.FC<{}> = () => {
     <label class="container__label">Placeholder</label>
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .container {
                         position: relative;
                     }
@@ -100,7 +101,7 @@ placeholder of input isn't shown
                 </div>
             </BrowserFrame>
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details

@@ -1,17 +1,18 @@
-import * as React from 'react';
-import Head from 'next/head';
+import * as React from 'react'
+import Head from 'next/head'
 
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import { removeIndent } from '../../utils/removeIndent'
 
 interface StarProps {
-    isActive: boolean;
+    isActive: boolean
 }
 
 const Star: React.FC<StarProps> = ({ isActive }) => {
-    return <button className="p-rating-star">{isActive ? '★' : '☆'}</button>;
-};
+    return <button className="p-rating-star">{isActive ? '★' : '☆'}</button>
+}
 
 const Details: React.FC<{}> = () => {
     return (
@@ -32,7 +33,7 @@ const Details: React.FC<{}> = () => {
     <button class="rating__star">★</button>
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .rating {
                         /* Center the content */
                         align-items: center;
@@ -91,7 +92,7 @@ Note that we use \`flex-direction: row-reverse\` on the container
                 </div>
             </BrowserFrame>
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details
