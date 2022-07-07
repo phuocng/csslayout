@@ -1,13 +1,14 @@
-import * as React from 'react';
-import Head from 'next/head';
+import * as React from 'react'
+import Head from 'next/head'
 
-import { Pattern } from '../../constants/Pattern';
-import { PatternLayout } from '../../layouts/PatternLayout';
-import BrowserFrame from '../../placeholders/BrowserFrame';
-import Square from '../../placeholders/Square';
+import { Pattern } from '../../constants/Pattern'
+import { PatternLayout } from '../../layouts/PatternLayout'
+import BrowserFrame from '../../placeholders/BrowserFrame'
+import Square from '../../placeholders/Square'
+import { removeIndent } from '../../utils/removeIndent'
 
 interface CircularItemProps {
-    degree: number;
+    degree: number
 }
 
 const CircularItem: React.FC<CircularItemProps> = ({ degree, children }) => {
@@ -37,11 +38,11 @@ const CircularItem: React.FC<CircularItemProps> = ({ degree, children }) => {
                 {children}
             </div>
         </div>
-    );
-};
+    )
+}
 
 const Details: React.FC<{}> = () => {
-    const numItems = 6;
+    const numItems = 6
 
     return (
         <PatternLayout pattern={Pattern.CircularNavigation}>
@@ -69,7 +70,7 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .navigation {
                         position: relative;
                     }
@@ -133,13 +134,13 @@ const Details: React.FC<{}> = () => {
                                     <CircularItem key={i} degree={(360 / numItems) * i}>
                                         {i + 1}
                                     </CircularItem>
-                                );
+                                )
                             })}
                     </div>
                 </div>
             </BrowserFrame>
         </PatternLayout>
-    );
-};
+    )
+}
 
-export default Details;
+export default Details
