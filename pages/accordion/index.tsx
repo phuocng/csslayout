@@ -9,6 +9,7 @@ import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
 import Rectangle from '../../placeholders/Rectangle';
 import Triangle from '../../placeholders/Triangle';
+import { removeIndent } from '../../utils/removeIndent';
 
 interface ItemProps {
     index: number;
@@ -87,7 +88,7 @@ const Details: React.FC<{}> = () => {
     ...
 </div>
 `}
-                css={`
+                css={removeIndent`
                     .accordion {
                         /* Border */
                         border: 1px solid rgba(0, 0, 0, 0.3);

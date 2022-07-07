@@ -1,13 +1,13 @@
-import * as React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { Spacer } from '@1milligram/design'
+import * as React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { Spacer } from '@1milligram/design';
 
-import { RelatedPatterns } from '../../components/RelatedPatterns'
-import { Pattern } from '../../constants/Pattern'
-import { PatternLayout } from '../../layouts/PatternLayout'
-import BrowserFrame from '../../placeholders/BrowserFrame'
-import { removeIndent } from '../../utils/removeIndent'
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { PatternLayout } from '../../layouts/PatternLayout';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import { removeIndent } from '../../utils/removeIndent';
 
 const Details: React.FC<{}> = () => {
     return (
@@ -111,7 +111,7 @@ const Details: React.FC<{}> = () => {
                 ]}
             />
         </PatternLayout>
-    )
-}
+    );
+};
 
-export default Details
+export default Details;

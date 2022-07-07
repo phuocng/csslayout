@@ -1,21 +1,21 @@
-import * as React from 'react'
-import Head from 'next/head'
+import * as React from 'react';
+import Head from 'next/head';
 
-import { Pattern } from '../../constants/Pattern'
-import { PatternLayout } from '../../layouts/PatternLayout'
-import BrowserFrame from '../../placeholders/BrowserFrame'
-import { removeIndent } from '../../utils/removeIndent'
+import { Pattern } from '../../constants/Pattern';
+import { PatternLayout } from '../../layouts/PatternLayout';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import { removeIndent } from '../../utils/removeIndent';
 
 interface DotProps {
-    index: number
+    index: number;
 }
 
 const Details: React.FC<{}> = () => {
-    const [activeItem, setActiveItem] = React.useState(0)
+    const [activeItem, setActiveItem] = React.useState(0);
 
     const Dot: React.FC<DotProps> = ({ index }) => {
-        const isActive = index === activeItem
-        const click = () => setActiveItem(index)
+        const isActive = index === activeItem;
+        const click = () => setActiveItem(index);
         return (
             <li
                 style={{
@@ -29,8 +29,8 @@ const Details: React.FC<{}> = () => {
                 }}
                 onClick={click}
             />
-        )
-    }
+        );
+    };
 
     return (
         <PatternLayout pattern={Pattern.DotNavigation}>
@@ -108,7 +108,7 @@ const Details: React.FC<{}> = () => {
                 </div>
             </BrowserFrame>
         </PatternLayout>
-    )
-}
+    );
+};
 
-export default Details
+export default Details;

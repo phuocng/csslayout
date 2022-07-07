@@ -1,23 +1,23 @@
-import * as React from 'react'
-import Head from 'next/head'
-import { Spacer } from '@1milligram/design'
+import * as React from 'react';
+import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
-import { RelatedPatterns } from '../../components/RelatedPatterns'
-import { Pattern } from '../../constants/Pattern'
-import { PatternLayout } from '../../layouts/PatternLayout'
-import BrowserFrame from '../../placeholders/BrowserFrame'
-import Rectangle from '../../placeholders/Rectangle'
-import { removeIndent } from '../../utils/removeIndent'
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { PatternLayout } from '../../layouts/PatternLayout';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import Rectangle from '../../placeholders/Rectangle';
+import { removeIndent } from '../../utils/removeIndent';
 
 interface CheckboxProps {
-    isChecked: boolean
-    value: string
+    isChecked: boolean;
+    value: string;
 }
 
 const Details: React.FC<{}> = () => {
     const Checkbox: React.FC<CheckboxProps> = ({ isChecked, value, children }) => {
-        const [checked, setChecked] = React.useState(isChecked)
-        const click = () => setChecked((c) => !c)
+        const [checked, setChecked] = React.useState(isChecked);
+        const click = () => setChecked((c) => !c);
 
         return (
             <label
@@ -56,8 +56,8 @@ const Details: React.FC<{}> = () => {
                 </div>
                 {children}
             </label>
-        )
-    }
+        );
+    };
 
     return (
         <PatternLayout pattern={Pattern.CustomCheckboxButton}>
@@ -174,7 +174,7 @@ const Details: React.FC<{}> = () => {
             <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.CustomRadioButton, Pattern.RadioButtonGroup]} />
         </PatternLayout>
-    )
-}
+    );
+};
 
-export default Details
+export default Details;

@@ -1,23 +1,23 @@
-import * as React from 'react'
-import Head from 'next/head'
-import { Spacer } from '@1milligram/design'
+import * as React from 'react';
+import Head from 'next/head';
+import { Spacer } from '@1milligram/design';
 
-import { RelatedPatterns } from '../../components/RelatedPatterns'
-import { Pattern } from '../../constants/Pattern'
-import { PatternLayout } from '../../layouts/PatternLayout'
-import BrowserFrame from '../../placeholders/BrowserFrame'
-import Rectangle from '../../placeholders/Rectangle'
-import { removeIndent } from '../../utils/removeIndent'
+import { RelatedPatterns } from '../../components/RelatedPatterns';
+import { Pattern } from '../../constants/Pattern';
+import { PatternLayout } from '../../layouts/PatternLayout';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import Rectangle from '../../placeholders/Rectangle';
+import { removeIndent } from '../../utils/removeIndent';
 
 interface RadioProps {
-    value: string
+    value: string;
 }
 
 const Details: React.FC<{}> = () => {
-    const [selectedValue, setSelectedValue] = React.useState('1')
+    const [selectedValue, setSelectedValue] = React.useState('1');
 
     const Radio: React.FC<RadioProps> = ({ value, children }) => {
-        const click = () => setSelectedValue(value)
+        const click = () => setSelectedValue(value);
 
         return (
             <label
@@ -55,8 +55,8 @@ const Details: React.FC<{}> = () => {
                 </div>
                 {children}
             </label>
-        )
-    }
+        );
+    };
 
     return (
         <PatternLayout pattern={Pattern.CustomRadioButton}>
@@ -177,7 +177,7 @@ const Details: React.FC<{}> = () => {
             <Spacer size="extraLarge" />
             <RelatedPatterns patterns={[Pattern.CustomCheckboxButton, Pattern.RadioButtonGroup]} />
         </PatternLayout>
-    )
-}
+    );
+};
 
-export default Details
+export default Details;

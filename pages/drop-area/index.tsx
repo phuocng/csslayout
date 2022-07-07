@@ -1,10 +1,10 @@
-import * as React from 'react'
-import Head from 'next/head'
+import * as React from 'react';
+import Head from 'next/head';
 
-import { Pattern } from '../../constants/Pattern'
-import { PatternLayout } from '../../layouts/PatternLayout'
-import Block from '../../placeholders/Block'
-import BrowserFrame from '../../placeholders/BrowserFrame'
+import { Pattern } from '../../constants/Pattern';
+import { PatternLayout } from '../../layouts/PatternLayout';
+import Block from '../../placeholders/Block';
+import BrowserFrame from '../../placeholders/BrowserFrame';
 
 const Details: React.FC<{}> = () => {
     return (
@@ -63,7 +63,7 @@ const Details: React.FC<{}> = () => {
                 </div>
             </BrowserFrame>
         </PatternLayout>
-    )
-}
+    );
+};
 
-export default Details
+export default Details;

@@ -1,11 +1,11 @@
-import * as React from 'react'
-import Head from 'next/head'
+import * as React from 'react';
+import Head from 'next/head';
 
-import { Pattern } from '../../constants/Pattern'
-import { PatternLayout } from '../../layouts/PatternLayout'
-import BrowserFrame from '../../placeholders/BrowserFrame'
-import Circle from '../../placeholders/Circle'
-import { removeIndent } from '../../utils/removeIndent'
+import { Pattern } from '../../constants/Pattern';
+import { PatternLayout } from '../../layouts/PatternLayout';
+import BrowserFrame from '../../placeholders/BrowserFrame';
+import Circle from '../../placeholders/Circle';
+import { removeIndent } from '../../utils/removeIndent';
 
 const Details: React.FC<{}> = () => {
     return (
@@ -102,7 +102,7 @@ const Details: React.FC<{}> = () => {
                 </div>
             </BrowserFrame>
         </PatternLayout>
-    )
-}
+    );
+};
 
-export default Details
+export default Details;
