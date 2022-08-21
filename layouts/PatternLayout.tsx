@@ -2,7 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Heading, Spacer } from '@1milligram/design';
 
-import { Ad } from '../components/Ad';
+import { CssScanBanner } from '../components/CssScanBanner';
 import { Follow } from '../components/Follow';
 import { Pattern } from '../constants/Pattern';
 import { slug } from '../utils/slug';
@@ -30,12 +30,10 @@ export const PatternLayout: React.FC<{
 
             <div className="block-container">
                 <div className="page-home__hero">
-                    <Spacer size="extraLarge" />
+                    <Spacer size="large" />
                     <Heading level={1}>{pattern}</Heading>
                     <Spacer size="large" />
-                    <div className="block-ad">
-                        <Ad />
-                    </div>
+                    <CssScanBanner />
                     <Spacer size="medium" />
                 </div>
                 {children}
