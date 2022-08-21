@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Heading, Spacer } from '@1milligram/design';
 
 import { CoverCard } from '../components/CoverCard';
+import { CssScanBanner } from '../components/CssScanBanner';
 import { Pattern } from '../constants/Pattern';
 import { Layout } from '../layouts/Layout';
 
@@ -13,6 +14,8 @@ const HomePage = () => {
                     <Spacer size="extraLarge" />
                     <Heading level={1}>CSS Layout</Heading>
                     <Heading level={4}>Popular layouts and patterns made with CSS</Heading>
+                    <Spacer size="large" />
+                    <CssScanBanner />
                     <Spacer size="large" />
                     <div>Following covers are made with CSS only. Inspect them!</div>
                 </div>
