@@ -6,7 +6,7 @@ export const HeaderBlock = () => {
     const [totalStars, setTotalStars] = React.useState(0);
 
     React.useEffect(() => {
-        fetch('https://api.github.com/repos/1milligram/csslayout')
+        fetch('https://api.github.com/repos/phuocng/csslayout')
             .then((res) => res.json())
             .then((data) => setTotalStars(data.stargazers_count))
             .catch(console.log);
@@ -27,7 +27,7 @@ export const HeaderBlock = () => {
                     <Link href="/" passHref>
                         <HeaderLogo />
                     </Link>
-                    <Link href="https://github.com/1milligram/csslayout">
+                    <Link href="https://github.com/phuocng/csslayout">
                         <a className="block-header__cta">GitHub {totalStars}★</a>
                     </Link>
                 </div>
