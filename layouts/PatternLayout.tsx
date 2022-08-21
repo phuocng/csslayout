@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { Heading, Spacer } from '@1milligram/design';
 
 import { Ad } from '../components/Ad';
+import { Follow } from '../components/Follow';
 import { Pattern } from '../constants/Pattern';
 import { slug } from '../utils/slug';
 import { Layout } from './Layout';
@@ -38,6 +39,7 @@ export const PatternLayout: React.FC<{
                     <Spacer size="medium" />
                 </div>
                 {children}
+                <Follow />
                 <Spacer size="extraLarge" />
             </div>
         </Layout>
