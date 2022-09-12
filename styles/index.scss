@@ -1,35 +1,13 @@
-@import './reset';
+@import './common';
 
-// Blocks
-@import 'blocks/ad';
-@import 'blocks/browser-frame';
-@import 'blocks/code';
-@import 'blocks/cover';
-@import 'blocks/css-scan';
-@import 'blocks/follow';
-@import 'blocks/footer';
-@import 'blocks/header';
-@import 'blocks/layout';
+@import './blocks/card';
+@import './blocks/category';
+@import './blocks/hero';
+@import './blocks/follow';
+@import './blocks/footer';
+@import './blocks/header';
+@import './blocks/nav';
+@import './blocks/post';
 
-// Pages
-@import 'pages/home';
-
-// Patterns
-@import 'patterns/concave-corners';
-@import 'patterns/dropcap';
-@import 'patterns/dropdown';
-@import 'patterns/floating-label';
-@import 'patterns/folder-structure';
-@import 'patterns/inverted-corners';
-@import 'patterns/layered-card';
-@import 'patterns/masonry-grid';
-@import 'patterns/mega-menu';
-@import 'patterns/menu';
-@import 'patterns/nested-dropdowns';
-@import 'patterns/price-tag';
-@import 'patterns/radio-button-group';
-@import 'patterns/star';
-@import 'patterns/three-dimensions-card';
-@import 'patterns/tooltip';
-@import 'patterns/tree-diagram';
-@import 'patterns/zigzag-timeline';
+// Themes
+@import './themes/dracula.scss';

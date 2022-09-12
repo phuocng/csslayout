@@ -1,9 +1,0 @@
-.p-floating-container label {
-    opacity: 0;
-}
-
-.p-floating-container input:not(:placeholder-shown) + label {
-    background: #fff;
-    transform: translate(0, -50%);
-    opacity: 1;
-}

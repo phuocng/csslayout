@@ -1,0 +1,30 @@
+:root {
+    --category__name-font-size: 1.5rem;
+    --category__post-num-columns: 1;
+}
+.category__name {
+    font-size: var(--category__name-font-size);
+}
+.category__posts {
+    display: grid;
+    grid-template-columns: repeat(var(--category__post-num-columns), 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+.category__link {
+    background: #4338ca;
+    border-radius: 9999px;
+    color: #fff;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    margin: 1rem auto;
+    width: 12rem;
+}
+@media (min-width: 768px) {
+    :root {
+        --category__name-font-size: 2rem;
+        --category__post-num-columns: 2;
+    }
+}

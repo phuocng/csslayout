@@ -1,0 +1,29 @@
+:root {
+    --container-width: auto;
+}
+
+body {
+    background: #e2e8f0;
+    font-family: Space Grotesk, -apple-system, Arial, ui-sans-serif, system-ui;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0;
+}
+.container {
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: var(--container-width);
+}
+.divider {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.text--primary {
+    color: #6366f1;
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --container-width: 48rem;
+    }
+}

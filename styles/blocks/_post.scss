@@ -1,0 +1,127 @@
+:root {
+    --post__heading-font-size: 2rem;
+    --post__heading-line-height: 1.25;
+    --post__content-heading-line-height: 1.25;
+}
+
+.post {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.1);
+    margin: 2rem 0 2rem 0;
+    padding: 2rem 1rem 1rem 1rem;
+    position: relative;
+}
+
+.post__heading {
+    color: #6366f1;
+    font-size: var(--post__heading-font-size);
+    font-weight: 700;
+    line-height: var(--post__heading-line-height);
+    text-align: center;
+}
+
+.post__content {
+    line-height: 1.5;
+
+    a {
+        color: #6366f1;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+
+    blockquote {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 0.5rem;
+        margin: 1rem 0;
+        padding: 0.25rem 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        line-height: var(--post__content-heading-line-height);
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: var(--post__content-heading-line-height);
+    }
+
+    hr {
+        background: rgba(0, 0, 0, 0.1);
+        height: 1px;
+        border: none;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    ol {
+        counter-reset: ol-step-counter;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    ol li {
+        counter-increment: ol-step-counter;
+        padding-bottom: 0.25rem;
+        padding-left: 2rem;
+    }
+    ol li::before {
+        background-color: #e5e7eb;
+        border-radius: 50%;
+        content: counter(ol-step-counter);
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        position: absolute;
+        margin-left: -2rem;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    p {
+        margin: 1rem 0;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        padding: 0.5rem;
+    }
+
+    th {
+        font-weight: normal;
+        text-align: left;
+    }
+
+    thead {
+        background: #d1d5db;
+    }
+
+    tr {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    ul {
+        margin: 0;
+        padding: 0 0 0 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --post__heading-font-size: 2.5rem;
+        --post__content-heading-line-height: 1.5;
+    }
+}
