@@ -46,9 +46,12 @@ module.exports = function(eleventyConfig) {
         return `<div class="lines">${content}</div>`;
     });
 
-    eleventyConfig.addShortcode('rectangle', function(width) {
+    // `direction` can be `hor` or `ver`
+    eleventyConfig.addShortcode('rectangle', function(dir, size, width) {
+        const direction = dir || 'hor';
+        const s = size || 'sm';
         const w = width || randomInteger(1, 4) * 20;
-        return `<div class="rectangle rectangle--${w}"></div>`;
+        return `<div class="rectangle rectangle--${direction} rectangle--${s} rectangle--${w}"></div>`;
     });
     eleventyConfig.addShortcode('square', function() {
         return `<div class="square"></div>`;
