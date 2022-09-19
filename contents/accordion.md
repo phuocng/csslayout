@@ -85,5 +85,5 @@ keywords: css accordion, css flexbox
 ```
 
 {% demo %}
-{% include "covers/accordion.njk" %}
+{% include "patterns/accordion.njk" %}
 {% enddemo %}

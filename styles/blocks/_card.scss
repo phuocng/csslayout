@@ -13,6 +13,11 @@
     text-decoration: none;
 }
 .card__cover {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
     height: 8rem;
     width: 100%;
     margin-bottom: 0.5rem;
