@@ -3,6 +3,8 @@ const markdownIt = require('markdown-it');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const htmlmin = require('html-minifier');
 
+const randomInteger = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
 module.exports = function(eleventyConfig) {
     // Copy the `img` and `css` folders to the output
     eleventyConfig.addPassthroughCopy('assets');
@@ -40,8 +42,9 @@ module.exports = function(eleventyConfig) {
         return `<div class="lines">${content}</div>`;
     });
 
-    eleventyConfig.addShortcode('rectangle', function() {
-        return `<div class="rectangle"></div>`;
+    eleventyConfig.addShortcode('rectangle', function(width) {
+        const w = width || randomInteger(1, 4) * 20;
+        return `<div class="rectangle rectangle--${w}"></div>`;
     });
     eleventyConfig.addShortcode('square', function() {
         return `<div class="square"></div>`;
