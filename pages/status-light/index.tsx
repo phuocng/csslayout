@@ -11,49 +11,17 @@ const Details: React.FC<{}> = () => {
     return (
         <PatternLayout pattern={Pattern.StatusLight}>
             <Head>
-                <meta name="description" content="Create a status light with CSS flexbox" />
+                <meta name="description" content="" />
                 <meta name="og:description" content="Create a status light with CSS flexbox" />
                 <meta name="twitter:description" content="Create a status light with CSS flexbox" />
-                <meta name="keywords" content="css flexbox, css status light" />
+                <meta name="keywords" content="" />
             </Head>
             <BrowserFrame
                 html={`
-<div class="container">
-    <!-- Status light -->
-    <div class="container__status"></div>
 
-    <!-- Content -->
-    <div class="container__content">
-        ...
-    </div>
-</div>
 `}
                 css={`
-                    .container {
-                        /* Center the content */
-                        align-items: center;
-                        display: flex;
-                    }
-
-                    .container__status {
-                        /* Background color */
-                        background-color: rgb(66, 153, 225);
-
-                        /* Rounded border */
-                        border-radius: 9999px;
-
-                        /* Size */
-                        height: 8px;
-                        width: 8px;
-
-                        /* Spacing */
-                        margin-right: 8px;
-                    }
-
-                    .container__content {
-                        /* Take available width */
-                        flex: 1;
-                    }
+                    
                 `}
             >
                 <div
