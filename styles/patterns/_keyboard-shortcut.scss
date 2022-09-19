@@ -1,0 +1,12 @@
+.keyboard-shortcut {
+    /* Background and color */
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.25rem;
+    color: rgba(0, 0, 0, 0.7);
+
+    /* Bottom shadow */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px -4px 0px inset, rgba(0, 0, 0, 0.4) 0px 1px 1px;
+
+    /* Spacing */
+    padding: 0.25rem 0.5rem;
+}
