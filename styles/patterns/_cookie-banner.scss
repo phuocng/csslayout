@@ -1,0 +1,17 @@
+.cookie-banner {
+    border: 1px solid rgba(0,0,0,.3);
+    border-radius: 0.25rem;
+
+    height: 100%;
+    width: 100%;
+
+    align-items: end;
+    display: flex;
+}
+
+.cookie-banner__content {    
+    border-top: 1px solid rgba(0,0,0,.3);
+    /* Take available width */
+    flex: 1;
+    padding: 0 0.5rem;
+}
