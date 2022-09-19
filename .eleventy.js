@@ -54,8 +54,9 @@ module.exports = function(eleventyConfig) {
         return `<div class="square"></div>`;
     });
     // `corner` can be one of `t`, `r`, `b`, `l`, `tr`, `br`, `tl`, `bl`
-    eleventyConfig.addShortcode('triangle', function(corner) {
-        return `<div class="triangle triangle--${corner}"></div>`;
+    eleventyConfig.addShortcode('triangle', function(corner, size) {
+        const s = size || 'sm';
+        return `<div class="triangle triangle--${corner} triangle--${s}"></div>`;
     });
 
     // Get the first `n` elements of a collection.

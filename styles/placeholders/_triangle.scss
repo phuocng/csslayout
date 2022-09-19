@@ -5,33 +5,42 @@
 }
 .triangle--t {
     border-color: transparent transparent rgba(0, 0, 0, .3) transparent;
-    border-width: 0 0.5rem 0.5rem 0.5rem;
+    border-width: 0 var(--triangle-size) var(--triangle-size) var(--triangle-size);
 }
 .triangle--r {
     border-color: transparent transparent transparent rgba(0, 0, 0, .3);
-    border-width: 0.5rem 0 0.5rem 1rem;
+    border-width: var(--triangle-size) 0 var(--triangle-size) 1rem;
 }
 .triangle--b {
     border-color: rgba(0, 0, 0, .3) transparent transparent transparent;
-    border-width: 0.5rem 0.5rem 0 0.5rem;
+    border-width: var(--triangle-size) var(--triangle-size) 0 var(--triangle-size);
 }
 .triangle--l {
     border-color: transparent rgba(0, 0, 0, .3) transparent transparent;
-    border-width: 0.5rem 1rem 0.5rem 0;
+    border-width: var(--triangle-size) 1rem var(--triangle-size) 0;
 }
 .triangle--tr {
     border-color: transparent rgba(0, 0, 0, .3) transparent transparent;
-    border-width: 0 0.5rem 0.5rem 0;
+    border-width: 0 var(--triangle-size) var(--triangle-size) 0;
 }
 .triangle--br {
     border-color: transparent transparent rgba(0, 0, 0, .3) transparent;
-    border-width: 0 0 0.5rem 0.5rem;
+    border-width: 0 0 var(--triangle-size) var(--triangle-size);
 }
 .triangle--bl {            
     border-color: transparent transparent transparent rgba(0, 0, 0, .3);
-    border-width: 0.5rem 0 0 0.5rem;
+    border-width: var(--triangle-size) 0 0 var(--triangle-size);
 }
 .triangle--tl {
     border-color: rgba(0, 0, 0, .3) transparent transparent transparent;
-    border-width: 0.5rem 0.5rem 0 0;
+    border-width: var(--triangle-size) var(--triangle-size) 0 0;
+}
+.triangle--sm {
+    --triangle-size: 0.5rem;
+}
+.triangle--md {
+    --triangle-size: 2rem;
+}
+.triangle--lg {
+    --triangle-size: 4rem;
 }
