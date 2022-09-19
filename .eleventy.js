@@ -50,7 +50,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addShortcode('rectangle', function(dir, size, width) {
         const direction = dir || 'hor';
         const s = size || 'sm';
-        const w = width || randomInteger(1, 4) * 20;
+        const w = width || randomInteger(2, 4) * 20;
         return `<div class="rectangle rectangle--${direction} rectangle--${s} rectangle--${w}"></div>`;
     });
     eleventyConfig.addShortcode('square', function(size) {
