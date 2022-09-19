@@ -1,0 +1,19 @@
+.dot-leader {
+    width: 100%;
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0.25rem 0;
+}
+
+.dot-leader__dots {
+    /* Bottom border */
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+
+    /* Take remaining width */
+    flex: 1;
+
+    /* Spacing */
+    margin: 0 0.25rem;
+}
