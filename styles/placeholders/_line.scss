@@ -1,0 +1,14 @@
+.line {
+    background: rgba(0, 0, 0, 0.3);
+}
+.line--hor {
+    height: 1px;
+    width: 100%;
+}
+.line--ver {
+    height: 100%;
+    width: 1px;
+}
+.lines .line {
+    margin-bottom: 0.25rem;
+}

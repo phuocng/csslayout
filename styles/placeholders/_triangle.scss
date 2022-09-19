@@ -1,0 +1,37 @@
+.triangle {
+    border-style: solid;
+    height: 0;
+    width: 0;
+}
+.triangle--t {
+    border-color: transparent transparent rgba(0, 0, 0, .3) transparent;
+    border-width: 0 0.5rem 0.5rem 0.5rem;
+}
+.triangle--r {
+    border-color: transparent transparent transparent rgba(0, 0, 0, .3);
+    border-width: 0.5rem 0 0.5rem 1rem;
+}
+.triangle--b {
+    border-color: rgba(0, 0, 0, .3) transparent transparent transparent;
+    border-width: 0.5rem 0.5rem 0 0.5rem;
+}
+.triangle--l {
+    border-color: transparent rgba(0, 0, 0, .3) transparent transparent;
+    border-width: 0.5rem 1rem 0.5rem 0;
+}
+.triangle--tr {
+    border-color: transparent rgba(0, 0, 0, .3) transparent transparent;
+    border-width: 0 0.5rem 0.5rem 0;
+}
+.triangle--br {
+    border-color: transparent transparent rgba(0, 0, 0, .3) transparent;
+    border-width: 0 0 0.5rem 0.5rem;
+}
+.triangle--bl {            
+    border-color: transparent transparent transparent rgba(0, 0, 0, .3);
+    border-width: 0.5rem 0 0 0.5rem;
+}
+.triangle--tl {
+    border-color: rgba(0, 0, 0, .3) transparent transparent transparent;
+    border-width: 0.5rem 0.5rem 0 0;
+}

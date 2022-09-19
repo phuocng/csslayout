@@ -15,6 +15,33 @@ module.exports = function(eleventyConfig) {
     });
     eleventyConfig.setLibrary('md', markdownLibrary);
 
+    // Shortcodes
+
+    eleventyConfig.addShortcode('circle', function() {
+        return `<div class="circle"></div>`;
+    });
+    // `direction` can be `hor` or `ver`
+    eleventyConfig.addShortcode('line', function(dir) {
+        return `<div class="line line--${dir}"></div>`;
+    });
+    eleventyConfig.addShortcode('lines', function(dir, numLines) {
+        const content = Array(numLines).fill('').map(_ => {
+            return `<div class="line line--${dir}"></div>`
+        }).join('');
+        return `<div class="lines">${content}</div>`;
+    });
+
+    eleventyConfig.addShortcode('rectangle', function() {
+        return `<div class="rectangle"></div>`;
+    });
+    eleventyConfig.addShortcode('square', function() {
+        return `<div class="square"></div>`;
+    });
+    // `corner` can be one of `t`, `r`, `b`, `l`, `tr`, `br`, `tl`, `bl`
+    eleventyConfig.addShortcode('triangle', function(corner) {
+        return `<div class="triangle triangle--${corner}"></div>`;
+    });
+
     // Get the first `n` elements of a collection.
     eleventyConfig.addFilter("head", (array, n) => {
         if (!Array.isArray(array) || array.length === 0) {

@@ -9,5 +9,15 @@
 @import './blocks/nav';
 @import './blocks/post';
 
+// Cover
+@import './covers/accordion';
+
+// Placeholders
+@import './placeholders/circle';
+@import './placeholders/line';
+@import './placeholders/rectangle';
+@import './placeholders/square';
+@import './placeholders/triangle';
+
 // Themes
 @import './themes/dracula.scss';
