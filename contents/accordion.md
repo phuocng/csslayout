@@ -5,8 +5,6 @@ description: Create an accordion with CSS flexbox
 keywords: css accordion, css flexbox
 ---
 
-{% include "covers/accordion.njk" %}
-
 ## HTML
 
 ```html
@@ -85,3 +83,7 @@ keywords: css accordion, css flexbox
     display: block;
 }
 ```
+
+{% demo %}
+{% include "covers/accordion.njk" %}
+{% enddemo %}

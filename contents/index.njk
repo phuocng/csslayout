@@ -15,8 +15,14 @@ eleventyExcludeFromCollections: true
         <div class="category__posts">            
             <div class="card__item">
                 <a class="card__link" href="/accordion/">
-                    {% include "covers/accordion.njk" %}
+                    <div class="card__cover">{% include "covers/accordion.njk" %}</div>
                     <div class="card__title">Accordion</div>
+                </a>
+            </div>
+            <div class="card__item">
+                <a class="card__link" href="/arrow-buttons/">
+                    <div class="card__cover">{% include "covers/arrow-buttons.njk" %}</div>
+                    <div class="card__title">Arrow buttons</div>
                 </a>
             </div>
         </div>

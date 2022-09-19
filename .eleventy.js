@@ -17,6 +17,15 @@ module.exports = function(eleventyConfig) {
 
     // Shortcodes
 
+    eleventyConfig.addPairedShortcode('demo', function(content) {
+        return `<div class="example example--border">
+            <div class="example__ribbon example__ribbon--tr">
+                <span class="example__title">Demo</span>
+            </div>
+            <div class="example__content example__content--medium">${content}</div>
+       </div>`;
+    });
+
     eleventyConfig.addShortcode('circle', function() {
         return `<div class="circle"></div>`;
     });
