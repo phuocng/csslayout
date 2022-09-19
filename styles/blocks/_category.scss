@@ -8,8 +8,9 @@
 .category__posts {
     display: grid;
     grid-template-columns: repeat(var(--category__post-num-columns), 1fr);
-    column-gap: 1rem;
-    row-gap: 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1.5rem rgb(0 0 0 / 10%);    
 }
 .category__link {
     background: #4338ca;
@@ -22,9 +23,19 @@
     margin: 1rem auto;
     width: 12rem;
 }
+@media (min-width: 640px) {
+    :root {
+        --category__post-num-columns: 2;
+    }
+}
 @media (min-width: 768px) {
     :root {
         --category__name-font-size: 2rem;
+        --category__post-num-columns: 3;
+    }
+}
+@media (min-width: 1024px) {
+    :root {
         --category__post-num-columns: 5;
     }
 }
