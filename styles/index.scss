@@ -1,6 +1,5 @@
 @import './common';
 
-@import './blocks/card';
 @import './blocks/category';
 @import './blocks/example';
 @import './blocks/hero';
@@ -8,6 +7,7 @@
 @import './blocks/footer';
 @import './blocks/header';
 @import './blocks/nav';
+@import './blocks/pattern';
 @import './blocks/post';
 
 // Patterns
@@ -16,6 +16,7 @@
 @import './patterns/avatar';
 @import './patterns/avatar-list';
 @import './patterns/badge';
+@import './patterns/card';
 @import './patterns/centering';
 @import './patterns/close-button';
 
