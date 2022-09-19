@@ -1,0 +1,57 @@
+.triangle-buttons__triangle {
+    border-style: solid;
+
+    /* Size */
+    height: 0;
+    width: 0;
+}
+
+.triangle-buttons__triangle--t {
+    border-color: transparent transparent rgba(0, 0, 0, 0.3);
+    border-width: 0 0.5rem 0.5rem;
+}
+
+.triangle-buttons__triangle--r {
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.3);
+    border-width: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.triangle-buttons__triangle--b {
+    border-color: rgba(0, 0, 0, 0.3) transparent transparent;
+    border-width: 0.5rem 0.5rem 0;
+}
+
+.triangle-buttons__triangle--l {
+    border-color: transparent rgba(0, 0, 0, 0.3) transparent transparent;
+    border-width: 0.5rem 0.5rem 0.5rem 0;
+}
+
+/* Demo */
+.triangle-buttons {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.triangle-buttons__corner {
+    position: absolute;
+}
+.triangle-buttons__corner--t {
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0%);
+}
+.triangle-buttons__corner--r {
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.triangle-buttons__corner--b {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.triangle-buttons__corner--l {
+    left: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
