@@ -1,0 +1,17 @@
+.avatar {
+    height: 8rem;
+    width: 8rem;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Rounded border */
+    border-radius: 50%;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.avatar__image {
+    height: 50%;
+    width: 50%;
+}
