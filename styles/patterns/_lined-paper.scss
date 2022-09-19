@@ -1,0 +1,15 @@
+.lined-paper {
+    /* Lined background */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0px);
+    background-size: 100% 2em;
+
+    /*
+    Display the content on top of the lines.
+    The line height must be the same as the background size defined above
+    */
+    background-position-y: 1.5rem;
+    line-height: 2em;
+
+    /* Demo */
+    overflow: hidden;
+}
