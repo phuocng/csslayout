@@ -28,8 +28,10 @@ module.exports = function(eleventyConfig) {
        </div>`;
     });
 
-    eleventyConfig.addShortcode('circle', function() {
-        return `<div class="circle"></div>`;
+    // `size` can be `sm`, `md`, `lg`
+    eleventyConfig.addShortcode('circle', function(size) {
+        const s = size || 'sm';
+        return `<div class="circle circle--${s}"></div>`;
     });
     // `direction` can be `hor` or `ver`
     eleventyConfig.addShortcode('line', function(dir) {

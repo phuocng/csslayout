@@ -1,6 +1,15 @@
 .circle {
     background: rgba(0, 0, 0, .3);
     border-radius: 9999px;
-    height: 0.5rem;
-    width: 0.5rem;
+    height: var(--var-circle-size);
+    width: var(--var-circle-size);
+}
+.circle--sm {
+    --var-circle-size: 0.5rem;
+}
+.circle--md {
+    --var-circle-size: 2rem;
+}
+.circle--lg {
+    --var-circle-size: 4rem;
 }
