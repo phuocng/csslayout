@@ -1,0 +1,32 @@
+.swatch {
+    /* Wrap the items */
+    display: flex;
+    flex-wrap: wrap;
+}
+.swatch__item {
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 1.5rem;
+    width: 1.5rem;
+
+    /* Space between items */
+    margin: 0.5rem;
+}
+.swatch__item--1st {
+    background-color: rgba(0, 0, 0, .1);
+}
+.swatch__item--2nd {
+    background-color: rgba(0, 0, 0, .2);
+}
+.swatch__item--3rd {
+    background-color: rgba(0, 0, 0, .3);
+}
+.swatch__item--4th {
+    background-color: rgba(0, 0, 0, .4);
+}
+.swatch__item--5th {
+    background-color: rgba(0, 0, 0, .5);
+}
+.swatch__item--6th {
+    background-color: rgba(0, 0, 0, .6);
+}
