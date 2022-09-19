@@ -1,6 +1,15 @@
 .square {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 0.25rem;
-    height: 100%;
-    width: 100%;
+    height: var(--square-size);
+    width: var(--square-size);
+}
+.square--sm {
+    --square-size: 0.5rem;
+}
+.square--md {
+    --square-size: 2rem;
+}
+.square--lg {
+    --square-size: 4rem;
 }

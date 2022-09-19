@@ -53,8 +53,9 @@ module.exports = function(eleventyConfig) {
         const w = width || randomInteger(1, 4) * 20;
         return `<div class="rectangle rectangle--${direction} rectangle--${s} rectangle--${w}"></div>`;
     });
-    eleventyConfig.addShortcode('square', function() {
-        return `<div class="square"></div>`;
+    eleventyConfig.addShortcode('square', function(size) {
+        const s = size || 'sm';
+        return `<div class="square square--${s}"></div>`;
     });
     // `corner` can be one of `t`, `r`, `b`, `l`, `tr`, `br`, `tl`, `bl`
     eleventyConfig.addShortcode('triangle', function(corner, size) {
