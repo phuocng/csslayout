@@ -1,0 +1,40 @@
+.stacked-cards {
+    /* Used to position the stacked cards */
+    position: relative;
+
+    /* Demo */
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    height: 6rem;
+    width: 6rem;
+}
+
+.stacked-cards__card {
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Displayed under the container */
+    z-index: 1;
+
+    /* Background and border colors */
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #d1d5db;
+}
+.stacked-cards__card--1st {
+    /* Rotate it. Change the number of degrees for the following cards */
+    transform: rotate(5deg);
+}
+.stacked-cards__card--2nd {
+    /* Rotate it. Change the number of degrees for the following cards */
+    transform: rotate(10deg);
+}
+.stacked-cards__card--3rd {
+    /* Rotate it. Change the number of degrees for the following cards */
+    transform: rotate(15deg);
+}
