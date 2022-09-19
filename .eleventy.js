@@ -33,11 +33,13 @@ module.exports = function(eleventyConfig) {
     });
     // `direction` can be `hor` or `ver`
     eleventyConfig.addShortcode('line', function(dir) {
-        return `<div class="line line--${dir}"></div>`;
+        const w = randomInteger(1, 4) * 20;
+        return `<div class="line line--${dir} line--${w}"></div>`;
     });
     eleventyConfig.addShortcode('lines', function(dir, numLines) {
         const content = Array(numLines).fill('').map(_ => {
-            return `<div class="line line--${dir}"></div>`
+            const w = randomInteger(1, 4) * 20;
+            return `<div class="line line--${dir} line--${w}"></div>`
         }).join('');
         return `<div class="lines">${content}</div>`;
     });
