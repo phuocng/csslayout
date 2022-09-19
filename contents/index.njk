@@ -10,20 +10,17 @@ eleventyExcludeFromCollections: true
         <a class="hero__button" href="https://github.com/phuocng/csslayout">Star me on GitHub · {{ github.stargazers }}★</a>
     </div>
 
-    {% for cat in collections.categories %}
-    {% set posts = collections.groupByCategories[cat] %}
     <div class="category">
-        <h2 class="category__name">{{ cat }}</h2>
+        <h2 class="category__name">Display</h2>
         <div class="category__posts">            
-            {%- for post in posts | head(8) -%}
             <div class="card__item">
-                <a class="card__link" href="{{ post.url }}">{{ post.data.title }}</a>
+                <a class="card__link" href="/accordion/">
+                    {% include "covers/accordion.njk" %}
+                    <div class="card__title">Accordion</div>
+                </a>
             </div>
-            {%- endfor -%}
         </div>
-        <a class="category__link" href="/{{ cat | lower | slug }}">See all {{ posts | length }} helpers</a>
     </div>
-    {% endfor %}
 
     {% include "follow.njk" %}
 </div>

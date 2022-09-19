@@ -1,0 +1,25 @@
+<div class="accordion">
+    <div class="accordion__item accordion__item--collapsed">
+        <div class="accordion__header">
+            <div class="accordion__toggle">
+                {% triangle "r" %}
+            </div>
+            <div class="accordion__title">
+                {% rectangle %}
+            </div>
+        </div>
+    </div>
+    <div class="accordion__item accordion__item--expanded">
+        <div class="accordion__header">
+            <div class="accordion__toggle">
+                {% triangle "b" %}
+            </div>
+            <div class="accordion__title">
+                {% rectangle %}
+            </div>
+        </div>
+        <div class="accordion__content">
+            {% lines "hor", 5 %}
+        </div>
+    </div>
+</div>
