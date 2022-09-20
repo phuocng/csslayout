@@ -1,0 +1,11 @@
+<table class="sticky-table-column">
+    <tbody>
+        {% for i in range(0, 3) -%}
+        <tr>
+            <td class="sticky-table-column__sticky">{% rectangle %}</td>
+            <td>{% lines "hor", 3 %}</td>
+            <td>{% lines "hor", 2 %}</td>
+        </tr>
+        {%- endfor %}
+    </tbody>
+</table>
