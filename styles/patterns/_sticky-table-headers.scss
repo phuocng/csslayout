@@ -1,18 +1,20 @@
-.sticky-table-column {
+.sticky-table-headers {
     /* Demo */
     border-collapse: collapse;
     width: 100%;
 }
 
-.sticky-table-column tbody {
+.sticky-table-headers tbody {
     border-bottom: 1px solid #d1d5db;
 }
-
-.sticky-table-column tr {
+.sticky-table-headers thead td {
+    padding: 0.25rem;
+}
+.sticky-table-headers tr {
     border-top: 1px solid #d1d5db;
 }
 
-.sticky-table-column__sticky {
+.sticky-table-headers__sticky {
     /* Background color */
     background-color: #9ca3af;
 
@@ -22,6 +24,4 @@
 
     /* Displayed on top of other rows when scrolling */
     z-index: 9999;
-
-    padding: 0 0.25rem;
 }

@@ -21,7 +21,7 @@ keywords: css position sticky, css sticky table column
     <tbody>
         <tr>
             <td class="sticky-table-column__sticky">...</td>
-            <!-- Other columns -->
+            <!-- Other columns ... -->
         </tr>
     </tbody>
 </table>
@@ -30,7 +30,7 @@ keywords: css position sticky, css sticky table column
 ## CSS
 
 ```css
-.sticky-table-column__sticky {
+.sticky-table-headers__sticky {
     /* Background color */
     background-color: #9ca3af;
 
