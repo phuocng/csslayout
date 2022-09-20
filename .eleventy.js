@@ -27,6 +27,15 @@ module.exports = function(eleventyConfig) {
             <div class="example__content example__content--medium">${content}</div>
        </div>`;
     });
+    eleventyConfig.addPairedShortcode('pattern', function(content, name) {
+        const href = `/${name.toLowerCase().split(' ').join('-')}/`;
+        return `<div class="pattern__item">
+            <a class="pattern__link" href="${href}">
+                <div class="pattern__cover">${content}</div>
+                <div class="pattern__title">${name}</div>
+            </a>
+        </div>`;
+    });
 
     // `size` can be `sm`, `md`, `lg`
     eleventyConfig.addShortcode('circle', function(size) {
