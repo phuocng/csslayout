@@ -1,0 +1,25 @@
+.presence-indicator {
+    position: relative;
+
+    /* Demo */
+    background-color: #d1d5db;
+    border-radius: 9999px;
+    height: 6rem;
+    width: 6rem;
+}
+
+.presence-indicator__indicator {
+    /* Shown at the bottom right corner */
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    transform: translate(50%, 50%);
+
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 1rem;
+    width: 1rem;
+
+    /* Background color */
+    background-color: #22c55e;
+}
