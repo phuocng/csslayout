@@ -1,0 +1,38 @@
+.modal {
+    /* Border */
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+
+    display: flex;
+    flex-direction: column;
+
+    /* Demo */
+    height: 8rem;
+    width: 8rem;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+
+    /* Border */
+    border-bottom: 1px solid #d1d5db;
+    
+    padding: 0.25rem 0.5rem;
+}
+
+.modal__body {
+    flex: 1;
+    overflow: auto;
+}
+
+.modal__footer {
+    display: flex;
+    /* Push the buttons to the right */
+    justify-content: flex-end;
+    
+    /* Border */
+    border-top: 1px solid #d1d5db;
+
+    padding: 0.25rem 0.5rem;
+}
