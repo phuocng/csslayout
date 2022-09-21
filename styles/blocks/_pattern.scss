@@ -5,7 +5,6 @@
     text-align: center;
 }
 .pattern__link {
-    color: #6366f1;
     text-align: center;
     text-decoration: none;
 }
@@ -18,11 +17,13 @@
 
     pointer-events: none;
 
+    color: #000;
     height: 8rem;
     width: 100%;
     margin-bottom: 0.5rem;
 }
 .pattern__title {
+    color: #6366f1;
     font-size: 1.25rem;
     font-weight: 500;
 }
