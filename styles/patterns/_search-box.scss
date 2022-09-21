@@ -1,0 +1,23 @@
+.search-box  {
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+
+    display: flex;
+    align-items: center;
+
+    /* Demo */
+    padding: 0.25rem;
+}
+
+.search-box__input {
+    border-color: transparent;
+
+    /* Take available width */
+    flex: 1;
+
+    height: 2rem;
+    margin-right: 0.25rem;
+
+    /* Demo */
+    width: 6rem;
+}
