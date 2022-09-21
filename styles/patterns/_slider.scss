@@ -1,0 +1,39 @@
+.slider {
+    /* Content is centered horizontally */
+    align-items: center;
+    display: flex;
+
+    /* Size */
+    height: 2rem;
+
+    /* Demo */
+    width: 100%;
+}
+
+.slider__left {
+    height: 2px;
+
+    /* Colors */
+    background-color: #d1d5db;
+}
+
+.slider__circle {
+    /* Size */
+    height: 2rem;
+    width: 2rem;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Colors */
+    background-color: #3b82f6;
+}
+
+.slider__right {
+    /* Take the remaining width */
+    flex: 1;
+    height: 2px;
+
+    /* Colors */
+    background-color: #d1d5db;
+}
