@@ -122,5 +122,12 @@ eleventyExcludeFromCollections: true
         </div>
     </div>
 
+    <div class="category">
+        <h2 class="category__name">Navigation</h2>
+        <div class="category__posts">
+            {% pattern "Breadcrumb" %}{% include "covers/breadcrumb.njk" %}{% endpattern %}
+        </div>
+    </div>
+
     {% include "follow.njk" %}
 </div>
