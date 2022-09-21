@@ -77,5 +77,5 @@ keywords: css price tag
 ```
 
 {% demo %}
-{% include "patterns/price-tag.njk" %}
+{% include "covers/price-tag.njk" %}
 {% enddemo %}

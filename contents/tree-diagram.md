@@ -128,5 +128,5 @@ You can add a root item to the tree:
 ```
 
 {% demo %}
-{% include "patterns/tree-diagram.njk" %}
+{% include "covers/tree-diagram.njk" %}
 {% enddemo %}

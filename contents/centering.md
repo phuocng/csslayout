@@ -24,5 +24,5 @@ keywords: css centering, css flexbox
 ```
 
 {% demo %}
-{% include "patterns/centering.njk" %}
+{% include "covers/centering.njk" %}
 {% enddemo %}

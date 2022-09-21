@@ -58,5 +58,5 @@ keywords: css feature comparison, css flexbox
 ```
 
 {% demo %}
-{% include "patterns/feature-comparison.njk" %}
+{% include "covers/feature-comparison.njk" %}
 {% enddemo %}

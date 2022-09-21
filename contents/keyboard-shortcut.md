@@ -31,5 +31,5 @@ We use the native `kbd` tag to display the keyboard shortcut.
 ```
 
 {% demo %}
-{% include "patterns/keyboard-shortcut.njk" %}
+{% include "covers/keyboard-shortcut.njk" %}
 {% enddemo %}

@@ -33,4 +33,4 @@ keywords: css column-count, css column-gap, css masonry, css masonry grid
 }
 ```
 
-{% demo %}{% include "patterns/masonry-grid.njk" %}{% enddemo %}
+{% demo %}{% include "covers/masonry-grid.njk" %}{% enddemo %}

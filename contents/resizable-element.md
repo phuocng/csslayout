@@ -143,5 +143,5 @@ keywords: css resizable, css resize cursor
 You can move the mouse over each squares located at the corners and the middle of sides to see the cursors which indicate the associated side can be resized.
 
 {% demo %}
-{% include "patterns/resizable-element.njk" %}
+{% include "covers/resizable-element.njk" %}
 {% enddemo %}

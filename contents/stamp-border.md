@@ -38,5 +38,5 @@ keywords: css radial gradient, css stamp border
 ```
 
 {% demo %}
-{% include "patterns/stamp-border.njk" %}
+{% include "covers/stamp-border.njk" %}
 {% enddemo %}

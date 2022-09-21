@@ -62,4 +62,4 @@ keywords: css flexbox, css slider
 }
 ```
 
-{% demo %}{% include "patterns/slider.njk" %}{% enddemo %}
+{% demo %}{% include "covers/slider.njk" %}{% enddemo %}

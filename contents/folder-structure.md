@@ -95,5 +95,5 @@ keywords: css folder structure, css folder tree
 ```
 
 {% demo %}
-{% include "patterns/folder-structure.njk" %}
+{% include "covers/folder-structure.njk" %}
 {% enddemo %}

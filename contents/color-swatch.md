@@ -36,5 +36,5 @@ keywords: css color swatch, css flexbox
 ```
 
 {% demo %}
-{% include "patterns/color-swatch.njk" %}
+{% include "covers/color-swatch.njk" %}
 {% enddemo %}

@@ -88,5 +88,5 @@ keywords: css triangle buttons
 ```
 
 {% demo %}
-{% include "patterns/triangle-buttons.njk" %}
+{% include "covers/triangle-buttons.njk" %}
 {% enddemo %}

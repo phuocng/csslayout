@@ -51,5 +51,5 @@ keywords: css card, css stacked cards, css transform rotate
 ```
 
 {% demo %}
-{% include "patterns/stacked-cards.njk" %}
+{% include "covers/stacked-cards.njk" %}
 {% enddemo %}

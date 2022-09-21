@@ -61,5 +61,5 @@ keywords: css flexbox, css ribbon
 ```
 
 {% demo %}
-{% include "patterns/corner-ribbon.njk" %}
+{% include "covers/corner-ribbon.njk" %}
 {% enddemo %}

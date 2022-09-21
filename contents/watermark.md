@@ -64,5 +64,5 @@ keywords: css watermark
 ```
 
 {% demo %}
-{% include "patterns/watermark.njk" %}
+{% include "covers/watermark.njk" %}
 {% enddemo %}

@@ -34,5 +34,5 @@ keywords: css docked, css flexbox
 ```
 
 {% demo %}
-{% include "patterns/docked-at-corner.njk" %}
+{% include "covers/docked-at-corner.njk" %}
 {% enddemo %}

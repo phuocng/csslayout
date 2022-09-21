@@ -51,4 +51,4 @@ keywords: css flexbox, css layout, css same height columns
 }
 ```
 
-{% demo %}{% include "patterns/same-height-columns.njk" %}{% enddemo %}
+{% demo %}{% include "covers/same-height-columns.njk" %}{% enddemo %}

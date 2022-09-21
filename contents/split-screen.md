@@ -33,4 +33,4 @@ keywords: css flexbox, css layout, css split screen
 }
 ```
 
-{% demo %}{% include "patterns/split-screen.njk" %}{% enddemo %}
+{% demo %}{% include "covers/split-screen.njk" %}{% enddemo %}

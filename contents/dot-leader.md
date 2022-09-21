@@ -43,5 +43,5 @@ keywords: css dot leader, css flexbox
 ```
 
 {% demo %}
-{% include "patterns/dot-leader.njk" %}
+{% include "covers/dot-leader.njk" %}
 {% enddemo %}

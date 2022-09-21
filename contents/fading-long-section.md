@@ -51,5 +51,5 @@ The pattern is often used to indicate there is more content.
 ```
 
 {% demo %}
-{% include "patterns/fading-long-section.njk" %}
+{% include "covers/fading-long-section.njk" %}
 {% enddemo %}

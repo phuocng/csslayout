@@ -101,5 +101,5 @@ The [close button](/close-button/) is used to create a button for removing the c
 ```
 
 {% demo %}
-{% include "patterns/chip.njk" %}
+{% include "covers/chip.njk" %}
 {% enddemo %}

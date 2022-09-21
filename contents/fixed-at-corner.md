@@ -64,5 +64,5 @@ keywords: css fixed
 ```
 
 {% demo %}
-{% include "patterns/fixed-at-corner.njk" %}
+{% include "covers/fixed-at-corner.njk" %}
 {% enddemo %}

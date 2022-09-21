@@ -99,4 +99,4 @@ keywords: css flexbox, css timeline
 }
 ```
 
-{% demo %}{% include "patterns/timeline.njk" %}{% enddemo %}
+{% demo %}{% include "covers/timeline.njk" %}{% enddemo %}

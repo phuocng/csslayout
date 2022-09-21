@@ -41,4 +41,4 @@ keywords: css card layout, css flexbox, css layout
 }
 ```
 
-{% demo %}{% include "patterns/card-layout.njk" %}{% enddemo %}
+{% demo %}{% include "covers/card-layout.njk" %}{% enddemo %}

@@ -31,5 +31,5 @@ keywords: css linear gradient, css lined paper, css multiple horizontal lines
 ```
 
 {% demo %}
-{% include "patterns/lined-paper.njk" %}
+{% include "covers/lined-paper.njk" %}
 {% enddemo %}

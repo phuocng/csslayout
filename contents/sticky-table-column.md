@@ -44,5 +44,5 @@ keywords: css position sticky, css sticky table column
 ```
 
 {% demo %}
-{% include "patterns/sticky-table-column.njk" %}
+{% include "covers/sticky-table-column.njk" %}
 {% enddemo %}

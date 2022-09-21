@@ -59,5 +59,5 @@ keywords: css flexbox, css pricing table
 ```
 
 {% demo %}
-{% include "patterns/pricing-table.njk" %}
+{% include "covers/pricing-table.njk" %}
 {% enddemo %}

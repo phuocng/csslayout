@@ -42,5 +42,5 @@ keywords: css indicator
 ```
 
 {% demo %}
-{% include "patterns/presence-indicator.njk" %}
+{% include "covers/presence-indicator.njk" %}
 {% enddemo %}

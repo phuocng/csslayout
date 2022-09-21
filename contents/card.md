@@ -42,5 +42,5 @@ keywords: css card, css flexbox
 ```
 
 {% demo %}
-{% include "patterns/card.njk" %}
+{% include "covers/card.njk" %}
 {% enddemo %}

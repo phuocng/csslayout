@@ -74,5 +74,5 @@ In this pattern, the video is displayed in the background.
 ```
 
 {% demo %}
-{% include "patterns/video-background.njk" %}
+{% include "covers/video-background.njk" %}
 {% enddemo %}

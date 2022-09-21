@@ -49,5 +49,5 @@ keywords: css avatar, css flexbox
 ```
 
 {% demo %}
-{% include "patterns/avatar-list.njk" %}
+{% include "covers/avatar-list.njk" %}
 {% enddemo %}

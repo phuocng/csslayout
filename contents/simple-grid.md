@@ -51,4 +51,4 @@ keywords: css flexbox, css flexbox grid, css grid, css layout
 }
 ```
 
-{% demo %}{% include "patterns/simple-grid.njk" %}{% enddemo %}
+{% demo %}{% include "covers/simple-grid.njk" %}{% enddemo %}

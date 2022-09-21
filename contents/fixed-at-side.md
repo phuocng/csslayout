@@ -36,5 +36,5 @@ keywords: css fixed
 ```
 
 {% demo %}
-{% include "patterns/fixed-at-side.njk" %}
+{% include "covers/fixed-at-side.njk" %}
 {% enddemo %}

@@ -69,5 +69,5 @@ keywords: css close button, css flexbox
 ```
 
 {% demo %}
-{% include "patterns/close-button.njk" %}
+{% include "covers/close-button.njk" %}
 {% enddemo %}

@@ -28,4 +28,4 @@ keywords: css layout, css position sticky, css sticky header
 }
 ```
 
-{% demo %}{% include "patterns/sticky-header.njk" %}{% enddemo %}
+{% demo %}{% include "covers/sticky-header.njk" %}{% enddemo %}

@@ -49,4 +49,4 @@ keywords: css flexbox, css radio switch, css switch
 }
 ```
 
-{% demo %}{% include "patterns/radio-switch.njk" %}{% enddemo %}
+{% demo %}{% include "covers/radio-switch.njk" %}{% enddemo %}

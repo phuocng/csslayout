@@ -50,5 +50,5 @@ keywords: css flexbox, css status light
 ```
 
 {% demo %}
-{% include "patterns/status-light.njk" %}
+{% include "covers/status-light.njk" %}
 {% enddemo %}

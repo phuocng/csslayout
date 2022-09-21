@@ -64,4 +64,4 @@ keywords: css flexbox, css stepper input
 }
 ```
 
-{% demo %}{% include "patterns/stepper-input.njk" %}{% enddemo %}
+{% demo %}{% include "covers/stepper-input.njk" %}{% enddemo %}

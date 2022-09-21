@@ -56,5 +56,5 @@ keywords: css divider, css flexbox, css separator
 ```
 
 {% demo %}
-{% include "patterns/separator.njk" %}
+{% include "covers/separator.njk" %}
 {% enddemo %}

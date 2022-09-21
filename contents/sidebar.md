@@ -41,4 +41,4 @@ keywords: css flexbox, css layout, css sidebar
 }
 ```
 
-{% demo %}{% include "patterns/sidebar.njk" %}{% enddemo %}
+{% demo %}{% include "covers/sidebar.njk" %}{% enddemo %}

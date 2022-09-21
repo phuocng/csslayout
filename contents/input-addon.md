@@ -78,4 +78,4 @@ keywords: css flexbox, css input add-on
 }
 ```
 
-{% demo %}{% include "patterns/input-addon.njk" %}{% enddemo %}
+{% demo %}{% include "covers/input-addon.njk" %}{% enddemo %}

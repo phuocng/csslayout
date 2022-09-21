@@ -42,4 +42,4 @@ keywords: css flexbox, css layout, css sticky, css sticky footer
 
 The footer always sticks to the bottom if the main content is short.
 
-{% demo %}{% include "patterns/sticky-footer.njk" %}{% enddemo %}
+{% demo %}{% include "covers/sticky-footer.njk" %}{% enddemo %}

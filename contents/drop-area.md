@@ -29,5 +29,5 @@ keywords: css dropping area, css flexbox
 ```
 
 {% demo %}
-{% include "patterns/drop-area.njk" %}
+{% include "covers/drop-area.njk" %}
 {% enddemo %}

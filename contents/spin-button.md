@@ -68,4 +68,4 @@ keywords: css flexbox, css spin button
 
 You can use the [triangle buttons](/triangle-buttons/) to create the up and down buttons:
 
-{% demo %}{% include "patterns/spin-button.njk" %}{% enddemo %}
+{% demo %}{% include "covers/spin-button.njk" %}{% enddemo %}

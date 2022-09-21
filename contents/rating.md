@@ -60,4 +60,4 @@ Note that we use \`flex-direction: row-reverse\` on the container
 }
 ```
 
-{% demo %}{% include "patterns/rating.njk" %}{% enddemo %}
+{% demo %}{% include "covers/rating.njk" %}{% enddemo %}

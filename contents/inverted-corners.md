@@ -48,5 +48,5 @@ keywords: css border radius, css inverted border radius, css inverted corners
 ```
 
 {% demo %}
-{% include "patterns/inverted-corners.njk" %}
+{% include "covers/inverted-corners.njk" %}
 {% enddemo %}

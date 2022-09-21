@@ -55,5 +55,5 @@ keywords: css dialog, css flexbox, css modal
 ```
 
 {% demo %}
-{% include "patterns/modal.njk" %}
+{% include "covers/modal.njk" %}
 {% enddemo %}

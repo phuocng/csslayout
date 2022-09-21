@@ -42,5 +42,5 @@ keywords: css cookie banner, css flexbox
 ```
 
 {% demo %}
-{% include "patterns/cookie-banner.njk" %}
+{% include "covers/cookie-banner.njk" %}
 {% enddemo %}

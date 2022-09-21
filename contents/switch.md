@@ -80,4 +80,4 @@ The switch comes with two variants:
 }
 ```
 
-{% demo %}{% include "patterns/switch.njk" %}{% enddemo %}
+{% demo %}{% include "covers/switch.njk" %}{% enddemo %}

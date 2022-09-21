@@ -89,5 +89,5 @@ The [close button](/close-button/) represents the button for closing the notific
 ```
 
 {% demo %}
-{% include "patterns/notification.njk" %}
+{% include "covers/notification.njk" %}
 {% enddemo %}

@@ -60,5 +60,5 @@ keywords: css 3D card
 ```
 
 {% demo %}
-{% include "patterns/three-dimensions-card.njk" %}
+{% include "covers/three-dimensions-card.njk" %}
 {% enddemo %}

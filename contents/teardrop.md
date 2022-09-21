@@ -43,5 +43,5 @@ keywords: css border radius, css teardrop, css water drop shape, css water dropl
 ```
 
 {% demo %}
-{% include "patterns/teardrop.njk" %}
+{% include "covers/teardrop.njk" %}
 {% enddemo %}

@@ -33,5 +33,5 @@ keywords: css background size cover, css full background
 ```
 
 {% demo %}
-{% include "patterns/full-background.njk" %}
+{% include "covers/full-background.njk" %}
 {% enddemo %}

@@ -73,4 +73,4 @@ keywords: css flexbox, css radio button
 }
 ```
 
-{% demo %}{% include "patterns/radio-button-group.njk" %}{% enddemo %}
+{% demo %}{% include "covers/radio-button-group.njk" %}{% enddemo %}

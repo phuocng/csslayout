@@ -122,5 +122,5 @@ keywords: css clip rect, css flexbox, css progress bar
 ```
 
 {% demo %}
-{% include "patterns/radial-progress-bar.njk" %}
+{% include "covers/radial-progress-bar.njk" %}
 {% enddemo %}

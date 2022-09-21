@@ -62,4 +62,4 @@ keywords: css checkbox, css flexbox
 }
 ```
 
-{% demo %}{% include "patterns/custom-checkbox-button.njk" %}{% enddemo %}
+{% demo %}{% include "covers/custom-checkbox-button.njk" %}{% enddemo %}

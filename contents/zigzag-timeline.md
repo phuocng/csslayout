@@ -68,5 +68,5 @@ keywords: css timeline, css zigzag timeline
 ```
 
 {% demo %}
-{% include "patterns/zigzag-timeline.njk" %}
+{% include "covers/zigzag-timeline.njk" %}
 {% enddemo %}

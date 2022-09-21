@@ -33,4 +33,4 @@ keywords: css badge, css flexbox
 }
 ```
 
-{% demo %}{% include "patterns/badge.njk" %}{% enddemo %}
+{% demo %}{% include "covers/badge.njk" %}{% enddemo %}

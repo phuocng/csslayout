@@ -85,5 +85,5 @@ keywords: css tooltip
 ```
 
 {% demo %}
-{% include "patterns/tooltip.njk" %}
+{% include "covers/tooltip.njk" %}
 {% enddemo %}

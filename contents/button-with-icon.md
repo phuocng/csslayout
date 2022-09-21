@@ -36,5 +36,5 @@ keywords: css flexbox, css icon button
 ```
 
 {% demo %}
-{% include "patterns/button-with-icon.njk" %}
+{% include "covers/button-with-icon.njk" %}
 {% enddemo %}

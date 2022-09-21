@@ -63,5 +63,5 @@ keywords: css flexbox
 ```
 
 {% demo %}
-{% include "patterns/overlay-play-button.njk" %}
+{% include "covers/overlay-play-button.njk" %}
 {% enddemo %}

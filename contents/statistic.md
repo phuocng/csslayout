@@ -48,5 +48,5 @@ keywords: css flexbox, css statistic
 ```
 
 {% demo %}
-{% include "patterns/statistic.njk" %}
+{% include "covers/statistic.njk" %}
 {% enddemo %}

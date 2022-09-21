@@ -34,5 +34,5 @@ keywords: css avatar
 ```
 
 {% demo %}
-{% include "patterns/initial-avatar.njk" %}
+{% include "covers/initial-avatar.njk" %}
 {% enddemo %}

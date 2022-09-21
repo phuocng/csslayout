@@ -84,5 +84,5 @@ keywords: css border radius, css concave border radius, css concave corners
 ```
 
 {% demo %}
-{% include "patterns/concave-corners.njk" %}
+{% include "covers/concave-corners.njk" %}
 {% enddemo %}

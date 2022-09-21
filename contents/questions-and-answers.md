@@ -67,5 +67,5 @@ keywords: css accordion, css faq, css flexbox
 ```
 
 {% demo %}
-{% include "patterns/questions-and-answers.njk" %}
+{% include "covers/questions-and-answers.njk" %}
 {% enddemo %}

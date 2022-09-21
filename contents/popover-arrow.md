@@ -204,5 +204,5 @@ keywords: css arrow, css popover
 ```
 
 {% demo %}
-{% include "patterns/popover-arrow.njk" %}
+{% include "covers/popover-arrow.njk" %}
 {% enddemo %}

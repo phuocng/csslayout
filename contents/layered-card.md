@@ -59,5 +59,5 @@ keywords: css layered card
 ```
 
 {% demo %}
-{% include "patterns/layered-card.njk" %}
+{% include "covers/layered-card.njk" %}
 {% enddemo %}

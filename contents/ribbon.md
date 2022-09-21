@@ -93,4 +93,4 @@ keywords: css ribbon
 }
 ```
 
-{% demo %}{% include "patterns/ribbon.njk" %}{% enddemo %}
+{% demo %}{% include "covers/ribbon.njk" %}{% enddemo %}

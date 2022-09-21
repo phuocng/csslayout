@@ -35,5 +35,5 @@ keywords: css position sticky, css sticky table headers
 ```
 
 {% demo %}
-{% include "patterns/sticky-table-headers.njk" %}
+{% include "covers/sticky-table-headers.njk" %}
 {% enddemo %}

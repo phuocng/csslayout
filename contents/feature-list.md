@@ -51,5 +51,5 @@ keywords: css feature list, css flexbox
 ```
 
 {% demo %}
-{% include "patterns/feature-list.njk" %}
+{% include "covers/feature-list.njk" %}
 {% enddemo %}

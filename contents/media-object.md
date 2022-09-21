@@ -40,5 +40,5 @@ keywords: css flexbox, media object
 ```
 
 {% demo %}
-{% include "patterns/media-object.njk" %}
+{% include "covers/media-object.njk" %}
 {% enddemo %}

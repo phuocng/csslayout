@@ -33,5 +33,5 @@ keywords: css drop cap, css :first-letter
 ```
 
 {% demo %}
-{% include "patterns/drop-cap.njk" %}
+{% include "covers/drop-cap.njk" %}
 {% enddemo %}

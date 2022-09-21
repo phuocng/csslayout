@@ -86,5 +86,5 @@ keywords: css flexbox, css triangle buttons, css voting control
 ```
 
 {% demo %}
-{% include "patterns/voting.njk" %}
+{% include "covers/voting.njk" %}
 {% enddemo %}

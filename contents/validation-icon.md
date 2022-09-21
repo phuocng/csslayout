@@ -53,5 +53,5 @@ keywords: css validation icon
 ```
 
 {% demo %}
-{% include "patterns/validation-icon.njk" %}
+{% include "covers/validation-icon.njk" %}
 {% enddemo %}

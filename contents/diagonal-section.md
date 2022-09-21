@@ -47,5 +47,5 @@ keywords: css diagonal section, css transform skew
 ```
 
 {% demo %}
-{% include "patterns/diagonal-section.njk" %}
+{% include "covers/diagonal-section.njk" %}
 {% enddemo %}

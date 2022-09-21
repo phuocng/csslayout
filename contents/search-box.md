@@ -37,4 +37,4 @@ keywords: css flexbox, css search box
 }
 ```
 
-{% demo %}{% include "patterns/search-box.njk" %}{% enddemo %}
+{% demo %}{% include "covers/search-box.njk" %}{% enddemo %}

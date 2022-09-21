@@ -62,4 +62,4 @@ document
     });
 ```
 
-{% demo %}{% include "patterns/toggle-password-visibility.njk" %}{% enddemo %}
+{% demo %}{% include "covers/toggle-password-visibility.njk" %}{% enddemo %}

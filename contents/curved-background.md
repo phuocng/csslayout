@@ -34,5 +34,5 @@ keywords: css border radius, css curved background
 ```
 
 {% demo %}
-{% include "patterns/curved-background.njk" %}
+{% include "covers/curved-background.njk" %}
 {% enddemo %}

@@ -54,4 +54,4 @@ keywords: css file input, css flexbox, css upload button
 }
 ```
 
-{% demo %}{% include "patterns/upload-button.njk" %}{% enddemo %}
+{% demo %}{% include "covers/upload-button.njk" %}{% enddemo %}

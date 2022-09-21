@@ -58,4 +58,4 @@ placeholder of input isn't shown
 
 Type something in the input to see how the label is shown up.
 
-{% demo %}{% include "patterns/floating-label.njk" %}{% enddemo %}
+{% demo %}{% include "covers/floating-label.njk" %}{% enddemo %}

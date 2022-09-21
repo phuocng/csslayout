@@ -59,4 +59,4 @@ keywords: css flexbox, css holy grail layout, css layout
 }
 ```
 
-{% demo %}{% include "patterns/holy-grail.njk" %}{% enddemo %}
+{% demo %}{% include "covers/holy-grail.njk" %}{% enddemo %}

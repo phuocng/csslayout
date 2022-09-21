@@ -87,5 +87,5 @@ keywords: css arrow buttons
 ```
 
 {% demo %}
-{% include "patterns/arrow-buttons.njk" %}
+{% include "covers/arrow-buttons.njk" %}
 {% enddemo %}

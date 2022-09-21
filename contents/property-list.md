@@ -45,5 +45,5 @@ keywords: css flexbox, property list
 ```
 
 {% demo %}
-{% include "patterns/property-list.njk" %}
+{% include "covers/property-list.njk" %}
 {% enddemo %}
