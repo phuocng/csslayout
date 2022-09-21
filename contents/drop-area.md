@@ -23,7 +23,7 @@ keywords: css dropping area, css flexbox
     justify-content: center;
 
     /* Border */
-    border: 0.25rem dashed rgba(0, 0, 0, 0.3);
+    border: 0.25rem dashed #d1d5db;
     border-radius: 0.25rem;
 }
 ```

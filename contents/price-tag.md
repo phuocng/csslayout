@@ -17,7 +17,7 @@ keywords: css price tag
 
 ```css
 :root {
-    --price-tag-background: rgba(0, 0, 0, 0.3);
+    --price-tag-background: #d1d5db;
     --price-tag-height: 2rem;
 }
 

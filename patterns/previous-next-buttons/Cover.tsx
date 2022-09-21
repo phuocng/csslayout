@@ -25,7 +25,7 @@ const Cover: React.FC<{}> = () => {
                 >
                     <div
                         style={{
-                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            border: '1px solid #d1d5db',
                             borderRadius: '4px',
                             padding: '4px 8px',
                         }}
@@ -34,7 +34,7 @@ const Cover: React.FC<{}> = () => {
                     </div>
                     <div
                         style={{
-                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            border: '1px solid #d1d5db',
                             borderRadius: '4px',
                             padding: '4px 8px',
                         }}

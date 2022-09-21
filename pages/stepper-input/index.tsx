@@ -45,7 +45,7 @@ const Details: React.FC<{}> = () => {
                         display: flex;
 
                         /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
 
                         /* Size */
                         height: 32px;
@@ -85,7 +85,7 @@ const Details: React.FC<{}> = () => {
                 >
                     <div
                         style={{
-                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            border: '1px solid #d1d5db',
                             borderRadius: '8px',
                             display: 'flex',
                             height: '32px',
@@ -108,8 +108,8 @@ const Details: React.FC<{}> = () => {
                         </button>
                         <div
                             style={{
-                                borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
-                                borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderLeft: '1px solid #d1d5db',
+                                borderRight: '1px solid #d1d5db',
                                 flex: 1,
                                 height: '100%',
                             }}

@@ -30,7 +30,7 @@ const Cover: React.FC<{}> = () => {
                 />
                 <div
                     style={{
-                        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                        backgroundColor: '#d1d5db',
                         flex: 1,
                         width: '100%',
                     }}

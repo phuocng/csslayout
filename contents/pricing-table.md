@@ -53,7 +53,7 @@ keywords: css flexbox, css pricing table
     margin: 0 0.5rem;
 
     /* OPTIONAL: Border */
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid #d1d5db;
     border-radius: 0.25rem;
 }
 ```

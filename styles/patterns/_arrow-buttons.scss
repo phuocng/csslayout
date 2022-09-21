@@ -14,29 +14,29 @@
 
 .arrow-button--t {
     /* Edges */
-    border-left: 1px solid rgba(0, 0, 0, 0.3);
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid #d1d5db;
+    border-top: 1px solid #d1d5db;
     transform: translateY(25%) rotate(45deg);
 }
 
 .arrow-button--r {
     /* Edges */
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid #d1d5db;
+    border-top: 1px solid #d1d5db;
     transform: translateX(-25%) rotate(45deg);
 }
 
 .arrow-button--b {
     /* Edges */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #d1d5db;
+    border-right: 1px solid #d1d5db;
     transform: translateY(-25%) rotate(45deg);
 }
 
 .arrow-button--l {
     /* Edges */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #d1d5db;
+    border-left: 1px solid #d1d5db;
     transform: translateX(25%) rotate(45deg);
 }
 

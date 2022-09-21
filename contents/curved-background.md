@@ -18,7 +18,7 @@ keywords: css border radius, css curved background
 ```css
 .curved-background__curved {
     /* Background color */
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #d1d5db;
 
     /* You can use gradient background color such as */
     /* background: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%); */

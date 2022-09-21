@@ -26,7 +26,7 @@ keywords: css drop cap, css :first-letter
     padding: 0 0.5rem;
 
     /* Optional */
-    border: 2px solid rgba(0, 0, 0, .3);
+    border: 2px solid #d1d5db;
     font-size: 2rem;
     font-weight: 700;
 }

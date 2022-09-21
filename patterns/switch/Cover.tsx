@@ -17,7 +17,7 @@ const Cover: React.FC<{}> = () => {
             >
                 <div
                     style={{
-                        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                        backgroundColor: '#d1d5db',
                         border: '1px solid rgba(0, 0, 0, 0.1)',
                         borderRadius: '9999px',
                         display: 'flex',

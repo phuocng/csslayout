@@ -26,7 +26,7 @@ keywords: css border radius, css teardrop, css water drop shape, css water dropl
     justify-content: center;
 
     /* Border */
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 2px solid #d1d5db;
     border-radius: 0px 50% 50% 50%;
 
     /* Angle at the top */

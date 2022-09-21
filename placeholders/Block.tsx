@@ -10,7 +10,7 @@ interface BlockProps {
 }
 
 const Block: React.FC<BlockProps> = ({
-    backgroundColor = 'rgba(0, 0, 0, 0.3)',
+    backgroundColor = '#d1d5db',
     blockHeight = 4,
     justify = 'start',
     numberOfBlocks = 1,

@@ -1,18 +1,24 @@
-.notification {
-    display: flex;
+.chip {
+    /* Center the content */
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
 
-    /* Demo */
-    border: 1px solid #d1d5db;
-    border-radius: 0.25rem;
-    padding: 0.25rem;
-    width: 8rem;
-}
-.notification__body {
-    flex: 1;
-    margin-right: 0.5rem;
+    /* Background color */
+    background-color: #d1d5db;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Spacing */
+    padding: 0.25rem 0.5rem;
 }
 
-.notification__close {
+.chip__content {
+    margin-right: 0.25rem;
+}
+
+.chip__button {
     /* Reset */
     background-color: transparent;
     border-color: transparent;
@@ -28,9 +34,9 @@
     position: relative;
 }
 
-.notification__close-line {
+.chip__button-line {
     /* Background color */
-    background-color: #d1d5db;
+    background-color: #9ca3af;
 
     /* Position */
     position: absolute;
@@ -40,7 +46,7 @@
     width: 100%;
 }
 
-.notification__close-line--first {
+.chip__button-line--first {
     /* Position */
     left: 0px;
     top: 50%;
@@ -51,7 +57,7 @@
     width: 100%;
 }
 
-.notification__close-line--second {
+.chip__button-line--second {
     /* Position */
     left: 50%;
     top: 0px;

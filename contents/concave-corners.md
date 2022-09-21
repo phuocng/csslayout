@@ -30,7 +30,7 @@ keywords: css border radius, css concave border radius, css concave corners
 
 ```css
 .concave-corners {
-    background-color: rgba(0, 0, 0, .3);
+    background-color: #d1d5db;
 
     /* Used to position the corners */
     position: relative;

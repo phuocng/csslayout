@@ -44,13 +44,13 @@ keywords: css accordion, css flexbox
 ```css
 .accordion {
     /* Border */
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid #d1d5db;
     border-bottom-color: transparent;
     border-radius: 4px;
 }
 
 .accordion__item {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #d1d5db;
 }
 
 .accordion__header {
@@ -72,7 +72,7 @@ keywords: css accordion, css flexbox
 }
 
 .accordion__content {
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid #d1d5db;
     padding: 16px;
 }
 

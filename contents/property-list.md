@@ -29,7 +29,7 @@ keywords: css flexbox, property list
     align-items: center;
     display: flex;
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #d1d5db;
 
     /* Spacing */
     margin: 0;

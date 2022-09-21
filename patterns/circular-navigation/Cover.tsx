@@ -18,7 +18,7 @@ const Cover: React.FC<{}> = () => {
                 <div style={{ position: 'relative' }}>
                     <div
                         style={{
-                            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                            backgroundColor: '#d1d5db',
                             borderRadius: '4px',
                             color: '#FFF',
                             height: '16px',

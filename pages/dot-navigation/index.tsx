@@ -18,8 +18,8 @@ const Details: React.FC<{}> = () => {
         return (
             <li
                 style={{
-                    backgroundColor: isActive ? 'rgba(0, 0, 0, 0.3)' : '',
-                    border: isActive ? 'none' : '1px solid rgba(0, 0, 0, 0.3)',
+                    backgroundColor: isActive ? '#d1d5db' : '',
+                    border: isActive ? 'none' : '1px solid #d1d5db',
                     borderRadius: '9999px',
                     cursor: 'pointer',
                     height: '12px',
@@ -68,11 +68,11 @@ const Details: React.FC<{}> = () => {
                         width: 12px;
 
                         /* Active dot */
-                        background-color: rgba(0, 0, 0, 0.3);
+                        background-color: #d1d5db;
 
                         /* Inactive dot */
                         background-color: transparent;
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
 
                         /* OPTIONAL: Spacing between dots */
                         margin: 0 4px;

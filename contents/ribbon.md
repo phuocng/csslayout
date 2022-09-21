@@ -64,13 +64,13 @@ keywords: css ribbon
 .ribbon__side--l {
     /* Position */
     left: -1.5rem;
-    border-color: rgba(0, 0, 0, .3) rgba(0, 0, 0, .3) rgba(0, 0, 0, .3) transparent;
+    border-color: #d1d5db #d1d5db #d1d5db transparent;
 }
 
 .ribbon__side--r {
     /* Position */
     right: -1.5rem;
-    border-color: rgba(0, 0, 0, .3) transparent rgba(0, 0, 0, .3) rgba(0, 0, 0, .3);
+    border-color: #d1d5db transparent #d1d5db #d1d5db;
 }
 
 .ribbon__triangle {

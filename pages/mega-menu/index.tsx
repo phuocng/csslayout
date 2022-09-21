@@ -53,7 +53,7 @@ const Details: React.FC<{}> = () => {
 
                     .container__content {
                         /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
                         margin-top: -1px;
 
                         /* Hidden by default */
@@ -78,14 +78,14 @@ const Details: React.FC<{}> = () => {
                         <div
                             style={{
                                 alignItems: 'center',
-                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                border: '1px solid #d1d5db',
                                 display: 'inline-flex',
                                 justifyContent: 'center',
                             }}
                         >
                             <div
                                 style={{
-                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRight: '1px solid #d1d5db',
                                     padding: '16px',
                                     width: '150px',
                                 }}
@@ -95,7 +95,7 @@ const Details: React.FC<{}> = () => {
                             <div
                                 className="p-mega-menu-trigger"
                                 style={{
-                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRight: '1px solid #d1d5db',
                                     width: '180px',
                                 }}
                             >

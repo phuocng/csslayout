@@ -32,7 +32,7 @@ keywords: css dot leader, css flexbox
 
 .dot-leader__dots {
     /* Bottom border */
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+    border-bottom: 1px dotted #d1d5db;
 
     /* Take remaining width */
     flex: 1;

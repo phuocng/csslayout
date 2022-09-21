@@ -28,7 +28,7 @@ const Cover: React.FC<{}> = () => {
                     <div
                         style={{
                             alignItems: 'center',
-                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            border: '1px solid #d1d5db',
                             borderRadius: '9999px',
                             display: 'flex',
                             justifyContent: 'center',
@@ -53,7 +53,7 @@ const Cover: React.FC<{}> = () => {
                     <div
                         style={{
                             alignItems: 'center',
-                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            border: '1px solid #d1d5db',
                             borderRadius: '9999px',
                             display: 'flex',
                             justifyContent: 'center',

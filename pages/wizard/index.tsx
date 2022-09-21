@@ -63,7 +63,7 @@ const Details: React.FC<{}> = () => {
                     .wizard__connector {
                         flex: 1;
                         height: 1px;
-                        background-color: rgba(0, 0, 0, 0.3);
+                        background-color: #d1d5db;
                     }
 
                     .wizard__step:first-child .wizard__connector,
@@ -78,7 +78,7 @@ const Details: React.FC<{}> = () => {
                         justify-content: center;
 
                         /* Rounded border */
-                        background-color: rgba(0, 0, 0, 0.3);
+                        background-color: #d1d5db;
                         border-radius: 9999px;
                         height: 32px;
                         width: 32px;

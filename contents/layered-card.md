@@ -25,7 +25,7 @@ keywords: css layered card
 }
 
 .layered-card::before {
-    background: rgba(0, 0, 0, 0.3);
+    background: #d1d5db;
     content: '';
 
     /* Position */

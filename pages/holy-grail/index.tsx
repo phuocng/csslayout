@@ -75,7 +75,7 @@ const Details: React.FC<{}> = () => {
                 >
                     <div
                         style={{
-                            borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderBottom: '1px solid #d1d5db',
                             flexShrink: 0,
                             padding: '16px',
                         }}
@@ -87,7 +87,7 @@ const Details: React.FC<{}> = () => {
                     <div style={{ display: 'flex', flexGrow: 1 }}>
                         <div
                             style={{
-                                borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRight: '1px solid #d1d5db',
                                 padding: '16px',
                                 width: '25%',
                             }}
@@ -99,7 +99,7 @@ const Details: React.FC<{}> = () => {
                         </div>
                         <div
                             style={{
-                                borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderLeft: '1px solid #d1d5db',
                                 padding: '16px',
                                 width: '20%',
                             }}
@@ -109,7 +109,7 @@ const Details: React.FC<{}> = () => {
                     </div>
                     <div
                         style={{
-                            borderTop: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderTop: '1px solid #d1d5db',
                             flexShrink: 0,
                             padding: '16px',
                         }}

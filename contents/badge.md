@@ -23,7 +23,7 @@ keywords: css badge, css flexbox
     justify-content: center;
 
     /* Colors */
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #d1d5db;
     color: #fff;
 
     /* Rounded border */

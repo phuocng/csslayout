@@ -55,7 +55,7 @@ The [close button](/close-button/) represents the button for closing the notific
 
 .notification__close-line {
     /* Background color */
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #d1d5db;
 
     /* Position */
     position: absolute;

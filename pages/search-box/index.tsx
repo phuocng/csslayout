@@ -33,7 +33,7 @@ const Details: React.FC<{}> = () => {
                         flex-direction: row-reverse;
 
                         /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
                     }
 
                     .container__input {
@@ -56,7 +56,7 @@ const Details: React.FC<{}> = () => {
                     <div style={{ width: '256px' }}>
                         <div
                             style={{
-                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                border: '1px solid #d1d5db',
                                 borderRadius: '2px',
                                 display: 'flex',
                                 marginBottom: '16px',
@@ -78,7 +78,7 @@ const Details: React.FC<{}> = () => {
 
                         <div
                             style={{
-                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                border: '1px solid #d1d5db',
                                 borderRadius: '2px',
                                 display: 'flex',
                                 flexDirection: 'row-reverse',

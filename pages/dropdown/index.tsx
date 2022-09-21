@@ -83,7 +83,7 @@ const Details: React.FC<{}> = () => {
                         <button
                             style={{
                                 alignItems: 'center',
-                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                border: '1px solid #d1d5db',
                                 borderRadius: '4px',
                                 display: 'flex',
                                 height: '32px',
@@ -112,7 +112,7 @@ const Details: React.FC<{}> = () => {
                             <div
                                 style={{
                                     alignItems: 'center',
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    border: '1px solid #d1d5db',
                                     borderRadius: '4px',
                                     display: 'flex',
                                     height: '100%',

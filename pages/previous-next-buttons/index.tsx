@@ -57,7 +57,7 @@ const Details: React.FC<{}> = () => {
                             <a
                                 style={{
                                     alignItems: 'center',
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    border: '1px solid #d1d5db',
                                     borderRadius: '4px',
                                     display: 'flex',
                                     padding: '8px',
@@ -70,7 +70,7 @@ const Details: React.FC<{}> = () => {
                             <a
                                 style={{
                                     alignItems: 'center',
-                                    border: '1px solid rgba(0, 0, 0, 0.3)',
+                                    border: '1px solid #d1d5db',
                                     borderRadius: '4px',
                                     display: 'flex',
                                     padding: '8px',

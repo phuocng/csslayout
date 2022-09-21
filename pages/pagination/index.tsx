@@ -33,7 +33,7 @@ const Details: React.FC<{}> = () => {
                         display: flex;
 
                         /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
                         border-radius: 4px;
                     }
 
@@ -44,7 +44,7 @@ const Details: React.FC<{}> = () => {
                         justify-content: center;
 
                         /* Right border */
-                        border-right: 1px solid rgba(0, 0, 0, 0.3);
+                        border-right: 1px solid #d1d5db;
                     }
                     .pagination__item + .pagination__item {
                         /* No right border */
@@ -64,7 +64,7 @@ const Details: React.FC<{}> = () => {
                 >
                     <div
                         style={{
-                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            border: '1px solid #d1d5db',
                             borderRadius: '4px',
                             display: 'flex',
                         }}
@@ -72,7 +72,7 @@ const Details: React.FC<{}> = () => {
                         <div
                             style={{
                                 alignItems: 'center',
-                                borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRight: '1px solid #d1d5db',
                                 display: 'flex',
                                 justifyContent: 'center',
                                 padding: '8px',
@@ -84,7 +84,7 @@ const Details: React.FC<{}> = () => {
                         <div
                             style={{
                                 alignItems: 'center',
-                                borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRight: '1px solid #d1d5db',
                                 display: 'flex',
                                 justifyContent: 'center',
                                 padding: '8px',
@@ -95,7 +95,7 @@ const Details: React.FC<{}> = () => {
                         <div
                             style={{
                                 alignItems: 'center',
-                                borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRight: '1px solid #d1d5db',
                                 display: 'flex',
                                 justifyContent: 'center',
                                 padding: '8px',
@@ -106,7 +106,7 @@ const Details: React.FC<{}> = () => {
                         <div
                             style={{
                                 alignItems: 'center',
-                                borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRight: '1px solid #d1d5db',
                                 display: 'flex',
                                 justifyContent: 'center',
                                 padding: '8px',
@@ -117,7 +117,7 @@ const Details: React.FC<{}> = () => {
                         <div
                             style={{
                                 alignItems: 'center',
-                                borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                borderRight: '1px solid #d1d5db',
                                 display: 'flex',
                                 justifyContent: 'center',
                                 padding: '8px',

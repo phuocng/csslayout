@@ -44,7 +44,7 @@ const Details: React.FC<{}> = () => {
                         height: 2px;
 
                         /* Colors */
-                        background-color: rgba(0, 0, 0, 0.3);
+                        background-color: #d1d5db;
                     }
 
                     .container__circle {
@@ -56,7 +56,7 @@ const Details: React.FC<{}> = () => {
                         border-radius: 9999px;
 
                         /* Colors */
-                        background-color: rgba(0, 0, 0, 0.3);
+                        background-color: #d1d5db;
                     }
 
                     .container__right {
@@ -65,7 +65,7 @@ const Details: React.FC<{}> = () => {
                         height: 2px;
 
                         /* Colors */
-                        background-color: rgba(0, 0, 0, 0.3);
+                        background-color: #d1d5db;
                     }
                 `}
             >

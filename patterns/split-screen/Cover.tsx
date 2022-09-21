@@ -11,7 +11,7 @@ const Cover: React.FC<{}> = () => {
                 <div
                     style={{
                         alignItems: 'center',
-                        borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                        borderRight: '1px solid #d1d5db',
                         display: 'flex',
                         flex: 1,
                         flexDirection: 'column',

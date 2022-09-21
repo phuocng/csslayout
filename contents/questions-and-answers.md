@@ -38,7 +38,7 @@ keywords: css accordion, css faq, css flexbox
 
 ```css
 .questions-and-answers__item:not(:last-child) {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #d1d5db;
 }
 .questions-and-answers__header {
     align-items: center;

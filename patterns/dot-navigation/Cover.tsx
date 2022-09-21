@@ -18,7 +18,7 @@ const Cover: React.FC<{}> = () => {
                 <div style={{ alignItems: 'center', display: 'flex' }}>
                     <div
                         style={{
-                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            border: '1px solid #d1d5db',
                             borderRadius: '9999px',
                             height: '8px',
                             margin: '0 4px',
@@ -27,7 +27,7 @@ const Cover: React.FC<{}> = () => {
                     />
                     <div
                         style={{
-                            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                            backgroundColor: '#d1d5db',
                             borderRadius: '9999px',
                             height: '8px',
                             margin: '0 4px',
@@ -36,7 +36,7 @@ const Cover: React.FC<{}> = () => {
                     />
                     <div
                         style={{
-                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            border: '1px solid #d1d5db',
                             borderRadius: '9999px',
                             height: '8px',
                             margin: '0 4px',
@@ -45,7 +45,7 @@ const Cover: React.FC<{}> = () => {
                     />
                     <div
                         style={{
-                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            border: '1px solid #d1d5db',
                             borderRadius: '9999px',
                             height: '8px',
                             margin: '0 4px',

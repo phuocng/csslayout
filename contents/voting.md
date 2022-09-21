@@ -28,7 +28,7 @@ keywords: css flexbox, css triangle buttons, css voting control
 
 ```css
 .voting {
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid #d1d5db;
     border-radius: 0.25rem;
     display: flex;
     flex-direction: column;
@@ -62,12 +62,12 @@ keywords: css flexbox, css triangle buttons, css voting control
 }
 
 .voting__triangle--up {
-    border-color: transparent transparent rgba(0, 0, 0, 0.3);
+    border-color: transparent transparent #d1d5db;
     border-width: 0 0.5rem 0.5rem;
 }
 
 .voting__triangle--down {
-    border-color: rgba(0, 0, 0, 0.3) transparent transparent;
+    border-color: #d1d5db transparent transparent;
     border-width: 0.5rem 0.5rem 0px;
 }
 

@@ -44,7 +44,7 @@ const Details: React.FC<{}> = () => {
                     <div
                         style={{
                             backgroundColor: '#FFF',
-                            borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderBottom: '1px solid #d1d5db',
                             padding: '16px',
                             position: 'sticky',
                             top: 0,

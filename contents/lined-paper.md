@@ -18,7 +18,7 @@ keywords: css linear gradient, css lined paper, css multiple horizontal lines
 ```css
 .lined-paper {
     /* Lined background */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 0px);
+    background-image: linear-gradient(#d1d5db 1px, transparent 0px);
     background-size: 100% 2em;
 
     /*

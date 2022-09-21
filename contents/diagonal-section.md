@@ -39,7 +39,7 @@ keywords: css diagonal section, css transform skew
     transform: skewY(-5deg);
 
     /* Background color */
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #d1d5db;
 
     /* Displayed under the main content */
     z-index: -1;

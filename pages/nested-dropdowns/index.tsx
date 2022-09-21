@@ -53,7 +53,7 @@ const Details: React.FC<{}> = () => {
                 css={`
                     .dropdown {
                         /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
                         display: flex;
 
                         /* Reset list styles */
@@ -73,7 +73,7 @@ const Details: React.FC<{}> = () => {
                     /* The sub dropdown */
                     .dropdown ul {
                         /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
 
                         /* Hidden by default */
                         display: none;

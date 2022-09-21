@@ -1,6 +1,6 @@
 .corner-ribbon {
     position: relative;
-    border: 1px solid rgba(0,0,0,.3);
+    border: 1px solid #d1d5db;
     border-radius: 0.25rem;
     height: 100%;
     width: 100%;
@@ -34,7 +34,7 @@
     transform: translate(-38px, -8px) rotate(-45deg);
 
     /* Background color */
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #d1d5db;
 
     /* Centerize the text content */
     text-align: center;

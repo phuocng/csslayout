@@ -60,7 +60,7 @@ const Details: React.FC<{}> = () => {
                         flex-direction: column;
 
                         /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
                         border-radius: 4px;
                     }
 
@@ -76,7 +76,7 @@ const Details: React.FC<{}> = () => {
                     }
 
                     .menu__divider {
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+                        border-bottom: 1px solid #d1d5db;
                         height: 1px;
                     }
                 `}
@@ -93,7 +93,7 @@ const Details: React.FC<{}> = () => {
                 >
                     <div
                         style={{
-                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            border: '1px solid #d1d5db',
                             borderRadius: '4px',
                             width: '40%',
                         }}
@@ -188,7 +188,7 @@ const Details: React.FC<{}> = () => {
                             </div>
                             <Circle />
                         </div>
-                        <div style={{ borderBottom: '1px solid rgba(0, 0, 0, 0.3)', height: '1px' }} />
+                        <div style={{ borderBottom: '1px solid #d1d5db', height: '1px' }} />
                         <div
                             className="p-menu-item"
                             style={{

@@ -8,7 +8,7 @@ const Cover: React.FC<{}> = () => {
         <Frame>
             <div
                 style={{
-                    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                    backgroundColor: '#d1d5db',
                     height: '100%',
                     position: 'relative',
                     width: '100%',

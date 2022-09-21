@@ -38,7 +38,7 @@ const Details: React.FC<{}> = () => {
                 />
                 <div
                     style={{
-                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                        border: '1px solid #d1d5db',
                         borderRadius: '4px',
                         marginRight: '8px',
                         padding: '4px',
@@ -98,7 +98,7 @@ const Details: React.FC<{}> = () => {
                     }
 
                     .label__square {
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
                         border-radius: 4px;
 
                         /* Spacing */

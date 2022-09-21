@@ -22,11 +22,11 @@ const Cover: React.FC<{}> = () => {
                         justifyContent: 'center',
                     }}
                 >
-                    <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '12px', padding: '2px' }}>★</div>
-                    <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '12px', padding: '2px' }}>★</div>
-                    <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '12px', padding: '2px' }}>★</div>
-                    <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '12px', padding: '2px' }}>☆</div>
-                    <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '12px', padding: '2px' }}>☆</div>
+                    <div style={{ color: '#d1d5db', fontSize: '12px', padding: '2px' }}>★</div>
+                    <div style={{ color: '#d1d5db', fontSize: '12px', padding: '2px' }}>★</div>
+                    <div style={{ color: '#d1d5db', fontSize: '12px', padding: '2px' }}>★</div>
+                    <div style={{ color: '#d1d5db', fontSize: '12px', padding: '2px' }}>☆</div>
+                    <div style={{ color: '#d1d5db', fontSize: '12px', padding: '2px' }}>☆</div>
                 </div>
             </div>
         </Frame>

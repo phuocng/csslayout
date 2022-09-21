@@ -45,7 +45,7 @@ const Details: React.FC<{}> = () => {
 
                         /* OFF status */
                         background-color: rgba(0, 0, 0, 0.1);
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
 
                         /* ON status */
                         background-color: #357edd;
@@ -69,7 +69,7 @@ const Details: React.FC<{}> = () => {
                         background-color: #fff;
 
                         /* OFF status */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
                     }
                 `}
             >
@@ -87,7 +87,7 @@ const Details: React.FC<{}> = () => {
                         htmlFor="checkbox-switch"
                         style={{
                             backgroundColor: checked ? '#357EDD' : 'rgba(0, 0, 0, 0.1)',
-                            border: `1px solid ${checked ? '#357EDD' : 'rgba(0, 0, 0, 0.3)'}`,
+                            border: `1px solid ${checked ? '#357EDD' : '#d1d5db'}`,
                             borderRadius: '9999px',
                             display: 'flex',
                             height: '32px',
@@ -105,7 +105,7 @@ const Details: React.FC<{}> = () => {
                         <div
                             style={{
                                 backgroundColor: '#FFF',
-                                border: checked ? '' : '1px solid rgba(0, 0, 0, 0.3)',
+                                border: checked ? '' : '1px solid #d1d5db',
                                 borderRadius: '9999px',
                                 width: '32px',
                             }}

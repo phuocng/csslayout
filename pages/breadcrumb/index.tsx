@@ -54,15 +54,15 @@ const Details: React.FC<{}> = () => {
                         <div style={{ width: '128px' }}>
                             <Rectangle height={16} />
                         </div>
-                        <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
+                        <div style={{ color: '#d1d5db', fontSize: '36px', margin: '0 4px' }}>/</div>
                         <div style={{ width: '32px' }}>
                             <Rectangle height={16} />
                         </div>
-                        <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
+                        <div style={{ color: '#d1d5db', fontSize: '36px', margin: '0 4px' }}>/</div>
                         <div style={{ width: '64px' }}>
                             <Rectangle height={16} />
                         </div>
-                        <div style={{ color: 'rgba(0, 0, 0, 0.3)', fontSize: '36px', margin: '0 4px' }}>/</div>
+                        <div style={{ color: '#d1d5db', fontSize: '36px', margin: '0 4px' }}>/</div>
                         <div style={{ width: '32px' }}>
                             <Rectangle height={16} />
                         </div>

@@ -51,7 +51,7 @@ const Details: React.FC<{}> = () => {
                 <div style={{ display: 'flex', height: '100%' }}>
                     <div
                         style={{
-                            borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                            borderRight: '1px solid #d1d5db',
                             display: 'flex',
                             flexDirection: 'column',
                             justifyContent: 'flex-end',

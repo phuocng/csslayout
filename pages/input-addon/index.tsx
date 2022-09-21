@@ -89,7 +89,7 @@ const Details: React.FC<{}> = () => {
                     <div style={{ width: '256px' }}>
                         <div
                             style={{
-                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                border: '1px solid #d1d5db',
                                 borderRadius: '4px',
                                 display: 'flex',
                                 height: '32px',
@@ -101,7 +101,7 @@ const Details: React.FC<{}> = () => {
                                 style={{
                                     alignItems: 'center',
                                     backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRight: '1px solid #d1d5db',
                                     display: 'flex',
                                     justifyContent: 'center',
                                     padding: '8px',
@@ -122,7 +122,7 @@ const Details: React.FC<{}> = () => {
                         </div>
                         <div
                             style={{
-                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                border: '1px solid #d1d5db',
                                 borderRadius: '4px',
                                 display: 'flex',
                                 height: '32px',
@@ -143,7 +143,7 @@ const Details: React.FC<{}> = () => {
                                 style={{
                                     alignItems: 'center',
                                     backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                                    borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderLeft: '1px solid #d1d5db',
                                     display: 'flex',
                                     justifyContent: 'center',
                                     padding: '8px',
@@ -155,7 +155,7 @@ const Details: React.FC<{}> = () => {
                         </div>
                         <div
                             style={{
-                                border: '1px solid rgba(0, 0, 0, 0.3)',
+                                border: '1px solid #d1d5db',
                                 borderRadius: '4px',
                                 display: 'flex',
                                 height: '32px',
@@ -166,7 +166,7 @@ const Details: React.FC<{}> = () => {
                                 style={{
                                     alignItems: 'center',
                                     backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                                    borderRight: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderRight: '1px solid #d1d5db',
                                     display: 'flex',
                                     justifyContent: 'center',
                                     padding: '8px',
@@ -187,7 +187,7 @@ const Details: React.FC<{}> = () => {
                                 style={{
                                     alignItems: 'center',
                                     backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                                    borderLeft: '1px solid rgba(0, 0, 0, 0.3)',
+                                    borderLeft: '1px solid #d1d5db',
                                     display: 'flex',
                                     justifyContent: 'center',
                                     padding: '8px',

@@ -53,7 +53,7 @@ keywords: css flexbox, css ribbon
     transform: translate(-38px, -8px) rotate(-45deg);
 
     /* Background color */
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #d1d5db;
 
     /* Centerize the text content */
     text-align: center;

@@ -37,7 +37,7 @@ const Details: React.FC<{}> = () => {
                 />
                 <div
                     style={{
-                        border: '1px solid rgba(0, 0, 0, 0.3)',
+                        border: '1px solid #d1d5db',
                         borderRadius: '9999px',
                         marginRight: '8px',
                         padding: '4px',
@@ -98,7 +98,7 @@ const Details: React.FC<{}> = () => {
 
                     .label__circle {
                         /* Rounded border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
                         border-radius: 9999px;
 
                         /* Spacing */

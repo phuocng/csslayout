@@ -7,7 +7,7 @@
 }
 
 .layered-card::before {
-    background: rgba(0, 0, 0, 0.3);
+    background: #d1d5db;
     content: '';
 
     /* Position */
@@ -34,6 +34,6 @@
     width: 100%;
     z-index: 1;
     
-    border: 1px solid rgba(0, 0, 0, .3);
+    border: 1px solid #d1d5db;
     background: #FFF;
 }

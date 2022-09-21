@@ -19,8 +19,8 @@ const Details: React.FC<{}> = () => {
         return (
             <div
                 style={{
-                    [isActive ? 'border' : 'borderBottom']: '1px solid rgba(0, 0, 0, 0.3)',
-                    borderBottomColor: isActive ? 'transparent' : 'rgba(0, 0, 0, 0.3)',
+                    [isActive ? 'border' : 'borderBottom']: '1px solid #d1d5db',
+                    borderBottomColor: isActive ? 'transparent' : '#d1d5db',
                     borderTopLeftRadius: '4px',
                     borderTopRightRadius: '4px',
                     cursor: 'pointer',
@@ -65,7 +65,7 @@ const Details: React.FC<{}> = () => {
 
                     .tabs__tab--active {
                         /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
                         /* Hide the bottom border */
                         border-bottom-color: transparent;
 
@@ -76,7 +76,7 @@ const Details: React.FC<{}> = () => {
 
                     .tabs__tab--inactive {
                         /* Has only the bottom border */
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+                        border-bottom: 1px solid #d1d5db;
                     }
                 `}
             >

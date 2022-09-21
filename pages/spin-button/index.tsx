@@ -44,7 +44,7 @@ const Details: React.FC<{}> = () => {
 `}
                 css={`
                     .container {
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
                         border-radius: 2px;
                         display: flex;
                     }
@@ -81,7 +81,7 @@ const Details: React.FC<{}> = () => {
                 >
                     <div
                         style={{
-                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            border: '1px solid #d1d5db',
                             borderRadius: '2px',
                             display: 'flex',
                         }}

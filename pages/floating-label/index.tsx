@@ -67,7 +67,7 @@ placeholder of input isn't shown
                     <div
                         className="p-floating-container"
                         style={{
-                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            border: '1px solid #d1d5db',
                             borderRadius: '4px',
                             padding: '0 1px',
                             position: 'relative',

@@ -71,7 +71,7 @@ const Details: React.FC<{}> = () => {
                         display: flex;
 
                         /* Border */
-                        border: 1px solid rgba(0, 0, 0, 0.3);
+                        border: 1px solid #d1d5db;
                         border-radius: 4px;
                         height: 32px;
                     }
@@ -81,7 +81,7 @@ const Details: React.FC<{}> = () => {
                         align-items: center;
                         display: inline-flex;
 
-                        border-right: 1px solid rgba(0, 0, 0, 0.3);
+                        border-right: 1px solid #d1d5db;
                         padding: 8px;
 
                         /* For not selected radio */
@@ -119,7 +119,7 @@ const Details: React.FC<{}> = () => {
                     <div
                         className="p-radio-button-group"
                         style={{
-                            border: '1px solid rgba(0, 0, 0, 0.3)',
+                            border: '1px solid #d1d5db',
                             borderRadius: '4px',
                             display: 'flex',
                             height: '32px',

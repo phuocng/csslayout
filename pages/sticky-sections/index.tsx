@@ -64,7 +64,7 @@ const Details: React.FC<{}> = () => {
                     />
                     <section
                         style={{
-                            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+                            backgroundColor: '#d1d5db',
                             height: '100%',
                             position: 'sticky',
                             top: 0,

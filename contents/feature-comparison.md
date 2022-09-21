@@ -39,7 +39,7 @@ keywords: css feature comparison, css flexbox
     display: flex;
 
     /* Bottom border */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #d1d5db;
 
     /* Spacing */
     padding: 0.25rem 0;

@@ -7,22 +7,22 @@
 }
 
 .triangle-buttons__triangle--t {
-    border-color: transparent transparent rgba(0, 0, 0, 0.3);
+    border-color: transparent transparent #d1d5db;
     border-width: 0 0.5rem 0.5rem;
 }
 
 .triangle-buttons__triangle--r {
-    border-color: transparent transparent transparent rgba(0, 0, 0, 0.3);
+    border-color: transparent transparent transparent #d1d5db;
     border-width: 0.5rem 0 0.5rem 0.5rem;
 }
 
 .triangle-buttons__triangle--b {
-    border-color: rgba(0, 0, 0, 0.3) transparent transparent;
+    border-color: #d1d5db transparent transparent;
     border-width: 0.5rem 0.5rem 0;
 }
 
 .triangle-buttons__triangle--l {
-    border-color: transparent rgba(0, 0, 0, 0.3) transparent transparent;
+    border-color: transparent #d1d5db transparent transparent;
     border-width: 0.5rem 0.5rem 0.5rem 0;
 }
 

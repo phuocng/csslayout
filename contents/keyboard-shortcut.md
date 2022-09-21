@@ -23,7 +23,7 @@ We use the native `kbd` tag to display the keyboard shortcut.
     color: rgba(0, 0, 0, 0.7);
 
     /* Bottom shadow */
-    box-shadow: rgba(0, 0, 0, 0.3) 0px -4px 0px inset, rgba(0, 0, 0, 0.4) 0px 1px 1px;
+    box-shadow: #d1d5db 0px -4px 0px inset, rgba(0, 0, 0, 0.4) 0px 1px 1px;
 
     /* Spacing */
     padding: 0.25rem 0.5rem;

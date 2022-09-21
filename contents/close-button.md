@@ -35,7 +35,7 @@ keywords: css close button, css flexbox
 
 .close-button__line {
     /* Background color */
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #d1d5db;
 
     /* Position */
     position: absolute;
