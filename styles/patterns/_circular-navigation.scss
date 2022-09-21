@@ -1,0 +1,77 @@
+.circular-navigation {
+    position: relative;
+
+    /* Demo */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    height: 8rem;
+    width: 8rem;
+}
+
+.circular-navigation__circle {
+    /* Position */
+    position: absolute;
+    top: 0;
+
+    /*
+    3rem is the distance from the item to the trigger element.
+    Replace 0deg with 60deg, 180deg, 240deg, 300deg for another item
+    in case you want to have a total of 6 menu items.
+    The formulation is 360 / numberOfItems * indexOfItem
+    */
+    transform: rotate(var(--circular-navigation__circle-degree)) translateX(-3rem);
+
+    /* Must have the same size as the trigger element */
+    height: 2rem;
+    width: 2rem;
+
+    /* Demo */
+    background-color: #d1d5db;
+    border-radius: 9999px;
+}
+
+.circular-navigation__content {
+    /*
+    Rotate it to make it displayed vertically
+    Replace -0deg with -60deg, -180deg, -240deg, -300deg for another item
+    in case you want to have a total of 6 menu items.
+    The formulation is -(360 / numberOfItems * indexOfItem)
+    */
+    transform: rotate(var(--circular-navigation__content-degree));
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+}
+
+.circular-navigation__circle--1 {
+    --circular-navigation__circle-degree: 0deg;
+    --circular-navigation__content-degree: -0deg;
+}
+.circular-navigation__circle--2 {
+    --circular-navigation__circle-degree: 60deg;
+    --circular-navigation__content-degree: -60deg;
+}
+.circular-navigation__circle--3{
+    --circular-navigation__circle-degree: 120deg;
+    --circular-navigation__content-degree: -120deg;
+}
+.circular-navigation__circle--4 {
+    --circular-navigation__circle-degree: 180deg;
+    --circular-navigation__content-degree: -180deg;
+}
+.circular-navigation__circle--5 {
+    --circular-navigation__circle-degree: 240deg;
+    --circular-navigation__content-degree: -240deg;
+}
+.circular-navigation__circle--6 {
+    --circular-navigation__circle-degree: 300deg;
+    --circular-navigation__content-degree: -300deg;
+}

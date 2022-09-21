@@ -1,0 +1,7 @@
+<div class="circular-navigation">
+    {% for i in range(0, 6) -%}
+    <div class="circular-navigation__circle circular-navigation__circle--{{ i + 1 }}">
+        <div class="circular-navigation__content">{{ i + 1 }}</div>
+    </div>
+    {%- endfor %}
+</div>
