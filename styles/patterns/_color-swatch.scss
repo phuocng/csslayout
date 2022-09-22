@@ -1,6 +1,8 @@
 .swatch {
     /* Wrap the items */
+    align-items: center;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .swatch__item {

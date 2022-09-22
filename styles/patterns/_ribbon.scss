@@ -24,9 +24,6 @@
     bottom: -0.5rem;
     position: absolute;
 
-    /* Displayed under the ribbon */
-    z-index: 1;
-
     /* Background */
     border: 1rem solid #d1d5db;
 }
@@ -49,7 +46,8 @@
 
     border: 0.5rem solid transparent;
     border-bottom-width: 0;
-    border-top-color: #aaa;
+    border-top-color: #6b7280;
+    z-index: 1;
 }
 
 .ribbon__triangle--l {
