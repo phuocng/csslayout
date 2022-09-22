@@ -1,6 +1,4 @@
-.circular-navigation {
-    position: relative;
-
+.circular-navigation-container {
     /* Demo */
     align-items: center;
     display: flex;
@@ -8,6 +6,12 @@
 
     height: 8rem;
     width: 8rem;
+}
+
+.circular-navigation {
+    position: relative;
+    height: 2rem;
+    width: 2rem;
 }
 
 .circular-navigation__circle {
