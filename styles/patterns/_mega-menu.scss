@@ -1,0 +1,64 @@
+.mega-menu {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+
+    /* Demo */
+    width: 100%;
+}
+
+.mega-menu__item {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    flex: 1;
+
+    padding: 0.25rem 0.5rem;
+}
+.mega-menu__item:not(:last-child) {
+    border-right: 1px solid #d1d5db;
+}
+
+.mega-menu__trigger {
+    cursor: pointer;
+
+    /* Demo */
+    height: 2rem;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.mega-menu__content {
+    /* Border */
+    border: 1px solid #d1d5db;
+    // margin-top: -1px;
+
+    /* Hidden by default */
+    display: none;
+
+    /* Position it right below the trigger element */
+    left: 0;
+    padding-top: 0.25rem;
+    position: absolute;
+    top: 100%;
+
+    /* Take full width */
+    width: 100%;
+
+    /* It should be on the top of other elements */
+    background-color: #fff;
+    z-index: 9999;
+}
+
+/* Show the mega menu when hovering the trigger item */
+.mega-menu__trigger:hover .mega-menu__content {
+    display: block;
+}
