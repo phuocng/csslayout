@@ -32,9 +32,9 @@
         "watch:sass": "sass styles/index.scss _site/styles/index.min.css --no-source-map --style compressed --watch"
     },
     "devDependencies": {
+        "@11ty/eleventy-fetch": "^3.0.0",
         "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
         "html-minifier": "^4.0.0",
-        "node-fetch": "^2.6.7",
         "prettier": "^2.7.1",
         "sass": "^1.54.8"
     },
