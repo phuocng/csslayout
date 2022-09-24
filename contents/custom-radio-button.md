@@ -67,3 +67,8 @@ keywords: css flexbox, css radio
 ```
 
 {% demo %}{% include "covers/custom-radio-button.njk" %}{% enddemo %}
+
+## See also
+
+- [Box selector](/box-selector/)
+- [Custom checkbox button](/custom-checkbox-button/)

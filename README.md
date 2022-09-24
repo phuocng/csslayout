@@ -26,7 +26,7 @@ By composing them, you can have any possible layout that exists in the real life
 - Clone the project:
 
 ```shell
-$ git clone https://github.com/1milligram/csslayout
+$ git clone https://github.com/phuocng/csslayout
 ```
 
 - Install the dependencies:
@@ -39,10 +39,10 @@ $ npm install
 - Run it on the local:
 
 ```shell
-$ npm run dev
+$ npm run start
 ```
 
-Visit http://localhost:3000 to see it in action.
+Visit http://localhost:8081 to see it in action.
 
 ## Contributing
 
