@@ -1,0 +1,27 @@
+.sidebar {
+    display: flex;
+
+    /* Demo */
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar__sidebar {
+    border-right: 1px solid #d1d5db;
+    width: 30%;
+
+    /* Demo */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.sidebar__main {
+    /* Take the remaining width */
+    flex: 1;
+
+    /* Make it scrollable */
+    overflow: auto;
+}

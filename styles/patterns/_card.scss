@@ -1,0 +1,19 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+}
+.card__cover {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    height: 40%;
+    width: 100%;
+}
+.card__content {
+    /* Take available height */
+    flex: 1;
+    padding: 0.5rem;
+}

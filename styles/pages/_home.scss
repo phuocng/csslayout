@@ -1,28 +1,5 @@
-.page-home__hero {
+.home__tip {
+    font-size: 1.5rem;
+    margin-top: 2rem;
     text-align: center;
-}
-
-.page-home__category {
-    background: #fff;
-    color: #808080;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    grid-gap: 1rem;
-    margin: 2rem 0;
-    position: sticky;
-    text-align: center;
-    top: 3rem;
-    z-index: 1;
-}
-
-.page-home__category::before,
-.page-home__category::after {
-    align-self: center;
-    border-top: 1px solid #e6e6e6;
-    content: '';
-}
-
-.page-home__collection {
-    display: flex;
-    flex-wrap: wrap;
 }

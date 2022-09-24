@@ -1,16 +1,14 @@
-.block-cssscan {
-    font-family: -apple-system, system-ui, Roboto, sans-serif;
+.cssscan {
     -webkit-font-smoothing: antialiased;
     color: #000;
     text-decoration: none;
     display: block;
 }
 
-.block-cssscan__inner {
-    max-width: 1024px;
+.cssscan__inner {
     background: #c2fbd7;
-    border-radius: 1rem;
-    padding: 2.5rem;
+    border-radius: 0.5rem;
+    padding: 2rem;
     position: relative;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px 0;
@@ -18,26 +16,26 @@
     text-align: left;
 }
 
-.block-cssscan__title {
-    font-size: 28px;
-    font-weight: bold;
+.cssscan__title {
+    font-size: 2rem;
+    font-weight: 700;
     margin-bottom: 0;
     margin-top: 0;
 }
 
-.block-cssscan__desc {
+.cssscan__desc {
     opacity: 0.8;
     color: #333;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-.block-cssscan__more {
+.cssscan__more {
     margin: 0;
     margin-top: 2em;
 }
 
-.block-cssscan__image {
+.cssscan__image {
     position: absolute;
     transform: rotate(-7deg);
     transition: all 0.3s;
@@ -47,30 +45,28 @@
     height: 95%;
 }
 
-.block-cssscan__inner:hover {
-    .block-cssscan__more {
+.cssscan__inner:hover {
+    .cssscan__more {
         text-decoration: underline;
     }
 
-    .block-cssscan__image {
+    .cssscan__image {
         transform: scale(1.1) rotate(-7deg);
         top: 10%;
         right: -35%;
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 1010px) {
-    .block-cssscan {
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+    .cssscan {
         padding: 0;
     }
 
-    .block-cssscan__inner {
-        margin-top: 2em;
-        min-height: 300px;
-        border-radius: 0;
+    .cssscan__inner {
+        margin-top: 2rem;
     }
 
-    .block-cssscan__image {
+    .cssscan__image {
         top: initial;
         bottom: -14%;
         width: 45%;
@@ -78,7 +74,7 @@
         right: -5%;
     }
 
-    .block-cssscan__inner:hover .block-cssscan__image {
+    .cssscan__inner:hover .cssscan__image {
         top: initial;
         bottom: -10%;
         right: -5%;

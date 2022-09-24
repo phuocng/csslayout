@@ -1,0 +1,22 @@
+.split-screen {
+    display: flex;
+
+    /* Demo */
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    height: 100%;
+    width: 100%;
+}
+
+.split-screen__half {
+    flex: 1;
+
+    /* Demo */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.split-screen__half:first-child {
+    border-right: 1px solid #d1d5db;
+}

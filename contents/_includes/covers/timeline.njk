@@ -1,0 +1,16 @@
+<div class="timeline">
+    <div class="timeline__line"></div>
+    <div class="timeline__items">
+        {% for i in range(0, 2) -%}
+        <div class="timeline__item">
+            <div class="timeline__top">
+                <div class="timeline__circle"></div>
+                <div class="timeline__title">{% rectangle %}</div>
+            </div>
+            <div class="timeline__desc">
+                {% lines "hor", 5 %}
+            </div>
+        </div>
+        {%- endfor %}
+    </div>
+</div>

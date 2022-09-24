@@ -1,0 +1,21 @@
+.drawer {
+    /* Demo */
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    height: 100%;
+    width: 100%;
+
+    display: flex;    
+}
+
+.drawer__sidebar {
+    /* Demo */
+    border-right: 1px solid #d1d5db;
+    width: 25%;
+}
+
+.drawer__overlay {
+    /* Demo */
+    background: #4b5563;
+    flex: 1;
+}

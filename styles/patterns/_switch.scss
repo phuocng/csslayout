@@ -1,0 +1,46 @@
+.switch {
+    display: flex;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Size */
+    height: 2rem;
+    width: 4rem;
+
+    /* Demo */
+    margin-bottom: 0.5rem;
+}
+
+.switch__input {
+    /* Hide the input */
+    display: none;
+}
+
+.switch__circle {
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Size */
+    width: 2rem;
+
+    background-color: #fff;
+}
+
+/* ON status */
+.switch--on {
+    background-color: #357edd;
+    border: 1px solid #357edd;
+
+    /* Push the circle to the right */
+    justify-content: flex-end;
+}
+
+/* OFF status */
+.switch--off {
+    background-color: #d1d5db;
+    border: 1px solid #d1d5db;
+}
+.switch--off .switch__circle {
+    border: 1px solid #d1d5db;
+}

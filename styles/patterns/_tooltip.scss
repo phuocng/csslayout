@@ -1,32 +1,66 @@
-.p-tooltip {
+.tooltip {
+    /* Used to position the arrow */
     position: relative;
+
+    /* Demo */
+    width: 8rem;
+    height: 2rem;
+    border-radius: 0.25rem;
+    background: #d1d5db;
 }
-.p-tooltip:hover .p-tooltip-arrow,
-.p-tooltip:hover .p-tooltip-content {
+
+/* Show the arrow and content and restore pointer events when hovering the trigger element */
+.tooltip:hover .tooltip__arrow,
+.tooltip:hover .tooltip__content {
     opacity: 1;
     pointer-events: initial;
 }
-.p-tooltip-arrow {
-    border: 8px solid transparent;
-    border-top-color: #00439e;
-    bottom: 100%;
-    height: 0;
-    left: 50%;
-    opacity: 0;
+
+.tooltip__arrow {
+    /* Invisible by default */
+    opacity: 1;
+
+    /* To prevent accidental interactions with other elements  */
     pointer-events: none;
+
+    /* Border */
+    border: 0.5rem solid transparent;
+    border-top-color: #111827;
+
+    /* Position */
+    bottom: 100%;
+    left: 50%;
     position: absolute;
     transform: translate(-50%, 8px);
+
+    /* Zero size */
+    height: 0;
     width: 0;
+
+    /* Displayed on top of other element */
     z-index: 10;
 }
-.p-tooltip-content {
-    background-color: #00439e;
-    border-radius: 2px;
+
+.tooltip__content {
+    /* Invisible by default */
+    opacity: 1;
+
+    /* To prevent accidental interactions with other elements  */
+    pointer-events: none;
+
+    /* Background color, must be the same as the border color of arrow */
+    background-color: #111827;
+    border-radius: 0.25rem;
+
+    /* Position */
     bottom: 100%;
     left: 50%;
-    opacity: 0;
-    pointer-events: none;
     position: absolute;
     transform: translate(-50%, -8px);
+
+    /* Displayed on top of other element */
     z-index: 10;
+
+    /* Demo */
+    width: 6rem;
 }

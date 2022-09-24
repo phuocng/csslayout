@@ -1,9 +1,14 @@
+.zigzag-timeline {
+    height: 8rem;
+    width: 8rem;
+}
+
 .zigzag-timeline__item {
     /* Used to position the milestone */
     position: relative;
 
     /* Border */
-    border-bottom: 1px solid #71717a;
+    border-bottom: 1px solid #9ca3af;
 
     /* Take full width */
     width: 100%;
@@ -16,16 +21,16 @@
 
     /* Circle it */
     border-radius: 50%;
-    height: 2rem;
-    width: 2rem;
+    height: 1rem;
+    width: 1rem;
 
     /* Misc */
-    background: #71717a;
+    background: #9ca3af;
 }
 
 /* Styles for even items */
 .zigzag-timeline__item:nth-child(2n) {
-    border-left: 1px solid #71717a;
+    border-left: 1px solid #9ca3af;
 }
 .zigzag-timeline__item:nth-child(2n) .zigzag-timeline__milestone {
     left: 0;
@@ -34,7 +39,7 @@
 
 /* Styles for odd items */
 .zigzag-timeline__item:nth-child(2n + 1) {
-    border-right: 1px solid #71717a;
+    border-right: 1px solid #9ca3af;
 }
 .zigzag-timeline__item:nth-child(2n + 1) .zigzag-timeline__milestone {
     right: 0;

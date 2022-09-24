@@ -1,5 +1,5 @@
 :root {
-    --price-tag-background: rgba(0, 0, 0, 0.3);
+    --price-tag-background: #d1d5db;
     --price-tag-height: 2rem;
 }
 
@@ -28,8 +28,8 @@
 
     border-color: transparent var(--price-tag-background) transparent transparent;
     border-style: solid;
-    border-width: calc(var(--price-tag-height) / 2) calc(var(--price-tag-height) / 2) calc(var(--price-tag-height) / 2)
-        0rem;
+    border-width: calc(var(--price-tag-height) / 2) calc(var(--price-tag-height) / 2)
+        calc(var(--price-tag-height) / 2) 0rem;
 
     /* Position */
     left: 0px;

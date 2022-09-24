@@ -1,0 +1,38 @@
+.stepper-input {
+    display: flex;
+
+    /* Border */
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+
+    /* Size */
+    height: 2rem;
+    width: 8rem;
+}
+
+.stepper-input__button {
+    /* Reset */
+    background: #d1d5db;
+    border: none;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Size */
+    width: 2rem;
+}
+
+.stepper-input__content {
+    flex: 1;
+}
+
+.stepper-input__input {
+    /* Reset */
+    border: none;
+
+    /* Take full size of its container */
+    height: 100%;
+    width: 100%;
+}

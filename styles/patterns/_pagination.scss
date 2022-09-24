@@ -1,0 +1,25 @@
+.pagination {
+    display: flex;
+
+    /* Border */
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+}
+
+.pagination__item {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    padding: 0.25rem 0.5rem;
+}
+
+.pagination__item:not(:last-child) {
+    /* Right border */
+    border-right: 1px solid #d1d5db;
+}
+
+.pagination__item--active {
+    background-color: #d1d5db;
+}

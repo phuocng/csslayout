@@ -1,0 +1,17 @@
+.avatar {
+    height: 4rem;
+    width: 4rem;
+
+    background-color: #d1d5db;
+    /* Rounded border */
+    border-radius: 50%;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.avatar__image {
+    height: 50%;
+    width: 50%;
+}

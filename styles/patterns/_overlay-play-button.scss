@@ -1,0 +1,38 @@
+.overlay-play-button {
+    /* Used to position the overlay */
+    position: relative;
+
+    /* Demo */
+    height: 100%;
+    width: 100%;
+}
+
+.overlay-play-button__overlay {
+    /* Position */
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Add a dark background */
+    background-color: #4b5563;
+}
+
+.overlay-play-button__play {
+    border: 0.25rem solid #FFF;
+    border-radius: 9999px;
+    height: 3rem;
+    width: 3rem;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

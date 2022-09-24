@@ -1,0 +1,70 @@
+.example {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    margin: 2rem 0;
+    position: relative;
+}
+.example--border {
+    border: 1px solid #d1d5db;
+}
+.example__ribbon {
+    height: 8rem;
+    width: 8rem;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+
+    &::before,
+    &::after {
+        border: 0.25rem solid #4338ca;
+        content: '';
+        position: absolute;
+        z-index: -1;
+    }
+}
+.example__title {
+    background-color: #818cf8;
+    color: #fff;
+    position: absolute;
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    // It is a result of height * Math.sqrt(2)
+    width: 181px;
+}
+.example__ribbon--tr {
+    top: -0.5rem;
+    right: -0.5rem;
+
+    &::before,
+    &::after {
+        border-top-color: transparent;
+        border-right-color: transparent;
+    }
+    &::after {
+        bottom: 0;
+        right: 0;
+    }
+    &::before {
+        top: 0;
+        left: 0;
+    }
+    .example__title {
+        transform: translate(-13px, 30px) rotate(45deg);
+    }
+}
+.example__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+.example__content--small {
+    height: 20rem;
+}
+.example__content--medium {
+    height: 30rem;
+}
+.example__content--large {
+    height: 40rem;
+}

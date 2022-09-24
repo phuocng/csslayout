@@ -1,0 +1,30 @@
+.sticky-sections {
+    height: 100%;
+
+    /* Demo */
+    width: 100%;
+}
+
+.sticky-sections__section {
+    /* Take full size */
+    height: 25%;
+    width: 100%;
+
+    /* Stick to the top */
+    position: sticky;
+    top: 0;
+}
+
+/* Demo */
+.sticky-sections__section:nth-child(1) {
+    background-color: #e5e7eb;
+}
+.sticky-sections__section:nth-child(2) {
+    background-color: #d1d5db;
+}
+.sticky-sections__section:nth-child(3) {
+    background-color: #9ca3af;
+}
+.sticky-sections__section:nth-child(4) {
+    background-color: #6b7280;
+}

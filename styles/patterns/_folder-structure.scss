@@ -1,7 +1,7 @@
 :root {
-    --folder-structure-item-height: 1rem;
-    --folder-structure-item-margin-left: 2rem;
-    --folder-structure-item-padding-top: 1rem;
+    --folder-structure-item-height: 0.5rem;
+    --folder-structure-item-margin-left: 2.25rem;
+    --folder-structure-item-padding-top: 0.5rem;
 }
 
 .folder-structure ul {
@@ -16,7 +16,7 @@
 }
 
 .folder-structure li::before {
-    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid #d1d5db;
     content: '';
 
     /* Position */
@@ -30,7 +30,7 @@
 }
 
 .folder-structure li::after {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #d1d5db;
     content: '';
 
     /* Position */
@@ -45,5 +45,7 @@
 
 /* Remove the border from the last item */
 .folder-structure li:last-child::before {
-    height: calc(var(--folder-structure-item-padding-top) + var(--folder-structure-item-height) / 2);
+    height: calc(
+        var(--folder-structure-item-padding-top) + var(--folder-structure-item-height) / 2
+    );
 }

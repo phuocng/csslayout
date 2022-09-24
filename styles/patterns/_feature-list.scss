@@ -1,0 +1,20 @@
+.feature-list {
+    display: flex;
+
+    /* OPTIONAL: Spacing between items */
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+.feature-list--reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-list__image {
+    width: 2rem;
+}
+
+.feature-list__desc {
+    /* Take the remaining width */
+    flex: 1;
+}

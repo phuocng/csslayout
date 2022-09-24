@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+    <head>
+        <title>{{ title or metadata.title }} - CSS Layout</title>   
+        <meta charset="utf-8">
+        <meta name="author" content="Nguyen Huu Phuoc" />
+        <meta name="description" content="{{ description or title }}" />
+        <meta name="keywords" content="{{ keywords }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="{{ description or title }}" />
+        <meta name="twitter:site" content="@nghuuphuoc" />
+        <meta name="twitter:title" content="{{ title or metadata.title }} - CSS Layout" />
+        <meta property="og:description" content="{{ description or title }}" />
+        <meta property="og:site_name" content="CSS Layout" />
+        <meta property="og:title" content="{{ title or metadata.title }} - CSS Layout" />
+        <meta property="og:url" content="https://csslayout.io" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link rel="stylesheet" href="/styles/index.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap">
+    </head>
+    <body>
+        {{ content | safe }}
+        <div class="container">
+            <footer class="footer">           
+                <div class="footer__col">
+                    <div class="footer__heading">My products</div>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a class="footer__link" href="https://blur.page" target="_blank">BlurPage</a></li>
+                        <li class="footer__item"><a class="footer__link" href="https://formvalidation.io" target="_blank">Form Validation</a></li>
+                        <li class="footer__item"><a class="footer__link" href="https://intersectionobserver.io" target="_blank">IntersectionObserver Examples</a></li>
+                        <li class="footer__item"><a class="footer__link" href="https://react-pdf-viewer.dev" target="_blank">React PDF Viewer ● {{ github.reactpdfviewer.stargazers }}★</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__heading">Learning resources</div>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a class="footer__link" href="https://1loc.dev" target="_blank">1 LOC</a> ● {{ github.oneloc.stargazers }}★</li>
+                        <li class="footer__item"><a class="footer__link" href="https://crossbrowser.dev" target="_blank">Cross Browser</a> ● {{ github.crossbrowser.stargazers }}★</li>
+                        <li class="footer__item"><a class="footer__link" href="https://csslayout.io" target="_blank">CSS Layout</a> ● {{ github.csslayout.stargazers }}★</li>
+                        <li class="footer__item"><a class="footer__link" href="https://getfrontend.tips" target="_blank">Front-end Tips</a> ● {{ github.frontendtips.stargazers }}★</li>
+                        <li class="footer__item"><a class="footer__link" href="https://htmldom.dev" target="_blank">HTML DOM</a> ● {{ github.htmldom.stargazers }}★</li>
+                        <li class="footer__item"><a class="footer__link" href="https://thisthat.dev" target="_blank">this vs that</a> ● {{ github.thisvsthat.stargazers }}★</li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__heading">Follow me</div>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a class="footer__link" href="https://twitter.com/nghuuphuoc" target="_blank">Twitter</a></li>
+                        <li class="footer__item"><a class="footer__link" href="https://github.com/phuocng" target="_blank">GitHub</a></li>
+                    </ul>
+                    <div class="footer__author">
+                        © 2020 — 2022<br>
+                        Nguyen Huu Phuoc.<br>
+                        All rights reserved.
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

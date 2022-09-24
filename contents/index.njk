@@ -1,0 +1,150 @@
+---
+layout: layouts/base.njk
+title: A collection of popular layouts and patterns made with CSS
+eleventyExcludeFromCollections: true
+---
+
+<div class="container">
+    <div class="hero">
+        <h1 class="hero__heading">A collection of popular layouts and patterns made with CSS</h1>
+        <a class="hero__button" href="https://github.com/phuocng/csslayout">Star me on GitHub ● {{ github.csslayout.stargazers }}★</a>
+    </div>
+
+    {% include "css-scan.njk" %}
+
+    <div class="home__tip">Following covers are made with CSS only. Inspect them!</div>
+
+    <div class="category">
+        <h2 class="category__name">Display</h2>
+        <div class="category__posts">
+            {% pattern "Accordion" %}{% include "covers/accordion.njk" %}{% endpattern %}
+            {% pattern "Arrow buttons" %}{% include "covers/arrow-buttons.njk" %}{% endpattern %}
+            {% pattern "Avatar" %}{% include "covers/avatar.njk" %}{% endpattern %}
+            {% pattern "Avatar list" %}{% include "covers/avatar-list.njk" %}{% endpattern %}
+            {% pattern "Badge" %}{% include "covers/badge.njk" %}{% endpattern %}
+            {% pattern "Card" %}{% include "covers/card.njk" %}{% endpattern %}
+            {% pattern "Centering" %}{% include "covers/centering.njk" %}{% endpattern %}
+            {% pattern "Close button" %}{% include "covers/close-button.njk" %}{% endpattern %}
+            {% pattern "Color swatch" %}{% include "covers/color-swatch.njk" %}{% endpattern %}
+            {% pattern "Concave corners" %}{% include "covers/concave-corners.njk" %}{% endpattern %}
+            {% pattern "Cookie banner" %}{% include "covers/cookie-banner.njk" %}{% endpattern %}
+            {% pattern "Corner ribbon" %}{% include "covers/corner-ribbon.njk" %}{% endpattern %}
+            {% pattern "Curved background" %}{% include "covers/curved-background.njk" %}{% endpattern %}
+            {% pattern "Diagonal section" %}{% include "covers/diagonal-section.njk" %}{% endpattern %}
+            {% pattern "Docked at corner" %}{% include "covers/docked-at-corner.njk" %}{% endpattern %}
+            {% pattern "Dot leader" %}{% include "covers/dot-leader.njk" %}{% endpattern %}
+            {% pattern "Drop area" %}{% include "covers/drop-area.njk" %}{% endpattern %}
+            {% pattern "Drop cap" %}{% include "covers/drop-cap.njk" %}{% endpattern %}
+            {% pattern "Fading long section" %}{% include "covers/fading-long-section.njk" %}{% endpattern %}
+            {% pattern "Feature comparison" %}{% include "covers/feature-comparison.njk" %}{% endpattern %}
+            {% pattern "Feature list" %}{% include "covers/feature-list.njk" %}{% endpattern %}
+            {% pattern "Fixed at corner" %}{% include "covers/fixed-at-corner.njk" %}{% endpattern %}
+            {% pattern "Fixed at side" %}{% include "covers/fixed-at-side.njk" %}{% endpattern %}
+            {% pattern "Folder structure" %}{% include "covers/folder-structure.njk" %}{% endpattern %}
+            {% pattern "Full background" %}{% include "covers/full-background.njk" %}{% endpattern %}
+            {% pattern "Initial avatar" %}{% include "covers/initial-avatar.njk" %}{% endpattern %}
+            {% pattern "Inverted corners" %}{% include "covers/inverted-corners.njk" %}{% endpattern %}
+            {% pattern "Keyboard shortcut" %}{% include "covers/keyboard-shortcut.njk" %}{% endpattern %}
+            {% pattern "Layered card" %}{% include "covers/layered-card.njk" %}{% endpattern %}
+            {% pattern "Lined paper" %}{% include "covers/lined-paper.njk" %}{% endpattern %}
+            {% pattern "Media object" %}{% include "covers/media-object.njk" %}{% endpattern %}
+            {% pattern "Overlay play button" %}{% include "covers/overlay-play-button.njk" %}{% endpattern %}
+            {% pattern "Price tag" %}{% include "covers/price-tag.njk" %}{% endpattern %}
+            {% pattern "Pricing table" %}{% include "covers/pricing-table.njk" %}{% endpattern %}
+            {% pattern "Property list" %}{% include "covers/property-list.njk" %}{% endpattern %}
+            {% pattern "Questions and answers" %}{% include "covers/questions-and-answers.njk" %}{% endpattern %}
+            {% pattern "Ribbon" %}{% include "covers/ribbon.njk" %}{% endpattern %}
+            {% pattern "Separator" %}{% include "covers/separator.njk" %}{% endpattern %}
+            {% pattern "Stacked cards" %}{% include "covers/stacked-cards.njk" %}{% endpattern %}
+            {% pattern "Stamp border" %}{% include "covers/stamp-border.njk" %}{% endpattern %}
+            {% pattern "Statistic" %}{% include "covers/statistic.njk" %}{% endpattern %}
+            {% pattern "Status light" %}{% include "covers/status-light.njk" %}{% endpattern %}
+            {% pattern "Sticky table column" %}{% include "covers/sticky-table-column.njk" %}{% endpattern %}
+            {% pattern "Sticky table headers" %}{% include "covers/sticky-table-headers.njk" %}{% endpattern %}
+            {% pattern "Teardrop" %}{% include "covers/teardrop.njk" %}{% endpattern %}
+            {% pattern "Three dimensions card" %}{% include "covers/three-dimensions-card.njk" %}{% endpattern %}
+            {% pattern "Timeline" %}{% include "covers/timeline.njk" %}{% endpattern %}
+            {% pattern "Tree diagram" %}{% include "covers/tree-diagram.njk" %}{% endpattern %}
+            {% pattern "Triangle buttons" %}{% include "covers/triangle-buttons.njk" %}{% endpattern %}
+            {% pattern "Video background" %}{% include "covers/video-background.njk" %}{% endpattern %}
+            {% pattern "Voting" %}{% include "covers/voting.njk" %}{% endpattern %}
+            {% pattern "Watermark" %}{% include "covers/watermark.njk" %}{% endpattern %}
+            {% pattern "Zigzag timeline" %}{% include "covers/zigzag-timeline.njk" %}{% endpattern %}
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 class="category__name">Feedback</h2>
+        <div class="category__posts">
+            {% pattern "Modal" %}{% include "covers/modal.njk" %}{% endpattern %}
+            {% pattern "Notification" %}{% include "covers/notification.njk" %}{% endpattern %}
+            {% pattern "Popover arrow" %}{% include "covers/popover-arrow.njk" %}{% endpattern %}
+            {% pattern "Presence indicator" %}{% include "covers/presence-indicator.njk" %}{% endpattern %}
+            {% pattern "Progress bar" %}{% include "covers/progress-bar.njk" %}{% endpattern %}
+            {% pattern "Radial progress bar" %}{% include "covers/radial-progress-bar.njk" %}{% endpattern %}
+            {% pattern "Resizable element" %}{% include "covers/resizable-element.njk" %}{% endpattern %}
+            {% pattern "Tooltip" %}{% include "covers/tooltip.njk" %}{% endpattern %}
+            {% pattern "Validation icon" %}{% include "covers/validation-icon.njk" %}{% endpattern %}
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 class="category__name">Input</h2>
+        <div class="category__posts">
+            {% pattern "Button with icon" %}{% include "covers/button-with-icon.njk" %}{% endpattern %}
+            {% pattern "Chip" %}{% include "covers/chip.njk" %}{% endpattern %}
+            {% pattern "Custom checkbox button" %}{% include "covers/custom-checkbox-button.njk" %}{% endpattern %}
+            {% pattern "Custom radio button" %}{% include "covers/custom-radio-button.njk" %}{% endpattern %}
+            {% pattern "Floating label" %}{% include "covers/floating-label.njk" %}{% endpattern %}
+            {% pattern "Input addon" %}{% include "covers/input-addon.njk" %}{% endpattern %}
+            {% pattern "Radio button group" %}{% include "covers/radio-button-group.njk" %}{% endpattern %}
+            {% pattern "Radio switch" %}{% include "covers/radio-switch.njk" %}{% endpattern %}
+            {% pattern "Rating" %}{% include "covers/rating.njk" %}{% endpattern %}
+            {% pattern "Search box" %}{% include "covers/search-box.njk" %}{% endpattern %}
+            {% pattern "Slider" %}{% include "covers/slider.njk" %}{% endpattern %}
+            {% pattern "Spin button" %}{% include "covers/spin-button.njk" %}{% endpattern %}
+            {% pattern "Stepper input" %}{% include "covers/stepper-input.njk" %}{% endpattern %}
+            {% pattern "Switch" %}{% include "covers/switch.njk" %}{% endpattern %}
+            {% pattern "Toggle password visibility" %}{% include "covers/toggle-password-visibility.njk" %}{% endpattern %}
+            {% pattern "Upload button" %}{% include "covers/upload-button.njk" %}{% endpattern %}
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 class="category__name">Layout</h2>
+        <div class="category__posts">
+            {% pattern "Card layout" %}{% include "covers/card-layout.njk" %}{% endpattern %}
+            {% pattern "Holy grail" %}{% include "covers/holy-grail.njk" %}{% endpattern %}
+            {% pattern "Masonry grid" %}{% include "covers/masonry-grid.njk" %}{% endpattern %}
+            {% pattern "Same height columns" %}{% include "covers/same-height-columns.njk" %}{% endpattern %}
+            {% pattern "Sidebar" %}{% include "covers/sidebar.njk" %}{% endpattern %}
+            {% pattern "Simple grid" %}{% include "covers/simple-grid.njk" %}{% endpattern %}
+            {% pattern "Split screen" %}{% include "covers/split-screen.njk" %}{% endpattern %}
+            {% pattern "Sticky footer" %}{% include "covers/sticky-footer.njk" %}{% endpattern %}
+            {% pattern "Sticky header" %}{% include "covers/sticky-header.njk" %}{% endpattern %}
+            {% pattern "Sticky sections" %}{% include "covers/sticky-sections.njk" %}{% endpattern %}
+        </div>
+    </div>
+
+    <div class="category">
+        <h2 class="category__name">Navigation</h2>
+        <div class="category__posts">
+            {% pattern "Breadcrumb" %}{% include "covers/breadcrumb.njk" %}{% endpattern %}
+            {% pattern "Circular navigation" %}{% include "covers/circular-navigation.njk" %}{% endpattern %}
+            {% pattern "Dot navigation" %}{% include "covers/dot-navigation.njk" %}{% endpattern %}
+            {% pattern "Drawer" %}{% include "covers/drawer.njk" %}{% endpattern %}
+            {% pattern "Dropdown" %}{% include "covers/dropdown.njk" %}{% endpattern %}
+            {% pattern "Full screen menu" %}{% include "covers/full-screen-menu.njk" %}{% endpattern %}
+            {% pattern "Mega menu" %}{% include "covers/mega-menu.njk" %}{% endpattern %}
+            {% pattern "Menu" %}{% include "covers/menu.njk" %}{% endpattern %}
+            {% pattern "Nested dropdowns" %}{% include "covers/nested-dropdowns.njk" %}{% endpattern %}
+            {% pattern "Pagination" %}{% include "covers/pagination.njk" %}{% endpattern %}
+            {% pattern "Previous next buttons" %}{% include "covers/previous-next-buttons.njk" %}{% endpattern %}
+            {% pattern "Split navigation" %}{% include "covers/split-navigation.njk" %}{% endpattern %}
+            {% pattern "Tab" %}{% include "covers/tab.njk" %}{% endpattern %}
+            {% pattern "Wizard" %}{% include "covers/wizard.njk" %}{% endpattern %}
+        </div>
+    </div>
+
+    {% include "follow.njk" %}
+</div>

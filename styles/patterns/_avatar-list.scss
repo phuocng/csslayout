@@ -1,0 +1,28 @@
+.avatars {
+    display: flex;
+    justify-content: center;
+
+    height: 2rem;
+    width: 100%;
+}
+.avatars__item {
+    margin-left: -0.25rem;
+}
+.avatars__image {
+    background-color: #BBB;
+    box-shadow: 0 0 0 0.25rem #FFF;
+    color: #FFF;
+    font-size: 0.75rem;
+
+    /* Rounded border */
+    border-radius: 50%;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Size */
+    height: 2rem;
+    width: 2rem;
+}

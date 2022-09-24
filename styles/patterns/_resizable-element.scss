@@ -1,0 +1,101 @@
+.resizable-element {
+    /* Border */
+    border: 1px dashed #d1d5db;
+
+    /* Used to position the squares */
+    position: relative;
+
+    /* Demo */
+    height: 100%;
+    width: 100%;
+}
+
+.resizable-element__resizer {
+    /* Border */
+    border: 1px solid #d1d5db;
+    position: absolute;
+
+    /* Size */
+    height: 0.75rem;
+    width: 0.75rem;
+}
+
+.resizable-element__resizer--tl {
+    /* Resize cursor */
+    cursor: nwse-resize;
+
+    /* Positioned at the top left corner */
+    left: 0px;
+    top: 0px;
+    transform: translate(-50%, -50%);
+}
+
+.resizable-element__resizer--tc {
+    /* Resize cursor */
+    cursor: ns-resize;
+
+    /* Positioned at the middle of top side */
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%, -50%);
+}
+
+.resizable-element__resizer--tr {
+    /* Resize cursor */
+    cursor: nesw-resize;
+
+    /* Positioned at the top right corner */
+    right: 0px;
+    top: 0px;
+    transform: translate(50%, -50%);
+}
+
+.resizable-element__resizer--rc {
+    /* Resize cursor */
+    cursor: ew-resize;
+
+    /* Positioned at the middle of right side */
+    right: 0px;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+.resizable-element__resizer--rb {
+    /* Resize cursor */
+    cursor: nwse-resize;
+
+    /* Positioned at the right bottom corner */
+    bottom: 0px;
+    right: 0px;
+    transform: translate(50%, 50%);
+}
+
+.resizable-element__resizer--bc {
+    /* Resize cursor */
+    cursor: ns-resize;
+
+    /* Positioned at the middle of bottom side */
+    bottom: 0px;
+    right: 50%;
+    transform: translate(50%, 50%);
+}
+
+.resizable-element__resizer--bl {
+    /* Resize cursor */
+    cursor: nesw-resize;
+
+    /* Positioned at the bottom left corner */
+    bottom: 0px;
+    left: 0px;
+    transform: translate(-50%, 50%);
+}
+
+.resizable-element__resizer--lc {
+    /* Resize cursor */
+    cursor: ew-resize;
+
+    /* Positioned at the middle of left side */
+    left: 0px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

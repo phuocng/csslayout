@@ -1,3 +1,33 @@
-.p-menu-item:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    /* Border */
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+
+    /* Demo */
+    width: 8rem;
+}
+
+.menu__item {
+    /* Center the content horizontally */
+    align-items: center;
+    display: flex;
+
+    height: 2rem;
+    padding: 0.25rem;
+}
+.menu__item:hover {
+    background: #e5e7eb;
+}
+
+.menu__hotkey {
+    /* Push the hot key to the right */
+    margin-left: auto;
+}
+
+.menu__divider {
+    border-bottom: 1px solid #d1d5db;
+    height: 1px;
 }

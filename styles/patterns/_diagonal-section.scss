@@ -1,0 +1,24 @@
+.diagonal-section {
+    /* Used to position the diagonal area */
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+}
+
+.diagonal-section__diagonal {
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 50%;
+
+    /* Take full size */
+    height: 2rem;
+    width: 100%;
+
+    /* Create diagonal sides */
+    transform: translate(0, -50%) skewY(-15deg);
+
+    /* Background color */
+    background-color: #d1d5db;
+}

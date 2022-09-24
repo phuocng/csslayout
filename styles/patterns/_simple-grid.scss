@@ -1,0 +1,32 @@
+.simple-grid {
+    display: flex;
+
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+
+    /* Demo */
+    margin-bottom: 0.25em;
+    margin-top: 0.25em;
+    height: 100%;
+    width: 100%;
+}
+
+.simple-grid__cell {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+/* Cell with given width */
+.simple-grid__cell--1\/2 {
+    flex: 0 0 50%;
+}
+.simple-grid__cell--1\/3 {
+    flex: 0 0 33.3333333%;
+}
+.simple-grid__cell--1\/4 {
+    flex: 0 0 25%;
+}
+
+.simple-grid__cell--fill {
+    flex: 1;
+}

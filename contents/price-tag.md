@@ -1,0 +1,81 @@
+---
+layout: layouts/post.njk
+title: Price tag
+description: Create a price tag with CSS
+keywords: css price tag
+---
+
+## HTML
+
+```html
+<div class="price-tag">
+    ...
+</div>
+```
+
+## CSS
+
+```css
+:root {
+    --price-tag-background: #d1d5db;
+    --price-tag-height: 2rem;
+}
+
+.price-tag {
+    background: var(--price-tag-background);
+    color: #fff;
+
+    /* Center the price */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Used to position the triangle */
+    position: relative;
+
+    /* Size */
+    height: var(--price-tag-height);
+
+    /* Spacing */
+    padding: 0.25rem 0.5rem;
+}
+
+/* The triangle */
+.price-tag::before {
+    content: '';
+
+    border-color: transparent var(--price-tag-background) transparent transparent;
+    border-style: solid;
+    border-width: calc(var(--price-tag-height) / 2) calc(var(--price-tag-height) / 2)
+        calc(var(--price-tag-height) / 2) 0rem;
+
+    /* Position */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transform: translate(-100%, 0px);
+}
+
+/* The dot */
+.price-tag::after {
+    content: '';
+
+    /* Make it like a cirle */
+    background: #fff;
+    border-radius: 9999rem;
+
+    /* Position */
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-0.5rem, -50%);
+
+    /* Size */
+    height: 0.5rem;
+    width: 0.5rem;
+}
+```
+
+{% demo %}
+{% include "covers/price-tag.njk" %}
+{% enddemo %}

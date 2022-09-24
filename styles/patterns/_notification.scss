@@ -1,0 +1,63 @@
+.notification {
+    display: flex;
+
+    /* Demo */
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    width: 8rem;
+}
+.notification__body {
+    flex: 1;
+    margin-right: 0.5rem;
+}
+
+.notification__close {
+    /* Reset */
+    background-color: transparent;
+    border-color: transparent;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Size */
+    height: 1rem;
+    width: 1rem;
+
+    /* Used to position the inner */
+    position: relative;
+}
+
+.notification__close-line {
+    /* Background color */
+    background-color: #d1d5db;
+
+    /* Position */
+    position: absolute;
+
+    /* Size */
+    height: 1px;
+    width: 100%;
+}
+
+.notification__close-line--first {
+    /* Position */
+    left: 0px;
+    top: 50%;
+    transform: translate(0%, -50%) rotate(45deg);
+
+    /* Size */
+    height: 1px;
+    width: 100%;
+}
+
+.notification__close-line--second {
+    /* Position */
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%, 0%) rotate(45deg);
+
+    /* Size */
+    height: 100%;
+    width: 1px;
+}

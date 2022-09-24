@@ -1,8 +1,12 @@
 .masonry-grid {
+    /* It is split into 3 columns */
     column-count: 3;
+
+    /* The space between columns */
     column-gap: 1rem;
 
-    /* Misc */
+    /* Demo */
+    height: 100%;
     width: 100%;
 }
 

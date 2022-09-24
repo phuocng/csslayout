@@ -2,13 +2,18 @@
     --three-dimensions-card-left-side-width: 1rem;
 }
 
-.three-dimensions-card {
+.three-dimensions-card {    
     position: relative;
+
+    /* Demo */
+    border: 1px solid #d1d5db;
+    height: 6rem;
+    width: 6rem;
 }
 
 /* The left side */
 .three-dimensions-card::before {
-    background: rgba(0, 0, 0, 0.3);
+    background: #d1d5db;
     content: '';
 
     /* Position */
@@ -25,7 +30,7 @@
 
 /* The bottom side */
 .three-dimensions-card::after {
-    background: rgba(0, 0, 0, 0.3);
+    background: #d1d5db;
     content: '';
 
     /* Position */

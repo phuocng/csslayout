@@ -1,0 +1,27 @@
+.sticky-table-headers {
+    /* Demo */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.sticky-table-headers tbody {
+    border-bottom: 1px solid #d1d5db;
+}
+.sticky-table-headers thead td {
+    padding: 0.25rem;
+}
+.sticky-table-headers tr {
+    border-top: 1px solid #d1d5db;
+}
+
+.sticky-table-headers__sticky {
+    /* Background color */
+    background-color: #9ca3af;
+
+    /* Stick to the left */
+    left: 0;
+    position: sticky;
+
+    /* Displayed on top of other rows when scrolling */
+    z-index: 9999;
+}

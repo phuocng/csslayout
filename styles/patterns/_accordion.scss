@@ -1,0 +1,32 @@
+.accordion {
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+}
+.accordion__item:not(:last-child) {
+    border-bottom: 1px solid #d1d5db;
+}
+.accordion__header {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.accordion__toggle {
+    margin-right: 0.25rem;
+}
+.accordion__title {
+    flex: 1;
+}
+.accordion__content {
+    padding: 0.5rem;
+}
+
+.accordion__item--collapsed .accordion__content {
+    display: none;
+}
+.accordion__item--expanded .accordion__content {
+    display: block;
+}

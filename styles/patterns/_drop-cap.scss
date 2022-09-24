@@ -1,0 +1,18 @@
+.drop-cap {
+    overflow: hidden;
+}
+.drop-cap:first-letter {
+    border: 2px solid #d1d5db;
+
+    /* Display at the left */
+    float: left;
+    line-height: 1;
+
+    /* Spacing */
+    margin: 0 0.5rem 0 0;
+    padding: 0 0.5rem;
+
+    /* Optional */
+    font-size: 2rem;
+    font-weight: 700;
+}

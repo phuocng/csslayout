@@ -1,0 +1,25 @@
+.docked-at-corner {
+    position: relative;
+    height: 4rem;
+    width: 80%;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+}
+.docked-at-corner__docker {
+    background-color: #22c55e;
+    border-radius: 9999px;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Size */
+    height: 1rem;
+    width: 1rem;
+}

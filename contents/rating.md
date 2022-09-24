@@ -1,0 +1,63 @@
+---
+layout: layouts/post.njk
+title: Rating
+description: Create a star rating with CSS flexbox
+keywords: css flexbox, css star rating
+---
+
+## HTML
+
+```html
+<div class="rating">
+    <button class="rating__star">☆</button>
+    <button class="rating__star">☆</button>
+    <button class="rating__star">☆</button>
+    <button class="rating__star">☆</button>
+    <button class="rating__star">★</button>
+</div>
+```
+
+## CSS
+
+```css
+.rating {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    flex-direction: row-reverse;
+}
+
+.rating__star:hover,
+.rating__star:hover ~ .rating__star {
+    color: transparent;
+}
+
+/*
+Make all previous stars selected when hover on a star
+Note that we use \`flex-direction: row-reverse\` on the container
+*/
+.rating__star:hover:before,
+.rating__star:hover ~ .rating__star:before {
+    color: #eab308;
+    content: '★';
+    left: 0;
+    position: absolute;
+}
+
+.rating__star {
+    font-size: 1.5rem;
+
+    /* Reset styles for button */
+    background-color: transparent;
+    border: transparent;
+    margin: 0 2px;
+    padding: 0;
+
+    /* Used to position the hover state */
+    position: relative;
+}
+```
+
+{% demo %}{% include "covers/rating.njk" %}{% enddemo %}

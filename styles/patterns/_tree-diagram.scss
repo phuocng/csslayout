@@ -9,12 +9,16 @@
 }
 
 .tree-diagram ul ul::before {
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid #d1d5db;
     content: '';
-    height: 1rem;
+
+    /* Position */
     position: absolute;
     top: 0;
     right: 50%;
+
+    /* Size */
+    height: 1rem;
     width: 50%;
 }
 
@@ -29,34 +33,40 @@
 }
 
 .tree-diagram li::before {
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid #d1d5db;
+    border-top: 1px solid #d1d5db;
     content: '';
-    height: 1rem;
 
     /* Position */
     position: absolute;
     top: 0;
     right: 50%;
+
+    /* Size */
+    height: 1rem;
     width: 50%;
 }
 
 .tree-diagram li::after {
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid #d1d5db;
     content: '';
 
     /* Position */
     position: absolute;
     top: 0;
     right: 0;
+
+    /* Size */
     width: 50%;
 }
 
 .tree-diagram li:first-child::before,
 .tree-diagram li:last-child::after {
+    /* Remove the top of border from the first and last items */
     border-top: none;
 }
 
+/* Add a root item if you want */
 li.tree-diagram__root::before {
     border-right: none;
 }

@@ -1,0 +1,105 @@
+---
+layout: layouts/post.njk
+title: Chip
+description: Create a chip component with CSS flexbox
+keywords: css chip, css flexbox, css tag
+---
+
+## HTML
+
+```html
+<div class="chip">
+    <!-- Content -->
+    <div class="chip__content">
+        ...
+    </div>
+
+    <!-- The close button -->
+    <button class="chip__button">
+        <div class="chip__button-line chip__button-line--first"></div>
+        <div class="chip__button-line chip__button-line--second"></div>
+    </button>
+</div>
+```
+
+## CSS
+
+```css
+.chip {
+    /* Center the content */
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+
+    /* Background color */
+    background-color: #d1d5db;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Spacing */
+    padding: 0.25rem 0.5rem;
+}
+
+.chip__content {
+    margin-right: 0.25rem;
+}
+```
+
+The [close button](/close-button/) is used to create a button for removing the chip:
+
+```css
+.chip__button {
+    /* Reset */
+    background-color: transparent;
+    border-color: transparent;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Size */
+    height: 1rem;
+    width: 1rem;
+
+    /* Used to position the inner */
+    position: relative;
+}
+
+.chip__button-line {
+    /* Background color */
+    background-color: #9ca3af;
+
+    /* Position */
+    position: absolute;
+
+    /* Size */
+    height: 1px;
+    width: 100%;
+}
+
+.chip__button-line--first {
+    /* Position */
+    left: 0px;
+    top: 50%;
+    transform: translate(0%, -50%) rotate(45deg);
+
+    /* Size */
+    height: 1px;
+    width: 100%;
+}
+
+.chip__button-line--second {
+    /* Position */
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%, 0%) rotate(45deg);
+
+    /* Size */
+    height: 100%;
+    width: 1px;
+}
+```
+
+{% demo %}
+{% include "covers/chip.njk" %}
+{% enddemo %}

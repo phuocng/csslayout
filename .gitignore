@@ -1,7 +1,5 @@
-.DS_Store
+.cache
 .netlify
-.next
+_site
 node_modules
-out
 package-lock.json
-tslint.log

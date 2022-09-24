@@ -1,0 +1,14 @@
+.curved-background {
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    height: 100%;
+    width: 100%;
+}
+.curved-background__curved {
+    background-color: #d1d5db;
+    border-bottom-left-radius: 50% 40%;
+    border-bottom-right-radius: 50% 40%;
+
+    height: 50%;
+    width: 100%;
+}

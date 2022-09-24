@@ -1,23 +1,25 @@
-.block-header {
-    background: #fff;
-    border-bottom: 1px solid #e4e4e4;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-}
-.block-header__inner {
+.header {
     align-items: center;
     display: flex;
-    height: 3rem;
     justify-content: space-between;
+    padding: 1rem 0;
 }
-.block-header__cta {
+.header__breadcrumb {
     align-items: center;
-    background-color: var(--mgd-color-primary);
+    display: flex;
+    justify-content: center;
+}
+.header__link {
+    align-items: center;
+    color: #222;
+    display: flex;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+.header__link--primary {
+    background: #6366f1;
     border-radius: 9999px;
     color: #fff;
-    display: flex;
-    font-weight: 600;
-    height: 2rem;
-    padding: 0 1.5rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
 }

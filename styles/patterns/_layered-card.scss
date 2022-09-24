@@ -1,9 +1,13 @@
 .layered-card {
     position: relative;
+
+    /* Demo */
+    height: 6rem;
+    width: 6rem;
 }
 
 .layered-card::before {
-    background: rgba(0, 0, 0, 0.3);
+    background: #d1d5db;
     content: '';
 
     /* Position */
@@ -17,5 +21,19 @@
     width: 100%;
 
     /* Display under the main content */
-    z-index: -1;
+    z-index: 0;
+}
+
+.layered-card__content {
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    /* Size */
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    
+    border: 1px solid #d1d5db;
+    background: #FFF;
 }

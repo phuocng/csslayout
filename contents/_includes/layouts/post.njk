@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+---
+{% set previousPost = collections.sortByTitle | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.sortByTitle | getNextCollectionItem(page) %}
+
+<div class="container">
+    <div class="header">
+        <div class="header__breadcrumb">
+            <a class="header__link" href="/">/css-layout</a>
+        </div>
+        <a class="header__link header__link--primary" href="https://github.com/phuocng/csslayout">GitHub {{ github.csslayout.stargazers }}★</a>
+    </div>
+    
+    {% include "css-scan.njk" %}
+
+    <div class="post">
+        <h1 class="post__heading">{{ title }}</h1>
+        <div class="post__content">{{ content | safe }}</div>
+    </div>
+    <div class="nav">
+    {% if previousPost %}<a class="nav__item nav__item--prev" href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}
+    {% if nextPost %}<a class="nav__item nav__item--next" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}
+    </div>
+    {% include "follow.njk" %}
+</div>

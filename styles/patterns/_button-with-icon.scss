@@ -1,0 +1,18 @@
+.button-with-icon {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    /* Demo */
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;    
+    width: 8rem;
+}
+
+.button-with-icon__label {
+    flex: 1;
+    margin-left: 0.5rem;
+}

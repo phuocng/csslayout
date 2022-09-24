@@ -1,9 +1,38 @@
-.p-floating-container label {
-    opacity: 0;
+.floating-label {
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    position: relative;
+
+    /* Demo */
+    padding: 0px 1px;
+    height: 2.5rem;
 }
 
-.p-floating-container input:not(:placeholder-shown) + label {
+.floating-label__input {
+    border: none;
+    padding: 0.5rem;
+    height: 100%;
+}
+
+/*
+Show the label at desired position when the 
+placeholder of input isn't shown
+*/
+.floating-label__input:not(:placeholder-shown) + .floating-label__label {
     background: #fff;
-    transform: translate(0, -50%);
+    transform: translate(0, -200%);
     opacity: 1;
+}
+
+.floating-label__label {
+    /* Position the label */
+    left: 1rem;
+    position: absolute;
+    top: 100%;
+
+    /* Hide it by default */
+    opacity: 0;
+    transition: all 200ms;
+
+    padding: 0 0.5rem;
 }

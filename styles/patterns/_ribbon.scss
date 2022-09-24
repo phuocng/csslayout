@@ -1,0 +1,61 @@
+.ribbon {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Size */
+    height: 2rem;
+    width: 4rem; /* For demo */
+
+    /* Use to position the corners */
+    position: relative;
+}
+
+.ribbon__content {
+    /* Background color */
+    background-color: #9ca3af;
+    z-index: 1;
+
+    height: 100%;
+    width: 100%;
+}
+.ribbon__side {
+    bottom: -0.5rem;
+    position: absolute;
+
+    /* Background */
+    border: 1rem solid #d1d5db;
+}
+
+.ribbon__side--l {
+    /* Position */
+    left: -1.5rem;
+    border-color: #d1d5db #d1d5db #d1d5db transparent;
+}
+
+.ribbon__side--r {
+    /* Position */
+    right: -1.5rem;
+    border-color: #d1d5db transparent #d1d5db #d1d5db;
+}
+
+.ribbon__triangle {
+    position: absolute;
+    top: 100%;
+
+    border: 0.5rem solid transparent;
+    border-bottom-width: 0;
+    border-top-color: #6b7280;
+    z-index: 1;
+}
+
+.ribbon__triangle--l {
+    border-right-width: 0;
+    left: 0;
+}
+
+.ribbon__triangle--r {
+    border-left-width: 0;
+    right: 0;
+}

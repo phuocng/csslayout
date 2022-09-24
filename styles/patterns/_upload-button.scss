@@ -1,0 +1,41 @@
+.upload-button {
+    /* Used to position the input */
+    position: relative;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+
+    /* Border */
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+
+    /* Demo */
+    width: 8rem;
+}
+
+.upload-button__input {
+    /* Take the full size */
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    /* Make it transparent */
+    opacity: 0;
+}
+
+.upload-button__icon {
+    margin-right: 0.5rem;
+}
+.upload-button__svg {
+    fill: none;
+    height: 1.5rem;
+    stroke: #d1d5db;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1;
+    width: 1.5rem;
+}
