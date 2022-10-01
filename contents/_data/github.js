@@ -15,6 +15,7 @@ module.exports = async function() {
     return {
         'oneloc': await fetchGitHubStars('phuocng/1loc'),
         'crossbrowser': await fetchGitHubStars('phuocng/cross-browser'),
+        'cssanimation': await fetchGitHubStars('phuocng/css-animation'),
         'csslayout': await fetchGitHubStars('phuocng/csslayout'),
         'frontendtips': await fetchGitHubStars('phuocng/frontend-tips'),
         'htmldom': await fetchGitHubStars('phuocng/html-dom'),

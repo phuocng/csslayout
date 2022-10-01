@@ -1,10 +1,11 @@
 .example {
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-    margin: 2rem 0;
+    margin: 2rem -1rem 2rem -1rem;
     position: relative;
 }
 .example--border {
-    border: 1px solid #d1d5db;
+    border-top: 1px solid #d1d5db;
+    border-bottom: 1px solid #d1d5db;
 }
 .example__ribbon {
     height: 8rem;
@@ -22,7 +23,7 @@
     }
 }
 .example__title {
-    background-color: #818cf8;
+    background-color: #6366f1;
     color: #fff;
     position: absolute;
     padding: 0.5rem 0;
