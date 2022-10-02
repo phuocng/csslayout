@@ -15,9 +15,7 @@ keywords: css flexbox, css layout, css same height columns
         ...
 
         <!-- Content -->
-        <div class="same-height-columns__content">
-            ...
-        </div>
+        <div class="same-height-columns__content">...</div>
 
         <!-- Button sticks to the bottom -->
         ...

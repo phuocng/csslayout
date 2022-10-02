@@ -9,14 +9,10 @@ keywords: css fixed
 
 ```html
 <!-- Fixed at the middle of left side -->
-<div class="fixed-at-side fixed-at-side--l">
-    ...
-</div>
+<div class="fixed-at-side fixed-at-side--l">...</div>
 
 <!-- Fixed at the middle of right side -->
-<div class="fixed-at-side fixed-at-side--r">
-    ...
-</div>
+<div class="fixed-at-side fixed-at-side--r">...</div>
 ```
 
 ## CSS

@@ -10,9 +10,7 @@ keywords: css border radius, css teardrop, css water drop shape, css water dropl
 ```html
 <div class="teardrop">
     <!-- Display the content vertically -->
-    <div class="teardrop__content">
-        ...
-    </div>
+    <div class="teardrop__content">...</div>
 </div>
 ```
 

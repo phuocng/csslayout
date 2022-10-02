@@ -10,9 +10,7 @@ keywords: css feature comparison, css flexbox
 ```html
 <div class="feature-comparison">
     <!-- Feature name -->
-    <div class="feature-comparison__feature">
-        ...
-    </div>
+    <div class="feature-comparison__feature">...</div>
 
     <!-- The model -->
     <div class="feature-comparison__model">

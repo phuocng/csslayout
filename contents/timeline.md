@@ -22,15 +22,11 @@ keywords: css flexbox, css timeline
                 <div class="timeline__circle"></div>
 
                 <!-- The title -->
-                <div class="timeline__title">
-                    ...
-                </div>
+                <div class="timeline__title">...</div>
             </div>
 
             <!-- The description -->
-            <div class="timeline__desc">
-                ...
-            </div>
+            <div class="timeline__desc">...</div>
         </div>
 
         <!-- Repeat other items -->

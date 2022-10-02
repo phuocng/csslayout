@@ -18,9 +18,7 @@ keywords: css mega menu
         <div>...</div>
 
         <!-- Mega menu -->
-        <div class="mega-menu__content">
-            ...
-        </div>
+        <div class="mega-menu__content">...</div>
     </div>
 
     <!-- Item -->

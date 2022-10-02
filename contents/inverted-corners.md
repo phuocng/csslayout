@@ -8,9 +8,7 @@ keywords: css border radius, css inverted border radius, css inverted corners
 ## HTML
 
 ```html
-<div class="inverted-corners">
-    ...
-</div>
+<div class="inverted-corners">...</div>
 ```
 
 ## CSS

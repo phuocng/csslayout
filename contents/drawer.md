@@ -15,9 +15,7 @@ This pattern is also known as off-canvas.
     <div class="drawer__overlay"></div>
 
     <!-- Sidebar -->
-    <div class="drawer__sidebar">
-        ...
-    </div>
+    <div class="drawer__sidebar">...</div>
 </div>
 ```
 

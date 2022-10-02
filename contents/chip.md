@@ -10,9 +10,7 @@ keywords: css chip, css flexbox, css tag
 ```html
 <div class="chip">
     <!-- Content -->
-    <div class="chip__content">
-        ...
-    </div>
+    <div class="chip__content">...</div>
 
     <!-- The close button -->
     <button class="chip__button">

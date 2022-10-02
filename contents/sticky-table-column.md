@@ -11,9 +11,7 @@ keywords: css position sticky, css sticky table column
 <table class="sticky-table-column">
     <thead>
         <tr>
-            <th class="sticky-table-column__sticky">
-                ...
-            </th>
+            <th class="sticky-table-column__sticky">...</th>
 
             <!-- Other header column ... -->
         </tr>

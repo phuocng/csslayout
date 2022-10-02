@@ -11,9 +11,7 @@ keywords: css flexbox, css input add-on
 <!-- Add-on prepended -->
 <div class="input-addon">
     <!-- Add-on -->
-    <div class="input-addon__addon input-addon__addon--prepended">
-        ...
-    </div>
+    <div class="input-addon__addon input-addon__addon--prepended">...</div>
 
     <!-- Input -->
     <input type="text" class="input-addon__input" />
@@ -25,25 +23,19 @@ keywords: css flexbox, css input add-on
     <input type="text" class="input-addon__input" />
 
     <!-- Add-on -->
-    <div class="input-addon__addon input-addon__addon--appended">
-        ...
-    </div>
+    <div class="input-addon__addon input-addon__addon--appended">...</div>
 </div>
 
 <!-- Appended and prepended add-ons -->
 <div class="input-addon">
     <!-- Add-on -->
-    <div class="input-addon__addon input-addon__addon--prepended">
-        ...
-    </div>
+    <div class="input-addon__addon input-addon__addon--prepended">...</div>
 
     <!-- Input -->
     <input type="text" class="input-addon__input" />
 
     <!-- Add-on -->
-    <div class="input-addon__addon input-addon__addon--appended">
-        ...
-    </div>
+    <div class="input-addon__addon input-addon__addon--appended">...</div>
 </div>
 ```
 

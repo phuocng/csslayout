@@ -12,9 +12,7 @@ keywords: css watermark
     <!-- Watermark container -->
     <div class="watermark__inner">
         <!-- The watermark -->
-        <div class="watermark__body">
-            Draft
-        </div>
+        <div class="watermark__body">Draft</div>
     </div>
 
     <!-- Other content -->

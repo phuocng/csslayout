@@ -11,14 +11,10 @@ keywords: css feature list, css flexbox
 <!-- Feature item -->
 <div class="feature-list">
     <!-- Image -->
-    <div class="feature-list__image">
-        ...
-    </div>
+    <div class="feature-list__image">...</div>
 
     <!-- Right side -->
-    <div class="feature-list__desc">
-        ...
-    </div>
+    <div class="feature-list__desc">...</div>
 </div>
 
 <!-- Repeated items -->

@@ -12,7 +12,8 @@ keywords: css dropdown menu, css multi-level dropdown menu, css nested dropdown 
     <li>A</li>
     <li>
         <div class="nested-dropdowns__item">
-            B <div class="nested-dropdowns__arrow">...</div>
+            B
+            <div class="nested-dropdowns__arrow">...</div>
         </div>
         <ul>
             <li>B.1</li>
@@ -54,7 +55,7 @@ keywords: css dropdown menu, css multi-level dropdown menu, css nested dropdown 
 
 .nested-dropdowns li {
     cursor: pointer;
-    
+
     /* Spacing */
     padding: 0.25rem;
 

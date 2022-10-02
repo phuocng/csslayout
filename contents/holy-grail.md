@@ -9,9 +9,7 @@ keywords: css flexbox, css holy grail layout, css layout
 
 ```html
 <div class="holy-grail">
-    <header>
-        ...
-    </header>
+    <header>...</header>
     <main class="holy-grail__main">
         <!-- Left sidebar -->
         <aside class="holy-grail__left">...</aside>
@@ -22,9 +20,7 @@ keywords: css flexbox, css holy grail layout, css layout
         <!-- Right sidebar -->
         <nav class="holy-grail__right">...</nav>
     </main>
-    <footer>
-        ...
-    </footer>
+    <footer>...</footer>
 </div>
 ```
 

@@ -40,7 +40,7 @@ keywords: css breadcrumb, css flexbox
     top: 0;
     transform: translate(0.5rem, 0px);
 
-    content: '/';    
+    content: '/';
 }
 ```
 

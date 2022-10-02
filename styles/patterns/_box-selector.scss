@@ -4,7 +4,7 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 0.5rem;
     row-gap: 0.5rem;
-    
+
     height: 8rem;
     width: 8rem;
 }
@@ -12,7 +12,7 @@
 .box-selector {
     border: 1px solid #d1d5db;
     border-radius: 0.25rem;
-    padding: .5rem;
+    padding: 0.5rem;
 }
 
 .box-selector--selected {

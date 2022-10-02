@@ -10,18 +10,14 @@ keywords: css flexbox, css menu
 ```html
 <div class="menu">
     <!-- Normal menu item -->
-    <div class="menu__item">
-        ...
-    </div>
+    <div class="menu__item">...</div>
 
     <!-- With hot key -->
     <div class="menu__item">
         <!-- Label -->
         ...
         <!-- Hot key -->
-        <div class="menu__hotkey">
-            ...
-        </div>
+        <div class="menu__hotkey">...</div>
     </div>
 
     <!-- With image and hot key -->
@@ -33,9 +29,7 @@ keywords: css flexbox, css menu
         ...
 
         <!-- Hot key -->
-        <div class="menu__hotkey">
-            ...
-        </div>
+        <div class="menu__hotkey">...</div>
     </div>
 
     <!-- Divider -->

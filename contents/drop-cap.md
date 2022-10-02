@@ -8,9 +8,7 @@ keywords: css drop cap, css :first-letter
 ## HTML
 
 ```html
-<div class="drop-cap">
-    ...
-</div>
+<div class="drop-cap">...</div>
 ```
 
 ## CSS

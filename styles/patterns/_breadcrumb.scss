@@ -10,11 +10,11 @@
 }
 
 .breadcrumb__item:not(:last-child)::after {
-    /* Absolute position */   
+    /* Absolute position */
     position: absolute;
     right: 0;
     top: 0;
     transform: translate(0.5rem, 0px);
 
-    content: '/';    
+    content: '/';
 }

@@ -10,9 +10,7 @@ keywords: css divider, css flexbox, css separator
 ```html
 <div class="separator">
     <!-- Text -->
-    <div class="separator__content">
-        ...
-    </div>
+    <div class="separator__content">...</div>
 
     <!-- Separator line -->
     <div class="separator__separator"></div>

@@ -21,9 +21,7 @@ keywords: css dialog, css flexbox, css modal
     ...
 
     <!-- Footer -->
-    <div class="modal__footer">
-        ...
-    </div>
+    <div class="modal__footer">...</div>
 </div>
 ```
 
@@ -48,7 +46,7 @@ keywords: css dialog, css flexbox, css modal
     display: flex;
     /* Push the buttons to the right */
     justify-content: flex-end;
-    
+
     /* Border */
     border-top: 1px solid #d1d5db;
 }

@@ -10,14 +10,10 @@ keywords: css flexbox, css layout, css split screen
 ```html
 <div class="split-screen">
     <!-- Left content -->
-    <div class="split-screen__half">
-        ...
-    </div>
+    <div class="split-screen__half">...</div>
 
     <!-- Right content -->
-    <div class="split-screen__half">
-        ...
-    </div>
+    <div class="split-screen__half">...</div>
 </div>
 ```
 

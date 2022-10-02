@@ -15,9 +15,7 @@ keywords: css circular navigation, css flexbox
     <!-- A circle menu item -->
     <div class="circular-navigation__circle">
         <!-- The content -->
-        <div class="circular-navigation__content">            
-            ...
-        </div>
+        <div class="circular-navigation__content">...</div>
     </div>
 
     <!-- Repeat menu items -->

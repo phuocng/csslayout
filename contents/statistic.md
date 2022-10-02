@@ -10,14 +10,10 @@ keywords: css flexbox, css statistic
 ```html
 <div class="statistic">
     <!-- Value -->
-    <div class="statistic__value">
-        ...
-    </div>
+    <div class="statistic__value">...</div>
 
     <!-- Label -->
-    <div class="statistic__label">
-        ...
-    </div>
+    <div class="statistic__label">...</div>
 </div>
 ```
 

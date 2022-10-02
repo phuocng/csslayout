@@ -8,9 +8,7 @@ keywords: css centering, css flexbox
 ## HTML
 
 ```html
-<div class="centering">
-    ...
-</div>
+<div class="centering">...</div>
 ```
 
 ## CSS

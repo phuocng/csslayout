@@ -8,9 +8,7 @@ keywords: css avatar
 ## HTML
 
 ```html
-<div class="initial-avatar">
-    ...
-</div>
+<div class="initial-avatar">...</div>
 ```
 
 ## CSS

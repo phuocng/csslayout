@@ -13,9 +13,7 @@ keywords: css flexbox, css icon button
     ...
 
     <!-- Label -->
-    <div class="button-with-icon__label">
-        ...
-    </div>
+    <div class="button-with-icon__label">...</div>
 </button>
 ```
 

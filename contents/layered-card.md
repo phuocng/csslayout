@@ -51,10 +51,10 @@ keywords: css layered card
     /* Size */
     height: 100%;
     width: 100%;
-    
+
     z-index: 1;
 
-    background: #FFF;
+    background: #fff;
 }
 ```
 

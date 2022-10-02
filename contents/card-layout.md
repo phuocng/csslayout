@@ -10,9 +10,7 @@ keywords: css card layout, css flexbox, css layout
 ```html
 <div class="card-layout">
     <!-- A card with given width -->
-    <div class="card-layout__item">
-        ...
-    </div>
+    <div class="card-layout__item">...</div>
 
     <!-- Repeat other cards -->
     ...

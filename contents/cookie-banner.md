@@ -10,9 +10,7 @@ keywords: css cookie banner, css flexbox
 ```html
 <div class="cookie-banner">
     <!-- Tells visitors that the website uses cookie -->
-    <div class="cookie-banner__content">
-        ...
-    </div>
+    <div class="cookie-banner__content">...</div>
 
     <!-- Close button -->
     ...

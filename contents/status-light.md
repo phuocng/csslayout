@@ -13,9 +13,7 @@ keywords: css flexbox, css status light
     <div class="status-light__status"></div>
 
     <!-- Content -->
-    <div class="status-light__content">
-        ...
-    </div>
+    <div class="status-light__content">...</div>
 </div>
 ```
 

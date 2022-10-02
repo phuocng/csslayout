@@ -8,9 +8,7 @@ keywords: css badge, css flexbox
 ## HTML
 
 ```html
-<div class="badge">
-    ...
-</div>
+<div class="badge">...</div>
 ```
 
 ## CSS

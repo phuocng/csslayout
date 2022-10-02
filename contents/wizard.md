@@ -16,9 +16,7 @@ keywords: css flexbox, css stepper, css wizard
             <div class="wizard__connector"></div>
 
             <!-- The step number -->
-            <div class="wizard__number">
-                ...
-            </div>
+            <div class="wizard__number">...</div>
 
             <!-- The right connector -->
             <div class="wizard__connector"></div>

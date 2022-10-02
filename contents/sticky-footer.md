@@ -9,15 +9,9 @@ keywords: css flexbox, css layout, css sticky, css sticky footer
 
 ```html
 <div class="sticky-footer">
-    <header class="sticky-footer__header">
-        ...
-    </header>
-    <main class="sticky-footer__main">
-        ...
-    </main>
-    <footer class="sticky-footer__footer">
-        ...
-    </footer>
+    <header class="sticky-footer__header">...</header>
+    <main class="sticky-footer__main">...</main>
+    <footer class="sticky-footer__footer">...</footer>
 </div>
 ```
 

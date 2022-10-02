@@ -9,12 +9,8 @@ keywords: css layout, css position sticky, css sticky header
 
 ```html
 <div>
-    <header class="sticky-header__header">
-        ...
-    </header>
-    <main>
-        ...
-    </main>
+    <header class="sticky-header__header">...</header>
+    <main>...</main>
 </div>
 ```
 

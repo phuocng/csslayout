@@ -13,25 +13,18 @@ keywords: css accordion, css faq, css flexbox
     <!-- Heading -->
     <div class="questions-and-answers__header">
         <!-- Question -->
-        <div class="questions-and-answers__title">
-            ...
-        </div>
+        <div class="questions-and-answers__title">...</div>
 
         <!-- The toggle icon sticks to the right -->
-        <div class="questions-and-answers__toggle">
-        </div>
+        <div class="questions-and-answers__toggle"></div>
     </div>
 
     <!-- Answer -->
-    <div class="questions-and-answers__content">
-        ...
-    </div>
+    <div class="questions-and-answers__content">...</div>
 </div>
 
 <!-- Expanded question and answer item -->
-<div class="questions-and-answers__item questions-and-answers__item--expanded">
-    ...
-</div>
+<div class="questions-and-answers__item questions-and-answers__item--expanded">...</div>
 ```
 
 ## CSS

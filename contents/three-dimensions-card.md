@@ -8,9 +8,7 @@ keywords: css 3D card
 ## HTML
 
 ```html
-<div class="three-dimensions-card">
-    ...
-</div>
+<div class="three-dimensions-card">...</div>
 ```
 
 ## CSS
@@ -20,7 +18,7 @@ keywords: css 3D card
     --three-dimensions-card-left-side-width: 1rem;
 }
 
-.three-dimensions-card {    
+.three-dimensions-card {
     position: relative;
 }
 
