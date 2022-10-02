@@ -12,9 +12,7 @@ The pattern is often used to indicate there is more content.
 ```html
 <div class="fading-long-section">
     <!-- Main content -->
-    <div class="fading-long-section__content">
-        ...
-    </div>
+    <div class="fading-long-section__content">...</div>
 
     <!-- The faded element -->
     <div class="fading-long-section__fading"></div>

@@ -10,9 +10,7 @@ keywords: css tooltip
 ```html
 <div class="tooltip">
     <!-- The tooltip content -->
-    <div class="tooltip__content">
-        ...
-    </div>
+    <div class="tooltip__content">...</div>
 
     <!-- The tooltip arrow -->
     <div class="tooltip__arrow"></div>

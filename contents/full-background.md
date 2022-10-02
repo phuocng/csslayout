@@ -8,9 +8,7 @@ keywords: css background size cover, css full background
 ## HTML
 
 ```html
-<div class="full-background">
-    ...
-</div>
+<div class="full-background">...</div>
 ```
 
 ## CSS

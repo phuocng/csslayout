@@ -8,9 +8,7 @@ keywords: css price tag
 ## HTML
 
 ```html
-<div class="price-tag">
-    ...
-</div>
+<div class="price-tag">...</div>
 ```
 
 ## CSS
@@ -46,8 +44,7 @@ keywords: css price tag
 
     border-color: transparent var(--price-tag-background) transparent transparent;
     border-style: solid;
-    border-width: calc(var(--price-tag-height) / 2) calc(var(--price-tag-height) / 2)
-        calc(var(--price-tag-height) / 2) 0rem;
+    border-width: calc(var(--price-tag-height) / 2) calc(var(--price-tag-height) / 2) calc(var(--price-tag-height) / 2) 0rem;
 
     /* Position */
     left: 0px;

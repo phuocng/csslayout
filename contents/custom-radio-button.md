@@ -70,5 +70,5 @@ keywords: css flexbox, css radio
 
 ## See also
 
-- [Box selector](/box-selector/)
-- [Custom checkbox button](/custom-checkbox-button/)
+-   [Box selector](/box-selector/)
+-   [Custom checkbox button](/custom-checkbox-button/)

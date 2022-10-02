@@ -19,9 +19,7 @@ keywords: css flexbox, css radio button
     </label>
 
     <!-- Selected item -->
-    <label class="radio-button-group__label radio-button-group__label--selected">
-        ...
-    </label>
+    <label class="radio-button-group__label radio-button-group__label--selected"> ... </label>
 
     <!-- Repeat other items -->
     ...

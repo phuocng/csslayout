@@ -10,13 +10,9 @@ keywords: css flexbox, media object
 ```html
 <div class="media-object">
     <!-- Media object -->
-    <div class="media-object__media">
-        ...
-    </div>
+    <div class="media-object__media">...</div>
     <!-- Main content -->
-    <div class="media-object__content">
-        ...
-    </div>
+    <div class="media-object__content">...</div>
 </div>
 ```
 

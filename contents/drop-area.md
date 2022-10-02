@@ -8,9 +8,7 @@ keywords: css dropping area, css flexbox
 ## HTML
 
 ```html
-<div class="drop-area">
-    ...
-</div>
+<div class="drop-area">...</div>
 ```
 
 ## CSS

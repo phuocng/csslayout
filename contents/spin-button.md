@@ -15,14 +15,10 @@ keywords: css flexbox, css spin button
     <!-- Buttons spin-button -->
     <div class="spin-button__buttons">
         <!-- Up button -->
-        <button class="spin-button__button">
-            ...
-        </button>
+        <button class="spin-button__button">...</button>
 
         <!-- Down button -->
-        <button class="spin-button__button">
-            ...
-        </button>
+        <button class="spin-button__button">...</button>
     </div>
 </div>
 ```

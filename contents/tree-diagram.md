@@ -31,7 +31,7 @@ keywords: css sitemap, css tree diagram
                 ...
             </ul>
         </li>
-        
+
         <!-- Repeat other items -->
         ...
     </ul>
@@ -120,9 +120,7 @@ You can add a root item to the tree:
 ```html
 <div class="tree-diagram">
     <ul>
-        <li class="tree-diagram__root">
-            ...
-        </li>
+        <li class="tree-diagram__root">...</li>
     </ul>
 </div>
 ```

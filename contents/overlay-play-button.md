@@ -15,9 +15,7 @@ keywords: css flexbox
     <!-- The overlay area -->
     <div class="overlay-play-button__overlay">
         <!-- The player button -->
-        <div class="overlay-play-button__play">
-            ...
-        </div>
+        <div class="overlay-play-button__play">...</div>
     </div>
 </div>
 ```
@@ -50,7 +48,7 @@ keywords: css flexbox
 }
 
 .overlay-play-button__play {
-    border: 0.25rem solid #FFF;
+    border: 0.25rem solid #fff;
     border-radius: 9999px;
     height: 3rem;
     width: 3rem;

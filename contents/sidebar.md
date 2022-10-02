@@ -10,14 +10,10 @@ keywords: css flexbox, css layout, css sidebar
 ```html
 <div class="sidebar">
     <!-- Sidebar -->
-    <aside class="sidebar__sidebar">
-        ...
-    </aside>
+    <aside class="sidebar__sidebar">...</aside>
 
     <!-- Main -->
-    <main class="sidebar__main">
-        ...
-    </main>
+    <main class="sidebar__main">...</main>
 </div>
 ```
 

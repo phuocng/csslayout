@@ -20,7 +20,7 @@ keywords: css box selector
 .box-selector {
     border: 1px solid #d1d5db;
     border-radius: 0.25rem;
-    padding: .5rem;
+    padding: 0.5rem;
 }
 
 .box-selector--selected {
@@ -54,5 +54,5 @@ keywords: css box selector
 
 ## See also
 
-- [Custom checkbox button](/custom-checkbox-button/)
-- [Custom radio button](/custom-radio-button/)
+-   [Custom checkbox button](/custom-checkbox-button/)
+-   [Custom radio button](/custom-radio-button/)

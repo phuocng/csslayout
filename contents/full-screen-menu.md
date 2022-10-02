@@ -39,7 +39,7 @@ keywords: css fixed, css flexbox, css menu
 .full-screen-menu__close {
     /* Shown at top left corner */
     left: 1rem;
-    position: absolute;    
+    position: absolute;
     top: 1rem;
 }
 ```

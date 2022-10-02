@@ -31,7 +31,7 @@ keywords: css folder structure, css folder tree
                 ...
             </ul>
         </li>
-        
+
         <!-- Repeat other items -->
         ...
     </ul>
@@ -88,9 +88,7 @@ keywords: css folder structure, css folder tree
 
 /* Remove the border from the last item */
 .folder-structure li:last-child::before {
-    height: calc(
-        var(--folder-structure-item-padding-top) + var(--folder-structure-item-height) / 2
-    );
+    height: calc(var(--folder-structure-item-padding-top) + var(--folder-structure-item-height) / 2);
 }
 ```
 

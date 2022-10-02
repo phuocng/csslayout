@@ -10,9 +10,7 @@ keywords: css flexbox, css pagination
 ```html
 <div class="pagination">
     <!-- Pagination item -->
-    <div class="pagination__item">
-        ...
-    </div>
+    <div class="pagination__item">...</div>
 
     <!-- Repeat other items -->
     ...

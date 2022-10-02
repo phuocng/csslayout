@@ -10,14 +10,10 @@ keywords: css flexbox, css navigation, css tab
 ```html
 <div class="tab">
     <!-- Active tab -->
-    <div class="tab__item tab__item--active">
-        ...
-    </div>
+    <div class="tab__item tab__item--active">...</div>
 
     <!-- Inactive tab -->
-    <div class="tab__item tab__item--inactive">
-        ...
-    </div>
+    <div class="tab__item tab__item--inactive">...</div>
 </div>
 ```
 
@@ -52,7 +48,6 @@ keywords: css flexbox, css navigation, css tab
     /* Has only the bottom border */
     border-bottom: 1px solid #d1d5db;
 }
-
 ```
 
 {% demo %}{% include "covers/tab.njk" %}{% enddemo %}

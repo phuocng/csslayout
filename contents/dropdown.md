@@ -10,21 +10,17 @@ keywords: css dropdown, css menu
 ```html
 <div class="dropdown">
     <!-- The trigger element -->
-    <div class="dropdown__trigger">
-        ...
-    </div>
+    <div class="dropdown__trigger">...</div>
 
     <!-- The content -->
-    <div class="dropdown__content">
-        ...
-    </div>
+    <div class="dropdown__content">...</div>
 </div>
 ```
 
 ## CSS
 
 ```css
- .dropdown {
+.dropdown {
     position: relative;
 }
 

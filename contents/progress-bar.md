@@ -44,6 +44,8 @@ keywords: css flexbox, css progress bar
 }
 ```
 
-{% demo %}
-{% include "covers/progress-bar.njk" %}
-{% enddemo %}
+{% demo %}{% include "covers/progress-bar.njk" %}{% enddemo %}
+
+## See also
+
+-   [Indeterminate progress bar](/indeterminate-progress-bar/)

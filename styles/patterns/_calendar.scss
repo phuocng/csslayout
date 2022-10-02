@@ -24,10 +24,10 @@
     color: #fff;
 }
 
-.calendar__day:nth-child(7n+1) {
+.calendar__day:nth-child(7n + 1) {
     border-left: 1px solid #d1d5db;
 }
 
 .calendar__day--disabled {
-    color: #e5e7eb;   
+    color: #e5e7eb;
 }

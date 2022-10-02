@@ -10,24 +10,16 @@ keywords: css fixed
 ```html
 <div class="fixed-at-corner">
     <!-- Top-left corner -->
-    <div class="fixed-at-corner__corner fixed-at-corner__corner--tl">
-        ...
-    </div>
+    <div class="fixed-at-corner__corner fixed-at-corner__corner--tl">...</div>
 
     <!-- Top-right corner -->
-    <div class="fixed-at-corner__corner fixed-at-corner__corner--tr">
-        ...
-    </div>
+    <div class="fixed-at-corner__corner fixed-at-corner__corner--tr">...</div>
 
     <!-- Bottom-right corner -->
-    <div class="fixed-at-corner__corner fixed-at-corner__corner--br">
-        ...
-    </div>
+    <div class="fixed-at-corner__corner fixed-at-corner__corner--br">...</div>
 
     <!-- Bottom-left corner -->
-    <div class="fixed-at-corner__corner fixed-at-corner__corner--bl">    
-        ...
-    </div>
+    <div class="fixed-at-corner__corner fixed-at-corner__corner--bl">...</div>
 </div>
 ```
 

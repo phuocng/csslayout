@@ -17,11 +17,11 @@ keywords: css calendar, css grid
     <div class="calendar__weekday">Fri</div>
     <div class="calendar__weekday">Sat</div>
     <div class="calendar__weekday">Sun</div>
-    
+
     <!-- Days of the previous month -->
     <div class="calendar__day calendar__day--disabled">30</div>
     <div class="calendar__day calendar__day--disabled">31</div>
-    
+
     <!-- Days of the current month -->
     <div class="calendar__day">1</div>
     <div class="calendar__day">2</div>
@@ -60,12 +60,12 @@ keywords: css calendar, css grid
     color: #fff;
 }
 
-.calendar__day:nth-child(7n+1) {
+.calendar__day:nth-child(7n + 1) {
     border-left: 1px solid #d1d5db;
 }
 
 .calendar__day--disabled {
-    color: #d1d5db;   
+    color: #d1d5db;
 }
 ```
 

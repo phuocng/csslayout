@@ -12,8 +12,7 @@ keywords: css flexbox, css ribbon
     <!-- The container -->
     <div class="corner-ribbon__inner">
         <!-- The ribbon -->
-        <div class="corner-ribbon__ribbon">
-        </div>
+        <div class="corner-ribbon__ribbon"></div>
     </div>
 </div>
 ```

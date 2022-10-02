@@ -10,9 +10,7 @@ keywords: css alert, css flexbox, css notification
 ```html
 <div class="notification">
     <!-- Content -->
-    <div class="notification__body">
-        ...
-    </div>
+    <div class="notification__body">...</div>
 
     <!-- Close button -->
     <button class="notification__close">

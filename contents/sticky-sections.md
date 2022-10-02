@@ -9,9 +9,7 @@ keywords: css layout, css sticky, css sticky sections
 
 ```html
 <div class="sticky-sections">
-    <section class="sticky-sections__section">
-        ...
-    </section>
+    <section class="sticky-sections__section">...</section>
 
     <!-- Repeat other sections -->
     ...

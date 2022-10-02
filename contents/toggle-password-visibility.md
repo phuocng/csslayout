@@ -13,9 +13,7 @@ keywords: css flexbox, toggle password visibilit
     <input type="text" class="toggle-password-visibility__input" />
 
     <!-- Toggle button sticks to the right -->
-    <button class="toggle-password-visibility__toggle">
-        ...
-    </button>
+    <button class="toggle-password-visibility__toggle">...</button>
 </div>
 ```
 
@@ -53,13 +51,11 @@ keywords: css flexbox, toggle password visibilit
 In reality, the `click` event handler of the button needs to update the `type` attribute of the input to `text` or `password`:
 
 ```js
-document
-    .querySelector('.toggle-password-visibility__toggle')
-    .addEventListener('click', (e) => {
-        const input = e.target.previousElementSibling;
-        const type = input.getAttribute('type');
-        input.setAttribute('type', type === 'text' ? 'password' : 'text');
-    });
+document.querySelector('.toggle-password-visibility__toggle').addEventListener('click', (e) => {
+    const input = e.target.previousElementSibling;
+    const type = input.getAttribute('type');
+    input.setAttribute('type', type === 'text' ? 'password' : 'text');
+});
 ```
 
 {% demo %}{% include "covers/toggle-password-visibility.njk" %}{% enddemo %}

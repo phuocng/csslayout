@@ -10,14 +10,10 @@ keywords: css card, css flexbox
 ```html
 <div class="card">
     <!-- Cover -->
-    <div class="card__cover">
-        ...
-    </div>
+    <div class="card__cover">...</div>
 
     <!-- Content -->
-    <div class="card__content">
-        ...
-    </div>
+    <div class="card__content">...</div>
     ...
 </div>
 ```

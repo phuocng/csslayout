@@ -8,9 +8,7 @@ keywords: css linear gradient, css lined paper, css multiple horizontal lines
 ## HTML
 
 ```html
-<div class="lined-paper">
-    ...
-</div>
+<div class="lined-paper">...</div>
 ```
 
 ## CSS

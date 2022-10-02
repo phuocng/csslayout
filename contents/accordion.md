@@ -18,21 +18,15 @@ keywords: css accordion, css flexbox
             <div class="accordion__toggle">...</div>
 
             <!-- The title -->
-            <div class="accordion__title">
-                ...
-            </div>
+            <div class="accordion__title">...</div>
         </div>
 
         <!-- The content -->
-        <div class="accordion__content">
-            ...
-        </div>
+        <div class="accordion__content">...</div>
     </div>
 
     <!-- Expanded item -->
-    <div class="accordion__item accordion__item--expanded">
-        ...
-    </div>
+    <div class="accordion__item accordion__item--expanded">...</div>
 
     <!-- Repeat other item -->
     ...

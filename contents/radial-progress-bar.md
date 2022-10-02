@@ -10,9 +10,7 @@ keywords: css clip rect, css flexbox, css progress bar
 ```html
 <div class="radial-progress-bar">
     <!-- Show number of percentages -->
-    <div class="radial-progress-bar__percentages">
-        ...
-    </div>
+    <div class="radial-progress-bar__percentages">...</div>
 
     <!-- The curve -->
     <div class="radial-progress-bar__curve">
@@ -29,7 +27,7 @@ keywords: css clip rect, css flexbox, css progress bar
 
 ```css
 :root {
-    --radial-progress-bar-size: 8rem; 
+    --radial-progress-bar-size: 8rem;
     --radial-progress-bar-border-width: 0.75rem;
 }
 
@@ -93,25 +91,15 @@ keywords: css clip rect, css flexbox, css progress bar
 
 .radial-progress-bar__half--first {
     /* Position */
-    clip: rect(
-        0px,
-        calc(var(--radial-progress-bar-size) * 0.5),
-        var(--radial-progress-bar-size),
-        0px
-    );
-    
+    clip: rect(0px, calc(var(--radial-progress-bar-size) * 0.5), var(--radial-progress-bar-size), 0px);
+
     /* Number of percentages * 360 / 100 */
     transform: rotate(270deg);
 }
 
 .radial-progress-bar__half--second {
     /* Position */
-    clip: rect(
-        0px,
-        calc(var(--radial-progress-bar-size) * 0.5),
-        var(--radial-progress-bar-size),
-        0px
-    );
+    clip: rect(0px, calc(var(--radial-progress-bar-size) * 0.5), var(--radial-progress-bar-size), 0px);
 
     /* If percentages is less than 50 */
     /* transform: rotate(0deg); */

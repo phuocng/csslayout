@@ -13,15 +13,11 @@ In this pattern, the video is displayed in the background.
 <div class="video-background">
     <!-- The video container -->
     <div class="video-background__inner">
-        <video class="video-background__video" src="...">
-            ...
-        </video>
+        <video class="video-background__video" src="...">...</video>
     </div>
 
     <!-- The content -->
-    <div class="video-background__content">
-        ...
-    </div>
+    <div class="video-background__content">...</div>
 </div>
 ```
 

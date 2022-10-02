@@ -14,9 +14,7 @@ keywords: css flexbox, css flexbox grid, css grid, css layout
     <div class="simple-grid__cell simple-grid__cell--1/4">25%</div>
 
     <!-- Cell that takes remaining width -->
-    <div class="simple-grid__cell simple-grid__cell--fill">
-        ...
-    </div>
+    <div class="simple-grid__cell simple-grid__cell--fill">...</div>
 </div>
 ```
 
