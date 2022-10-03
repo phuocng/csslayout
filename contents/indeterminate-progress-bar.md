@@ -64,3 +64,4 @@ keywords: css indeterminate progress bar, css progress bar
 ## See also
 
 -   [Progress bar](/progress-bar/)
+-   [Spinner](/spinner/)
