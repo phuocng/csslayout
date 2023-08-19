@@ -1,0 +1,116 @@
+---
+category: Display
+created: '2019-11-17'
+description: Create a card with CSS flexbox
+keywords: css card, css flexbox
+thumbnail: /assets/css-layout/thumbnails/card.png
+title: Card
+---
+
+## HTML
+
+```html
+<div class="card">
+    <!-- Cover -->
+    <div class="card__cover">...</div>
+
+    <!-- Content -->
+    <div class="card__content">...</div>
+    ...
+</div>
+```
+
+## CSS
+
+```css
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__cover {
+    height: 20rem;
+    width: 100%;
+}
+
+.card__content {
+    /* Take available height */
+    flex: 1;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+```
+
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+    height: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+}
+.card__cover {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    height: 40%;
+    width: 100%;
+}
+.card__content {
+    /* Take available height */
+    flex: 1;
+    padding: 0.5rem;
+}
+```
+
+```html index.html hidden
+<div class="card">
+    <div class="card__cover">
+    </div>
+    <div class="card__content">
+        <div class="lines">
+            <div class="line line--80"></div>
+            <div class="line line--40"></div>
+            <div class="line line--100"></div>
+            <div class="line line--60"></div>
+            <div class="line line--20"></div>
+        </div>
+    </div>
+</div>
+```
+</Playground>

@@ -1,0 +1,155 @@
+---
+category: Display
+created: '2020-01-12'
+description: Create a status light with CSS flexbox
+keywords: css flexbox, css status light
+thumbnail: /assets/css-layout/thumbnails/status-light.png
+title: Status light
+---
+
+## HTML
+
+```html
+<div class="status-light">
+    <!-- Status light -->
+    <div class="status-light__status"></div>
+
+    <!-- Content -->
+    <div class="status-light__content">...</div>
+</div>
+```
+
+## CSS
+
+```css
+.status-light {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+}
+
+.status-light__status {
+    /* Background color */
+    background-color: #16a34a;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Size */
+    height: 0.5rem;
+    width: 0.5rem;
+
+    /* Spacing */
+    margin-right: 0.5rem;
+}
+
+.status-light__content {
+    /* Take available width */
+    flex: 1;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.rectangle {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    height: var(--rectangle-height);
+    width: var(--rectangle-width);
+}
+.rectangle--hor.rectangle--20 {
+    --rectangle-width: 20%;
+}
+.rectangle--hor.rectangle--40 {
+    --rectangle-width: 40%;
+}
+.rectangle--hor.rectangle--60 {
+    --rectangle-width: 60%;
+}
+.rectangle--hor.rectangle--80 {
+    --rectangle-width: 80%;
+}
+.rectangle--hor.rectangle--100 {
+    --rectangle-width: 100%;
+}
+.rectangle--hor.rectangle--sm {
+    --rectangle-height: 0.5rem;
+}
+.rectangle--hor.rectangle--md {
+    --rectangle-height: 2rem;
+}
+.rectangle--hor.rectangle--lg {
+    --rectangle-height: 4rem;
+}
+.rectangle--ver.rectangle--20 {
+    --rectangle-height: 20%;
+}
+.rectangle--ver.rectangle--40 {
+    --rectangle-height: 40%;
+}
+.rectangle--ver.rectangle--60 {
+    --rectangle-height: 60%;
+}
+.rectangle--ver.rectangle--80 {
+    --rectangle-height: 80%;
+}
+.rectangle--ver.rectangle--100 {
+    --rectangle-height: 100%;
+}
+.rectangle--ver.rectangle--sm {
+    --rectangle-width: 0.5rem;
+}
+.rectangle--ver.rectangle--md {
+    --rectangle-width: 2rem;
+}
+.rectangle--ver.rectangle--lg {
+    --rectangle-width: 4rem;
+}
+```
+
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.status-light {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+
+    /* Demo */
+    width: 8rem;
+}
+
+.status-light__status {
+    /* Background color */
+    background-color: #16a34a;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Size */
+    height: 0.5rem;
+    width: 0.5rem;
+
+    /* Spacing */
+    margin-right: 0.5rem;
+}
+
+.status-light__content {
+    /* Take available width */
+    flex: 1;
+}
+```
+
+```html index.html hidden
+<div class="status-light">
+    <div class="status-light__status"></div>
+    <div class="status-light__content">
+        <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+    </div>
+</div>
+```
+</Playground>

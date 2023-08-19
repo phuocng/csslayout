@@ -1,0 +1,156 @@
+---
+category: Display
+created: '2019-11-21'
+description: Create a feature list with CSS flexbox
+keywords: css feature list, css flexbox
+thumbnail: /assets/css-layout/thumbnails/feature-list.png
+title: Feature list
+---
+
+## HTML
+
+```html
+<!-- Feature item -->
+<div class="feature-list">
+    <!-- Image -->
+    <div class="feature-list__image">...</div>
+
+    <!-- Right side -->
+    <div class="feature-list__desc">...</div>
+</div>
+
+<!-- Repeated items -->
+...
+```
+
+## CSS
+
+```css
+.feature-list {
+    display: flex;
+
+    /* OPTIONAL: Spacing between items */
+    margin: 0.5rem 0;
+}
+
+/* Reverse the order of image and content */
+.feature-list--reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-list__image {
+    width: 2rem;
+}
+
+.feature-list__desc {
+    /* Take the remaining width */
+    flex: 1;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.circle {
+    background: #d1d5db;
+    border-radius: 9999px;
+    height: var(--circle-size);
+    width: var(--circle-size);
+}
+.circle--sm {
+    --circle-size: 0.5rem;
+}
+.circle--md {
+    --circle-size: 1.5rem;
+}
+.circle--lg {
+    --circle-size: 4rem;
+}
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+```
+
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.feature-list {
+    display: flex;
+
+    /* OPTIONAL: Spacing between items */
+    margin: 0.5rem 0;
+    width: 16rem;
+}
+
+.feature-list--reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-list__image {
+    width: 2rem;
+}
+
+.feature-list__desc {
+    /* Take the remaining width */
+    flex: 1;
+}
+```
+
+```html index.html hidden
+<div class="feature-list">
+    <div class="feature-list__image">
+        <div class="circle circle--md"></div>
+    </div>
+    <div class="feature-list__desc">
+        <div class="lines">
+    <div class="line line--80"></div>
+    <div class="line line--40"></div>
+    <div class="line line--100"></div>
+    <div class="line line--60"></div>
+    <div class="line line--20"></div>
+</div>
+    </div>
+</div>
+<div class="feature-list feature-list--reverse">
+    <div class="feature-list__image">
+        <div class="circle circle--md"></div>
+    </div>
+    <div class="feature-list__desc">
+        <div class="lines">
+            <div class="line line--80"></div>
+            <div class="line line--40"></div>
+            <div class="line line--100"></div>
+            <div class="line line--60"></div>
+            <div class="line line--20"></div>
+        </div>
+    </div>
+</div>
+```
+</Playground>

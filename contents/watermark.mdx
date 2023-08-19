@@ -1,0 +1,164 @@
+---
+category: Display
+created: '2020-01-18'
+description: Create a watermark with CSS
+keywords: css watermark
+thumbnail: /assets/css-layout/thumbnails/watermark.png
+title: Watermark
+---
+
+## HTML
+
+```html
+<div class="watermark">
+    <!-- Watermark container -->
+    <div class="watermark__inner">
+        <!-- The watermark -->
+        <div class="watermark__body">Draft</div>
+    </div>
+
+    <!-- Other content -->
+    ...
+</div>
+```
+
+## CSS
+
+```css
+.watermark {
+    /* Used to position the watermark */
+    position: relative;
+}
+
+.watermark__inner {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+}
+
+.watermark__body {
+    /* Text color */
+    color: rgba(0, 0, 0, 0.2);
+
+    /* Text styles */
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    /* Rotate the text */
+    transform: rotate(-45deg);
+
+    /* Disable the selection */
+    user-select: none;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+```
+
+```css styles.css hidden
+body {
+    height: 24rem;
+}
+
+.watermark {
+    position: relative;
+
+    /* Demo */
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.watermark__inner {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+}
+
+.watermark__body {
+    /* Text color */
+    color: rgba(0, 0, 0, 0.2);
+
+    /* Text styles */
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    /* Rotate the text */
+    transform: rotate(-45deg);
+
+    /* Disable the selection */
+    user-select: none;
+}
+```
+
+```html index.html hidden
+<div class="watermark">
+    <div class="watermark__inner">
+        <div class="watermark__body">
+            Draft
+        </div>
+    </div>
+    <div class="lines">
+        <div class="line line--80"></div>
+        <div class="line line--40"></div>
+        <div class="line line--100"></div>
+        <div class="line line--60"></div>
+        <div class="line line--20"></div>
+    </div>
+</div>
+```
+</Playground>

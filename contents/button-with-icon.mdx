@@ -1,0 +1,122 @@
+---
+category: Input
+created: '2019-11-17'
+description: Create an icon button with CSS flexbox
+keywords: css flexbox, css icon button
+thumbnail: /assets/css-layout/thumbnails/button-with-icon.png
+title: Button with icon
+---
+
+## HTML
+
+```html
+<button class="button-with-icon">
+    <!-- Icon -->
+    ...
+
+    <!-- Label -->
+    <div class="button-with-icon__label">...</div>
+</button>
+```
+
+## CSS
+
+```css
+.button-with-icon {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button-with-icon__label {
+    margin-left: 0.5rem;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.circle {
+    background: #d1d5db;
+    border-radius: 9999px;
+    height: var(--circle-size);
+    width: var(--circle-size);
+}
+.circle--sm {
+    --circle-size: 0.5rem;
+}
+.circle--md {
+    --circle-size: 1.5rem;
+}
+.circle--lg {
+    --circle-size: 4rem;
+}
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+```
+
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.button-with-icon {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    /* Demo */
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    width: 8rem;
+}
+
+.button-with-icon__label {
+    flex: 1;
+    margin-left: 0.5rem;
+}
+```
+
+```html index.html hidden
+<button class="button-with-icon">
+    <div class="circle circle--md"></div>
+    <div class="button-with-icon__label">
+        <div class="lines">
+            <div class="line line--80"></div>
+            <div class="line line--40"></div>
+        </div>
+    </div>
+</button>
+```
+</Playground>

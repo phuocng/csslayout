@@ -1,9 +1,0 @@
-<div class="same-height-columns">
-    {% for i in range(0, 3) -%}
-    <div class="same-height-columns__column">
-        {% rectangle "hor", "md", 100 %}
-        <div class="same-height-columns__content">{% lines "hor", (i + 1) * 4 %}</div>
-        {% rectangle "hor" %}
-    </div>
-    {%- endfor %}
-</div>

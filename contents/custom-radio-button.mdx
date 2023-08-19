@@ -1,0 +1,209 @@
+---
+category: Input
+created: '2019-12-01'
+description: Create a custom radio button with CSS flexbox
+keywords: css flexbox, css radio
+thumbnail: /assets/css-layout/thumbnails/custom-radio-button.png
+title: Custom radio button
+---
+
+## HTML
+
+```html
+<label class="custom-radio-button">
+    <!-- The real radio -->
+    <input type="radio" class="custom-radio-button__input" />
+
+    <!-- The fake circle -->
+    <div class="custom-radio-button__circle">
+        <!-- The inner circle -->
+        <div class="custom-radio-button__radio custom-radio-button__radio--selected"></div>
+    </div>
+
+    <!-- The text -->
+    ...
+</label>
+```
+
+## CSS
+
+```css
+.custom-radio-button {
+    /* Center the content horizontally */
+    align-items: center;
+    display: inline-flex;
+
+    /* Cursor */
+    cursor: pointer;
+}
+
+.custom-radio-button__input {
+    /* Hide it */
+    display: none;
+}
+
+.custom-radio-button__circle {
+    /* Rounded border */
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+
+    /* Spacing */
+    margin-right: 0.5rem;
+    padding: 0.25rem;
+}
+
+.custom-radio-button__radio {
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 1rem;
+    width: 1rem;
+
+    /* For not selected radio */
+    background-color: transparent;
+}
+
+.custom-radio-button__radio--selected {
+    /* For selected radio */
+    background-color: #3b82f6;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.rectangle {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    height: var(--rectangle-height);
+    width: var(--rectangle-width);
+}
+.rectangle--hor.rectangle--20 {
+    --rectangle-width: 20%;
+}
+.rectangle--hor.rectangle--40 {
+    --rectangle-width: 40%;
+}
+.rectangle--hor.rectangle--60 {
+    --rectangle-width: 60%;
+}
+.rectangle--hor.rectangle--80 {
+    --rectangle-width: 80%;
+}
+.rectangle--hor.rectangle--100 {
+    --rectangle-width: 100%;
+}
+.rectangle--hor.rectangle--sm {
+    --rectangle-height: 0.5rem;
+}
+.rectangle--hor.rectangle--md {
+    --rectangle-height: 2rem;
+}
+.rectangle--hor.rectangle--lg {
+    --rectangle-height: 4rem;
+}
+.rectangle--ver.rectangle--20 {
+    --rectangle-height: 20%;
+}
+.rectangle--ver.rectangle--40 {
+    --rectangle-height: 40%;
+}
+.rectangle--ver.rectangle--60 {
+    --rectangle-height: 60%;
+}
+.rectangle--ver.rectangle--80 {
+    --rectangle-height: 80%;
+}
+.rectangle--ver.rectangle--100 {
+    --rectangle-height: 100%;
+}
+.rectangle--ver.rectangle--sm {
+    --rectangle-width: 0.5rem;
+}
+.rectangle--ver.rectangle--md {
+    --rectangle-width: 2rem;
+}
+.rectangle--ver.rectangle--lg {
+    --rectangle-width: 4rem;
+}
+```
+
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.custom-radio-button {
+    /* Center the content horizontally */
+    align-items: center;
+    display: flex;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Demo */
+    margin: 0.25rem 0;
+    width: 16rem;
+}
+
+.custom-radio-button__input {
+    /* Hide it */
+    display: none;
+}
+
+.custom-radio-button__circle {
+    /* Rounded border */
+    border: 1px solid #d1d5db;
+    border-radius: 9999px;
+
+    /* Spacing */
+    margin-right: 0.5rem;
+    padding: 0.25rem;
+}
+
+.custom-radio-button__radio {
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 1rem;
+    width: 1rem;
+
+    /* For not selected radio */
+    background-color: transparent;
+}
+
+.custom-radio-button__radio--selected {
+    /* For selected radio */
+    background-color: #3b82f6;
+}
+```
+
+```html index.html hidden
+<label class="custom-radio-button">
+    <input type="radio" class="custom-radio-button__input" />
+    <div class="custom-radio-button__circle">
+        <div class="custom-radio-button__radio custom-radio-button__radio--selected"></div>
+    </div>
+    <div class="rectangle rectangle--hor rectangle--sm rectangle--40"></div>
+</label>
+
+<label class="custom-radio-button">
+    <input type="radio" class="custom-radio-button__input" />
+    <div class="custom-radio-button__circle">
+        <div class="custom-radio-button__radio custom-radio-button__radio--selected"></div>
+    </div>
+    <div class="rectangle rectangle--hor rectangle--sm rectangle--80"></div>
+</label>
+
+<label class="custom-radio-button">
+    <input type="radio" class="custom-radio-button__input" />
+    <div class="custom-radio-button__circle">
+        <div class="custom-radio-button__radio custom-radio-button__radio--selected"></div>
+    </div>
+    <div class="rectangle rectangle--hor rectangle--sm rectangle--60"></div>
+</label>
+```
+</Playground>
+
+## See also
+
+-   [Box selector](https://phuoc.ng/collection/css-layout/box-selector)
+-   [Custom checkbox button](https://phuoc.ng/collection/css-layout/custom-checkbox-button)

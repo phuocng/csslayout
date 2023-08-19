@@ -1,0 +1,65 @@
+---
+category: Display
+created: '2019-12-04'
+description: Create an initial avatar with CSS
+keywords: css avatar
+thumbnail: /assets/css-layout/thumbnails/initial-avatar.png
+title: Initial avatar
+---
+
+## HTML
+
+```html
+<div class="initial-avatar">...</div>
+```
+
+## CSS
+
+```css
+.initial-avatar {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Colors */
+    background-color: #d1d5db;
+    color: #fff;
+
+    /* Rounded border */
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.initial-avatar {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Colors */
+    background-color: #d1d5db;
+    color: #fff;
+
+    /* Rounded border */
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+}
+```
+
+```html index.html hidden
+<div class="initial-avatar">
+    PN
+</div>
+```
+</Playground>

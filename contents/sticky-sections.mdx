@@ -1,0 +1,82 @@
+---
+category: Layout
+created: '2019-12-19'
+description: Create sticky sections with CSS
+keywords: css layout, css sticky, css sticky sections
+thumbnail: /assets/css-layout/thumbnails/sticky-sections.png
+title: Sticky sections
+---
+
+## HTML
+
+```html
+<div class="sticky-sections">
+    <section class="sticky-sections__section">...</section>
+
+    <!-- Repeat other sections -->
+    ...
+</div>
+```
+
+## CSS
+
+```css
+.sticky-sections {
+    height: 100%;
+    overflow: scroll;
+}
+
+.sticky-sections__section {
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Stick to the top */
+    position: sticky;
+    top: 0;
+}
+```
+
+<Playground>
+```css styles.css hidden
+.sticky-sections {
+    height: 24rem;
+
+    /* Demo */
+    width: 100%;
+}
+
+.sticky-sections__section {
+    /* Take full size */
+    height: 25%;
+    width: 100%;
+
+    /* Stick to the top */
+    position: sticky;
+    top: 0;
+}
+
+/* Demo */
+.sticky-sections__section:nth-child(1) {
+    background-color: #e5e7eb;
+}
+.sticky-sections__section:nth-child(2) {
+    background-color: #d1d5db;
+}
+.sticky-sections__section:nth-child(3) {
+    background-color: #9ca3af;
+}
+.sticky-sections__section:nth-child(4) {
+    background-color: #6b7280;
+}
+```
+
+```html index.html hidden
+<div class="sticky-sections">
+    <section class="sticky-sections__section"></section>
+    <section class="sticky-sections__section"></section>
+    <section class="sticky-sections__section"></section>
+    <section class="sticky-sections__section"></section>
+</div>
+```
+</Playground>

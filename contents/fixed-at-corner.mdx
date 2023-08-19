@@ -1,0 +1,164 @@
+---
+category: Display
+created: '2019-11-17'
+description: Fix an element at corner with CSS
+keywords: css fixed
+thumbnail: /assets/css-layout/thumbnails/fixed-at-corner.png
+title: Fixed at corner
+---
+
+## HTML
+
+```html
+<div class="fixed-at-corner">
+    <!-- Top-left corner -->
+    <div class="fixed-at-corner__corner fixed-at-corner__corner--tl">...</div>
+
+    <!-- Top-right corner -->
+    <div class="fixed-at-corner__corner fixed-at-corner__corner--tr">...</div>
+
+    <!-- Bottom-right corner -->
+    <div class="fixed-at-corner__corner fixed-at-corner__corner--br">...</div>
+
+    <!-- Bottom-left corner -->
+    <div class="fixed-at-corner__corner fixed-at-corner__corner--bl">...</div>
+</div>
+```
+
+## CSS
+
+```css
+.fixed-at-corner {
+    position: relative;
+}
+
+.fixed-at-corner__corner {
+    position: absolute;
+}
+
+.fixed-at-corner__corner--tl {
+    left: 0;
+    top: 0;
+}
+
+.fixed-at-corner__corner--tr {
+    top: 0;
+    right: 0;
+}
+
+.fixed-at-corner__corner--br {
+    bottom: 0;
+    right: 0;
+}
+
+.fixed-at-corner__corner--bl {
+    bottom: 0;
+    left: 0;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.triangle {
+    border-style: solid;
+    height: 0;
+    width: 0;
+}
+.triangle--t {
+    border-color: transparent transparent #d1d5db transparent;
+    border-width: 0 var(--triangle-size) var(--triangle-size) var(--triangle-size);
+}
+.triangle--r {
+    border-color: transparent transparent transparent #d1d5db;
+    border-width: var(--triangle-size) 0 var(--triangle-size) 1rem;
+}
+.triangle--b {
+    border-color: #d1d5db transparent transparent transparent;
+    border-width: var(--triangle-size) var(--triangle-size) 0 var(--triangle-size);
+}
+.triangle--l {
+    border-color: transparent #d1d5db transparent transparent;
+    border-width: var(--triangle-size) 1rem var(--triangle-size) 0;
+}
+.triangle--tr {
+    border-color: transparent #d1d5db transparent transparent;
+    border-width: 0 var(--triangle-size) var(--triangle-size) 0;
+}
+.triangle--br {
+    border-color: transparent transparent #d1d5db transparent;
+    border-width: 0 0 var(--triangle-size) var(--triangle-size);
+}
+.triangle--bl {
+    border-color: transparent transparent transparent #d1d5db;
+    border-width: var(--triangle-size) 0 0 var(--triangle-size);
+}
+.triangle--tl {
+    border-color: #d1d5db transparent transparent transparent;
+    border-width: var(--triangle-size) var(--triangle-size) 0 0;
+}
+.triangle--sm {
+    --triangle-size: 0.5rem;
+}
+.triangle--md {
+    --triangle-size: 2rem;
+}
+.triangle--lg {
+    --triangle-size: 4rem;
+}
+```
+
+```css styles.css hidden
+body {
+    height: 24rem;
+}
+.fixed-at-corner {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+
+    position: relative;
+}
+
+.fixed-at-corner__corner {
+    position: absolute;
+}
+
+.fixed-at-corner__corner--tl {
+    left: 0;
+    top: 0;
+}
+
+.fixed-at-corner__corner--tr {
+    top: 0;
+    right: 0;
+}
+
+.fixed-at-corner__corner--br {
+    bottom: 0;
+    right: 0;
+}
+
+.fixed-at-corner__corner--bl {
+    bottom: 0;
+    left: 0;
+}
+```
+
+```html index.html hidden
+<div class="fixed-at-corner">
+    <div class="fixed-at-corner__corner fixed-at-corner__corner--tl">
+        <div class="triangle triangle--tl triangle--md"></div>
+    </div>
+    <div class="fixed-at-corner__corner fixed-at-corner__corner--tr">
+        <div class="triangle triangle--tr triangle--md"></div>
+    </div>
+    <div class="fixed-at-corner__corner fixed-at-corner__corner--br">
+        <div class="triangle triangle--br triangle--md"></div>
+    </div>
+    <div class="fixed-at-corner__corner fixed-at-corner__corner--bl">
+        <div class="triangle triangle--bl triangle--md"></div>
+    </div>
+</div>
+```
+</Playground>

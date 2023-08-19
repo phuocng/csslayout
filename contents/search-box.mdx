@@ -1,0 +1,100 @@
+---
+category: Input
+created: '2019-11-22'
+description: Create a search box with CSS flexbox
+keywords: css flexbox, css search box
+thumbnail: /assets/css-layout/thumbnails/search-box.png
+title: Search box
+---
+
+## HTML
+
+```html
+<div class="search-box">
+    <!-- Text input -->
+    <input type="text" class="search-box__input" />
+
+    <!-- Search icon sticks to the left or right -->
+    ...
+</div>
+```
+
+## CSS
+
+```css
+.search-box {
+    display: flex;
+
+    /* If you want to place the icon before the text input */
+    flex-direction: row-reverse;
+
+    /* Border */
+    border: 1px solid #d1d5db;
+}
+
+.search-box__input {
+    border-color: transparent;
+    /* Take available width */
+    flex: 1;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.circle {
+    background: #d1d5db;
+    border-radius: 9999px;
+    height: var(--circle-size);
+    width: var(--circle-size);
+}
+.circle--sm {
+    --circle-size: 0.5rem;
+}
+.circle--md {
+    --circle-size: 1.5rem;
+}
+.circle--lg {
+    --circle-size: 4rem;
+}
+```
+
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+
+    display: flex;
+    align-items: center;
+
+    /* Demo */
+    padding: 0.25rem;
+    width: 16rem;
+}
+
+.search-box__input {
+    border-color: transparent;
+
+    /* Take available width */
+    flex: 1;
+
+    height: 2rem;
+    margin-right: 0.25rem;
+
+    /* Demo */
+    width: 6rem;
+}
+```
+
+```html index.html hidden
+<div class="search-box">
+    <input type="text" class="search-box__input" />
+    <div class="circle circle--md"></div>
+</div>
+```
+</Playground>

@@ -1,0 +1,95 @@
+---
+category: Display
+created: '2021-05-09'
+description: Create inverted corners with CSS
+keywords: css border radius, css inverted border radius, css inverted corners
+thumbnail: /assets/css-layout/thumbnails/inverted-corners.png
+title: Inverted corners
+---
+
+## HTML
+
+```html
+<div class="inverted-corners">...</div>
+```
+
+## CSS
+
+```css
+:root {
+    --inverted-corners-background: #d1d5db;
+    --inverted-corners-size: 2rem;
+}
+
+.inverted-corners {
+    background-color: var(--inverted-corners-background);
+
+    /* Used to position the corner */
+    position: relative;
+}
+
+.inverted-corners::before {
+    content: '';
+
+    /* Absolute position */
+    bottom: calc(-2 * var(--inverted-corners-size));
+    left: 0;
+    position: absolute;
+
+    /* Size */
+    height: calc(2 * var(--inverted-corners-size));
+    width: var(--inverted-corners-size);
+
+    /* Border */
+    background-color: transparent;
+    border-top-left-radius: var(--inverted-corners-size);
+    box-shadow: var(--inverted-corners-background) 0px calc(-1 * var(--inverted-corners-size)) 0px 0px;
+}
+```
+
+<Playground>
+```css styles.css hidden
+:root {
+    --inverted-corners-background: #d1d5db;
+    --inverted-corners-size: 2rem;
+}
+
+body {
+    height: 24rem;
+}
+
+.inverted-corners {
+    background-color: var(--inverted-corners-background);
+
+    /* Used to position the corner */
+    position: relative;
+
+    /* Demo */
+    height: 2rem;
+    width: 100%;
+}
+
+.inverted-corners::before {
+    content: '';
+
+    /* Absolute position */
+    bottom: calc(-2 * var(--inverted-corners-size));
+    left: 0;
+    position: absolute;
+
+    /* Size */
+    height: calc(2 * var(--inverted-corners-size));
+    width: var(--inverted-corners-size);
+
+    /* Border */
+    background-color: transparent;
+    border-top-left-radius: var(--inverted-corners-size);
+    box-shadow: var(--inverted-corners-background) 0px calc(-1 * var(--inverted-corners-size)) 0px 0px;
+}
+```
+
+```html index.html hidden
+<div class="inverted-corners">
+</div>
+```
+</Playground>

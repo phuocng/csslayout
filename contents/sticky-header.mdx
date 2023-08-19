@@ -1,0 +1,153 @@
+---
+category: Layout
+created: '2019-11-15'
+description: Create a sticky header with CSS
+keywords: css layout, css position sticky, css sticky header
+thumbnail: /assets/css-layout/thumbnails/sticky-header.png
+title: Sticky header
+---
+
+## HTML
+
+```html
+<div>
+    <header class="sticky-header__header">...</header>
+    <main>...</main>
+</div>
+```
+
+## CSS
+
+```css
+.sticky-header__header {
+    /* Stick to the top */
+    position: sticky;
+    top: 0;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+.rectangle {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    height: var(--rectangle-height);
+    width: var(--rectangle-width);
+}
+.rectangle--hor.rectangle--20 {
+    --rectangle-width: 20%;
+}
+.rectangle--hor.rectangle--40 {
+    --rectangle-width: 40%;
+}
+.rectangle--hor.rectangle--60 {
+    --rectangle-width: 60%;
+}
+.rectangle--hor.rectangle--80 {
+    --rectangle-width: 80%;
+}
+.rectangle--hor.rectangle--100 {
+    --rectangle-width: 100%;
+}
+.rectangle--hor.rectangle--sm {
+    --rectangle-height: 0.5rem;
+}
+.rectangle--hor.rectangle--md {
+    --rectangle-height: 2rem;
+}
+.rectangle--hor.rectangle--lg {
+    --rectangle-height: 4rem;
+}
+.rectangle--ver.rectangle--20 {
+    --rectangle-height: 20%;
+}
+.rectangle--ver.rectangle--40 {
+    --rectangle-height: 40%;
+}
+.rectangle--ver.rectangle--60 {
+    --rectangle-height: 60%;
+}
+.rectangle--ver.rectangle--80 {
+    --rectangle-height: 80%;
+}
+.rectangle--ver.rectangle--100 {
+    --rectangle-height: 100%;
+}
+.rectangle--ver.rectangle--sm {
+    --rectangle-width: 0.5rem;
+}
+.rectangle--ver.rectangle--md {
+    --rectangle-width: 2rem;
+}
+.rectangle--ver.rectangle--lg {
+    --rectangle-width: 4rem;
+}
+```
+
+```css styles.css hidden
+body {
+    height: 24rem;
+}
+
+.sticky-header {
+    /* Demo */
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    height: 100%;
+    width: 100%;
+}
+
+.sticky-header__header {
+    /* Stick to the top */
+    position: sticky;
+    top: 0;
+
+    /* Demo */
+    padding: 0.25rem;
+    border-bottom: 1px solid #d1d5db;
+}
+```
+
+```html index.html hidden
+<div class="sticky-header">
+    <div class="sticky-header__header">
+        <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+    </div>
+    <div class="lines">
+        <div class="line line--20"></div>
+        <div class="line line--80"></div>
+        <div class="line line--40"></div>
+        <div class="line line--60"></div>
+        <div class="line line--20"></div>
+    </div>
+</div>
+```
+</Playground>

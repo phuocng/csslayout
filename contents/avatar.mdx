@@ -1,0 +1,78 @@
+---
+category: Display
+created: '2019-12-04'
+description: Create an avatar component with CSS flexbox
+keywords: css avatar, css flexbox
+thumbnail: /assets/css-layout/thumbnails/avatar.png
+title: Avatar
+---
+
+## HTML
+
+```html
+<div class="avatar">
+    <!-- Avatar image -->
+    <img class="avatar__image" src="..." />
+</div>
+```
+
+## CSS
+
+```css
+.avatar {
+    /* Rounded border */
+    border-radius: 50%;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Size */
+    height: 4rem;
+    width: 4rem;
+}
+
+.avatar__image {
+    /* Size */
+    height: 50%;
+    width: 50%;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.avatar {
+    height: 4rem;
+    width: 4rem;
+
+    background-color: #d1d5db;
+    /* Rounded border */
+    border-radius: 50%;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.avatar__image {
+    height: 50%;
+    width: 50%;
+}
+```
+
+```html index.html hidden
+<div class="avatar">
+    <div class="avatar__image">
+        <svg viewBox="0 0 24 24" fill="none" height="100%" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" width="100%">
+            <path d="M12,3.5c2.347,0,4.25,1.903,4.25,4.25S14.347,12,12,12s-4.25-1.903-4.25-4.25S9.653,3.5,12,3.5z M5,20.5 c0-3.866,3.134-7,7-7s7,3.134,7,7H5z"></path>
+        </svg>
+    </div>
+</div>
+```
+</Playground>

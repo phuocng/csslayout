@@ -1,0 +1,95 @@
+---
+category: Display
+created: '2019-11-27'
+description: Create a dropping area with CSS flexbox
+keywords: css dropping area, css flexbox
+thumbnail: /assets/css-layout/thumbnails/drop-area.png
+title: Drop area
+---
+
+## HTML
+
+```html
+<div class="drop-area">...</div>
+```
+
+## CSS
+
+```css
+.drop-area {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Border */
+    border: 0.25rem dashed #d1d5db;
+    border-radius: 0.25rem;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+```
+
+```css styles.css hidden
+body {
+    height: 24rem;
+}
+
+.drop-area {
+    padding: 0.5rem;
+    height: 100%;
+    width: 100%;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Border */
+    border: 0.25rem dashed #d1d5db;
+    border-radius: 0.25rem;
+}
+```
+
+```html index.html hidden
+<div class="drop-area">
+    <div class="lines">
+        <div class="line line--80"></div>
+        <div class="line line--40"></div>
+        <div class="line line--100"></div>
+        <div class="line line--60"></div>
+        <div class="line line--20"></div>
+    </div>
+</div>
+```
+</Playground>

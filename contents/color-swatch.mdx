@@ -1,0 +1,93 @@
+---
+category: Display
+created: '2021-05-08'
+description: Create a color swatch with CSS flexbox
+keywords: css color swatch, css flexbox
+thumbnail: /assets/css-layout/thumbnails/color-swatch.png
+title: Color swatch
+---
+
+## HTML
+
+```html
+<div class="swatch">
+    <div class="swatch__item" style="background-color: ..."></div>
+
+    <!-- Repeat other items -->
+    ...
+</div>
+```
+
+## CSS
+
+```css
+.swatch {
+    /* Wrap the items */
+    display: flex;
+    flex-wrap: wrap;
+}
+.swatch__item {
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 1.5rem;
+    width: 1.5rem;
+
+    /* Space between items */
+    margin: 0.5rem;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.swatch {
+    /* Wrap the items */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.swatch__item {
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 1.5rem;
+    width: 1.5rem;
+
+    /* Space between items */
+    margin: 0.5rem;
+}
+.swatch__item--1st {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.swatch__item--2nd {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.swatch__item--3rd {
+    background-color: #d1d5db;
+}
+.swatch__item--4th {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.swatch__item--5th {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.swatch__item--6th {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+```
+
+```html index.html hidden
+<div class="swatch">
+    <div class="swatch__item swatch__item--1st"></div>
+    <div class="swatch__item swatch__item--2nd"></div>
+    <div class="swatch__item swatch__item--3rd"></div>
+    <div class="swatch__item swatch__item--4th"></div>
+    <div class="swatch__item swatch__item--5th"></div>
+    <div class="swatch__item swatch__item--6th"></div>
+</div>
+```
+</Playground>

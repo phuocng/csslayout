@@ -1,0 +1,104 @@
+---
+category: Navigation
+created: '2019-11-22'
+description: Create dot navigation with CSS flexbox
+keywords: css dot navigation, css flexbox
+thumbnail: /assets/css-layout/thumbnails/dot-navigation.png
+title: Dot navigation
+---
+
+## HTML
+
+```html
+<div class="dot-navigation">
+    <div class="dot-navigation__item"></div>
+
+    <!-- Repeat other dots -->
+    ...
+</div>
+```
+
+## CSS
+
+```css
+.dot-navigation {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dot-navigation__item {
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 0.75rem;
+    width: 0.75rem;
+
+    /* Inactive dot */
+    background-color: transparent;
+    border: 1px solid #d1d5db;
+
+    /* OPTIONAL: Spacing between dots */
+    margin: 0 0.25rem;
+}
+
+/* Active dot */
+.dot-navigation__item--active {
+    background-color: #d1d5db;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.dot-navigation {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dot-navigation__item {
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 0.75rem;
+    width: 0.75rem;
+
+    /* Inactive dot */
+    background-color: transparent;
+    border: 1px solid #d1d5db;
+
+    /* OPTIONAL: Spacing between dots */
+    margin: 0 0.25rem;
+}
+
+.dot-navigation__item--active {
+    background-color: #d1d5db;
+}
+```
+
+```html index.html hidden
+<div class="dot-navigation">
+    <div class="dot-navigation__item"></div>
+    <div class="dot-navigation__item dot-navigation__item--active"></div>
+    <div class="dot-navigation__item"></div>
+    <div class="dot-navigation__item"></div>
+    <div class="dot-navigation__item"></div>
+</div>
+```
+</Playground>

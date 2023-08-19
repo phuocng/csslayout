@@ -1,0 +1,103 @@
+---
+category: Display
+created: '2019-11-29'
+description: Create an avatar list with CSS flexbox
+keywords: css avatar, css flexbox
+thumbnail: /assets/css-layout/thumbnails/avatar-list.png
+title: Avatar list
+---
+
+## HTML
+
+```html
+<div class="avatars">
+    <!-- Avatar item -->
+    <div class="avatars__item">
+        <div class="avatars__image">
+            <!-- Image -->
+            ...
+        </div>
+    </div>
+
+    <!-- Repeat other avatars -->
+    ...
+</div>
+```
+
+## CSS
+
+```css
+.avatars {
+    display: flex;
+}
+
+.avatars__item {
+    /* Nagative margin make avatar overlap to previous one */
+    margin-left: -0.25rem;
+}
+
+.avatars__image {
+    /* Add a white curve between avatars */
+    box-shadow: 0 0 0 0.25rem #fff;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Rounded border */
+    border-radius: 9999px;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.avatars {
+    display: flex;
+    justify-content: center;
+
+    height: 2rem;
+    width: 100%;
+}
+.avatars__item {
+    margin-left: -0.25rem;
+}
+.avatars__image {
+    background-color: #d1d5db;
+    box-shadow: 0 0 0 0.25rem #fff;
+    color: #fff;
+    font-size: 0.75rem;
+
+    /* Rounded border */
+    border-radius: 50%;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Size */
+    height: 2rem;
+    width: 2rem;
+}
+```
+
+```html index.html hidden
+<div class="avatars">
+    <div class="avatars__item">
+        <div class="avatars__image">A</div>
+    </div>
+    <div class="avatars__item">
+        <div class="avatars__image">B</div>
+    </div>
+    <div class="avatars__item">
+        <div class="avatars__image">C</div>
+    </div>
+</div>
+```
+</Playground>
