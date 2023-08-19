@@ -1,0 +1,98 @@
+---
+category: Display
+created: '2020-01-18'
+description: Create a full background element with CSS
+keywords: css background size cover, css full background
+thumbnail: /assets/css-layout/thumbnails/full-background.png
+title: Full background
+---
+
+## HTML
+
+```html
+<div class="full-background">...</div>
+```
+
+## CSS
+
+```css
+.full-background {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* Take full size */
+    height: 100vh;
+    width: 100%;
+
+    /* Background */
+    background: url('/path/to/background.jpeg') center center / cover no-repeat;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+```
+
+```css styles.css hidden
+body {
+    height: 24rem;
+}
+
+.full-background {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    background: url('/assets/css-layout/full-background.jpeg') center center / cover no-repeat;
+}
+```
+
+```html index.html hidden
+<div class="full-background">
+    <div class="lines">
+        <div class="line line--20"></div>
+        <div class="line line--80"></div>
+        <div class="line line--40"></div>
+        <div class="line line--60"></div>
+        <div class="line line--20"></div>
+    </div>
+</div>
+```
+</Playground>

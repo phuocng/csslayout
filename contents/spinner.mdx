@@ -1,0 +1,78 @@
+---
+category: Feedback
+created: '2022-10-03'
+description: Create a loading spinner with CSS
+keywords: css loading spinner, css spinner
+thumbnail: /assets/css-layout/thumbnails/spinner.png
+title: Spinner
+---
+
+## HTML
+
+```html
+<div class="spinner"></div>
+```
+
+## CSS
+
+```css
+.spinner {
+    /* Size */
+    height: 4rem;
+    width: 4rem;
+
+    /* Create a curve at the top */
+    border: 4px solid #d1d5db;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+
+    animation: spinner 800ms linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.spinner {
+    height: 4rem;
+    width: 4rem;
+
+    border: 4px solid #d1d5db;
+    border-top-color: #3b82f6;
+    border-radius: 50%;
+
+    animation: spinner 800ms linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+```
+
+```html index.html hidden
+<div class="spinner"></div>
+```
+</Playground>
+
+## See also
+
+-   [Indeterminate progress bar](https://phuoc.ng/collection/css-layout/indeterminate-progress-bar)

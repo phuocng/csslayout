@@ -1,0 +1,253 @@
+---
+category: Display
+created: '2019-12-11'
+description: Create a feature comparison list with CSS flexbox
+keywords: css feature comparison, css flexbox
+thumbnail: /assets/css-layout/thumbnails/feature-comparison.png
+title: Feature comparison
+---
+
+## HTML
+
+```html
+<div class="feature-comparison">
+    <!-- Feature name -->
+    <div class="feature-comparison__feature">...</div>
+
+    <!-- The model -->
+    <div class="feature-comparison__model">
+        <!--
+        For the first row: display the model name (Basic, Pro, etc.)
+        From the second row: display a yes/no icon indicating the feature is available or not
+        -->
+        ...
+    </div>
+
+    <!-- Repeated other models -->
+    ...
+</div>
+
+<!-- Repeated items -->
+...
+```
+
+## CSS
+
+```css
+.feature-comparison {
+    align-items: center;
+    display: flex;
+
+    /* Bottom border */
+    border-bottom: 1px solid #d1d5db;
+
+    /* Spacing */
+    padding: 0.25rem 0;
+}
+
+.feature-comparison__feature {
+    /* Take available width */
+    flex: 1;
+}
+
+.feature-comparison__model {
+    /* Center the content */
+    display: flex;
+    justify-content: center;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.circle {
+    background: #d1d5db;
+    border-radius: 9999px;
+    height: var(--circle-size);
+    width: var(--circle-size);
+}
+.circle--sm {
+    --circle-size: 0.5rem;
+}
+.circle--md {
+    --circle-size: 1.5rem;
+}
+.circle--lg {
+    --circle-size: 4rem;
+}
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+.rectangle {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    height: var(--rectangle-height);
+    width: var(--rectangle-width);
+}
+.rectangle--hor.rectangle--20 {
+    --rectangle-width: 20%;
+}
+.rectangle--hor.rectangle--40 {
+    --rectangle-width: 40%;
+}
+.rectangle--hor.rectangle--60 {
+    --rectangle-width: 60%;
+}
+.rectangle--hor.rectangle--80 {
+    --rectangle-width: 80%;
+}
+.rectangle--hor.rectangle--100 {
+    --rectangle-width: 100%;
+}
+.rectangle--hor.rectangle--sm {
+    --rectangle-height: 0.5rem;
+}
+.rectangle--hor.rectangle--md {
+    --rectangle-height: 2rem;
+}
+.rectangle--hor.rectangle--lg {
+    --rectangle-height: 4rem;
+}
+.rectangle--ver.rectangle--20 {
+    --rectangle-height: 20%;
+}
+.rectangle--ver.rectangle--40 {
+    --rectangle-height: 40%;
+}
+.rectangle--ver.rectangle--60 {
+    --rectangle-height: 60%;
+}
+.rectangle--ver.rectangle--80 {
+    --rectangle-height: 80%;
+}
+.rectangle--ver.rectangle--100 {
+    --rectangle-height: 100%;
+}
+.rectangle--ver.rectangle--sm {
+    --rectangle-width: 0.5rem;
+}
+.rectangle--ver.rectangle--md {
+    --rectangle-width: 2rem;
+}
+.rectangle--ver.rectangle--lg {
+    --rectangle-width: 4rem;
+}
+```
+
+```css styles.css hidden
+.feature-comparison {
+    align-items: center;
+    display: flex;
+
+    /* Bottom border */
+    border-bottom: 1px solid #d1d5db;
+
+    /* Spacing */
+    padding: 0.25rem 0;
+
+    width: 100%;
+}
+
+.feature-comparison__feature {
+    /* Take available width */
+    flex: 1;
+}
+
+.feature-comparison__model {
+    /* Center the content */
+    display: flex;
+    justify-content: center;
+
+    /* Demo */
+    width: 1.5rem;
+}
+```
+
+```html index.html hidden
+<div class="feature-comparison">
+    <div class="feature-comparison__feature">
+        <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+    </div>
+    <div class="feature-comparison__model">
+        <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+    </div>
+    <div class="feature-comparison__model">
+        <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+    </div>
+</div>
+
+<div class="feature-comparison">
+    <div class="feature-comparison__feature">
+        <div class="lines">
+            <div class="line line--20"></div>
+            <div class="line line--80"></div>
+            <div class="line line--40"></div>
+            <div class="line line--60"></div>
+            <div class="line line--20"></div>
+        </div>
+    </div>
+    <div class="feature-comparison__model">
+        <div class="circle circle--sm"></div>
+    </div>
+    <div class="feature-comparison__model">
+        <div class="circle circle--sm"></div>
+    </div>
+</div>
+
+<div class="feature-comparison">
+    <div class="feature-comparison__feature">
+        <div class="lines">
+            <div class="line line--20"></div>
+            <div class="line line--80"></div>
+            <div class="line line--40"></div>
+            <div class="line line--60"></div>
+            <div class="line line--20"></div>
+        </div>
+    </div>
+    <div class="feature-comparison__model"></div>
+    <div class="feature-comparison__model">
+        <div class="circle circle--sm"></div>
+    </div>
+</div>
+
+<div class="feature-comparison">
+    <div class="feature-comparison__feature">
+        <div class="lines">
+            <div class="line line--20"></div>
+            <div class="line line--80"></div>
+            <div class="line line--40"></div>
+            <div class="line line--60"></div>
+            <div class="line line--20"></div>
+        </div>
+    </div>
+    <div class="feature-comparison__model">
+        <div class="circle circle--sm"></div>
+    </div>
+    <div class="feature-comparison__model"></div>
+</div>
+```
+</Playground>

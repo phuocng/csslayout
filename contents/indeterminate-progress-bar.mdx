@@ -1,0 +1,123 @@
+---
+category: Feedback
+created: '2022-10-02'
+description: Create an indeterminate progress bar with CSS
+keywords: css indeterminate progress bar, css progress bar
+thumbnail: /assets/css-layout/thumbnails/indeterminate-progress-bar.png
+title: Indeterminate progress bar
+---
+
+## HTML
+
+```html
+<div class="indeterminate-progress-bar">
+    <div class="indeterminate-progress-bar__progress"></div>
+</div>
+```
+
+## CSS
+
+```css
+.indeterminate-progress-bar {
+    /* Color */
+    background-color: #d1d5db;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Size */
+    height: 0.5rem;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.indeterminate-progress-bar__progress {
+    /* Color */
+    background-color: #3b82f6;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    /* Absolute position */
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 50%;
+
+    /* Move the bar infinitely */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: indeterminate-progress-bar;
+}
+
+@keyframes indeterminate-progress-bar {
+    from {
+        left: -50%;
+    }
+    to {
+        left: 100%;
+    }
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.indeterminate-progress-bar {
+    /* Color */
+    background-color: #d1d5db;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    width: 16rem;
+    height: 0.5rem;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.indeterminate-progress-bar__progress {
+    /* Color */
+    background-color: #3b82f6;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 50%;
+
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: indeterminate-progress-bar;
+}
+
+@keyframes indeterminate-progress-bar {
+    from {
+        left: -50%;
+    }
+    to {
+        left: 100%;
+    }
+}
+```
+
+```html index.html hidden
+<div class="indeterminate-progress-bar">
+    <div class="indeterminate-progress-bar__progress"></div>
+</div>
+```
+</Playground>
+
+## See also
+
+-   [Progress bar](https://phuoc.ng/collection/css-layout/progress-bar)
+-   [Spinner](https://phuoc.ng/collection/css-layout/spinner)

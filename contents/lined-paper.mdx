@@ -1,0 +1,62 @@
+---
+category: Display
+created: '2020-01-17'
+description: Create lined paper with CSS
+keywords: css linear gradient, css lined paper, css multiple horizontal lines
+thumbnail: /assets/css-layout/thumbnails/lined-paper.png
+title: Lined paper
+---
+
+## HTML
+
+```html
+<div class="lined-paper">...</div>
+```
+
+## CSS
+
+```css
+.lined-paper {
+    /* Lined background */
+    background-image: linear-gradient(#d1d5db 1px, transparent 0px);
+    background-size: 100% 2em;
+
+    /*
+    Display the content on top of the lines.
+    The line height must be the same as the background size defined above
+    */
+    background-position-y: 1.5rem;
+    line-height: 2em;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.lined-paper {
+    /* Lined background */
+    background-image: linear-gradient(#d1d5db 1px, transparent 0px);
+    background-size: 100% 2em;
+
+    /*
+    Display the content on top of the lines.
+    The line height must be the same as the background size defined above
+    */
+    background-position-y: 1.5rem;
+    line-height: 2em;
+
+    /* Demo */
+    overflow: hidden;
+}
+```
+
+```html index.html hidden
+<div class="lined-paper">
+    Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+</div>
+```
+</Playground>

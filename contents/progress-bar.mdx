@@ -1,0 +1,95 @@
+---
+category: Feedback
+created: '2019-11-17'
+description: Create a progress bar with CSS flexbox
+keywords: css flexbox, css progress bar
+thumbnail: /assets/css-layout/thumbnails/progress-bar.png
+title: Progress bar
+---
+
+## HTML
+
+```html
+<div class="container">
+    <!-- Width based on the number of percentages -->
+    <div class="container__progress" style="width: 40%;">
+        <!-- The number of percentages -->
+        40%
+    </div>
+</div>
+```
+
+## CSS
+
+```css
+.progress-bar {
+    /* Colors */
+    background-color: #d1d5db;
+
+    /* Rounded border */
+    border-radius: 9999px;
+    padding: 0.25rem;
+}
+
+.progress-bar__progress {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Colors */
+    background-color: #3b82f6;
+    color: #fff;
+
+    /* Rounded border */
+    border-radius: 9999px;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.progress-bar {
+    /* Colors */
+    background-color: #d1d5db;
+
+    /* Rounded border */
+    border-radius: 9999px;
+    padding: 0.25rem;
+
+    /* Demo */
+    width: 16rem;
+}
+
+.progress-bar__progress {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Colors */
+    background-color: #3b82f6;
+    color: #fff;
+
+    /* Rounded border */
+    border-radius: 9999px;
+
+    width: 40%;
+}
+```
+
+```html index.html hidden
+<div class="progress-bar">
+    <div class="progress-bar__progress">40%</div>
+</div>
+```
+</Playground>
+
+## See also
+
+-   [Indeterminate progress bar](https://phuoc.ng/collection/css-layout/indeterminate-progress-bar)

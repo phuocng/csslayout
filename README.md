@@ -21,41 +21,6 @@ They are powered by modern CSS features such as flexbox and grid.
 They are great starting points to be picked and customized easily for each specific need.
 By composing them, you can have any possible layout that exists in the real life.
 
-## Running it on local
-
--   Clone the project:
-
-```shell
-$ git clone https://github.com/phuocng/csslayout
-```
-
--   Install the dependencies:
-
-```shell
-$ cd csslayout
-$ npm install
-```
-
--   Run it on the local:
-
-```shell
-$ npm run start
-```
-
-Visit http://localhost:8081 to see it in action.
-
-## Contributing
-
-PRs are welcomed. If you think there are any missing useful layouts or patterns, please create an issue or submit a PR.
-
-It's important to note that you should run the following command to lint the code:
-
-```shell
-$ npm run lint
-```
-
-If there is any issue, it will be logged in the `tslint.log` file.
-
 ## About
 
 This project is developed by _Nguyen Huu Phuoc_. I love building products and sharing knowledge.

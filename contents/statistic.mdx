@@ -1,0 +1,88 @@
+---
+category: Display
+created: '2019-12-30'
+description: Create a statistic component with CSS flexbox
+keywords: css flexbox, css statistic
+thumbnail: /assets/css-layout/thumbnails/statistic.png
+title: Statistic
+---
+
+## HTML
+
+```html
+<div class="statistic">
+    <!-- Value -->
+    <div class="statistic__value">...</div>
+
+    <!-- Label -->
+    <div class="statistic__label">...</div>
+</div>
+```
+
+## CSS
+
+```css
+.statistic {
+    /* Center the content */
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.statistic__value {
+    /* Big font size */
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.statistic__label {
+    /* Smaller font size */
+    font-size: 1rem;
+    font-weight: 700;
+
+    /* Uppercase the label */
+    text-transform: uppercase;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.statistic {
+    /* Center the content */
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.statistic__value {
+    /* Big font size */
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.statistic__label {
+    /* Smaller font size */
+    font-size: 1rem;
+    font-weight: 700;
+
+    /* Uppercase the label */
+    text-transform: uppercase;
+}
+```
+
+```html index.html hidden
+<div class="statistic">
+    <div class="statistic__value">
+        9k+
+    </div>
+    <div class="statistic__label">
+        stars
+    </div>
+</div>
+```
+</Playground>

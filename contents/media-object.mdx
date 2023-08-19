@@ -1,0 +1,143 @@
+---
+category: Display
+created: '2019-11-16'
+description: Create a media object with CSS flexbox
+keywords: css flexbox, media object
+thumbnail: /assets/css-layout/thumbnails/media-object.png
+title: Media object
+---
+
+## HTML
+
+```html
+<div class="media-object">
+    <!-- Media object -->
+    <div class="media-object__media">...</div>
+    <!-- Main content -->
+    <div class="media-object__content">...</div>
+</div>
+```
+
+## CSS
+
+```css
+.media-object {
+    /* Align sub-items to top */
+    align-items: start;
+    display: flex;
+}
+
+.media-object__media {
+    margin-right: 0.5rem;
+}
+
+.media-object__content {
+    /* Take the remaining width */
+    flex: 1;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+.square {
+    background: #d1d5db;
+    height: var(--square-size);
+    width: var(--square-size);
+}
+.square--sm {
+    --square-size: 0.5rem;
+}
+.square--md {
+    --square-size: 2rem;
+}
+.square--lg {
+    --square-size: 4rem;
+}
+```
+
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.media-object {
+    /* Align sub-items to top */
+    align-items: start;
+    display: flex;
+
+    /* Demo */
+    width: 16rem;
+}
+
+.media-object__media {
+    margin-right: 0.5rem;
+}
+
+.media-object__content {
+    /* Take the remaining width */
+    flex: 1;
+}
+```
+
+```html index.html hidden
+<div class="media-object">
+    <div class="media-object__media">
+        <div class="square square--md"></div>
+    </div>
+    <div class="media-object__content">
+        <div class="lines">
+            <div class="line line--20"></div>
+            <div class="line line--80"></div>
+            <div class="line line--40"></div>
+            <div class="line line--60"></div>
+            <div class="line line--20"></div>
+        </div>
+
+        <div class="lines">
+            <div class="line line--20"></div>
+            <div class="line line--80"></div>
+            <div class="line line--40"></div>
+            <div class="line line--60"></div>
+            <div class="line line--20"></div>
+        </div>
+
+        <div class="lines">
+            <div class="line line--20"></div>
+            <div class="line line--80"></div>
+            <div class="line line--40"></div>
+            <div class="line line--60"></div>
+            <div class="line line--20"></div>
+        </div>
+    </div>
+</div>
+```
+</Playground>

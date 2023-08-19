@@ -1,0 +1,64 @@
+---
+category: Display
+created: '2020-01-17'
+description: Create an element with curved background
+keywords: css border radius, css curved background
+thumbnail: /assets/css-layout/thumbnails/curved-background.png
+title: Curved background
+---
+
+## HTML
+
+```html
+<div class="curved-background">
+    <div class="curved-background__curved"></div>
+</div>
+```
+
+## CSS
+
+```css
+.curved-background__curved {
+    /* Background color */
+    background-color: #d1d5db;
+
+    /* You can use gradient background color such as */
+    /* background: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%); */
+
+    /* Curved corners */
+    border-bottom-left-radius: 50% 40%;
+    border-bottom-right-radius: 50% 40%;
+
+    /* Size */
+    height: 50%;
+    width: 100%;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    height: 24rem;
+}
+.curved-background {
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    height: 100%;
+    width: 100%;
+}
+.curved-background__curved {
+    background-color: #d1d5db;
+    border-bottom-left-radius: 50% 40%;
+    border-bottom-right-radius: 50% 40%;
+
+    height: 8rem;
+    width: 100%;
+}
+```
+
+```html index.html hidden
+<div class="curved-background">
+    <div class="curved-background__curved"></div>
+</div>
+```
+</Playground>

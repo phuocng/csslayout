@@ -1,0 +1,112 @@
+---
+category: Display
+created: '2019-11-30'
+description: Create a cookie banner with CSS flexbox
+keywords: css cookie banner, css flexbox
+thumbnail: /assets/css-layout/thumbnails/cookie-banner.png
+title: Cookie banner
+---
+
+## HTML
+
+```html
+<div class="cookie-banner">
+    <!-- Tells visitors that the website uses cookie -->
+    <div class="cookie-banner__content">...</div>
+
+    <!-- Close button -->
+    ...
+</div>
+```
+
+## CSS
+
+```css
+.cookie-banner {
+    /* Banner is displayed at the bottom */
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.cookie-banner__content {
+    /* Take available width */
+    flex: 1;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+```
+
+```css styles.css hidden
+body {
+    height: 24rem;
+}
+.cookie-banner {
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+
+    height: 100%;
+    width: 100%;
+
+    align-items: end;
+    display: flex;
+}
+
+.cookie-banner__content {
+    border-top: 1px solid #d1d5db;
+    /* Take available width */
+    flex: 1;
+    padding: 0 0.5rem;
+}
+```
+
+```html index.html hidden
+<div class="cookie-banner">
+    <div class="cookie-banner__content">
+        <div class="lines">
+            <div class="line line--80"></div>
+            <div class="line line--40"></div>
+            <div class="line line--100"></div>
+            <div class="line line--60"></div>
+            <div class="line line--20"></div>
+        </div>
+    </div>
+</div>
+```
+</Playground>

@@ -1,0 +1,258 @@
+---
+category: Display
+created: '2021-04-03'
+description: Create a tree diagram with CSS
+keywords: css sitemap, css tree diagram
+thumbnail: /assets/css-layout/thumbnails/tree-diagram.png
+title: Tree diagram
+---
+
+## HTML
+
+```html
+<div class="tree-diagram">
+    <ul>
+        <li>
+            <!-- Content -->
+            ...
+
+            <!-- Sub items -->
+            <ul>
+                <li>
+                    <!-- Content -->
+                    ...
+
+                    <!-- Sub items -->
+                    <ul>
+                        <li>...</li>
+                        <li>...</li>
+                        ...
+                    </ul>
+                </li>
+                <li>...</li>
+                ...
+            </ul>
+        </li>
+
+        <!-- Repeat other items -->
+        ...
+    </ul>
+</div>
+```
+
+## CSS
+
+```css
+.tree-diagram ul {
+    display: flex;
+    position: relative;
+
+    /* Reset */
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem 0.5rem 0rem 0.5rem;
+}
+
+.tree-diagram ul ul::before {
+    border-right: 1px solid #d1d5db;
+    content: '';
+
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 50%;
+
+    /* Size */
+    height: 1rem;
+    width: 50%;
+}
+
+.tree-diagram li {
+    padding: 1rem 0.5rem 0rem 0.5rem;
+    position: relative;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.tree-diagram li::before {
+    border-right: 1px solid #d1d5db;
+    border-top: 1px solid #d1d5db;
+    content: '';
+
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 50%;
+
+    /* Size */
+    height: 1rem;
+    width: 50%;
+}
+
+.tree-diagram li::after {
+    border-top: 1px solid #d1d5db;
+    content: '';
+
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    /* Size */
+    width: 50%;
+}
+
+.tree-diagram li:first-child::before,
+.tree-diagram li:last-child::after {
+    /* Remove the top of border from the first and last items */
+    border-top: none;
+}
+
+/* Add a root item if you want */
+li.tree-diagram__root::before {
+    border-right: none;
+}
+```
+
+You can add a root item to the tree:
+
+```html
+<div class="tree-diagram">
+    <ul>
+        <li class="tree-diagram__root">...</li>
+    </ul>
+</div>
+```
+
+<Playground>
+```css placeholders.css hidden
+.square {
+    background: #d1d5db;
+    height: var(--square-size);
+    width: var(--square-size);
+}
+.square--sm {
+    --square-size: 0.5rem;
+}
+.square--md {
+    --square-size: 2rem;
+}
+.square--lg {
+    --square-size: 4rem;
+}
+```
+
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.tree-diagram ul {
+    display: flex;
+    position: relative;
+
+    /* Reset */
+    list-style-type: none;
+    margin: 0;
+    padding: 1rem 0.5rem 0rem 0.5rem;
+}
+
+.tree-diagram ul ul::before {
+    border-right: 1px solid #d1d5db;
+    content: '';
+
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 50%;
+
+    /* Size */
+    height: 1rem;
+    width: 50%;
+}
+
+.tree-diagram li {
+    padding: 1rem 0.5rem 0rem 0.5rem;
+    position: relative;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.tree-diagram li::before {
+    border-right: 1px solid #d1d5db;
+    border-top: 1px solid #d1d5db;
+    content: '';
+
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 50%;
+
+    /* Size */
+    height: 1rem;
+    width: 50%;
+}
+
+.tree-diagram li::after {
+    border-top: 1px solid #d1d5db;
+    content: '';
+
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    /* Size */
+    width: 50%;
+}
+
+.tree-diagram li:first-child::before,
+.tree-diagram li:last-child::after {
+    /* Remove the top of border from the first and last items */
+    border-top: none;
+}
+
+/* Add a root item if you want */
+li.tree-diagram__root::before {
+    border-right: none;
+}
+```
+
+```html index.html hidden
+<div class="tree-diagram">
+    <ul>
+        <li class="tree-diagram__root">
+            <div class="square square--sm"></div>
+            <ul>
+                <li>
+                    <div class="square square--sm"></div>
+                    <ul>
+                        <li>
+                            <div class="square square--sm"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="square square--sm"></div>
+                    <ul>
+                        <li>
+                            <div class="square square--sm"></div>
+                        </li>
+                        <li>
+                            <div class="square square--sm"></div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+```
+</Playground>

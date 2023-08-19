@@ -1,0 +1,137 @@
+---
+category: Layout
+created: '2021-04-28'
+description: Create a masonry grid with CSS
+keywords: css column-count, css column-gap, css masonry, css masonry grid
+thumbnail: /assets/css-layout/thumbnails/masonry-grid.png
+title: Masonry grid
+---
+
+## HTML
+
+```html
+<div class="masonry-grid">
+    <!--Item -->
+    <div class="masonry-grid__item">...</div>
+
+    <!-- Repeat other items -->
+</div>
+```
+
+## CSS
+
+```css
+.masonry-grid {
+    /* It is split into 3 columns */
+    column-count: 3;
+
+    /* The space between columns */
+    column-gap: 1rem;
+}
+
+.masonry-grid__item {
+    /* Prevent a column from breaking into multiple columns */
+    break-inside: avoid;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.rectangle {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    height: var(--rectangle-height);
+    width: var(--rectangle-width);
+}
+.rectangle--hor.rectangle--20 {
+    --rectangle-width: 20%;
+}
+.rectangle--hor.rectangle--40 {
+    --rectangle-width: 40%;
+}
+.rectangle--hor.rectangle--60 {
+    --rectangle-width: 60%;
+}
+.rectangle--hor.rectangle--80 {
+    --rectangle-width: 80%;
+}
+.rectangle--hor.rectangle--100 {
+    --rectangle-width: 100%;
+}
+.rectangle--hor.rectangle--sm {
+    --rectangle-height: 0.5rem;
+}
+.rectangle--hor.rectangle--md {
+    --rectangle-height: 2rem;
+}
+.rectangle--hor.rectangle--lg {
+    --rectangle-height: 4rem;
+}
+.rectangle--ver.rectangle--20 {
+    --rectangle-height: 20%;
+}
+.rectangle--ver.rectangle--40 {
+    --rectangle-height: 40%;
+}
+.rectangle--ver.rectangle--60 {
+    --rectangle-height: 60%;
+}
+.rectangle--ver.rectangle--80 {
+    --rectangle-height: 80%;
+}
+.rectangle--ver.rectangle--100 {
+    --rectangle-height: 100%;
+}
+.rectangle--ver.rectangle--sm {
+    --rectangle-width: 0.5rem;
+}
+.rectangle--ver.rectangle--md {
+    --rectangle-width: 2rem;
+}
+.rectangle--ver.rectangle--lg {
+    --rectangle-width: 4rem;
+}
+```
+
+```css styles.css hidden
+body {
+    height: 24rem;
+}
+
+.masonry-grid {
+    /* It is split into 3 columns */
+    column-count: 3;
+
+    /* The space between columns */
+    column-gap: 1rem;
+
+    /* Demo */
+    height: 100%;
+    width: 100%;
+}
+
+.masonry-grid__item {
+    /* Prevent a column from breaking into multiple columns */
+    break-inside: avoid;
+
+    /* Misc */
+    margin-bottom: 1rem;
+}
+```
+
+```html index.html hidden
+<div class="masonry-grid">
+    <div class="masonry-grid__item"><div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div></div>
+    <div class="masonry-grid__item"><div class="rectangle rectangle--hor rectangle--md rectangle--100"></div></div>
+    <div class="masonry-grid__item"><div class="rectangle rectangle--hor rectangle--md rectangle--100"></div></div>
+    <div class="masonry-grid__item"><div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div></div>
+    <div class="masonry-grid__item"><div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div></div>
+    <div class="masonry-grid__item"><div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div></div>
+    <div class="masonry-grid__item"><div class="rectangle rectangle--hor rectangle--md rectangle--100"></div></div>
+    <div class="masonry-grid__item"><div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div></div>
+    <div class="masonry-grid__item"><div class="rectangle rectangle--hor rectangle--md rectangle--100"></div></div>
+    <div class="masonry-grid__item"><div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div></div>
+    <div class="masonry-grid__item"><div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div></div>
+</div>
+```
+</Playground>

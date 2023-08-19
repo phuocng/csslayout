@@ -1,0 +1,175 @@
+---
+category: Display
+created: '2019-12-16'
+description: Add video background with CSS flexbox
+keywords: css flexbox, object fit cover
+thumbnail: /assets/css-layout/thumbnails/video-background.png
+title: Video background
+---
+
+In this pattern, the video is displayed in the background.
+
+## HTML
+
+```html
+<div class="video-background">
+    <!-- The video container -->
+    <div class="video-background__inner">
+        <video class="video-background__video" src="...">...</video>
+    </div>
+
+    <!-- The content -->
+    <div class="video-background__content">...</div>
+</div>
+```
+
+## CSS
+
+```css
+.video-background {
+    /* Used to position the video and content */
+    position: relative;
+}
+
+.video-background__inner {
+    /* Positioned at the top left corner */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Hide the scrollbar */
+    overflow: hidden;
+}
+
+.video-background__video {
+    object-fit: cover;
+
+    /* Take full width */
+    height: 100%;
+    max-width: 100%;
+}
+
+.video-background__content {
+    /* Positioned at the top left corner */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+```
+
+```css styles.css hidden
+body {
+    height: 24rem;
+}
+
+.video-background {
+    /* Used to position the video and content */
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+}
+
+.video-background__inner {
+    /* Positioned at the top left corner */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Hide the scrollbar */
+    overflow: hidden;
+}
+
+.video-background__video {
+    object-fit: cover;
+
+    /* Take full width */
+    height: 100%;
+    max-width: 100%;
+}
+
+.video-background__content {
+    /* Positioned at the top left corner */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+```
+
+```html index.html hidden
+<div class="video-background">
+    <div class="video-background__inner">
+        <video class="video-background__video" src="/assets/css-layout/video-background.mp4" autoplay loop muted></video>
+    </div>
+    <div class="video-background__content">
+        <div class="lines">
+            <div class="line line--80"></div>
+            <div class="line line--40"></div>
+            <div class="line line--100"></div>
+            <div class="line line--60"></div>
+            <div class="line line--20"></div>
+        </div>
+    </div>
+</div>
+```
+</Playground>

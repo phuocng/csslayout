@@ -1,0 +1,210 @@
+---
+category: Feedback
+contributors:
+    - arthur322
+created: '2019-12-18'
+description: Create a tooltip with CSS
+keywords: css tooltip
+thumbnail: /assets/css-layout/thumbnails/tooltip.png
+title: Tooltip
+updated: '2021-10-01'
+---
+
+## HTML
+
+```html
+<div class="tooltip">
+    <!-- The tooltip content -->
+    <div class="tooltip__content">...</div>
+
+    <!-- The tooltip arrow -->
+    <div class="tooltip__arrow"></div>
+
+    <!-- The trigger element -->
+    ...
+</div>
+```
+
+## CSS
+
+```css
+.tooltip {
+    /* Used to position the arrow */
+    position: relative;
+}
+
+/* Show the arrow and content and restore pointer events when hovering the trigger element */
+.tooltip:hover .tooltip__arrow,
+.tooltip:hover .tooltip__content {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.tooltip__arrow {
+    /* Invisible by default */
+    opacity: 0;
+
+    /* To prevent accidental interactions with other elements  */
+    pointer-events: none;
+
+    /* Border */
+    border: 0.5rem solid transparent;
+    border-top-color: #111827;
+
+    /* Position */
+    bottom: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 8px);
+
+    /* Zero size */
+    height: 0;
+    width: 0;
+
+    /* Displayed on top of other element */
+    z-index: 10;
+}
+
+.tooltip__content {
+    /* Invisible by default */
+    opacity: 0;
+
+    /* To prevent accidental interactions with other elements  */
+    pointer-events: none;
+
+    /* Background color, must be the same as the border color of arrow */
+    background-color: #111827;
+    border-radius: 0.25rem;
+
+    /* Position */
+    bottom: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -8px);
+
+    /* Displayed on top of other element */
+    z-index: 10;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+```
+
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.tooltip {
+    /* Used to position the arrow */
+    position: relative;
+
+    /* Demo */
+    width: 8rem;
+    height: 2rem;
+    border-radius: 0.25rem;
+    background: #d1d5db;
+}
+
+/* Show the arrow and content and restore pointer events when hovering the trigger element */
+.tooltip:hover .tooltip__arrow,
+.tooltip:hover .tooltip__content {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.tooltip__arrow {
+    /* Invisible by default */
+    opacity: 1;
+
+    /* To prevent accidental interactions with other elements  */
+    pointer-events: none;
+
+    /* Border */
+    border: 0.5rem solid transparent;
+    border-top-color: #111827;
+
+    /* Position */
+    bottom: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 8px);
+
+    /* Zero size */
+    height: 0;
+    width: 0;
+
+    /* Displayed on top of other element */
+    z-index: 10;
+}
+
+.tooltip__content {
+    /* Invisible by default */
+    opacity: 1;
+
+    /* To prevent accidental interactions with other elements  */
+    pointer-events: none;
+
+    /* Background color, must be the same as the border color of arrow */
+    background-color: #111827;
+    border-radius: 0.25rem;
+
+    /* Position */
+    bottom: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -8px);
+
+    /* Displayed on top of other element */
+    z-index: 10;
+
+    /* Demo */
+    width: 6rem;
+}
+```
+
+```html index.html hidden
+<div class="tooltip">
+    <div class="tooltip__content">
+        <div class="lines">
+            <div class="line line--80"></div>
+            <div class="line line--40"></div>
+            <div class="line line--100"></div>
+            <div class="line line--60"></div>
+            <div class="line line--20"></div>
+        </div>
+    </div>
+    <div class="tooltip__arrow"></div>
+</div>
+```
+</Playground>

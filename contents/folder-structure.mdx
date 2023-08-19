@@ -1,0 +1,202 @@
+---
+category: Display
+created: '2021-04-03'
+description: Create a folder structure with CSS
+keywords: css folder structure, css folder tree
+thumbnail: /assets/css-layout/thumbnails/folder-structure.png
+title: Folder structure
+---
+
+## HTML
+
+```html
+<div class="folder-structure">
+    <ul>
+        <li>
+            <!-- Content -->
+            ...
+
+            <!-- Sub items -->
+            <ul>
+                <li>
+                    <!-- Content -->
+                    ...
+
+                    <!-- Sub items -->
+                    <ul>
+                        <li>...</li>
+                        <li>...</li>
+                        ...
+                    </ul>
+                </li>
+                <li>...</li>
+                ...
+            </ul>
+        </li>
+
+        <!-- Repeat other items -->
+        ...
+    </ul>
+</div>
+```
+
+## CSS
+
+```css
+:root {
+    --folder-structure-item-height: 0.5rem;
+    --folder-structure-item-margin-left: 2.25rem;
+    --folder-structure-item-padding-top: 0.5rem;
+}
+
+.folder-structure ul {
+    /* Reset */
+    list-style-type: none;
+    margin: 0;
+}
+
+.folder-structure li {
+    padding: var(--folder-structure-item-padding-top) 0rem 0rem 0rem;
+    position: relative;
+}
+
+.folder-structure li::before {
+    border-left: 1px solid #d1d5db;
+    content: '';
+
+    /* Position */
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translate(calc(-1 * var(--folder-structure-item-margin-left)), 0);
+
+    /* Size */
+    height: 100%;
+}
+
+.folder-structure li::after {
+    border-bottom: 1px solid #d1d5db;
+    content: '';
+
+    /* Position */
+    left: 0;
+    position: absolute;
+    top: calc(var(--folder-structure-item-padding-top) + var(--folder-structure-item-height) / 2);
+    transform: translate(-100%, 0);
+
+    /* Size */
+    width: var(--folder-structure-item-margin-left);
+}
+
+/* Remove the border from the last item */
+.folder-structure li:last-child::before {
+    height: calc(var(--folder-structure-item-padding-top) + var(--folder-structure-item-height) / 2);
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.square {
+    background: #d1d5db;
+    height: var(--square-size);
+    width: var(--square-size);
+}
+.square--sm {
+    --square-size: 0.5rem;
+}
+.square--md {
+    --square-size: 2rem;
+}
+.square--lg {
+    --square-size: 4rem;
+}
+```
+
+```css styles.css hidden
+:root {
+    --folder-structure-item-height: 0.5rem;
+    --folder-structure-item-margin-left: 2.25rem;
+    --folder-structure-item-padding-top: 0.5rem;
+}
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.folder-structure ul {
+    /* Reset */
+    list-style-type: none;
+    margin: 0;
+}
+
+.folder-structure li {
+    padding: var(--folder-structure-item-padding-top) 0rem 0rem 0rem;
+    position: relative;
+}
+
+.folder-structure li::before {
+    border-left: 1px solid #d1d5db;
+    content: '';
+
+    /* Position */
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translate(calc(-1 * var(--folder-structure-item-margin-left)), 0);
+
+    /* Size */
+    height: 100%;
+}
+
+.folder-structure li::after {
+    border-bottom: 1px solid #d1d5db;
+    content: '';
+
+    /* Position */
+    left: 0;
+    position: absolute;
+    top: calc(var(--folder-structure-item-padding-top) + var(--folder-structure-item-height) / 2);
+    transform: translate(-100%, 0);
+
+    /* Size */
+    width: var(--folder-structure-item-margin-left);
+}
+
+/* Remove the border from the last item */
+.folder-structure li:last-child::before {
+    height: calc(var(--folder-structure-item-padding-top) + var(--folder-structure-item-height) / 2);
+}
+```
+
+```html index.html hidden
+<div class="folder-structure">
+    <ul>
+        <li>
+            <div class="square square--sm"></div>
+            <ul>
+                <li>
+                    <div class="square square--sm"></div>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <div class="square square--sm"></div>
+            <ul>
+                <li>
+                    <div class="square square--sm"></div>
+                    <ul>
+                        <li>
+                            <div class="square square--sm"></div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="square square--sm"></div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+```
+</Playground>

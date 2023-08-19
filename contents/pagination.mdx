@@ -1,0 +1,93 @@
+---
+category: Navigation
+created: '2019-11-17'
+description: Create a pagination with CSS flexbox
+keywords: css flexbox, css pagination
+thumbnail: /assets/css-layout/thumbnails/pagination.png
+title: Pagination
+---
+
+## HTML
+
+```html
+<div class="pagination">
+    <!-- Pagination item -->
+    <div class="pagination__item">...</div>
+
+    <!-- Repeat other items -->
+    ...
+</div>
+```
+
+## CSS
+
+```css
+.pagination {
+    display: flex;
+
+    /* Border */
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+}
+
+.pagination__item {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination__item:not(:last-child) {
+    /* Right border */
+    border-right: 1px solid #d1d5db;
+}
+
+.pagination__item--active {
+    background-color: #d1d5db;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+
+    /* Border */
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+}
+
+.pagination__item {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    padding: 0.25rem 0.5rem;
+}
+
+.pagination__item:not(:last-child) {
+    /* Right border */
+    border-right: 1px solid #d1d5db;
+}
+
+.pagination__item--active {
+    background-color: #d1d5db;
+}
+```
+
+```html index.html hidden
+<div class="pagination">
+    <div class="pagination__item">1</div>
+    <div class="pagination__item pagination__item--active">2</div>
+    <div class="pagination__item">3</div>
+    <div class="pagination__item">4</div>
+</div>
+```
+</Playground>

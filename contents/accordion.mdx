@@ -1,0 +1,291 @@
+---
+category: Display
+created: '2019-12-04'
+description: Create an accordion with CSS flexbox
+keywords: css accordion, css flexbox
+thumbnail: /assets/css-layout/thumbnails/accordion.png
+title: Accordion
+---
+
+## HTML
+
+```html
+<!-- Container -->
+<div class="accordion">
+    <!-- Collapsed item -->
+    <div class="accordion__item accordion__item--collapsed">
+        <!-- Heading -->
+        <div class="accordion__header">
+            <!-- The toggle icon -->
+            <div class="accordion__toggle">...</div>
+
+            <!-- The title -->
+            <div class="accordion__title">...</div>
+        </div>
+
+        <!-- The content -->
+        <div class="accordion__content">...</div>
+    </div>
+
+    <!-- Expanded item -->
+    <div class="accordion__item accordion__item--expanded">...</div>
+
+    <!-- Repeat other item -->
+    ...
+</div>
+```
+
+## CSS
+
+```css
+.accordion {
+    /* Border */
+    border: 1px solid #d1d5db;
+    border-bottom-color: transparent;
+    border-radius: 4px;
+}
+
+.accordion__item {
+    border-bottom: 1px solid #d1d5db;
+}
+
+.accordion__header {
+    /* Center the content horizontally */
+    align-items: center;
+    display: flex;
+
+    cursor: pointer;
+    padding: 16px;
+}
+
+.accordion__toggle {
+    margin-right: 12px;
+}
+
+.accordion__title {
+    /* Take remaining width */
+    flex: 1;
+}
+
+.accordion__content {
+    border-top: 1px solid #d1d5db;
+    padding: 16px;
+}
+
+.accordion__item--collapsed .accordion__content {
+    display: none;
+}
+.accordion__item--expanded .accordion__content {
+    display: block;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+.rectangle {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    height: var(--rectangle-height);
+    width: var(--rectangle-width);
+}
+.rectangle--hor.rectangle--20 {
+    --rectangle-width: 20%;
+}
+.rectangle--hor.rectangle--40 {
+    --rectangle-width: 40%;
+}
+.rectangle--hor.rectangle--60 {
+    --rectangle-width: 60%;
+}
+.rectangle--hor.rectangle--80 {
+    --rectangle-width: 80%;
+}
+.rectangle--hor.rectangle--100 {
+    --rectangle-width: 100%;
+}
+.rectangle--hor.rectangle--sm {
+    --rectangle-height: 0.5rem;
+}
+.rectangle--hor.rectangle--md {
+    --rectangle-height: 2rem;
+}
+.rectangle--hor.rectangle--lg {
+    --rectangle-height: 4rem;
+}
+.rectangle--ver.rectangle--20 {
+    --rectangle-height: 20%;
+}
+.rectangle--ver.rectangle--40 {
+    --rectangle-height: 40%;
+}
+.rectangle--ver.rectangle--60 {
+    --rectangle-height: 60%;
+}
+.rectangle--ver.rectangle--80 {
+    --rectangle-height: 80%;
+}
+.rectangle--ver.rectangle--100 {
+    --rectangle-height: 100%;
+}
+.rectangle--ver.rectangle--sm {
+    --rectangle-width: 0.5rem;
+}
+.rectangle--ver.rectangle--md {
+    --rectangle-width: 2rem;
+}
+.rectangle--ver.rectangle--lg {
+    --rectangle-width: 4rem;
+}
+.triangle {
+    border-style: solid;
+    height: 0;
+    width: 0;
+}
+.triangle--t {
+    border-color: transparent transparent #d1d5db transparent;
+    border-width: 0 var(--triangle-size) var(--triangle-size) var(--triangle-size);
+}
+.triangle--r {
+    border-color: transparent transparent transparent #d1d5db;
+    border-width: var(--triangle-size) 0 var(--triangle-size) 1rem;
+}
+.triangle--b {
+    border-color: #d1d5db transparent transparent transparent;
+    border-width: var(--triangle-size) var(--triangle-size) 0 var(--triangle-size);
+}
+.triangle--l {
+    border-color: transparent #d1d5db transparent transparent;
+    border-width: var(--triangle-size) 1rem var(--triangle-size) 0;
+}
+.triangle--tr {
+    border-color: transparent #d1d5db transparent transparent;
+    border-width: 0 var(--triangle-size) var(--triangle-size) 0;
+}
+.triangle--br {
+    border-color: transparent transparent #d1d5db transparent;
+    border-width: 0 0 var(--triangle-size) var(--triangle-size);
+}
+.triangle--bl {
+    border-color: transparent transparent transparent #d1d5db;
+    border-width: var(--triangle-size) 0 0 var(--triangle-size);
+}
+.triangle--tl {
+    border-color: #d1d5db transparent transparent transparent;
+    border-width: var(--triangle-size) var(--triangle-size) 0 0;
+}
+.triangle--sm {
+    --triangle-size: 0.5rem;
+}
+.triangle--md {
+    --triangle-size: 2rem;
+}
+.triangle--lg {
+    --triangle-size: 4rem;
+}
+```
+
+```css styles.css hidden
+.accordion {
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+}
+.accordion__item:not(:last-child) {
+    border-bottom: 1px solid #d1d5db;
+}
+.accordion__header {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.accordion__toggle {
+    margin-right: 0.25rem;
+}
+.accordion__title {
+    flex: 1;
+}
+.accordion__content {
+    padding: 0.5rem;
+}
+
+.accordion__item--collapsed .accordion__content {
+    display: none;
+}
+.accordion__item--expanded .accordion__content {
+    display: block;
+}
+```
+
+```html index.html hidden
+<div class="accordion">
+    <div class="accordion__item accordion__item--collapsed">
+        <div class="accordion__header">
+            <div class="accordion__toggle">
+                <div class="triangle triangle--r triangle--sm"></div>
+            </div>
+            <div class="accordion__title">
+                <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion__item accordion__item--expanded">
+        <div class="accordion__header">
+            <div class="accordion__toggle">
+                <div class="triangle triangle--b triangle--sm"></div>
+            </div>
+            <div class="accordion__title">
+                <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+            </div>
+        </div>
+        <div class="accordion__content">
+            <div class="lines">
+                <div class="line line--80"></div>
+                <div class="line line--40"></div>
+                <div class="line line--100"></div>
+                <div class="line line--60"></div>
+                <div class="line line--20"></div>
+            </div>
+
+            <div class="lines">
+                <div class="line line--80"></div>
+                <div class="line line--40"></div>
+                <div class="line line--100"></div>
+                <div class="line line--60"></div>
+                <div class="line line--20"></div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+</Playground>

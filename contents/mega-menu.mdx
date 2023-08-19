@@ -1,0 +1,290 @@
+---
+category: Navigation
+created: '2019-12-29'
+description: Create a mega menu with CSS
+keywords: css mega menu
+thumbnail: /assets/css-layout/thumbnails/mega-menu.png
+title: Mega menu
+---
+
+## HTML
+
+```html
+<div class="mega-menu">
+    <!-- Item -->
+    <div class="mega-menu__item">...</div>
+
+    <!-- An item that triggers displaying the mega menu -->
+    <div class="mega-menu__item mega-menu__trigger">
+        <!-- The trigger item's content -->
+        <div>...</div>
+
+        <!-- Mega menu -->
+        <div class="mega-menu__content">...</div>
+    </div>
+
+    <!-- Item -->
+    <div class="mega-menu__item">...</div>
+</div>
+```
+
+## CSS
+
+```css
+.mega-menu {
+    /* Used to position the mega menu */
+    position: relative;
+}
+
+.mega-menu__trigger:hover .mega-menu__content {
+    /* Show the mega menu when hovering the trigger item */
+    display: block;
+}
+
+.mega-menu__content {
+    /* Border */
+    border: 1px solid #d1d5db;
+    margin-top: -1px;
+
+    /* Hidden by default */
+    display: none;
+
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 100%;
+
+    /* Take full width */
+    width: 100%;
+
+    /* Displayed on top of other elements */
+    background: #fff;
+    z-index: 9999;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+.rectangle {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    height: var(--rectangle-height);
+    width: var(--rectangle-width);
+}
+.rectangle--hor.rectangle--20 {
+    --rectangle-width: 20%;
+}
+.rectangle--hor.rectangle--40 {
+    --rectangle-width: 40%;
+}
+.rectangle--hor.rectangle--60 {
+    --rectangle-width: 60%;
+}
+.rectangle--hor.rectangle--80 {
+    --rectangle-width: 80%;
+}
+.rectangle--hor.rectangle--100 {
+    --rectangle-width: 100%;
+}
+.rectangle--hor.rectangle--sm {
+    --rectangle-height: 0.5rem;
+}
+.rectangle--hor.rectangle--md {
+    --rectangle-height: 2rem;
+}
+.rectangle--hor.rectangle--lg {
+    --rectangle-height: 4rem;
+}
+.rectangle--ver.rectangle--20 {
+    --rectangle-height: 20%;
+}
+.rectangle--ver.rectangle--40 {
+    --rectangle-height: 40%;
+}
+.rectangle--ver.rectangle--60 {
+    --rectangle-height: 60%;
+}
+.rectangle--ver.rectangle--80 {
+    --rectangle-height: 80%;
+}
+.rectangle--ver.rectangle--100 {
+    --rectangle-height: 100%;
+}
+.rectangle--ver.rectangle--sm {
+    --rectangle-width: 0.5rem;
+}
+.rectangle--ver.rectangle--md {
+    --rectangle-width: 2rem;
+}
+.rectangle--ver.rectangle--lg {
+    --rectangle-width: 4rem;
+}
+.triangle {
+    border-style: solid;
+    height: 0;
+    width: 0;
+}
+.triangle--t {
+    border-color: transparent transparent #d1d5db transparent;
+    border-width: 0 var(--triangle-size) var(--triangle-size) var(--triangle-size);
+}
+.triangle--r {
+    border-color: transparent transparent transparent #d1d5db;
+    border-width: var(--triangle-size) 0 var(--triangle-size) 1rem;
+}
+.triangle--b {
+    border-color: #d1d5db transparent transparent transparent;
+    border-width: var(--triangle-size) var(--triangle-size) 0 var(--triangle-size);
+}
+.triangle--l {
+    border-color: transparent #d1d5db transparent transparent;
+    border-width: var(--triangle-size) 1rem var(--triangle-size) 0;
+}
+.triangle--tr {
+    border-color: transparent #d1d5db transparent transparent;
+    border-width: 0 var(--triangle-size) var(--triangle-size) 0;
+}
+.triangle--br {
+    border-color: transparent transparent #d1d5db transparent;
+    border-width: 0 0 var(--triangle-size) var(--triangle-size);
+}
+.triangle--bl {
+    border-color: transparent transparent transparent #d1d5db;
+    border-width: var(--triangle-size) 0 0 var(--triangle-size);
+}
+.triangle--tl {
+    border-color: #d1d5db transparent transparent transparent;
+    border-width: var(--triangle-size) var(--triangle-size) 0 0;
+}
+.triangle--sm {
+    --triangle-size: 0.5rem;
+}
+.triangle--md {
+    --triangle-size: 2rem;
+}
+.triangle--lg {
+    --triangle-size: 4rem;
+}
+```
+
+```css styles.css hidden
+.mega-menu {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+
+    /* Demo */
+    width: 100%;
+}
+
+.mega-menu__item {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+    flex: 1;
+
+    padding: 0.25rem 0.5rem;
+}
+.mega-menu__item:not(:last-child) {
+    border-right: 1px solid #d1d5db;
+}
+
+.mega-menu__trigger {
+    cursor: pointer;
+
+    /* Demo */
+    height: 2rem;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.mega-menu__content {
+    /* Border */
+    border: 1px solid #d1d5db;
+    /* margin-top: -1px; */
+
+    /* Hidden by default */
+    display: none;
+
+    /* Position it right below the trigger element */
+    left: 0;
+    padding-top: 0.25rem;
+    position: absolute;
+    top: 100%;
+
+    /* Take full width */
+    width: 100%;
+
+    /* It should be on the top of other elements */
+    background-color: #fff;
+    z-index: 9999;
+}
+
+/* Show the mega menu when hovering the trigger item */
+.mega-menu__trigger:hover .mega-menu__content {
+    display: block;
+}
+```
+
+```html index.html hidden
+<div class="mega-menu">
+    <div class="mega-menu__item">
+        <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+    </div>
+    <div class="mega-menu__item mega-menu__trigger">
+        <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+        <div class="triangle triangle--b triangle--sm"></div>
+        <div class="mega-menu__content">
+            <div class="mega-menu__body">
+                <div class="lines">
+                    <div class="line line--80"></div>
+                    <div class="line line--40"></div>
+                    <div class="line line--100"></div>
+                    <div class="line line--60"></div>
+                    <div class="line line--20"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mega-menu__item">
+        <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+    </div>
+</div>
+```
+</Playground>
