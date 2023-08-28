@@ -1,0 +1,105 @@
+---
+category: Navigation
+created: '2019-11-17'
+description: Create previous and next buttons with CSS flexbox
+keywords: css flexbox, css pagination
+thumbnail: /assets/css-layout/thumbnails/previous-next-buttons.png
+title: Previous next buttons
+---
+
+## HTML
+
+```html
+<div class="previous-next-buttons">
+    <!-- Previous link sticks to the left -->
+    <div class="previous-next-buttons__nav">
+        <a class="previous-next-buttons__button previous-next-buttons__button--l"></a>
+    </div>
+
+    <!-- Next link sticks to the right -->
+    <div class="previous-next-buttons__nav">
+        <a class="previous-next-buttons__button previous-next-buttons__button--r"></a>
+    </div>
+</div>
+```
+
+## CSS
+
+```css
+.previous-next-buttons {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+```
+
+You can use the [arrow buttons](https://phuoc.ng/collection/css-layout/arrow-buttons) to create the previous and next buttons.
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.previous-next-buttons {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    /* Demo */
+    width: 16rem;
+}
+
+.previous-next-buttons__nav {
+    position: relative;
+
+    /* Demo */
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    height: 2rem;
+    width: 3rem;
+}
+
+.previous-next-buttons__button {
+    /* Transparent background */
+    background-color: transparent;
+
+    /* Size */
+    height: 0.5rem;
+    width: 0.5rem;
+}
+
+.previous-next-buttons__button--r {
+    /* Edges */
+    border-right: 1px solid #d1d5db;
+    border-top: 1px solid #d1d5db;
+    transform: translateX(-25%) rotate(45deg);
+}
+
+.previous-next-buttons__button--l {
+    /* Edges */
+    border-bottom: 1px solid #d1d5db;
+    border-left: 1px solid #d1d5db;
+    transform: translateX(25%) rotate(45deg);
+}
+```
+
+```html index.html hidden
+<div class="previous-next-buttons">
+    <div class="previous-next-buttons__nav">
+        <div class="previous-next-buttons__button previous-next-buttons__button--l"></div>
+    </div>
+    <div class="previous-next-buttons__nav">
+        <div class="previous-next-buttons__button previous-next-buttons__button--r"></div>
+    </div>
+</div>
+```
+</Playground>

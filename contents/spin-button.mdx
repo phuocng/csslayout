@@ -1,0 +1,175 @@
+---
+category: Input
+created: '2019-11-25'
+description: Create a spin button with CSS flexbox
+keywords: css flexbox, css spin button
+thumbnail: /assets/css-layout/thumbnails/spin-button.png
+title: Spin button
+---
+
+## HTML
+
+```html
+<div class="spin-button">
+    <!-- Input -->
+    <input type="text" class="spin-button__input" />
+
+    <!-- Buttons spin-button -->
+    <div class="spin-button__buttons">
+        <!-- Up button -->
+        <button class="spin-button__button">...</button>
+
+        <!-- Down button -->
+        <button class="spin-button__button">...</button>
+    </div>
+</div>
+```
+
+## CSS
+
+```css
+.spin-button {
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    display: flex;
+    overflow: hidden;
+}
+
+.spin-button__input {
+    border-color: transparent;
+    padding: 0.5rem;
+
+    /* Demo */
+    width: 8rem;
+}
+
+.spin-button__buttons {
+    /* Content is centered vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* Left border */
+    border-left: 1px solid #d1d5db;
+}
+
+.spin-button__button {
+    /* Reset */
+    background: #fff;
+    border-color: transparent;
+    cursor: pointer;
+
+    /* Make buttons have the same height */
+    flex: 1;
+}
+```
+
+You can use the [triangle buttons](https://phuoc.ng/collection/css-layout/triangle-buttons) to create the up and down buttons:
+
+<Playground>
+```css placeholders.css hidden
+.triangle {
+    border-style: solid;
+    height: 0;
+    width: 0;
+}
+.triangle--t {
+    border-color: transparent transparent #d1d5db transparent;
+    border-width: 0 var(--triangle-size) var(--triangle-size) var(--triangle-size);
+}
+.triangle--r {
+    border-color: transparent transparent transparent #d1d5db;
+    border-width: var(--triangle-size) 0 var(--triangle-size) 1rem;
+}
+.triangle--b {
+    border-color: #d1d5db transparent transparent transparent;
+    border-width: var(--triangle-size) var(--triangle-size) 0 var(--triangle-size);
+}
+.triangle--l {
+    border-color: transparent #d1d5db transparent transparent;
+    border-width: var(--triangle-size) 1rem var(--triangle-size) 0;
+}
+.triangle--tr {
+    border-color: transparent #d1d5db transparent transparent;
+    border-width: 0 var(--triangle-size) var(--triangle-size) 0;
+}
+.triangle--br {
+    border-color: transparent transparent #d1d5db transparent;
+    border-width: 0 0 var(--triangle-size) var(--triangle-size);
+}
+.triangle--bl {
+    border-color: transparent transparent transparent #d1d5db;
+    border-width: var(--triangle-size) 0 0 var(--triangle-size);
+}
+.triangle--tl {
+    border-color: #d1d5db transparent transparent transparent;
+    border-width: var(--triangle-size) var(--triangle-size) 0 0;
+}
+.triangle--sm {
+    --triangle-size: 0.5rem;
+}
+.triangle--md {
+    --triangle-size: 2rem;
+}
+.triangle--lg {
+    --triangle-size: 4rem;
+}
+```
+
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.spin-button {
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    display: flex;
+    overflow: hidden;
+}
+
+.spin-button__input {
+    border-color: transparent;
+    padding: 0.5rem;
+
+    /* Demo */
+    width: 8rem;
+}
+
+.spin-button__buttons {
+    /* Content is centered vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* Left border */
+    border-left: 1px solid #d1d5db;
+}
+
+.spin-button__button {
+    /* Reset */
+    background: #fff;
+    border-color: transparent;
+    cursor: pointer;
+
+    /* Make buttons have the same height */
+    flex: 1;
+}
+```
+
+```html index.html hidden
+<div class="spin-button">
+    <input type="text" class="spin-button__input" />
+    <div class="spin-button__buttons">
+        <button class="spin-button__button">
+            <div class="triangle triangle--t triangle--sm">
+        </button>
+        <button class="spin-button__button">
+            <div class="triangle triangle--b triangle--sm">
+        </button>
+    </div>
+</div>
+```
+</Playground>

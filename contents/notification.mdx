@@ -1,0 +1,211 @@
+---
+category: Feedback
+created: '2019-11-17'
+description: Create a notification with CSS flexbox
+keywords: css alert, css flexbox, css notification
+thumbnail: /assets/css-layout/thumbnails/notification.png
+title: Notification
+---
+
+## HTML
+
+```html
+<div class="notification">
+    <!-- Content -->
+    <div class="notification__body">...</div>
+
+    <!-- Close button -->
+    <button class="notification__close">
+        <div class="notification__close-line notification__close-line--first"></div>
+        <div class="notification__close-line notification__close-line--second"></div>
+    </button>
+</div>
+```
+
+## CSS
+
+```css
+.notification {
+    display: flex;
+}
+.notification__body {
+    flex: 1;
+    margin-right: 0.5rem;
+}
+```
+
+The [close button](https://phuoc.ng/collection/css-layout/close-button) represents the button for closing the notification.
+
+```css
+.notification__close {
+    /* Reset */
+    background-color: transparent;
+    border-color: transparent;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Size */
+    height: 1rem;
+    width: 1rem;
+
+    /* Used to position the inner */
+    position: relative;
+}
+
+.notification__close-line {
+    /* Background color */
+    background-color: #d1d5db;
+
+    /* Position */
+    position: absolute;
+
+    /* Size */
+    height: 1px;
+    width: 100%;
+}
+
+.notification__close-line--first {
+    /* Position */
+    left: 0px;
+    top: 50%;
+    transform: translate(0%, -50%) rotate(45deg);
+
+    /* Size */
+    height: 1px;
+    width: 100%;
+}
+
+.notification__close-line--second {
+    /* Position */
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%, 0%) rotate(45deg);
+
+    /* Size */
+    height: 100%;
+    width: 1px;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+```
+
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.notification {
+    display: flex;
+
+    /* Demo */
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    width: 16rem;
+}
+.notification__body {
+    flex: 1;
+    margin-right: 0.5rem;
+}
+
+.notification__close {
+    /* Reset */
+    background-color: transparent;
+    border-color: transparent;
+
+    /* Cursor */
+    cursor: pointer;
+
+    /* Size */
+    height: 1rem;
+    width: 1rem;
+
+    /* Used to position the inner */
+    position: relative;
+}
+
+.notification__close-line {
+    /* Background color */
+    background-color: #d1d5db;
+
+    /* Position */
+    position: absolute;
+
+    /* Size */
+    height: 1px;
+    width: 100%;
+}
+
+.notification__close-line--first {
+    /* Position */
+    left: 0px;
+    top: 50%;
+    transform: translate(0%, -50%) rotate(45deg);
+
+    /* Size */
+    height: 1px;
+    width: 100%;
+}
+
+.notification__close-line--second {
+    /* Position */
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%, 0%) rotate(45deg);
+
+    /* Size */
+    height: 100%;
+    width: 1px;
+}
+```
+
+```html index.html hidden
+<div class="notification">
+    <div class="notification__body">
+        <div class="lines">
+            <div class="line line--80"></div>
+            <div class="line line--40"></div>
+            <div class="line line--100"></div>
+            <div class="line line--60"></div>
+            <div class="line line--20"></div>
+        </div>
+    </div>
+    <button class="notification__close">
+        <div class="notification__close-line notification__close-line--first"></div>
+        <div class="notification__close-line notification__close-line--second"></div>
+    </button>
+</div>
+```
+</Playground>

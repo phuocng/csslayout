@@ -1,0 +1,156 @@
+---
+category: Navigation
+created: '2019-11-22'
+description: Create a split navigation with CSS flexbox
+keywords: css flexbox, css menu, css navigation, css split navigation
+thumbnail: /assets/css-layout/thumbnails/split-navigation.png
+title: Split navigation
+---
+
+## HTML
+
+```html
+<ul class="split-navigation">
+    <!-- Navigation item -->
+    <li class="split-navigation__item">
+        <a href="">...</a>
+    </li>
+
+    <!-- Navigation item that sticks to the right -->
+    <li class="split-navigation__item split-navigation__item--right">
+        <a href="">...</a>
+    </li>
+</ul>
+```
+
+## CSS
+
+```css
+.split-navigation {
+    /* Content is centered horizontally */
+    align-items: center;
+    display: flex;
+
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0.5rem 0;
+}
+
+.split-navigation__item {
+    margin-right: 0.25rem;
+
+    /* Demo */
+    width: 1.25rem;
+}
+
+.split-navigation__item--right {
+    /* Sticks to the right */
+    margin-left: auto;
+    margin-right: 0;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.rectangle {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    height: var(--rectangle-height);
+    width: var(--rectangle-width);
+}
+.rectangle--hor.rectangle--20 {
+    --rectangle-width: 20%;
+}
+.rectangle--hor.rectangle--40 {
+    --rectangle-width: 40%;
+}
+.rectangle--hor.rectangle--60 {
+    --rectangle-width: 60%;
+}
+.rectangle--hor.rectangle--80 {
+    --rectangle-width: 80%;
+}
+.rectangle--hor.rectangle--100 {
+    --rectangle-width: 100%;
+}
+.rectangle--hor.rectangle--sm {
+    --rectangle-height: 0.5rem;
+}
+.rectangle--hor.rectangle--md {
+    --rectangle-height: 2rem;
+}
+.rectangle--hor.rectangle--lg {
+    --rectangle-height: 4rem;
+}
+.rectangle--ver.rectangle--20 {
+    --rectangle-height: 20%;
+}
+.rectangle--ver.rectangle--40 {
+    --rectangle-height: 40%;
+}
+.rectangle--ver.rectangle--60 {
+    --rectangle-height: 60%;
+}
+.rectangle--ver.rectangle--80 {
+    --rectangle-height: 80%;
+}
+.rectangle--ver.rectangle--100 {
+    --rectangle-height: 100%;
+}
+.rectangle--ver.rectangle--sm {
+    --rectangle-width: 0.5rem;
+}
+.rectangle--ver.rectangle--md {
+    --rectangle-width: 2rem;
+}
+.rectangle--ver.rectangle--lg {
+    --rectangle-width: 4rem;
+}
+```
+
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.split-navigation {
+    /* Content is centered horizontally */
+    align-items: center;
+    display: flex;
+
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0.5rem 0;
+
+    /* Demo */
+    border-bottom: 1px solid #d1d5db;
+    width: 16rem;
+}
+
+.split-navigation__item {
+    margin-right: 0.25rem;
+
+    /* Demo */
+    width: 1.25rem;
+}
+
+.split-navigation__item--right {
+    /* Sticks to the right */
+    margin-left: auto;
+    margin-right: 0;
+}
+```
+
+```html index.html hidden
+<ul class="split-navigation">
+    <li class="split-navigation__item"><div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div></li>
+    <li class="split-navigation__item"><div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div></li>
+    <li class="split-navigation__item"><div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div></li>
+    <li class="split-navigation__item split-navigation__item--right"><div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div></li>
+</ul>
+```
+</Playground>

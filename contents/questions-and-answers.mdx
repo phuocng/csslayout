@@ -1,0 +1,284 @@
+---
+category: Display
+created: '2019-11-23'
+description: Create a questions and answers section with CSS flexbox
+keywords: css accordion, css faq, css flexbox
+thumbnail: /assets/css-layout/thumbnails/questions-and-answers.png
+title: Questions and answers
+---
+
+## HTML
+
+```html
+<!-- Collapsed question and answer item -->
+<div class="questions-and-answers__item questions-and-answers__item--collapsed">
+    <!-- Heading -->
+    <div class="questions-and-answers__header">
+        <!-- Question -->
+        <div class="questions-and-answers__title">...</div>
+
+        <!-- The toggle icon sticks to the right -->
+        <div class="questions-and-answers__toggle"></div>
+    </div>
+
+    <!-- Answer -->
+    <div class="questions-and-answers__content">...</div>
+</div>
+
+<!-- Expanded question and answer item -->
+<div class="questions-and-answers__item questions-and-answers__item--expanded">...</div>
+```
+
+## CSS
+
+```css
+.questions-and-answers__item:not(:last-child) {
+    border-bottom: 1px solid #d1d5db;
+}
+.questions-and-answers__header {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.questions-and-answers__toggle {
+    margin-right: 0.25rem;
+}
+.questions-and-answers__title {
+    /* Take the available width */
+    flex: 1;
+}
+.questions-and-answers__content {
+    padding: 0 0.5rem;
+}
+
+.questions-and-answers__item--collapsed .questions-and-answers__content {
+    display: none;
+}
+.questions-and-answers__item--expanded .questions-and-answers__content {
+    display: block;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+.rectangle {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    height: var(--rectangle-height);
+    width: var(--rectangle-width);
+}
+.rectangle--hor.rectangle--20 {
+    --rectangle-width: 20%;
+}
+.rectangle--hor.rectangle--40 {
+    --rectangle-width: 40%;
+}
+.rectangle--hor.rectangle--60 {
+    --rectangle-width: 60%;
+}
+.rectangle--hor.rectangle--80 {
+    --rectangle-width: 80%;
+}
+.rectangle--hor.rectangle--100 {
+    --rectangle-width: 100%;
+}
+.rectangle--hor.rectangle--sm {
+    --rectangle-height: 0.5rem;
+}
+.rectangle--hor.rectangle--md {
+    --rectangle-height: 2rem;
+}
+.rectangle--hor.rectangle--lg {
+    --rectangle-height: 4rem;
+}
+.rectangle--ver.rectangle--20 {
+    --rectangle-height: 20%;
+}
+.rectangle--ver.rectangle--40 {
+    --rectangle-height: 40%;
+}
+.rectangle--ver.rectangle--60 {
+    --rectangle-height: 60%;
+}
+.rectangle--ver.rectangle--80 {
+    --rectangle-height: 80%;
+}
+.rectangle--ver.rectangle--100 {
+    --rectangle-height: 100%;
+}
+.rectangle--ver.rectangle--sm {
+    --rectangle-width: 0.5rem;
+}
+.rectangle--ver.rectangle--md {
+    --rectangle-width: 2rem;
+}
+.rectangle--ver.rectangle--lg {
+    --rectangle-width: 4rem;
+}
+.triangle {
+    border-style: solid;
+    height: 0;
+    width: 0;
+}
+.triangle--t {
+    border-color: transparent transparent #d1d5db transparent;
+    border-width: 0 var(--triangle-size) var(--triangle-size) var(--triangle-size);
+}
+.triangle--r {
+    border-color: transparent transparent transparent #d1d5db;
+    border-width: var(--triangle-size) 0 var(--triangle-size) 1rem;
+}
+.triangle--b {
+    border-color: #d1d5db transparent transparent transparent;
+    border-width: var(--triangle-size) var(--triangle-size) 0 var(--triangle-size);
+}
+.triangle--l {
+    border-color: transparent #d1d5db transparent transparent;
+    border-width: var(--triangle-size) 1rem var(--triangle-size) 0;
+}
+.triangle--tr {
+    border-color: transparent #d1d5db transparent transparent;
+    border-width: 0 var(--triangle-size) var(--triangle-size) 0;
+}
+.triangle--br {
+    border-color: transparent transparent #d1d5db transparent;
+    border-width: 0 0 var(--triangle-size) var(--triangle-size);
+}
+.triangle--bl {
+    border-color: transparent transparent transparent #d1d5db;
+    border-width: var(--triangle-size) 0 0 var(--triangle-size);
+}
+.triangle--tl {
+    border-color: #d1d5db transparent transparent transparent;
+    border-width: var(--triangle-size) var(--triangle-size) 0 0;
+}
+.triangle--sm {
+    --triangle-size: 0.5rem;
+}
+.triangle--md {
+    --triangle-size: 2rem;
+}
+.triangle--lg {
+    --triangle-size: 4rem;
+}
+```
+
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.questions-and-answers {
+    width: 16rem;
+}
+.questions-and-answers__item:not(:last-child) {
+    border-bottom: 1px solid #d1d5db;
+}
+.questions-and-answers__header {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.questions-and-answers__toggle {
+    margin-right: 0.25rem;
+}
+.questions-and-answers__title {
+    flex: 1;
+}
+.questions-and-answers__content {
+    padding: 0 0.5rem;
+}
+
+.questions-and-answers__item--collapsed .questions-and-answers__content {
+    display: none;
+}
+.questions-and-answers__item--expanded .questions-and-answers__content {
+    display: block;
+}
+```
+
+```html index.html hidden
+<div class="questions-and-answers">
+    <div class="questions-and-answers__item questions-and-answers__item--collapsed">
+        <div class="questions-and-answers__header">
+            <div class="questions-and-answers__title">
+                <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+            </div>
+            <div class="questions-and-answers__toggle">
+                <div class="triangle triangle--r triangle--sm"></div>
+            </div>
+        </div>
+    </div>
+    <div class="questions-and-answers__item questions-and-answers__item--expanded">
+        <div class="questions-and-answers__header">
+            <div class="questions-and-answers__title">
+                <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+            </div>
+            <div class="questions-and-answers__toggle">
+                <div class="triangle triangle--b triangle--sm"></div>
+            </div>
+        </div>
+        <div class="questions-and-answers__content">
+            <div class="lines">
+                <div class="line line--20"></div>
+                <div class="line line--80"></div>
+                <div class="line line--40"></div>
+                <div class="line line--60"></div>
+                <div class="line line--20"></div>
+            </div>
+
+            <div class="lines">
+                <div class="line line--20"></div>
+                <div class="line line--80"></div>
+                <div class="line line--40"></div>
+                <div class="line line--60"></div>
+                <div class="line line--20"></div>
+            </div>
+        </div>
+    </div>
+    <div class="questions-and-answers__item questions-and-answers__item--collapsed">
+        <div class="questions-and-answers__header">
+            <div class="questions-and-answers__title">
+                <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+            </div>
+            <div class="questions-and-answers__toggle">
+                <div class="triangle triangle--r triangle--sm"></div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+</Playground>

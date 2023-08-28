@@ -1,0 +1,308 @@
+---
+category: Display
+created: '2019-12-12'
+description: Create a timeline with CSS flexbox
+keywords: css flexbox, css timeline
+thumbnail: /assets/css-layout/thumbnails/timeline.png
+title: Timeline
+---
+
+## HTML
+
+```html
+<div class="timeline">
+    <!-- Left vertical line -->
+    <div class="timeline__line"></div>
+
+    <!-- The timeline items timeline -->
+    <div class="timeline__items">
+        <!-- Each timeline item -->
+        <div class="timeline__item">
+            <!-- The circle and title -->
+            <div class="timeline__top">
+                <!-- The circle -->
+                <div class="timeline__circle"></div>
+
+                <!-- The title -->
+                <div class="timeline__title">...</div>
+            </div>
+
+            <!-- The description -->
+            <div class="timeline__desc">...</div>
+        </div>
+
+        <!-- Repeat other items -->
+        ...
+    </div>
+</div>
+```
+
+## CSS
+
+```css
+.timeline {
+    /* Used to position the left vertical line */
+    position: relative;
+}
+
+.timeline__line {
+    /* Border */
+    border-right: 2px solid #d1d5db;
+
+    /* Positioned at the left */
+    left: 0.75rem;
+    position: absolute;
+    top: 0px;
+
+    /* Take full height */
+    height: 100%;
+}
+
+.timeline__items {
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.timeline__item {
+    margin-bottom: 8px;
+}
+
+.timeline__top {
+    /* Center the content horizontally */
+    align-items: center;
+    display: flex;
+}
+
+.timeline__circle {
+    /* Rounded border */
+    background-color: #d1d5db;
+    border-radius: 9999px;
+
+    /* Size */
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.timeline__title {
+    /* Take available width */
+    flex: 1;
+    margin-left: 0.5rem;
+}
+
+.timeline__desc {
+    /* Make it align with the title */
+    margin-left: 2rem;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.lines {
+    padding: 0.25rem 0;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.line {
+    background: #d1d5db;
+    height: 1px;
+    margin-bottom: 0.25rem;
+}
+.line.line--20 {
+    width: 20%;
+}
+.line.line--40 {
+    width: 40%;
+}
+.line.line--60 {
+    width: 60%;
+}
+.line.line--80 {
+    width: 80%;
+}
+.line.line--100 {
+    width: 100%;
+}
+.rectangle {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    height: var(--rectangle-height);
+    width: var(--rectangle-width);
+}
+.rectangle--hor.rectangle--20 {
+    --rectangle-width: 20%;
+}
+.rectangle--hor.rectangle--40 {
+    --rectangle-width: 40%;
+}
+.rectangle--hor.rectangle--60 {
+    --rectangle-width: 60%;
+}
+.rectangle--hor.rectangle--80 {
+    --rectangle-width: 80%;
+}
+.rectangle--hor.rectangle--100 {
+    --rectangle-width: 100%;
+}
+.rectangle--hor.rectangle--sm {
+    --rectangle-height: 0.5rem;
+}
+.rectangle--hor.rectangle--md {
+    --rectangle-height: 2rem;
+}
+.rectangle--hor.rectangle--lg {
+    --rectangle-height: 4rem;
+}
+.rectangle--ver.rectangle--20 {
+    --rectangle-height: 20%;
+}
+.rectangle--ver.rectangle--40 {
+    --rectangle-height: 40%;
+}
+.rectangle--ver.rectangle--60 {
+    --rectangle-height: 60%;
+}
+.rectangle--ver.rectangle--80 {
+    --rectangle-height: 80%;
+}
+.rectangle--ver.rectangle--100 {
+    --rectangle-height: 100%;
+}
+.rectangle--ver.rectangle--sm {
+    --rectangle-width: 0.5rem;
+}
+.rectangle--ver.rectangle--md {
+    --rectangle-width: 2rem;
+}
+.rectangle--ver.rectangle--lg {
+    --rectangle-width: 4rem;
+}
+```
+
+```css styles.css hidden
+.timeline {
+    /* Used to position the left vertical line */
+    position: relative;
+
+    /* Demo */
+    height: 100%;
+    width: 100%;
+}
+
+.timeline__line {
+    /* Border */
+    border-right: 2px solid #d1d5db;
+
+    /* Positioned at the left */
+    left: 0.75rem;
+    position: absolute;
+    top: 0px;
+
+    /* Take full height */
+    height: 100%;
+}
+
+.timeline__items {
+    /* Reset styles */
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.timeline__item {
+    margin-bottom: 8px;
+}
+
+.timeline__top {
+    /* Center the content horizontally */
+    align-items: center;
+    display: flex;
+}
+
+.timeline__circle {
+    /* Rounded border */
+    background-color: #d1d5db;
+    border-radius: 9999px;
+
+    /* Size */
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.timeline__title {
+    /* Take available width */
+    flex: 1;
+    margin-left: 0.5rem;
+}
+
+.timeline__desc {
+    /* Make it align with the title */
+    margin-left: 2rem;
+}
+```
+
+```html index.html hidden
+<div class="timeline">
+    <div class="timeline__line"></div>
+    <div class="timeline__items">
+        <div class="timeline__item">
+            <div class="timeline__top">
+                <div class="timeline__circle"></div>
+                <div class="timeline__title">
+                    <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+                </div>
+            </div>
+            <div class="timeline__desc">
+                <div class="lines">
+                    <div class="line line--80"></div>
+                    <div class="line line--40"></div>
+                    <div class="line line--100"></div>
+                    <div class="line line--60"></div>
+                    <div class="line line--20"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__top">
+                <div class="timeline__circle"></div>
+                <div class="timeline__title">
+                    <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+                </div>
+            </div>
+            <div class="timeline__desc">
+                <div class="lines">
+                    <div class="line line--80"></div>
+                    <div class="line line--40"></div>
+                    <div class="line line--100"></div>
+                    <div class="line line--60"></div>
+                    <div class="line line--20"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline__item">
+            <div class="timeline__top">
+                <div class="timeline__circle"></div>
+                <div class="timeline__title">
+                    <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+                </div>
+            </div>
+            <div class="timeline__desc">
+                <div class="lines">
+                    <div class="line line--80"></div>
+                    <div class="line line--40"></div>
+                    <div class="line line--100"></div>
+                    <div class="line line--60"></div>
+                    <div class="line line--20"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+</Playground>

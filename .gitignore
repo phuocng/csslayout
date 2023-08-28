@@ -1,4 +1,1 @@
-.netlify
-dist
-node_modules
-tslint.log
+.DS_Store

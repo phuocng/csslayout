@@ -1,0 +1,123 @@
+---
+category: Navigation
+created: '2019-11-22'
+description: Create tabs with CSS flexbox
+keywords: css flexbox, css navigation, css tab
+thumbnail: /assets/css-layout/thumbnails/tab.png
+title: Tab
+---
+
+## HTML
+
+```html
+<div class="tab">
+    <!-- Active tab -->
+    <div class="tab__item tab__item--active">...</div>
+
+    <!-- Inactive tab -->
+    <div class="tab__item tab__item--inactive">...</div>
+</div>
+```
+
+## CSS
+
+```css
+.tab {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.tab__item {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+}
+
+.tab__item--active {
+    /* Border */
+    border: 1px solid #d1d5db;
+    /* Hide the bottom border */
+    border-bottom-color: transparent;
+
+    /* Border radius */
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.tab__item--inactive {
+    /* Has only the bottom border */
+    border-bottom: 1px solid #d1d5db;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.circle {
+    background: #d1d5db;
+    border-radius: 9999px;
+    height: var(--circle-size);
+    width: var(--circle-size);
+}
+.circle--sm {
+    --circle-size: 0.5rem;
+}
+.circle--md {
+    --circle-size: 1.5rem;
+}
+.circle--lg {
+    --circle-size: 4rem;
+}
+```
+
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.tab {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.tab__item {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+}
+
+.tab__item--active {
+    /* Border */
+    border: 1px solid #d1d5db;
+    /* Hide the bottom border */
+    border-bottom-color: transparent;
+
+    /* Border radius */
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.tab__item--inactive {
+    /* Has only the bottom border */
+    border-bottom: 1px solid #d1d5db;
+}
+```
+
+```html index.html hidden
+<div class="tab">
+    <div class="tab__item tab__item--active">
+        <div class="circle circle--sm"></div>
+    </div>
+    <div class="tab__item tab__item--inactive">
+        <div class="circle circle--sm"></div>
+    </div>
+    <div class="tab__item tab__item--inactive">
+        <div class="circle circle--sm"></div>
+    </div>
+</div>
+```
+</Playground>

@@ -1,0 +1,87 @@
+---
+category: Display
+created: '2019-12-25'
+description: Create a diagonal section with CSS
+keywords: css diagonal section, css transform skew
+thumbnail: /assets/css-layout/thumbnails/diagonal-section.png
+title: Diagonal section
+---
+
+## HTML
+
+```html
+<div class="diagonal-section">
+    <!-- The diagonal area -->
+    <div class="diagonal-section__diagonal"></div>
+
+    <!-- Content -->
+    ...
+</div>
+```
+
+## CSS
+
+```css
+.diagonal-section {
+    /* Used to position the diagonal area */
+    position: relative;
+}
+
+.diagonal-section__diagonal {
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Create diagonal sides */
+    transform: skewY(-5deg);
+
+    /* Background color */
+    background-color: #d1d5db;
+
+    /* Displayed under the main content */
+    z-index: -1;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    height: 24rem;
+}
+.diagonal-section {
+    /* Used to position the diagonal area */
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+}
+
+.diagonal-section__diagonal {
+    /* Absolute position */
+    left: 0px;
+    position: absolute;
+    top: 50%;
+
+    /* Take full size */
+    height: 2rem;
+    width: 100%;
+
+    /* Create diagonal sides */
+    transform: translate(0, -50%) skewY(-15deg);
+
+    /* Background color */
+    background-color: #d1d5db;
+}
+```
+
+```html index.html hidden
+<div class="diagonal-section">
+    <div class="diagonal-section__diagonal"></div>
+</div>
+```
+</Playground>

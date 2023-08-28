@@ -1,0 +1,63 @@
+---
+category: Display
+created: '2019-11-16'
+description: Create a badge component with CSS flexbox
+keywords: css badge, css flexbox
+thumbnail: /assets/css-layout/thumbnails/badge.png
+title: Badge
+---
+
+## HTML
+
+```html
+<div class="badge">...</div>
+```
+
+## CSS
+
+```css
+.badge {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Colors */
+    background-color: #d1d5db;
+    color: #fff;
+
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 3rem;
+    width: 3rem;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.badge {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Colors */
+    background-color: #d1d5db;
+    color: #fff;
+
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 3rem;
+    width: 3rem;
+}
+```
+
+```html index.html hidden
+<div class="badge">9+</div>
+```
+</Playground>

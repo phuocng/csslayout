@@ -1,0 +1,67 @@
+---
+category: Display
+created: '2019-11-29'
+description: Create a drop cap with CSS
+keywords: css drop cap, css :first-letter
+thumbnail: /assets/css-layout/thumbnails/drop-cap.png
+title: Drop cap
+---
+
+## HTML
+
+```html
+<div class="drop-cap">...</div>
+```
+
+## CSS
+
+```css
+.drop-cap:first-letter {
+    /* Display at the left */
+    float: left;
+    line-height: 1;
+
+    /* Spacing */
+    margin: 0 0.5rem 0 0;
+    padding: 0 0.5rem;
+
+    /* Optional */
+    border: 2px solid #d1d5db;
+    font-size: 2rem;
+    font-weight: 700;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.drop-cap {
+    overflow: hidden;
+}
+.drop-cap:first-letter {
+    border: 2px solid #d1d5db;
+
+    /* Display at the left */
+    float: left;
+    line-height: 1;
+
+    /* Spacing */
+    margin: 0 0.5rem 0 0;
+    padding: 0 0.5rem;
+
+    /* Optional */
+    font-size: 2rem;
+    font-weight: 700;
+}
+```
+
+```html index.html hidden
+<div class="drop-cap">
+    CSS is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.
+</div>
+```
+</Playground>

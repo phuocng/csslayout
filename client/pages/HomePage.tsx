@@ -1,260 +1,114 @@
 /**
  * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
- * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ * (c) 2019 - 2021 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
  */
 
-import React from 'react';
+import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
-import './home.css';
+import './homePage.css';
 
-import Ad from '../components/Ad';
 import CoverCard from '../components/CoverCard';
 import Pattern from '../constants/Pattern';
-import useDocumentTitle from '../hooks/useDocumentTitle';
+import chunk from '../helpers/chunk';
 import Layout from '../layouts/Layout';
-import MadeOf from './MadeOf';
+
+const NUM_SLIDES = 3;
 
 const HomePage = () => {
-    useDocumentTitle('CSS Layout');
     const numPatterns = Object.keys(Pattern).length;
+
+    const numPatternsPerSlide = Math.floor(numPatterns / NUM_SLIDES);
+    const groups = chunk(Object.entries(Pattern).map(([_, v]) => v).slice(0, NUM_SLIDES * numPatternsPerSlide), numPatternsPerSlide);
 
     return (
         <Layout>
             <Helmet>
+                <title>CSS Layout</title>
+                <meta name="title" content="CSS Layout" />
                 <meta name="description" content="CSS layouts and patterns" />
                 <meta name="keywords" content="css display, css flexbox, css grid, css layouts, flex, flexbox, flexbox cheatsheet, web design, web template" />
+                
+                <meta property="og:description" content="A collection of popular layouts and patterns made with CSS" />
+                <meta property="og:image" content="https://csslayout.io/assets/screenshot.png" />                
+                <meta property="og:title" content="CSS Layout ∙ A collection of popular layouts and patterns made with CSS" />
+                <meta property="og:url" content="https://csslayout.io" />
+                
+                <meta property="twitter:description" content="A collection of popular layouts and patterns made with CSS" />
+                <meta property="twitter:image" content="https://csslayout.io/assets/screenshot.png" />                
+                <meta property="twitter:title" content="CSS Layout ∙ A collection of popular layouts and patterns made with CSS" />
+                <meta property="twitter:url" content="https://csslayout.io" />
             </Helmet>
-            <div
-                className='xl:border-t xl:border-l xl:border-r xl:border-gray-400'
-                style={{
-                    marginTop: '64px',
-                }}
-            >
-                <div style={{ position: 'relative' }}>
-                    <h1
-                        className='text-3xl md:text-4xl lg:text-5xl'
-                        style={{
-                            backgroundColor: '#00449E',
-                            borderRadius: '4px',
-                            color: '#FFF',
-                            left: '50%',
-                            lineHeight: 1.5,
-                            margin: 0,
-                            padding: '0 16px',
-                            position: 'absolute',
-                            top: 0,
-                            transform: 'translate(-50%, -50%)',
-                        }}
-                    >
-                        CSS Layout
-                    </h1>
+            <div className="hero">
+                <div className="container">
+                    <div className="hero__logo"><img src="/assets/logo.png" height="256" width="256" alt="CSS Layout" /></div>
+                    <h1 className="home__heading">CSS Layout</h1>
+                    <h2 className="hero__subheading">Popular Layouts & patterns made with CSS</h2>
+                </div>
+            </div>
 
-                    <h2
-                        style={{
-                            fontSize: '24px',
-                            fontWeight: 300,
-                            lineHeight: 1.5,
-                            margin: 0,
-                            padding: '64px 0px 32px 0',
-                            textAlign: 'center',
-                        }}
-                    >
-                        a collection of popular layouts and patterns made with CSS
-                    </h2>
-
-                    <div className='md:flex' style={{ lineHeight: 1.5 }}>
-                        <div style={{ flex: 1 }} className="drop-cap p-5">
-                            <div style={{ marginBottom: '16px' }}>
-                                Components, patterns and layouts are things you have to deal with everyday.
-                            </div>
-                            <div>There are a lot of CSS frameworks that provide rich set of layouts and patterns,
-                            but I usually don't want to include all of them in my project.</div>
+            <div className="container">
+                <div className="home__features">
+                    <div className="home__feature">
+                        <div className="home__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 48 48" width="48" height="48"><g transform="matrix(2,0,0,2,0,0)"><path d="M0.500 12.000 A11.500 11.500 0 1 0 23.500 12.000 A11.500 11.500 0 1 0 0.500 12.000 Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M4.5,14.5v-4a1,1,0,0,1,1-1h1" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M4.5 12.5L6 12.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M8.5 14.5L8.5 9.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M8.5,9.5h.75a1.25,1.25,0,0,1,0,2.5H8.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M10.5 14.5L9 12" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M14.5,14.5h-1a1,1,0,0,1-1-1v-3a1,1,0,0,1,1-1h1" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M12.5 12.5L14.5 12.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M18.5,14.5h-1a1,1,0,0,1-1-1v-3a1,1,0,0,1,1-1h1" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M16.5 12.5L18.5 12.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path></g></svg>
                         </div>
-                        <div style={{ flex: 1 }} className="drop-cap p-5">
-                            <div style={{ marginBottom: '16px' }}>
-                                So that I collect most popular layouts and patterns that can be built with pure CSS.
-                            </div>
-                            <div>They are powered by modern CSS features such as flexbox and CSS grid.</div>
-                        </div>
-                        <div style={{ flex: 1 }} className="drop-cap p-5">
-                            <div style={{ marginBottom: '16px' }}>
-                                Starting with the most basic part, you can customize easily for each specific need.
-                            </div>
-                            <div>By composing them, you can have any possible layout that exists in the real life.</div>
+                        <div className="home__title">
+                            Zero Dependencies
                         </div>
                     </div>
-
-                    <Ad />
-
-                    <div
-                        className="hljs"
-                        style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            fontSize: '16px',
-                            justifyContent: 'center',
-                            lineHeight: 1.5,
-                        }}
-                    >
-                        <ul style={{ listStyleType: 'none', margin: 0, padding: 0, width: '300px' }}>
-                            <li><span className="hljs-selector-class">.awesome</span> &#123;</li>
-                            <ul style={{ listStyleType: 'none', margin: 0, padding: '0 32px' }}>
-                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
-                                    <div className="hljs-attribute">zero-dependencies:</div>
-                                    <div>🎉;</div>
-                                </li>
-                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
-                                    <div className="hljs-attribute">no-frameworks:</div>
-                                    <div>🎉;</div>
-                                </li>
-                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
-                                    <div className="hljs-attribute">no-css-hacks:</div>
-                                    <div>🎉;</div>
-                                </li>
-                                <li style={{ alignItems: 'center', display: 'flex', justifyContent: 'space-between' }}>
-                                    <div className="hljs-attribute">real-use-cases:</div>
-                                    <div>🎉;</div>
-                                </li>
-                                <li style={{ alignItems: 'center', display: 'flex' }}>
-                                    <div className="hljs-attribute">good-practices:</div>
-                                    <div
-                                        style={{
-                                            backgroundColor: '#00449E',
-                                            borderRadius: '9999px',
-                                            color: '#FFF',
-                                            fontSize: '14px',
-                                            marginLeft: 'auto',
-                                            padding: '0 8px',
-                                        }}
-                                    >
-                                        soon
-                                    </div>
-                                    ;
-                                </li>
-                                <li style={{ alignItems: 'center', display: 'flex' }}>
-                                    <div className="hljs-attribute">accessibility:</div>
-                                    <div
-                                        style={{
-                                            backgroundColor: '#00449E',
-                                            borderRadius: '9999px',
-                                            color: '#FFF',
-                                            fontSize: '14px',
-                                            marginLeft: 'auto',
-                                            padding: '0 8px',
-                                        }}
-                                    >
-                                        soon
-                                    </div>
-                                    ;
-                                </li>
-                            </ul>
-                            <li>&#125;</li>
-                        </ul>
+                    <div className="home__feature">
+                        <div className="home__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 48 48" width="48" height="48"><g transform="matrix(2,0,0,2,0,0)"><path d="M0.500 2.500 L23.500 2.500 L23.500 21.500 L0.500 21.500 Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M0.5 7.5L23.5 7.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M4,4.75A.25.25,0,1,1,3.75,5,.25.25,0,0,1,4,4.75" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M7,4.75A.25.25,0,1,1,6.75,5,.25.25,0,0,1,7,4.75" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M10,4.75A.25.25,0,1,1,9.75,5,.25.25,0,0,1,10,4.75" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M8.5,11.5a2,2,0,0,0-2,2v1a2,2,0,0,0,2,2" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M12.5,11.5h-1a1,1,0,0,0-1,1c0,1.5,2,1.5,2,3a1,1,0,0,1-1,1h-1" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M16.5,11.5h-1a1,1,0,0,0-1,1c0,1.5,2,1.5,2,3a1,1,0,0,1-1,1h-1" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path></g></svg>
+                        </div>
+                        <div className="home__title">No Frameworks</div>
+                    </div>
+                    <div className="home__feature">
+                        <div className="home__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 48 48" width="48" height="48"><g transform="matrix(2,0,0,2,0,0)"><path d="M13.514 23.5L10.514 23.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M14.514 21.5L9.514 21.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M12.014 0.5L12.014 3.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3.528 4.015L5.65 6.136" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M20.499 4.015L18.378 6.136" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M0.514 12.5L3.514 12.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M23.514 12.5L20.514 12.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M18.014,12.5a6,6,0,1,0-9.429,4.917,1,1,0,0,1,.429.821V19a.5.5,0,0,0,.5.5h5a.5.5,0,0,0,.5-.5v-.763a1,1,0,0,1,.429-.821A5.98,5.98,0,0,0,18.014,12.5Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path></g></svg>
+                        </div>
+                        <div className="home__title">
+                            No CSS Hacks
+                        </div>
+                    </div>
+                    <div className="home__feature">
+                        <div className="home__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 48 48" width="48" height="48"><g transform="matrix(2,0,0,2,0,0)"><path d="M9.000 9.500 A3 1.5 0 1 0 15.000 9.500 A3 1.5 0 1 0 9.000 9.500 Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M9.000 3.500 A3 1.5 0 1 0 15.000 3.500 A3 1.5 0 1 0 9.000 3.500 Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M16.000 6.500 A3 1.5 0 1 0 22.000 6.500 A3 1.5 0 1 0 16.000 6.500 Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M2.500 6.500 A3 1.5 0 1 0 8.500 6.500 A3 1.5 0 1 0 2.500 6.500 Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M9.737 4.484L7.582 5.421" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M16.694 5.541L14.261 4.483" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3.074,7.381,1.1,8.239a1,1,0,0,0-.6.917v6.7a1,1,0,0,0,.586.91L11.1,21.32a1,1,0,0,0,.8.013l10.983-4.577a1,1,0,0,0,.615-.923V9.156a1,1,0,0,0-.6-.917L21.2,7.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M11.5 13.5L11.5 21.408" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M23.315 8.577L11.5 13.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M11.5 13.5L0.681 8.582" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path></g></svg>
+                        </div>
+                        <div className="home__title">Real Use Cases</div>
+                    </div>
+                    <div className="home__feature">
+                        <div className="home__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 48 48" width="48" height="48"><g transform="matrix(2,0,0,2,0,0)"><path d="M20,15.659h0a1.5,1.5,0,1,1,0,3H19a1.5,1.5,0,0,1,1.5,1.5c0,.829-.672,1-1.5,1H12.5c-2.851,0-3.5-.5-7-1v-8.5c2.45,0,6.5-4.5,6.5-8.5,0-1.581,2.189-2.17,3,.719.5,1.781-1,5.281-1,5.281h8a1.5,1.5,0,0,1,1.5,1.5c0,.829-.672,2-1.5,2H21a1.5,1.5,0,0,1,0,3H20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M0.5 10.159H5.5V22.159H0.5z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3.25 19.659L3.25 19.659" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M3.25,19.659a.25.25,0,1,0,.25.25.25.25,0,0,0-.25-.25" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path></g></svg>
+                        </div>
+                        <div className="home__title">Good Practices <div className="home__soon">soon</div></div>
+                    </div>
+                    <div className="home__feature">
+                        <div className="home__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 48 48" width="48" height="48"><g transform="matrix(2,0,0,2,0,0)"><path d="M7,6,8.362,16.44a1,1,0,0,0,1.184.853C11.644,16.882,16.233,16,17,16c1,0,1.5,5.5,2,5.5a11.343,11.343,0,0,0,2-.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M7.389,12.557A5.645,5.645,0,0,0,3,18a5.487,5.487,0,0,0,5.4,5.5A5.66,5.66,0,0,0,14,18V16.451" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M9.456,3.227A2.728,2.728,0,1,1,6.728.5,2.728,2.728,0,0,1,9.456,3.227Z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M7.389 12.557L13.5 11" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path></g></svg>
+                        </div>
+                        <div className="home__title">Accessibility Support <div className="home__soon">soon</div></div>
                     </div>
                 </div>
 
-                <section style={{ height: '1000px', overflow: 'hidden', position: 'relative' }}>
-                    <div
-                        style={{
-                            alignItems: 'center',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            height: '100%',
-                            justifyContent: 'center',
-                            left: 0,
-                            position: 'absolute',
-                            top: 0,
-                            width: '100%',
-                            zIndex: 9999,
-                        }}
-                    >
-                        <div
-                            className='text-5xl lg:text-6xl'
-                            style={{
-                                fontWeight: 600,
-                                marginBottom: '16px',
-                            }}
-                        >
-                            {numPatterns} patterns
-                        </div>
-                        <Link
-                            to="/patterns"
-                            className='text-2xl'
-                            style={{
-                                backgroundColor: '#00449e',
-                                borderRadius: '4px',
-                                color: '#FFF',
-                                padding: '12px 16px',
-                                textDecoration: 'none',
-                            }}
-                        >
-                                Explore the collection
-                        </Link>
+                <section className="home__patterns">
+                    <div className="home__overlay">
+                        <div className="home__heading">{numPatterns} patterns</div>
+                        <Link to="/patterns" className="home__explore">Explore the collection</Link>
                     </div>
-                    <div
-                        className="home-cards"
-                        style={{
-                            display: 'flex',
-                            flexWrap: 'wrap',
-                            justifyContent: 'center',
-                            opacity: '0.4',
-                            padding: '32px 16px',
-                        }}
-                    >
-                        <CoverCard pattern={Pattern.HolyGrail} />
-                        <CoverCard pattern={Pattern.Sidebar} />
-                        <CoverCard pattern={Pattern.SplitScreen} />
-                        <CoverCard pattern={Pattern.StickyFooter} />
-                        <CoverCard pattern={Pattern.StickyHeader} />
-                        <CoverCard pattern={Pattern.AvatarList} />
-                        <CoverCard pattern={Pattern.Badge} />
-                        <CoverCard pattern={Pattern.Breadcrumb} />
-                        <CoverCard pattern={Pattern.ButtonWithIcon} />
-                        <CoverCard pattern={Pattern.Card} />
-                        <CoverCard pattern={Pattern.Centering} />
-                        <CoverCard pattern={Pattern.CircularNavigation} />
-                        <CoverCard pattern={Pattern.DockedAtCorner} />
-                        <CoverCard pattern={Pattern.DotLeader} />
-                        <CoverCard pattern={Pattern.DotNavigation} />
-                        <CoverCard pattern={Pattern.DropArea} />
-                        <CoverCard pattern={Pattern.DropCap} />
-                        <CoverCard pattern={Pattern.Dropdown} />
-                        <CoverCard pattern={Pattern.FeatureList} />
-                        <CoverCard pattern={Pattern.FixedAtCorner} />
-                        <CoverCard pattern={Pattern.FloatingLabel} />
-                        <CoverCard pattern={Pattern.InputAddon} />
-                        <CoverCard pattern={Pattern.MediaObject} />
-                        <CoverCard pattern={Pattern.Menu} />
-                        <CoverCard pattern={Pattern.Modal} />
-                        <CoverCard pattern={Pattern.Notification} />
-                        <CoverCard pattern={Pattern.Pagination} />
-                        <CoverCard pattern={Pattern.PresenceIndicator} />
-                        <CoverCard pattern={Pattern.PreviousNextButtons} />
-                        <CoverCard pattern={Pattern.PricingTable} />
-                        <CoverCard pattern={Pattern.PropertyList} />
-                        <CoverCard pattern={Pattern.ProgressBar} />
-                        <CoverCard pattern={Pattern.QuestionsAndAnswers} />
-                        <CoverCard pattern={Pattern.RadioSwitch} />
-                        <CoverCard pattern={Pattern.Rating} />
-                        <CoverCard pattern={Pattern.SameHeightColumns} />
-                        <CoverCard pattern={Pattern.SearchBox} />
-                        <CoverCard pattern={Pattern.Separator} />
-                        <CoverCard pattern={Pattern.SimpleGrid} />
-                        <CoverCard pattern={Pattern.Slider} />
-                        <CoverCard pattern={Pattern.SpinButton} />
-                        <CoverCard pattern={Pattern.SplitNavigation} />
-                        <CoverCard pattern={Pattern.StepperInput} />
-                        <CoverCard pattern={Pattern.Switch} />
-                        <CoverCard pattern={Pattern.Tab} />
-                        <CoverCard pattern={Pattern.TogglePasswordVisibility} />
-                        <CoverCard pattern={Pattern.UploadButton} />
-                        <CoverCard pattern={Pattern.Wizard} />
+                    <div className="home__sliders">
+                    {
+                        groups.map((patterns, index) => (
+                            <div className="home__slide" key={index}>
+                            {
+                                patterns.map(pattern => <CoverCard key={pattern} pattern={pattern} />)
+                            }
+                            </div>
+                        ))
+                    }
                     </div>
                 </section>
-
-                <MadeOf />
             </div>
         </Layout>
     );

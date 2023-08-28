@@ -1,0 +1,87 @@
+---
+category: Navigation
+created: '2019-11-17'
+description: Create a breadcrumb with CSS flexbox
+keywords: css breadcrumb, css flexbox
+thumbnail: /assets/css-layout/thumbnails/breadcrumb.png
+title: Breadcrumb
+---
+
+## HTML
+
+```html
+<div class="breadcrumb">
+    <!-- Breadcrumb item -->
+    <div class="breadcrumb__item">...</div>
+
+    <!-- Repeat other items -->
+    ...
+</div>
+```
+
+## CSS
+
+```css
+.breadcrumb {
+    /* Content is centered vertically */
+    align-items: center;
+    display: flex;
+}
+
+.breadcrumb__item {
+    margin: 0 0.5rem;
+
+    /* Used to position the separator between items */
+    position: relative;
+}
+
+.breadcrumb__item:not(:last-child)::after {
+    /* Absolute position */
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(0.5rem, 0px);
+
+    content: '/';
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.breadcrumb {
+    /* Content is centered vertically */
+    align-items: center;
+    display: flex;
+}
+
+.breadcrumb__item {
+    margin: 0 0.5rem;
+    position: relative;
+}
+
+.breadcrumb__item:not(:last-child)::after {
+    /* Absolute position */
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(0.5rem, 0px);
+
+    content: '/';
+}
+```
+
+```html index.html hidden
+<div class="breadcrumb">
+    <div class="breadcrumb__item">A</div>
+    <div class="breadcrumb__item">B</div>
+    <div class="breadcrumb__item">C</div>
+    <div class="breadcrumb__item">D</div>
+</div>
+```
+</Playground>

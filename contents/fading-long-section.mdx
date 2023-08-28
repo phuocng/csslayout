@@ -1,0 +1,179 @@
+---
+category: Display
+created: '2020-01-10'
+description: Fading long section to indicate there is more content
+keywords: css fading overflow, css linear gradient
+thumbnail: /assets/css-layout/thumbnails/fading-long-section.png
+title: Fading long section
+---
+
+The pattern is often used to indicate there is more content.
+
+## HTML
+
+```html
+<div class="fading-long-section">
+    <!-- Main content -->
+    <div class="fading-long-section__content">...</div>
+
+    <!-- The faded element -->
+    <div class="fading-long-section__fading"></div>
+</div>
+```
+
+## CSS
+
+```css
+.fading-long-section {
+    /* Used to position the faded element */
+    position: relative;
+}
+
+.fading-long-section__content {
+    /* Height */
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.fading-long-section__fading {
+    /* Displayed at the bottom */
+    bottom: 0;
+    left: 0;
+    position: absolute;
+
+    /* Size */
+    height: 2rem;
+    width: 100%;
+
+    /* Gradient background */
+    background: linear-gradient(rgba(255, 255, 255, 0.01), #fff);
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.rectangle {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0;
+    height: var(--rectangle-height);
+    width: var(--rectangle-width);
+}
+.rectangle--hor.rectangle--20 {
+    --rectangle-width: 20%;
+}
+.rectangle--hor.rectangle--40 {
+    --rectangle-width: 40%;
+}
+.rectangle--hor.rectangle--60 {
+    --rectangle-width: 60%;
+}
+.rectangle--hor.rectangle--80 {
+    --rectangle-width: 80%;
+}
+.rectangle--hor.rectangle--100 {
+    --rectangle-width: 100%;
+}
+.rectangle--hor.rectangle--sm {
+    --rectangle-height: 0.5rem;
+}
+.rectangle--hor.rectangle--md {
+    --rectangle-height: 2rem;
+}
+.rectangle--hor.rectangle--lg {
+    --rectangle-height: 4rem;
+}
+.rectangle--ver.rectangle--20 {
+    --rectangle-height: 20%;
+}
+.rectangle--ver.rectangle--40 {
+    --rectangle-height: 40%;
+}
+.rectangle--ver.rectangle--60 {
+    --rectangle-height: 60%;
+}
+.rectangle--ver.rectangle--80 {
+    --rectangle-height: 80%;
+}
+.rectangle--ver.rectangle--100 {
+    --rectangle-height: 100%;
+}
+.rectangle--ver.rectangle--sm {
+    --rectangle-width: 0.5rem;
+}
+.rectangle--ver.rectangle--md {
+    --rectangle-width: 2rem;
+}
+.rectangle--ver.rectangle--lg {
+    --rectangle-width: 4rem;
+}
+```
+
+```css styles.css hidden
+.fading-long-section {
+    /* Used to position the faded element */
+    position: relative;
+
+    height: 24rem;
+}
+
+.fading-long-section__content {
+    /* Height */
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.fading-long-section__fading {
+    /* Displayed at the bottom */
+    bottom: 0;
+    left: 0;
+    position: absolute;
+
+    /* Size */
+    height: 2rem;
+    width: 100%;
+
+    /* Gradient background */
+    background: linear-gradient(rgba(255, 255, 255, 0.01), #fff);
+}
+```
+
+```html index.html hidden
+<div class="fading-long-section">
+    <div class="fading-long-section__content">
+        <div class="lines">
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--40"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--80"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--60"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--20"></div>
+
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--40"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--80"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--60"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--20"></div>
+
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--40"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--80"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--60"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--20"></div>
+
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--40"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--80"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--60"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--20"></div>
+
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--40"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--80"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--60"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--100"></div>
+            <div class="rectangle rectangle--hor rectangle--sm rectangle--20"></div>
+        </div>
+    </div>
+    <div class="fading-long-section__fading"></div>
+</div>
+```
+</Playground>

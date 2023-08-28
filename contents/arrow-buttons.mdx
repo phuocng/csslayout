@@ -1,0 +1,178 @@
+---
+category: Display
+created: '2020-01-21'
+description: Create arrow buttons with CSS
+keywords: css arrow buttons
+thumbnail: /assets/css-layout/thumbnails/arrow-buttons.png
+title: Arrow buttons
+updated: '2021-04-01'
+---
+
+## HTML
+
+```html
+<!-- Up arrow button -->
+<button class="arrow-buttons">
+    <!-- Arrow -->
+    <div class="arrow-button arrow-button--t"></div>
+
+    <!-- Content -->
+    ...
+</button>
+
+<!-- Right arrow button -->
+<button class="arrow-buttons">
+    <!-- Content -->
+    ...
+
+    <!-- Arrow -->
+    <div class="arrow-button arrow-button--r"></div>
+</button>
+
+<!-- Down arrow button -->
+<button class="arrow-buttons">
+    <!-- Arrow -->
+    <div class="arrow-button arrow-button--b"></div>
+
+    <!-- Content -->
+    ...
+</button>
+
+<!-- Left arrow button -->
+<button class="arrow-buttons">
+    <!-- Arrow -->
+    <div class="arrow-button arrow-button--l"></div>
+
+    <!-- Content -->
+    ...
+</button>
+```
+
+## CSS
+
+```css
+.arrow-button {
+    /* Transparent background */
+    background-color: transparent;
+
+    /* Size */
+    height: 12px;
+    width: 12px;
+}
+
+.arrow-button--t {
+    /* Edges */
+    border-left: 1px solid #d1d5db;
+    border-top: 1px solid #d1d5db;
+    transform: translateY(25%) rotate(45deg);
+}
+
+.arrow-button--r {
+    /* Edges */
+    border-right: 1px solid #d1d5db;
+    border-top: 1px solid #d1d5db;
+    transform: translateX(-25%) rotate(45deg);
+}
+
+.arrow-button--b {
+    /* Edges */
+    border-bottom: 1px solid #d1d5db;
+    border-right: 1px solid #d1d5db;
+    transform: translateY(-25%) rotate(45deg);
+}
+
+.arrow-button--l {
+    /* Edges */
+    border-bottom: 1px solid #d1d5db;
+    border-left: 1px solid #d1d5db;
+    transform: translateX(25%) rotate(45deg);
+}
+```
+
+<Playground>
+```css styles.css hidden
+.arrow-buttons {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.arrow-button {
+    /* Transparent background */
+    background-color: transparent;
+
+    /* Size */
+    height: 12px;
+    width: 12px;
+}
+
+.arrow-button--t {
+    /* Edges */
+    border-left: 1px solid #d1d5db;
+    border-top: 1px solid #d1d5db;
+    transform: translateY(25%) rotate(45deg);
+}
+
+.arrow-button--r {
+    /* Edges */
+    border-right: 1px solid #d1d5db;
+    border-top: 1px solid #d1d5db;
+    transform: translateX(-25%) rotate(45deg);
+}
+
+.arrow-button--b {
+    /* Edges */
+    border-bottom: 1px solid #d1d5db;
+    border-right: 1px solid #d1d5db;
+    transform: translateY(-25%) rotate(45deg);
+}
+
+.arrow-button--l {
+    /* Edges */
+    border-bottom: 1px solid #d1d5db;
+    border-left: 1px solid #d1d5db;
+    transform: translateX(25%) rotate(45deg);
+}
+
+/* Demo */
+.arrow-buttons__corner {
+    position: absolute;
+}
+.arrow-buttons__corner--t {
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0%);
+}
+.arrow-buttons__corner--r {
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.arrow-buttons__corner--b {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.arrow-buttons__corner--l {
+    left: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+```
+
+```html index.html hidden
+<div class="arrow-buttons">
+    <div class="arrow-buttons__corner arrow-buttons__corner--t">
+        <div class="arrow-button arrow-button--t"></div>
+    </div>
+    <div class="arrow-buttons__corner arrow-buttons__corner--r">
+        <div class="arrow-button arrow-button--r"></div>
+    </div>
+    <div class="arrow-buttons__corner arrow-buttons__corner--b">
+        <div class="arrow-button arrow-button--b"></div>
+    </div>
+    <div class="arrow-buttons__corner arrow-buttons__corner--l">
+        <div class="arrow-button arrow-button--l"></div>
+    </div>
+</div>
+```
+</Playground>

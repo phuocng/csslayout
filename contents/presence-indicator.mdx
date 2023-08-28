@@ -1,0 +1,86 @@
+---
+category: Feedback
+created: '2019-11-29'
+description: Create a presence indicator with CSS
+keywords: css indicator
+thumbnail: /assets/css-layout/thumbnails/presence-indicator.png
+title: Presence indicator
+---
+
+## HTML
+
+```html
+<div class="presence-indicator">
+    <!-- Other element such as avatar -->
+    ...
+
+    <!-- The presence indicator -->
+    <div class="presence-indicator__indicator"></div>
+</div>
+```
+
+## CSS
+
+```css
+.presence-indicator {
+    position: relative;
+}
+
+.presence-indicator__indicator {
+    /* Shown at the bottom right corner */
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    transform: translate(50%, 50%);
+
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 1rem;
+    width: 1rem;
+
+    /* Background color */
+    background-color: #22c55e;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.presence-indicator {
+    position: relative;
+
+    /* Demo */
+    background-color: #d1d5db;
+    border-radius: 9999px;
+    height: 6rem;
+    width: 6rem;
+}
+
+.presence-indicator__indicator {
+    /* Shown at the bottom right corner */
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    transform: translate(50%, 50%);
+
+    /* Rounded border */
+    border-radius: 9999px;
+    height: 1rem;
+    width: 1rem;
+
+    /* Background color */
+    background-color: #22c55e;
+}
+```
+
+```html index.html hidden
+<div class="presence-indicator">
+    <div class="presence-indicator__indicator"></div>
+</div>
+```
+</Playground>

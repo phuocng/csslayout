@@ -1,0 +1,172 @@
+---
+category: Display
+created: '2020-01-21'
+description: Create triangle buttons with CSS
+keywords: css triangle buttons
+thumbnail: /assets/css-layout/thumbnails/triangle-buttons.png
+title: Triangle buttons
+---
+
+## HTML
+
+```html
+<!-- Up triangle button -->
+<button class="triangle-buttons">
+    <!-- Triangle -->
+    <div class="triangle-buttons__triangle triangle-buttons__triangle--t"></div>
+
+    <!-- Content -->
+    ...
+</button>
+
+<!-- Right triangle button -->
+<button class="triangle-buttons">
+    <!-- Content -->
+    ...
+
+    <!-- Triangle -->
+    <div class="triangle-buttons__triangle triangle-buttons__triangle--r"></div>
+</button>
+
+<!-- Down triangle button -->
+<button class="triangle-buttons">
+    <!-- Triangle -->
+    <div class="triangle-buttons__triangle triangle-buttons__triangle--b"></div>
+
+    <!-- Content -->
+    ...
+</button>
+
+<!-- Left triangle button -->
+<button class="triangle-buttons">
+    <!-- Triangle -->
+    <div class="triangle-buttons__triangle triangle-buttons__triangle--l"></div>
+
+    <!-- Content -->
+    ...
+</button>
+```
+
+## CSS
+
+```css
+.triangle-buttons {
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Spacing */
+    padding: 0.5rem;
+}
+
+.triangle-buttons__triangle {
+    border-style: solid;
+
+    /* Size */
+    height: 0px;
+    width: 0px;
+}
+
+.triangle-buttons__triangle--t {
+    border-color: transparent transparent #d1d5db;
+    border-width: 0 0.5rem 0.5rem;
+}
+
+.triangle-buttons__triangle--r {
+    border-color: transparent transparent transparent #d1d5db;
+    border-width: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.triangle-buttons__triangle--b {
+    border-color: #d1d5db transparent transparent;
+    border-width: 0.5rem 0.5rem 0;
+}
+
+.triangle-buttons__triangle--l {
+    border-color: transparent #d1d5db transparent transparent;
+    border-width: 0.5rem 0.5rem 0.5rem 0;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    height: 24rem;
+}
+.triangle-buttons__triangle {
+    border-style: solid;
+
+    /* Size */
+    height: 0;
+    width: 0;
+}
+
+.triangle-buttons__triangle--t {
+    border-color: transparent transparent #d1d5db;
+    border-width: 0 0.5rem 0.5rem;
+}
+
+.triangle-buttons__triangle--r {
+    border-color: transparent transparent transparent #d1d5db;
+    border-width: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.triangle-buttons__triangle--b {
+    border-color: #d1d5db transparent transparent;
+    border-width: 0.5rem 0.5rem 0;
+}
+
+.triangle-buttons__triangle--l {
+    border-color: transparent #d1d5db transparent transparent;
+    border-width: 0.5rem 0.5rem 0.5rem 0;
+}
+
+/* Demo */
+.triangle-buttons {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.triangle-buttons__corner {
+    position: absolute;
+}
+.triangle-buttons__corner--t {
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0%);
+}
+.triangle-buttons__corner--r {
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.triangle-buttons__corner--b {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.triangle-buttons__corner--l {
+    left: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+```
+
+```html index.html hidden
+<div class="triangle-buttons">
+    <div class="triangle-buttons__corner triangle-buttons__corner--t">
+        <div class="triangle-buttons__triangle triangle-buttons__triangle--t"></div>
+    </div>
+    <div class="triangle-buttons__corner triangle-buttons__corner--r">
+        <div class="triangle-buttons__triangle triangle-buttons__triangle--r"></div>
+    </div>
+    <div class="triangle-buttons__corner triangle-buttons__corner--b">
+        <div class="triangle-buttons__triangle triangle-buttons__triangle--b"></div>
+    </div>
+    <div class="triangle-buttons__corner triangle-buttons__corner--l">
+        <div class="triangle-buttons__triangle triangle-buttons__triangle--l"></div>
+    </div>
+</div>
+```
+</Playground>

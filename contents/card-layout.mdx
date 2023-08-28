@@ -1,0 +1,144 @@
+---
+category: Layout
+created: '2019-12-25'
+description: Create a card layout with CSS flexbox
+keywords: css card layout, css flexbox, css layout
+thumbnail: /assets/css-layout/thumbnails/card-layout.png
+title: Card layout
+---
+
+## HTML
+
+```html
+<div class="card-layout">
+    <!-- A card with given width -->
+    <div class="card-layout__item">...</div>
+
+    <!-- Repeat other cards -->
+    ...
+</div>
+```
+
+## CSS
+
+```css
+.card-layout {
+    display: flex;
+
+    /* Put a card in the next row when previous cards take all width */
+    flex-wrap: wrap;
+
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+}
+
+.card-layout__item {
+    /* There will be 3 cards per row */
+    flex-basis: 33.33333%;
+
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.rectangle {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    height: var(--rectangle-height);
+    width: var(--rectangle-width);
+}
+.rectangle--hor.rectangle--20 {
+    --rectangle-width: 20%;
+}
+.rectangle--hor.rectangle--40 {
+    --rectangle-width: 40%;
+}
+.rectangle--hor.rectangle--60 {
+    --rectangle-width: 60%;
+}
+.rectangle--hor.rectangle--80 {
+    --rectangle-width: 80%;
+}
+.rectangle--hor.rectangle--100 {
+    --rectangle-width: 100%;
+}
+.rectangle--hor.rectangle--sm {
+    --rectangle-height: 0.5rem;
+}
+.rectangle--hor.rectangle--md {
+    --rectangle-height: 2rem;
+}
+.rectangle--hor.rectangle--lg {
+    --rectangle-height: 4rem;
+}
+.rectangle--ver.rectangle--20 {
+    --rectangle-height: 20%;
+}
+.rectangle--ver.rectangle--40 {
+    --rectangle-height: 40%;
+}
+.rectangle--ver.rectangle--60 {
+    --rectangle-height: 60%;
+}
+.rectangle--ver.rectangle--80 {
+    --rectangle-height: 80%;
+}
+.rectangle--ver.rectangle--100 {
+    --rectangle-height: 100%;
+}
+.rectangle--ver.rectangle--sm {
+    --rectangle-width: 0.5rem;
+}
+.rectangle--ver.rectangle--md {
+    --rectangle-width: 2rem;
+}
+.rectangle--ver.rectangle--lg {
+    --rectangle-width: 4rem;
+}
+```
+
+```css styles.css hidden
+body {
+    height: 24rem;
+}
+
+.card-layout {
+    display: flex;
+
+    /* Put a card in the next row when previous cards take all width */
+    flex-wrap: wrap;
+
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+}
+
+.card-layout__item {
+    /* There will be 3 cards per row */
+    flex-basis: 33.33333%;
+
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+
+    /* Demo */
+    margin: 0.25rem 0;
+}
+```
+
+```html index.html hidden
+<div class="card-layout">
+    <div class="card-layout__item"><div class="rectangle rectangle--hor rectangle--md rectangle--100"></div></div>
+    <div class="card-layout__item"><div class="rectangle rectangle--hor rectangle--md rectangle--100"></div></div>
+    <div class="card-layout__item"><div class="rectangle rectangle--hor rectangle--md rectangle--100"></div></div>
+
+    <div class="card-layout__item"><div class="rectangle rectangle--hor rectangle--md rectangle--100"></div></div>
+    <div class="card-layout__item"><div class="rectangle rectangle--hor rectangle--md rectangle--100"></div></div>
+    <div class="card-layout__item"><div class="rectangle rectangle--hor rectangle--md rectangle--100"></div></div>
+
+    <div class="card-layout__item"><div class="rectangle rectangle--hor rectangle--md rectangle--100"></div></div>
+    <div class="card-layout__item"><div class="rectangle rectangle--hor rectangle--md rectangle--100"></div></div>
+    <div class="card-layout__item"><div class="rectangle rectangle--hor rectangle--md rectangle--100"></div></div>
+</div>
+```
+</Playground>

@@ -1,0 +1,128 @@
+---
+category: Display
+created: '2019-12-21'
+description: Fix an element at the middle of side with CSS
+keywords: css fixed
+thumbnail: /assets/css-layout/thumbnails/fixed-at-side.png
+title: Fixed at side
+---
+
+## HTML
+
+```html
+<!-- Fixed at the middle of left side -->
+<div class="fixed-at-side fixed-at-side--l">...</div>
+
+<!-- Fixed at the middle of right side -->
+<div class="fixed-at-side fixed-at-side--r">...</div>
+```
+
+## CSS
+
+```css
+.fixed-at-side {
+    position: fixed;
+    top: 50%;
+    transform: translate(0px, -50%);
+}
+.fixed-at-side--l {
+    left: 0;
+}
+.fixed-at-side--r {
+    right: 0;
+}
+```
+
+<Playground>
+```css placeholders.css hidden
+.rectangle {
+    background: #d1d5db;
+    border-radius: 0.25rem;
+    height: var(--rectangle-height);
+    width: var(--rectangle-width);
+}
+.rectangle--hor.rectangle--20 {
+    --rectangle-width: 20%;
+}
+.rectangle--hor.rectangle--40 {
+    --rectangle-width: 40%;
+}
+.rectangle--hor.rectangle--60 {
+    --rectangle-width: 60%;
+}
+.rectangle--hor.rectangle--80 {
+    --rectangle-width: 80%;
+}
+.rectangle--hor.rectangle--100 {
+    --rectangle-width: 100%;
+}
+.rectangle--hor.rectangle--sm {
+    --rectangle-height: 0.5rem;
+}
+.rectangle--hor.rectangle--md {
+    --rectangle-height: 2rem;
+}
+.rectangle--hor.rectangle--lg {
+    --rectangle-height: 4rem;
+}
+.rectangle--ver.rectangle--20 {
+    --rectangle-height: 20%;
+}
+.rectangle--ver.rectangle--40 {
+    --rectangle-height: 40%;
+}
+.rectangle--ver.rectangle--60 {
+    --rectangle-height: 60%;
+}
+.rectangle--ver.rectangle--80 {
+    --rectangle-height: 80%;
+}
+.rectangle--ver.rectangle--100 {
+    --rectangle-height: 100%;
+}
+.rectangle--ver.rectangle--sm {
+    --rectangle-width: 0.5rem;
+}
+.rectangle--ver.rectangle--md {
+    --rectangle-width: 2rem;
+}
+.rectangle--ver.rectangle--lg {
+    --rectangle-width: 4rem;
+}
+```
+
+```css styles.css hidden
+body {
+    height: 24rem;
+}
+
+.fixed-at-side {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+
+    position: relative;
+}
+
+.fixed-at-side__side {
+    height: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0px, -50%);
+}
+.fixed-at-side__side--l {
+    left: 0;
+}
+.fixed-at-side__side--r {
+    right: 0;
+}
+```
+
+```html index.html hidden
+<div class="fixed-at-side">
+    <div class="fixed-at-side__side fixed-at-side__side--r"><div class="rectangle rectangle--ver rectangle--md rectangle--100"></div></div>
+    <div class="fixed-at-side__side fixed-at-side__side--l"><div class="rectangle rectangle--ver rectangle--md rectangle--100"></div></div>
+</div>
+```
+</Playground>

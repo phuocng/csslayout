@@ -1,0 +1,79 @@
+---
+category: Display
+created: '2019-11-23'
+description: Dock an element at corner with CSS
+keywords: css docked, css flexbox
+thumbnail: /assets/css-layout/thumbnails/docked-at-corner.png
+title: Docked at corner
+---
+
+## HTML
+
+```html
+<div class="docked-at-corner">
+    <!-- Docked at the top right corner -->
+    <div class="docked-at-corner__docker"></div>
+</div>
+```
+
+## CSS
+
+```css
+.docked-at-corner {
+    position: relative;
+}
+.docked-at-corner__docker {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+```
+
+<Playground>
+```css styles.css hidden
+body {
+    align-items: center;
+    display: flex;
+    height: 24rem;
+    justify-content: center;
+}
+
+.docked-at-corner {
+    position: relative;
+    height: 16rem;
+    width: 20rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+}
+.docked-at-corner__docker {
+    background-color: #22c55e;
+    border-radius: 9999px;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    /* Size */
+    height: 1rem;
+    width: 1rem;
+}
+```
+
+```html index.html hidden
+<div class="docked-at-corner">
+    <div class="docked-at-corner__docker"></div>
+</div>
+```
+</Playground>
