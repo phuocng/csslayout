@@ -1,0 +1,203 @@
+---
+category: Layout
+created: '2023-08-27'
+description: How to create a CSS grid without double borders
+keywords: css grid
+openGraphCover: /og/css-layout/grid-without-double-borders.png
+thumbnail: /assets/css-layout/thumbnails/grid-without-double-borders.png
+title: Grid without double borders
+---
+
+CSS grids are an amazing tool for creating complex web page layouts. However, working with default styling can be a bit tricky, especially when it comes to borders. In this post, we'll show you how to create a CSS grid without double borders.
+
+First, let's create the grid itself. To do this, we'll use the `display: grid` property.
+
+```css
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 4rem);
+}
+```
+
+In this example, we've made a 3x3 grid with three columns and three rows. Each row is 4rem tall, and each column takes up an equal fraction of the available space. This means that no matter what size screen you're using, the columns will be evenly spaced.
+
+Now that we've got the grid set up, we want to add borders to each cell. But here's the thing: CSS grids will automatically add double borders to adjacent cells. We'll be exploring some solutions to this issue in the next sections.
+
+## Collapsing the borders
+
+The grid looks a lot like a table, and as with tables, we face the same issue. But don't worry, there's a solution we can use: the `border-collapse` property. Let me show you an example.
+
+```css
+.grid {
+    border-collapse: collapse;
+}
+
+.grid__item {
+    border: 1px solid rgb(203 213 225);
+}
+```
+
+In this example, we've set the `border-collapse` property to `collapse`. This should collapse adjacent borders into a single border, and we've also added a 1 pixel border to each cell using the `.grid__item` class. However, the approach doesn't work as expected. Unfortunately, the borders are still duplicated visually, as you can see below.
+
+<Playground>
+```css demo.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 16rem;
+}
+```
+
+```css styles.css
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 4rem);
+    border-collapse: collapse;
+    width: 12rem;
+}
+.grid__item {
+    border: 1px solid rgb(203 213 225);
+}
+```
+
+```html index.html
+<div class="grid">
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+</div>
+```
+</Playground>
+
+## Pairing the borders
+
+There's an easier way to apply borders to your cells. Instead of setting the border for all four sides, we can apply it to just two. This approach is more natural and straightforward.
+
+```css
+:root {
+    --grid-border: 1px solid rgb(203 213 225);
+}
+.grid__item {
+    border-right: var(--grid-border);
+    border-bottom: var(--grid-border);
+}
+```
+
+The grid will fill in the missing borders at the top and left sides.
+
+```css
+.grid {
+    border-top: var(--grid-border);
+    border-left: var(--grid-border);
+}
+```
+
+And there you have it! Check it out, it works just as we expected!
+
+> Did you notice in the sample code above, how I created a CSS variable to define the border? By using the variable in different places, we can avoid duplicating code everywhere. This is what we call **Don't Repeat Yourself** or **DRY**, and it's always a great practice to follow.
+
+<Playground>
+```css demo.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 16rem;
+}
+```
+
+```css styles.css
+:root {
+    --grid-border: 1px solid rgb(203 213 225);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 4rem);
+    border-top: var(--grid-border);
+    border-left: var(--grid-border);
+    width: 12rem;
+}
+.grid__item {
+    border-right: var(--grid-border);
+    border-bottom: var(--grid-border);
+}
+```
+
+```html index.html
+<div class="grid">
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+</div>
+```
+</Playground>
+
+## Using the outline property
+
+Another solution for styling elements is to use the CSS `outline` property. The outline creates a visual effect similar to a border, but it doesn't take up space on the target element.
+
+```css
+.grid__item {
+    outline: 1px solid rgb(203 213 225);
+}
+```
+
+Although it's a step in the right direction, using the `outline` property alone doesn't completely solve the issue of double borders. We're still missing a small piece of the puzzle.
+
+But don't worry, because CSS grid has a trick up its sleeve. The `grid-gap` property is here to save the day! This handy property creates space between rows and columns in a CSS grid layout. By specifying the size of the gap between each row and column, we gain more control over the spacing of elements within the grid.
+
+```css
+.grid {
+    grid-gap: 1px;
+}
+```
+
+We can solve the issue by creating a grid with a 1px gap between each row and column, just like the outline. Here's a visual representation of how it works.
+
+<Playground>
+```css demo.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 16rem;
+}
+```
+
+```css styles.css
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 4rem);
+    grid-gap: 1px;
+    width: 12rem;
+}
+.grid__item {
+    outline: 1px solid rgb(203 213 225);
+}
+```
+
+```html index.html
+<div class="grid">
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+</div>
+```
+</Playground>
