@@ -1,0 +1,366 @@
+---
+category: Display
+created: '2023-08-27'
+description: How to center align one element and left align the other
+keywords: css flexbox, css grid
+openGraphCover: /og/css-layout/center-align-one-left-align-other.png
+thumbnail: /assets/css-layout/thumbnails/center-align-one-left-align-other.png
+title: Center align one and left align the other
+---
+
+Using a single row to display all elements is a common pattern in web design. These elements can be divided into different groups and arranged on the left, center, or right side of the row.
+
+You've probably seen this pattern before, like in a toolbar where the main actions are grouped and displayed at the center. Meanwhile, less important buttons are located on the left side, like a button to toggle the sidebar.
+
+Another example is the header of a web application, where the main title is displayed at the center, and a button to go back to the previous page is on the left side.
+
+In this post, we'll learn how to create this kind of layout. To keep it simple, let's assume that the layout consists of only two elements.
+
+```html
+<div class="container">
+    <div class="container__left"></div>
+    <div class="container__center"></div>
+</div>
+```
+
+## Using CSS flexbox
+
+Initially, our first idea might be to use flexbox to arrange the layout.
+
+```css
+.container {
+  display: flex;
+  justify-content: center;
+}
+```
+
+To align the first element to the left and center the remaining items, we can use the margin property. Here's an example:
+
+```css
+.container__left {
+    margin-right: auto;
+}
+.container__center {
+    margin-right: auto;
+}
+```
+
+Let's take a look at what it looks like:
+
+<Playground>
+```css demo.css hidden
+:root {
+    --placeholder-size: 1rem;
+}
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.circle {
+    background-color: rgb(203 213 225);
+    border-radius: 9999px;
+    height: var(--placeholder-size);
+    width: var(--placeholder-size);
+    margin-right: 0.125rem;
+}
+.square {
+    background-color: rgb(203 213 225);
+    border-radius: 0.25rem;
+    height: var(--placeholder-size);
+    width: var(--placeholder-size);
+    margin: 0 0.125rem;
+}
+.container {
+    border: 1px solid rgb(203 213 225);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    width: 16rem;
+}
+.container__left,
+.container__center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+```
+
+```css styles.css
+.container {
+    display: flex;
+}
+.container__left {
+    margin-right: auto;
+}
+.container__center {
+    margin-right: auto;
+}
+```
+
+```html index.html
+<div class="container">
+    <div class="container__left">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="container__center">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+</div>
+```
+</Playground>
+
+Unfortunately, our expectation doesn't match reality. The main element is centered only within the available space, not the entire container. Let's move on to the next section to find a solution to this issue.
+
+## Using CSS grid
+
+In addition to CSS flexbox, CSS offers another powerful tool for creating layouts: CSS grid. We can use this technique to solve the issue we talked about earlier.
+
+Let's say we now have three elements in our layout instead of two, and we need to add an empty element on the right-hand side.
+
+```css
+.container {
+    display: grid;
+    grid-template-columns: 1fr repeat(1, auto) 1fr;
+}
+```
+
+Let's dive into some CSS talk. The first CSS declaration is simple: it replaces the `flex` value with `grid`, which tells the browser to create a grid layout.
+
+Now, the second CSS declaration might seem confusing, but it's actually quite easy to understand. The `1fr` means that the first and last columns should take up an equal amount of space. The `repeat(1, auto)` declaration means that there should be one column with a width of `auto`.
+
+So, in simpler terms, this CSS declaration creates a layout with three columns. The first and last columns will have equal width, while the middle column will adjust its width to fit its content.
+
+Lastly, we want the main element to start at the second column. So, we can set the `grid-column-start` property to 2.
+
+```css
+.container__center {
+    grid-column-start: 2;
+}
+```
+
+Now, it's a breeze to move the first column to the left.
+
+```css
+.container__left {
+    margin-right: auto;
+}
+```
+
+Finally, let's check out the demonstration to see the progress we've made so far!
+
+<Playground>
+```css demo.css hidden
+:root {
+    --placeholder-size: 1rem;
+}
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.circle {
+    background-color: rgb(203 213 225);
+    border-radius: 9999px;
+    height: var(--placeholder-size);
+    width: var(--placeholder-size);
+    margin-right: 0.125rem;
+}
+.square {
+    background-color: rgb(203 213 225);
+    border-radius: 0.25rem;
+    height: var(--placeholder-size);
+    width: var(--placeholder-size);
+    margin: 0 0.125rem;
+}
+.container {
+    border: 1px solid rgb(203 213 225);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    width: 16rem;
+}
+.container__left,
+.container__center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+```
+
+```css styles.css
+.container {
+    display: grid;
+    grid-template-columns: 1fr repeat(1, auto) 1fr;
+}
+.container__left {
+    margin-right: auto;
+}
+.container__center {
+    grid-column-start: 2;
+}
+```
+
+```html index.html
+<div class="container">
+    <div class="container__left">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="container__center">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+</div>
+```
+</Playground>
+
+Replacing the non-existing third column with the real one is a piece of cake. All you need to do is push it to the right using a single CSS declaration.
+
+```css
+.container__right {
+    margin-left: auto;
+}
+```
+
+<Playground>
+```css demo.css hidden
+:root {
+    --placeholder-size: 1rem;
+}
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.circle {
+    background-color: rgb(203 213 225);
+    border-radius: 9999px;
+    height: var(--placeholder-size);
+    width: var(--placeholder-size);
+    margin-right: 0.125rem;
+}
+.square {
+    background-color: rgb(203 213 225);
+    border-radius: 0.25rem;
+    height: var(--placeholder-size);
+    width: var(--placeholder-size);
+    margin: 0 0.125rem;
+}
+.container {
+    border: 1px solid rgb(203 213 225);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    width: 16rem;
+}
+.container__left,
+.container__center,
+.container__right {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+```
+
+```css styles.css hidden
+.container {
+    display: grid;
+    grid-template-columns: 1fr repeat(1, auto) 1fr;
+}
+.container__left {
+    margin-right: auto;
+}
+.container__center {
+    grid-column-start: 2;
+}
+.container__right {
+    margin-left: auto;
+}
+```
+
+```html index.html hidden
+<div class="container">
+    <div class="container__left">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="container__center">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+    <div class="container__right">
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+</div>
+```
+</Playground>
+
+## Usages
+
+In addition to the sample usages mentioned earlier, I've been using this technique to create a layout that centers the main content of the page while aligning the sidebar to the right side of the screen.
+
+Here's an example of what the layout looks like:
+
+<Playground>
+```css demo.css hidden
+.container {
+    border: 1px solid rgb(203 213 225);
+    width: 100%;
+    height: 16rem;
+}
+.container__main {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    background: rgb(203 213 225);
+    width: 9rem;
+}
+.container__sidebar {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    background: rgb(226 232 240);
+    width: 4rem;
+}
+@media (min-width: 600px) {
+    .container__main {
+        width: 15rem;
+    }
+    .container__sidebar {
+        width: 8rem;
+    }
+}
+```
+
+```css styles.css
+.container {
+    display: grid;
+    grid-template-columns: 1fr repeat(1, auto) 1fr;
+}
+.container__main {
+    grid-column-start: 2;
+}
+.container__sidebar {
+    margin-left: auto;
+}
+```
+
+```html index.html
+<div class="container">
+    <div class="container__main">Main</div>
+    <div class="container__sidebar">Sidebar</div>
+</div>
+```
+</Playground>
