@@ -1,0 +1,134 @@
+---
+category: Display
+created: '2023-08-30'
+description: Create a grid lines background in CSS
+keywords: grid lines background, linear gradient, radial gradient
+openGraphCover: /og/css-layout/grid-lines-background.png
+thumbnail: /assets/css-layout/thumbnails/grid-lines-background.png
+title: Grid lines background
+---
+
+Adding a grid lines background in CSS is an awesome way to give your website some visual interest and structure. This post will show you two simple ways to achieve this.
+
+## Using background image
+
+To create a grid pattern using CSS, you can use the `background-image` property. Start by creating a square image with two lines – one horizontal and one vertical – that intersect at the center of the square.
+
+The image can be in either SVG or PNG format. Here's an example of a square image in SVG format:
+
+<Playground>
+```html index.html
+<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'>
+    <rect width='40' height='40' fill='#fff'></rect>
+    <rect x='50%' width='1' height='100%' fill='rgb(203 213 225)'></rect>
+    <rect y='50%' width='100%' height='1' fill='rgb(203 213 225)'></rect>
+</svg>
+```
+</Playground>
+
+The SVG consists of three rectangles. The first rectangle forms a white square with a size of 40 pixels. The second rectangle is 1 pixel wide and spans the full height to create a vertical line. The `x='50%'` attribute centers the line vertically.
+
+Likewise, the last rectangle is 1 pixel high and spans the full width to create a horizontal line. It's worth noting that the last two rectangles are filled with identical colors.
+
+Next, let's specify the `background-image` property for the element where you want the grid to show up. Simply use the `url()` function to link to your grid image file.
+
+```css
+.grid {
+    background-image: url('/path/to/grid.svg');
+}
+```
+
+If you want the browser to avoid sending additional request to load the background image, then you can embed it like this:
+
+```css
+.grid {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect width='40' height='40' fill='%23fff' /%3E%3Crect x='50%' width='1' height='100%' fill='rgb(203 213 225)' /%3E%3Crect y='50%' width='100%' height='1' fill='rgb(203 213 225)' /%3E%3C/svg%3E%0A");
+}
+```
+
+Voila! You now have a grid made up of horizontal and vertical lines that repeat seamlessly.
+
+<Playground>
+```css styles.css
+.grid {
+    height: 16rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Crect width='40' height='40' fill='%23fff' /%3E%3Crect x='50%' width='1' height='100%' fill='rgb(203 213 225)' /%3E%3Crect y='50%' width='100%' height='1' fill='rgb(203 213 225)' /%3E%3C/svg%3E%0A");
+}
+```
+
+```html index.html
+<div class="grid"></div>
+```
+</Playground>
+
+By default, an image will repeat both vertically and horizontally, with each repetition being the same size as the background, which is 40 pixels in this case.
+
+But what if you want to change the size of the repeated image? No problem! You can use the `background-size` property to customize the dimensions. For example, if you set it to 20 pixels, you'll create smaller squares instead. Here's the code you need to make it happen.
+
+```css
+.grid {
+    background-size: 20px;
+}
+```
+
+## Using linear gradients
+
+Another way to create grid lines in CSS is with the `linear-gradient()` function.
+
+To make a grid, first, select the element(s) you want to add a grid background to and set the `background-image` property. Then, use the `linear-gradient()` function to specify two colors that are similar or identical, separated by a transparent section of the same width as your desired line thickness.
+
+```css
+.grid {
+    background-image: linear-gradient(to right, gray 1px, transparent 1px);
+}
+```
+
+The code above creates gray vertical lines that are one pixel thick. You can adjust the line thickness by changing the value of `1px` in both parts of the gradient (i.e., `gray 2px`, `transparent 2px`, for two-pixel-thick lines).
+
+To make horizontal lines, change `to right` to `to bottom`. If you want both horizontal and vertical lines, simply combine both gradients.
+
+```css
+.grid {
+    background-image:
+        linear-gradient(to right, gray 1px, transparent 1px),
+        linear-gradient(to bottom, gray 1px, transparent 1px);
+}
+```
+
+Finally, don't forget to set the size of the squares using the `background-size` property.
+
+To adjust the color and spacing of lines, simply change the value of `gray` to any other valid CSS color value, as shown in the example below.
+
+<Playground>
+```css styles.css
+.grid {
+    height: 16rem;
+    background-image:
+        linear-gradient(to right, rgb(203 213 225) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(203 213 225) 1px, transparent 1px);
+    background-size: 2.5rem 2.5rem;
+    background-position: center center;
+```
+
+```html index.html
+<div class="grid"></div>
+```
+</Playground>
+
+## Grid dot background
+
+We can use a similar approach to create a grid with a dot background, but this time we'll use the `radial-gradient` function to make circles with a radius of 2 pixels. Don't hesitate to adjust the background color and radius to suit your needs.
+
+<Playground>
+```css styles.css
+.grid {
+    height: 16rem;
+    background-image: radial-gradient(circle, rgb(203 213 225) 2px, #fff 2px);
+    background-size: 2.5rem 2.5rem;
+    background-position: center center;
+```
+
+```html index.html
+<div class="grid"></div>
+```
+</Playground>
