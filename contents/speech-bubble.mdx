@@ -1,0 +1,178 @@
+---
+category: Display
+created: '2023-08-31'
+description: Create a speech bubble in CSS
+keywords: css speech bubble
+openGraphCover: /og/css-layout/speech-bubble.png
+thumbnail: /assets/css-layout/thumbnails/speech-bubble.png
+title: Speech bubble
+---
+
+Speech bubbles are a popular and effective way to show dialogue or thoughts in a visual way. You've probably seen them in comics, cartoons, ads, and social media posts. They add humor, emotion, and personality to a design while also giving context to the viewer. Plus, speech bubble layouts can make text-heavy designs more engaging by breaking them up.
+
+In this post, we'll learn how to make a speech bubble layout using CSS. Let's get started!
+
+## Markup
+
+You only need to provide one element to add the speed bubble effect.
+
+```html
+<div class="speech-bubble">
+    <!-- Content goes here -->
+</div>
+```
+
+## Adding a triangle
+
+To create a speech bubble, we can display a triangle at the bottom-left corner of the container. Rather than adding an external element to the container, we can create the triangle using the `::before` pseudo-element. Here's an example to help you visualize it:
+
+```css
+.speech-bubble {
+    position: relative;
+}
+.speech-bubble::before {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: -1rem;
+
+    border-width: 1rem;
+    border-style: solid;
+    border-color:
+        transparent transparent rgb(226 232 240) transparent;
+}
+```
+
+First, we set the `position` property of the container to `relative`. This allowed us to position the triangle using absolute positioning.
+
+But the real magic comes from the `::before` pseudo-element. We used the `content` property to add an empty string to this element. That may seem weird, but it's necessary because pseudo-elements require content to be displayed. To position the triangle where we wanted it, we used the `bottom` and `left` properties. By setting the `left` property to a negative value, we moved half of the triangle outside of the container.
+
+Finally, we created the triangle shape by setting the `border-color` property to transparent for the top, left, and right borders. This made the perfect triangle we were looking for.
+
+If you want to change the direction or position of the triangle, it's easy to do by following this [post](https://phuoc.ng/collection/css-layout/triangle-buttons).
+
+Let's take a moment to review the progress we've made with these steps.
+
+<Playground>
+```css demo.css hidden
+.playground__root {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 16rem;
+}
+```
+
+```css
+:root {
+    --speech-bubble-background: rgb(226 232 240);
+    --speech-bubble-arrow-size: 1rem;
+}
+.speech-bubble {
+    position: relative;
+
+    background: var(--speech-bubble-background);
+    border-radius: 0.25rem;
+    height: 4rem;
+    width: 12rem;
+}
+.speech-bubble::before {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: calc(-1 * var(--speech-bubble-arrow-size));
+
+    border-width: var(--speech-bubble-arrow-size);
+    border-style: solid;
+    border-color: transparent transparent
+                var(--speech-bubble-background) transparent;
+}
+```
+
+```html
+<div class="speech-bubble"></div>
+```
+</Playground>
+
+## Using two pseudo-elements
+
+In the previous section, we used the `::before` pseudo-element to create a triangle. Now, let's take it a step further and create two circles using the `::before` and `::after` pseudo-elements.
+
+Take a look at the demo below to see how it looks:
+
+<Playground>
+```css demo.css hidden
+.playground__root {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 16rem;
+}
+```
+
+```css
+:root {
+    --speech-bubble-background: rgb(226 232 240);
+}
+.speech-bubble {
+    position: relative;
+
+    background: var(--speech-bubble-background);
+    border-radius: 9999px;
+    height: 4rem;
+    width: 12rem;
+}
+.speech-bubble::before,
+.speech-bubble::after {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    border-radius: 9999px;
+    background: var(--speech-bubble-background);
+}
+.speech-bubble::before {
+    height: 1.5rem;
+    width: 1.5rem;
+    transform: translate(-0.5rem, 0.5rem);
+}
+.speech-bubble::after {
+    height: 0.75rem;
+    width: 0.75rem;
+    transform: translate(-1rem, 1rem);
+}
+```
+
+```html
+<div class="speech-bubble"></div>
+```
+</Playground>
+
+To achieve this, we position both pseudo-elements absolutely at the bottom-left corner of the container, just like in the previous example.
+
+```css
+.speech-bubble::before,
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+```
+
+However, each of them is positioned differently by using the `transform` property. Let's take a closer look at the `transform` declaration for the `::before` pseudo-element. The first and second numbers move the element along the horizontal (X) and vertical (Y) axis, respectively.
+
+```css
+.speech-bubble::before {
+    transform: translate(-0.5rem, 0.5rem);
+}
+```
+
+## See also
+
+-   [Popover arrow](https://phuoc.ng/collection/css-layout/popover-arrow)
+-   [Triangle buttons](https://phuoc.ng/collection/css-layout/triangle-buttons)
