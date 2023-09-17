@@ -1,0 +1,251 @@
+---
+category: Display
+created: '2023-09-06'
+description: Create a folded corner in CSS
+keywords: css folded corner
+openGraphCover: /og/css-layout/folded-corner.png
+thumbnail: /assets/css-layout/thumbnails/folded-corner.png
+title: Folded corner
+---
+
+The folded corner layout is a popular design element in web design that adds creativity and uniqueness to a website. It creates the illusion of a folded corner on a webpage, giving it a tangible feel.
+
+Using this technique can help highlight important information or sections on a page, making it easier for users to navigate a content-heavy website. It can also be used simply for aesthetic purposes, adding an interesting visual element to the page.
+
+In this post, we will explore various ways to create a folded corner effect. So, get ready to learn some cool techniques!
+
+## Markup
+
+To begin, let's create the markup for our layout. It's as simple as adding an HTML element.
+
+```html
+<div class="box"></div>
+```
+
+## Using multiple backgrounds
+
+Let's take a moment to imagine an element with a folded corner. This element is made up of two layers: a rectangle with a curved corner and a triangle placed on top of it.
+
+To create the first layer, we can use the `linear-gradient` function to define the background of the element.
+
+```css
+background: linear-gradient(-135deg, transparent 1.7677rem, rgb(226 232 240) 0)
+```
+
+If you're not familiar with the `linear-gradient` function or the number `1.7677rem` in the sample code, don't worry. Here's what's going on:
+
+-   The `linear-gradient` function creates a gradient background for an element. The `-135deg` specifies the direction of the gradient, which in this case is from the top-right corner to the bottom-left corner.
+-   The first color stop in the gradient is `transparent`, which means there's no color at that point. The second color stop is `rgb(226 232 240)`, which is an RGB color value for that point in the gradient.
+-   The `1.7677rem` and `0` values determine where these colors are positioned within the gradient. `transparent` will be visible for the first `1.7677rem` of the gradient, followed by `rgb(226 232 240)` for the rest.
+
+Wondering how we calculated the `1.7677rem` value? It's actually pretty simple. Just imagine that the folded corner is a square with sides of 2.5rem. But because we rotate the first stop by 135 degrees, the side of the square becomes the diagonal.
+
+Now, a square whose diagonal is 2.5rem has a size of `2.5rem / Math.sqrt(2)`, which is `1.7677rem`. Easy, right?
+
+Let's take a look at how it creates a curved corner:
+
+<Playground>
+```css demo.css hidden
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+```
+
+```css styles.css
+.box {
+    height: 12rem;
+    width: 16rem;
+
+    background: linear-gradient(-135deg, transparent 1.7677rem, rgb(226 232 240) 0);
+}
+```
+
+```html index.html
+<div class="box"></div>
+```
+</Playground>
+
+### Creating the triangle
+
+There are several ways to create a triangle, such as using different border colors. However, in this section, we will stick to using the `linear-gradient` function.
+
+```css
+.triangle {
+    background: linear-gradient(to left bottom, transparent 50%, rgb(100 116 139) 0);
+}
+```
+
+In this example, we use the `to left bottom` value to specify the direction of the gradient. It starts from the top-right corner and goes to the bottom-left corner.
+
+The first color stop is `transparent`, which means that there is no color at that point. The second color stop is `rgb(100 116 139)`, which specifies an RGB color value for that point in the gradient.
+
+To create a diagonal line across the box from the top-right to the bottom-left corner, we start with transparency at 50% of this line and then transition into our dark color for the remaining area.
+
+Let's take a look at how it generates a triangle shape:
+
+<Playground>
+```css demo.css hidden
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+```
+
+```css styles.css
+.triangle {
+    height: 2.5rem;
+    width: 2.5rem;
+
+    background: linear-gradient(to left bottom, transparent 50%, rgb(100 116 139) 0);
+}
+```
+
+```html index.html
+<div class="triangle"></div>
+```
+</Playground>
+
+Next, let's move the triangle to the top-right corner of the box element. To do this, we can simply adjust the position of the background.
+
+```css
+.box {
+    background: linear-gradient(...) no-repeat 100% 0 / 2.5rem 2.5rem;
+}
+```
+
+Let's break down the declaration into its individual parts:
+
+-   `no-repeat` is a keyword that tells the background image not to repeat.
+-   `100% 0` sets the position of the background image to the top-right corner of the element.
+-   `/ 2.5rem 2.5rem` specifies the size of the background image. The first value represents the width, and the second value represents the height. In this case, both values are set to `2.5rem`, which matches the size of our folded corner square.
+
+Check out the box element with a triangle attached to the top-right corner. I added a simple dashed border so you can see the bounding of the box.
+
+<Playground>
+```css demo.css hidden
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+```
+
+```css styles.css
+.box {
+    height: 12rem;
+    width: 16rem;
+    border: 2px dashed rgb(226 232 240);
+
+    background: linear-gradient(to left bottom, transparent 50%, rgb(100 116 139) 0) no-repeat 100% 0 / 2.5rem 2.5rem;
+}
+```
+
+```html index.html
+<div class="box"></div>
+```
+</Playground>
+
+### Combining backgrounds
+
+Now that you know how to use the linear gradient to create both layers, it's time to merge them and generate the folded corner.
+
+CSS allows us to use multiple declarations for the `background` properties by separating them with commas. Keep in mind that the order of these declarations is important and can affect the final result.
+
+```css
+.box {
+    background:
+        linear-gradient(to left bottom, transparent 50%, rgb(100 116 139) 0) no-repeat 100% 0 / 2.5rem 2.5rem,
+        linear-gradient(-135deg, transparent 1.7677rem, rgb(226 232 240) 0);
+}
+```
+
+Without further ado, let's take a look at the final result of the steps we've taken so far:
+
+<Playground>
+```css demo.css hidden
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+```
+
+```css styles.css
+.box {
+    height: 12rem;
+    width: 16rem;
+
+    background:
+        linear-gradient(to left bottom, transparent 50%, rgb(100 116 139) 0) no-repeat 100% 0 / 2.5rem 2.5rem,
+        linear-gradient(-135deg, transparent 1.7677rem, rgb(226 232 240) 0);
+}
+```
+
+```html index.html
+<div class="box"></div>
+```
+</Playground>
+
+## Using a pseudo-element
+
+In the previous section, we used a cool approach to generate a folded corner using multiple backgrounds in a single `div` element. However, this approach has some downsides. For example, it's not easy to add more styles to the triangle, like a shadow.
+
+To add more customization to the triangle, we can use the `:after` pseudo-element to represent it. Here are some basic styles to position the triangle:
+
+```css
+.box {
+     position: relative;
+}
+.box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+```
+
+The `position` property values of `absolute` and `relative` are applied to the box and the triangle, respectively. This ensures that the triangle is positioned absolutely within the box.
+
+Although the triangle doesn't contain any information, we still need to set the content property to an empty `''` for it to appear. The `top` and `right` properties position the triangle in the top-right corner, while the `width` and `height` properties determine its size.
+
+We're using a separate element to represent the triangle. This makes it easy to style it however you want. Want to add a box shadow? No problem!
+
+<Playground>
+```css demo.css hidden
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+```
+
+```css styles.css
+.box {
+    height: 12rem;
+    width: 16rem;
+
+    background: linear-gradient(-135deg, transparent 1.7677rem, rgb(226 232 240) 0);
+    position: relative;
+}
+.box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background: linear-gradient(to left bottom, transparent 50%, rgb(100 116 139) 0) no-repeat 100% 0;
+    box-shadow: -0.4rem 0.4rem 0.4rem -0.2rem rgba(0 0 0 / 50);
+}
+```
+
+```html index.html
+<div class="box"></div>
+```
+</Playground>
