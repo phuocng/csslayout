@@ -1,0 +1,274 @@
+---
+category: Display
+created: '2023-09-07'
+description: Create a flipping number in CSS
+keywords: css flipping number, css flipping clock, css flipping counter
+openGraphCover: /og/css-layout/flipping-number.png
+thumbnail: /assets/css-layout/thumbnails/flipping-number.png
+title: Flipping number
+---
+
+Flipping number layout is a popular display format used in digital clocks, countdown timers, and scoreboards. It uses multiple panels to show each digit of a number, and each panel can flip over to reveal the next number, giving the impression of an analog clock face.
+
+In web design, flip numbers are a great way to create unique and eye-catching interfaces. They're perfect for displaying all kinds of information, such as scores, prices, or countdowns.
+
+In this post, we'll learn how to create a flipping number using CSS. Get ready to impress your users with a stunning display!
+
+## Markup
+
+First things first, let's prepare the layout for our flipping number. It's a simple layout that involves two elements. The container element creates the top and bottom flipping effects, while the inner element is used to display the number.
+
+```html
+<div class="flip">
+    <div class="flip__number">42</div>
+</div>
+```
+
+## Adding effects
+
+Instead of creating separate elements for the top and bottom backgrounds, we can simplify things by using pseudo-elements. The `::before` element can handle the top background, while the `::after` element can generate the bottom background.
+
+To make this work, we need to position the pseudo-element absolutely within the container. We can do this by using the `position` property with different values:
+
+```css
+.flip {
+    overflow: hidden;
+}
+.flip::before {
+    content: '';
+    position: absolute;
+}
+```
+
+It's important to remember that the pseudo-element won't be visible without the `content` property. In our case, the `::before` element doesn't have any content, so we can simply set the `content` property to empty.
+
+Now, let's focus on the `::before` element, which will cover the first half of the container. We can use a combination of `top`, `left`, `height`, and `width` properties to indicate its position and dimensions:
+
+```css
+.flip::before {
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+}
+```
+
+Lastly, let's create a gradient for the top half using the `linear-gradient` function. This will allow us to set the `background` property in the following way:
+
+```css
+.flip::before {
+    background: linear-gradient(to right bottom, rgb(71 85 105), rgb(15 23 42));
+}
+```
+
+In the code above, we're passing several parameters to the `linear-gradient` function. The first parameter, `to right bottom`, sets the direction of the gradient. In this case, it means the gradient will start at the top left and end at the bottom right.
+
+The second and third parameters are colors that determine the start and end points of the gradient. The first color, `rgb(71 85 105)`, is a darker shade representing the starting point. The second color, `rgb(15 23 42)`, is an even darker shade representing the ending point.
+
+<Playground>
+```css demo.css hidden
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+```
+
+```css styles.css hidden
+.flip {
+    display: inline-flex;
+    padding: 1rem;
+    position: relative;
+
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.flip::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(to right bottom, rgb(71 85 105), rgb(15 23 42));
+}
+.flip__number {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 600;
+    z-index: 1;
+}
+```
+
+```html index.html hidden
+<div class="flip">
+    <div class="flip__number">42</div>
+</div>
+```
+</Playground>
+
+We can use the same steps for the bottom half, with only one difference: the position and background color. Since the bottom half is positioned at the bottom, it will reset the `bottom` and `left` properties to zero.
+
+Here's how the bottom half can be created using the `::after` pseudo-element.
+
+```css
+.flip::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(to right bottom, rgb(100 116 139), rgb(15 23 42));
+}
+```
+
+Finally, to ensure that content is displayed on top of pseudo-elements, we need to set the `z-index` property.
+
+```css
+.flip__number {
+    z-index: 1;
+}
+```
+
+Check out the result below.
+
+<Playground>
+```css demo.css hidden
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+```
+
+```css styles.css hidden
+.flip {
+    display: inline-flex;
+    padding: 1rem;
+    position: relative;
+
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.flip::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(to right bottom, rgb(71 85 105), rgb(15 23 42));
+}
+.flip::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(to right bottom, rgb(100 116 139), rgb(15 23 42));
+}
+.flip__number {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 600;
+    z-index: 1;
+}
+```
+
+```html index.html hidden
+<div class="flip">
+    <div class="flip__number">42</div>
+</div>
+```
+</Playground>
+
+## Adding a divider
+
+To enhance the layout's visual appeal, we can insert a thin divider between the top and bottom halves. We can achieve this by adding a border at the bottom of the first half.
+
+```css
+.flip::before {
+    border-bottom: 1px solid rgb(148 163 184);
+}
+```
+
+As the border will occupy space, we need to slightly push up the first half to ensure both halves have the same height. We can use a negative value with the `translateY()` function to accomplish this.
+
+```css
+.flip::before {
+    transform: translateY(-1px);
+}
+```
+
+It's important to note that the value passed must match the border's thickness. Therefore, it's better to use a CSS variable to represent the number. This way, the code will still work even if you increase the border's thickness. Plus, it'll be easier for other engineers on your team to understand, making the code easier to maintain.
+
+```css
+:root {
+    --divider-height: 1px;
+}
+.flip::before {
+    border-bottom: var(--divider-height) solid rgb(148 163 184);
+    transform: translateY(calc(-1 * var(--divider-height)));
+}
+```
+
+Let's take a look at the final result we've achieved so far.
+
+<Playground>
+```css demo.css hidden
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+```
+
+```css styles.css
+:root {
+    --divider-height: 1px;
+}
+.flip {
+    display: inline-flex;
+    padding: 1rem;
+    position: relative;
+
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.flip::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(to right bottom, rgb(71 85 105), rgb(15 23 42));
+    border-bottom: var(--divider-height) solid rgb(148 163 184);
+    transform: translateY(calc(-1 * var(--divider-height)));
+}
+.flip::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(to right bottom, rgb(100 116 139), rgb(15 23 42));
+}
+
+.flip__number {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 600;
+    z-index: 1;
+}
+```
+
+```html index.html
+<div class="flip">
+    <div class="flip__number">42</div>
+</div>
+```
+</Playground>
