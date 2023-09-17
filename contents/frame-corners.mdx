@@ -1,0 +1,258 @@
+---
+category: Display
+created: '2023-09-06'
+description: Create frame corners in CSS
+keywords: css folded corner
+openGraphCover: /og/css-layout/frame-corners.png
+thumbnail: /assets/css-layout/thumbnails/frame-corners.png
+title: Frame corners
+---
+
+The frame corner layout pattern is a popular and effective technique in web design. It uses corner elements to frame content on a web page, adding depth and structure. This technique is often used with images and shapes.
+
+In this post, we'll teach you how to create frame corners with CSS. Are you ready to dive in and learn?
+
+## Markup
+
+The first step in preparing the layout is to structure it properly. This usually involves two elements: an inner element for displaying the content and an outer element that will display four frames at its corners.
+
+Here's an example of what the layout could look like:
+
+```html
+<div class="box">
+    <div class="box__inner"></div>
+</div>
+```
+
+## Adding overlays
+
+Creating a frame at the corners is a simple idea. We can use CSS to add overlay elements around the content area and position them using absolute positioning.
+
+Here's how to get started: define some CSS variables that can be reused later.
+
+```css
+:root {
+    --frame-border-size: 0.25rem;
+    --frame-height: 1rem;
+    --frame-width: 1rem;
+}
+```
+
+The `--frame-border-size` variable controls the thickness of the frame, while `--frame-height` and `--frame-width` determine its dimensions. To create a single frame for the outer element, we can use a solid border and adjust the `padding` property to set the space between the border and the box content.
+
+```css
+.box {
+    border: var(--frame-border-size) solid rgb(30 41 59);
+    padding: var(--frame-height) var(--frame-width);
+}
+```
+
+<Playground>
+```css demo.css hidden
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+```
+
+```css styles.css hidden
+:root {
+    --frame-border-size: 0.25rem;
+    --frame-height: 1rem;
+    --frame-width: 1rem;
+}
+.box {
+    border: var(--frame-border-size) solid rgb(30 41 59);
+    padding: var(--frame-height) var(--frame-width);
+    height: 12rem;
+    width: 16rem;
+}
+.box__inner {
+    width: 100%;
+    height: 100%;
+    background: rgb(226 232 240);
+}
+```
+
+```html index.html hidden
+<div class="box">
+    <div class="box__inner"></div>
+</div>
+```
+</Playground>
+
+In order to hide the top and bottom borders of the box, there's a nifty trick we can use called the pseudo-element. Here's how it works:
+
+We'll use the `::before` pseudo-element to create a vertical overlay that sits outside the box. To achieve this, we position the element absolutely within the box. We set the `position` property to both elements to make sure it stays in place.
+
+```css
+.box {
+    position: relative;
+}
+.box::before {
+    content: '';
+    position: absolute;
+}
+```
+
+To create the overlay effect, we need to set the `left` and `right` properties to be the same as the frame's width, and the `top` and `bottom` properties to be the same the thickness of the frame border. By using negative numbers for these properties, we push the overlay to the outside of the box, causing the top and bottom borders to overlap.
+
+```css
+.box::before {
+    left: var(--frame-width);
+    right: var(--frame-width);
+
+    top: calc(-1 * var(--frame-border-size));
+    bottom: calc(-1 * var(--frame-border-size));
+}
+```
+
+<Playground>
+```css demo.css hidden
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+```
+
+```css styles.css hidden
+:root {
+    --frame-border-size: 0.25rem;
+    --frame-height: 1rem;
+    --frame-width: 1rem;
+}
+.box {
+    border: var(--frame-border-size) solid rgb(30 41 59);
+    padding: var(--frame-height) var(--frame-width);
+    height: 12rem;
+    width: 16rem;
+    position: relative;
+}
+.box::before {
+    content: '';
+    position: absolute;
+    left: var(--frame-width);
+    right: var(--frame-width);
+    top: calc(-1 * var(--frame-border-size));
+    bottom: calc(-1 * var(--frame-border-size));
+    background: rgb(226 232 240);
+}
+```
+
+```html index.html hidden
+<div class="box">
+    <div class="box__inner"></div>
+</div>
+```
+</Playground>
+
+Finally, to create the blank areas at the top and bottom, we make the top and bottom borders the same height as the frame. And voila! The top and bottom borders are hidden, and our box looks sleek and polished.
+
+```css
+.box::before {
+    border-top: var(--frame-height) solid #fff;
+    border-bottom: var(--frame-height) solid #fff;
+}
+```
+
+<Playground>
+```css demo.css hidden
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+```
+
+```css styles.css hidden
+:root {
+    --frame-border-size: 0.25rem;
+    --frame-height: 1rem;
+    --frame-width: 1rem;
+}
+.box {
+    border: var(--frame-border-size) solid rgb(30 41 59);
+    padding: var(--frame-height) var(--frame-width);
+    height: 12rem;
+    width: 16rem;
+    position: relative;
+}
+.box::before {
+    content: '';
+    position: absolute;
+    left: var(--frame-width);
+    right: var(--frame-width);
+    top: calc(-1 * var(--frame-border-size));
+    bottom: calc(-1 * var(--frame-border-size));
+    background: rgb(226 232 240);
+    border-top: var(--frame-height) solid #fff;
+    border-bottom: var(--frame-height) solid #fff;
+}
+```
+
+```html index.html hidden
+<div class="box">
+    <div class="box__inner"></div>
+</div>
+```
+</Playground>
+
+We can use the same approach and create the horizontal overlay element with the `::after` pesudo-element. Now, let's check out the final result of the steps we've followed together so far.
+
+<Playground>
+```css demo.css hidden
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+```
+
+```css styles.css
+:root {
+    --frame-border-size: 0.25rem;
+    --frame-height: 1rem;
+    --frame-width: 1rem;
+}
+.box {
+    border: var(--frame-border-size) solid rgb(30 41 59);
+    padding: var(--frame-height) var(--frame-width);
+    height: 12rem;
+    width: 16rem;
+    position: relative;
+}
+.box__inner {
+    height: 100%;
+    width: 100%;
+    background: rgb(226 232 240);
+}
+.box::before {
+    content: '';
+    position: absolute;
+    left: var(--frame-width);
+    right: var(--frame-width);
+    top: calc(-1 * var(--frame-border-size));
+    bottom: calc(-1 * var(--frame-border-size));
+    border-top: var(--frame-height) solid #fff;
+    border-bottom: var(--frame-height) solid #fff;
+}
+.box::after {
+    content: '';
+    position: absolute;
+    top: var(--frame-height);
+    bottom: var(--frame-height);
+    left: calc(-1 * var(--frame-border-size));
+    right: calc(-1 * var(--frame-border-size));
+    border-left: var(--frame-width) solid #fff;
+    border-right: var(--frame-width) solid #fff;
+}
+```
+
+```html index.html
+<div class="box">
+    <div class="box__inner"></div>
+</div>
+```
+</Playground>
