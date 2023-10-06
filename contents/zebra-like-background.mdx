@@ -1,0 +1,229 @@
+---
+category: Display
+created: '2023-09-30'
+description: Create a zebra-like background with CSS
+openGraphCover: /og/css-layout/zebra-like-background.png
+thumbnail: /assets/css-layout/thumbnails/zebra-like-background.png
+title: Zebra-like background
+---
+
+Using a zebra-like or striped design is a popular technique in web design to add visual interest and organization to data. This design involves alternating colors or shades in a horizontal pattern, like the stripes on a zebra.
+
+The zebra-like effect is commonly applied to tables, making it easier for users to read and compare data across rows. It can also be used in lists, forms, and other elements that contain multiple items.
+
+To apply a zebra-like background to a table, we use CSS to style the odd and even rows differently. By setting the `background-color` property of the odd rows to one color and the even rows to another color, we can create a striped effect that helps readers distinguish between rows. This technique is particularly useful for tables with lots of data, making it easier to scan through information.
+
+Here's a sample CSS code that can be used to create a zebra-like background for a table.
+
+```css
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+```
+
+The `nth-child` selector is used to target every other row, and the `background-color` property is set to alternate between two colors. In this example, the even rows have a light gray color (`#f2f2f2`) while the odd rows are white (`#ffffff`). You can customize this code by changing the colors or adjusting the value of `nth-child` to achieve different effects.
+
+However, it's important to note that the `even` and `odd` selectors cannot be used for elements that don't have children, such as the `textarea` tag.
+
+In this post, we'll explore how to add a zebra-like background to any element.
+
+## Creating a zebra-like background
+
+We can use the `repeating-linear-gradient` function to create a cool zebra-like background for any element. This function generates a linear gradient that repeats at defined intervals, allowing us to create a striped effect.
+
+Here's an example of how we can do it:
+
+```css
+.container {
+    --odd-background: rgb(203 213 225);
+    --even-background: #fff;
+    --line-height: 1.5rem;
+    line-height: var(--line-height);
+    background: repeating-linear-gradient(
+        var(--odd-background),
+        var(--odd-background) var(--line-height),
+        var(--even-background) var(--line-height),
+        var(--even-background) calc(2 * var(--line-height))
+    );
+}
+```
+
+In this example, we used this technique to create a zebra-like background for a container element. We defined the CSS variables `--odd-background` and `--even-background` to set the colors for odd and even rows, respectively. We also set the `--line-height` variable to define the height of each row.
+
+It's important to make sure that the height of each row is the same as the `line-height` property of the element so that the rows align horizontally with each line of the element.
+
+The `repeating-linear-gradient` function is then used with these variables to generate a gradient that alternates between the two colors at every other line. The first argument specifies the direction of the gradient (in this case, it's vertical), while subsequent arguments define the color stops for each line.
+
+We can easily customize the background by adjusting these variables or adding additional color stops.&#x20;
+
+Here's how it looks in action:
+
+<Playground>
+```css demo.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    border: 1px solid rgb(203 213 225);
+    border-radius: 0.25rem;
+    height: 12rem;
+    width: 16rem;
+    overflow: auto;
+    padding: 0.5rem;
+}
+```
+
+```css styles.css
+.container {
+    --odd-background: rgb(203 213 225);
+    --even-background: #fff;
+    --line-height: 1.5rem;
+    line-height: var(--line-height);
+    background: repeating-linear-gradient(
+        var(--odd-background),
+        var(--odd-background) var(--line-height),
+        var(--even-background) var(--line-height),
+        var(--even-background) calc(2 * var(--line-height))
+    );
+}
+```
+
+```html index.html
+<div class="container"></div>
+```
+</Playground>
+
+It seems to work fine without any content, but let's add some content to our element. In reality, an element often has some space between its content and the sides, so let's add some padding to the element as well:
+
+```css
+.container {
+    padding: 0.5rem;
+}
+```
+
+Uh-oh, now we have an issue. The background areas are no longer aligned with each line of text. As you scroll up and down, the background stays in the same place and doesn't move along with the element.
+
+But don't worry, we'll fix these issues in the next section.
+
+<Playground>
+```css demo.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    border: 1px solid rgb(203 213 225);
+    border-radius: 0.25rem;
+    height: 12rem;
+    width: 16rem;
+    overflow: auto;
+    padding: 0.5rem;
+}
+```
+
+```css styles.css hidden
+.container {
+    --odd-background: rgb(203 213 225);
+    --even-background: #fff;
+    --line-height: 1.5rem;
+    line-height: var(--line-height);
+    background: repeating-linear-gradient(
+        var(--odd-background),
+        var(--odd-background) var(--line-height),
+        var(--even-background) var(--line-height),
+        var(--even-background) calc(2 * var(--line-height))
+    );
+}
+```
+
+```html index.html hidden
+<div class="container">
+    Very night his itself won't him morning dominion behold abundantly them above night. Good one whose moved over firmament. Seed heaven itself face. His living, which darkness and subdue fourth living good over, without made a moveth seas.
+
+    To spirit very bring was it every seed. Behold blessed greater. Won't let earth very saying evening seas night subdue his you're spirit saying.
+
+    Creepeth she'd had kind set place make. After behold fruitful open female. For without multiply itself you're. Meat creeping years after us unto grass over said itself light she'd, living. Void grass, yielding. Whose appear it i, darkness.
+</div>
+```
+</Playground>
+
+## Aligning the background with lines
+
+In the demo above, you may have noticed that the background of the element doesn't always align perfectly with each line. This can be frustrating, but don't worry! There's a simple solution using the `background-origin` property.
+
+By default, this property is set to `padding-box`, which means that the background starts at the edge of an element's padding. However, we can change this value to `content-box`, which will make the background start at the edge of an element's content.
+
+To fix this issue, simply add `background-origin: content-box;` to your CSS code for the `.container` class. This will ensure that the zebra-like background aligns perfectly with each line of text, giving your design a more polished and professional look.
+
+```css
+.container {
+    background-origin: content-box;
+}
+```
+
+## Keeping the background in place while scrolling
+
+Let's make sure our zebra-like background doesn't move around as users scroll through our content. We can do this by using the `background-attachment` property. By default, this property is set to `scroll`, which means the background moves along with the content. However, if we change the value to `local`, the background will stay in place relative to its container element.
+
+Here's the sample code:
+
+```css
+.container {
+    background-attachment: local;
+}
+```
+
+Now, when we add `background-attachment: local;` to our `.container` class, the background will stay put as users scroll through the element's contents. This creates a smoother scrolling experience and helps maintain a consistent visual layout throughout.
+
+Let's take a look at the last example.
+
+<Playground>
+```css demo.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    border: 1px solid rgb(203 213 225);
+    border-radius: 0.25rem;
+    height: 12rem;
+    width: 16rem;
+    overflow: auto;
+    padding: 0 0.5rem;
+}
+```
+
+```css styles.css
+.container {
+    --odd-background: rgb(203 213 225);
+    --even-background: #fff;
+    --line-height: 1.5rem;
+    line-height: var(--line-height);
+    background: repeating-linear-gradient(
+                    var(--odd-background),
+                    var(--odd-background) var(--line-height),
+                    var(--even-background) var(--line-height),
+                    var(--even-background) calc(2 * var(--line-height))
+                );
+    background-attachment: local;
+    background-origin: content-box;
+}
+```
+
+```html index.html
+<div class="container">
+    Very night his itself won't him morning dominion behold abundantly them above night. Good one whose moved over firmament. Seed heaven itself face. His living, which darkness and subdue fourth living good over, without made a moveth seas.
+
+    To spirit very bring was it every seed. Behold blessed greater. Won't let earth very saying evening seas night subdue his you're spirit saying.
+
+    Creepeth she'd had kind set place make. After behold fruitful open female. For without multiply itself you're. Meat creeping years after us unto grass over said itself light she'd, living. Void grass, yielding. Whose appear it i, darkness.
+</div>
+```
+</Playground>
