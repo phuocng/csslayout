@@ -1,0 +1,318 @@
+---
+category: Navigation
+created: '2023-10-14'
+description: Create a carousel slider with CSS
+openGraphCover: /og/css-layout/carousel-slider.png
+thumbnail: /assets/css-layout/thumbnails/carousel-slider.png
+title: Carousel slider
+---
+
+A carousel slider is a component that lets users browse a collection of items, usually images or cards, by sliding them horizontally or vertically. It's commonly used in websites and mobile apps to showcase products, features, or news articles.
+
+You can find carousel sliders in all kinds of websites and apps, like e-commerce platforms, news portals, and social media sites. They offer an interactive and engaging way for users to navigate content without taking up too much screen space.
+
+On top of that, carousel sliders can be customized with different transition effects, autoplay options, and navigation controls. This makes for an even better user experience.
+
+In this post, we'll show you how to create a carousel slider with CSS.
+
+## HTML markup
+
+Let's talk about organizing the markup for a slider with five items. The slider consists of a `div` element with the class `slider__inner` that displays the list of items, each with a `slider__item` class.
+
+```html
+<div class="slider">
+    <div class="slide__inner">
+        <div class="slider__item"></div>
+        <div class="slider__item"></div>
+        <div class="slider__item"></div>
+        <div class="slider__item"></div>
+        <div class="slider__item"></div>
+    </div>
+</div>
+```
+
+For simplicity, let's assume all slider items have the same dimensions as the slider container. The `.slider` class sets the dimensions of the slider container to a `width` and `height` of 100%, taking up all available space in its parent element. The `overflow` property is set to `hidden` to ensure that any content that overflows the slider container is not visible.
+
+```css
+.slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 20rem;
+}
+```
+
+Meanwhile, the `.slider__inner` class positions the list of items inside the slider container. It has an absolute position with `top` and `left` properties set to 0, placing it at the top left corner of its parent element (the slider container). The `width` and `height` are also set to 100%, filling up all available space inside its parent element.
+
+```css
+.slide__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+To position the items inside the slider container, we use absolute positioning with `top`, `left`, `width`, and `height` properties set to 0 and 100% respectively, ensuring that each item takes up all available space inside the slider container.
+
+```css
+.slider__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+```
+
+Now, to achieve the sliding effect, we use the `translateX()` function of CSS `transform` property. This function moves an element horizontally by a given percentage or pixel value. In our case, we want to move each item to the right so that only one item is visible at a time.
+
+```html
+<div class="slider__item" style="transform: translateX(0%)">1</div>
+<div class="slider__item" style="transform: translateX(100%)">2</div>
+<div class="slider__item" style="transform: translateX(200%)">3</div>
+<div class="slider__item" style="transform: translateX(300%)">4</div>
+<div class="slider__item" style="transform: translateX(400%)">5</div>
+```
+
+To activate a specific item in the carousel slider, we shift the whole inner container to the left by a value that moves the target item into view. One way to achieve this is by setting the `transform` property of the `.slider__inner` element to `translateX(-300%)`. This will move the inner container three times its width to the left, which positions the fourth item at the beginning of the slider.
+
+```html
+<div class="slider__inner" style="transform: translateX(-300%)">
+    <div class="slider__item" style="transform: translateX(0%)">1</div>
+    <div class="slider__item" style="transform: translateX(100%)">2</div>
+    <div class="slider__item" style="transform: translateX(200%)">3</div>
+    <div class="slider__item" style="transform: translateX(300%)">4</div>
+    <div class="slider__item" style="transform: translateX(400%)">5</div>
+</div>
+```
+
+By adjusting this value, we can easily activate any other item in our carousel slider. This technique allows us to create an interactive and engaging carousel slider that users can navigate through with ease.
+
+## Adding navigation
+
+Now that we have placed the slider items in the right spot, it's time to add navigation so users can easily move between them.
+
+To do this, we'll create an additional element with the `slider__navigation` CSS class. This element contains multiple dots that users can click to jump to the corresponding item.
+
+Here is the updated markup:
+
+```html
+<div class="slider">
+    <div class="slider__items">
+        <!-- Slider items go here -->
+    </div>
+
+    <div class="slider__navigation">
+        <div class="slider__dot"></div>
+        <div class="slider__dot"></div>
+        <div class="slider__dot"></div>
+        <!-- Add more dots as needed -->
+    </div>
+</div>
+```
+
+The `slider__navigation` element has a position of `absolute`, which means it's positioned relative to the nearest positioned ancestor (in this case, the `.slider` element). We set `bottom: 1rem` to position it at the bottom of the slider container, and `left: 50%` is used to center it horizontally.
+
+To center its content horizontally, we use `transform: translateX(-50%)`, which moves it left by half of its own width.
+
+```css
+.slider__navigation {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+```
+
+The navigation dots inside the `slider__navigation` are created using individual elements with a class of `slider__dot`. To space them out evenly, we use the CSS property `gap: 0.5rem`, which adds a gap between each item. The items are aligned along the horizontal axis using flexbox properties such as `display: flex`, `align-items: center`, and `justify-content: center`.
+
+```css
+.slider__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+```
+
+The `slider__dot` class is used to style the navigation dots inside the `slider__navigation` element. It has a background color of `rgb(203 213 225)` and a border radius of `50%`, which gives it a circular shape. It also has a `cursor` property set to `pointer`, which changes the mouse cursor when hovering over the element, indicating that it can be clicked. Finally, its dimensions are set to `height: 0.5rem` and `width: 0.5rem`, making it small enough to fit inside the navigation container but large enough to be clickable.
+
+```css
+.slider__dot {
+    background-color: rgb(203 213 225);
+    border-radius: 50%;
+    cursor: pointer;
+
+    height: 0.5rem;
+    width: 0.5rem;
+}
+```
+
+To indicate the currently active dot, we can add a separate class named `slider__dot--active` and apply it to the corresponding dot element. This class will have a different background color than the inactive dots, making it clear which item is currently active.
+
+```css
+.slider__dot--active {
+    background-color: rgb(100 116 139);
+}
+```
+
+When an item is activated in the slider, we can remove the `slider__dot--active` class from all dots and then add it only to the dot that corresponds to the currently active item. This ensures that only one dot is highlighted at any given time.
+
+## Adding arrows for easy navigation
+
+In addition to the navigation we created earlier, we can further enhance the user experience by adding two buttons that allow users to quickly move to the previous and next items.
+
+Here's the updated markup:
+
+```html
+<div class="slider">
+    ...
+    <div class="slider__prev"></div>
+    <div class="slider__next"></div>
+</div>
+```
+
+To create these buttons, we use the `.slider__prev` and `.slider__next` classes. We set their position to absolute so that they're positioned relative to the slider container. We also set the top position to `50%` and use `transform: translateY(-50%)` to center them vertically inside the slider container.
+
+Here's how they are positioned:
+
+```css
+.slider__prev,
+.slider__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    height: 1rem;
+    width: 0.5rem;
+}
+```
+
+To add arrow navigation to the carousel slider, we can use CSS pseudo-elements `::before` and `::after`. These elements allow us to add content before or after an element's content, which in our case will be arrows.
+
+If you're not familiar with how to create arrows using CSS, you can check out this [post](https://phuoc.ng/collection/css-layout/triangle-buttons/) for guidance.
+
+With these CSS rules in place, you should now have fully functional arrow navigation for your carousel slider.&#x20;
+
+## Demo
+
+Let's take a look at the final result. Check out the code to see how we shifted the whole inner element to activate the fourth item. It's important to note that this is purely for layout purposes only. Clicking on the dots or arrows won't navigate to the corresponding item. Check out this [post](https://phuoc.ng/collection/css-animation/navigate-to-a-specific-item-in-a-carousel-slider/) to learn how we can make it happen.
+
+<Playground>
+```css styles.css
+.slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 20rem;
+}
+.slider__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.slider__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Demo purpose */
+    background: rgb(241 245 249);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.slider__navigation {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.slider__dot {
+    background: rgb(203 213 225);
+    border-radius: 50%;
+    cursor: pointer;
+
+    height: 0.5rem;
+    width: 0.5rem;
+}
+.slider__dot--active {
+    background: rgb(100 116 139);
+}
+
+.slider__prev,
+.slider__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1rem;
+    width: 0.5rem;
+}
+.slider__prev::before,
+.slider__next::before {
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    border-style: solid;
+    height: 0;
+    width: 0;
+}
+.slider__prev::before {
+    border-color: transparent rgb(148 163 184) transparent transparent;
+    border-width: 0.5rem 0.5rem 0.5rem 0;
+}
+.slider__next::before {
+    border-color: transparent transparent transparent rgb(148 163 184);
+    border-width: 0.5rem 0 0.5rem 0.5rem;
+}
+.slider__prev {
+    left: 0.5rem;
+}
+.slider__next {
+    right: 0.5rem;
+}
+```
+
+```html index.html
+<div class="slider">
+    <div class="slider__inner" style="transform: translateX(-300%)">
+        <div class="slider__item" style="transform: translateX(0%)">1</div>
+        <div class="slider__item" style="transform: translateX(100%)">2</div>
+        <div class="slider__item" style="transform: translateX(200%)">3</div>
+        <div class="slider__item" style="transform: translateX(300%)">4</div>
+        <div class="slider__item" style="transform: translateX(400%)">5</div>
+    </div>
+
+    <div class="slider__navigation">
+        <div class="slider__dot"></div>
+        <div class="slider__dot"></div>
+        <div class="slider__dot"></div>
+        <div class="slider__dot slider__dot--active"></div>
+        <div class="slider__dot"></div>
+    </div>
+
+    <div class="slider__prev"></div>
+    <div class="slider__next"></div>
+</div>
+```
+</Playground>
+
+## See also
+
+-   [Dot navigation](https://phuoc.ng/collection/css-layout/dot-navigation/)
+-   [Fixed at side](https://phuoc.ng/collection/css-layout/fixed-at-side/)
+-   [Navigate to a specific item in a carousel slider](https://phuoc.ng/collection/css-animation/navigate-to-a-specific-item-in-a-carousel-slider/)
+-   [Triangle buttons](https://phuoc.ng/collection/css-layout/triangle-buttons/)
