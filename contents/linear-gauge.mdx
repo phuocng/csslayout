@@ -1,0 +1,400 @@
+---
+category: Feedback
+created: '2023-11-20'
+description: Create a linear gauge
+openGraphCover: /og/css-layout/linear-gauge.png
+thumbnail: /assets/css-layout/thumbnails/linear-gauge.png
+title: Linear gauge
+---
+
+A **linear gauge** is a handy tool for displaying numerical values within a specific range. It's like a bar with markings that represent the range of values and an indicator that points to the current value. Linear gauges are great for showing progress, performance, or other quantitative metrics quickly and easily. You can use them in dashboards, reports, or presentations to help people understand complex data at a glance. They're simple and intuitive, making them an effective way to communicate important information in a clear and concise manner.
+
+For instance, think of a fitness app that tracks your daily step count. The app could display a linear gauge that shows your progress towards your daily goal, with markings indicating the range of steps from 0 to the goal amount. As you walk throughout the day, the indicator on the gauge would move in real-time to show how many steps you've taken so far. This visualization can motivate users to reach their step goal and monitor their progress over time. Linear gauges can also be used in other contexts, such as fundraising campaigns or sales targets, to track progress towards specific goals and keep stakeholders informed.
+
+Linear gauges are also used in real-life situations, like in modern cars with fuel economy gauges. These gauges display how efficiently the vehicle is using fuel, with markings indicating different levels of fuel efficiency. The indicator moves up or down based on how efficiently the car is being driven at any given moment, providing drivers with real-time feedback on their driving habits.
+
+These are just a few examples of how linear gauges can be used to communicate important information quickly and effectively. In this post, we'll learn how to create a linear gauge.
+
+## Setting up the layout
+
+Setting up a layout for a simple linear gauge can be done with just one element that represents the progress.
+
+```html
+<div class="gauge">
+    <div class="gauge__progress"></div>
+</div>
+```
+
+In order to position the progress indicator inside the gauge, we need to use absolute positioning. First, we set the `position` property of the gauge container to `relative`, so that any child elements with absolute positioning are positioned relative to it.
+
+Next, we set the position property of the progress indicator to `absolute`, and give it a `top` and `left` value of 0. This will position it at the top left corner of the gauge container. Finally, we set the `width` of the progress indicator to a percentage value based on the current value being displayed. This will cause it to stretch or shrink horizontally as needed.
+
+```css
+.gauge {
+    position: relative;
+}
+
+.gauge__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+}
+```
+
+Setting different background colors for the gauge and progress indicator can make it easier to distinguish between the two elements, improving the gauge's readability. By using contrasting colors, we can highlight the progress indicator and make it stand out against the gauge's background. This is especially helpful when displaying data with a wide range of values or when there are multiple gauges on a single page. Moreover, choosing visually appealing colors can enhance the gauge's overall look and feel, making it more engaging for viewers to interact with.
+
+```css
+.gauge {
+    background: rgb(203 213 225);
+}
+.gauge__progress {
+    background: rgb(99 102 241);
+}
+```
+
+Here's what the gauge looks like:
+
+<Playground>
+```css demo.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+```
+
+```css styles.css
+.gauge {
+    position: relative;
+    width: 16rem;
+    height: 0.5rem;
+    background: rgb(203 213 225);
+}
+.gauge__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: rgb(99 102 241);
+}
+```
+
+```html index.html
+<div class="gauge">
+    <div class="gauge__progress"></div>
+</div>
+```
+</Playground>
+
+## Adding ticks to the linear gauge
+
+To make your linear gauge more informative, it's important to include ticks. Ticks provide visual markers that indicate specific points on the gauge and help users understand where they are on the scale.
+
+In this example, we add five ticks between 0 and 100 percent, representing key milestones along the way. This makes it easier for users to quickly gauge their progress and understand their current position.
+
+```html
+<div class="gauge">
+    <div class="gauge__tick" style="left: 0%;"></div>
+    <div class="gauge__tick" style="left: 25%;"></div>
+    <div class="gauge__tick" style="left: 50%;"></div>
+    <div class="gauge__tick" style="left: 75%;"></div>
+    <div class="gauge__tick" style="left: 100%;"></div>
+</div>
+```
+
+To add ticks to a gauge, we use absolute positioning and set the `left` property to a percentage value based on where we want the tick to appear. For example, to add a tick at the 25% mark, we set `left` to 25%. The tick is then positioned at that point on the gauge.
+
+We can adjust the height of each tick using the `height` property and set the `width` to 1px to create a thin vertical line. By default, the tick color matches the gauge container, but we can customize it with CSS to create a more visually appealing and informative gauge.
+
+By adding ticks to a gauge, we can provide viewers with additional information about the data being displayed. We can also use different colors or styles for each tick to make the gauge easier to read and interpret.
+
+```css
+.gauge__tick {
+    position: absolute;
+    top: 100%;
+    height: 0.5rem;
+    width: 1px;
+    background: rgb(203 213 225);
+}
+```
+
+We can make our gauge even more informative by adding smaller ticks, also known as minor ticks, to the axis. We can insert three minor ticks between each major tick by placing them at a percentage value that falls between two adjacent major ticks. This provides more detailed information on the range of values displayed and helps viewers understand the gauge better.
+
+```html
+<div class="gauge">
+    <div class="gauge__tick gauge__tick--minor" style="left: 5%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 10%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 15%;"></div>
+    ...
+</div>
+```
+
+To make it easier for viewers to distinguish between major and minor ticks, we can use a separate CSS class and adjust its height to make it smaller than the main ticks. This way, viewers can understand the ticks correctly and avoid any confusion.
+
+```css
+.gauge__tick--minor {
+    height: 0.25rem;
+}
+```
+
+Check out the demo below to see how even small changes can make a big difference with ticks.
+
+<Playground>
+```css demo.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+```
+
+```css styles.css
+.gauge {
+    position: relative;
+    width: 16rem;
+    height: 0.5rem;
+    background: rgb(203 213 225);
+}
+.gauge__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: rgb(99 102 241);
+}
+.gauge__tick {
+    position: absolute;
+    top: 100%;
+    height: 0.5rem;
+    width: 1px;
+    background: rgb(203 213 225);
+}
+.gauge__tick--minor {
+    height: 0.25rem;
+}
+```
+
+```html index.html
+<div class="gauge">
+    <div class="gauge__progress"></div>
+    <div class="gauge__tick" style="left: 0%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 5%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 10%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 15%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 20%;"></div>
+    <div class="gauge__tick" style="left: 25%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 30%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 35%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 40%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 45%;"></div>
+    <div class="gauge__tick" style="left: 50%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 55%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 60%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 65%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 70%;"></div>
+    <div class="gauge__tick" style="left: 75%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 80%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 85%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 90%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 95%;"></div>
+    <div class="gauge__tick" style="left: 100%;"></div>
+</div>
+```
+</Playground>
+
+## Enhancing the linear gauge with labels
+
+We can make the linear gauge even more informative by adding labels to indicate specific values along the gauge. Labels can be used to show the current value of the progress indicator or to mark important milestones on the gauge.
+
+To add a label, we simply create a new element inside the tick element, give it a class name, and set its content to the value we want to display. With this simple addition, our linear gauge becomes even more useful and visually appealing.
+
+```html
+<div class="gauge">
+    <div class="gauge__tick" style="left: 50%;">
+        <div class="gauge__label">50</div>
+    </div>
+    ...
+</div>
+```
+
+In this example, we've added a label to the gauge at the 50% mark. To position the label, we use absolute positioning and set its `left` property to 50%. This centers the label horizontally within the tick element. To center the label vertically, we use the `transform` property to move it up by a quarter of the tick's height. By combining these CSS properties, we can create labels that show data in real-time and give viewers more information about the values being displayed. We can also use different colors or styles for each label to make the gauge more visually appealing and easy to read.
+
+```css
+.gauge__label {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0.25rem);
+}
+```
+
+Customizing the appearance of our labels can help make them more visually appealing for viewers. By adjusting properties like font size and color, we can create a polished and professional look for our linear gauge.
+
+By combining ticks, labels, and other design elements, we can create a visualization that effectively communicates important information to viewers in an engaging and informative way.
+
+<Playground>
+```css demo.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+```
+
+```css styles.css
+.gauge {
+    position: relative;
+    width: 16rem;
+    height: 0.5rem;
+    background: rgb(203 213 225);
+}
+.gauge__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: rgb(99 102 241);
+}
+.gauge__tick {
+    position: absolute;
+    top: 100%;
+    height: 0.5rem;
+    width: 1px;
+    background: rgb(203 213 225);
+}
+.gauge__tick--minor {
+    height: 0.25rem;
+}
+.gauge__label {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0.5rem);
+}
+```
+
+```html index.html
+<div class="gauge">
+    <div class="gauge__progress"></div>
+    <div class="gauge__tick" style="left: 0%;">
+        <div class="gauge__label">0</div>
+    </div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 5%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 10%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 15%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 20%;"></div>
+    <div class="gauge__tick" style="left: 25%;">
+        <div class="gauge__label">25</div>
+    </div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 30%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 35%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 40%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 45%;"></div>
+    <div class="gauge__tick" style="left: 50%;">
+        <div class="gauge__label">50</div>
+    </div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 55%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 60%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 65%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 70%;"></div>
+    <div class="gauge__tick" style="left: 75%;">
+        <div class="gauge__label">75</div>
+    </div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 80%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 85%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 90%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="left: 95%;"></div>
+    <div class="gauge__tick" style="left: 100%;">
+        <div class="gauge__label">100</div>
+    </div>
+</div>
+```
+</Playground>
+
+By changing the position from `left` to `top`, we can easily create a horizontal gauge as follows:
+
+<Playground>
+```css demo.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+```
+
+```css styles.css
+.gauge {
+    position: relative;
+    height: 16rem;
+    width: 0.5rem;
+    background: rgb(203 213 225);
+}
+.gauge__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60%;
+    width: 100%;
+    background: rgb(99 102 241);
+}
+.gauge__tick {
+    position: absolute;
+    left: 100%;
+    width: 0.5rem;
+    height: 1px;
+    background: rgb(203 213 225);
+}
+.gauge__tick--minor {
+    width: 0.25rem;
+}
+.gauge__label {
+    position: absolute;
+    left: 50%;
+    transform: translate(0.5rem, -50%);
+}
+```
+
+```html index.html
+<div class="gauge">
+    <div class="gauge__progress"></div>
+    <div class="gauge__tick" style="top: 0%;">
+        <div class="gauge__label">0</div>
+    </div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 5%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 10%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 15%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 20%;"></div>
+    <div class="gauge__tick" style="top: 25%;">
+        <div class="gauge__label">25</div>
+    </div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 30%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 35%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 40%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 45%;"></div>
+    <div class="gauge__tick" style="top: 50%;">
+        <div class="gauge__label">50</div>
+    </div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 55%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 60%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 65%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 70%;"></div>
+    <div class="gauge__tick" style="top: 75%;">
+        <div class="gauge__label">75</div>
+    </div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 80%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 85%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 90%;"></div>
+    <div class="gauge__tick gauge__tick--minor" style="top: 95%;"></div>
+    <div class="gauge__tick" style="top: 100%;">
+        <div class="gauge__label">100</div>
+    </div>
+</div>
+```
+</Playground>
+
+## Conclusion
+
+CSS and HTML give us the power to create linear gauges that are not only informative but also visually appealing. By adding ticks and labels to our gauge, we can provide more context for viewers to easily interpret the data in real-time. Customizing the colors and styles of our gauge elements can create a more engaging user experience that encourages viewers to interact with the data. Overall, CSS and HTML offer a robust toolkit for creating effective linear gauges that communicate important information clearly and concisely.
