@@ -1,0 +1,193 @@
+---
+category: Feedback
+created: '2023-11-17'
+description: Create a pie chart
+openGraphCover: /og/css-layout/pie-chart.png
+thumbnail: /assets/css-layout/thumbnails/pie-chart.png
+title: Pie chart
+---
+
+Pie charts are a great way to visually represent data. They show data as parts of a whole, making it easy to compare and analyze. Pie charts are especially helpful when working with percentages or proportions that add up to 100%. They can also help identify trends, patterns, and outliers in the data. By using different colors and labeling each slice, you can create a clear and easy-to-understand representation of complex information.
+
+In this post, we'll show you how to create a pie chart using pure HTML and CSS. It's a simple yet effective way to communicate important data points to your audience. Let's get started!
+
+## Setting up the layout
+
+Generating a pie chart is a simple process. A pie chart is usually placed in a circle. To begin, we divide the circle into two equal halves.
+
+```html
+<div class="circle">
+    <div class="circle__half circle__half--1"></div>
+    <div class="circle__half circle__half--2"></div>
+</div>
+```
+
+To create the chart, we rotate one half of the circle based on the percentage of progress being displayed, while the other half remains stationary as the chart's background. In the next section, we'll dive into the details of how to implement this idea.
+
+## Positioning halves
+
+To create a circle shape for our container, we can use the `border-radius` property and set it to 50%. This will round all four corners and voila! We have a perfect circle. Don't forget to specify the `height` and `width` of the circle to determine its size. If both values are the same, our circle will be perfectly round and symmetrical.
+
+```css
+.circle {
+    border-radius: 50%;
+    height: 12rem;
+    width: 12rem;
+}
+```
+
+Both halves of the circle are positioned absolutely, so we need to change the `position` style to `relative`.
+
+```css
+.circle {
+    position: relative;
+    overflow: hidden;
+}
+```
+
+When creating a pie chart inside a circle, it's crucial to use the `overflow: hidden` property. This ensures that any parts of the pie chart that extend beyond the bounds of the circle are hidden from view, giving the chart a professional and polished look.
+
+To position the two halves of the circle, we use `position: absolute` in CSS. This lets us place the elements anywhere we want within their parent container. Both halves should have a height of 50% and a width of 100%, so they each occupy half of the circle.
+
+To ensure proper positioning, we also set `transform-origin: 50% 100%;`. This ensures that when we rotate one of the halves, it rotates around its bottom center point, which is exactly what we need to create a pie chart.
+
+```css
+.circle__half {
+    position: absolute;
+    top: 0;
+    height: 50%;
+    width: 100%;
+    transform-origin: 50% 100%;
+}
+```
+
+To give the first half of the circle a background color, we can apply a CSS style to it. This will make the portion of the chart that represents completed progress have a solid color.
+
+```css
+.circle__half--1 {
+    background: rgb(99 102 241);
+}
+```
+
+By using positioning properties, we can easily create a pie chart. We rotate one half of the circle based on the percentage of progress being displayed, while the other half remains stationary, acting as the chart's background.
+
+To illustrate, let's say we want to display progress by rotating the second half of the circle. In the sample code below, we rotate it by 120 degrees:
+
+```css
+.circle__half--2 {
+    transform: rotate(120deg);
+}
+```
+
+To make the second half of the circle transparent, we need to set its `background` property to `inherit`. This is because we only want the first half of the circle to have a solid color while the second half should be see-through to show the underlying container. By setting `background: inherit`, we tell the browser to use the same background color as its parent element. This creates a smooth transition between our pie chart and its surrounding container.
+
+```css
+.circle__half--2 {
+    background: inherit;
+}
+```
+
+Take a look at the demo below:
+
+<Playground>
+```css demo.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+```
+
+```css styles.css
+.circle {
+    background: rgb(203 213 225);
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    height: 12rem;
+    width: 12rem;
+}
+.circle__half {
+    position: absolute;
+    top: 0;
+    height: 50%;
+    width: 100%;
+    transform-origin: 50% 100%;
+}
+.circle__half--1 {
+    background: rgb(99 102 241);
+}
+.circle__half--2 {
+    background: inherit;
+    transform: rotate(120deg);
+}
+```
+
+```html index.html
+<div class="circle">
+    <div class="circle__half circle__half--1"></div>
+    <div class="circle__half circle__half--2"></div>
+</div>
+```
+</Playground>
+
+Keep in mind that if you want to display a pie chart with a degree greater than 180, the second half must have the same background color as the first half.
+
+```css
+.circle__half--2 {
+    background: rgb(99 102 241);
+    transform: rotate(60deg);
+}
+```
+
+Here's an example of how to create a pie chart using 240 degrees.
+
+<Playground>
+```css demo.css hidden
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+```
+
+```css styles.css
+.circle {
+    background: rgb(203 213 225);
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    height: 12rem;
+    width: 12rem;
+}
+.circle__half {
+    position: absolute;
+    top: 0;
+    height: 50%;
+    width: 100%;
+    transform-origin: 50% 100%;
+}
+.circle__half--1 {
+    background: rgb(99 102 241);
+}
+.circle__half--2 {
+    background: rgb(99 102 241);
+    transform: rotate(60deg);
+}
+```
+
+```html index.html
+<div class="circle">
+    <div class="circle__half circle__half--1"></div>
+    <div class="circle__half circle__half--2"></div>
+</div>
+```
+</Playground>
+
+## Conclusion
+
+Pie charts are an excellent way to visually represent data. They help viewers quickly and easily understand how different parts relate to the whole. With pure HTML and CSS, creating a pie chart is simple and customizable.
+
+In this post, we'll cover the basics of creating a pie chart in CSS. You'll learn how to position the circle halves using absolute positioning and `transform-origin`. We'll also discuss setting background colors for each half and rotating one half based on the progress percentage.
+
+By using these techniques, you can create beautiful and informative pie charts that will impress your audience. Remember to keep it simple, avoid cluttering your chart with too much information, and label each slice clearly. Use colors sparingly to ensure viewers can easily understand what they're looking at.

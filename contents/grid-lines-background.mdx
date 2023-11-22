@@ -6,6 +6,7 @@ keywords: grid lines background, linear gradient, radial gradient
 openGraphCover: /og/css-layout/grid-lines-background.png
 thumbnail: /assets/css-layout/thumbnails/grid-lines-background.png
 title: Grid lines background
+updated: '2023-11-22'
 ---
 
 Adding a grid lines background in CSS is an awesome way to give your website some visual interest and structure. This post will show you two simple ways to achieve this.
@@ -108,6 +109,7 @@ To adjust the color and spacing of lines, simply change the value of `gray` to a
         linear-gradient(to bottom, rgb(203 213 225) 1px, transparent 1px);
     background-size: 2.5rem 2.5rem;
     background-position: center center;
+}
 ```
 
 ```html index.html
@@ -126,9 +128,14 @@ We can use a similar approach to create a grid with a dot background, but this t
     background-image: radial-gradient(circle, rgb(203 213 225) 2px, #fff 2px);
     background-size: 2.5rem 2.5rem;
     background-position: center center;
+}
 ```
 
 ```html index.html
 <div class="grid"></div>
 ```
 </Playground>
+
+## See also
+
+-   [Snap a draggable element to a grid](https://phuoc.ng/collection/react-drag-drop/snap-a-draggable-element-to-a-grid/)
